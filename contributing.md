@@ -1,19 +1,19 @@
 # Contributing to Practicalli Neovim
 
-[practicalli/clojure](https://github.com/practicalli/neovim/) is written in markdown and uses GitBook to generate the website via a GitHub action.
+[practicalli/neovim](https://github.com/practicalli/neovim/) is written in markdown and uses GitBook to generate the website via a GitHub action.
 
-By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/clojure/graphs/contributors).
+By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/neovim/graphs/contributors).
 
 All content and interaction with any persons or systems must be done so with respect and within the Practicalli Code of Conduct.
 
 
 ## Book status
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/practicalli/neovim?style=for-the-badge) [![Content ideas and other issues](https://img.shields.io/github/issues/practicalli/neovim?label=content%20ideas%20and%20issues&logoColor=green&style=for-the-badge)](https://github.com/practicalli/clojure/issues) [![Pull requests](https://img.shields.io/github/issues-pr/practicalli/neovim?style=for-the-badge)](https://github.com/practicalli/clojure/pulls) [![GitHub Super-Linter](https://github.com/practicalli/clojure-content/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter) [![GitBook publish](https://github.com/practicalli/clojure/actions/workflows/publish-website.yaml/badge.svg)](https://github.com/practicalli/clojure/actions/workflows/publish-website.yaml)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/practicalli/neovim?style=for-the-badge) [![Content ideas and other issues](https://img.shields.io/github/issues/practicalli/neovim?label=content%20ideas%20and%20issues&logoColor=green&style=for-the-badge)](https://github.com/practicalli/neovim/issues) [![Pull requests](https://img.shields.io/github/issues-pr/practicalli/neovim?style=for-the-badge)](https://github.com/practicalli/neovim/pulls) [![GitHub Super-Linter](https://github.com/practicalli/neovim-content/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter) [![GitBook publish](https://github.com/practicalli/neovim/actions/workflows/publish-website.yaml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/publish-website.yaml)
 
 
 ### Submit and issue or idea
 
-If something doesnt seem quite right or something is missing from the book, please [raise an issue via the GitHub repository](https://github.com/practicalli/clojure/issues) explaining in as much detail as you can.
+If something doesnt seem quite right or something is missing from the book, please [raise an issue via the GitHub repository](https://github.com/practicalli/neovim/issues) explaining in as much detail as you can.
 
 ### Considering a Pull request?
 
