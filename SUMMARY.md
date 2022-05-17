@@ -8,7 +8,7 @@
 * [Overview](install/index.md)
 
 <!-- Clojure Setup -->
-* [Clojure CLI](install/clojure.md)
+* [Clojure](install/clojure.md)
 
 <!-- Neovim Setup -->
 * [Neovim](install/neovim.md)
