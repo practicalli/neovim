@@ -12,7 +12,7 @@
 
 <!-- Neovim Setup -->
 * [Neovim](install/neovim.md)
-* [Neovim](install/packages.md) <!-- Package manager and list of packages -->
+    * [Packages](install/neovim-packages.md) <!-- Package manager and list of packages -->
 
 
 ## References
