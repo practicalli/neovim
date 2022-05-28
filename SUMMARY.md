@@ -5,6 +5,7 @@
 
 ## Install
 
+<!-- the approach taken to configure neovom - i.e. fenel first, then lua, avoid vimscript -->
 * [Overview](install/index.md)
 
 <!-- Clojure Setup -->
@@ -12,7 +13,7 @@
 
 <!-- Neovim Setup -->
 * [Neovim](install/neovim.md)
-    * [Packages](install/neovim-packages.md) <!-- Package manager and list of packages -->
+    * [Packages](install/packages/index.md) <!-- Package manager and list of packages -->
 
 
 ## References
