@@ -21,6 +21,12 @@ Termux provides a CLI experience for Linux and the common development tools are 
 
 `pkg` command will add tools and libraries to the Linux environment from the currated packages in the software center.
 
+`apt list --upgradable` shows list of upgradable packages
+
+`apt update` updates the list of packages fromhe software center
+
+`apt upgrade` installs updates for any currently installed packages
+
 `apt-cache search --names-only` - search for packages.
 
 `apt-cache show package-name` - shows detail of package-name, including a description
@@ -65,10 +71,10 @@ pkg install wget curl
 
 Practicalli keeps several editor configurations in shared repositories on GitHub and GitLab
 
-Instazll a git client
+Instazll a git client and GitHub CLI
 
 ```
-pkg install git
+pkg install git gh
 ```
 
 Clone the practicalli/dotfiles repository
