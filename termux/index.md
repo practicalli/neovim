@@ -217,9 +217,3 @@ Visit GitHub releases page and download the `clojure-lsp` file
 - test locally `./clojure-lsp --version` - should print clojure-lsp version and clj-kondo version
 - copy or move file to path `mv clojure-lsp $PATH`
 
-
-
-### Using newovim
-
-`:!` for a shell command, e.g. to create a new directory
-
