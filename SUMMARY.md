@@ -24,9 +24,10 @@
 <!-- * [Window management](neovim/windows/index.md) -->
 
 
-<!-- ## REPL Driven Development -->
+## REPL Driven Development
 
-<!-- * [The REPL](REPL/index.md) -->
+* [The REPL](repl-driven-development/index.md) 
+    * [Conjure](repl-driven-development/conjure.md)
 <!-- * [Structural editing](structural-editing/index.md) -->
 
 
