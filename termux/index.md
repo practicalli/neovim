@@ -176,6 +176,13 @@ pkg install clang
 
 > `gcc` is not packaged for Termux, although there are guides to install gcc if preferred. clang seems to be working fine for now though
 
+### Searching files
+
+`SPC f f` to find files to open in Neovim, requires the ripgrep external tool.
+
+```
+pkg install ripgrep
+```
 
 ### install Java
 
