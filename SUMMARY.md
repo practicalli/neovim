@@ -21,7 +21,7 @@
 
 <!-- * [Vim-style editing](neovim/vim-style-editing/index.md) -->
 <!-- * [File management](neovim/files/index.md) -->
-<!-- * [Window management](neovim/windows/index.md) -->
+<!-- * [Window/Tab management](neovim/windows/index.md) -->
 
 
 ## REPL Driven Development
@@ -33,7 +33,9 @@
 
 
 ## Mobile
+
 * [Termux](termux/index.md)
+
 
 ## References
 <!-- * [Alternative Configs] -->
