@@ -28,6 +28,7 @@
 
 * [The REPL](repl-driven-development/index.md) 
     * [Conjure](repl-driven-development/conjure.md)
+* [Testing](repl-driven-development/testing.md)
 <!-- * [Structural editing](structural-editing/index.md) -->
 
 
