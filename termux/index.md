@@ -104,6 +104,7 @@ pkg install wget curl
 A Git client is used to version control projects and to clone projects and configuration from GitHub/GitLab.  Practicalli maintains several editor configurations in shared repositories on GitHub
 
 * Install a Git Client (and optionally GitHub CLI)
+* [optionally] clone the [practicalli/dotfiles](https://github.com/practicalli/dotfiles) repository for the Git config and global ignores
 * Configure an SSH key or Developer token
 
 ### Install a git client and GitHub CLI
@@ -112,7 +113,7 @@ A Git client is used to version control projects and to clone projects and confi
 pkg install git gh
 ```
 
-Clone the practicalli/dotfiles repository
+Clone the [practicalli/dotfiles](https://github.com/practicalli/dotfiles) repository
 
 ```
 git clone https://github.com/practicalli/dotfiles
@@ -230,18 +231,32 @@ pkg install java-17
 
 ## Install Clojure
 
-Linux install instructions with prefix
-```
-linux-install-1.11.113.sh --prefix /data/..../usr/
+Clone practicalli/clojure-deps-edn to add a wide range of community tools to the Clojure CLI
 
-clojure install will add to the esisting bin, lib and share dorectories in ..../usr/
-
-test by running basic built in repl
-```
-clojure
+```bash
+git clone git@github.com:practicalli/clojure-deps-edn.git ~/.config/clojure
 ```
 
-> optionally install rlwrap - although Practicalli used Rebel Readline instead
+
+Use the Linux install with a prefix path pointing to Termux equivalent of `/usr/local`.  Find the path using `echo $PATH` and remove `bin` from the end.  Without the prefix Clojure will not install correctly
+
+```bash
+curl -O https://download.clojure.org/install/linux-install-1.11.1.1124.sh
+
+chmod +x linux-install-1.11.1.1124.sh
+
+./linux-install-1.11.1.1124.sh --prefix /data/..../usr/
+```
+
+`clojure` binary is installed in the existing bin, lib and share directories in `/data/..../usr/`, placing that binary on the system execution path.
+
+Test by running a REPL session, for example with Rebel Readline
+
+```
+clojure -M:repl/rebel
+```
+
+> optionally install rlwrap package if using the basic repl terminal UI
 
 
 ## Install Clojure LSP
@@ -252,3 +267,5 @@ Visit GitHub releases page and download the `clojure-lsp` file
 - make executable `chmod 755 clojure-lsp`
 - test locally `./clojure-lsp --version` - should print clojure-lsp version and clj-kondo version
 - copy or move file to path `mv clojure-lsp $PATH`
+
+If the [practicalli/dotfiles](https://github.com/practicalli/dotfiles) repository was cloned, move or link the `clojure-lsp` directory to `~/.config/clojure-lsp`
