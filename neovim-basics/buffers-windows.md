@@ -32,7 +32,30 @@ Windows can be active (contains the cursor), hidden (open but not shown) or inac
 
 `C-w` with one of `hjkl` will move the cursor to the next window in that direction.  Also works with arrow keys.
 
+`C-w w` toggle between open windows
+
 `:q` or `C-w q` closes the active window, closing Neovim if it is the last active window.
 
 
 > `:wincmd` can be used as an alternative to the Normal mode key bindings
+
+
+Open file in a new window
+
+```bash
+:sp relative-or-full-filename-path
+```
+
+Resize windows
+
+`C-w` `-`, `+`, `<` or `>` for vertical or horizontal size adjustment
+
+
+<!-- ## Alt - Arrow keys -->
+
+<!-- Alt+leftarrow will go one window left, etc. -->
+
+<!-- nmap <silent> <A-Up> :wincmd k<CR> -->
+<!-- nmap <silent> <A-Down> :wincmd j<CR> -->
+<!-- nmap <silent> <A-Left> :wincmd h<CR> -->
+<!-- nmap <silent> <A-Right> :wincmd l<CR> -->
