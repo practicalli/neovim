@@ -6,16 +6,18 @@ A smart phone and an external keyboard can make an excellent ultra-portable deve
 
 No special permissions are required to set up Termux and installation is made very simple by first installing FDroid marketplace.
 
-## Android app Install 
+## Android app Install
 
-FDroid from Google play store
+[FDroid](https://f-droid.org/) from Google play store
 
-Termux from F-Droid store
+Open FDroid
 
-NOTE: Termux in Android Play store is out of date and not recommended
+Install Termux from F-Droid app store
+
+> NOTE: Termux in Android Play store is out of date and not recommended
 
 
-## Managing Termux 
+## Managing Termux
 
 Termux provides a CLI experience for Linux and the common development tools are easily installed
 
@@ -37,11 +39,11 @@ Termux provides a CLI experience for Linux and the common development tools are 
 > `pkg` is an alias for `apt`
 
 
-### Keyboard 
+### Keyboard
 
-Termux provides an extended keyboard with common key bindings for convienience and for combinations not possible with an on-screen keyboard, i.e `Ctrl-c  
+Termux provides an extended keyboard with common key bindings for convienience and for combinations not possible with an on-screen keyboard, i.e `Ctrl-c
 
-For the best experience, especially when a lot of typing is required, pluy in a hardware keyboard.  
+For the best experience, especially when a lot of typing is required, pluy in a hardware keyboard.
 
 The on-screen keyboard is swiched off when a hardware keyboard it plugged in, although the extended keyboard is still displayer.
 
@@ -50,81 +52,15 @@ The on-screen keyboard is swiched off when a hardware keyboard it plugged in, al
 > An android setting to display to display of the on-screen keyboard when a physical keyboard is present
 
 
-## Supporting tools
+## Tools to download binaries and configuration
 
-* `wget` and `curl` - download tools not packaged
-* `git` - clone configuration files and projects
-* `wget` - download files, i.e. clojure lsp binary
-* `byobu` - multiple shell tabs in on frame
-
-
-### Tools outside packages
-
-Tools such as `clojure-lsp` are not part of the Termux Linux package system and can be downloaded from GitHub releases page via wget or curl
+* `wget` and `curl` - download tools not packaged, i.e. clojure-lsp binary
+* `git` - clone configuration files and projects (see Git version control section)
+* `xcopy` - copy file content to the clipboard, e.g. for SSH public key
 
 ```
-pkg install wget curl
+pkg install curl wget git xcopy
 ```
-
-
-### Git version control
-
-Practicalli keeps several editor configurations in shared repositories on GitHub and GitLab
-
-Instazll a git client and GitHub CLI
-
-```
-pkg install git gh
-```
-
-Clone the practicalli/dotfiles repository
-
-```
-git clone https...
-```
-
-Edit the `.config/git/config` and update identity
-
-
-### Add a developer token
-
-A developer token {or ssh key} is required to access GitHub {and far more secure over password}
-
-Should the android device become lost or compromised, the developer token can be deleted to protect the repositories from any malicious access.  The developer token should be limited to the minimal access.  The developer token does not give access to the GitHub or GitLab account.
-
-> HTTPS URLs should be used wiht a developer token.  git@git.com URLs are for SSH keys only.
-
-Visit GitHub / GitLab settings for your account
-
-Create a new developer token specifically for Termux
-
-Add a descriptive name for the token, based on the device Termuxc is runniung on, e.g. `Termux Pixel2XL`
-
-Check the public_repo and status repo scopes
-
-Generate button creates a new token.  
-
-Copy the token using the copy icon.
-
-Edit the `.config/git/config` file and add a github section with the GitHub account name and token
-
-```
-[github]
-	name = practicalli
-	token = ghp_************************************
-```
-
-> Add a gitlab secion with the same keys if using GitLab 
-
-
-### SSH Keys 
-
-To add an ssh key to Termux reqiures a package installed that contains the ssh-keygen command, used to generate a new public/private key combinations
-```
-pkg install openssh
-```
-
->  TODO: confirm openssh is the correct package for ssh-keygen
 
 
 ### byobu
@@ -142,6 +78,8 @@ pkg install byobu
 > TODO: configure byobu to run by default (so I dont forget to run it)
 
 
+### Customise the shell
+
 ohmybash - a nice command line experience, shows completionms better, nice themes
 - curl command from website
 - customise by editing `.bashrc` file
@@ -149,7 +87,105 @@ ohmybash - a nice command line experience, shows completionms better, nice theme
 ?- tab completions like zsh and prezto?
 ?- powerline10k
 
-Alternatively, install pkg zsh and clone prezto
+Alternatively, install package **zsh** and clone prezto configuration
+
+
+## Tools outside packages
+
+Tools such as `clojure-lsp` are not part of the Termux Linux package system and can be downloaded from GitHub releases page via wget or curl
+
+```
+pkg install wget curl
+```
+
+
+## Git version control
+
+A Git client is used to version control projects and to clone projects and configuration from GitHub/GitLab.  Practicalli maintains several editor configurations in shared repositories on GitHub
+
+* Install a Git Client (and optionally GitHub CLI)
+* Configure an SSH key or Developer token
+
+### Install a git client and GitHub CLI
+
+```
+pkg install git gh
+```
+
+Clone the practicalli/dotfiles repository
+
+```
+git clone https://github.com/practicalli/dotfiles
+```
+
+Move or symbolically link the top-level directories to `~/.config`
+
+Edit the `.config/git/config` and update the user and github / gitlab identities
+
+
+### Create SSH Key for remote repository access
+
+Install the openssh package which contains the `ssh-keygen` command to generate a new public/private key combinations for use with GitHub SSH repository URLs
+
+```
+pkg install openssh
+```
+
+Generate a key using the email address of the GitHub or GitLab account
+
+```
+ssh-keygen -t rsa -C name@domain.tld
+```
+
+RET to confirm storing the password in the default location.
+
+Optionally add a passphrase (recommended), then confirm that passphrase.  Note: the passphrase should be different from the GitHub/GitLab password or your OS login password.
+
+If a passphrase was used to generate the key, add the key to the OpenSSH authentication agent on the Operating System
+
+```bash
+ssh-add
+```
+
+Vist the GitHub account settings and create a new SSH key
+
+Use `xcopy < ~/.ssh/id_rsa.pub` to copy the public key to the clipboard
+
+Paste the public key into the GitHub new key form
+
+
+### Create a developer token
+
+A developer token (or ssh key) is required to access GitHub {and far more secure over password}
+
+Should the android device become lost or compromised, the developer token can be deleted to protect the repositories from any malicious access.  The developer token should be limited to the minimal access.  The developer token does not give access to the GitHub or GitLab account.
+
+> HTTPS URLs should be used with a developer token.  git@git.com URLs are for SSH keys only.
+
+Visit GitHub / GitLab settings for your account
+
+Create a new developer token specifically for Termux
+
+Add a descriptive name for the token, based on the device Termuxc is runniung on, e.g. `Termux Pixel2XL`
+
+Check the public_repo and status repo scopes
+
+Generate button creates a new token.
+
+Copy the token using the copy icon.
+
+Edit the `.config/git/config` file and add a github section with the GitHub account name and token
+
+```
+[github]
+    name = practicalli
+    token = ghp_************************************
+```
+
+<!-- > TODO: Add a gitlab secion with the same keys if using GitLab -->
+<!-- > TODO: How to cache the developer token rather than write it to a file - GitHub CLI -->
+
+> Consider using GitHub CLI to cache the developer token rather than write the token to the Git configuration file for greater security.
 
 
 ## Install neovim
@@ -161,7 +197,7 @@ pkg install neovim
 ## Neovim treesitter
 treesitter provides excellent language syntax parsing and highlighting and is a very attractive feature of the recent neovim releases.  Treesitter is a major attraction, bringing in a new audience for Neovim.
 
-### nodejs 
+### nodejs
 
 ```
 pkg install nodejs
@@ -171,7 +207,7 @@ pkg install nodejs
 install compiler for neovim-treesitter, to compile some packages
 
 ```
-pkg install clang 
+pkg install clang
 ```
 
 > `gcc` is not packaged for Termux, although there are guides to install gcc if preferred. clang seems to be working fine for now though
@@ -186,7 +222,7 @@ pkg install ripgrep
 
 ### install Java
 
-Open JDK install supported, used to host Clojure code 
+Open JDK install supported, used to host Clojure code
 
 ```
 pkg install java-17
@@ -202,7 +238,7 @@ clojure install will add to the esisting bin, lib and share dorectories in ..../
 
 test by running basic built in repl
 ```
-clojure 
+clojure
 ```
 
 > optionally install rlwrap - although Practicalli used Rebel Readline instead
@@ -210,10 +246,9 @@ clojure
 
 ## Install Clojure LSP
 
-Visit GitHub releases page and download the `clojure-lsp` file 
+Visit GitHub releases page and download the `clojure-lsp` file
 - visit the relases page in firefox and copy the link to the file.
-- use wget and paste the link to the file to download 
+- use wget and paste the link to the file to download
 - make executable `chmod 755 clojure-lsp`
 - test locally `./clojure-lsp --version` - should print clojure-lsp version and clj-kondo version
 - copy or move file to path `mv clojure-lsp $PATH`
-
