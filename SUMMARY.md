@@ -17,12 +17,12 @@
 * [Neovim](install/neovim.md)
     * [Packages](install/packages/index.md) <!-- Package manager and list of packages -->
 
-<!-- ## Neovim basics -->
+## Neovim basics
 
-<!-- * [Vim-style editing](neovim/vim-style-editing/index.md) -->
-<!-- * [File management](neovim/files/index.md) -->
-<!-- * [Window/Tab management](neovim/windows/index.md) -->
-
+* [Overview](neovim-basics/index.md)
+<!-- * [File management](neovim-basics/files.md) -->
+* [Buffers & Windows](neovim-basics/buffers-windows.md)
+<!-- * [Vim-style editing](neovim-basics/vim-style-editing/index.md) -->
 
 ## REPL Driven Development
 
