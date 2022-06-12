@@ -41,15 +41,15 @@ Termux provides a CLI experience for Linux and the common development tools are 
 
 ### Keyboard
 
-Termux provides an extended keyboard with common key bindings for convienience and for combinations not possible with an on-screen keyboard, i.e `Ctrl-c
+Termux provides an extended keyboard with common key bindings for convienience and for combinations not possible with an on-screen keyboard, i.e `Ctrl-c`
 
-For the best experience, especially when a lot of typing is required, pluy in a hardware keyboard.
+For the best experience, especially when a lot of typing is required, plug in a hardware keyboard.  The [Keyboard.io atreus](https://shop.keyboard.io/products/keyboardio-atreus) is an excellent mechanical keyboard that is highly portable.
 
-The on-screen keyboard is swiched off when a hardware keyboard it plugged in, although the extended keyboard is still displayer.
+The on-screen keyboard is swiched off when a hardware keyboard it plugged in, although the extended keyboard is still displayed.
 
 `Volume Up < q` toggles the extended keyboard, so more screen is available when using a hardware keyboard.
 
-> An android setting to display to display of the on-screen keyboard when a physical keyboard is present
+> The on-screen keyboard can also be show when a physical keyboard is present, configured in an android setting.
 
 
 ## Tools to download binaries and configuration
@@ -63,9 +63,9 @@ pkg install curl wget git xcopy
 ```
 
 
-### byobu
+## byobu terminal window manager
 
-A text window manager in a terminal to run multiple shell tabs, handy for opening multiple instances of neovim
+A text window manager in a terminal to run multiple shell tabs, handy for opening multiple terminal sessions for different activities, e.g. Neovim, external Clojure REPL, shell CLI, etc.
 
 ```
 pkg install byobu
@@ -78,16 +78,69 @@ pkg install byobu
 > TODO: configure byobu to run by default (so I dont forget to run it)
 
 
-### Customise the shell
+## Customise the shell
 
-ohmybash - a nice command line experience, shows completionms better, nice themes
-- curl command from website
-- customise by editing `.bashrc` file
+> Customising the shell is optional, although gives an enhanced experience
 
-?- tab completions like zsh and prezto?
-?- powerline10k
 
-Alternatively, install package **zsh** and clone prezto configuration
+Zsh provides advanced features over bash and [Prezto configuration](https://github.com/sorin-ionescu/prezto) provides a simple way to configure these features.  Prezto also supports [powerline10k terminal theme](https://github.com/romkatv/powerlevel10k) that provides context specific information and a more engaging visual experience.
+
+```
+pkg install zsh
+```
+Start zsh
+
+```
+zsh
+```
+
+Clone prezto and its sub-modules into `~/.config/zsh`
+
+```
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-${XDG_CONFIG_HOME:-$HOME/.config}/zsh}/.zprezto"
+```
+
+Configure `$XDG_CONFIG_HOME` and `$ZDOTDIR`
+
+```
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:=$HOME/.config}"
+export ZDOTDIR="${ZDOTDIR:=$XDG_CONFIG_HOME/zsh}"
+```
+Create a new Zsh configuration by copying/linking the Zsh configuration files provided:
+```
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+```
+
+Edit `$XDG_CONFIG_HOME/.config/zsh/.zshenv` and add the following lines to enable zsh to find the prezto configuration
+
+```
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:=$HOME/.config}"
+export ZDOTDIR="${ZDOTDIR:=$XDG_CONFIG_HOME/zsh}"
+```
+
+Create a symbolic link from `$HOME/.zshenv` to `$XDG_CONFIG_HOME/.config/zsh/.zshenv`
+
+```
+ln -s $XDG_CONFIG_HOME/.config/zsh/.zshenv $HOME/.zshenv
+```
+
+Check the configuration is working by loading the .zshenv configuration
+
+```
+source "$ZDOTDIR/.zshenv"
+```
+
+Set the shell to run zsh by default
+
+```
+chsh -s /data/data/com.termux/files/usr/bin/zsh
+```
+
+> #### Info::Using Bash
+> [ohmybash](https://ohmybash.nntoan.com/) provides a nice command line experience, showing completions clearer, nice themes that provide information.
 
 
 ## Tools outside packages
@@ -245,7 +298,7 @@ curl -O https://download.clojure.org/install/linux-install-1.11.1.1124.sh
 
 chmod +x linux-install-1.11.1.1124.sh
 
-./linux-install-1.11.1.1124.sh --prefix /data/..../usr/
+./linux-install-1.11.1.1124.sh --prefix /data/data/com.termux/files/usr/
 ```
 
 `clojure` binary is installed in the existing bin, lib and share directories in `/data/..../usr/`, placing that binary on the system execution path.
