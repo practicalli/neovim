@@ -1,6 +1,6 @@
 ## Book status
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/practicalli/neovim?style=for-the-badge) [![Content ideas and other issues](https://img.shields.io/github/issues/practicalli/neovim?label=content%20ideas%20and%20issues&logoColor=green&style=for-the-badge)](https://github.com/practicalli/neovim/issues) [![Pull requests](https://img.shields.io/github/issues-pr/practicalli/neovim?style=for-the-badge)](https://github.com/practicalli/neovim/pulls) [![GitHub Super-Linter](https://github.com/practicalli/neovim/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter) [![GitBook publish](https://github.com/practicalli/clojure/actions/workflows/publish-website.yaml/badge.svg)](https://github.com/practicalli/clojure/actions/workflows/publish-website.yaml)
 
+[![GitHub issues](https://img.shields.io/github/issues/practicalli/neovim?label=content%20ideas&logo=github)](https://img.shields.io/github/issues/practicalli/neovim?label=content%20ideas&logo=github) [![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/neovim?label=commits&logo=github)](https://img.shields.io/github/commit-activity/y/practicalli/neovim?label=commits&logo=github) [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/neovim?label=pull%20requests&logo=github)](https://img.shields.io/github/issues-pr-raw/practicalli/neovim?label=pull%20requests&logo=github) [![GitBook publish](https://github.com/practicalli/neovim/actions/workflows/publish-website.yaml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/publish-website.yaml) [![MegaLinter](https://github.com/practicalli/neovim/actions/workflows/megalinter.yml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/megalinter.yml) [![pages-build-deployment](https://github.com/practicalli/neovim/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/pages/pages-build-deployment)
 
 ## License and Contributing
 
@@ -11,7 +11,7 @@
 
 Please [read the contributing section of the book](contributing.html) before raising an issue or pull request
 
-By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/clojure/graphs/contributors).
+By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/neovim/graphs/contributors).
 
 ### GitHub Actions
 
