@@ -2,7 +2,7 @@
 
 * [Introduction](introduction.md)
     <!-- * [Lua](introduction/lua.md) -->
-    <!-- * [Fennel](introduction/fennel.md) -->
+    * [Fennel](introduction/fennel.md)
     <!-- * [Aniseed](introduction/aniseed.md) -->
     * [Contributing](contributing.md)
 
