@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](introduction.md)
+    * [Quick Start](introduction/quick-start.md)
     <!-- * [Lua](introduction/lua.md) -->
     * [Fennel](introduction/fennel.md)
     <!-- * [Aniseed](introduction/aniseed.md) -->
