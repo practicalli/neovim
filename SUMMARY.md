@@ -17,6 +17,7 @@
 <!-- Neovim Setup -->
 * [Neovim](install/neovim.md)
     * [Packages](install/packages/index.md) <!-- Package manager and list of packages -->
+    * [Packages](install/packages/nvim-treesitter.md) <!-- Language parser -->
 
 ## Neovim basics
 
