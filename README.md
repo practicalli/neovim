@@ -69,7 +69,6 @@ The following plugins are currently used for Practicalli books.
 * [anchor-headings-lambda](https://www.npmjs.com/package/gitbook-plugin-anchor-headings-lambda)
 * [callouts](https://www.npmjs.com/package/gitbook-plugin-callouts)
 * [codeblock-disable-glossary](https://www.npmjs.com/package/gitbook-plugin-codeblock-disable-glossary)
-* [disqus](https://github.com/GitbookIO/plugin-disqus)
 * [folding-chapters](https://www.npmjs.com/package/gitbook-plugin-folding-chapters-2) - fold navigation sections
 * [ga](https://www.npmjs.com/package/gitbook-plugin-ga) - Google analytics
 * -glossary - disable default glossary
