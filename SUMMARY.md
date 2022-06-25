@@ -37,6 +37,11 @@
 ## Mobile
 
 * [Termux](termux/index.md)
+    * [Using Termux](termux/using-termux.md)
+    * [Custom Shell](termux/custom-shell.md)
+    * [Git](termux/git.md)
+    * [Neovim](termux/neovim.md)
+    * [Clojure Development](termux/clojure-development.md)
 
 
 ## References

@@ -1,0 +1,56 @@
+# Clojure development environment
+
+A comprehensive development environment for Clojure, supporting a REPL workflow and static analysis of code via Clojure Language Server Protocol.
+
+
+## Java host platform
+
+Install OpenJDK to host the Clojure REPL process and run packaged Clojure applications.
+
+Java 17 Long Term Support version is recommended as it is very stable, receives security updates and has the latest highly tested performance improvements.
+
+```
+pkg install java-17
+```
+
+
+## Install Clojure
+
+Clone practicalli/clojure-deps-edn to add a wide range of community tools to the Clojure CLI
+
+```bash
+git clone git@github.com:practicalli/clojure-deps-edn.git ~/.config/clojure
+```
+
+
+Use the Linux install with a prefix path pointing to Termux equivalent of `/usr/local`.  Find the path using `echo $PATH` and remove `bin` from the end.  Without the prefix Clojure will not install correctly
+
+```bash
+curl -O https://download.clojure.org/install/linux-install-1.11.1.1124.sh
+
+chmod +x linux-install-1.11.1.1124.sh
+
+./linux-install-1.11.1.1124.sh --prefix /data/data/com.termux/files/usr/
+```
+
+`clojure` binary is installed in the existing bin, lib and share directories in `/data/..../usr/`, placing that binary on the system execution path.
+
+Test by running a REPL session, for example with Rebel Readline
+
+```
+clojure -M:repl/rebel
+```
+
+> optionally install rlwrap package if using the basic repl terminal UI
+
+
+## Install Clojure LSP
+
+Visit GitHub releases page and download the `clojure-lsp` file
+- visit the relases page in firefox and copy the link to the file.
+- use wget and paste the link to the file to download
+- make executable `chmod 755 clojure-lsp`
+- test locally `./clojure-lsp --version` - should print clojure-lsp version and clj-kondo version
+- copy or move file to path `mv clojure-lsp $PATH`
+
+If the [practicalli/dotfiles](https://github.com/practicalli/dotfiles) repository was cloned, move or link the `clojure-lsp` directory to `~/.config/clojure-lsp`
