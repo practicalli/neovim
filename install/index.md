@@ -1,12 +1,43 @@
 # Install Overview
 
+Practicalli Neovim provides a feature rich configuration for Neovim and all the tools required for effective Clojure development (and other Lisp dialects too).
+
 A Clojure development environment within requires
 
 * [Clojure tooling and a Java SDK](clojure.md) (Java Virtual Machine)
 * [Neovim 7 or nightly build](neovim.md)
 * [Neovim package manager and packages](packages/index.md)
 
-Neovim and its packages may use external tools (providers) for some features.  So tools including node.js, python3, ruby, xclip, etc.
+Neovim and its packages use external tools (providers) for some features.
+
+
+# Quick start
+
+If you are familiar with most of the tools required, then the quick start list below provides an ultra-terse version on how to get started with Neovim and Clojure development.
+
+* [Install Neovim 7 or greater](https://github.com/neovim/neovim/wiki/Installing-Neovim) - development build recommended
+    * [Ubuntu daily builds PPA](https://launchpad.net/~neovim-ppa/+archive/ubuntu/unstable)
+    * `brew install --HEAD neovim` for Homebrew install of development version
+* Install supporting tools
+    * `tar` & `curl` and a C compiler, e.g. `gcc` for Linux or `clang` for android/termix (required by nvim-treesitter)
+    * ripgrep to search for files (used by telescope)
+* [Clone Neovim Config](https://github.com/practicalli/neovim-config-redux)
+* Run `nvim` in a terminal and ignore the warning, press `RTN`
+    * `:PackerInstall` command in Neovim
+* [Install Clojure CLI](https://practical.li/clojure/clojure-cli/install/) (or Leiningen)
+* Clone / fork [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn/) or add an alias with the [required config to use nrepl and cider-nrepl](https://github.com/Olical/conjure/wiki/Quick-start:-Clojure#with-clojure-cli)
+* [Run a Clojure REPL process](/repl-driven-development/) - in a separate terminal session
+   * `clojure -M:repl/rebel` for a rich REPL UI
+   * `clojure -M:repl/cider` for a basic REPL UI
+   * `clojure -M:repl/headless` for a headless REPL process
+* Open a Clojure file in Neovim - Conjure will automatically connect
+
+
+## Next Steps
+
+[Learn how to use Neovim](/neovim-basics/) and how to [use Conjure for REPL driven development](/repl-driven-development/conjure.html)
+
+
 
 
 ## Clojure
