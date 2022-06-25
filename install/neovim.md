@@ -1,13 +1,15 @@
 # Install Neovim
 
-Neovim 7 or nightly build should be installed, to support treesitter and other relatively new features.
+Neovim 7 is the minimum version for this configuration.  The latest release of Neovim 7 has been work well for Clojure development by the Practicalli team
 
-Follow the [installing Neovim guide to install for a specific operating system](https://github.com/neovim/neovim/wiki/Installing-Neovim).
+Practicalli recommends using the latest release from [the Neovim releases page](https://github.com/neovim/neovim/releases)
 
-> Practicalli recommends using the latest release from [the Neovim releases page](https://github.com/neovim/neovim/releases)
+Follow the [install Neovim guide for the specific operating system](https://github.com/neovim/neovim/wiki/Installing-Neovim).
+
+> Update to a Neovim development build if there are issues with Treesitter and the nvim-treesitter package, as they are features under active development, e.g.  [Ubuntu daily builds PPA](https://launchpad.net/~neovim-ppa/+archive/ubuntu/unstable) or `brew install --HEAD neovim` for Homebrew
 
 
-## Run Healthcheck
+## Post Install checks
 
 `nvim` in a terminal to run NeoVim and check the installation is working without error.
 
@@ -22,6 +24,7 @@ A report is generated and shown in NeoVim
 Review the warnings and follow any advice given to resolve the issues.
 
 ![NeoVim checkhealth report](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-checkhealth-report.png)
+
 
 ### Provider warnings & disable options
 
