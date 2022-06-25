@@ -1,5 +1,7 @@
 # Add Neovim Packages
 
+![Neovim startup with dashboard theme ](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-startup-dashboard-theme-light.png)
+
 List of packages and their purpose
 
 | Package               | Description                                                          |
