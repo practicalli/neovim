@@ -49,8 +49,6 @@ Install the GitBook plugins used for this project (as defined in the [book.json]
 switch to the root directory of the cloned repository when complete.
 
 ```bash
-cd clojure
-
 gitbook install
 ```
 
