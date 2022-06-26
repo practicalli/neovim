@@ -23,6 +23,19 @@ List of packages and their purpose
 
 Any specific package configuration & key bindings (on sub page if significant content)
 
+## Package selection criteria
+
+Packages are more likely to be adopted if:
+
+- provide valuable (or fun) features
+- work reliably, without generating errors
+- do not conflict with other valuable packages in this configuration
+- written in fennel or lua to aid maintenance
+- use features provided by Neovim (e.g treesitter)
+- are well documented
+- are easy to configure
+- are easy to use
+- work well with themes (where relevant)
 
 
 ## Plugins (from project readme.md)
