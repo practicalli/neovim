@@ -32,6 +32,8 @@
 * [Testing](repl-driven-development/testing.md)
 <!-- * [Structural editing](structural-editing/index.md) -->
 
+## Version Control
+* [Overview](version-control/index.md)
 
 ## Mobile
 
