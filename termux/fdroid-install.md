@@ -16,7 +16,7 @@ When installing apps from F-Droid for the first time, a security prompt is show 
 
 Select *Settings* to open the Android settings and enable *Allow from this source* for the F-Droid app.
 
-![F-Droid security prompt - allow from this source](https://github.com/practicalli/graphic-design/blob/live/termux/f-droid-security-prompt-unknown-source--settings-allow-from-source.png)
+![F-Droid security prompt - allow from this source](https://raw.githubusercontent.com/practicalli/graphic-design/live/termux/f-droid-security-prompt-unknown-source--settings-allow-from-source.png)
 
 
 A Termux App launcher will be added to the Android screen.  Consider adding the Termux icon to the commonly used icons bar.
