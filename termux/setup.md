@@ -36,6 +36,9 @@ export SPACEMACSDIR="$XDG_CONFIG_HOME/spacemacs"
 
 `source ~/.profile` to load the environment variables into the shell, or exit Termux and restart.
 
+> #### Hint::nano editor installed by default
+> `nano` editor is used to edit the commands as the package is installed by default in termux. `vim`, `neovim`, `emacs` or any other Linux command line editor can be used if the package is first installed.  Termux will list packages to install when trying to run a command that is from a package not yet installed.
+
 
 ## Tools to download binaries and configuration
 
@@ -49,7 +52,8 @@ Many tools can be installed via the `pkg` tool, although specific Clojure tools 
 pkg install curl wget git openssh
 ```
 
-[Configure a Git Identify and SSH key](git.md) to make full use of the Git client.  [practicalli/dotfiles](https://github.com/practicalli/dotfiles) contains example configuration, ignore patterns and commit template.
+[Configure a Git Identify and SSH key](git.md) to before committing and pushing changes, or cloning repositories using the SSH protocol.  [practicalli/dotfiles](https://github.com/practicalli/dotfiles) contains example configuration, ignore patterns and commit template for using Git.
+
 
 ## [Optional] Configure Termux Settings
 
@@ -59,19 +63,27 @@ pkg install curl wget git openssh
 
 The defaults are suitable for the majority of uses, although you may wish to consider:
 
-* `hide-soft-keyboard-on-startup` set to true if always using a physical keyboard or to have more screen space by default
-* `default-working-directory` to save files in an alternative location, e.g. SD storage
+* `fullscreen` set to `true` to us the whole screen, hiding Android menu bars, etc.
+* `hide-soft-keyboard-on-startup` set to `true` if always using a physical keyboard
+* `default-working-directory` to save files user files and directories in an alternative location,
 
+> If swiping from left edge of the screen is already taken, set key bindings for creating a new termux session, naming a session and switching between sessions.  Alternatively, use byobu to create and switch between its tabs for multiple terminal sessions.
 
 
 ## Set Color Scheme and Font
 
-If the Termux:Styling plug was installed via F-Droid, then Termux colors and fonts can be customised easily.
+The Termux:Styling plug provides menus for selecting terminal color scheme and font to use
 
-Press and hold on the Termux screen to show the copy/paste menu and select the **Style** menu.  On smaller screens select **More > Style**
+Press and hold on the Termux screen to show the context menu and select the **Style** menu.  On smaller screens select **More > Style**
+
+> If Termux:Styling plugin was not installed, a prompt will display asking if the plugin should be installed
 
 A menu appears with **Choose Color** and **Choose Font**
 
 Select **Choose Color** to select from the available list of colour schemes, e.g. Gruvbox Dark or Gruvbox Light
 
+`~/.termux/colors.properties` file is added when selecting a colour scheme, defining Hex colors from the theme selected.
+
 Select **Choose Font** to select from the available fonts, e.g. FiraCode or Ubuntu
+
+`~/.termux/font.ttf` font file is added when selecting a font.
