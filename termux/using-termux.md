@@ -25,24 +25,10 @@ The on-screen keyboard is swiched off when a hardware keyboard it plugged in, al
 > The on-screen keyboard can also be show when a physical keyboard is present, configured in an android setting.
 
 
-## Tools to download binaries and configuration
-
-* `wget` and `curl` - download tools not packaged, i.e. clojure-lsp binary
-* `git` - clone configuration files and projects (see Git version control section)
-* `xcopy` - copy file content to the clipboard, e.g. for SSH public key
-
-```
-pkg install curl wget git xcopy
-```
-
-> [Configure a Git Identify and SSH key](git-version-control.md) to make full use of the Git client
-
 
 ## Byobu terminal tab manager
 
-Byobu can create multiple tabs each containing a separate command line interface, allowing multiple tools to be run from the Termux prompt simultaneously.
-
-Create tabs to run a Clojure REPL process, the Neovim editor and a shell prompt for managing the file systems and other Linux tools.
+Termux provides a single terminal prompt. Byobu provides multiple shell prompts, allowing individual Clojure tools and editors to be run from the Termux prompt simultaneously.  Practicalli uses byobu to run Neovim, a Clojure REPL and unit test watcher in separate byobu tabs with the ability to add further tabs for other command line tools.
 
 ```
 pkg install byobu
@@ -52,6 +38,6 @@ pkg install byobu
 * `F3` to select previous tab
 * `F4` to select next tab
 
-`byobu-enable` command will configure the current shell to run byobu on startup.  Test this is working by typing `exit` in Termux and start Termux app again.
+`byobu-enable` command will configure the current shell to run byobu on startup.  Test this is working by typing `exit` in Termux and start Termux app again. `byobu-disable` stops this behaviour and byobu will need to be run manually after starting Termux.
 
-`byobu-disable` will stop this behaviour
+> Run the `byobu-enable` command again if zsh is configured after this step or if adding any other shell to Termux.
