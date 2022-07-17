@@ -49,7 +49,7 @@ Many tools can be installed via the `pkg` tool, although specific Clojure tools 
 pkg install curl wget git openssh
 ```
 
-[Configure a Git Identify and SSH key](git-version-control.md) to make full use of the Git client.  [practicalli/dotfiles](https://github.com/practicalli/dotfiles) contains example configuration, ignore patterns and commit template.
+[Configure a Git Identify and SSH key](git.md) to make full use of the Git client.  [practicalli/dotfiles](https://github.com/practicalli/dotfiles) contains example configuration, ignore patterns and commit template.
 
 ## [Optional] Configure Termux Settings
 
