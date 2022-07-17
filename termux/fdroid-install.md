@@ -1,4 +1,4 @@
-## Install Termux via the F-Droid App
+# Install Termux via the F-Droid App
 
 Visit the [FDroid app](https://f-droid.org/) website and download F-Droid, which saves an F-Droid.apk file.  Android may display a security prompt stating the browser does not have permissions to install software.  The popup should include a configure link that opens the Android settings to allow the browser to install software.
 
