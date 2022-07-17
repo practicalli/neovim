@@ -38,6 +38,7 @@
 ## Mobile
 
 * [Termux](termux/index.md)
+    * [Install F-Droid](termux/install-fdroid.md)
     * [Using Termux](termux/using-termux.md)
     * [Custom Shell](termux/custom-shell.md)
     * [Git](termux/git.md)
