@@ -1,14 +1,14 @@
-# Customise the shell
+# Customise shell
 
-> Customising the shell is optional, although gives an enhanced experience.
+Customising the shell is optional, although gives an enhanced experience.
 
-Zsh provides the richest command line experience, providing many advanced features over bash.  The [Prezto configuration](https://github.com/sorin-ionescu/prezto) provides a simple way to configure Zsh features and also supports [powerline10k terminal theme](https://github.com/romkatv/powerlevel10k), providing context specific information and a more engaging visual experience.
+Zsh provides the richest command line experience, providing many advanced features over bash.  Oh My Zsh is a community configuration that provides a simple way to configure Zsh features and also supports [powerline10k terminal theme](https://github.com/romkatv/powerlevel10k), providing context specific information and a more engaging visual experience.
 
-## Before installation
+> Practicalli uses [Prezto community configuration](https://github.com/sorin-ionescu/prezto), unfortunately this does not work well on Termux.
 
-Ensure [XDG locations have been set](setup.md) in the `~.profile` file, check with `echo $XDG_CONFIG_HOME` and use `source ~/.profile` if that environment variable is not set.
 
 ## Install Zsh
+
 Install the zsh package using the Termux package manager
 
 ```
@@ -21,6 +21,37 @@ Start zsh, which will show a `%` character as the prompt
 zsh
 ```
 
+Set the shell to run zsh by default
+
+```
+chsh -s zsh
+```
+
+
+## Install Oh My Zsh
+
+[Install Oh My Zsh via curl](https://ohmyz.sh/#install) (or wget if preferred) in the `.oh-my-zsh/` directory
+
+
+```shell
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+
+## Install Powerline10k
+
+Powerline10k is a visually appealing prompt with a setup script to visually choose the presentation of the prompt.
+
+```
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
+Next time zsh is run, powerline10k setup script will run.  If Meslo is not set as the terminal font, the setup script offers to install the font.  Installing the font will restart Termux.
+
+`p10k configure` to manually run the powerline10k setup script.
+
+
+<!--
 ## Install Prezto community configuration
 
 Clone prezto and its sub-modules into `XDG_CONFIG_HOME/zsh` which is typically `~/.config/zsh`
@@ -70,12 +101,7 @@ Check the configuration is working by loading the .zshenv configuration
 ```
 source "$ZDOTDIR/.zshenv"
 ```
-
-Set the shell to run zsh by default
-
-```
-chsh -s /data/data/com.termux/files/usr/bin/zsh
-```
+ -->
 
 > #### Info::Using Oh My Bash
 > If preferring Bash, then [ohmybash](https://ohmybash.nntoan.com/) provides a nice command line experience, showing completions clearer, nice themes that provide information.
