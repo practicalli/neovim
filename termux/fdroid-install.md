@@ -28,4 +28,6 @@ Styling is a Termux plugin that provides a visually richer experience. Styling c
 
 Install the package via F-Droid
 
+![F-Droid Termux Styling plugin install](https://raw.githubusercontent.com/practicalli/graphic-design/live/termux/f-droid-termux-styling-install.png)
+
 > The styling menu is accessed via a long press on the Termux app screen, showing a **More > Style** option on the usual cut/copy/paste popup menu. Practicalli recommends `FiraCode` fonts.

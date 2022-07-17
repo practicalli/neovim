@@ -15,6 +15,8 @@ If you wish to first check the packages that will be updated, use `pkg --list-up
 
 `termux-change-repo` to select a specific region to minimise the number of mirrors checked during package upgrades, especially useful if on a limited data plan.
 
+![Termux Mirrors selection - Europe](https://raw.githubusercontent.com/practicalli/graphic-design/live/termux/termux-mirrors-select-europe.png)
+
 > At time of writing, the Termux package on F-Droid was around 6 months old so there will be a number of packages that should be updated before any further installation steps are undertaken.
 
 
