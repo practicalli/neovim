@@ -41,21 +41,21 @@ Generate a key using the email address of the GitHub or GitLab account
 ssh-keygen -t rsa -C name@domain.tld
 ```
 
-RET to confirm storing the password in the default location.
+RET to confirm storing the keys in the default location.
 
-Optionally add a passphrase (recommended), then confirm that passphrase.  Note: the passphrase should be different from the GitHub/GitLab password or your OS login password.
+> Usually a passphrase is recommended, however, termux does not seem to save a keyring to save the key passphrase using `ssh-add`.  So the passphrase must be entered each time the key is used, unless a blank passphrase is used.
 
-If a passphrase was used to generate the key, add the key to the OpenSSH authentication agent on the Operating System
+<!-- If a passphrase was used to generate the key, add the key to the OpenSSH authentication agent on the Operating System -->
 
-```bash
-ssh-add
-```
+<!-- ```bash -->
+<!-- ssh-add -->
+<!-- ``` -->
 
-Vist the GitHub account settings and create a new SSH key
+Vist your GitHub account settings and create a new SSH key
 
-Use `xcopy < ~/.ssh/id_rsa.pub` to copy the public key to the clipboard
+Use `cat  ~/.ssh/id_rsa.pub` to show the public key contents.  Press the screen to select and copy the public key to the clipboard.
 
-Paste the public key into the GitHub new key form
+Paste the public key into the GitHub new key form.
 
 
 ## [optional] Create a developer token
