@@ -10,7 +10,7 @@ Install OpenJDK to host the Clojure REPL process and run packaged Clojure applic
 Java 17 Long Term Support version is recommended as it is very stable, receives security updates and has the latest highly tested performance improvements.
 
 ```
-pkg install java-17
+pkg install openjdk-17
 ```
 
 
@@ -26,11 +26,11 @@ git clone git@github.com:practicalli/clojure-deps-edn.git ~/.config/clojure
 Use the Linux install with a prefix path pointing to Termux equivalent of `/usr/local`.  Find the path using `echo $PATH` and remove `bin` from the end.  Without the prefix Clojure will not install correctly
 
 ```bash
-curl -O https://download.clojure.org/install/linux-install-1.11.1.1124.sh
+curl -O https://download.clojure.org/install/linux-install-1.11.1.1149.sh
 
-chmod +x linux-install-1.11.1.1124.sh
+chmod +x linux-install-1.11.1.1149.sh
 
-./linux-install-1.11.1.1124.sh --prefix /data/data/com.termux/files/usr/
+./linux-install-1.11.1.1149.sh --prefix /data/data/com.termux/files/usr/
 ```
 
 `clojure` binary is installed in the existing bin, lib and share directories in `/data/..../usr/`, placing that binary on the system execution path.
