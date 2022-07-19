@@ -54,4 +54,4 @@ Visit [clojure-lsp GitHub releases page](https://github.com/clojure-lsp/clojure-
 - test locally `./clojure-lsp --version` - should print clojure-lsp version and clj-kondo version
 - copy or move file to path `mv clojure-lsp $PATH`
 
-If the [practicalli/dotfiles](https://github.com/practicalli/dotfiles) repository was cloned, move or link the `clojure-lsp` directory to `~/.config/clojure-lsp`
+If the [practicalli/clojure-lsp-config](https://github.com/practicalli/clojure-lsp-config) repository was cloned, move or link the `clojure-lsp` directory to `~/.config/clojure-lsp`
