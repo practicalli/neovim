@@ -46,7 +46,8 @@ clojure -M:repl/rebel
 
 ## Install Clojure LSP
 
-Visit GitHub releases page and download the `clojure-lsp` file
+Visit [clojure-lsp GitHub releases page](https://github.com/clojure-lsp/clojure-lsp/releases) and download the `clojure-lsp` file
+
 - visit the relases page in firefox and copy the link to the file.
 - use wget and paste the link to the file to download
 - make executable `chmod 755 clojure-lsp`
