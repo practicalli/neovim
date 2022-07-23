@@ -18,6 +18,6 @@ A help menu will show the basic command needed to work with packages.
 
 Software keys for Termux specific controls are shown.  Keys can be toggled with the `Volume Up + q` key combination.
 
-![Termux first run showing specific soft keys](https://raw.githubusercontent.com/practicalli/graphic-design/live/termux/fdroid-termux-app-initial-start.png)
+![Termux first run showing specific soft keys](https://raw.githubusercontent.com/practicalli/graphic-design/live/termux/termux-first-startup-tablet.jpeg)
 
 > Termux may not display in fullscreen when Android productivity mode, usually activated on tablets when physical keyboard or mouse is attached.  Disabling productivity mode in the Android settings is recommended.
