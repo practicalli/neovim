@@ -87,3 +87,6 @@ Select **Choose Color** to select from the available list of colour schemes, e.g
 Select **Choose Font** to select from the available fonts, e.g. FiraCode or Ubuntu
 
 `~/.termux/font.ttf` font file is added when selecting a font.
+
+> #### INFO::Termux:Styling uses [NerdFonts](https://www.nerdfonts.com/) for icons
+> All fonts installed via Termux:Styling have been patched with [NerdFonts](https://www.nerdfonts.com/), providing several thousand icons to use within the terminal prompt and Neovim itself (e.g. VimDevIcons).
