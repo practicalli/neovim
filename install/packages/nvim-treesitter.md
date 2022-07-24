@@ -2,17 +2,21 @@
 
 Treesitter provides language specific parsing, highlight and indent features and so is a fundamental plugin to use with Neovim.
 
-`clojure`, `fennel` and `markdown` parsers are automatically installed in the practicalli/neovim-config-redux configuration.
+`clojure`, `fennel`, `markdown` and `org` parsers are automatically installed in the practicalli/neovim-config-redux configuration.
 
-* `:TSInstallInfo` lists language parsers and install status 
+* `:TSInstallInfo` lists language parsers and install status
 * `:TSUpdate {language}` to update a parser to the latest compatible version (specified in nvim-treesitter lockfile.json).
 * `:TSInstall {language}` compiles and installs a parser for the given language.
+* `:TSUpdateSync` to update all parsers to the latest available versions
+
 
 ## nvim-treesitter configuration
 
-`clojure`, `fennel` and `markdown` parsers are automatically installed in the practicalli/neovim-config-redux configuration.
+`clojure`, `fennel`, `markdown` and `org` parsers are automatically installed if not already available.
 
-highlight and indent modules are enabled by default
+`:sync_install true` automatically updates the parsers when the nvim-treesitter plugin is updated.  Treesitter and its parsers are actively developed, so its important to ensure parsers are kept up to date.  This is the equivalent of manually running `:TSUpdateSync`.
+
+Parser highlight and indent modules are enabled by default
 
 In `fnl/config/plugin/treesitter.fnl`
 
@@ -20,10 +24,13 @@ In `fnl/config/plugin/treesitter.fnl`
 (module config.plugin.treesitter
   {autoload {treesitter nvim-treesitter.configs}})
 
-(treesitter.setup {:highlight {:enable true}
-                   :indent {:enable true}
-                   :ensure_installed ["clojure" "fennel" "markdown"]})
+(treesitter.setup
+  {:ensure_installed ["clojure" "fennel" "markdown" "org"]
+   :sync_install true
+   :highlight {:enable true}
+   :indent    {:enable true}})
 ```
+
 
 ## Manually Install Parsers
 
@@ -35,11 +42,3 @@ nvim-treesitter provides the `TSInstall` command to generate a parser for a spec
 :TSInstall {language}
 ```
 > `TAB` completion lists the available language parsers, `TAB` and `S-TAB` to navigate the auto-completion popup.
-
-
-## Automatically update parsers
-
-When nvim-treesitter is updated, it is recommended that the parsers are Automatically updated too.
-
-> TODO: configure practicalli/neovim-config-redux to automatically update parsers
-
