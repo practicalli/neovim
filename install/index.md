@@ -2,16 +2,13 @@
 
 Practicalli Neovim provides a feature rich configuration for Neovim and all the tools required for effective Clojure development (and other Lisp dialects too).
 
-A Clojure development environment within requires
-
 * [Clojure tooling and a Java SDK](clojure.md) (Java Virtual Machine)
 * [Neovim 7 or nightly build](neovim.md)
 * [Neovim package manager and packages](packages/index.md)
+* [NerdFonts](https://www.nerdfonts.com/) for icon support in themes and status line
 
-Neovim and its packages use external tools (providers) for some features.
 
-
-# Summary of Install
+# Brief summary of install
 
 If you are familiar with most of the tools required, then the quick start list below provides an ultra-terse version on how to get started with Neovim and Clojure development.
 
@@ -56,33 +53,3 @@ Clojure LSP server provides static analytics for Neovim LSP client to provide li
 Neovim 7 is the latest release and is recommended.
 
 Or an Neovim pre-release or nightly build if you are feeling more adventurous.
-
-
-
-### Package Manager
-
-[Packer](https://github.com/wbthomason/packer.nvim) is a [`use-package`](https://github.com/jwiegley/use-package) inspired package management for Neovim.
-
-Packer is used as the package manager in this guide as it is built on native packages, see `:h packages`, is written and configured in Lua (although Fennel will be used where possible) and supports Luarocks dependencies.
-
-Other features of packer include:
-
-- Declarative plugin specification
-- Support for dependencies
-- Expressive configuration and lazy-loading options to improve startup time
-- Post-install/update hooks
-- Uses jobs for async installation
-- Support for `git` tags, branches, revisions, submodules
-- Support for local plugins
-
-<!-- TODO: > See the package manager comparison in reference section  -->
-
-
-### Packages
-
-Neovim packages add extra functionality to Neovim, e.g. conjure package provides an excellent Clojure REPL experience (and supports several other languages too).
-
-See the packages section for details of the packages used and a breakdown of their configuration.
-
- list chosen
-- alternatives that could be used (add to reference section)
