@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](introduction.md)
-    * [Distraction-free](introduction/distraction-free.md)
+    * [Features](introduction/features.md)
     <!-- * [Lua](introduction/lua.md) -->
     * [Fennel Configuration](introduction/fennel.md)
     <!-- * [Aniseed](introduction/aniseed.md) -->
