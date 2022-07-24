@@ -1,3 +1,5 @@
+![Practicalli Neovim - effective Clojure programming with Neovim, Clojure LSP and supporting tools](https://raw.githubusercontent.com/practicalli/graphic-design/live/book-covers/practicalli-neovim-book-banner.svg)
+
 ![Neovim startup dashboard with custom theme from practicalli](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-startup-practicalli-config-lambda-logo.png)
 
 ![Neovim with Fennel configuration for Clojure developers](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-clojure-development-tree-whichkey.png)
