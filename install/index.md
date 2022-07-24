@@ -11,7 +11,7 @@ A Clojure development environment within requires
 Neovim and its packages use external tools (providers) for some features.
 
 
-# Quick start
+# Summary of Install
 
 If you are familiar with most of the tools required, then the quick start list below provides an ultra-terse version on how to get started with Neovim and Clojure development.
 
