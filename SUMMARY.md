@@ -10,6 +10,7 @@
 ## Install
 <!-- the approach taken to configure neovom - i.e. fenel first, then lua, avoid vimscript -->
 * [Overview](install/index.md)
+* [Package Manager](install/package-manager.md)
 
 <!-- Clojure Setup -->
 * [Clojure](install/clojure.md)
