@@ -1,8 +1,15 @@
-# Fennel
+# Fennel configuration
+
+Practicalli uses Fennel to define all configuration for Neovim.  Fennel is a LISP dialect and should quickly become comfortable to Clojure developers.
+
+Lua is the defacto language for configuring Neovim and plugin development, although converting between Lua examples to Fennel is relatively simple.
+
+Neovim fully supports Vimscript, although it is felt that this is a relatively hard to understand way of configuring neovim and will not be used if at all possible.
 
 ![Fennel Language logo](https://fennel-lang.org/logo.svg)
 
-Practicalli recommends Fennel as the programming language for configuring Neovim and writing packages if you are feeling adventurous.
+
+# Fennel
 
 Important packages used in this guide are written in Fennel, especially the excellent Conjure package that provides the Clojure REPL (and support for several other language environments).
 
