@@ -38,6 +38,7 @@
 
 ## Version Control
 * [Overview](version-control/index.md)
+* [neogit](version-control/neogit.md)
 * [diffview](version-control/diffview.md)
 
 ## Mobile

@@ -18,3 +18,5 @@ View working space and staged changes side by side
 `d` in neogit status buffer (`SPC g s`) will open diffview in a new tab
 
 `q` to return to neogit status buffer
+
+> [Neogit page](neogit.md) describes diffview integration
