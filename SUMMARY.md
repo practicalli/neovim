@@ -38,6 +38,7 @@
 
 ## Version Control
 * [Overview](version-control/index.md)
+* [diffview](version-control/diffview.md)
 
 ## Mobile
 
