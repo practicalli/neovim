@@ -10,14 +10,13 @@
 ## Install
 <!-- the approach taken to configure neovom - i.e. fenel first, then lua, avoid vimscript -->
 * [Overview](install/index.md)
-* [Package Manager](install/package-manager.md)
-    * [Packages](install/packages/index.md)
 
 <!-- Clojure Setup -->
 * [Clojure](install/clojure.md)
 
 <!-- Neovim Setup -->
 * [Neovim](install/neovim.md)
+    * [Package Manager](install/package-manager.md)
     * [Packages](install/packages/index.md) <!-- Package manager and list of packages -->
     * [nvim-treesitter](install/packages/nvim-treesitter.md) <!-- Language parser -->
 
