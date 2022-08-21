@@ -51,7 +51,22 @@
     * [Neovim](termux/neovim.md)
     * [Clojure Development](termux/clojure-development.md)
 
-
+ 
 ## References
 <!-- * [Alternative Configs] -->
-<!-- * [Learn Vim-style](reference/vim-style/index.md) -->
+ * [Vim-style Editing](reference/vim-style/index.md) 
+     * [Speaking Vim](reference/vim-style/speaking-vim.md)
+     * [Quick Reference](reference/vim-style/vim-quick-reference.md)
+     * [Key bingings](reference/vim-style/key-binding-reference.md)
+     * [Moving around](reference/vim-style/moving-around.md)
+     * [Visual Select](reference/vim-style/visual-select.md)
+     * [Narrowing](reference/vim-style/narrowing.md)
+     * [Text Case](reference/vim-style/case.md)
+
+<!-- TODO: vim reference pages to review to ensure neovim specific content
+     * [](motions.md)
+     * [](evil-g-menu.md)
+     * [](evil-z-menu.md)
+     * [](vim-tips-for-developers.md)
+-->
+
