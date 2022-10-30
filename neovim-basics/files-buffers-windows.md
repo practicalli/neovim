@@ -4,14 +4,31 @@ Buffers hold the contents of files and any other information from processes, e.g
 
 Windows are a container for a buffer and windows can swap which buffer they show.  Multiple windows, also known as splits, can be present in a Neovim frame.  By default, neovim starts with only one window.
 
+## File management
+
+`SPC f f` to open a file, a telescope popup lists file relative to the directory Neovim was opened from (or Path subsequently set in Neovim).  
+
+Telescope provides a preview of the selected file (only if there is sufficient space in the Neovim frame)
+
+`SPC f b` provides a file browser to open files, nacigate the filespace and create new fipes and directories
+
+`SPC f b ESC C` to create a new file or directory. The base path is shown in the command bar.  Type the name of directories and file name as required. `RTN` to create or `ESC` to cancel.  The newly created directories or file name appears n the Telescope list and scan be selected for opening.
+
+> ####HINT::Telescope Normal mode and help
+> `ESC` in Telescope to switch to Normal mode and use comannds, `c` for Create, `r` to rename. 
+>
+> `?` to show all the commands available in Telescope
+
 
 ## Buffer management
 
-`SPC f b` opens telescope with a list of the current buffers (includes files, Conjure REPL Log, etc.).  Telescope provides a preview of the selected file
+`SPC b b` switch between buffers in the current window, using a Telescope popup that lists all current buffers (includes files, Conjure REPL Log, etc.).
 
-`:next` and `:previous` switch buffers in a window
+`SPC b n` (`:next`) and `SPC b n` (`:previous`) to cycle through buffers in the current window
 
-`C-^` opens the previous buffer, useful to toggle between two buffers in the same window
+`SPC TAB` (`C-^`) opens the previous buffer, useful to toggle between two buffers in the same window
+
+Use Telescope to switch between buffers 
 
 ![Neovim - telescope - swtich between buffers](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-telescope-open-buffer.png)
 
@@ -22,6 +39,13 @@ Open multiple buffers when starting Neovim by specifying multiple files to open
 ```bash
 nvim README.md deps.edn src/practicalli/playground.clj test/practicalli/playground.clj
 ```
+
+## Buffer text wrapping
+
+The test in a buffer is not wrapped by default. Set and unser soft text wrapping in a buffer
+
+* `:set wrap` to set soft wrapping on current buffer
+* `:set nowrap` to show lines in full (scroll sideways to see lines longer than the window)
 
 
 ## Neovim Window management

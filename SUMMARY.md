@@ -25,7 +25,7 @@
 * [Overview](neovim-basics/index.md)
 * [Package management](neovim-basics/package-management.md)
 <!-- * [File management](neovim-basics/files.md) -->
-* [Buffers & Windows](neovim-basics/buffers-windows.md)
+* [Files, Buffers & Windows](neovim-basics/files-buffers-windows.md)
 <!-- * [Vim-style editing](neovim-basics/vim-style-editing/index.md) -->
 
 ## REPL Driven Development
