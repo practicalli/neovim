@@ -20,13 +20,14 @@
     * [Packages](install/packages/index.md) <!-- Package manager and list of packages -->
     * [nvim-treesitter](install/packages/nvim-treesitter.md) <!-- Language parser -->
 
-## Neovim basics
+## Using Neovim
 
 * [Overview](neovim-basics/index.md)
 * [Package management](neovim-basics/package-management.md)
 <!-- * [File management](neovim-basics/files.md) -->
 * [Files, Buffers & Windows](neovim-basics/files-buffers-windows.md)
 <!-- * [Vim-style editing](neovim-basics/vim-style-editing/index.md) -->
+* [Multiple Cursors](plugins/multiple-cursors.md)
 
 ## REPL Driven Development
 
