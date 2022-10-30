@@ -41,6 +41,12 @@ Neogit is an interactive git client that provides the core features of version c
 
 `c` for a new commit, `a` to amend the latest commit, `w` to reword a commit message, `e` to add staged changes to existing commit
 
+A new commit or amend commit qill open a new window to write a commit message (using a git commit message template if defined)
+
+`:wq` to save a commit message and initiate the commit.
+
+`:q!`  to cancel the commit from the commit message buffer.
+
 
 ## Stashing changes
 
@@ -53,9 +59,9 @@ Neogit is an interactive git client that provides the core features of version c
 
 ## Remote changes
 
-`F` to open the pull menu, to fetch changes from a remote repository
+`F` to open the pull menu, `p` to pull changes (fetch and merge) from the remote repository, `u` t pull from the upstream repository, or `e` to specify the remote and branch names.
 
-`P` to open the push menu to open
+`P` to open the push menu to open, `-u` to push to the current remote
 
 
 
@@ -71,3 +77,4 @@ Neogit is an interactive git client that provides the core features of version c
 ## Modify Git commit history
 
 `r` opens the rebase menu
+
