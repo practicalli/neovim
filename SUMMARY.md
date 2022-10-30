@@ -58,6 +58,7 @@
  * [Vim-style Editing](reference/vim-style/index.md) 
      * [Speaking Vim](reference/vim-style/speaking-vim.md)
      * [Quick Reference](reference/vim-style/vim-quick-reference.md)
+     * [Developer Tips](reference/vim-style/vim-tips-for-developers.md)
      * [Key bingings](reference/vim-style/key-binding-reference.md)
      * [Moving around](reference/vim-style/moving-around.md)
      * [Visual Select](reference/vim-style/visual-select.md)
