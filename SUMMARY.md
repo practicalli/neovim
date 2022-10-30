@@ -64,6 +64,7 @@
      * [Visual Select](reference/vim-style/visual-select.md)
      * [Narrowing](reference/vim-style/narrowing.md)
      * [Text Case](reference/vim-style/case.md)
+     * [g menu](reference/vim-style/g-menu.md)
      * [z menu](reference/vim-style/z-menu.md)
 
 <!-- TODO: vim reference pages to review to ensure neovim specific content
