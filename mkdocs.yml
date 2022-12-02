@@ -1,0 +1,155 @@
+---
+# Practicalli Neovim
+site_name: Practicalli Neovim
+site_url: https://practical.li/neovim
+site_description: Practical guide to Clojure development with Neovim
+site_author: Practicalli
+copyright: Copyright &copy 2023  Practicali <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+
+# Source for book
+repo_url: https://github.com/practicalli/neovim-mkdocs
+edit_uri: edit/main/docs
+
+# Deployment
+remote_name: practicalli/neovim
+remote_branch: gh-pages # deployment branch
+
+# Navigation
+nav:
+  - Introduction:
+      - Overview: index.md
+      - Features: introduction/features.md
+      - Fennel: introduction/fennel.md
+      - Contributing:
+          - Contribute: contributing.md
+          - Writing Tips: writing-tips.md
+  - Install:
+      - install/index.md
+      - install/clojure.md
+      - install/configuration.md
+      - install/neovim.md
+      - install/package-manager.md
+      - install/packages/index.md
+      - install/packages/lualine.md
+      - install/packages/nvim-treesitter.md
+  - Neovim Basics:
+      - neovim-basics/index.md
+      - neovim-basics/files-buffers-windows.md
+      - neovim-basics/comments.md
+      - neovim-basics/git-github.md
+      - neovim-basics/language-server-protocol.md
+      - neovim-basics/package-management.md
+      - neovim-basics/multiple-cursors.md
+  - Clojure REPL Workflow:
+      - repl-driven-development/index.md
+      - repl-driven-development/conjure.md
+      - repl-driven-development/testing.md
+  - Version Control:
+      - version-control/index.md
+      - version-control/diffview.md
+      - version-control/neogit.md
+  - Ultra-Mobile Neovim:
+      - termux/index.md
+      - termux/clojure-development.md
+      - termux/custom-shell.md
+      - termux/fdroid-install.md
+      - termux/git.md
+      - termux/neovim.md
+      - termux/setup.md
+      - termux/using-termux.md
+  - Reference:
+      - reference/vim-style/index.md
+      - reference/vim-style/case.md
+      - reference/vim-style/g-menu.md
+      - reference/vim-style/key-binding-reference.md
+      - reference/vim-style/moving-around.md
+      - reference/vim-style/motions.md
+      - reference/vim-style/narrowing.md
+      - reference/vim-style/speaking-vim.md
+      - reference/vim-style/vim-quick-reference.md
+      - reference/vim-style/vim-tips-for-developers.md
+      - reference/vim-style/visual-select.md
+      - reference/vim-style/z-menu.md
+
+# Theme and styling
+theme:
+  name: material
+  logo: assets/practicalli-logo.svg
+  favicon: assets/favicon.svg
+  features:
+    - navigation.top
+    - content.code.annotate
+    - content.tabs.link
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes # Nav sections can have files
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+      # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+## Additional styling
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html # Grids
+  - footnotes # footnotes and abbreviations
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.keys # keyboard keys
+  - pymdownx.magiclink
+  - def_list # lists
+  - pymdownx.tasklist:
+      custom_checkbox: true # checkboxes
+
+## Plugins
+plugins:
+  # Explicitly add search plugin when defining plugins in this configuration file
+  - search
+  - callouts
+  - glightbox # Image aligning
+  - git-revision-date-localized: # Update and Creation date of each page
+      # enable_creation_date: true
+      fallback_to_build_date: true
+
+# Footer / Social Media
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/jr0cket/
+    - icon: fontawesome/brands/slack
+      link: https://clojurians.slack.com/messages/practicalli
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/practical_li
+    - icon: fontawesome/brands/github
+      link: https://github.com/practicalli
+    - icon: fontawesome/brands/docker
+      link: https://docker.com/practicalli
