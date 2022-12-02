@@ -43,7 +43,7 @@ Neovim package configuration is typically provided in Lua code, so requires tran
 
 Neovim support
 
-* [anaseed](https://github.com/Olical/aniseed) - write plugins or configuration for Neovim with great runtime performance
+* [aniseed](https://github.com/Olical/aniseed) - write plugins or configuration for Neovim with great runtime performance
 * [hotpot](https://github.com/rktjmp/hotpot.nvim) - seamless Fennel inside Neovim
 
 Emacs support:
