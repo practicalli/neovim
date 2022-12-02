@@ -1,6 +1,8 @@
 ## Book status
 
-[![GitHub issues](https://img.shields.io/github/issues/practicalli/neovim?label=content%20ideas&logo=github)](https://img.shields.io/github/issues/practicalli/neovim?label=content%20ideas&logo=github) [![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/neovim?label=commits&logo=github)](https://img.shields.io/github/commit-activity/y/practicalli/neovim?label=commits&logo=github) [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/neovim?label=pull%20requests&logo=github)](https://img.shields.io/github/issues-pr-raw/practicalli/neovim?label=pull%20requests&logo=github) [![GitBook publish](https://github.com/practicalli/neovim/actions/workflows/publish-website.yaml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/publish-website.yaml) [![MegaLinter](https://github.com/practicalli/neovim/actions/workflows/megalinter.yml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/megalinter.yml) [![pages-build-deployment](https://github.com/practicalli/neovim/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/pages/pages-build-deployment)
+![GitHub issues](https://img.shields.io/github/issues/practicalli/neovim?label=content%20ideas&logo=github) ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/neovim?label=commits&logo=github) ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/neovim?label=pull%20requests&logo=github)
+
+[![GitBook publish](https://github.com/practicalli/neovim/actions/workflows/publish-website.yaml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/publish-website.yaml) [![MegaLinter](https://github.com/practicalli/neovim/actions/workflows/megalinter.yml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/megalinter.yml) [![pages-build-deployment](https://github.com/practicalli/neovim/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/pages/pages-build-deployment)
 
 ## License and Contributing
 
@@ -9,7 +11,7 @@
 <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a>
  <a property="dct:title" rel="cc:attributionURL" href="https://github.com/practicalli/neovim">Practicalli Neovim</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://practical.li">Practicalli</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0 </a></p>
 
-Please [read the contributing section of the book](contributing.md) before raising an issue or pull request
+Please [read the contributing section of the book](contributing.html) before raising an issue or pull request
 
 By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/neovim/graphs/contributors).
 
@@ -49,6 +51,8 @@ Install the GitBook plugins used for this project (as defined in the [book.json]
 switch to the root directory of the cloned repository when complete.
 
 ```bash
+cd clojure
+
 gitbook install
 ```
 
@@ -69,6 +73,7 @@ The following plugins are currently used for Practicalli books.
 * [anchor-headings-lambda](https://www.npmjs.com/package/gitbook-plugin-anchor-headings-lambda)
 * [callouts](https://www.npmjs.com/package/gitbook-plugin-callouts)
 * [codeblock-disable-glossary](https://www.npmjs.com/package/gitbook-plugin-codeblock-disable-glossary)
+* [disqus](https://github.com/GitbookIO/plugin-disqus)
 * [folding-chapters](https://www.npmjs.com/package/gitbook-plugin-folding-chapters-2) - fold navigation sections
 * [ga](https://www.npmjs.com/package/gitbook-plugin-ga) - Google analytics
 * -glossary - disable default glossary
