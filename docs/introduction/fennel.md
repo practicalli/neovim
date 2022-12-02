@@ -34,7 +34,7 @@ Aniseed bridges the gap between [Fennel](https://fennel-lang.org/) (a Lisp that 
 
 ## Lua to Fennel
 
-Neovim package configuration is typically provided in Lua code, so requires translation into fennel.  Although this conversion should be fairly straightforward, [Anti-fennel](https://git.sr.ht/~technomancy/antifennel) can converts Lua code into Fennel code.
+Neovim package configuration is typically provided in Lua code, so requires translation into fennel.  Although this conversion should be fairly straightforward, [Anti-fennel](https://git.sr.ht/~technomancy/antifennel) converts from Lua code to Fennel code.
 
 [See Fennel](https://fennel-lang.org/see) is an online antifennel tool to convert between Lua and Fennel.
 
@@ -56,6 +56,6 @@ Emacs support:
 
 [TIC-80](https://tic80.com/) is a simulated computer environment to to write code, design art, compose music and retro style game games.
 
-[LÖVE](https://love2d.org/) is a game-making framework for the Lua programming language and can beas Fennel compiles to Lua, you can reference the LÖVE wiki when making games with Fennel. LÖVE is more flexible than TIC-80 in that it allows you to import from external resources and use any resolution or memory you like, but at a cost in that it is more complicated to make games in.
+[LÖVE](https://love2d.org/) is a framework for making games with the Lua programming language, allows import from external resources and can use any resolution or memory resources required.
 
 TIC-80 and LÖVE provide cross-platform support across Windows, Mac and Linux systems. TIC-80 games can also be played in the browser.
