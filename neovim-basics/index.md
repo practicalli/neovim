@@ -7,15 +7,18 @@ Using the fundamental controls of Neovim that apply across any and all editing.
 
 ## Managing files and directories
 
-`SPC f f` to find existing files
+`SPC f p` to list files within the scope of the current directory path. `SPC f f` to open a file browser which can open, create and delete files and directories.
 
-`:!` for a shell command, e.g. to create a new directory
+`:lcd` to set the current local directory
 
-<!-- TODO: add NERDTree -->
+`:!` for a shell command, e.g. `:!mkdir -p path/to/new/directory` create a new directory and any intermediate path
+
 
 
 ## Manage buffers and windows
 
-`SPC f b` to switch between buffers
+`SPC h` / `SPC l` to jump to left / right buffer,  `SPC j` / `SPC k` to jump to buffer below / above
 
-`C-w` and `hjkl` to navigate windows
+`SPC b b` to list current buffers and switch between them using telescope
+
+`C-w` and `hjkl` to navigate windows is the classic Vim approach
