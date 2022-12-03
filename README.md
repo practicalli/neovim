@@ -1,10 +1,10 @@
 ## Book status
 
-![GitHub issues](https://img.shields.io/github/issues/practicalli/neovim?label=content%20ideas&logo=github) 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/neovim?label=commits&logo=github) 
+![GitHub issues](https://img.shields.io/github/issues/practicalli/neovim?label=content%20ideas&logo=github)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/neovim?label=commits&logo=github)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/neovim?label=pull%20requests&logo=github)
-[![GitBook publish](https://github.com/practicalli/neovim/actions/workflows/publish-book.yml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/publish-website.yaml) 
-[![MegaLinter](https://github.com/practicalli/neovim/actions/workflows/megalinter.yml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/megalinter.yml) 
+[![Publish Book](https://github.com/practicalli/neovim/actions/workflows/publish-book.yaml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/publish-book.yaml)
+[![MegaLinter](https://github.com/practicalli/neovim/actions/workflows/megalinter.yml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/megalinter.yml)
 
 
 ## License and Contributing
