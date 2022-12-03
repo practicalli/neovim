@@ -16,6 +16,7 @@ remote_branch: gh-pages # deployment branch
 nav:
   - Introduction:
       - Overview: index.md
+      - REPL Workflow: repl-workflow.md
       - Features: introduction/features.md
       - Fennel: introduction/fennel.md
       - Contributing:
