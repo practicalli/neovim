@@ -8,7 +8,13 @@ All content and interaction with any persons or systems must be done so with res
 
 
 ## Book status
-[![GitHub issues](https://img.shields.io/github/issues/practicalli/neovim?label=content%20ideas&logo=github)](https://img.shields.io/github/issues/practicalli/neovim?label=content%20ideas&logo=github) [![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/neovim?label=commits&logo=github)](https://img.shields.io/github/commit-activity/y/practicalli/neovim?label=commits&logo=github) [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/neovim?label=pull%20requests&logo=github)](https://img.shields.io/github/issues-pr-raw/practicalli/neovim?label=pull%20requests&logo=github) [![Publish Book](https://github.com/practicalli/neovim/actions/workflows/publish-book.yml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/publish-book.yml) [![MegaLinter](https://github.com/practicalli/neovim/actions/workflows/megalinter.yml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/megalinter.yml) [![pages-build-deployment](https://github.com/practicalli/neovim/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/pages/pages-build-deployment)
+
+[![GitHub issues](https://img.shields.io/github/issues/practicalli/neovim?label=content%20ideas&logo=github)](https://img.shields.io/github/issues/practicalli/neovim?label=content%20ideas&logo=github)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/neovim?label=commits&logo=github)](https://img.shields.io/github/commit-activity/y/practicalli/neovim?label=commits&logo=github)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/neovim?label=pull%20requests&logo=github)](https://img.shields.io/github/issues-pr-raw/practicalli/neovim?label=pull%20requests&logo=github)
+[![MegaLinter](https://github.com/practicalli/neovim/actions/workflows/megalinter.yml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/megalinter.yml)
+[![Publish Book](https://github.com/practicalli/neovim/actions/workflows/publish-book.yaml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/publish-book.yaml)
+[![pages-build-deployment](https://github.com/practicalli/neovim/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/pages/pages-build-deployment)
 
 
 ### Submit and issue or idea
