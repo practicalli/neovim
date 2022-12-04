@@ -22,7 +22,7 @@ Coding with a REPL provides instant feedback as design decisions are coded.  The
 
 ## Evaluating source code
 
-![Clojure repl driven development using Clojure aware editor](https://raw.githubusercontent.com/jr0cket/developer-guides/master/clojure/clojure-repl-driven-development-clojure-aware-editor.png){ align=right loading=lazy }
+![Clojure repl driven development using Clojure aware editor](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-driven-development-clojure-aware-editor.png){ align=right loading=lazy }
 
 A REPL connected editor is the primary tool for evaluating Clojure code from source code files, displaying the results inline.
 
@@ -135,24 +135,20 @@ Clojure has a number of [test runners](https://practical.li/clojure/testing/test
 
 ## Continuous Integration and Deployment
 
-Add a [continuous integration service](https://practical.li/clojure/continuous-integration/) to run tests and builds code on every shared commit (or every commit if you run a CI server locally).
-
-Spin up testable deployments of your application or service based on pre-defined branch commits or every commit if you do not share branches (i.e. push to shared master or develop branch), eg. Heroku Pipelines.
+Add a [continuous integration service](https://practical.li/clojure/continuous-integration/) to run tests and builds code on every shared commit.  Spin up testable review deployments when commits pushed to a pull request branch, before pushing commits to the main deployment branch, creating an effective pipeline to gain further feedback.
 
 * [CircleCI](https://practical.li/clojure/continuous-integration/circle-ci/) provides a simple to use service that supports Clojure projects.
-* [GitHub actions](https://github.com/features/actions) for marketplace and custom workflows
+* [GitHub Workflows](https://docs.github.com/en/actions/using-workflows) and [GitHub actions marketplace ](https://github.com/marketplace?type=actions) to quickly build a tailored continuous integration service, e.g. [Setup Clojure GitHub Action](https://github.com/marketplace/actions/setup-clojure).
 * [GitLab CI](https://docs.gitlab.com/ee/ci/introduction/index.html)
-* [Deployment via continuous integration](https://practical.li/clojure-web-services/projects/banking-on-clojure/deployment-via-ci.html) ensures all tests pass before deployment.
-* [Defining a deployment pipeline](https://practical.li/clojure-web-services/projects/banking-on-clojure/deployment-pipeline.html) provides an efficient way to deploy applications and also get fast feedback from a wider range of stakeholders and users, especially when spin up testable deployments of your application based on commits  (i.e. push to shared develop or feature branch).
 
-![Git, CircleCI and Heroku continuous integration and deployment](https://practical.li/clojure-web-services/images/circleci-workflow-sequential-git-heroku.png)
+![Continuous Integration](https://raw.githubusercontent.com/practicalli/graphic-design/live/continuous-integration/continuous-integration-overview.svg)
 
 
 ## Live Coding with Data - Stuart Halloway
 
-There are few novel features of programming languages, but each combination has different properties. The combination of dynamic, hosted, functional, extended Lisp in Clojure gives developers the tools for making effective programs. Less well understood are the ways in which Clojure's unique combination of features can yield a highly effective development process.
+There are few novel features of programming languages, but each combination has different properties. The combination of dynamic, hosted, functional and extended Lisp in Clojure gives developers the tools for making effective programs. The ways in which Clojure's unique combination of features can yield a highly effective development process.
 
-Over more than a decade, we have developed an effective approach to writing code in Clojure whose power comes from composing many of its key features. As different as Clojure programs are from e.g. Java programs, so to can and should be the development experience. You are not in Kansas anymore!
+Over more than a decade we have developed an effective approach to writing code in Clojure whose power comes from composing many of its key features. As different as Clojure programs are from e.g. Java programs, so to can and should be the development experience. You are not in Kansas anymore!
 
 This talk presents a demonstration of the leverage you can get when writing programs in Clojure, with examples, based on my experiences as a core developer of Clojure and Datomic.
 
