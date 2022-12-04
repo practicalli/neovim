@@ -19,9 +19,8 @@ nav:
       - REPL Workflow: repl-workflow.md
       - Features: introduction/features.md
       - Fennel: introduction/fennel.md
-      - Contributing:
-          - Contribute: contributing.md
-          - Writing Tips: writing-tips.md
+      - Contributing: contributing.md
+      - Writing Tips: writing-tips.md
   - Install:
       - install/index.md
       - install/clojure.md
