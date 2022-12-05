@@ -24,8 +24,8 @@ nav:
   - Install:
       - install/index.md
       - install/clojure.md
-      - install/configuration.md
       - install/neovim.md
+      - install/configuration.md
       - install/package-manager.md
       - install/packages/index.md
       - install/packages/lualine.md
