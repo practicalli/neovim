@@ -110,7 +110,7 @@ Live linting with [clj-kondo](https://github.com/borkdude/clj-kondo) suggests co
 
 ## Test Driven Development and REPL Driven Development
 
-![Clojure REPL driven development (RDD) and Test Driven Development (TDD)](https://raw.githubusercontent.com/practicalli/graphic-design/live/repl-tdd-flow.png){ align=right loading=lazy }
+![Clojure REPL driven development (RDD) and Test Driven Development (TDD)](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/repl-tdd-flow.png){ align=right loading=lazy }
 
 Test Driven Development (TDD) and REPL Driven Development (RDD) complement each other as they both encourage incremental changes and continuous feedback.
 
