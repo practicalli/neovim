@@ -46,11 +46,103 @@ in file located in the following path `fnl/config/plugin/telescope`
 
 ## `fnl/config/plugin/conjure.fnl`
 
-Conjure specifics settings
+The majority of default configuration settings are used for Conjure, with the exception of a few commonly used key bindings from Emacs CIDER & Spacemacs.  The Heads Up Display (HUD) is also configured to be less intrusive, relying on mostly on inline results.
 
-> TODO: review the Conjure configuration options
+Include the conjure and aniseed namespaces
 
-<!-- Rafael config: , remap doc keymap `K` to `<localleader>K`, avoiding conflict with the LSP docs `K` -->
+```fennel
+(module config.plugin.conjure
+  {autoload {nvim aniseed.nvim}})
+```
+
+Configure keybindings to be closer to Spacemacs
+
+```fennel
+;; Set e register for evaluation result
+(set nvim.g.conjure#eval#result_register :e)
+
+;; Evaluate root form (top level form) under the cursor
+;; Default: `"er"`
+(set nvim.g.conjure#mapping#eval_root_form "ef")
+
+;; Evaluate root form under the cursor & insert result as comment
+;; Default: `"ecr"`
+(set nvim.g.conjure#mapping#eval_comment_root_form "e;")
+
+;; Evaluate file loaded from disk
+;; Default: `"ef"`
+(set nvim.g.conjure#mapping#eval_file "el")
+
+```
+
+Configure the HUD to be less intrusive.
+
+```
+;; Width of HUD as percentage of the editor width
+;; A float between 0.0 and 1.0.
+;; Default: `0.42`
+(set nvim.g.conjure#log#hud#width 1)
+
+;; Display HUD
+;; Default: `true`
+(set nvim.g.conjure#log#hud#enabled false)
+
+;; Preferred corner position for the HUD, over-ridden by HUD cursor detection
+;; Example: Set to `"SE"` and HUD width to `1.0` for full width HUD at bottom of screen
+;; Default: `"NE"`
+(set nvim.g.conjure#log#hud#anchor "SE")
+
+;; Open log at bottom or far right of editor, using full width or height
+;; Default: `false`
+(set nvim.g.conjure#log#botright true)
+```
+
+Practicalli encourages header comments at the start of each file to describe the purpose of the namespace, so the Clojure ns lookup is extended
+
+```fennel
+;; Number of lines to check for `ns` form, used for setting evaluation context
+;; `b:conjure#context` to override a specific buffer that isn't finding the context
+;; Default: `24`
+(set nvim.g.conjure#extract#context_header_lines 100)
+```
+
+Disable the auto-repl as practicalli prefers manage repl connections themselves
+
+```fennel
+;; Start "auto-repl" process, eg. babashka
+;; when Conjure unable to find candidate REPL process via to an existing nREPL connection
+;; Default: `true`
+(set nvim.g.conjure#client#clojure#nrepl#connection#auto_repl#enabled false)
+
+;; Hide auto-repl buffer when triggered, to avoid the need to interact with that buffer
+;; Default: `false`
+(set nvim.g.conjure#client#clojure#nrepl#connection#auto_repl#hidden true)
+
+;; Command to start the auto-repl
+;; Default: `"bb nrepl-server localhost:8794"`
+(set nvim.g.conjure#client#clojure#nrepl#connection#auto_repl#cmd nil)
+
+;; Print raw evaluation result, suppressing prefix for stdout lines `; (out)`
+;; Default: `false`
+(set nvim.g.conjure#client#clojure#nrepl#eval#raw_out true)
+
+;; Automatically require namespace of new buffer or current buffer after connection
+;; Ensures buffers are loaded, required code to compile and (re)loadable.
+;; Default: `true`
+(set nvim.g.conjure#client#clojure#nrepl#eval#auto_require false)
+```
+
+Use lambdaisland/kaocha as the test runner rather, which has a fail fast feature which can be more effective when adding or changing functionality
+
+```fennel
+;; Test runner called from the test key mappings
+;; Default: `"clojure"`
+(set nvim.g.conjure#client#clojure#nrepl#test#runner "kaocha")
+
+;; Print raw test evaluation result, suppressing prefix for stdout lines `; (out)`
+;; Default: `true`
+(set nvim.g.conjure#client#clojure#nrepl#test#raw_out true)
+```
 
 
 ## `fnl/config/plugin/telescope.fnl`
