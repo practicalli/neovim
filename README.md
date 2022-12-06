@@ -21,7 +21,7 @@ By submitting content ideas and corrections you are agreeing they can be used in
 
 ## Sponsor my work
 
-[![Sponsor practicalli-john](https://raw.githubusercontent.com/practicalli/graphic-design/live/practicalli-github-sponsors-button.png)](https://github.com/sponsors/practicalli-john/)
+[![Sponsor practicalli-john](https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png)](https://github.com/sponsors/practicalli-john/)
 
 The majority of my work is focused on the [Practicalli series of books and videos](https://practical.li/) and an advisory role with several communities
 
