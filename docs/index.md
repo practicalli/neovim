@@ -23,3 +23,12 @@ Neovim is a highly extensible and powerful editor, supporting mult-modal editing
 Practicalli Neovim will guide you through installing Clojure and Neovim and how to use them for a simple, powerful and fun REPL Driven Development workflow
 
 ![Clojure REPL Driven Development workflow](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-driven-development-lifecycle-concept.png)
+
+
+## Sponsor my work
+
+![Sponsor practicalli-john](https://raw.githubusercontent.com/practicalli/graphic-design/live/practicalli-github-sponsors-button.png){ align=left loading=lazy }
+
+The majority of my work is now focused on the [Practicalli series of books and videos](https://practical.li/) and an advisory role with several communities
+
+Thank you to [Cognitect](https://www.cognitect.com/), [Nubank](https://nubank.com.br/) and a wide range of other [sponsors](https://github.com/sponsors/practicalli-john#sponsors) for your continued support
