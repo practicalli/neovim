@@ -2,7 +2,7 @@
 
 A smart phone or tablet and an external keyboard can make an excellent ultra-portable development environment, especially when travelling with limited space or restricted weight constraints.
 
-Termux can be [installed using the F-Droid marketplace](fdroid-install.md), which is as easy as installing any other Android app.
+Termux can be [installed using the F-Droid marketplace](fdroid-install.md){target=_blank}, which is as easy as installing any other Android app.
 
 !!! WARNING "Do not install Termux App from the Google Play store"
     The Termux App in Google Play store is out of date and will simply not work properly and probably not at all

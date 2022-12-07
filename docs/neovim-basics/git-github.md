@@ -15,18 +15,36 @@ Other commands to map
 
 ## GitHub interaction
 
+[GitHub CLI](https://cli.github.com/){target=_blank .md-button}
+
 Work with GitHub issues and Pull Requests from the comfort of Neovim.
 
-Requires the [GitHub CLI](https://cli.github.com/) for authentication to GitHub, using a developer personal access token that should be added to your GitHub account
+[GitHub CLI](https://cli.github.com/){target=_blank} to authentication to a GitHub account.  Successful login creates a local developer token that is used by Octo to communicate with GitHub.
 
-TODO: Review [Octo.nvim configuration settings](https://github.com/pwntester/octo.nvim#%EF%B8%8F-configuration)
+```shell
+gh auth login
+```
 
-Command line form: `Octo <object> <action> [arguments]` - [Object, Action and Arguments commands](https://github.com/pwntester/octo.nvim#-commands)
+![GitHub CLI authorization login wizzard](https://raw.githubusercontent.com/practicalli/graphic-design/live/git/github-cli-auth-login-wizzard.png)
+
+
+### Octo commands
+
+Command line form: `Octo <object> <action> [arguments]` - [Object, Action and Arguments commands](https://github.com/pwntester/octo.nvim#-commands){target=_blank}
+
+List all repositories owned by the GitHub authenticated user
+
+```shell
+:Octo repo list
+```
 
 List issues from current project (optionally add a specific repository)
 ```sh
-:Octo issue list
+:Octo issue list practicalli/neovim
 ```
+
+> The account/repository-name is required if Octo cannot find the repository
+
 
 Create a pull requests from current project
 
@@ -43,3 +61,9 @@ Add a comment to the current topic (issue/pr)
 ```sh
 :Octo gist list
 ```
+
+![Neovim Octo package - GitHub Gist list](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-octo-github-gist-list.png)
+
+
+!!! HINT "Octo.nvim configuration options"
+    [Octo.nvim configuration options](https://github.com/pwntester/octo.nvim#%EF%B8%8F-configuration){target=_blank}

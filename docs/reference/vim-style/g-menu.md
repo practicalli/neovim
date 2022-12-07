@@ -23,11 +23,12 @@ g` in normal mode opens a menu of convenient utilities.  Practicalli uses this m
 
 `g u` to change the current character or selection to lowercase, `g U` for uppercase.
 
-> #### Hint::Toggle case with `~`
+!!! Hint "Toggle case with `~`"
 > `~` will toggle the case of the current character or selected region.
 
 <!--
 ## Marks
 
-> TODO: using marks with g menu
+!!! TODO
+    using marks with g menu
 --->

@@ -1,7 +1,7 @@
 # Add Neovim Packages
 
-> #### Hint::WIP: Check the [practicalli/neovim-config-reduct configuration](https://github.com/practicalli/neovim-config-redux)
-> Many packages have been added to the configuration and `fnl/config/package.fnl` is the most up to date list of packages currently used.
+!!! HINT "Evolving Packages in Practicalli config"
+    Check the [practicalli/neovim-config-reduct configuration](https://github.com/practicalli/neovim-config-redux). Many packages have been added to the configuration and `fnl/config/package.fnl` is the most up to date list of packages currently used.
 
 List of packages and their purpose
 

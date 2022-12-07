@@ -1,5 +1,6 @@
 # Language Server Protocol (LSP) Configuration
 
+Using [clojure-lsp](https://clojure-lsp.io/) server and [Neovim Treesitter](https://tree-sitter.github.io/tree-sitter/) as an LSP client, code is statically analysed to provide auto-completion data, advanced editing actions such as refactor, live formatting, etc.
 
 ## Key maps
 

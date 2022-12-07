@@ -82,7 +82,7 @@ Regularly switch back to **normal** state should become common practice.  As soo
 `ESC` or press `fd` keys in extremely quick succession.
 
 
-> ####HINT::`fd` shortcut for Esc
+!!! HINT "`fd` shortcut for Esc"
 > Using `f d` together is low risk as if you dont get it right it will either add the characters or try find the next `d` character (as `f` moves to the next character).
 > Keep trying this key combination as once in normal state you can use `u` to undo any `f d` characters inserted.
 
@@ -100,8 +100,8 @@ Regularly switch back to **normal** state should become common practice.  As soo
 | `u`      | undo                                               |
 | `Ctrl-r` | redo                                               |
 
-> ####Hint:: Undo tips
-> Undo will revert the last action in normal mode or all the changes you made in **insert** state
+!!! HINT "Undo tips"
+    Undo will revert the last action in normal mode or all the changes you made in **insert** state
 
 
 ## Replace and changing text
@@ -152,12 +152,16 @@ The `.` keybinding will repeat the last command in normal mode or the last text 
 
 Type a number before a command and that command will run that number of times.
 
->####Hint::Inserting a comment border
-> Use the number repeat to create a border of 42 `;` characters.
-> Type `42` to repeat the command 42 times
-> Press `i` for insert mode
-> Press `;` as the character to repeat insert
-> Press `ESC` or `fd` to leave insert mode and insert all 42 `;` characters
+!!! HINT "Inserting a comment border"
+    Use the number repeat to create a border of 42 `;` characters.
+
+    Type `42` to repeat the command 42 times
+
+    Press `i` for insert mode
+
+    Press `;` as the character to repeat insert
+
+    Press `ESC` or `fd` to leave insert mode and insert all 42 `;` characters
 
 
 ## Transposing / swap
@@ -203,7 +207,7 @@ Telescope file browser opens in **Insert** mode to allow typing filenames, to na
 `Esc` swiches the Telescope popup to normal mode, allowing commands to be used
 
 - `c` create file / directory  (any missing parts of a path are created)
-- `r` rename a file / directory 
+- `r` rename a file / directory
 - `R` replace
 
 `TAB` selects files and directories, allowing for commands (i.e. rename) to be done in batch mode (acting on all selected files / directories)
@@ -244,5 +248,3 @@ I recommend using the Spacemacs menu from **normal** mode to quit / restart Spac
 run external commands using `:!` followed by a command.  For example:
 
 `:!ls` - run the `ls` command
-
-

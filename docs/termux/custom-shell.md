@@ -2,9 +2,9 @@
 
 Customising the shell is optional, although gives an enhanced experience.
 
-Zsh provides the richest command line experience, providing many advanced features over bash.  Oh My Zsh is a community configuration that provides a simple way to configure Zsh features and also supports [powerline10k terminal theme](https://github.com/romkatv/powerlevel10k), providing context specific information and a more engaging visual experience.
+Zsh provides the richest command line experience, providing many advanced features over bash.  Oh My Zsh is a community configuration that provides a simple way to configure Zsh features and also supports [powerline10k terminal theme](https://github.com/romkatv/powerlevel10k){target=_blank}, providing context specific information and a more engaging visual experience.
 
-> Practicalli uses [Prezto community configuration](https://github.com/sorin-ionescu/prezto), unfortunately this does not work well on Termux.
+> [Oh My Zsh](https://ohmyz.sh/){target=_blank} community configuration enhances the Zsh experience.  Practicalli normally uses [Prezto community configuration](https://github.com/sorin-ionescu/prezto){target=_blank}, unfortunately this did not work well on Termux.
 
 
 ## Install Zsh
@@ -30,7 +30,7 @@ chsh -s zsh
 
 ## Install Oh My Zsh
 
-[Install Oh My Zsh via curl](https://ohmyz.sh/#install) (or wget if preferred) in the `.oh-my-zsh/` directory
+[Install Oh My Zsh via curl](https://ohmyz.sh/#install){target=_blank} (or wget if preferred) in the `.oh-my-zsh/` directory
 
 
 ```shell
@@ -77,31 +77,31 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 ```
 
-> #### Hint::Practicalli Zsh configuration
-> Clone [practicalli/dotfiles](https://github.com/practicalli/dotfiles) and replace the symbolic links in `$XDG_CONFIG_HOME/zsh` with links to the respective Zsh configuration files in the cloned repository (or copy the files if you prefer)
->
-> Copy or create a symbolic like for the `.p10k configuration or skip this to create your own configuration when next starting `zsh`.`
+!!! Hint "Practicalli Zsh configuration"
+    Clone [practicalli/dotfiles](https://github.com/practicalli/dotfiles) and replace the symbolic links in `$XDG_CONFIG_HOME/zsh` with links to the respective Zsh configuration files in the cloned repository (or copy the files if you prefer)
+
+    Copy or create a symbolic like for the `.p10k configuration or skip this to create your own configuration when next starting `zsh`.`
 
 
 Edit `$XDG_CONFIG_HOME/.config/zsh/.zshenv` and add the following lines to enable zsh to find the prezto configuration
 
-```
+```shell
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:=$HOME/.config}"
 export ZDOTDIR="${ZDOTDIR:=$XDG_CONFIG_HOME/zsh}"
 ```
 
 Create a symbolic link from `$HOME/.zshenv` to `$XDG_CONFIG_HOME/.config/zsh/.zshenv` (or to the .zshenv file from [practicalli/dotfiles](https://github.com/practicalli/dotfiles))
 
-```
+```shell
 ln -s $XDG_CONFIG_HOME/.config/zsh/.zshenv $HOME/.zshenv
 ```
 
 Check the configuration is working by loading the .zshenv configuration
 
-```
+```shell
 source "$ZDOTDIR/.zshenv"
 ```
  -->
 
-> #### Info::Using Oh My Bash
-> If preferring Bash, then [ohmybash](https://ohmybash.nntoan.com/) provides a nice command line experience, showing completions clearer, nice themes that provide information.
+!!! INFO "Using Oh My Bash"
+    If preferring Bash, then [ohmybash](https://ohmybash.nntoan.com/){target=_blank} provides a nice command line experience, showing completions clearer, nice themes that provide information.

@@ -1,6 +1,6 @@
 # Package Manager
 
-[Packer](https://github.com/wbthomason/packer.nvim) is a [`use-package`](https://github.com/jwiegley/use-package) inspired package management for Neovim.
+[Packer](https://github.com/wbthomason/packer.nvim){target=_blank} is a [`use-package`](https://github.com/jwiegley/use-package){target=_blank} inspired package management for Neovim.
 
 Packer is used as the package manager in this guide as it is built on native Neovim packages and supports Luarocks dependencies, use the `:help packages` command in Neovim for more details.
 
@@ -51,4 +51,4 @@ vim.g["aniseed#env"] = {
 
 Neovim packages add extra functionality to Neovim, e.g. conjure package provides an excellent Clojure REPL experience (and supports several other languages too).
 
-See the [packages section](packages/) for details of the packages used and a breakdown of their configuration.
+See the [packages section](packages/index.md) for details of the packages used and a breakdown of their configuration.

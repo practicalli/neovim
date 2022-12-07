@@ -6,6 +6,8 @@ Run unit tests from within Neovim, showing a summary of test results or a full t
 
 Or run Kaocka or Cognitech-Labs test runners in watch mode in a separate terminal session
 
+!!! HINT "Kaocha test runner default"
+    [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux) sets Kaocha as the default test runner
 
 ## Include test path
 
@@ -21,12 +23,6 @@ clojure -M:env/test:lib/reloaded:repl/rebel
 `, t n` to run the tests for the current namespace
 
 ![Neovim - Conjure Clojure unit test runner with test results in HUD](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-conjure-tests-results-hud.png)
-
-
-<!-- TODO: evaluate neovim test runners and related packages  -->
-<!-- - Cognitech Labs -->
-<!-- - Kaocha test runner -->
-<!-- Are tools like [neotest](https://github.com/nvim-neotest/neotest) - no support for Clojure currently  -->
 
 
 ## External test runner
@@ -53,8 +49,3 @@ Using Kaocha, specific test namespaces (or specific tests) can be run (or exclud
 clojure -X:test/watch :namespace '[practicalli.server"]
 ```
 > TODO: check syntax of Kaocha namespace and specific tests
-
-
-## Reference
-
-- [neotest](https://github.com/nvim-neotest/neotest) - Neovim test plugin with some language support (not Clojure - but maybe could be added)

@@ -3,7 +3,7 @@
 A Git client is used to version control projects and to clone projects and configuration from GitHub/GitLab.  Practicalli maintains several editor configurations in shared repositories on GitHub
 
 * Install a Git Client (and optionally GitHub CLI)
-* [optionally] clone the [practicalli/dotfiles](https://github.com/practicalli/dotfiles) repository for the Git config and global ignores
+* [optionally] clone the [practicalli/dotfiles](https://github.com/practicalli/dotfiles){target=_blank} repository for the Git config and global ignores
 * Configure an SSH key to access remote repositories (or Developer token if you cannot use SSH keys)
 
 ## Install a git client and GitHub CLI
@@ -12,7 +12,7 @@ A Git client is used to version control projects and to clone projects and confi
 pkg install git gh
 ```
 
-Clone the [practicalli/dotfiles](https://github.com/practicalli/dotfiles) repository
+Clone the [practicalli/dotfiles](https://github.com/practicalli/dotfiles){target=_blank} repository
 
 ```
 git clone https://github.com/practicalli/dotfiles projects/dotfiles

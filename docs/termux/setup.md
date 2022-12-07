@@ -36,8 +36,8 @@ export SPACEMACSDIR="$XDG_CONFIG_HOME/spacemacs"
 
 `source ~/.profile` to load the environment variables into the shell, or exit Termux and restart.
 
-> #### Hint::nano editor installed by default
-> `nano` editor is used to edit the commands as the package is installed by default in termux. `vim`, `neovim`, `emacs` or any other Linux command line editor can be used if the package is first installed.  Termux will list packages to install when trying to run a command that is from a package not yet installed.
+!!! Hint "nano editor installed by default"
+    `nano` editor is used to edit the commands as the package is installed by default in termux. `vim`, `neovim`, `emacs` or any other Linux command line editor can be used if the package is first installed.  Termux will list packages to install when trying to run a command that is from a package not yet installed.
 
 
 ## Tools to download binaries and configuration
@@ -52,7 +52,7 @@ Many tools can be installed via the `pkg` tool, although specific Clojure tools 
 pkg install curl wget git openssh
 ```
 
-[Configure a Git Identify and SSH key](git.md) to before committing and pushing changes, or cloning repositories using the SSH protocol.  [practicalli/dotfiles](https://github.com/practicalli/dotfiles) contains example configuration, ignore patterns and commit template for using Git.
+[Configure a Git Identify and SSH key](git.md) to before committing and pushing changes, or cloning repositories using the SSH protocol.  [practicalli/dotfiles](https://github.com/practicalli/dotfiles){target=_blank} contains example configuration, ignore patterns and commit template for using Git.
 
 
 ## [Optional] Configure Termux Settings
@@ -88,5 +88,5 @@ Select **Choose Font** to select from the available fonts, e.g. FiraCode or Ubun
 
 `~/.termux/font.ttf` font file is added when selecting a font.
 
-> #### INFO::Termux:Styling uses [NerdFonts](https://www.nerdfonts.com/) for icons
-> All fonts installed via Termux:Styling have been patched with [NerdFonts](https://www.nerdfonts.com/), providing several thousand icons to use within the terminal prompt and Neovim itself (e.g. VimDevIcons).
+!!! INFO "Termux:Styling uses [NerdFonts](https://www.nerdfonts.com/){target=_blank} for icons"
+    All fonts installed via `Termux:Styling` have been patched with [NerdFonts](https://www.nerdfonts.com/), providing several thousand icons to use within the terminal prompt and Neovim itself (e.g. VimDevIcons).

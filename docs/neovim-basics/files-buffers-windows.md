@@ -6,7 +6,7 @@ Windows are a container for a buffer and windows can swap which buffer they show
 
 ## File management
 
-`SPC f f` to open a file, a telescope popup lists file relative to the directory Neovim was opened from (or Path subsequently set in Neovim).  
+`SPC f f` to open a file, a telescope popup lists file relative to the directory Neovim was opened from (or Path subsequently set in Neovim).
 
 Telescope provides a preview of the selected file (only if there is sufficient space in the Neovim frame)
 
@@ -14,10 +14,10 @@ Telescope provides a preview of the selected file (only if there is sufficient s
 
 `SPC f b ESC C` to create a new file or directory. The base path is shown in the command bar.  Type the name of directories and file name as required. `RTN` to create or `ESC` to cancel.  The newly created directories or file name appears n the Telescope list and scan be selected for opening.
 
-> ####HINT::Telescope Normal mode and help
-> `ESC` in Telescope to switch to Normal mode and use comannds, `c` for Create, `r` to rename. 
->
-> `?` to show all the commands available in Telescope
+!!! HINT "Telescope Normal mode and help"
+    `ESC` in Telescope to switch to Normal mode and use comannds, `c` for Create, `r` to rename.
+
+    `?` to show all the commands available in Telescope
 
 
 ## Buffer management
@@ -28,7 +28,7 @@ Telescope provides a preview of the selected file (only if there is sufficient s
 
 `SPC TAB` (`C-^`) opens the previous buffer, useful to toggle between two buffers in the same window
 
-Use Telescope to switch between buffers 
+Use Telescope to switch between buffers
 
 ![Neovim - telescope - swtich between buffers](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-telescope-open-buffer.png)
 

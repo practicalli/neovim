@@ -2,6 +2,15 @@
 
 Making the docs more engaging using the [mkdocs-material theme reference guide](https://squidfunk.github.io/mkdocs-material/reference/)
 
+## Hypertext links
+
+Links open in the same browser window/tab by default.
+
+Add `{target=_blank}` to the end of a link to configure opening in a new tab
+
+```markdown
+[link text](url){target=_blank}
+```
 
 ## Admonitions
 

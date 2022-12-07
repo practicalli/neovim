@@ -1,6 +1,6 @@
 # Install neovim
 
-version 7 availabe as current package
+Neovim version 8 availabe as current package
 
 ```
 pkg install neovim
@@ -13,7 +13,8 @@ pkg install neovim
 
 Treesitter provides excellent language syntax parsing and highlighting and is a very attractive feature of the recent neovim releases.  Treesitter is a major attraction, bringing in a new audience for Neovim.
 
-The `nvim-treesitter` package is included in the practicalli/neovim-config-redux configuration.
+The `nvim-treesitter` package is included in the [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank} configuration.
+
 
 ## C Compiler
 

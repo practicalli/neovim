@@ -1,26 +1,26 @@
 # Multiple cursors
 
-[Visual-Multi (VM)](https://github.com/mg979/vim-visual-multi) is a multiple selections/cursors plugin that uses modal editing and provide visual feedback when editing multiple lines simultaneously.
+[Visual-Multi (VM)](https://github.com/mg979/vim-visual-multi){target=_blank} is a multiple selections/cursors plugin that uses modal editing and provide visual feedback when editing multiple lines simultaneously.
 
 Mulitple cursors is generally useful when editing smilarly structured lines with diffferent content.  Cursors are moved by column position or by using vim motions.
 
 `\ \ c` creates a cursor at the start of every visual selection line
 
-`\ \ \` toggle cursor at position 
+`\ \ \` toggle cursor at position
 
 
-## Command quick reference    
- 
-`\ \` is the leader for multiple cursors and will show the visual-multi menu in which-key.  
+## Command quick reference
+
+`\ \` is the leader for multiple cursors and will show the visual-multi menu in which-key.
 
 These commands cover the large majority of use cases for multiple cursors.
 
 > `:help g:VM_maps` for a reference of all mappings and instructions on how to change them
 
-<!-- TODO: How to define the visuual-multi leader key in fennel  
+<!-- TODO: How to define the visuual-multi leader key in fennel
     let g:VM_leader = '\'
 -->
- 
+
 | Action                        | Key         | Command              |
 |-------------------------------|-------------|----------------------|
 | Add Cursor at Position        | `\\\`       | `vm-add-cursor`      |
@@ -48,16 +48,16 @@ Once visual-multi has started the vm-mappings-buffer mappings are available:
 > NOTE: `C-n` conflicts with the Termux binding for naming a session
 
 
-## Searching 
+## Searching
 
 `g/` to search for a match to add when visual-multi is active, rather than the usual `/` vim search.
 
 `n` and `N` can't be used to repeat the search, as they are used to get the next visual-multi match.
 
 
-## Find with Regex 
+## Find with Regex
 
-`\ \ /` followed by a regex pattern will create a selection with that pattern. 
+`\ \ /` followed by a regex pattern will create a selection with that pattern.
 
 `n` and `N` finds the next occurrence of the regex pattern
 
@@ -73,7 +73,7 @@ Once visual-multi has started the vm-mappings-buffer mappings are available:
 
 ## Filter regions
 
-`\ \ f` filter out (remove) regions based on pattern or expression. 
+`\ \ f` filter out (remove) regions based on pattern or expression.
 
 `C-x` to cycle filtering method:
 
@@ -86,7 +86,7 @@ Once visual-multi has started the vm-mappings-buffer mappings are available:
 
 `\ \ e` to transform a region with a vim expression, run on each region
 
-Placeholders can be used in the expression 
+Placeholders can be used in the expression
 
 - `%t~ region's text as a string (as-is)
 - `%f~ region's text evaluated as a floating point number
@@ -133,14 +133,14 @@ Visual-Multi supports several operators by default:
 - `y` / `d` / `c` to yank / delete / change
 - `gu` / `gU` to change text case
 
-Visual-Multi uses its own registers that are lists of strings. One element for each region that is yanked/deleted. 
+Visual-Multi uses its own registers that are lists of strings. One element for each region that is yanked/deleted.
 
 There is also built-in support for:
 
 - vim-surround  e.g. `ysiw(` to enclose in parentheses
 - vim-abolish e.g. `cr_` to change current word to snake case
 
-> `:help g:VM_user_operators to disccover how to doefine other operators 
+> `:help g:VM_user_operators to disccover how to doefine other operators
 
 
 ## vm-multiline-mode
@@ -152,7 +152,7 @@ In normal and insert mode, cursors and selections are kept within their own line
 Multiline mode must be enabled for an object motions, or they will fail. See |vm-motions|.
 
 
-## Alignment 
+## Alignment
 
 `\\a` aligns by setting the minimum column to the highest of all regions
 `\\<` aligns by character, or [count] characters
@@ -161,7 +161,7 @@ Multiline mode must be enabled for an object motions, or they will fail. See |vm
 In extend-mode selections are collapsed to cursors first, although will work regardless.
 
 
-## Replace pattern in regions 
+## Replace pattern in regions
 
 `R` to replace with a pattern and then the replacement text
 
@@ -170,7 +170,7 @@ substitution will take place in all selected regions, leaving unselected text un
 Only working in |extend-mode|. When |R| is pressed in |cursor-mode|, it will start |vm-replace-mode| instead.
 
 
-## Subtract pattern from regions 
+## Subtract pattern from regions
 
 `\\s` subtract the entered pattern from regions, splitting them. Only working in |extend-mode|.
 
@@ -194,7 +194,7 @@ If there is an equal number of selections in each line, swapping takes place wit
 
 ## Case conversion
 
-`\\C` runs on inner words in cursor mode 
+`\\C` runs on inner words in cursor mode
 
 - `u` lowercase
 - `U` UPPERCASE
@@ -218,17 +218,17 @@ If there is an equal number of selections in each line, swapping takes place wit
 
 ### VM Cursor Mode
 
-cursor-mode commands expect a motion, e.g. `c` should be followed by a text object to be changed. 
+cursor-mode commands expect a motion, e.g. `c` should be followed by a text object to be changed.
 
 | `operators | see vm-operators                                          |
 | `motions   | see vm-motions                                            |
 | `|`        | set column for all cursors (to current column or [count]) |
-| `r`        | replace single character                                  | 
-| `R`        | enter vm-replace-mode                                     | 
-| `~`        | change case of single character                           | 
-| `&`        | repeat last substitution                                  | 
-| `<C-A>`    | increase numbers                                          | 
-| `<C-X>`    | decrease numbers                                          | 
+| `r`        | replace single character                                  |
+| `R`        | enter vm-replace-mode                                     |
+| `~`        | change case of single character                           |
+| `&`        | repeat last substitution                                  |
+| `<C-A>`    | increase numbers                                          |
+| `<C-X>`    | decrease numbers                                          |
 | `g<C-A>`   | progressively increase numbers (`v_g_CTRL-A`)             |
 | `g<C-X>`   | progressively decrease numbers (`v_g_CTRL-X`)             |
 
@@ -239,7 +239,7 @@ Also see `vm-motions` for supported motions in VM (some with differences).
 
 ### VM Extend Mode
 
-extend-mode is like having multiple visual selections.  motions extend the slections and change / yank / delete commands don't wait for a motion, just like in visual mode. 
+extend-mode is like having multiple visual selections.  motions extend the slections and change / yank / delete commands don't wait for a motion, just like in visual mode.
 
 Even the key `o` works as in visual mode, inverting the anchor of the selections.
 
@@ -259,4 +259,3 @@ Others can use a different mapping:
 
 - `gu/gU` change case (instead of vim `u` / `U`)
 - `o` and `O` mappings are used to invert the facing of the selected regions and not to start insert mode.
-

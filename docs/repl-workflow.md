@@ -50,7 +50,7 @@ Expressions in rich comment blocks can represent how to use the functions that m
 
 ![Practicalli Clojure Repl Driven Development - Rich comment blocks example](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/practicalli-clojure-repl-driven-development-rich-comment-blocks.png)
 
-Rich comment blocks are very useful for rapidly iterating over different design decisions by including the same function but with different implementations.  Hide [clj-kondo linter](https://practical.li/clojure/clojure-cli/install/code-analysis.html) warnings for redefined vars (`def`, `defn`) when using this approach.
+Rich comment blocks are very useful for rapidly iterating over different design decisions by including the same function but with different implementations.  Hide [clj-kondo linter](https://practical.li/clojure/clojure-cli/install/code-analysis.html){target=_blank} warnings for redefined vars (`def`, `defn`) when using this approach.
 
 ```clojure
 ;; Rich comment block with redefined vars ignored
@@ -85,27 +85,27 @@ A journal should cover the following aspects
 The design journal can be used to create meaningful documentation for the project very easily and should prevent time spent on repeating the same conversations.
 
 !!! HINT "Example design journal"
-    [Design journal for TicTacToe game using Reagent, ClojureScript and Scalable Vector Graphics](https://github.com/jr0cket/tictactoe-reagent/blob/master/src/tictactoe_reagent/core.cljs#L124)
+    [Design journal for TicTacToe game using Reagent, ClojureScript and Scalable Vector Graphics](https://github.com/jr0cket/tictactoe-reagent/blob/master/src/tictactoe_reagent/core.cljs#L124){target=_blank}
 
 
 ## Viewing data structures
 
 Pretty print shows the structure of results from function calls in a human-friendly form, making it easier for a developer to parse and more likely to notice incorrect results.
 
-Neovim can be used with [external data browsers](https://practical.li/clojure/clojure-tools/data-browsers/reveal.md) to work with large or nested data and visualise that data in many different ways.
+Neovim can be used with [external data browsers](https://practical.li/clojure/clojure-tools/data-browsers/){target=_blank} to work with large or nested data and visualise that data in many different ways.
 
 ![Portal - viewing Clojure data](https://raw.githubusercontent.com/practicalli/graphic-design/live/portal/portal-data-browser-example.png)
 
 
 ## Code Style and idiomatic Clojure
 
-Clojure aware editors should automatically apply formatting that follows the [Clojure Style guide](https://github.com/bbatsov/clojure-style-guide).
+Clojure aware editors should automatically apply formatting that follows the [Clojure Style guide](https://github.com/bbatsov/clojure-style-guide){target=_blank}.
 
-Live linting with [clj-kondo](https://github.com/borkdude/clj-kondo) suggests common idioms and highlights a wide range of syntax errors as code is written, minimizing bugs and therefore speeding up the development process.
+Live linting with [clj-kondo](https://github.com/borkdude/clj-kondo){target=_blank} suggests common idioms and highlights a wide range of syntax errors as code is written, minimizing bugs and therefore speeding up the development process.
 
 ![clj-kondo static analysis for live linting of Clojure code](/images/spacemacs-clojure-linting-code-marks-and-flycheck-list-errors.png)
 
-> The [Clojure Style guide](https://github.com/bbatsov/clojure-style-guide) provides examples of common formatting approaches, although the development team should decide which of these to adopt.  Emacs `clojure-mode` will automatically format code and so will Clojure LSP (via cljfmt).  These tools are configurable and should be tailored to the teams standard.
+> The [Clojure Style guide](https://github.com/bbatsov/clojure-style-guide){target=_blank} provides examples of common formatting approaches, although the development team should decide which of these to adopt.  Emacs `clojure-mode` will automatically format code and so will Clojure LSP (via cljfmt).  These tools are configurable and should be tailored to the teams standard.
 
 
 ## Test Driven Development and REPL Driven Development
@@ -119,27 +119,27 @@ Test Driven Development (TDD) and REPL Driven Development (RDD) complement each 
 * RDD enables rapid design experiments so different approaches can easily and quickly be evaluated .
 * TDD focuses the results of the REPL experiments into design decisions, codified as unit tests.  These tests guide the correctness of specific implementations and provide critical feedback when changes break that design.
 
-[Unit tests](https://practical.li/clojure/testing/unit-testing/) should support the public API of each namespace in a project to help prevent regressions in the code.  Its far more efficient in terms of thinking time to define unit tests as the design starts to stabilize than as an after thought.
+[Unit tests](https://practical.li/clojure/testing/unit-testing/){target=_blank} should support the public API of each namespace in a project to help prevent regressions in the code.  Its far more efficient in terms of thinking time to define unit tests as the design starts to stabilize than as an after thought.
 
 `clojure.test` library is part of the Clojure standard library that provides a simple way to start writing unit tests.
 
-[Clojure spec](https://practical.li/clojure/clojure-spec/) can also be used for generative testing, providing far greater scope in values used when running unit tests.  Specifications can be defined for values and functions.
+[Clojure spec](https://practical.li/clojure/clojure-spec/){target=_blank} can also be used for generative testing, providing far greater scope in values used when running unit tests.  Specifications can be defined for values and functions.
 
-Clojure has a number of [test runners](https://practical.li/clojure/testing/test-runners/) available.  Kaocha is a test runner that will run unit tests and function specification checks.
+Clojure has a number of [test runners](https://practical.li/clojure/testing/test-runners/){target=_blank} available.  Kaocha is a test runner that will run unit tests and function specification checks.
 
 !!! Hint "Automate local test runner"
-    Use [kaocha test runner](https://practical.li/clojure/testing/test-runners/kaocha-test-runner.html) in watch mode to run tests and specification check automatically (when changes are saved)
+    Use [kaocha test runner](https://practical.li/clojure/testing/test-runners/kaocha-test-runner.html){target=_blank} in watch mode to run tests and specification check automatically (when changes are saved)
     ```bash
     clojure -X:test/watch
     ```
 
 ## Continuous Integration and Deployment
 
-Add a [continuous integration service](https://practical.li/clojure/continuous-integration/) to run tests and builds code on every shared commit.  Spin up testable review deployments when commits pushed to a pull request branch, before pushing commits to the main deployment branch, creating an effective pipeline to gain further feedback.
+Add a [continuous integration service](https://practical.li/clojure/continuous-integration/){target=_blank} to run tests and builds code on every shared commit.  Spin up testable review deployments when commits pushed to a pull request branch, before pushing commits to the main deployment branch, creating an effective pipeline to gain further feedback.
 
-* [CircleCI](https://practical.li/clojure/continuous-integration/circle-ci/) provides a simple to use service that supports Clojure projects.
-* [GitHub Workflows](https://docs.github.com/en/actions/using-workflows) and [GitHub actions marketplace ](https://github.com/marketplace?type=actions) to quickly build a tailored continuous integration service, e.g. [Setup Clojure GitHub Action](https://github.com/marketplace/actions/setup-clojure).
-* [GitLab CI](https://docs.gitlab.com/ee/ci/introduction/index.html)
+* [CircleCI](https://practical.li/clojure/continuous-integration/circle-ci/){target=_blank} provides a simple to use service that supports Clojure projects.
+* [GitHub Workflows](https://docs.github.com/en/actions/using-workflows){target=_blank} and [GitHub actions marketplace ](https://github.com/marketplace?type=actions){target=_blank} to quickly build a tailored continuous integration service, e.g. [Setup Clojure GitHub Action](https://github.com/marketplace/actions/setup-clojure){target=_blank}.
+* [GitLab CI](https://docs.gitlab.com/ee/ci/introduction/index.html){target=_blank}
 
 ![Continuous Integration](https://raw.githubusercontent.com/practicalli/graphic-design/live/continuous-integration/continuous-integration-overview.svg)
 

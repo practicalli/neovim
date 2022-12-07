@@ -1,19 +1,21 @@
 # Install Neovim
 
-Neovim 7 is the minimum version for this configuration.  The latest release of Neovim 7 has been work well for Clojure development by the Practicalli team
+[Neovim releases](https://github.com/neovim/neovim/releases){target=_blank .md-button}
 
-Practicalli recommends using the latest release from [the Neovim releases page](https://github.com/neovim/neovim/releases)
+Neovim 8 is the minimum version for this configuration.  The latest release of Neovim 7 has been work well for Clojure development by the Practicalli team
 
-Follow the [install Neovim guide for the specific operating system](https://github.com/neovim/neovim/wiki/Installing-Neovim).
+Practicalli recommends using the latest release from [the Neovim releases page](https://github.com/neovim/neovim/releases){target=_blank}
 
-> Update to a Neovim development build if there are issues with Treesitter and the nvim-treesitter package, as they are features under active development, e.g.  [Ubuntu daily builds PPA](https://launchpad.net/~neovim-ppa/+archive/ubuntu/unstable) or `brew install --HEAD neovim` for Homebrew
+Follow the [install Neovim guide for the specific operating system](https://github.com/neovim/neovim/wiki/Installing-Neovim){target=_blank}.
+
+> Update to a Neovim development build if there are issues with Treesitter and the nvim-treesitter package, as they are features under active development, e.g.  [Ubuntu daily builds PPA](https://launchpad.net/~neovim-ppa/+archive/ubuntu/unstable){target=_blank} or `brew install --HEAD neovim` for Homebrew
 
 
 ## Post Install checks
 
 `nvim` in a terminal to run NeoVim and check the installation is working without error.
 
-![NeoVim - default startup message](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-startup-default-message.png)
+![NeoVim - default startup message](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-startup-default-message.png){target=_blank}
 
 `:checkhealth` to run a check supporting libraries and tools are available to NeoVim.
 
@@ -28,7 +30,7 @@ Review the warnings and follow any advice given to resolve the issues.
 
 ### Provider warnings & disable options
 
-NeoVim and it packages may delegates features to language and tool specific [providers](https://neovim.io/doc/user/provider.html).
+NeoVim and it packages may delegates features to language and tool specific [providers](https://neovim.io/doc/user/provider.html){target=_blank}.
 
 Resolve the issue with providers that generate a warning in the checkhealth report, following the ADVICE steps.
 

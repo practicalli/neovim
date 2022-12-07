@@ -46,7 +46,7 @@ clojure -M:repl/rebel
 
 ## Install Clojure LSP
 
-Visit [clojure-lsp GitHub releases page](https://github.com/clojure-lsp/clojure-lsp/releases) and download the `clojure-lsp` file
+Visit [clojure-lsp GitHub releases page](https://github.com/clojure-lsp/clojure-lsp/releases){target=_blank} and download the `clojure-lsp` file
 
 - visit the relases page in firefox and copy the link to the file.
 - use wget and paste the link to the file to download
@@ -54,4 +54,4 @@ Visit [clojure-lsp GitHub releases page](https://github.com/clojure-lsp/clojure-
 - test locally `./clojure-lsp --version` - should print clojure-lsp version and clj-kondo version
 - copy or move file to path `mv clojure-lsp $PATH`
 
-If the [practicalli/clojure-lsp-config](https://github.com/practicalli/clojure-lsp-config) repository was cloned, move or link the `clojure-lsp` directory to `~/.config/clojure-lsp`
+If the [practicalli/clojure-lsp-config](https://github.com/practicalli/clojure-lsp-config){target=_blank} repository was cloned, move or link the `clojure-lsp` directory to `~/.config/clojure-lsp`

@@ -1,19 +1,21 @@
 # Neovim Configuration
 
-[practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux) provides a complete Fennel based configuraion for Neovim, with a wide range of plugins and associated setup and key bindings.
+[practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank .md-button}
 
-Clone [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux) to `~/.config` directory (or a preferred location and create a symbolic link).
+[practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank} provides a complete Fennel based configuraion for Neovim, with a wide range of plugins and associated setup and key bindings.
+
+Clone [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank} to `~/.config` directory (or a preferred location and create a symbolic link).
 
 ```bash
 git clone https://github.com/practicalli/neovim-config-redux.git
 ```
 
-> Create a fork of [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux) first if intending to customise this configuration
+> Create a fork of [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank} first if intending to customise this configuration
 
 
 ## `init.lua`
- - bootstraps the [aniseed package](https://github.com/Olical/aniseed) which compiles the Fennel configuration into Lua, which is then read by Neovim. Defines the entry point to the Fennel configuration as `fnl/config/init.fnl`
- - installs ([packer.nvim](https://github.com/wbthomason/packer.nvim)) for package management
+ - bootstraps the [aniseed package](https://github.com/Olical/aniseed){target=_blank} which compiles the Fennel configuration into Lua, which is then read by Neovim. Defines the entry point to the Fennel configuration as `fnl/config/init.fnl`
+ - installs [packer.nvim](https://github.com/wbthomason/packer.nvim){target=_blank} for package management
 
 
 ## `fnl/config/init.fnl`
@@ -77,7 +79,7 @@ Configure keybindings to be closer to Spacemacs
 
 Configure the HUD to be less intrusive.
 
-```
+```fennel
 ;; Width of HUD as percentage of the editor width
 ;; A float between 0.0 and 1.0.
 ;; Default: `0.42`
@@ -213,7 +215,7 @@ Configure sources to show in the autocomple menu (i.e. conjure, lsp, buffer) and
 
 ## `fnl/config/plugin/theme.fnl`
 
-Add the [Neovim GitHub theme](https://github.com/projekt0n/github-nvim-theme) which gives 3 dark and 3 light themes to choose from.  Individual colors and styles can be configured to change specific parts of the theme.
+Add the [Neovim GitHub theme](https://github.com/projekt0n/github-nvim-theme){target=_blank} which gives 3 dark and 3 light themes to choose from.  Individual colors and styles can be configured to change specific parts of the theme.
 
 The light theme is used by default, with a custom softer background colour that is slightly red-shifted.
 

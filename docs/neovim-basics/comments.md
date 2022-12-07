@@ -1,6 +1,6 @@
 # Comments
 
-[commentary.vim](https://github.com/tpope/vim-commentary) toggles a comment for lines, visual selections or for motions
+[comment.nvim](https://github.com/terrortylor/nvim-comment){target=_blank} toggles a comment for lines, visual selections or for motions
 
 `gcc` comment current line, `4gcc` comment current line and next 4 lines
 
