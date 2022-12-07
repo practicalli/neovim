@@ -36,7 +36,7 @@ Source code is evaluated in its respective namespace, removing the need to chang
 </p>
 
 
-!!! Hint:: Evaluate to Comment for results history
+!!! Hint "Evaluate to Comment for results history"
     `, e c e`  evaluates the current form and prints the result under the expression as a comment
 
     Adding result comment is an effective way to show the expected results of the code design, especially as a journal.
@@ -84,7 +84,7 @@ A journal should cover the following aspects
 
 The design journal can be used to create meaningful documentation for the project very easily and should prevent time spent on repeating the same conversations.
 
-!!! HINT "Add example journal"
+!!! HINT "Example design journal"
     [Design journal for TicTacToe game using Reagent, ClojureScript and Scalable Vector Graphics](https://github.com/jr0cket/tictactoe-reagent/blob/master/src/tictactoe_reagent/core.cljs#L124)
 
 
