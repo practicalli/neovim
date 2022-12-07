@@ -32,12 +32,12 @@ nav:
       - Treesitter: install/packages/nvim-treesitter.md
   - Neovim Basics:
       - neovim-basics/index.md
-      - neovim-basics/files-buffers-windows.md
-      - neovim-basics/comments.md
-      - neovim-basics/git-github.md
-      - neovim-basics/language-server-protocol.md
-      - neovim-basics/package-management.md
-      - neovim-basics/multiple-cursors.md
+      - File Buffer Window: neovim-basics/files-buffers-windows.md
+      - Comments: neovim-basics/comments.md
+      - Git & GitHub: neovim-basics/git-github.md
+      - LSP: neovim-basics/language-server-protocol.md
+      - Package Manager: neovim-basics/package-management.md
+      - Multiple Cursors: neovim-basics/multiple-cursors.md
   - Clojure REPL Workflow:
       - repl-driven-development/index.md
       - repl-driven-development/conjure.md
