@@ -22,14 +22,14 @@ nav:
       - Contributing: contributing.md
       - Writing Tips: writing-tips.md
   - Install:
-      - install/index.md
-      - install/clojure.md
-      - install/neovim.md
-      - install/configuration.md
-      - install/package-manager.md
-      - install/packages/index.md
-      - install/packages/lualine.md
-      - install/packages/nvim-treesitter.md
+      - Overview: install/index.md
+      - Clojure: install/clojure.md
+      - Neovim: install/neovim.md
+      - Neovim-Config: install/configuration.md
+      - Packer: install/package-manager.md
+      - Packages: install/packages/index.md
+      - Status Line: install/packages/lualine.md
+      - Treesitter: install/packages/nvim-treesitter.md
   - Neovim Basics:
       - neovim-basics/index.md
       - neovim-basics/files-buffers-windows.md
