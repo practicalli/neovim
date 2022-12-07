@@ -44,8 +44,9 @@ nav:
       - repl-driven-development/testing.md
   - Version Control:
       - version-control/index.md
-      - version-control/diffview.md
-      - version-control/neogit.md
+      - Diffview: version-control/diffview.md
+      - Neogit: version-control/neogit.md
+      - Octo: version-control/octo.md
   - Ultra-Mobile Neovim:
       - termux/index.md
       - termux/clojure-development.md
