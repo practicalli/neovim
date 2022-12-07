@@ -49,13 +49,13 @@ nav:
       - Octo: version-control/octo.md
   - Ultra-Mobile Neovim:
       - termux/index.md
-      - termux/clojure-development.md
-      - termux/custom-shell.md
-      - termux/fdroid-install.md
-      - termux/git.md
-      - termux/neovim.md
-      - termux/setup.md
-      - termux/using-termux.md
+      - F-Droid: termux/fdroid-install.md
+      - Termux Setup: termux/setup.md
+      - Using Termux: termux/using-termux.md
+      - Git: termux/git.md
+      - Zsh: termux/custom-shell.md
+      - Clojure: termux/clojure-development.md
+      - Neovim: termux/neovim.md
   - Reference:
       - reference/vim-style/index.md
       - reference/vim-style/case.md
