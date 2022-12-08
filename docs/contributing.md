@@ -29,12 +29,11 @@ Please keep pull requests small and focused, as they are much quicker to review 
 
 A PR with a list of changes across different sections will not be merged, it will be reviewed eventually though.
 
-
 <!-- TODO:  Add GitHub issue templates, similar to those on practicalli/blog-content -->
 
 ## Thank you to all that have contributed
 
-I'd like to especially thank [Oliver Caldwell ](https://github.com/olical) for the amazing [Conjure](https://github.com/Olical/conjure){target=_blank} project and [Rafael Delboni](https://github.com/rafaeldelboni){target=_blank} for helping me understand how to work with Fennel.
+I'd like to especially thank [Oliver Caldwell](https://github.com/olical) for the amazing [Conjure](https://github.com/Olical/conjure){target=_blank} project and [Rafael Delboni](https://github.com/rafaeldelboni){target=_blank} for helping me understand how to work with Fennel.
 
 A huge thank you to Rich Hickey and the team at Cognitect for creating and continually guiding the Clojure language.  Special thank you to Alex Miller who has provided excellent advice on working with Clojure and the CLI tooling.
 
