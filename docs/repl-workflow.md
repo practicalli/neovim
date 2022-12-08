@@ -105,7 +105,7 @@ Live linting with [clj-kondo](https://github.com/borkdude/clj-kondo){target=_bla
 
 ![clj-kondo static analysis for live linting of Clojure code](/images/spacemacs-clojure-linting-code-marks-and-flycheck-list-errors.png)
 
-> The [Clojure Style guide](https://github.com/bbatsov/clojure-style-guide){target=_blank} provides examples of common formatting approaches, although the development team should decide which of these to adopt.  Emacs `clojure-mode` will automatically format code and so will Clojure LSP (via cljfmt).  These tools are configurable and should be tailored to the teams standard.
+> The [Clojure Style guide](https://github.com/bbatsov/clojure-style-guide){target=_blank} provides examples of common formatting approaches, although the development team should decide which of these to adopt.  Treesitter and Clojure LSP will automatically format code via cljfmt which encodes many of the style guide rules.  These tools are configurable and should be tailored to the teams standard.
 
 
 ## Test Driven Development and REPL Driven Development
