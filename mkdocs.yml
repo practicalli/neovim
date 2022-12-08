@@ -34,7 +34,6 @@ nav:
       - neovim-basics/index.md
       - File Buffer Window: neovim-basics/files-buffers-windows.md
       - Comments: neovim-basics/comments.md
-      - Git & GitHub: neovim-basics/git-github.md
       - LSP: neovim-basics/language-server-protocol.md
       - Package Manager: neovim-basics/package-management.md
       - Multiple Cursors: neovim-basics/multiple-cursors.md

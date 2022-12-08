@@ -1,6 +1,10 @@
 # Octo - GitHub issues and PRs
 
-Octo issues and pull requests to be created, updated and deleted from within Neovim.
+List, create and edit issues and pull requests from Neovim with Octo package.
+
+Octo connects to GitHub via the GitHub CLI, using a developer token for authentication
+
+Neogit provides a Magit style client, creating commits, pull & push changes with remote repositories.
 
 
 ## GitHub interaction
@@ -20,9 +24,14 @@ gh auth login
 Command line form: `Octo <object> <action> [arguments]` - [Object, Action and Arguments commands](https://github.com/pwntester/octo.nvim#-commands){target=_blank}
 
 List issues from current project (optionally add a specific repository)
+
 ```sh
-:Octo issue list
+:Octo issue list practicalli/neovim
 ```
+
+> The account/repository-name is required if Octo cannot find the repository
+
+![Neovim Octo GitHub Issues list for practicalli/neovim](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-octo-github-issue-list.png)
 
 Create a pull requests from current project
 
@@ -39,6 +48,8 @@ Add a comment to the current topic (issue/pr)
 ```sh
 :Octo gist list
 ```
+
+![Neovim Octo package - GitHub Gist list](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-octo-github-gist-list.png)
 
 !!! HINT "Octo.nvim configuration options"
     [Octo.nvim configuration options](https://github.com/pwntester/octo.nvim#%EF%B8%8F-configuration){target=_blank}

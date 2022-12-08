@@ -2,14 +2,14 @@
 
 There are several ways to interact with Git version control
 
+* Neogit git client (similar to Emacs Magit)
+* Octo for GitHub Issue and Pull Requests
 * Shell out to command line
 * Neovim terminal buffer
 * Fugitive
-* Neogit
 
-## GitHub Issues & Pull Requests
+> fugitive package provides a command line experience (no keybinding)
 
-List, create and edit issues and pull requests from Neovim with Octo package.
 
-Octo connects to GitHub via the GitHub CLI, using a developer token for authentication
-
+!!! HINT "Run Git Status"
+    `SPC g s` opens Git Status tab, by running `:Neogit`
