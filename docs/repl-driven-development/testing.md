@@ -29,14 +29,20 @@ clojure -M:env/test:lib/reloaded:repl/rebel
 
 In a buffer or separate terminal session, start a test runner in watch mode.  Tests run automatically when the code changes are saved
 
-```
-clojure -X:test/watch
+Include the `:env/test` alias to include additional paths and dependencies for the test environment configuration, e.g. using additional libraries to run the tests such as mocking or human readable output.
+
+```shell
+clojure -X:env/test:test/watch
 ```
 
-Start the watcher with focused or skiped tests by name or meta data (test selectors)
-https://cljdoc.org/d/lambdaisland/kaocha/1.66.1034/doc/6-focusing-and-skipping
+![Kaocha test runner for Clojure in watch mode](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/testing/kaocha-test-runner-watch.png)
 
-For example, specify test selectors to run a sub-set of tests based on selector meta data added to `deftest` code
+
+!!! HINT "Refine the tests that are watched"
+    Start the watcher with [focused or skiped tests by name or meta data (test selectors)](https://cljdoc.org/d/lambdaisland/kaocha/1.66.1034/doc/6-focusing-and-skipping){target=_blank}
+
+
+Test selectors to run a sub-set of tests based on selector meta data added to `deftest` code
 
 ```
 clojure -X:test/watch :skip-meta :persistence

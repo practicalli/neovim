@@ -38,9 +38,9 @@ nav:
       - Multiple Cursors: neovim-basics/multiple-cursors.md
   - Clojure REPL Workflow:
       - repl-driven-development/index.md
-      - repl-driven-development/conjure.md
-      - repl-driven-development/testing.md
+      - Conjure: repl-driven-development/conjure.md
       - LSP: repl-driven-development/language-server-protocol.md
+      - Testing: repl-driven-development/testing.md
   - Version Control:
       - version-control/index.md
       - Diffview: version-control/diffview.md

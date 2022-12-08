@@ -2,12 +2,16 @@
 
 Using the fundamental controls of Neovim that apply across any and all editing.
 
+[Clojure Development](../repl-driven-development/index.md){ .md-button }
+[Version Control](../version-control/index.md){ .md-button }
+
 ![Neovim startup with dashboard theme](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-startup-dashboard-theme-light.png)
+
 
 
 ## Managing files and directories
 
-`SPC f p` to list files within the scope of the current directory path. `SPC f f` to open a file browser which can open, create and delete files and directories.
+`SPC f f` to list files within the scope of the current directory path. `SPC f b` to open a file browser which can open, create and delete files and directories.
 
 `:lcd` to set the current local directory
 
