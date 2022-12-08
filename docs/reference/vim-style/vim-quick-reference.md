@@ -38,26 +38,26 @@ In menus such as helm you can move around using `Ctrl` and these keybindings.  S
 
 ### Navigating the current buffer
 
-| Key       | action                                                           |
-|-----------|------------------------------------------------------------------|
-| `gg`      | start of buffer                                                  |
-| `G`       | end of buffer                                                    |
-| `H`       | move cursor to head of buffer                                    |
-| `M`       | move cursor to middle of buffer                                  |
-| `L`       | move cursor to bottom line of buffer                             |
-| `C-u`     | jump up half a page                                              |
-| `C-d`     | jump down half a page                                            |
-| `}`       | move cursor forward by paragraph or block                        |
-| `{`       | move cursor backward by paragraph or block                       |
-| `ma`      | mark a line in a file with marker "a"                            |
-| ``a`      | after moving around, go back to the exact position of marker "a" |
-| `'a`      | after moving around, go back to line of marker "a"               |
-| `:marks`  | view all the marks                                               |
-| `''`      | go to the last place you were                                    |
-| `[{`      | jump back to the "{" at the beginning of the current code block  |
-| `C-o`     | jump back to previous cursor location (`evil-jump-backwards`)    |
-| `C-i`     | Go to newer position in jump list (opposite of `C-o`)            |
-| `: 4`     | go to line 4                                                     |
+| Key      | action                                                           |
+|----------|------------------------------------------------------------------|
+| `gg`     | start of buffer                                                  |
+| `G`      | end of buffer                                                    |
+| `H`      | move cursor to head of buffer                                    |
+| `M`      | move cursor to middle of buffer                                  |
+| `L`      | move cursor to bottom line of buffer                             |
+| `C-u`    | jump up half a page                                              |
+| `C-d`    | jump down half a page                                            |
+| `}`      | move cursor forward by paragraph or block                        |
+| `{`      | move cursor backward by paragraph or block                       |
+| `ma`     | mark a line in a file with marker "a"                            |
+| ``a`     | after moving around, go back to the exact position of marker "a" |
+| `'a`     | after moving around, go back to line of marker "a"               |
+| `:marks` | view all the marks                                               |
+| `''`     | go to the last place you were                                    |
+| `[{`     | jump back to the "{" at the beginning of the current code block  |
+| `C-o`    | jump back to previous cursor location (`evil-jump-backwards`)    |
+| `C-i`    | Go to newer position in jump list (opposite of `C-o`)            |
+| `: 4`    | go to line 4                                                     |
 
 
 
@@ -166,9 +166,9 @@ Type a number before a command and that command will run that number of times.
 
 ## Transposing / swap
 
-| Key    | Description                                                 |
-|--------|-------------------------------------------------------------|
-| `x p`  | transpose the current character with the next character     |
+| Key   | Description                                             |
+|-------|---------------------------------------------------------|
+| `x p` | transpose the current character with the next character |
 
 
 
@@ -191,12 +191,12 @@ Files in practicalli/neovim-config can be managed with Telescope plugin, althoug
 
 `SPC p t` toggles a visual file explorer on as a leftmost window, providing a further way to navigate files and directories.
 
-| Key             | Description                                          |
-|-----------------|------------------------------------------------------|
+| Key             | Description                                            |
+|-----------------|--------------------------------------------------------|
 | `SPC f f`       | find existing file (from current local root of neovim) |
-| `SPC f /`       | copy file - save current buffer with a new file name |
-| `SPC f b`       | browse files - `Esc` to run commands                 |
-| `SPC f b Esc r` | change file name of current buffer                   |
+| `SPC f /`       | copy file - save current buffer with a new file name   |
+| `SPC f b`       | browse files - `Esc` to run commands                   |
+| `SPC f b Esc r` | change file name of current buffer                     |
 
 Telescope file browser opens in **Insert** mode to allow typing filenames, to narrow the results in the Telescope popup.
 

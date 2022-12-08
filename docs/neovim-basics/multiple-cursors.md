@@ -220,17 +220,19 @@ If there is an equal number of selections in each line, swapping takes place wit
 
 cursor-mode commands expect a motion, e.g. `c` should be followed by a text object to be changed.
 
-| `operators | see vm-operators                                          |
-| `motions   | see vm-motions                                            |
-| `|`        | set column for all cursors (to current column or [count]) |
-| `r`        | replace single character                                  |
-| `R`        | enter vm-replace-mode                                     |
-| `~`        | change case of single character                           |
-| `&`        | repeat last substitution                                  |
-| `<C-A>`    | increase numbers                                          |
-| `<C-X>`    | decrease numbers                                          |
-| `g<C-A>`   | progressively increase numbers (`v_g_CTRL-A`)             |
-| `g<C-X>`   | progressively decrease numbers (`v_g_CTRL-X`)             |
+| Key         | Description                                               |
+|-------------|-----------------------------------------------------------|
+| `operators` | see vm-operators                                          |
+| `motions`   | see vm-motions                                            |
+| `|`         | set column for all cursors (to current column or [count]) |
+| `r`         | replace single character                                  |
+| `R`         | enter vm-replace-mode                                     |
+| `~`         | change case of single character                           |
+| `&`         | repeat last substitution                                  |
+| `<C-A>`     | increase numbers                                          |
+| `<C-X>`     | decrease numbers                                          |
+| `g<C-A>`    | progressively increase numbers (`v_g_CTRL-A`)             |
+| `g<C-X>`    | progressively decrease numbers (`v_g_CTRL-X`)             |
 
 You can enter |insert-mode| with `i`, `I`, `a`, `A`, and only from cursor mode also with `o` and `O`.
 
