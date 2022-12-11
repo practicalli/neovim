@@ -12,6 +12,19 @@ Add `{target=_blank}` to the end of a link to configure opening in a new tab
 [link text](url){target=_blank}
 ```
 
+## YouTube video
+
+Use an iframe element to include a YouTube video, wrapping in a paragraph tag with center alignment to place the video in a centered horizontal position
+
+```html
+<p style="text-align:center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rQ802kSaip4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+```
+
+mkdocs material does not have direct support for adding a YouTube video via markdown.
+
+
 ## Admonitions
 
 [Supported admonition types](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types)
