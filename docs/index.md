@@ -16,7 +16,7 @@ Practicalli Neovim provides an install guide and a simple, powerful and fun [REP
 
 ## Getting Started
 
-[Install Neovim](/install/neovim.md) and clone [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank}
+[Install Neovim](install/neovim.md) and clone [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank}
 
 ```shell
 git clone https://github.com/practicalli/neovim-config-redux.git

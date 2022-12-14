@@ -31,4 +31,4 @@ If you are familiar with most of the tools required, then the quick start list b
 
 ## Next Steps
 
-[Learn how to use Neovim](/neovim-basics/) and how to [use Conjure for REPL driven development](/repl-driven-development/conjure.html)
+[Learn how to use Neovim](../neovim-basics/) and how to [use Conjure for REPL driven development](../repl-driven-development/conjure.md)
