@@ -73,7 +73,7 @@ nav:
 # Theme and styling
 theme:
   name: material
-  logo: assets/practicalli-logo.svg
+  logo: assets/images/practicalli-logo.png
   favicon: assets/favicon.svg
   features:
     - navigation.top
