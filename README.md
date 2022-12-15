@@ -54,8 +54,10 @@ pip install mkdocs
 Install the plugins used by the Practicalli site using Pip (these are also installed in the GitHub Action workflow)
 
 ```bash
-pip install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin
+pip install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin pillow cairosvg
 ```
+
+> pillow and cairosvg python packages are required for [Social Cards](https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/)
 
 Fork the practicalli/neovim GitHub repository and clone that fork to your computer,
 
