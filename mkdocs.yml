@@ -56,18 +56,19 @@ nav:
       - Clojure: termux/clojure-development.md
       - Neovim: termux/neovim.md
   - Reference:
-      - reference/vim-style/index.md
-      - reference/vim-style/case.md
-      - reference/vim-style/g-menu.md
-      - reference/vim-style/key-binding-reference.md
-      - reference/vim-style/moving-around.md
-      - reference/vim-style/motions.md
-      - reference/vim-style/narrowing.md
-      - reference/vim-style/speaking-vim.md
-      - reference/vim-style/vim-quick-reference.md
-      - reference/vim-style/vim-tips-for-developers.md
-      - reference/vim-style/visual-select.md
-      - reference/vim-style/z-menu.md
+      - Vim Style Editing:
+          - reference/vim-style/index.md
+          - reference/vim-style/case.md
+          - reference/vim-style/g-menu.md
+          - reference/vim-style/key-binding-reference.md
+          - reference/vim-style/moving-around.md
+          - reference/vim-style/motions.md
+          - reference/vim-style/narrowing.md
+          - reference/vim-style/speaking-vim.md
+          - reference/vim-style/vim-quick-reference.md
+          - reference/vim-style/vim-tips-for-developers.md
+          - reference/vim-style/visual-select.md
+          - reference/vim-style/z-menu.md
 
 # Theme and styling
 theme:
