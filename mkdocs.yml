@@ -154,4 +154,4 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/practicalli
     - icon: fontawesome/brands/docker
-      link: https://docker.com/practicalli
+      link: https://hub.docker.com/u/practicalli
