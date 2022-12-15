@@ -40,9 +40,13 @@ lint-clean:  ## Clean MegaLinter report information
 
 # --- Documentation Generation  ------ #
 
-docs:  ## Run mkdocs local server
+docs:  ## Build and run mkdocs in local server
 	$(info --------- Mkdocs Local Server ---------)
 	mkdocs serve --dev-addr localhost:7777
+
+docs-changed:  ## Build only changed files and run mkdocs in local server
+	$(info --------- Mkdocs Local Server ---------)
+	mkdocs serve --dirtyreload --dev-addr localhost:7777
 
 # ------------------------------------ #
 
