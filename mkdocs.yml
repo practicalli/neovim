@@ -129,6 +129,8 @@ markdown_extensions:
   - def_list # lists
   - pymdownx.tasklist:
       custom_checkbox: true # checkboxes
+  - toc:
+      permalink: ⚓︎
 
 ## Plugins
 plugins:
