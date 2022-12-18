@@ -69,6 +69,9 @@ nav:
           - reference/vim-style/vim-tips-for-developers.md
           - reference/vim-style/visual-select.md
           - reference/vim-style/z-menu.md
+      - Neovim:
+          - reference/neovim/index.md
+          - Language Providers: reference/neovim/language-providers.md
 
 # Theme and styling
 theme:

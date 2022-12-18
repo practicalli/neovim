@@ -13,31 +13,23 @@ Follow the [install Neovim guide for the specific operating system](https://gith
 
 ## Post Install checks
 
+Ensure supporting tools and binaries are available in the operating system by running the Neovim Heath Check.
+
 `nvim` in a terminal to run NeoVim and check the installation is working without error.
 
 ![NeoVim - default startup message](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-startup-default-message.png){target=_blank}
 
-`:checkhealth` to run a check supporting libraries and tools are available to NeoVim.
+`:checkhealth` to run a check supporting tools are available to NeoVim.
 
 A report is generated and shown in NeoVim
 
 `j` / `k` to scroll through the checkhealth report
 
-Review the warnings and follow any advice given to resolve the issues.
+Review the warnings and install tooling that is required for languages that will be used.
 
 ![NeoVim checkhealth report](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-checkhealth-report.png)
 
+!!! HINT "Ignore Provider Warnings"
+    It is safe to ignore language provider warnings.
 
-### Provider warnings & disable options
-
-NeoVim and it packages may delegates features to language and tool specific [providers](https://neovim.io/doc/user/provider.html){target=_blank}.
-
-Resolve the issue with providers that generate a warning in the checkhealth report, following the ADVICE steps.
-
-Or disable a specific provider if not required to remove the warning from the report. Details on how to disable a provider are included at the end of the ADVICE in the report section for that provider.
-
-![NeoVim checkhealth report - python provider warning](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-checkhealth-warning-python.png)
-
-So to disable the python provider, add `let g:loaded_python3_provider = 0` to the Neovim configuration.
-
-> Each NeoVim package used should be checked to see if it requires a specific provider.
+    [Language Providers can be disabled](/neovim/reference/neovim/language-providers/) in the Neovim configuration to remove the warnings from `:checkhealth` report.  Examples of disabling language provders are in the [practicalli/neovim-config-redux configuration](https://github.com/practicalli/neovim-config-redux){target=_blank}, covered in the [Neovim Config](configuration/) install step
