@@ -2,7 +2,7 @@
 
 Practicalli uses Fennel to define all configuration for Neovim.  Fennel is a LISP dialect and should quickly become comfortable to Clojure developers.
 
-Lua is the defacto language for configuring Neovim and plugin development, although converting between Lua examples to Fennel is relatively simple.
+Lua is the defacto language for configuring Neovim and plugin development, although converting between Lua and Fennel is relatively simple.
 
 Neovim fully supports Vimscript, although it is felt that this is a relatively hard to understand way of configuring neovim and will not be used if at all possible.
 
