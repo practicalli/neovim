@@ -170,47 +170,67 @@ We all like line numbers, especially when you can set the starting line
   (map inc [1 2 3]))
 ```
 
+### Annotations
+
+Add an annotation using a comment character for the codeblock language, e.g. `#`, followed by a space and a number in round brackets `(1)`, where 1 is the number of the annotation
+
+
+```shell
+ls -la $HOME/Downloads  # (1)
+```
+
+1.  :woman_raising_hand: I'm a code annotation! I can contain `code`, __formatted text__, images, ... basically anything that can be written in Markdown.
+
+
+Code blocks with annotation, add `!` after the annotation number to suppress the `#` character
+
+```clojure
+(defn helper-function
+  "Doc-string with description of function purpose" ; (1)!
+  [data]
+  (merge {:fish 1} data)
+  )
+```
+1.  Always include a doc-string in every function to describe the purpose of that function, identifying why it was added and what its value is.
+
 
 GitHub action example with multiple annotations
 
+``` yaml
+name: ci # (1)!
+on:
+  push:
+    branches:
+      - master # (2)!
+      - main
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - run: pip install mkdocs-material # (3)!
+      - run: mkdocs gh-deploy --force
+```
 
-=== "Material for MkDocs"
+1.  You can change the name to your liking.
 
-    ``` yaml
-    name: ci # (1)!
-    on:
-      push:
-        branches:
-          - master # (2)!
-          - main
-    permissions:
-      contents: write
-    jobs:
-      deploy:
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v3
-          - uses: actions/setup-python@v4
-            with:
-              python-version: 3.x
-          - run: pip install mkdocs-material # (3)!
-          - run: mkdocs gh-deploy --force
+2.  At some point, GitHub renamed `master` to `main`. If your default branch
+    is named `master`, you can safely remove `main`, vice versa.
+
+3.  This is the place to install further [MkDocs plugins] or Markdown
+    extensions with `pip` to be used during the build:
+
+    ``` sh
+    pip install \
+      mkdocs-material \
+      mkdocs-awesome-pages-plugin \
+      ...
     ```
-
-    1.  You can change the name to your liking.
-
-    2.  At some point, GitHub renamed `master` to `main`. If your default branch
-        is named `master`, you can safely remove `main`, vice versa.
-
-    3.  This is the place to install further [MkDocs plugins] or Markdown
-        extensions with `pip` to be used during the build:
-
-        ``` sh
-        pip install \
-          mkdocs-material \
-          mkdocs-awesome-pages-plugin \
-          ...
-        ```
 
 
 
@@ -224,7 +244,9 @@ ls -la $HOME/Downloads  # (1)
 1.  :woman_raising_hand: I'm a code annotation! I can contain `code`, __formatted text__, images, ... basically anything that can be written in Markdown.
 
 
-Throw in a bit of highlighting for good measure
+### Highlight lines in code blocks
+
+`hl_lines="2"` where 2 is the line number to highlight
 
 ```clojure hl_lines="2"
 (defn my-function
