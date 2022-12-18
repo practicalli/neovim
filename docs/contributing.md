@@ -1,4 +1,6 @@
-# Contributing to Practicalli Neovim
+# Contributing 
+
+How to effectivley contribute to Practicalli Neovim
 
 [practicalli/neovim](https://github.com/practicalli/neovim/){target=_blank} is written in markdown and uses MkDocs to generate the website via a GitHub action.
 
@@ -31,7 +33,7 @@ A PR with a list of changes across different sections will not be merged, it wil
 
 <!-- TODO:  Add GitHub issue templates, similar to those on practicalli/blog-content -->
 
-## Thank you to all that have contributed
+## Thank you to all contributors
 
 I'd like to especially thank [Oliver Caldwell](https://github.com/olical) for the amazing [Conjure](https://github.com/Olical/conjure){target=_blank} project and [Rafael Delboni](https://github.com/rafaeldelboni){target=_blank} for helping me understand how to work with Fennel.
 
