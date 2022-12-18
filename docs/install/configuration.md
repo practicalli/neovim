@@ -4,10 +4,10 @@
 
 [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank} provides a complete Fennel based configuraion for Neovim, with a wide range of plugins and associated setup and key bindings.
 
-Clone [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank} to `~/.config` directory (or a preferred location and create a symbolic link).
+Clone [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank} to `~/.config/nvim` directory (or a preferred location and create a symbolic link).
 
 ```bash
-git clone https://github.com/practicalli/neovim-config-redux.git
+git clone https://github.com/practicalli/neovim-config-redux.git ~/.config/nvim
 ```
 
 > Create a fork of [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank} first if intending to customise this configuration
