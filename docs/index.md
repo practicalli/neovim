@@ -32,3 +32,12 @@ git clone https://github.com/practicalli/neovim-config-redux.git
 The majority of my work is now focused on the [Practicalli series of books and videos](https://practical.li/){target=_blank} and an advisory role with several communities
 
 Thank you to [Cognitect](https://www.cognitect.com/){target=_blank}, [Nubank](https://nubank.com.br/){target=_blank} and a wide range of other [sponsors](https://github.com/sponsors/practicalli-john#sponsors){target=_blank} from the Clojure community for your continued support
+
+
+## Creative commons license
+
+<div style="width:95%; margin:auto;">
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+This work is licensed under a Creative Commons Attribution 4.0 ShareAlike License (including images & stylesheets).
+</div>
+
