@@ -14,8 +14,10 @@ git clone https://github.com/practicalli/neovim-config-redux.git ~/.config/nvim
 
 
 ## `init.lua`
- - bootstraps the [aniseed package](https://github.com/Olical/aniseed){target=_blank} which compiles the Fennel configuration into Lua, which is then read by Neovim. Defines the entry point to the Fennel configuration as `fnl/config/init.fnl`
+
+ - bootstrap the [aniseed package](https://github.com/Olical/aniseed){target=_blank} which compiles the Fennel configuration into Lua, which is then read by Neovim. Defines the entry point to the Fennel configuration as `fnl/config/init.fnl`
  - installs [packer.nvim](https://github.com/wbthomason/packer.nvim){target=_blank} for package management
+ - examples to [disable language providers](/neovim/reference/neovim/language-providers/) if programming language support is not required (node, perl, python3, ruby)
 
 
 ## `fnl/config/init.fnl`
