@@ -30,7 +30,7 @@ Review the warnings and follow any advice given to resolve the issues.
 
 ### Provider warnings & disable options
 
-NeoVim and it packages may delegates features to language and tool specific [providers](https://neovim.io/doc/user/provider.html){target=_blank}.
+NeoVim and its packages may delegate features to language and tool specific [providers](https://neovim.io/doc/user/provider.html){target=_blank}.
 
 Resolve the issue with providers that generate a warning in the checkhealth report, following the ADVICE steps.
 
