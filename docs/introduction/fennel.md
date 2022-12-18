@@ -2,16 +2,14 @@
 
 Practicalli uses Fennel to define all configuration for Neovim.  Fennel is a LISP dialect and should quickly become comfortable to Clojure developers.
 
-Lua is the defacto language for configuring Neovim and plugin development, although converting between Lua examples to Fennel is relatively simple.
+Lua is the defacto language to configuring Neovim and for plugin development and neovim packages written in lua are preferred over those in Vimscript, assuming a Fennel package is not available.
 
-Neovim fully supports Vimscript, although it is felt that this is a relatively hard to understand way of configuring neovim and will not be used if at all possible.
-
-![Fennel Language logo](https://fennel-lang.org/logo.svg)
+Although Neovim fully supports Vimscript, Practicalli encourages Fennel or Lua, as Vimscript is quite a niche language and quite complex syntax.
 
 
-# Fennel
+## Fennel Overview
 
-Important packages used in this guide are written in Fennel, especially the excellent Conjure package that provides the Clojure REPL (and support for several other language environments).
+![Fennel Language logo](https://fennel-lang.org/logo.svg){align=right loading=lazy}
 
 [Fennel](https://fennel-lang.org/){target=_blank} is a programming language that brings together the speed, simplicity, and reach of [Lua](https://www.lua.org/){target=_blank} with the flexibility of a [lisp syntax and macro system.](https://en.wikipedia.org/wiki/Lisp_(programming_language)){target=_blank}
 
@@ -22,29 +20,34 @@ Important packages used in this guide are written in Fennel, especially the exce
 
 Anywhere you can run Lua code, you can run Fennel code.
 
+!!! TIP "Translate Lua to Fennel"
+    [See Fennel](https://fennel-lang.org/see){target=_blank} is an online antifennel tool to convert Lua to Fennel or Fennel to Lua.
 
-## Fennel to Lua
+    [practicalli/neovim-config-redux configuration](https://github.com/practicalli/neovim-config-redux){target=_blank} provides helper functions to minimise the translation required.
 
-Lua is the defacto language for writing Neovim packages, although there are more developers seeing Fennel as a viable alternative.
+
+## Fennel Packages
+
+The Conjure package which provides the Clojure REPL (and much more) is written in Fennel.
+
+
+## Runtime conversion
 
 Fennel is converted to Lua using the aniseed package
 
 Aniseed bridges the gap between [Fennel](https://fennel-lang.org/){target=_blank} (a Lisp that compiles to Lua) and [Neovim](https://neovim.io/){target=_blank}. Allowing you to easily write plugins or configuration in a [Clojure](https://clojure.org/){target=_blank} like Lisp with great runtime performance.
 
 
-## Lua to Fennel
-
-Neovim package configuration is typically provided in Lua code, so requires translation into fennel.  Although this conversion should be fairly straightforward, [Anti-fennel](https://git.sr.ht/~technomancy/antifennel){target=_blank} converts from Lua code to Fennel code.
-
-[See Fennel](https://fennel-lang.org/see){target=_blank} is an online antifennel tool to convert between Lua and Fennel.
-
-
 ## Development tooling
 
 Neovim support
 
+* [Anti-fennel](https://git.sr.ht/~technomancy/antifennel){target=_blank} - convert from Lua code to Fennel code.
 * [aniseed](https://github.com/Olical/aniseed){target=_blank} - write plugins or configuration for Neovim with great runtime performance
 * [hotpot](https://github.com/rktjmp/hotpot.nvim){target=_blank} - seamless Fennel inside Neovim
+
+[See Fennel](https://fennel-lang.org/see){target=_blank} is an online antifennel tool to convert between Lua and Fennel.
+
 
 Emacs support:
 
