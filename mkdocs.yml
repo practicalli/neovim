@@ -85,13 +85,12 @@ theme:
     - navigation.instant  # Avoid page reloading for internal links
     - navigation.tracking # Update URL with anchor
     - navigation.indexes # Nav sections can have files
-
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: green
+      primary: teal
+      accent: blue
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -104,6 +103,10 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+
+extra_css:
+  - assets/stylesheets/extra.css
+
 
 ## Additional styling
 markdown_extensions:
