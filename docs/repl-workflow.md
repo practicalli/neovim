@@ -7,13 +7,14 @@ Clojure is a powerful, fun and highly productive language for developing applica
 
 **REPL driven development is the foundation of working with Clojure effectively**
 
-Coding with a REPL provides instant feedback as design decisions are coded.  The REPL feedback helps test the assumptions that are driving the design choices.  Important design choices should be codified in unit tests, optionally using _spec_ (a library to define _specifications_).
+Coding with a REPL provides instant feedback as design decisions are coded.  The REPL feedback helps test the assumptions that are driving the design choices.
 
 * Read - code is read by the Clojure reader, passing any macros to the macro reader which converts those macros into Clojure code.
 * Evaluate - code is compiled into the host language (e.g. Java bytecode) and executed
 * Print - results of the code are displayed, either in the REPL or as part of the application.
 * Loop - the REPL is a continuous process that evaluates code, either a single expression or the whole application.
 
+Design decisions and valuable data from REPL experiments can be codified as [specifications](#data-and-function-specifications) and [unit tests](#test-driven-development-and-repl-driven-development)
 
 !!! Quote "Always be REPL'ing"
     _Coding without a REPL feels like so limiting.  I want instant fast feedback from my code as I craft it, testing my assumptions and design choices every step of the journey to a solution_
@@ -108,6 +109,34 @@ Live linting with [clj-kondo](https://github.com/borkdude/clj-kondo){target=_bla
 > The [Clojure Style guide](https://github.com/bbatsov/clojure-style-guide){target=_blank} provides examples of common formatting approaches, although the development team should decide which of these to adopt.  Treesitter and Clojure LSP will automatically format code via cljfmt which encodes many of the style guide rules.  These tools are configurable and should be tailored to the teams standard.
 
 
+## Data and Function specifications
+
+[Clojure spec](https://practical.li/clojure/clojure-spec/){target=_blank} is used to define a contract on incoming and outgoing data, to ensure it is of the correct form.
+
+As data structures are identified in REPL experiments, create data specification to validate the keys and value types of that data.
+
+```clojure
+;; ---------------------------------------------------
+;; Address specifications
+(spec/def ::house-number string?)
+(spec/def ::street string?)
+(spec/def ::postal-code string?)
+(spec/def ::city string?)
+(spec/def ::country string?)
+(spec/def ::additional string?)
+
+(spec/def ::address   ; Composite data specification
+  (spec/keys
+   :req-un [::street ::postal-code ::city ::country]
+   :opt-un [::house-number ::additional]))
+;; ---------------------------------------------------
+```
+
+As the public API is designed, specifications for each functions arguments are added to validate the correct data is used when calling those functions.
+
+[Generative testing](https://practical.li/clojure/clojure-spec/generative-testing/){target=_blank} provides a far greater scope of test values used incorporated into unit tests. Data uses clojure.spec to randomly generate data for testing on each test run.
+
+
 ## Test Driven Development and REPL Driven Development
 
 ![Clojure REPL driven development (RDD) and Test Driven Development (TDD)](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/repl-tdd-flow.png){ align=right loading=lazy }
@@ -123,15 +152,14 @@ Test Driven Development (TDD) and REPL Driven Development (RDD) complement each 
 
 `clojure.test` library is part of the Clojure standard library that provides a simple way to start writing unit tests.
 
-[Clojure spec](https://practical.li/clojure/clojure-spec/){target=_blank} can also be used for generative testing, providing far greater scope in values used when running unit tests.  Specifications can be defined for values and functions.
-
-Clojure has a number of [test runners](https://practical.li/clojure/testing/test-runners/){target=_blank} available.  Kaocha is a test runner that will run unit tests and function specification checks.
+Clojure has a number of [test runners](https://practical.li/clojure/testing/test-runners/){target=_blank} available.  Kaocha is a comprehensive test runner which can run unit tests and function specification checks.
 
 !!! Hint "Automate local test runner"
     Use [kaocha test runner](https://practical.li/clojure/testing/test-runners/kaocha-test-runner.html){target=_blank} in watch mode to run tests and specification check automatically (when changes are saved)
     ```bash
     clojure -X:test/watch
     ```
+
 
 ## Continuous Integration and Deployment
 
