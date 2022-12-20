@@ -7,7 +7,7 @@ Clojure is a powerful, fun and highly productive language for developing applica
 
 **REPL driven development is the foundation of working with Clojure effectively**
 
-Coding with a REPL provides instant feedback as design decisions are coded.  The REPL feedback helps test the assumptions that are driving the design choices.  Important design choices should be codified in unit tests, optionally using spec.
+Coding with a REPL provides instant feedback as design decisions are coded.  The REPL feedback helps test the assumptions that are driving the design choices.  Important design choices should be codified in unit tests, optionally using _spec_ (a library to define _specifications_).
 
 * Read - code is read by the Clojure reader, passing any macros to the macro reader which converts those macros into Clojure code.
 * Evaluate - code is compiled into the host language (e.g. Java bytecode) and executed
