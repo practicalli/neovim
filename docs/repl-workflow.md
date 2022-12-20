@@ -45,9 +45,9 @@ Source code is evaluated in its respective namespace, removing the need to chang
 
 ## Rich Comment blocks - living documentation
 
-The `(comment ,,,)` function wraps code that is only run directly by the developer using a [Clojure aware editor](/clojure-editors/).
+The `(comment ,,,)` function wraps code that is only run directly by the developer using a [Clojure aware editor](/clojure-editors/).  We call this block of wrapped code a _rich comment block_.
 
-Expressions in rich comment blocks can represent how to use the functions that make up the namespace API.  For example, starting/restarting the system, updating the database, etc.  Expressions provide examples of calling functions with typical arguments and make a project more accessible and easier to work with.
+Expressions in rich comment blocks can represent how to use the functions that make up the namespace API.  For example, starting/restarting the system, updating the database, etc.  Expressions in rich comment blocks provide examples of calling functions with typical arguments and make a project more accessible and easier to work with.
 
 ![Practicalli Clojure Repl Driven Development - Rich comment blocks example](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/practicalli-clojure-repl-driven-development-rich-comment-blocks.png)
 
@@ -61,7 +61,7 @@ Rich comment blocks are very useful for rapidly iterating over different design 
     ;; algorithm design - first try)
 
   (defn value-added-tax []
-    ;; algorithm design - first try)
+    ;; algorithm design - second try)
 
   ) ;; End of rich comment block
 ```
@@ -77,9 +77,9 @@ Journals simplify the developer on-boarding processes as the journey through des
 
 A Design Journal is usually created in a separate namespace, although it may start as a rich comment at the bottom of a namespace.
 
-A journal should cover the following aspects
+A journal should cover the following aspects:
 
-* Relevant expressions use to test assumptions about design options.
+* Relevant expressions used to test assumptions about design options.
 * Examples of design choices not taken and discussions why (saves repeating the same design discussions)
 * Expressions that can be evaluated to explain how a function or parts of a function work
 
@@ -145,7 +145,7 @@ Test Driven Development (TDD) and REPL Driven Development (RDD) complement each 
 
 > Test Driven Development fits well with Hammock Time, as good design comes from deep thought
 
-* RDD enables rapid design experiments so different approaches can easily and quickly be evaluated .
+* RDD enables rapid design experiments so different approaches can easily and quickly be evaluated.
 * TDD focuses the results of the REPL experiments into design decisions, codified as unit tests.  These tests guide the correctness of specific implementations and provide critical feedback when changes break that design.
 
 [Unit tests](https://practical.li/clojure/testing/unit-testing/){target=_blank} should support the public API of each namespace in a project to help prevent regressions in the code.  Its far more efficient in terms of thinking time to define unit tests as the design starts to stabilize than as an after thought.
@@ -163,7 +163,7 @@ Clojure has a number of [test runners](https://practical.li/clojure/testing/test
 
 ## Continuous Integration and Deployment
 
-Add a [continuous integration service](https://practical.li/clojure/continuous-integration/){target=_blank} to run tests and builds code on every shared commit.  Spin up testable review deployments when commits pushed to a pull request branch, before pushing commits to the main deployment branch, creating an effective pipeline to gain further feedback.
+Add a [continuous integration service](https://practical.li/clojure/continuous-integration/){target=_blank} to run tests and builds code on every shared commit.  Spin up testable review deployments when commits are pushed to a pull request branch, before pushing commits to the main deployment branch, creating an effective pipeline to gain further feedback.
 
 * [CircleCI](https://practical.li/clojure/continuous-integration/circle-ci/){target=_blank} provides a simple to use service that supports Clojure projects.
 * [GitHub Workflows](https://docs.github.com/en/actions/using-workflows){target=_blank} and [GitHub actions marketplace ](https://github.com/marketplace?type=actions){target=_blank} to quickly build a tailored continuous integration service, e.g. [Setup Clojure GitHub Action](https://github.com/marketplace/actions/setup-clojure){target=_blank}.
@@ -176,7 +176,7 @@ Add a [continuous integration service](https://practical.li/clojure/continuous-i
 
 There are few novel features of programming languages, but each combination has different properties. The combination of dynamic, hosted, functional and extended Lisp in Clojure gives developers the tools for making effective programs. The ways in which Clojure's unique combination of features can yield a highly effective development process.
 
-Over more than a decade we have developed an effective approach to writing code in Clojure whose power comes from composing many of its key features. As different as Clojure programs are from e.g. Java programs, so to can and should be the development experience. You are not in Kansas anymore!
+Over more than a decade we have developed an effective approach to writing code in Clojure whose power comes from composing many of its key features. As different as Clojure programs are from e.g. Java programs, so too can and should be the development experience. You are not in Kansas anymore!
 
 This talk presents a demonstration of the leverage you can get when writing programs in Clojure, with examples, based on my experiences as a core developer of Clojure and Datomic.
 
