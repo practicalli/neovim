@@ -29,7 +29,7 @@ Clojure LSP includes clj-kondo to provide [an implementation of the Language Ser
 
 Neovim Treesitter uses and visualises information from the Clojure LSP server to assist with development and refactor of Clojure code.
 
-Once installed, run `clojure-lsp -v` in a terminal to ensure the command is working.
+Once installed, run `clojure-lsp --version` in a terminal to ensure the command is working.
 
 !!! HINT "practicalli/clojure-lsp-config"
     [practicalli/clojure-lsp-config](https://github.com/practicalli/clojure-lsp-config) provides a complete configuration for clojure-lsp (`config.edn`), including a wide range of snippets and less restrictive formatting rules (`cljfmt.edn`)
