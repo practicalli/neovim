@@ -1,4 +1,4 @@
-# Using Newovim
+# Using Neovim
 
 Using the fundamental controls of Neovim that apply across any and all editing.
 
