@@ -1,6 +1,6 @@
-# Using Newovim
+# Using Neovim
 
-Using the fundamental controls of Neovim that apply across any and all editing.
+The fundamental controls of Neovim which apply across all editing tasks.
 
 [Clojure Development](../repl-driven-development/index.md){ .md-button }
 [Version Control](../version-control/index.md){ .md-button }
