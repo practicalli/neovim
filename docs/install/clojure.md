@@ -21,7 +21,8 @@ Clojure LSP is highly recommended and packages to use an [installed clojure-lsp 
 
 ## Clojure LSP
 
-[Clojure LSP installation guide](https://clojure-lsp.io/){target=_blank .md-button } [Treesitter Fennel Configuration](http://localhost:7777/neovim/install/configuration/#fnlconfigplugintreesitterfnl){target=_blank .md-button}
+[Clojure LSP installation guide](https://clojure-lsp.io/){target=_blank .md-button }
+[Treesitter Fennel Configuration](/neovim/install/configuration/#fnlconfigplugintreesitterfnl){target=_blank .md-button}
 
 clj-kondo provides static analysis of source code files, providing subtle warnings as Clojure code is written to help the developer follow idioms and avoid syntatic errors.
 
