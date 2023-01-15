@@ -3,7 +3,7 @@
 Common commands used with Conjure.
 
 !!! HINT "Conjure interactive tutorial"
-    `:ClojureSchool` runs an interactive Conjure tutorial in Neovim when Conjure package is installed.
+    `:ConjureSchool` runs an interactive Conjure tutorial in Neovim when Conjure package is installed.
 
 
 ## Evaluation
