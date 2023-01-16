@@ -63,6 +63,9 @@ A new commit or amend commit qill open a new window to write a commit message (u
 
 `P` to open the push menu to open, `-u` to push to the current remote
 
+??? BUG "Confused when remote is not origin"
+    Use `e` option to push to elsewhere when the remote name is not set to `origin`.  The `e` option will prompt for a remote name and branch.
+
 
 
 ## Commit history
