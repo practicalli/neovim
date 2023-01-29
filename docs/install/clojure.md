@@ -11,7 +11,9 @@ Clojure LSP is highly recommended and packages to use an [installed clojure-lsp 
 
 [Clojure CLI](https://clojure.org/guides/deps_and_cli){target=_blank} provides a way to run Clojure code, packaged Clojure (jar) and of course run a Clojure REPL.
 
-[Practicalli Clojure install guide](https://practical.li/clojure/install/){target=_blank} details prerequisites, Clojure install options and supporting tools for an enhanced developer workflow.  Or visit the [Clojure Getting Started guide](https://clojure.org/guides/getting_started){target=_blank} for just the Clojure CLI.
+[Practicalli Clojure install guide](https://practical.li/clojure/install/){target=_blank} details prerequisites, Clojure install options and supporting tools for an enhanced developer workflow.
+
+> Visit the [Clojure Getting Started guide](https://clojure.org/guides/getting_started){target=_blank} for the Clojure CLI or to check the latest release version.
 
 [Practicalli Clojure CLI Config](https://practical.li/clojure/clojure-cli/install/community-tools.html){target=_blank} provides a wide range of community tools that extend the features of Clojure CLI, creating a rich development environment for use across all projects.
 
@@ -38,6 +40,6 @@ Once installed, run `clojure-lsp -v` in a terminal to ensure the command is work
 
 ## Leinigen
 
-The large majority of existing Clojure projects have used Leiningen build automation tool (although there is a growing number of new projects using Clojure CLI as well or instead of Leiningen)
+Many existing Clojure projects have used Leiningen build automation tool (although there is a growing number of new projects using Clojure CLI as well or instead of Leiningen)
 
-Follow the install instructions at [Leiningen.org](https://leiningen.org/){target=_blank}
+Follow the install instructions at [Leiningen.org](https://leiningen.org/){target=_blank} if required.
