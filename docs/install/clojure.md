@@ -7,15 +7,15 @@ Clojure LSP is highly recommended and packages to use an [installed clojure-lsp 
 
 ## Clojure CLI
 
-[Practicalli Clojure install guide](https://practical.li/clojure/clojure-cli/install/){target=_blank .md-button}
+[Practicalli Clojure install guide](https://practical.li/clojure/install/){target=_blank .md-button}
 
 [Clojure CLI](https://clojure.org/guides/deps_and_cli){target=_blank} provides a way to run Clojure code, packaged Clojure (jar) and of course run a Clojure REPL.
 
-[Practicalli Clojure install guide](https://practical.li/clojure/clojure-cli/install/){target=_blank} details prerequisites, Clojure install options and supporting tools for an enhanced developer workflow.  Or visit the [Clojure Getting Started guide](https://clojure.org/guides/getting_started){target=_blank} for just the Clojure CLI.
+[Practicalli Clojure install guide](https://practical.li/clojure/install/){target=_blank} details prerequisites, Clojure install options and supporting tools for an enhanced developer workflow.  Or visit the [Clojure Getting Started guide](https://clojure.org/guides/getting_started){target=_blank} for just the Clojure CLI.
 
-[practicalli/clojure-deps-edn provides a wide range of community tools](https://practical.li/clojure/clojure-cli/install/community-tools.html){target=_blank} that can easily be added to the development environment and used across all projects.
+[Practicalli Clojure CLI Config](https://practical.li/clojure/clojure-cli/install/community-tools.html){target=_blank} provides a wide range of community tools that extend the features of Clojure CLI, creating a rich development environment for use across all projects.
 
-!!! WARNING "Aliases are required for many command examples"
+!!! WARNING "Aliases are required for many examples"
     Without [installing practicalli/clojure-deps-edn](https://practical.li/clojure/clojure-cli/install/community-tools.html){target=_blank} many commands provided in this book will not work, unless the same alias configuration is added to a either a project or user level `deps.edn` configuration.
 
 
