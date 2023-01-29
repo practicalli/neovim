@@ -16,7 +16,7 @@ Clojure LSP is highly recommended and packages to use an [installed clojure-lsp 
 [Practicalli Clojure CLI Config](https://practical.li/clojure/clojure-cli/install/community-tools.html){target=_blank} provides a wide range of community tools that extend the features of Clojure CLI, creating a rich development environment for use across all projects.
 
 !!! WARNING "Aliases are required for many examples"
-    Without [installing practicalli/clojure-deps-edn](https://practical.li/clojure/clojure-cli/install/community-tools.html){target=_blank} many commands provided in this book will not work, unless the same alias configuration is added to a either a project or user level `deps.edn` configuration.
+    Without [Practicalli Clojure CLI Config](https://practical.li/clojure/install/clojure-cli/#practicalli-clojure-cli-config){target=_blank} many commands provided in this book are not available unless similar alias definitions are added to a either a project or user level `deps.edn` configuration.
 
 
 ## Clojure LSP
