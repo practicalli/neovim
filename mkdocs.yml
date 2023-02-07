@@ -93,6 +93,9 @@ plugins:
 
 # Footer / Social Media
 extra:
+  analytics:
+    provider: google
+    property: G-P29SSN0GV6
   social:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/jr0cket/
