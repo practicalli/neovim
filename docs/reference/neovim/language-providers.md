@@ -11,7 +11,7 @@ Resolve the issue with providers that generate a warning in the checkhealth repo
 
 If a language is not used with Neovim, then its provider can be disabled.  Details on how to disable a provider are included at the end of the ADVICE in the report section for that provider.
 
-![NeoVim checkhealth report - python provider warning](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-checkhealth-warning-python.png)
+![NeoVim checkhealth report - python provider warning](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-checkhealth-warning-python.png)
 
 Disable language providers in the `init.lua` configuration file
 

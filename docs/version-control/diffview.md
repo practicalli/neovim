@@ -10,7 +10,7 @@ View working space and staged changes side by side
 
 `SPC w l` and `SPC w h` to move cursor between diff buffer and sidebar buffer
 
-![Neovim diffview plugin - side by side view of changes in git for local working directory and staging](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-neogit-diffview-side-by-side.png)
+![Neovim diffview plugin - side by side view of changes in git for local working directory and staging](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-neogit-diffview-side-by-side.png)
 
 
 ## Neogit integration

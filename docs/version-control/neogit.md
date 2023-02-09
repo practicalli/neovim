@@ -10,7 +10,7 @@ Neogit is an interactive git client that provides the core features of version c
 
 `q` to quit Neogit and return to the previous tab
 
-![Neovim Neogit plugin - git status buffer](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-neogit-status.png)
+![Neovim Neogit plugin - git status buffer](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-neogit-status.png)
 
 > Neovim is configured to use the magit style key bindings in practicalli/neovim-config-redux
 

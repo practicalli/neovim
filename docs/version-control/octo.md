@@ -31,7 +31,7 @@ List issues from current project (optionally add a specific repository)
 
 > The account/repository-name is required if Octo cannot find the repository
 
-![Neovim Octo GitHub Issues list for practicalli/neovim](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-octo-github-issue-list.png)
+![Neovim Octo GitHub Issues list for practicalli/neovim](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-octo-github-issue-list.png)
 
 Create a pull requests from current project
 
@@ -49,7 +49,7 @@ Add a comment to the current topic (issue/pr)
 :Octo gist list
 ```
 
-![Neovim Octo package - GitHub Gist list](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-octo-github-gist-list.png)
+![Neovim Octo package - GitHub Gist list](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-octo-github-gist-list.png)
 
 !!! HINT "Octo.nvim configuration options"
     [Octo.nvim configuration options](https://github.com/pwntester/octo.nvim#%EF%B8%8F-configuration){target=_blank}

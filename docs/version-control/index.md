@@ -13,12 +13,12 @@ There are several ways to interact with Git version control, although Practicall
 
 `SPC g s` opens Git Status tab, by running `:Neogit`
 
-![Neovim Neogit plugin - git status buffer](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-neogit-status.png)
+![Neovim Neogit plugin - git status buffer](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-neogit-status.png)
 
 
 `d` in neogit status buffer (`SPC g s`) will open diffview in a new tab
 
-![Neovim diffview plugin - side by side view of changes in git for local working directory and staging](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-neogit-diffview-side-by-side.png)
+![Neovim diffview plugin - side by side view of changes in git for local working directory and staging](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-neogit-diffview-side-by-side.png)
 
 
 List issues from current project (optionally add a specific repository)
@@ -27,4 +27,4 @@ List issues from current project (optionally add a specific repository)
 :Octo issue list practicalli/neovim
 ```
 
-![Neovim Octo GitHub Issues list for practicalli/neovim](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-octo-github-issue-list.png)
+![Neovim Octo GitHub Issues list for practicalli/neovim](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-octo-github-issue-list.png)

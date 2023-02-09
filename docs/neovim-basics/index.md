@@ -5,7 +5,7 @@ The fundamental controls of Neovim which apply across all editing tasks.
 [Clojure Development](../repl-driven-development/index.md){ .md-button }
 [Version Control](../version-control/index.md){ .md-button }
 
-![Neovim startup with dashboard theme](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-startup-dashboard-theme-light.png)
+![Neovim startup with dashboard theme](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-startup-dashboard-theme-light.png)
 
 
 

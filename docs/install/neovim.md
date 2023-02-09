@@ -17,7 +17,7 @@ Ensure supporting tools and binaries are available in the operating system by ru
 
 `nvim` in a terminal to run NeoVim and check the installation is working without error.
 
-![NeoVim - default startup message](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-startup-default-message.png){target=_blank}
+![NeoVim - default startup message](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-startup-default-message.png){target=_blank}
 
 `:checkhealth` to run a check supporting tools are available to NeoVim.
 
@@ -27,7 +27,7 @@ A report is generated and shown in NeoVim
 
 Review the warnings and install tooling that is required for languages that will be used.
 
-![NeoVim checkhealth report](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-checkhealth-report.png)
+![NeoVim checkhealth report](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-checkhealth-report.png)
 
 !!! HINT "Ignore Provider Warnings"
     It is safe to ignore language provider warnings.

@@ -30,7 +30,7 @@ Telescope provides a preview of the selected file (only if there is sufficient s
 
 Use Telescope to switch between buffers
 
-![Neovim - telescope - swtich between buffers](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-telescope-open-buffer.png)
+![Neovim - telescope - swtich between buffers](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-telescope-open-buffer.png)
 
 <!-- TODO: close a buffer (not just its window) -->
 

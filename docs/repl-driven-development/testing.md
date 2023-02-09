@@ -22,7 +22,7 @@ clojure -M:env/test:lib/reloaded:repl/rebel
 
 `, t n` to run the tests for the current namespace
 
-![Neovim - Conjure Clojure unit test runner with test results in HUD](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/screenshots/neovim-conjure-tests-results-hud.png)
+![Neovim - Conjure Clojure unit test runner with test results in HUD](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-conjure-tests-results-hud.png)
 
 
 ## External test runner
