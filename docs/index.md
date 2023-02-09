@@ -14,7 +14,7 @@ Practicalli Neovim provides an install guide and a simple, powerful and fun [REP
 ![Clojure REPL Driven Development workflow](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-driven-development-lifecycle-concept.png)
 
 
-## Getting Started
+## Quick Start
 
 [Install Neovim](install/neovim.md) and clone [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank}
 
@@ -22,8 +22,15 @@ Practicalli Neovim provides an install guide and a simple, powerful and fun [REP
 git clone https://github.com/practicalli/neovim-config-redux.git
 ```
 
-> [Install pages](install/index.md) detail the resources and recommended approaches to installing Neovim, Neovim packages, Java, Clojure, terminals, fonts and supporting tools
+> [Install pages](install/index.md) provide a detailed guide to installing Neovim, Neovim packages, Java, Clojure, terminals, fonts and supporting tools
 
+
+## External reverences
+
+[Getting started with Neovim and Conjure](https://oli.me.uk/getting-started-with-clojure-neovim-and-conjure-in-minutes/){target=_blank .md-button}
+[Neovim user guide](https://neovim.io/doc/user/){target=_blank .md-button}
+[Conjure install guide](https://github.com/Olical/conjure){target=_blank .md-button}
+[Conjuring Clojure in Vim](https://blog.djy.io/conjuring-clojure-in-vim/){target=_blank .md-button} - an introduction to using Conjure
 
 ## Sponsor my work
 
