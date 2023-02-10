@@ -1,13 +1,20 @@
 # REPL Driven Development
 
-![Clojure repl driven development](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-driven-development-lifecycle-concept.png){ align=left loading=lazy }
+![Clojure repl driven development](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-workflow-concept.png){loading=lazy}
+
+
+!!! Quote "Always be REPL'ing"
+    Coding without a REPL feels limiting. The REPL provides fast feedback from code as its crafted, testing assumptions and design choices every step of the journey to a solution
+     - John Stevenson, Practical.li
+
 
 Clojure is a powerful, fun and highly productive language for developing applications and services.
  The clear language design is supported by a powerful development environment known as the REPL (read, evaluate, print, loop).  The REPL gives you instant feedback on what your code does and enables you to test either a single expression or run the whole application (including tests).
 
 **REPL driven development is the foundation of working with Clojure effectively**
 
-Coding with a REPL provides instant feedback as design decisions are coded.  The REPL feedback helps test the assumptions that are driving the design choices.
+An effective Clojure workflow begins by running a REPL process.  Clojure expressions are written and evaluated immediately to provide instant feedback. The REPL feedback helps test the assumptions that are driving the design choices.
+
 
 * Read - code is read by the Clojure reader, passing any macros to the macro reader which converts those macros into Clojure code.
 * Evaluate - code is compiled into the host language (e.g. Java bytecode) and executed
@@ -15,10 +22,6 @@ Coding with a REPL provides instant feedback as design decisions are coded.  The
 * Loop - the REPL is a continuous process that evaluates code, either a single expression or the whole application.
 
 Design decisions and valuable data from REPL experiments can be codified as [specifications](#data-and-function-specifications) and [unit tests](#test-driven-development-and-repl-driven-development)
-
-!!! Quote "Always be REPL'ing"
-    _Coding without a REPL feels like so limiting.  I want instant fast feedback from my code as I craft it, testing my assumptions and design choices every step of the journey to a solution_
-     - John Stevenson, Practical.li
 
 
 ## Evaluating source code
@@ -30,12 +33,11 @@ A REPL connected editor is the primary tool for evaluating Clojure code from sou
 Source code is evaluated in its respective namespace, removing the need to change namespaces in the REPL directly, (`in-ns`), or use fully qualified names to call functions.
 
 !!! HINT "Evaluate Clojure in Neovim with Conjure"
-    `, e e` evaluates the top level form under the cursor
+    `, e b` evaluates the code in the current buffer
 
 <p style="text-align:center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rQ802kSaip4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
-
 
 !!! Hint "Evaluate to Comment for results history"
     `, e c e`  evaluates the current form and prints the result under the expression as a comment
@@ -45,11 +47,11 @@ Source code is evaluated in its respective namespace, removing the need to chang
 
 ## Rich Comment blocks - living documentation
 
-The `(comment ,,,)` function wraps code that is only run directly by the developer using a [Clojure aware editor](/clojure-editors/).
+The `(comment ,,,)` function wraps code that is only run directly by the developer using a [Clojure aware editor](https://practical.li/clojure/clojure-editors/){target=_blank}.
 
 Expressions in rich comment blocks can represent how to use the functions that make up the namespace API.  For example, starting/restarting the system, updating the database, etc.  Expressions provide examples of calling functions with typical arguments and make a project more accessible and easier to work with.
 
-![Practicalli Clojure Repl Driven Development - Rich comment blocks example](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/practicalli-clojure-repl-driven-development-rich-comment-blocks.png)
+![Practicalli Clojure Repl Driven Development - Rich comment blocks example](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/practicalli-clojure-repl-driven-development-rich-comment-light.png)
 
 Rich comment blocks are very useful for rapidly iterating over different design decisions by including the same function but with different implementations.  Hide [clj-kondo linter](https://practical.li/clojure/clojure-cli/install/code-analysis.html){target=_blank} warnings for redefined vars (`def`, `defn`) when using this approach.
 
@@ -104,9 +106,11 @@ Clojure aware editors should automatically apply formatting that follows the [Cl
 
 Live linting with [clj-kondo](https://github.com/borkdude/clj-kondo){target=_blank} suggests common idioms and highlights a wide range of syntax errors as code is written, minimizing bugs and therefore speeding up the development process.
 
-![clj-kondo static analysis for live linting of Clojure code](/images/spacemacs-clojure-linting-code-marks-and-flycheck-list-errors.png)
+![Clojure code static analysis for live linting](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-light.png#only-light)
+![Clojure code static analysis for live linting](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-dark.png#only-dark)
 
-> The [Clojure Style guide](https://github.com/bbatsov/clojure-style-guide){target=_blank} provides examples of common formatting approaches, although the development team should decide which of these to adopt.  Treesitter and Clojure LSP will automatically format code via cljfmt which encodes many of the style guide rules.  These tools are configurable and should be tailored to the teams standard.
+!!! INFO "Clojure Style Guide"
+    The [Clojure Style guide](https://github.com/bbatsov/clojure-style-guide){target=_blank} provides examples of common formatting approaches, although the development team should decide which of these to adopt.  Emacs `clojure-mode` will automatically format code and so will Clojure LSP (via cljfmt).  These tools are configurable and should be tailored to the teams standard.
 
 
 ## Data and Function specifications
@@ -152,7 +156,9 @@ Test Driven Development (TDD) and REPL Driven Development (RDD) complement each 
 
 `clojure.test` library is part of the Clojure standard library that provides a simple way to start writing unit tests.
 
-Clojure has a number of [test runners](https://practical.li/clojure/testing/test-runners/){target=_blank} available.  Kaocha is a comprehensive test runner which can run unit tests and function specification checks.
+[Clojure spec](https://practical.li/clojure/clojure-spec/){target=_blank} can also be used for generative testing, providing far greater scope in values used when running unit tests.  Specifications can be defined for values and functions.
+
+Clojure has a number of [test runners](https://practical.li/clojure/testing/test-runners/){target=_blank} available.  Kaocha is a test runner that will run unit tests and function specification checks.
 
 !!! Hint "Automate local test runner"
     Use [kaocha test runner](https://practical.li/clojure/testing/test-runners/kaocha-test-runner.html){target=_blank} in watch mode to run tests and specification check automatically (when changes are saved)
