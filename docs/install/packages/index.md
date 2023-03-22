@@ -35,6 +35,9 @@ Packages are more likely to be adopted if:
 - are easy to use
 - work well with themes (where relevant)
 
+## Package Updates
+
+[This Week In Neovim - community update](https://this-week-in-neovim.org/){target=_blank .md-button}
 
 <!-- ## Plugins (from project readme.md) -->
 <!--  - [packer](https://github.com/wbthomason/packer.nvim) *Plugin/package management* -->
