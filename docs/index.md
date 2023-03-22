@@ -28,9 +28,13 @@ git clone https://github.com/practicalli/neovim-config-redux.git
 ## External reverences
 
 [Getting started with Neovim and Conjure](https://oli.me.uk/getting-started-with-clojure-neovim-and-conjure-in-minutes/){target=_blank .md-button}
+
 [Neovim user guide](https://neovim.io/doc/user/){target=_blank .md-button}
+
+[This Week In Neovim - community update](https://this-week-in-neovim.org/){target=_blank .md-button}
+
 [Conjure install guide](https://github.com/Olical/conjure){target=_blank .md-button}
-[Conjuring Clojure in Vim](https://blog.djy.io/conjuring-clojure-in-vim/){target=_blank .md-button} - an introduction to using Conjure
+[Conjuring Clojure in Vim](https://blog.djy.io/conjuring-clojure-in-vim/){target=_blank .md-button}
 
 ## Sponsor my work
 
@@ -47,4 +51,3 @@ Thank you to [Cognitect](https://www.cognitect.com/){target=_blank}, [Nubank](ht
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 This work is licensed under a Creative Commons Attribution 4.0 ShareAlike License (including images & stylesheets).
 </div>
-
