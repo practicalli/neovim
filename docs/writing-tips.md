@@ -1,6 +1,12 @@
 # Writing tips for MkDocs
 
-Making the docs more engaging using the [mkdocs-material theme reference guide](https://squidfunk.github.io/mkdocs-material/reference/)
+Making the docs more engaging using the [mkdocs-material theme reference guide](https://squidfunk.github.io/mkdocs-material/reference/){target=_blank}
+
+??? INFO "Configuring Colors"
+    [Material for MkDocs - Changing the colors](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/){target=_blank} lists the primary and accent colors available.
+
+    [HSL Color Picker](https://hslpicker.com/) for codes to modify the theme style, overriding colors in `docs/assets/stylesheets/extra.css`
+
 
 ## Hypertext links
 
@@ -14,16 +20,16 @@ Add `{target=_blank}` to the end of a link to configure opening in a new tab
 
 ## Buttons
 
-Convert any link into a button by adding `{ .md-button }` class names to end of the markdown for a link, which uses `.md-button-primary` by default.  Include `target=_blank` for buttons with links to external sites.
+Convert any link into a button by adding `{.md-button}` class names to end of the markdown for a link, which uses `.md-button-primary` by default.  Include `target=_blank` for buttons with links to external sites.
 
 ```
-[link text](http://practical.li/blog){ .md-button target=_blank }
+[link text](http://practical.li/blog){.md-button target=_blank}
 ```
 
 Or specify a different class
 
 ```
-[link text](http://practical.li/blog){ .md-button .md-button-primary }
+[link text](http://practical.li/blog){.md-button .md-button-primary}
 ```
 
 Add an icon to the button
@@ -36,6 +42,7 @@ Add an icon to the button
 [:octicons-heart-fill-24: Practicalli Blog](http://practical.li/blog){ .md-button .md-button-primary }
 ```
 
+[Search all supported icons](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/){target=_blank .md-button}
 
 
 ## YouTube video
@@ -188,8 +195,11 @@ clojure linenums="42" title="src/practicalli/gameboard.clj"
 
 ### Annotations
 
-Add an annotation using a comment character for the codeblock language, e.g. `#`, followed by a space and a number in round brackets `(1)`, where 1 is the number of the annotation
+Annotations in a code block help to highlight important aspects.  Use the comment character for the language followed by a space and a number in brackets
 
+For example, in a shell code block, use `# (1)` where 1 is the number of the annotation
+
+Use a number after the code block to add the text for the annotation, e.g. `1.`. Ensure there is a space between the code block and the annotation text.
 
 ```shell
 ls -la $HOME/Downloads  # (1)
@@ -207,11 +217,11 @@ Code blocks with annotation, add `!` after the annotation number to suppress the
   (merge {:fish 1} data)
   )
 ```
+
 1.  Always include a doc-string in every function to describe the purpose of that function, identifying why it was added and what its value is.
 
 
 GitHub action example with multiple annotations
-
 
 ``` yaml
 name: ci # (1)!
@@ -252,13 +262,17 @@ jobs:
 
 ### Highlight lines in code blocks
 
-`hl_lines="2"` where 2 is the line number to highlight
+Add highlight line meta data to a code block after the opening backticks and code block language.
 
-```clojure hl_lines="2"
+`hl_lines="2"` highlights line 2 in the codeblock
+
+```clojure hl_lines="2,4"
 (defn my-function
   "With a lovely doc-string"
   [arguments]
-  (map inc [1 2 3]))
+  (map
+   inc
+   [1 2 3]))
 ```
 
 
@@ -377,18 +391,21 @@ Represent key bindings with [Keyboard keys](https://facelessuser.github.io/pymdo
 * ++u++ `++u++` for uppercase character or `++"U"++` for consistency
 
 [Punctionation keys](https://facelessuser.github.io/pymdown-extensions/extensions/keys/#punctuation-keys){target=_blank} use their name
+
 * ++spc++ `++spc++`
 * ++comma++ `++comma++`
-* ++arrow-left++
+* ++arrow-left++ `++arrow-left++`
 
 For key sequences, place a space between each keyboard character
+
 * ++spc++ ++"g"++ ++"s"++  `++spc++ ++"g"++ ++"s"++`
 
 For key combinations, use join they key identifies with a `+`
+
 * ++meta+x++ `++meta+x++`
 * ++ctrl+alt+del++ `++ctrl+alt+del++`
 
-[Keyboard keys reference](https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index){target=_blank .md-button}
+[MkDocs keyboard keys reference](https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index){target=_blank .md-button}
 
 
 ## Grids
@@ -467,7 +484,6 @@ Markdown images can be appended with material tags to set the size of the image,
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
 
 
-
 ## Lists
 
 Task lists
@@ -479,6 +495,15 @@ Task lists
     * [ ] Praesent sed risus massa
 - [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
 
+!!! EXAMPLE "Task List example"
+    ```markdown
+    - [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    - [ ] Vestibulum convallis sit amet nisi a tincidunt
+        * [x] In hac habitasse platea dictumst
+        * [x] In scelerisque nibh non dolor mollis congue sed et metus
+        * [ ] Praesent sed risus massa
+    - [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
+    ```
 
 ## Tooltips
 
