@@ -29,6 +29,7 @@ Packages are more likely to be adopted if:
 - work reliably, without generating errors
 - do not conflict with other valuable packages in this configuration
 - written in fennel or lua to aid maintenance
+- provides a `setup` or `config` function for setting package options
 - use features provided by Neovim (e.g treesitter)
 - are well documented
 - are easy to configure
