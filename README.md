@@ -39,37 +39,43 @@ The Publish Book GitHub action will run when PR's are merged into main (or the P
 
 ## Local development
 
-Install mkdocs using the Operating system package manager
+Install Python3 Pip package manager
 
-```bash
-sudo apt install mkdocs
+```shell
+sudo apt install python3-pip
 ```
 
-Or via Python pip
+Install Material for MkDocs version 9
 
-```bash
-pip install mkdocs
+```shell
+pip3 install mkdocs-material=="9.*"
 ```
 
 Install the plugins used by the Practicalli site using Pip (these are also installed in the GitHub Action workflow)
 
-```bash
-pip install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin pillow cairosvg
+```shell
+pip3 install mkdocs mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin pillow cairosvg
 ```
 
 > pillow and cairosvg python packages are required for [Social Cards](https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/)
 
 Fork the practicalli/neovim GitHub repository and clone that fork to your computer,
 
-```bash
+```shell
 git clone https://github.com/<your-github-account>/neovim.git
-
 ```
 
-Run a local server from the root of the cloned project
+Build the website and run a local server from the root of the project
 
-```bash
-mkdocs serve
+```shell
+make docs
 ```
 
 The website will open at http://localhost:8000
+
+As the content grows, use the `docs-changed` task to only rebuild changed content, provinding faster feedback
+
+```shell
+make docs-changed
+```
+
