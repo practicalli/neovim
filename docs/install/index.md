@@ -7,6 +7,8 @@ Practicalli Neovim provides a feature rich configuration for Neovim and all the 
 * [Neovim package manager and packages](packages/index.md)
 * [NerdFonts](https://www.nerdfonts.com/){target=_blank} for icon support in themes and status line
 
+!!! WARNING "Neovim 0.9.0 latest stable release"
+    Content and configuration in this book has been tested against Neovim 0.8.0 and will be tested against Neovim 0.9.0 over the summer of 2023
 
 ## Install summary
 

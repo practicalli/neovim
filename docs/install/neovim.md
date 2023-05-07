@@ -2,13 +2,80 @@
 
 [Neovim releases](https://github.com/neovim/neovim/releases){target=_blank .md-button}
 
-Neovim 8 is the minimum version for this configuration.  The latest release of Neovim 7 has been work well for Clojure development by the Practicalli team
-
-Practicalli recommends using the latest release from [the Neovim releases page](https://github.com/neovim/neovim/releases){target=_blank}
+Neovim 8 is the minimum version for this configuration and Neovim 0.9.0 is currently being tested.  
 
 Follow the [install Neovim guide for the specific operating system](https://github.com/neovim/neovim/wiki/Installing-Neovim){target=_blank}.
 
-> Update to a Neovim development build if there are issues with Treesitter and the nvim-treesitter package, as they are features under active development, e.g.  [Ubuntu daily builds PPA](https://launchpad.net/~neovim-ppa/+archive/ubuntu/unstable){target=_blank} or `brew install --HEAD neovim` for Homebrew
+Neovim 9 only provides an AppImage install for Linux.  For an nvim binary, extract the AppImage or build Neovim from source, optionally creating a Debian/Ubuntu package.
+
+
+??? EXAMPLE "Extract AppImage"
+    ```shell
+    chmod a+x ./nvim.appimage
+    ./nvim.appimage --appimage-extract
+    ```
+
+??? EXAMPLE "Extract AppImage via GitHub Workflow"
+    ```yaml
+      - name: Install Neovim
+        shell: bash
+        run: |
+          mkdir -p /tmp/nvim
+          wget -q https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage -O /tmp/nvim/nvim.appimage
+          cd /tmp/nvim
+          chmod a+x ./nvim.appimage
+          ./nvim.appimage --appimage-extract
+          echo "/tmp/nvim/squashfs-root/usr/bin/" >> $GITHUB_PATH
+    ```
+
+## Suppoting Tools 
+
+=== "Debian / Ubuntu"
+    Install the following packages to support Neovim
+
+    - `ripgrep` fast file contents search (used by telescope)
+    - `find-fd` advanced search tool 
+    - `xclip` clipboard 
+
+    ```shell
+    sudo apt install find-fd xclip
+    ```
+
+   `set clipboard+=unnamedplus` in the Neovim configuration instructs Linux to use the clipboard tool 
+
+    ??? INFO "Wayland requires wl-clipboard"
+    Install the `wl-clipboard` package to use the Wayland desktop clipboard with Neovim
+    ```shell
+    sudo apt install wl-clipboard
+    ```
+    
+## Build Neovim from Source
+
+Clone the [Neovim GitHub repository](https://github.com/neovim/neovim/wiki/Building-Neovim) 
+
+```shell
+git clone 
+```
+
+Change into the cloned directory and change to the `stable` release to build version 0.9.0
+
+```shell
+git checkout stable
+```
+
+Build a release
+
+```shell
+make CMAKE_BUILD_TYPE=Release                                                                                                              ─╯
+```
+
+### Build dep package 
+
+Once the nvim release has been built, create a debian package for use with Ubuntu and Debian systems
+
+```shell
+cpack -G DEB 
+```
 
 
 ## Post Install checks
