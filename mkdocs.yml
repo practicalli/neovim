@@ -117,6 +117,7 @@ extra:
 nav:
   - Introduction:
       - Overview: index.md
+      - Community Projects: introduction/community-projects.md
       - REPL Workflow: repl-workflow.md
       - Features: introduction/features.md
       - Fennel: introduction/fennel.md
