@@ -175,4 +175,5 @@ nav:
       - reference/aligning-text.md
       - Neovim:
           - reference/neovim/index.md
+          - reference/neovim/standard-path.md
           - Language Providers: reference/neovim/language-providers.md
