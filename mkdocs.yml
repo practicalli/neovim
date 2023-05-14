@@ -119,11 +119,11 @@ nav:
   - Introduction:
       - Overview: index.md
       - Community Projects: introduction/community-projects.md
-      - REPL Workflow: repl-workflow.md
+      - REPL Workflow: introduction/repl-workflow.md
       - Features: introduction/features.md
       - Fennel: introduction/fennel.md
-      - Contributing: contributing.md
-      - Writing Tips: writing-tips.md
+      - Contributing: introduction/contributing.md
+      - Writing Tips: introduction/writing-tips.md
   - Install:
       - Overview: install/index.md
       - Clojure: install/clojure.md
