@@ -180,5 +180,6 @@ nav:
           - reference/neovim/index.md
           - reference/neovim/standard-path.md
           - Language Providers: reference/neovim/language-providers.md
+          - Standard Path: reference/neovim/standard-path.md
       - Lua Language:
           - reference/lua-language/index.md
