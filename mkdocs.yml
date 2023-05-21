@@ -135,6 +135,7 @@ nav:
       - Packages: install/packages/index.md
       - Status Line: install/packages/lualine.md
       - Treesitter: install/packages/nvim-treesitter.md
+      - AstroNvim: install/astronvim.md
   - Neovim Basics:
       - neovim-basics/index.md
       - File Buffer Window: neovim-basics/files-buffers-windows.md
