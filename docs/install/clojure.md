@@ -40,7 +40,7 @@ Once installed, run `clojure-lsp -v` in a terminal to ensure the command is work
     [practicalli/clojure-lsp-config](https://github.com/practicalli/clojure-lsp-config) provides a complete configuration for clojure-lsp (`config.edn`), including a wide range of snippets and less restrictive formatting rules (`cljfmt.edn`)
 
 
-## Leinigen
+## Leiningen
 
 Many existing Clojure projects have used Leiningen build automation tool (although there is a growing number of new projects using Clojure CLI as well or instead of Leiningen)
 
