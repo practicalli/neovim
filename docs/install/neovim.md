@@ -2,81 +2,96 @@
 
 [Neovim releases](https://github.com/neovim/neovim/releases){target=_blank .md-button}
 
-Neovim 8 is the minimum version for this configuration and Neovim 0.9.0 is currently being tested.  
+Neovim 8 is the minimum version for this configuration and Neovim 0.9.0 is currently being tested.
 
 Follow the [install Neovim guide for the specific operating system](https://github.com/neovim/neovim/wiki/Installing-Neovim){target=_blank}.
 
-Neovim 9 only provides an AppImage install for Linux.  For an nvim binary, extract the AppImage or build Neovim from source, optionally creating a Debian/Ubuntu package.
 
-
-??? EXAMPLE "Extract AppImage"
-    ```shell
-    chmod a+x ./nvim.appimage
-    ./nvim.appimage --appimage-extract
-    ```
-
-??? EXAMPLE "Extract AppImage via GitHub Workflow"
-    ```yaml
-      - name: Install Neovim
-        shell: bash
-        run: |
-          mkdir -p /tmp/nvim
-          wget -q https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage -O /tmp/nvim/nvim.appimage
-          cd /tmp/nvim
-          chmod a+x ./nvim.appimage
-          ./nvim.appimage --appimage-extract
-          echo "/tmp/nvim/squashfs-root/usr/bin/" >> $GITHUB_PATH
-    ```
-
-## Suppoting Tools 
+## Suppoting Tools
 
 === "Debian / Ubuntu"
     Install the following packages to support Neovim
 
     - `ripgrep` fast file contents search (used by telescope)
-    - `find-fd` advanced search tool 
-    - `xclip` clipboard 
+    - `find-fd` advanced search tool
+    - `xclip` clipboard
 
-    ```shell
-    sudo apt install find-fd xclip
-    ```
+    !!! NOTE ""
+        ```shell
+        sudo apt install find-fd xclip
+        ```
 
-   `set clipboard+=unnamedplus` in the Neovim configuration instructs Linux to use the clipboard tool 
+    Add `set clipboard+=unnamedplus` to the Neovim configuration to use the Linux clipboard tool
 
     ??? INFO "Wayland requires wl-clipboard"
-    Install the `wl-clipboard` package to use the Wayland desktop clipboard with Neovim
+        Install the `wl-clipboard` package to use the Wayland desktop clipboard with Neovim
+        ```shell
+        sudo apt install wl-clipboard
+        ```
+
+## Install Neovim
+
+=== "Linux AppImage"
+
+    Download the AppImage from the Neovim Release page and place the file on the executable path, e.g. `$HOME/.local/bin`
+
+    Make the AppImage executable
+
     ```shell
-    sudo apt install wl-clipboard
+    chmod u+x nvim.appimage
     ```
-    
-## Build Neovim from Source
 
-Clone the [Neovim GitHub repository](https://github.com/neovim/neovim/wiki/Building-Neovim) 
+    Run neovim from the AppImage
 
-```shell
-git clone 
-```
+    ```shell
+    nvim.appimage
+    ```
 
-Change into the cloned directory and change to the `stable` release to build version 0.9.0
+    Create a symbolic link called `nvim` to the nvim.appimage
 
-```shell
-git checkout stable
-```
+    ```shell
+    ln -s $HOME/.local/bin/nvim.appimage $HOME/.local/bin/nvim
+    ```
 
-Build a release
+=== "Ubuntu/Debian"
+    Download the Linux AppImage from the Neovim Releases page
 
-```shell
-make CMAKE_BUILD_TYPE=Release                                                                                                              ─╯
-```
+    Or build Neovim from source and generate a `.deb` file from the build.
 
-### Build dep package 
+    ??? INFO "Linux version only packaged as AppImage from Neovim 0.9 onward"
 
-Once the nvim release has been built, create a debian package for use with Ubuntu and Debian systems
+=== "Build from Source"
 
-```shell
-cpack -G DEB 
-```
+    [Neovim Build Prerequisites for each operating system](https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites)
 
+    ??? INFO "Ubuntu/Debian Packages"
+        Install packages to support building Neovim
+        ```shell
+        sudo apt-get install ninja-build gettext cmake unzip curl
+        ```
+
+    Clone the [Neovim GitHub repository](https://github.com/neovim/neovim/wiki/Building-Neovim)
+
+    ```shell
+    git clone --origin neovim https://github.com/neovim/neovim.git
+    ```
+    Change into the cloned directory and change to the `stable` release to build version 0.9.0
+
+    ```shell
+    git checkout stable
+    ```
+
+    Build a release
+
+    ```shell
+    make CMAKE_BUILD_TYPE=Release                                                                                                              ─╯
+    ```
+
+    Once the nvim release has been built, create a debian package for use with Ubuntu and Debian systems
+
+    ```shell
+    cpack -G DEB
+    ```
 
 ## Post Install checks
 
