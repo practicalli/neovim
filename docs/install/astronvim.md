@@ -215,8 +215,19 @@ Visit the AstroNvim Community repository on GitHub and browse the packages avail
     }
     ```
 
+
+## Themes
+
+Use themes that support the `vim.opt.background` command to change between dark and light themes (`SPC u b` UI > background in AstroNvim)
+Variant respects , using dawn when light and dark_variant when dark
+
+Available via AstroCommunity
+
+- [gruvbox.nvim](https://github.com/ellisonleao/gruvbox.nvim/) - requires highlight setting in user config
+- [rose-pine](https://github.com/rose-pine/neovim)
+- [oxocarbon.nvim](https://github.com/nyoom-engineering/oxocarbon.nvim) (written in Fennel)
+
+
 ### Configure Lazy plugins
 
 [:globe_with_meridians: Lazy.nvim Plugin specification](https://github.com/folke/lazy.nvim#-plugin-spec){target=_blank .md-button}
-
-
