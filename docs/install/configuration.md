@@ -12,6 +12,39 @@ git clone https://github.com/practicalli/neovim-config-redux.git ~/.config/nvim
 
 > Create a fork of [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank} first if intending to customise this configuration
 
+## Multiple Configurations
+
+Neovim 0.9 onward uses the `NVIM_APPNAME` variable to set a configuration location, providing a simple way to try different configurations easily.
+
+Assign a value to `NVIM_APPNAME` variable and call `nvim`.  On first run with a configuration, the configuration name will be used as a directory to hold the share, state and cache files.
+
+Create shell aliases for each configuration. A terminal UI can also be used to choose a configuration.
+
+=== "Shell Aliases"
+    Create a Shell alias for each configuration that will be used
+    !!! EXAMPLE "Define Shell Aliases to run each configuration"
+        ```shell
+        alias nvim-lazy="NVIM_APPNAME=Lazyvim nvim"
+        alias nvim-practicalli="NVIM_APPNAME=neovim-config nvim"
+        alias nvim-chad="NVIM_APPNAME=NvChad nvim"
+        alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
+        ```
+
+=== "Terminal UI Selector"
+    Create an nvim configuration selector
+    ```zsh
+    function nvim-selector() {
+      items=("practicalli" "Lazyvim" "NvChad" "AstroNvim")
+      config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+      if [[ -z $config ]]; then
+        echo "Nothing selected"
+        return 0
+      elif [[ $config == "default" ]]; then
+        config=""
+      fi
+      NVIM_APPNAME=$config nvim $@
+    }
+    ```
 
 ## `init.lua`
 
