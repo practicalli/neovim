@@ -5,12 +5,14 @@ AstroNvim is a community configuration with a very engaging UI, using Lazy for p
 ## Prerequisits
 
 - Nerd Fonts version 3 (breaking changes between version 2 and 3)
+- gtu (Ubuntu package archive)
+- btm from [GitHub repository releases](https://github.com/ClementTsang/bottom/releases/)
 
 ## Clone AstroNvim
 
 Clone AstroNvim repository to either
 
-- `$HOME/.config/astronvim/` when using multiple configurations 
+- `$HOME/.config/astronvim/` when using multiple configurations
 - `$HOME/.config/nvim` if only ever using one configuration.
 
 ## Clone AstroNvim user config
