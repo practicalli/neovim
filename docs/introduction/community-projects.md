@@ -5,7 +5,8 @@ Whilst practicalli/neovim-config-redux currently provides a configuration for th
 - [AstroNvim](https://github.com/AstroNvim/AstroNvim) very polished UI with Neovim 9 & Treesitter support, using Lazy for packages and  Mason for LSP components
 - [Magit Kit](https://github.com/Olical/magic-kit) fennel configuration from the author of Conjure
 - [cajus-nvim](https://github.com/rafaeldelboni/cajus-nvim) inspiration for practicalli/neovim-config-redux
-- [NvChad](https://github.com/NvChad/NvChad)
+- [LazyVim](https://www.lazyvim.org/) lazy & mason configuration
+- [NvChad](https://github.com/NvChad/NvChad) polished UI with Lazy optomisations
 
 !!! INFO "Fennel config with AstroNvim-like UI experience"
     A very long term goal for Practicalli is to create a Neovim configuration written predominatly in Fennel, providing a rich user experience on par with the very polished experience of AstroNvim.
