@@ -144,6 +144,56 @@ Add Conjure plugin that will load when Clojure, Fennel or Python file is opened.
     }
     ```
 
+## Snippets
+
+The AstroNvim user example includes a commented LuaSnip package code.
+
+!!! EXAMPLE "AstroNvim user example"
+    ```lua title=".config/astronvim-config/plugins/core.lua"
+      -- {
+      --   "L3MON4D3/LuaSnip",
+      --   config = function(plugin, opts)
+      --     require "plugins.configs.luasnip" (plugin, opts)  -- include the default astronvim config that calls the setup call
+      --     -- add more custom luasnip configuration such as filetype extend or custom snippets
+      --     local luasnip = require "luasnip"
+      --     luasnip.filetype_extend("javascript", { "javascriptreact" })
+      --   end,
+      -- },
+    ```
+
+AstroNvim includes a [Recipe for custom snippets](https://astronvim.com/Recipes/snippets)
+
+```lua
+return {
+  plugins = {
+    {
+      "L3MON4D3/LuaSnip",
+      config = function(plugin, opts)
+        require "plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
+        require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } } -- load snippets paths
+      end,
+    },
+  },
+}
+```
+
+Practicalli AstroNvim Config combines the two examples to get
+
+!!! EXAMPLE "AstroNvim config with custom VS Code style snippets"
+    ```lua title=".config/astronvim-config/plugins/core.lua"
+      {
+        "L3MON4D3/LuaSnip",
+        config = function(plugin, opts)
+          require "plugins.configs.luasnip" (plugin, opts)                                       -- include the default astronvim config that calls the setup call
+          -- add more custom luasnip configuration such as filetype extend or custom snippets
+          require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } } -- load snippets paths
+          local luasnip = require "luasnip"
+          luasnip.filetype_extend("javascript", { "javascriptreact" })
+        end,
+      },
+    ```
+
+
 ## AstroNvim Community packages
 
 [:globe_with_meridians: AstroNvim Community](https://github.com/AstroNvim/astrocommunity){target=\_blank} provides a large number of packages currated by the community.
