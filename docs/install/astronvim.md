@@ -144,6 +144,25 @@ Add Conjure plugin that will load when Clojure, Fennel or Python file is opened.
     }
     ```
 
+Improve syntax highlighting by installing the Clojure parser for Treesitter.
+
+!!! EXAMPLE "Treesitter Parser for clojure in AstroNvim user configuration"
+    ```lua hl_lines="7" title=".config/astronvim-config/plugins/treesitter.lua"
+    return {
+      "nvim-treesitter/nvim-treesitter",
+      opts = function(_, opts)
+        -- add more things to the ensure_installed table protecting against community packs modifying it
+        opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
+          -- "lua"
+        "clojure"
+        })
+      end,
+    }
+```
+
+!!! HINT "Install Treesitter Clojure Parser manually"
+    `:TSInstall clojure` in Neovim will install the parser.  A parser not included in the `opts.ensure_installed` configuration must be updated manually each time treesitter plugin is updated
+
 ## Snippets
 
 The AstroNvim user example includes a commented LuaSnip package code.
