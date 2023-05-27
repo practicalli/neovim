@@ -129,13 +129,16 @@ nav:
       - Overview: install/index.md
       - Clojure: install/clojure.md
       - Neovim: install/neovim.md
-      - Packer: install/package-manager.md
-      - Packages: install/packages/index.md
-      - Status Line: install/packages/lualine.md
-      - Treesitter: install/packages/nvim-treesitter.md
-      - AstroNvim: install/astronvim.md
   - Neovim configuration:
       - configuration/index.md
+      - Practicalli:
+          - configuration/practicalli/index.md
+          - Config Design: configuration/practicalli/config-design.md
+          - Packer: configuration/practicalli/packer.md
+          - Packages:
+              - configuration/practicalli/packages/index.md
+              - Status Line: configuration/practicalli/packages/lualine.md
+              - Treesitter: configuration/practicalli/packages/nvim-treesitter.md
   - Neovim Basics:
       - neovim-basics/index.md
       - File Buffer Window: neovim-basics/files-buffers-windows.md

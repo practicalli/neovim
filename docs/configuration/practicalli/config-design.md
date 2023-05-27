@@ -1,56 +1,13 @@
-# Neovim Configuration
+# Config Design
 
-[practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank .md-button}
+The overall design of the Practicalli Neovim Config Redux
 
-[practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank} provides a complete Fennel based configuraion for Neovim, with a wide range of plugins and associated setup and key bindings.
-
-Clone [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank} to `~/.config/nvim` directory (or a preferred location and create a symbolic link).
-
-```bash
-git clone https://github.com/practicalli/neovim-config-redux.git ~/.config/nvim
-```
-
-> Create a fork of [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank} first if intending to customise this configuration
-
-## Multiple Configurations
-
-Neovim 0.9 onward uses the `NVIM_APPNAME` variable to set a configuration location, providing a simple way to try different configurations easily.
-
-Assign a value to `NVIM_APPNAME` variable and call `nvim`.  On first run with a configuration, the configuration name will be used as a directory to hold the share, state and cache files.
-
-Create shell aliases for each configuration. A terminal UI can also be used to choose a configuration.
-
-=== "Shell Aliases"
-    Create a Shell alias for each configuration that will be used
-    !!! EXAMPLE "Define Shell Aliases to run each configuration"
-        ```shell
-        alias nvim-lazy="NVIM_APPNAME=Lazyvim nvim"
-        alias nvim-practicalli="NVIM_APPNAME=neovim-config nvim"
-        alias nvim-chad="NVIM_APPNAME=NvChad nvim"
-        alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
-        ```
-
-=== "Terminal UI Selector"
-    Create an nvim configuration selector
-    ```zsh
-    function nvim-selector() {
-      items=("practicalli" "Lazyvim" "NvChad" "AstroNvim")
-      config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
-      if [[ -z $config ]]; then
-        echo "Nothing selected"
-        return 0
-      elif [[ $config == "default" ]]; then
-        config=""
-      fi
-      NVIM_APPNAME=$config nvim $@
-    }
-    ```
 
 ## `init.lua`
 
- - bootstrap the [aniseed package](https://github.com/Olical/aniseed){target=_blank} which compiles the Fennel configuration into Lua, which is then read by Neovim. Defines the entry point to the Fennel configuration as `fnl/config/init.fnl`
- - installs [packer.nvim](https://github.com/wbthomason/packer.nvim){target=_blank} for package management
- - examples to [disable language providers](/neovim/reference/neovim/language-providers/) if programming language support is not required (node, perl, python3, ruby)
+- bootstrap the [aniseed package](https://github.com/Olical/aniseed){target=_blank} which compiles the Fennel configuration into Lua, which is then read by Neovim. Defines the entry point to the Fennel configuration as `fnl/config/init.fnl`
+- installs [packer.nvim](https://github.com/wbthomason/packer.nvim){target=_blank} for package management
+- examples to [disable language providers](/neovim/reference/neovim/language-providers/) if programming language support is not required (node, perl, python3, ruby)
 
 
 ## `fnl/config/init.fnl`
@@ -193,10 +150,11 @@ Add `--hidden` to see all dotfiles (regardless of .gitignore patterns)
 <!-- TODO: review ripgrep arguments - find args that respect .gitignore and show dotfiles too -->
 
 Keymaps:
- - `<leader>ff` open the find files
- - `<leader>fg` open the fuzzy finder
- - `<leader>fb` open the find open buffer
- - `<leader>fh` open the nvim help fuzzy finder
+
+- `<leader>ff` open the find files
+- `<leader>fg` open the fuzzy finder
+- `<leader>fb` open the find open buffer
+- `<leader>fh` open the nvim help fuzzy finder
 
 
 ## `fnl/config/plugin/treesitter.fnl`
