@@ -1,102 +1,7 @@
-# AstroNvim
+# Practicalli AstroNvim Configuration
 
-AstroNvim is a community configuration with a very engaging UI, using Lazy for plugin management (Neovim packages) and Mason for package management (LSP, DAP, format and lint tools)
+A guide to the AstroNvim Config user configuration created by Practicalli to support Clojure development.
 
-## Prerequisits
-
-- Nerd Fonts version 3 (breaking changes between version 2 and 3)
-- gtu (Ubuntu package archive)
-- btm from [GitHub repository releases](https://github.com/ClementTsang/bottom/releases/)
-
-## Clone AstroNvim
-
-Clone AstroNvim repository to either
-
-- `$HOME/.config/astronvim/` when using multiple configurations
-- `$HOME/.config/nvim` if only ever using one configuration.
-
-## Clone AstroNvim user config
-
-AstroNvim provides a [:fontawesome-brands-github: template repository](https://github.com/AstroNvim/user_example) to create a user configuration. The template includes [:fontawesome-brands-github: AstroNvim Community](https://github.com/AstroNvim/user_example) configuration to make it easier to extend the feature of AstroNvim.
-
-=== "Practicalli AstroNvim Config"
-    Clone the [:fontawesome-brands-github: Practicalli AstroNvim config](https://github.com/practicalli/astronvim-config) which provides a user configuration with [Clojure support](clojure.md)
-    !!! NOTE ""
-        ```shell
-        git clone <http://github.com/practicalli/astronvim-config> $HOME/.config/astronvim/lua/user
-        ```
-    Or clone to a separate directory and create a symbolic link 
-    !!! NOTE ""
-        ```shell
-        git clone <http://github.com/practicalli/astronvim-config> $HOME/.config/astronvim/lua/user \
-        ln -s $HOME/.config/astronvim-config/ $HOME/.config/astronvim/lua/user
-        ```
-
-=== "AstroNvim User Config"
-    Create your own user configuration using the AstroNvim user configuration template repository.
-
-    Create a repository from the AstroNvim/user_example repository template
-
-    ![AstroNvim user example repository - use this template](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-user-config-template-github-repository.png?raw=true){loading=lazy}
-
-    Clone the newly created repository into the existing AstroNvim configuration, in a `user` directory
-    ```shell
-    git clone git@github.com/<github-account>/<new-repository> $HOME/.config/astronvim/lua/user
-    ```
-
-## Install packages
-
-`SPC p m` to launch Mason which manages LSP servers, linters, filters ...
-
-![AstroNvim packages - mason all installed](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-packages-mason-installed-all.png?raw=true){loading=lazy}
-
-
-### Configure format rules
-
-Mason is responsible for installing packages and null-ls seems responsible for running each tool, with (assumption: null-ls running the tools with built-in configuration)
-
-??? EXAMPLE "General configuration for LSP Servers"
-    Disable format capabilities of markdownlint (until rules that conflict with MkDocs formatting can be configured) 
-    ```lua hl_lines="17" title=".config/astronvim-config/init.lua"
-      lsp = {
-        -- customize lsp formatting options
-        formatting = {
-          -- control auto formatting on save
-          format_on_save = {
-            enabled = true,     -- enable or disable format on save globally
-            allow_filetypes = { -- enable format on save for specified filetypes only
-              -- "go",
-            },
-            ignore_filetypes = { -- disable format on save for specified filetypes
-              -- "python",
-            },
-          },
-          disabled = { -- disable formatting capabilities for the listed language servers
-            -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
-            -- "lua_ls",
-            "markdownlint",
-          },
-          timeout_ms = 1000, -- default format timeout
-          -- filter = function(client) -- fully override the default formatting function
-          --   return true
-          -- end
-        },
-        -- enable servers that you already have installed without mason
-        servers = {
-          -- "pyright"
-        },
-      },
-    ```
-
-
-- markdown
-  - line lenght 240
-  - dont apply fixes (mkdocs indenting for tabs causing last line to be formatted to start of line, breaking mkdocs)
-
-!!! WARNING "Configuring rules for linters"
-    AstroNvim uses null-ls to format files (trigged by save - althought that is configurable).  So far practicalli has not figured out how to successfully configure rules used by linters
-
-    `~/.config/astronvim-config/plugins/null-ls.lua` should take `extra-args` section that can be used to pass command line args, e.g. specifying a configuration file to use for a linter.  This did not work when tried with markdownlint 
 
 ## Add Clojure support
 
@@ -129,13 +34,14 @@ Set a local leader for Conjure to add its key bindings too
       },
     }
     ```
+
 Add Conjure plugin that will load when Clojure, Fennel or Python file is opened.
 
 !!! EXAMPLE "Clojure Packages in AstroNvim user configuration"
     ```lua title=".config/astronvim-config/init.lua"
     -- Local variables
     local lisp_dialects = { "clojure", "fennel" }
-    
+
     -- Lazy Package manager configuration
     return {
       {
@@ -160,7 +66,7 @@ Improve syntax highlighting by installing the Clojure parser for Treesitter.
         })
       end,
     }
-```
+    ```
 
 !!! HINT "Install Treesitter Clojure Parser manually"
     `:TSInstall clojure` in Neovim will install the parser.  A parser not included in the `opts.ensure_installed` configuration must be updated manually each time treesitter plugin is updated
@@ -169,18 +75,17 @@ Improve syntax highlighting by installing the Clojure parser for Treesitter.
 
 The AstroNvim user example includes a commented LuaSnip package code.
 
-!!! EXAMPLE "AstroNvim user example"
-    ```lua title=".config/astronvim-config/plugins/core.lua"
-      -- {
-      --   "L3MON4D3/LuaSnip",
-      --   config = function(plugin, opts)
-      --     require "plugins.configs.luasnip" (plugin, opts)  -- include the default astronvim config that calls the setup call
-      --     -- add more custom luasnip configuration such as filetype extend or custom snippets
-      --     local luasnip = require "luasnip"
-      --     luasnip.filetype_extend("javascript", { "javascriptreact" })
-      --   end,
-      -- },
-    ```
+```lua title=".config/astronvim-config/plugins/core.lua"
+  -- {
+  --   "L3MON4D3/LuaSnip",
+  --   config = function(plugin, opts)
+  --     require "plugins.configs.luasnip" (plugin, opts)  -- include the default astronvim config that calls the setup call
+  --     -- add more custom luasnip configuration such as filetype extend or custom snippets
+  --     local luasnip = require "luasnip"
+  --     luasnip.filetype_extend("javascript", { "javascriptreact" })
+  --   end,
+  -- },
+```
 
 AstroNvim includes a [Recipe for custom snippets](https://astronvim.com/Recipes/snippets)
 
@@ -212,8 +117,8 @@ Practicalli AstroNvim Config combines the two examples to get
           luasnip.filetype_extend("javascript", { "javascriptreact" })
         end,
       },
-    ```
 
+```
 
 ## AstroNvim Community packages
 
@@ -228,14 +133,13 @@ Visit the AstroNvim Community repository on GitHub and browse the packages avail
     return {
       -- Add the community repository of plugin specifications
       "AstroNvim/astrocommunity",
-    
+
       { import = "astrocommunity.editing-support.todo-comments" },
       { import = "astrocommunity.git.neogit" },
       { import = "astrocommunity.git.octo" },
       { import = "astrocommunity.git.openingh" },
     }
     ```
-
 
 ## Themes
 
@@ -248,7 +152,111 @@ Available via AstroCommunity
 - [rose-pine](https://github.com/rose-pine/neovim)
 - [oxocarbon.nvim](https://github.com/nyoom-engineering/oxocarbon.nvim) (written in Fennel)
 
+<!-- 
+  -- Theme testing for visual appeal:
+  -- colorscheme = "astrodark",  (default theme, no background support I think)
+  -- colorscheme = "catppuccin",   -- light color to pale, lacks contrast
+  -- colorscheme = "dayfox",
+  colorscheme = "everforest",
+  -- colorscheme = "github_light",  -- no background support, otherwise quite nice
+  -- colorscheme = "gruvbox",  -- status and tablines inverted - doesnt look good
+  -- colorscheme = "gruvbox-baby", -- no background support
+  -- colorscheme = "kanagawa",  -- nice
+  -- colorscheme = "onigiri",  -- nice
+  -- colorscheme = "oxocarbon",
+  -- colorscheme = "rose-pine", -- light colour very bright
+-->
 
 ### Configure Lazy plugins
 
 [:globe_with_meridians: Lazy.nvim Plugin specification](https://github.com/folke/lazy.nvim#-plugin-spec){target=_blank .md-button}
+
+
+## Review
+
+- https://github.com/datamonsterr/astronvim_config
+
+
+<!-- 
+### Format and Lint tool configuration
+
+Mason is responsible for installing packages
+
+null-ls is responsible for running each tool and provides default configuration for code_actions, completion, diagnostics, formatting and hover.
+
+[:globe_with_meridians: null-ls built-in configuration](https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins){target=_blank .md-button}
+
+??? EXAMPLE "Override null-ls builtin configuration"
+    Specify configuration files to use that override the null-ls builtin configuration
+
+    ```lua  hl_lines="16 17 18 19"
+    return {
+      "jose-elias-alvarez/null-ls.nvim",
+      opts = function(_, config)
+        -- config variable is the default configuration table for the setup function call
+        local null_ls = require "null-ls"
+        -- Check supported formatters and linters
+        -- <https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting>
+        -- <https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics>
+        config.sources = {
+          -- Set a formatter
+          -- null_ls.builtins.formatting.stylua,
+          -- null_ls.builtins.formatting.prettier,
+          null_ls.builtins.formatting.markdownlint.with {
+            -- pass arguments to modify the null-ls builtin configuration
+            extra_args = {
+              "--config ",
+              "/home/practicalli/.markdownlint.yaml",
+            },
+          },
+          null_ls.builtins.formatting.cljstyle.with {
+            -- use my own configuration rules
+            args = {
+              "--config ",
+              "/home/practicalli/.config/.cljstyle",
+            },
+          },
+        }
+        return config -- return final config table
+      end,
+    }
+    ```
+
+??? EXAMPLE "General configuration for LSP Servers"
+    ```lua hl_lines="17" title=".config/astronvim-config/init.lua"
+      lsp = {
+        -- customize lsp formatting options
+        formatting = {
+          -- control auto formatting on save
+          format_on_save = {
+            enabled = true,     -- format on save globally
+            allow_filetypes = { -- format on save for specified filetypes only
+              -- "go",
+            },
+            ignore_filetypes = { -- turn off format on save for specified filetypes
+              -- "python",
+            },
+          },
+          disabled = { -- switch off formatting capabilities for the listed language servers
+            -- turn off lua_ls formatting capability if you want to use StyLua to format your lua code
+            -- "lua_ls",
+            -- "markdownlint",
+          },
+          timeout_ms = 1000, -- default format timeout
+          -- filter = function(client) -- fully override the default formatting function
+          --   return true
+          -- end
+        },
+        -- enable servers that you already have installed without mason
+        servers = {
+          -- "pyright"
+        },
+      },
+    ```
+
+
+!!! WARNING "Configuring rules for linters"
+    AstroNvim uses null-ls to format files (trigged by save - althought that is configurable).  So far practicalli has not figured out how to successfully configure rules used by linters
+
+    `~/.config/astronvim-config/plugins/null-ls.lua` should take `extra-args` section that can be used to pass command line args, e.g. specifying a configuration file to use for a linter.  This did not work when tried with markdownlint 
+-->

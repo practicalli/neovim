@@ -131,6 +131,9 @@ nav:
       - Neovim: install/neovim.md
   - Neovim configuration:
       - configuration/index.md
+      - AstroNvim:
+          - configuration/astronvim/index.md
+          - Config Design: configuration/astronvim/config-design.md
       - Practicalli:
           - configuration/practicalli/index.md
           - Config Design: configuration/practicalli/config-design.md
