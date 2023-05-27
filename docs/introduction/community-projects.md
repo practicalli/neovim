@@ -2,7 +2,7 @@
 
 Practicalli Neovim book covers the following configurations:
 
-- [Practicalli Neovim Config Redux](https://github.com/practicalli/neovim-config-redux) currently provides a configuration for this book, there are many interesting alternatives.
+- [Practicalli Neovim Config Redux](https://github.com/practicalli/neovim-config-redux) a fennel configuration with packer package manager and mnemonic key bindings
 - [AstroNvim](https://github.com/AstroNvim/AstroNvim) and [Practicalli AstroNvim Config](https://github.com/practicalli/astronvim-config) organised configuration with a polished UI aimed at Neovim 9 with Treesitter support, using Lazy for packages and  Mason for LSP components
 
 
