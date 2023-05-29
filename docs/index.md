@@ -1,10 +1,19 @@
 # Neovim for Clojure development
 
-![Neovim with Fennel configuration for Clojure developers](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-clojure-development-tree-whichkey.png)
+![Neovim with Fennel configuration for Clojure developers](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-clojure-development-example-light.png?raw=true#only-light){loading=lazy}
+![Neovim with Fennel configuration for Clojure developers](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-clojure-development-example-dark.png?raw=true#only-dark){loading=lazy}
 
-Neovim is a highly extensible and powerful editor, supporting mult-modal editing and Vim-style key bindings.  Packages are added via Packer to provide a [rich set of features](introduction/features.md) for Clojure development and general editing
+!!! QUOTE "coding at the speed of thought"
+    Neovim is incredibly fast and efficient, so thoughts flow from brain to editor without unnecessary delay.
 
-Practicalli Neovim provides an install guide and a simple, powerful and fun [REPL Driven Development workflow](introduction/repl-workflow.md)
+    Touch typing is fast, Neovim and multi-modal editing makes it even faster.
+
+Neovim is a highly extensible and powerful editor, supporting multi-modal editing and Vim-style sequential key bindings. Highly responsive and low resource use makes Neovim ideal for development on any computer or [:fontawesome-solid-book-open: mobile device](termux/), e.g. tablet, smartphone.
+
+Neovim has [:globe_with_meridians: a diverse set of plugins](https://neovimcraft.com/){target=_blank} and [:fontawesome-solid-book-open: Practicalli curated configurations](/neovim/configuration/) use these plugins to provide a [:fontawesome-solid-book-open: rich set of features](introduction/features.md) for Clojure development and wider engineering tasks.
+
+
+Practicalli Neovim provides install & user guide focused on a simple, powerful and satisfying [REPL Driven workflow](introduction/repl-workflow.md) for Clojure.
 
 ![Clojure REPL Driven Development workflow](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-driven-development-lifecycle-concept.png)
 
@@ -40,5 +49,5 @@ Thank you to [Cognitect](https://www.cognitect.com/){target=_blank}, [Nubank](ht
 
 <div style="width:95%; margin:auto;">
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
-This work is licensed under a Creative Commons Attribution 4.0 ShareAlike License (including images & stylesheets).
+This work is licensed under a Creative Commons Attribution 4.0 ShareAlike License (including images & style sheets).
 </div>
