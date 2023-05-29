@@ -192,7 +192,7 @@ Use a number after the code block to add the text for the annotation, e.g. `1.`.
 ls -la $HOME/Downloads  # (1)
 ```
 
-1.  :woman_raising_hand: I'm a code annotation! I can contain `code`, __formatted text__, images, ... basically anything that can be written in Markdown.
+1. :woman_raising_hand: I'm a code annotation! I can contain `code`, __formatted text__, images, ... basically anything that can be written in Markdown.
 
 
 Code blocks with annotation, add `!` after the annotation number to suppress the `#` character
@@ -205,7 +205,7 @@ Code blocks with annotation, add `!` after the annotation number to suppress the
   )
 ```
 
-1.  Always include a doc-string in every function to describe the purpose of that function, identifying why it was added and what its value is.
+1. Always include a doc-string in every function to describe the purpose of that function, identifying why it was added and what its value is.
 
 GitHub action example with multiple annotations
 
@@ -230,12 +230,12 @@ jobs:
       - run: mkdocs gh-deploy --force
 ```
 
-1.  You can change the name to your liking.
+1. You can change the name to your liking.
 
-2.  At some point, GitHub renamed `master` to `main`. If your default branch
+2. At some point, GitHub renamed `master` to `main`. If your default branch
     is named `master`, you can safely remove `main`, vice versa.
 
-3.  This is the place to install further [MkDocs plugins] or Markdown
+3. This is the place to install further [MkDocs plugins] or Markdown
     extensions with `pip` to be used during the build:
 
     ``` sh
@@ -250,6 +250,8 @@ jobs:
 Add highlight line meta data to a code block after the opening backticks and code block language.
 
 `hl_lines="2"` highlights line 2 in the codeblock
+
+`hl_lines="2 3 4"` highlights line 2, 3 and 4 in the codeblock
 
 ```clojure hl_lines="4 5 6"
 (defn my-function
@@ -457,12 +459,12 @@ Markdown images can be appended with material tags to set the size of the image,
 
 Task lists
 
-- [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
-- [ ] Vestibulum convallis sit amet nisi a tincidunt
-    * [x] In hac habitasse platea dictumst
-    * [x] In scelerisque nibh non dolor mollis congue sed et metus
-    * [ ] Praesent sed risus massa
-- [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
+* [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
+* [ ] Vestibulum convallis sit amet nisi a tincidunt
+  * [x] In hac habitasse platea dictumst
+  * [x] In scelerisque nibh non dolor mollis congue sed et metus
+  * [ ] Praesent sed risus massa
+* [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
 
 !!! EXAMPLE "Task List example"
     ```markdown
