@@ -157,9 +157,10 @@ nav:
       - Testing: repl-driven-development/testing.md
   - Version Control:
       - version-control/index.md
-      - Diffview: version-control/diffview.md
+      - Lazygit: version-control/lazygit.md
       - Neogit: version-control/neogit.md
       - Octo: version-control/octo.md
+      - Open In GitHub: version-control/open-in-github.md
   - Ultra-Mobile Neovim:
       - termux/index.md
       - F-Droid: termux/fdroid-install.md

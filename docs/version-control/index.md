@@ -2,29 +2,47 @@
 
 There are several ways to interact with Git version control, although Practicalli recommends Neogit interactive git client and Octo to manage GitHub issues and pull requests
 
-* [Neogit](neogit.md) git client (similar to Emacs Magit)
+* [lazygit](lazygit.md) terminal UI, embedded in Neovim (AstroNvim only)
+* [Neogit](neogit.md) git client similar to Emacs Magit, with Diffview integration
 * [Octo](octo.md) for GitHub Issue and Pull Requests
-* [Diffview](diffview.md)
+* [Open in GitHub](open-in-github.md)
 
-> Shell out to command line or the Neovim terminal buffer to run git commands directly
+> Shell out to the command line, `:!` or use the Neovim terminal buffer to run git commands directly
 
 
-## Overview
+## Git Status
 
-`SPC g s` opens Git Status tab, by running `:Neogit`
+=== "AstroNvim"
+    `SPC g g` opens lazygit status, for minimal UI
+
+    ![AstroNvim Git - Lazygit status](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-git-lazygit-status-example-light.png?raw=true#only-light){loading=lazy}
+    ![AstroNvim Git - Lazygit status](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-git-lazygit-status-example-dark.png?raw=true#only-dark){loading=lazy}
+
+    `SPC g n t` opens neogit in a new tab for Magit style experience
+
+
+=== "Practicalli Neovim Config Redux"
+
+    `SPC g s` opens Git Status tab, by running `:Neogit`
 
 ![Neovim Neogit plugin - git status buffer](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-neogit-status.png)
 
 
-`d` in neogit status buffer (`SPC g s`) will open diffview in a new tab
+## GitHub integration
 
-![Neovim diffview plugin - side by side view of changes in git for local working directory and staging](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-neogit-diffview-side-by-side.png)
+Interact with the remote GitHub repository using [Octo](octo.md)
 
+List issues from a specific repository
 
-List issues from current project (optionally add a specific repository)
-
-```sh
+```shell
 :Octo issue list practicalli/neovim
 ```
 
 ![Neovim Octo GitHub Issues list for practicalli/neovim](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-octo-github-issue-list.png)
+
+
+Create a pull request on a specific repository
+
+```shell
+:Octo pr create practicalli/neovim
+```

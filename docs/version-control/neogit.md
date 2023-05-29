@@ -67,7 +67,6 @@ A new commit or amend commit qill open a new window to write a commit message (u
     Use `e` option to push to elsewhere when the remote name is not set to `origin`.  The `e` option will prompt for a remote name and branch.
 
 
-
 ## Commit history
 
 `L l` to view git commit history log
@@ -81,3 +80,23 @@ A new commit or amend commit qill open a new window to write a commit message (u
 
 `r` opens the rebase menu
 
+
+# Diffview
+
+View working space and staged changes side by side
+
+`d` in neogit status buffer (`SPC g s`) will open diffview in a new tab
+
+`q` to return to neogit status buffer
+
+![Neovim diffview plugin - side by side view of changes in git for local working directory and staging](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-neogit-diffview-side-by-side.png)
+
+* Green - added lines
+* Yellow - changed line
+* Red - deleted lines
+
+`SPC b` toggles the sidebar buffer
+
+`SPC w l` and `SPC w h` to move cursor between diff buffer and sidebar buffer
+
+![Neovim diffview plugin - side by side view of changes in git for local working directory and staging](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-neogit-diffview-side-by-side.png)
