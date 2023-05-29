@@ -60,7 +60,7 @@ AstroNvim provides a [:fontawesome-brands-github: template repository](https://g
 
 ## Configure shell alias
 
-[:fontawesome-solid-book-open: Configure shell alias](/neovim/configuration/){target=_blank .mkdocs-button}
+[:fontawesome-solid-book-open: Configure shell alias](/neovim/configuration/){target=_blank .md-button}
 
 
 ## Post install
