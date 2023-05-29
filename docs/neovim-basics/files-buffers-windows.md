@@ -4,75 +4,182 @@ Buffers hold the contents of files and any other information from processes, e.g
 
 Windows are a container for a buffer and windows can swap which buffer they show.  Multiple windows, also known as splits, can be present in a Neovim frame.  By default, neovim starts with only one window.
 
-## File management
+A tab can hold one or more windows and tabs can be shown on a tab-line.
 
-`SPC f f` to open a file, a telescope popup lists file relative to the directory Neovim was opened from (or Path subsequently set in Neovim).
+## File explorer
+
+Visually manage files with a tree view of the current project, using [:fontawesome-brands-github: Neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim){target=_blank}
+
+
+=== "Astronvim"
+    `SPC e` toggles neo-tree file browser
+
+    `SPC o` toggles between buffer and neo-tree
+
+    Neotree icons
+
+    - yellow dot - unsaved changes
+    - pencil - git added changes
+    - cross - git deleted changes
+    - Warning triangle - lsp diagnostics issues
+
+
+=== "Practicalli Neovim Config Redux"
+
+    `SPC f t t` to open file explorer
+
+
+## New File
+
+Files and directories are created in the path given, relative to the directory in which Neovim was opened.
+
+> `:lcd` to set the current local directory
+>  
+> `:!` for a shell command, e.g. `:!mkdir -p path/to/new/directory` create a new directory and any intermediate path
+
+
+=== "Astronvim"
+    `SPC w` will write all buffer changes to the associate file.
+
+    `SPC n` creates a new buffer that can be written to a given file using `:write path/to/filename`
+
+    `:write path/to/filename` will write the current buffer to a new file.
+
+=== "Practicalli Neovim Config Redux"
+
+    `SPC f b ESC C` to create a new file or directory. The base path is shown in the command bar.  Type the name of directories and file name as required. `RTN` to create or `ESC` to cancel.  The newly created directories or file name appears n the Telescope list and scan be selected for opening.
+
+    !!! HINT "Telescope Normal mode and help"
+        `ESC` in Telescope to switch to Normal mode and use comannds, `c` for Create, `r` to rename.
+     
+        `?` to show all the commands available in Telescope
+
+=== "Neovim"
+
+    `:write path/to/filename` will write the current buffer to a new file
+
+    `:!mkdir path/to/directory` will create a new directory
+
+
+## Select files and directories
+
+Telescope provides a selector which will narrow the list of matches as a pattern is typed, providing a fast way to find an item in a list.
 
 Telescope provides a preview of the selected file (only if there is sufficient space in the Neovim frame)
 
-`SPC f b` provides a file browser to open files, nacigate the filespace and create new fipes and directories
+File lists are relative to the directory Neovim was opened from (or Path subsequently set in Neovim).
 
-`SPC f b ESC C` to create a new file or directory. The base path is shown in the command bar.  Type the name of directories and file name as required. `RTN` to create or `ESC` to cancel.  The newly created directories or file name appears n the Telescope list and scan be selected for opening.
+=== "AstroNvim"
 
-!!! HINT "Telescope Normal mode and help"
-    `ESC` in Telescope to switch to Normal mode and use comannds, `c` for Create, `r` to rename.
+    `SPC f f` selector for files within the scope of the current directory path. `SPC f F` to also show hidden files from the current directory path. 
+    
+    `SPC f a` selector for AstroNvim user configuration files
 
-    `?` to show all the commands available in Telescope
+    `SPC f p` selector for previously opened files (oldfiles)
+
+=== "Practicalli Neovim Config Redux"
+    `SPC f f` to list files within the scope of the current directory path.
+
+    `SPC f b` provides a file browser to open files, navigate the file space and create new files and directories
 
 
 ## Buffer management
 
-`SPC b b` switch between buffers in the current window, using a Telescope popup that lists all current buffers (includes files, Conjure REPL Log, etc.).
+=== "AstroNvim"
 
-`SPC b n` (`:next`) and `SPC b n` (`:previous`) to cycle through buffers in the current window
+    `SPC f b` selector for currently open buffers
 
-`SPC TAB` (`C-^`) opens the previous buffer, useful to toggle between two buffers in the same window
+    `SPC b b` to select a buffer from the tab line, pressing the character that appears next to the buffer tab (case sensitive)
 
-Use Telescope to switch between buffers
+    `SPC b D` to delete a buffer from the tab line, pressing the character that appears next to the buffer tab (case sensitive)
 
-![Neovim - telescope - swtich between buffers](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-telescope-open-buffer.png)
+    Open multiple buffers when starting Neovim by specifying multiple files to open
 
-<!-- TODO: close a buffer (not just its window) -->
+    ```bash
+    astro README.md deps.edn src/practicalli/playground.clj test/practicalli/playground.clj
+    ```
 
-Open multiple buffers when starting Neovim by specifying multiple files to open
+=== "Practicalli Neovim Config Redux"
 
-```bash
-nvim README.md deps.edn src/practicalli/playground.clj test/practicalli/playground.clj
-```
+    `SPC b b` switch between buffers in the current window, using a Telescope popup that lists all current buffers (includes files, Conjure REPL Log, etc.).
+
+    `SPC b n` (`:next`) and `SPC b n` (`:previous`) to cycle through buffers in the current window
+
+    `SPC TAB` (`C-^`) opens the previous buffer, useful to toggle between two buffers in the same window
+
+    Use Telescope to switch between buffers
+
+    ![Neovim - telescope - swtich between buffers](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-telescope-open-buffer.png)
+
+    <!-- TODO: close a buffer (not just its window) -->
+
+    Open multiple buffers when starting Neovim by specifying multiple files to open
+
+    ```bash
+    nvim README.md deps.edn src/practicalli/playground.clj test/practicalli/playground.clj
+    ```
 
 ## Buffer text wrapping
 
-The test in a buffer is not wrapped by default. Set and unser soft text wrapping in a buffer
+The test in a buffer is not wrapped by default. Set and unset soft text wrapping in a buffer
 
-* `:set wrap` to set soft wrapping on current buffer
-* `:set nowrap` to show lines in full (scroll sideways to see lines longer than the window)
+=== "AstroNvim"
+    `SPC u w` toggles wrapping of text
+
+=== "Practicalli Neovim Config Redux"
+    line wrap disabled in configuration by default.
+
+    ```fennel title="fnl/config/init.fnl"
+    (nvim.ex.set :nowrap)
+    ```
+
+=== "Neovim"
+    `:set wrap` to set soft wrapping on current buffer
+
+    `:set nowrap` to show lines in full (scroll sideways to see lines longer than the window)
 
 
-## Neovim Window management
+## Window management
 
 Windows can be active (contains the cursor), hidden (open but not shown) or inactive.
 
-`C-w` menu to manage Windows, also known as splits.
+=== "AstroNvim"
 
-`C-w` with one of `hjkl` will move the cursor to the next window in that direction.  Also works with arrow keys.
+    `\` creates an horizontal split
 
-`C-w w` toggle between open windows
-
-`:q` or `C-w q` closes the active window, closing Neovim if it is the last active window.
+    `SPC q` removes the current split
 
 
-> `:wincmd` can be used as an alternative to the Normal mode key bindings
+=== "Practicalli Neovim Config Redux"
+
+    `SPC h` / `SPC l` to jump to left / right buffer,  `SPC j` / `SPC k` to jump to buffer below / above
+     
+    `SPC b b` to list current buffers and switch between them using telescope
+     
+    `C-w` and `hjkl` to navigate windows is the classic Vim approach
 
 
-Open file in a new window
+=== "Neovim"
+    `C-w` menu to manage Windows, also known as splits.
 
-```bash
-:sp relative-or-full-filename-path
-```
+    `C-w` with one of `hjkl` will move the cursor to the next window in that direction.  Also works with arrow keys.
 
-Resize windows
+    `C-w w` toggle between open windows
 
-`C-w` `-`, `+`, `<` or `>` for vertical or horizontal size adjustment
+    `:q` or `C-w q` closes the active window, closing Neovim if it is the last active window.
+
+    > `:wincmd` can be used as an alternative to the Normal mode key bindings
+
+
+    Open file in a new window
+
+    ```bash
+    :sp relative-or-full-filename-path
+    ```
+
+    Resize windows
+
+    `C-w` `-`, `+`, `<` or `>` for vertical or horizontal size adjustment
 
 
 <!-- ## Alt - Arrow keys -->

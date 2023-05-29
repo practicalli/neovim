@@ -145,9 +145,10 @@ nav:
   - Neovim Basics:
       - neovim-basics/index.md
       - File Buffer Window: neovim-basics/files-buffers-windows.md
+      - Multi-modal Editing: neovim-basics/multi-modal-editing.md
       - Comments: neovim-basics/comments.md
-      - Comments: neovim-basics/snippets.md
-      - Package Manager: neovim-basics/package-management.md
+      - Snippets: neovim-basics/snippets.md
+      - Package Manager: neovim-basics/plugin-manager.md
       - Multiple Cursors: neovim-basics/multiple-cursors.md
   - Clojure REPL Workflow:
       - repl-driven-development/index.md
