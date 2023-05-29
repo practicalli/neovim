@@ -78,6 +78,14 @@ Open a terminal and use the `astro` alias to run Neovim.
 
 Neovim will open and display the Lazy plugin manager UI, showing the progress of plugin installation.  This should only happen on the first run.
 
+??? INFO "Unattended post install"
+    Plugins can be installed without running the Neovim editor UI
+    !!! NOTE ""
+        ```shell
+        nvim --headless -c 'autocmd User LazyDone quitall'
+        ```
+
+
 ### Check Health
 
 Run the Neovim `:checkhealth` command to report on the general Neovim install and supporting tools
