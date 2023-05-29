@@ -8,6 +8,7 @@
 ## Prerequisits
 
 - [Nerd Fonts](https://www.nerdfonts.com/) version 3 - download a full font or only the symbols
+- fzf fuzzy finder (ubuntu archive)
 - gtu (Ubuntu package archive)
 - btm from [GitHub repository releases](https://github.com/ClementTsang/bottom/releases/)
 
