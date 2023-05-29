@@ -2,13 +2,13 @@
 
 Practicalli Neovim covers the following configurations.
 
-- [AstroNvim](astronvim.md) - thoughtful configuration, supports Neovim 0.9 onward, polished UI, many community extensions
-- [Practicalli Neovim Config Redux](practicalli.md) - mnemonic key bindings, packer, telescope selector, written in Fennel
+- [AstroNvim](astronvim/) - thoughtful configuration, supports Neovim 0.9 onward, polished UI, many community extensions
+- [Practicalli Neovim Config Redux](practicalli/) - mnemonic key bindings, packer, telescope selector, written in Fennel
 
 
 ## Multiple Configurations
 
-Install multiple configurations, e.g. [AstroNvim](astronvim.md), lazyvim, Nvchad, etc. in the `$HOME/.config` directory using unique directory names.
+Install multiple configurations, e.g. [AstroNvim](astronvim/), lazyvim, Nvchad, etc. in the `$HOME/.config` directory using unique directory names.
 
 Set `NVIM_APPNAME` to specific the configuration to use when running nvim.
 
