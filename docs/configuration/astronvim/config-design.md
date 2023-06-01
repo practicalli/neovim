@@ -1,15 +1,124 @@
-# Practicalli AstroNvim Configuration
+# 📦 Practicalli AstroNvim Config Design
 
 A guide to the AstroNvim Config user configuration created by Practicalli to support Clojure development.
 
+??? INFO "AstroCommunity used where possible"
+Plugins and configuration is added vial AstroCommunity were possible, to minimise the code size and maintenance of the configuration
 
-## Add Clojure support
+??? WARNING "Practicalli Config design still evolving"
+    Its only a week since starting to put together an AstroNvim config, so there may be some changes.  However, it seems most of the features required are now configured.
 
-Set a local leader for Conjure to add its key bindings too
+## Clojure support
 
-`options.lua` in the user configuration provides a consistent way to define variables to set Neovim options.
+The [:fontawesome-brands-github: AstroCommunity](https://github.com/AstroNvim/astrocommunity/) provides a Clojure language pack that adds Conjure and nvim-parinfer, along with `clojure` Treesitter parser and `clojure-lsp` support.
 
+=== "AstroCommunity"
+
+    Edit the `plugins/community.lua` file and import the Clojure pack.  The `"AstroNvim/astrocommunity",` repository is already added to to the file.
+
+    ```lua
+    -- Packs
+    -- Treesitter: clojure , Lsp: clojure-lsp, Lint/format:
+    { import = "astrocommunity.pack.clojure" },
+    ```
+
+    Or create a `plugins/clojure.lua` file and add the AstroCommunity repository, Clojure pack and additional configuration to your own preferences
+    ??? EXAMPLE "Clojure configuration with user configration overrides"
+        ```lua
+        return {
+          "AstroNvim/astrocommunity",
+          { import = "astrocommunity.pack.clojure" },
+          {
+            "Olical/conjure",
+            -- load plugin on filetypes
+            ft = { "clojure", "fennel" },
+            config = function()
+              -- HUD
+              -- Example: Set to `"SE"` and HUD width to `1.0` for full width HUD at bottom of screen
+              vim.g["conjure#log#hud#width"] = 1 -- Width of HUD as percentage of the editor width, 0.0 and 1.0.
+              vim.g["conjure#log#hud#enabled"] = false -- Display HUD
+              vim.g["conjure#log#hud#anchor"] = "SE" -- Preferred corner position for the HUD
+              vim.g["conjure#log#botright"] = true -- Open log at bottom or far right of editor
+              -- REPL
+              vim.g["conjure#extract#context_header_lines"] = 100 -- Number of lines to check for `ns` form
+              vim.g["conjure#client#clojure#nrepl#connection#auto_repl#enabled"] = false -- ;; Start "auto-repl" process, eg. babashka
+              vim.g["conjure#client#clojure#nrepl#connection#auto_repl#hidden"] = true -- ;; Hide auto-repl buffer when triggered
+              vim.g["conjure#client#clojure#nrepl#connection#auto_repl#cmd"] = nil -- ;; Command to start the auto-repl
+              -- ;; Automatically require namespace of new buffer or current buffer after connection
+              vim.g["conjure#client#clojure#nrepl#eval#auto_require"] = false
+              -- Reloading code
+              -- Function to call on refresh (reloading) the log, namespace-qualified name of a zero-arity
+              -- vim.g["conjure#client#clojure#nrepl#refresh#after"] = nil
+              -- The namespace-qualified name of a zero-arity function to call before reloading.
+              -- vim.g["conjure#client#clojure#nrepl#refresh#before"] = nil
+              -- List of directories to scan. If no directories given, defaults to all directories on the classpath.
+              -- vim.g["conjure#client#clojure#nrepl#refresh#dirs"] = nil
+              -- Testing
+              -- ;; Test runner called from the test key mappings
+              vim.g["conjure#client#clojure#nrepl#test#runner"] = "kaocha"
+              -- Print raw test evaluation result, suppressing prefix for stdout lines `; (out)`
+              -- vim.g["conjure#client#clojure#nrepl#test#raw_out"] = nil
+              -- Override string appended to the end of the test runner calls
+              -- vim.g["conjure#client#clojure#nrepl#test#call_suffix"] = nil
+            end
+          },
+          {
+            "gpanders/nvim-parinfer",
+            ft = lisp_dialects,
+            config = function()
+              vim.g.parinfer_force_balance = true
+              vim.g.parinfer_comment_chars = ";;"
+            end,
+          },
+        }
+        ```
+
+=== "Manually add plugins"
+    Add Conjure plugin that will load when Clojure, Fennel or Python file is opened.
+    
 !!! EXAMPLE "Clojure Packages in AstroNvim user configuration"
+        ```lua title=".config/astronvim-config/init.lua"
+        -- Local variables
+        local lisp_dialects = { "clojure", "fennel" }
+            -- Lazy Package manager configuration
+        return {
+          {
+            "Olical/conjure",
+            -- load plugin on filetypes
+            ft = { "python", unpack(lisp_dialects) },
+          },
+        }
+        ```
+    
+Improve syntax highlighting by installing the Clojure parser for Treesitter.
+    
+    !!! EXAMPLE "Treesitter Parser for clojure in AstroNvim user configuration"
+        ```lua hl_lines="7" title=".config/astronvim-config/plugins/treesitter.lua"
+        return {
+          "nvim-treesitter/nvim-treesitter",
+          opts = function(_, opts)
+            -- add more things to the ensure_installed table protecting against community packs modifying it
+            opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
+              -- "lua"
+            "clojure"
+            })
+          end,
+        }
+        ```
+    
+    !!! HINT "Install Treesitter Clojure Parser manually"
+        `:TSInstall clojure` in Neovim will install the parser. A parser not included in the `opts.ensure_installed` configuration must be updated manually each time treesitter plugin is updated
+
+### Clojure Mappings
+
+Conjure mappings are defined respective to a `<localleader>` value. Define a local leader in the AstroNvim user configuration, e.g. `,` and all Conjure mappings become available.
+
+??? INFO "AstroNvim 3.17.0 has localleader"
+    AstroNvim 3.17.0 release sets `localleader` to `,` so a separate setting is not required in the user configuration (unless a different localleader is preferred)
+
+??? EXAMPLE "Set localleader in user config"
+    `options.lua` in the user configuration provides a consistent way to set Neovim options.
+
     ```lua hl_lines="13" title=".config/astronvim-config/options.lua"
     -- set vim options here (vim.<first_key>.<second_key> = value)
     return {
@@ -35,45 +144,37 @@ Set a local leader for Conjure to add its key bindings too
     }
     ```
 
-Add Conjure plugin that will load when Clojure, Fennel or Python file is opened.
 
-!!! EXAMPLE "Clojure Packages in AstroNvim user configuration"
-    ```lua title=".config/astronvim-config/init.lua"
-    -- Local variables
-    local lisp_dialects = { "clojure", "fennel" }
+## Clojure LSP
 
-    -- Lazy Package manager configuration
+Clojure LSP support is enabled via the AstroCommunity Clojure pack.
+
+`clojure_lsp` can be added using Mason UI, `SPC p m` or in the `plugins/mason.lua` file
+
+??? EXAMPLE "Manual user config of clojure lsp server"
+    ```lua
+    -- customize mason plugins
     return {
+      -- use mason-lspconfig to configure LSP installations
       {
-        "Olical/conjure",
-        -- load plugin on filetypes
-        ft = { "python", unpack(lisp_dialects) },
+        "williamboman/mason-lspconfig.nvim",
+        -- overrides `require("mason-lspconfig").setup(...)`
+        opts = function(_, opts)
+          -- add more things to the ensure_installed table protecting against community packs modifying it
+          opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
+            -- "clojure_lsp",  -- provide by Clojure pack
+            "marksman", -- Markdown structure (also in markdown pack)
+            "yamlls",
+          })
+        end,
       },
     }
     ```
 
-Improve syntax highlighting by installing the Clojure parser for Treesitter.
-
-!!! EXAMPLE "Treesitter Parser for clojure in AstroNvim user configuration"
-    ```lua hl_lines="7" title=".config/astronvim-config/plugins/treesitter.lua"
-    return {
-      "nvim-treesitter/nvim-treesitter",
-      opts = function(_, opts)
-        -- add more things to the ensure_installed table protecting against community packs modifying it
-        opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
-          -- "lua"
-        "clojure"
-        })
-      end,
-    }
-    ```
-
-!!! HINT "Install Treesitter Clojure Parser manually"
-    `:TSInstall clojure` in Neovim will install the parser.  A parser not included in the `opts.ensure_installed` configuration must be updated manually each time treesitter plugin is updated
 
 ## Snippets
 
-The AstroNvim user example includes a commented LuaSnip package code.
+The AstroNvim user example includes a commented LuaSnip configuration
 
 ```lua title=".config/astronvim-config/plugins/core.lua"
   -- {
@@ -107,18 +208,17 @@ Practicalli AstroNvim Config combines the two examples to get
 
 !!! EXAMPLE "AstroNvim config with custom VS Code style snippets"
     ```lua title=".config/astronvim-config/plugins/core.lua"
-      {
-        "L3MON4D3/LuaSnip",
-        config = function(plugin, opts)
-          require "plugins.configs.luasnip" (plugin, opts)                                       -- include the default astronvim config that calls the setup call
-          -- add more custom luasnip configuration such as filetype extend or custom snippets
-          require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } } -- load snippets paths
-          local luasnip = require "luasnip"
-          luasnip.filetype_extend("javascript", { "javascriptreact" })
-        end,
-      },
-
-```
+    {
+      "L3MON4D3/LuaSnip",
+      config = function(plugin, opts)
+        require "plugins.configs.luasnip" (plugin, opts) -- include the default astronvim config that calls the setup call
+        -- add more custom luasnip configuration such as filetype extend or custom snippets
+        require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } } -- load snippets paths
+        local luasnip = require "luasnip"
+        luasnip.filetype_extend("javascript", { "javascriptreact" })
+    end,
+    },
+    ```
 
 ## AstroNvim Community packages
 
@@ -129,11 +229,12 @@ Visit the AstroNvim Community repository on GitHub and browse the packages avail
 `import` each package of interest to the `plugins/community.lua` file in the AstroNvim user configuration.
 
 !!! EXAMPLE "AstroNvim Community Packages in AstroNvim user configuration"
+
     ```lua title=".config/astronvim-config/plugins/community.lua"
     return {
       -- Add the community repository of plugin specifications
       "AstroNvim/astrocommunity",
-
+      -- Import each plugin from the Astro Community as required
       { import = "astrocommunity.editing-support.todo-comments" },
       { import = "astrocommunity.git.neogit" },
       { import = "astrocommunity.git.octo" },
@@ -141,46 +242,105 @@ Visit the AstroNvim Community repository on GitHub and browse the packages avail
     }
     ```
 
+AstroCommunity packs set up support for each language
+
+!!! EXAMPLE "Language packs enabled in Practicalli AstroNvim Config"
+`lua title=".config/astronvim-config/plugin/community.lua"
+      -- Packs
+      -- Treesitter: dockerfile , Lsp: dockerls & docker_compose_language_service, Lint/format: hadolint
+      { import = "astrocommunity.pack.docker" },
+      -- Treesitter: json & jsonc, Lsp: jsonls, Lint/format: stylua
+      { import = "astrocommunity.pack.json" },
+      -- Treesitter: lua, Lsp: lua_ls, Lint/format: stylua
+      { import = "astrocommunity.pack.lua" },
+      -- Treesitter: markdown & markdown_inline, Lsp: marksman, Lint/format: prettierd
+      -- Pack disabled as prettierd too agressive with format
+      -- { import = "astrocommunity.pack.markdown" },
+      -- Treesitter: markdown & markdown_inline, Lsp: marksman, Lint/format: prettierd
+      { import = "astrocommunity.pack.yaml" },
+    `
+
+> TODO: Submit a pull request with a Clojure pack to the AstroCommunity
+
+
 ## Themes
 
-Use themes that support the `vim.opt.background` command to change between dark and light themes (`SPC u b` UI > background in AstroNvim)
-Variant respects , using dawn when light and dark_variant when dark
+Themes are a collection of one or more colorschemes to affect the apperance of text, icons, highlights, etc.
 
-Available via AstroCommunity
+Themes supporting `vim.opt.background` can change between dark and light colorscheme (`SPC u b` UI > background in AstroNvim)
 
-- [gruvbox.nvim](https://github.com/ellisonleao/gruvbox.nvim/) - requires highlight setting in user config
-- [rose-pine](https://github.com/rose-pine/neovim)
-- [oxocarbon.nvim](https://github.com/nyoom-engineering/oxocarbon.nvim) (written in Fennel)
+`SPC f t` selector shows themes colorschemes, as long as the themes are configured to disable lazy loading
 
-<!-- 
+The default `astrodark` theme is set via the `colorscheme` option in `init.lua`
+
+[Everforest](https://github.com/sainnhe/everforest) provides a good dark and light theme and supports the background option to toggle between each colorscheme.
+
+!!! EXMAPLE "Practicalli AstroNvim Config - default theme"
+    ```lua
+    colorscheme = "everforest",
+    ```
+
+[:fontawesome-brands-github: AstroCommunity themes](https://github.com/AstroNvim/astrocommunity/tree/main/lua/astrocommunity/colorscheme){target=\_blank .md-button}
+
+!!! EXMAPLE "Practicalli AstroNvim Config themes"
+    ```lua
+    return {
+    {
+    "AstroNvim/astrotheme", -- default AstroNvim theme
+    lazy = false,
+    },
+      -- Add the community repository of plugin specifications
+      "AstroNvim/astrocommunity",
+      { import = "astrocommunity.colorscheme.everforest" },
+      {
+        "sainnhe/everforest",
+        lazy = false,
+      },
+      { import = "astrocommunity.colorscheme.nightfox-nvim" },
+      {
+        "EdenEast/nightfox.nvim",
+        lazy = false,
+      },
+      { import = "astrocommunity.colorscheme.kanagawa-nvim" },
+      {
+        "rebelot/kanagawa.nvim",
+        lazy = false,
+      },
+      { import = "astrocommunity.colorscheme.github-nvim-theme" }, -- no background support
+      {
+        "projekt0n/github-nvim-theme",
+        lazy = false,
+      },
+    ```
+
+<!--
   -- Theme testing for visual appeal:
   -- colorscheme = "astrodark",  (default theme, no background support I think)
   -- colorscheme = "catppuccin",   -- light color to pale, lacks contrast
   -- colorscheme = "dayfox",
   colorscheme = "everforest",
   -- colorscheme = "github_light",  -- no background support, otherwise quite nice
-  -- colorscheme = "gruvbox",  -- status and tablines inverted - doesnt look good
+  -- colorscheme = "gruvbox",  -- status and tablines inverted - doesnt look good, - requires highlight setting in user config
   -- colorscheme = "gruvbox-baby", -- no background support
   -- colorscheme = "kanagawa",  -- nice
   -- colorscheme = "onigiri",  -- nice
-  -- colorscheme = "oxocarbon",
+  -- colorscheme = "oxocarbon", -- written in Fennel
   -- colorscheme = "rose-pine", -- light colour very bright
 -->
 
 ### Configure Lazy plugins
 
-[:globe_with_meridians: Lazy.nvim Plugin specification](https://github.com/folke/lazy.nvim#-plugin-spec){target=_blank .md-button}
+[:globe_with_meridians: Lazy.nvim Plugin specification](https://github.com/folke/lazy.nvim#-plugin-spec){target=\_blank .md-button}
 
 
-## Review
+## Config Format and Lint tools
 
-- https://github.com/datamonsterr/astronvim_config
+!!! HINT "Disable format on save when tools provide unexpected results"
+    `SPC u f` toggles if the respective format tool should run for the current buffer.  `SPC u F` for all buffers of the current kind.
 
+    `init.lua` lsp section can enable or disable format on save for specific file types.
 
-<!-- 
-### Format and Lint tool configuration
-
-Mason is responsible for installing packages
+Mason is responsible for installing lint and format tools
 
 null-ls is responsible for running each tool and provides default configuration for code_actions, completion, diagnostics, formatting and hover.
 
@@ -204,7 +364,7 @@ null-ls is responsible for running each tool and provides default configuration 
           -- null_ls.builtins.formatting.prettier,
           null_ls.builtins.formatting.markdownlint.with {
             -- pass arguments to modify the null-ls builtin configuration
-            extra_args = {
+            args = {
               "--config ",
               "/home/practicalli/.markdownlint.yaml",
             },
@@ -223,7 +383,7 @@ null-ls is responsible for running each tool and provides default configuration 
     ```
 
 ??? EXAMPLE "General configuration for LSP Servers"
-    ```lua hl_lines="17" title=".config/astronvim-config/init.lua"
+    ```lua hl_lines="14 15 16 17" title=".config/astronvim-config/init.lua"
       lsp = {
         -- customize lsp formatting options
         formatting = {
@@ -240,7 +400,7 @@ null-ls is responsible for running each tool and provides default configuration 
           disabled = { -- switch off formatting capabilities for the listed language servers
             -- turn off lua_ls formatting capability if you want to use StyLua to format your lua code
             -- "lua_ls",
-            -- "markdownlint",
+            "markdownlint",
           },
           timeout_ms = 1000, -- default format timeout
           -- filter = function(client) -- fully override the default formatting function
@@ -254,9 +414,89 @@ null-ls is responsible for running each tool and provides default configuration 
       },
     ```
 
+<!--
 
-!!! WARNING "Configuring rules for linters"
-    AstroNvim uses null-ls to format files (trigged by save - althought that is configurable).  So far practicalli has not figured out how to successfully configure rules used by linters
+## Telescope Extensions
 
-    `~/.config/astronvim-config/plugins/null-ls.lua` should take `extra-args` section that can be used to pass command line args, e.g. specifying a configuration file to use for a linter.  This did not work when tried with markdownlint 
+AstroNvim Extensions
+
+- [aerial.nvim](https://github.com/stevearc/aerial.nvim)
+
+  - `SPC l s` to search symbols
+  - `SPC l S` to list symbols or :AerialToggle
+
+- autocommands - :Telescope autocommands - lists autocommands, e.g comment_lines custom for Clojure
+- builtin :Telescope builtin - lists AstroNvim builtin telescope extensions (not user added extensions)
+- buffers `SPC f b` - selection from currently open buffers
+- commands :Telescope commands - selection of all neovim commands
+- command_history :Telescope command_history - selection of previous commands, run selected command
+- current_buffer_fuzzy_find - uses deprecated API, removed in 0.10
+- current_buffer_tags - ctags
+- diagnostics - `SPC l D` workspace diagnostics, from LSP server
+- fd - `SPC f f` Find files - same as find_files ?
+- filetypes
+- find_files - `SPC f f` find files
+- fzf - Error: command.lua 193 attempt to call a nil value
+- git_bcommits ??
+- git_commits `SPC g c` list
+- git_files
+- git_stash
+- git_status git status for project - use lazygit or neogit instead
+- help_tags
+- highlights colour hightlights for annotations, notes, etc (for desiging a theme?)
+- jumplist selector listing previous places that can be jumped to.. is this from the community plugin?
+- keymaps `SPC f k` selector for all key bindings known to neovim config
+- live_grep
+- loclist
+- lsp_definitions
+- lsp_dynamic_workspace_symbols
+- lsp_document_symbols
+- lsp_implementations
+- lsp_incoming_calls
+- lsp_outgoing_calls
+- lsp_references
+- lsp_type_definitions
+- man_pages
+- marks
+- notify browse notification messages
+- oldfiles
+- pickers
+- planets selector for pictures of planets (very pixelated pictures)
+- quickfix
+- reloader
+- registers `SPC f r` selector for neovim registers (paste value from register to current cursor location)
+- search_history
+- spell_suggest
+- symbols Error: sources not found (need to create your own symbols?)
+- tagstack
+- treesitter - nothing happens
+- vim_options `vim.opts` options including settabline configured in user config.
+
+AstroCommunity
+
+- projects
+
+Other extensions
+
+- telescope-env.nvim
+- <https://github.com/ANGkeith/telescope-terraform-doc.nvim>
+- <https://github.com/olacin/telescope-cc.nvim>
+- <https://github.com/gbprod/yanky.nvim>
+- <https://github.com/smartpde/telescope-recent-files>
+- <https://github.com/nvim-telescope/telescope-file-browser.nvim>
+- <https://github.com/lpoto/telescope-docker.nvim>
+- <https://github.com/prochri/telescope-all-recent.nvim>
+- <https://github.com/nvim-telescope/telescope-frecency.nvim>
+- <https://github.com/barrett-ruth/telescope-http.nvim>
+- <https://github.com/pwntester/octo.nvim>
+- <https://github.com/AckslD/nvim-neoclip.lua>
+
+
+## Review
+
+- <https://github.com/datamonsterr/astronvim_config>
+
+
+
 -->
+
