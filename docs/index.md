@@ -20,10 +20,10 @@ Practicalli Neovim provides install & user guide focused on a simple, powerful a
 
 ## Quick Start
 
- Install [Clojure](install/clojure.md), [Neovim](install/neovim.md) and choose a community configuration
+Install [Clojure](install/clojure.md), [Neovim](install/neovim.md) and choose a community configuration
 
-- [Lua] [AstroNvim](configuration/astronvim.md)
-- [Fennel] [Practicalli Neovim Config Redux](configuration/practicalli.md)
+- [Lua] [AstroNvim](configuration/astronvim/)
+- [Fennel] [Practicalli Neovim Config Redux](configuration/practicalli/)
 
 ## External reverences
 
