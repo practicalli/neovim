@@ -20,7 +20,7 @@ Comments and documentation can be folded to help you focus on a specific part of
 | `z O` | open fold recursive (capital o)             |
 | `z r` | fewer folds                                 |
 | `z R` | open all folds                              |
-| `z x` | update folds                              |
+| `z x` | update folds                                |
 
 See [narrowing](narrowing.md) for a focused approach to editing.
 
