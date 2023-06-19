@@ -5,6 +5,12 @@
 
     Most of this content is the same in Neovim with a few exceptions
 
+
+## Selecting text 
+
+`vi)` selects all the text within `()`, e.g. `(http://oldwebsite.doh)`
+
+
 ## Surround
 
 `viw` selects the current word, using j/k to modify the selection where required. `o` toggles which end of the selection is expanded/shrunk
