@@ -30,62 +30,62 @@ The [:fontawesome-brands-github: AstroCommunity](https://github.com/AstroNvim/as
     { import = "astrocommunity.pack.clojure" },
     ```
 
-=== "Override AstroCommunity Pack"
+    ??? HINT "Override AstroCommunity Pack"
 
-    Create a `plugins/clojure.lua` file and add the AstroCommunity repository, Clojure pack and additional configuration to your own preferences
-    ??? EXAMPLE "Clojure configuration with user configration overrides"
-        ```lua
-        return {
-          "AstroNvim/astrocommunity",
-          { import = "astrocommunity.pack.clojure" },
-          {
-            "Olical/conjure",
-            -- load plugin on filetypes
-            ft = { "clojure", "fennel" },
-            config = function()
-              -- HUD
-              -- Example: Set to `"SE"` and HUD width to `1.0` for full width HUD at bottom of screen
-              vim.g["conjure#log#hud#width"] = 1 -- Width of HUD as percentage of the editor width, 0.0 and 1.0.
-              vim.g["conjure#log#hud#enabled"] = false -- Display HUD
-              vim.g["conjure#log#hud#anchor"] = "SE" -- Preferred corner position for the HUD
-              vim.g["conjure#log#botright"] = true -- Open log at bottom or far right of editor
-              -- REPL
-              vim.g["conjure#extract#context_header_lines"] = 100 -- Number of lines to check for `ns` form
-              vim.g["conjure#client#clojure#nrepl#connection#auto_repl#enabled"] = false -- ;; Start "auto-repl" process, eg. babashka
-              vim.g["conjure#client#clojure#nrepl#connection#auto_repl#hidden"] = true -- ;; Hide auto-repl buffer when triggered
-              vim.g["conjure#client#clojure#nrepl#connection#auto_repl#cmd"] = nil -- ;; Command to start the auto-repl
-              -- ;; Automatically require namespace of new buffer or current buffer after connection
-              vim.g["conjure#client#clojure#nrepl#eval#auto_require"] = false
-              -- Reloading code
-              -- Function to call on refresh (reloading) the log, namespace-qualified name of a zero-arity
-              -- vim.g["conjure#client#clojure#nrepl#refresh#after"] = nil
-              -- The namespace-qualified name of a zero-arity function to call before reloading.
-              -- vim.g["conjure#client#clojure#nrepl#refresh#before"] = nil
-              -- List of directories to scan. If no directories given, defaults to all directories on the classpath.
-              -- vim.g["conjure#client#clojure#nrepl#refresh#dirs"] = nil
-              -- Testing
-              -- ;; Test runner called from the test key mappings
-              vim.g["conjure#client#clojure#nrepl#test#runner"] = "kaocha"
-              -- Print raw test evaluation result, suppressing prefix for stdout lines `; (out)`
-              -- vim.g["conjure#client#clojure#nrepl#test#raw_out"] = nil
-              -- Override string appended to the end of the test runner calls
-              -- vim.g["conjure#client#clojure#nrepl#test#call_suffix"] = nil
-            end
-          },
-          {
-            "gpanders/nvim-parinfer",
-            ft = lisp_dialects,
-            config = function()
-              vim.g.parinfer_force_balance = true
-              vim.g.parinfer_comment_chars = ";;"
-            end,
-          },
-        }
-        ```
+        Create a `plugins/clojure.lua` file and add the AstroCommunity repository, Clojure pack and additional configuration to your own preferences
+
+        !!! EXAMPLE "Clojure configuration with user configration overrides"
+            ```lua
+            return {
+              "AstroNvim/astrocommunity",
+              { import = "astrocommunity.pack.clojure" },
+              {
+                "Olical/conjure",
+                -- load plugin on filetypes
+                ft = { "clojure", "fennel" },
+                config = function()
+                  -- HUD
+                  -- Example: Set to `"SE"` and HUD width to `1.0` for full width HUD at bottom of screen
+                  vim.g["conjure#log#hud#width"] = 1 -- Width of HUD as percentage of the editor width, 0.0 and 1.0.
+                  vim.g["conjure#log#hud#enabled"] = false -- Display HUD
+                  vim.g["conjure#log#hud#anchor"] = "SE" -- Preferred corner position for the HUD
+                  vim.g["conjure#log#botright"] = true -- Open log at bottom or far right of editor
+                  -- REPL
+                  vim.g["conjure#extract#context_header_lines"] = 100 -- Number of lines to check for `ns` form
+                  vim.g["conjure#client#clojure#nrepl#connection#auto_repl#enabled"] = false -- ;; Start "auto-repl" process, eg. babashka
+                  vim.g["conjure#client#clojure#nrepl#connection#auto_repl#hidden"] = true -- ;; Hide auto-repl buffer when triggered
+                  vim.g["conjure#client#clojure#nrepl#connection#auto_repl#cmd"] = nil -- ;; Command to start the auto-repl
+                  -- ;; Automatically require namespace of new buffer or current buffer after connection
+                  vim.g["conjure#client#clojure#nrepl#eval#auto_require"] = false
+                  -- Reloading code
+                  -- Function to call on refresh (reloading) the log, namespace-qualified name of a zero-arity
+                  -- vim.g["conjure#client#clojure#nrepl#refresh#after"] = nil
+                  -- The namespace-qualified name of a zero-arity function to call before reloading.
+                  -- vim.g["conjure#client#clojure#nrepl#refresh#before"] = nil
+                  -- List of directories to scan. If no directories given, defaults to all directories on the classpath.
+                  -- vim.g["conjure#client#clojure#nrepl#refresh#dirs"] = nil
+                  -- Testing
+                  -- ;; Test runner called from the test key mappings
+                  vim.g["conjure#client#clojure#nrepl#test#runner"] = "kaocha"
+                  -- Print raw test evaluation result, suppressing prefix for stdout lines `; (out)`
+                  -- vim.g["conjure#client#clojure#nrepl#test#raw_out"] = nil
+                  -- Override string appended to the end of the test runner calls
+                  -- vim.g["conjure#client#clojure#nrepl#test#call_suffix"] = nil
+                end
+              },
+              {
+                "gpanders/nvim-parinfer",
+                ft = lisp_dialects,
+                config = function()
+                  vim.g.parinfer_force_balance = true
+                  vim.g.parinfer_comment_chars = ";;"
+                end,
+              },
+            }
+            ```
 
 === "Manually add plugins"
     Add Conjure and parinfer plugin that will load when Clojure or Fennel file is opened.
-    
     !!! EXAMPLE "Clojure Packages in AstroNvim user configuration"
             ```lua title=".config/astronvim-config/plugins/clojure.lua"
             -- Lazy Package manager configuration
