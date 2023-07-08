@@ -63,3 +63,8 @@ The three "core" operations of add/delete/change can be done with the keymaps ys
     ```neovim
     :help nvim-surround.usage
     ```
+
+## Web Links
+
+++"g"++ ++"x"++ on a URL to open in the default browser
+
