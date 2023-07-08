@@ -20,7 +20,7 @@ Plugins and configuration is added vial AstroCommunity were possible, to minimis
 
 The [:fontawesome-brands-github: AstroCommunity](https://github.com/AstroNvim/astrocommunity/) provides a Clojure language pack that adds Conjure and nvim-parinfer, along with `clojure` Treesitter parser and `clojure-lsp` support.
 
-=== "AstroCommunity"
+=== "AstroCommunity Pack"
 
     Edit the `plugins/community.lua` file and import the Clojure pack.  The `"AstroNvim/astrocommunity",` repository is already added to to the file.
 
@@ -30,7 +30,9 @@ The [:fontawesome-brands-github: AstroCommunity](https://github.com/AstroNvim/as
     { import = "astrocommunity.pack.clojure" },
     ```
 
-    Or create a `plugins/clojure.lua` file and add the AstroCommunity repository, Clojure pack and additional configuration to your own preferences
+=== "Override AstroCommunity Pack"
+
+    Create a `plugins/clojure.lua` file and add the AstroCommunity repository, Clojure pack and additional configuration to your own preferences
     ??? EXAMPLE "Clojure configuration with user configration overrides"
         ```lua
         return {
@@ -82,18 +84,25 @@ The [:fontawesome-brands-github: AstroCommunity](https://github.com/AstroNvim/as
         ```
 
 === "Manually add plugins"
-    Add Conjure plugin that will load when Clojure, Fennel or Python file is opened.
+    Add Conjure and parinfer plugin that will load when Clojure or Fennel file is opened.
     
     !!! EXAMPLE "Clojure Packages in AstroNvim user configuration"
-            ```lua title=".config/astronvim-config/init.lua"
-            -- Local variables
-            local lisp_dialects = { "clojure", "fennel" }
-                -- Lazy Package manager configuration
+            ```lua title=".config/astronvim-config/plugins/clojure.lua"
+            -- Lazy Package manager configuration
             return {
               {
                 "Olical/conjure",
                 -- load plugin on filetypes
-                ft = { "python", unpack(lisp_dialects) },
+                ft = { "clojure", "fennel" },
+              },
+
+              {
+                "gpanders/nvim-parinfer",
+                ft = { "clojure", "fennel" },
+                config = function()
+                  vim.g.parinfer_force_balance = true
+                  vim.g.parinfer_comment_chars = ";;"
+                end,
               },
             }
             ```
