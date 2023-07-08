@@ -253,7 +253,7 @@ Visit the AstroNvim Community repository on GitHub and browse the packages avail
 AstroCommunity packs set up support for each language
 
 !!! EXAMPLE "Language packs enabled in Practicalli AstroNvim Config"
-`lua title=".config/astronvim-config/plugin/community.lua"
+    ```lua title=".config/astronvim-config/plugin/community.lua"
       -- Packs
       -- Treesitter: dockerfile , Lsp: dockerls & docker_compose_language_service, Lint/format: hadolint
       { import = "astrocommunity.pack.docker" },
@@ -266,7 +266,7 @@ AstroCommunity packs set up support for each language
       -- { import = "astrocommunity.pack.markdown" },
       -- Treesitter: markdown & markdown_inline, Lsp: marksman, Lint/format: prettierd
       { import = "astrocommunity.pack.yaml" },
-    `
+    ```
 
 > TODO: Submit a pull request with a Clojure pack to the AstroCommunity
 
