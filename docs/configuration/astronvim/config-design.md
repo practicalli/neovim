@@ -5,8 +5,15 @@ A guide to the AstroNvim Config user configuration created by Practicalli to sup
 ??? INFO "AstroCommunity used where possible"
 Plugins and configuration is added vial AstroCommunity were possible, to minimise the code size and maintenance of the configuration
 
-??? WARNING "Practicalli Config design still evolving"
-    Its only a week since starting to put together an AstroNvim config, so there may be some changes.  However, it seems most of the features required are now configured.
+ 
+## User Config overview
+
+`core.lua` is for tuning plugins shipped with astronvim config
+
+`user.lua` for general user defined plugins
+
+`plugins/` for additional plugins organised logically. All `.lua` files are read from this directory 
+    
 
 ## Clojure support
 
