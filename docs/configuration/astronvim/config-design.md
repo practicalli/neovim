@@ -84,21 +84,21 @@ The [:fontawesome-brands-github: AstroCommunity](https://github.com/AstroNvim/as
 === "Manually add plugins"
     Add Conjure plugin that will load when Clojure, Fennel or Python file is opened.
     
-!!! EXAMPLE "Clojure Packages in AstroNvim user configuration"
-        ```lua title=".config/astronvim-config/init.lua"
-        -- Local variables
-        local lisp_dialects = { "clojure", "fennel" }
-            -- Lazy Package manager configuration
-        return {
-          {
-            "Olical/conjure",
-            -- load plugin on filetypes
-            ft = { "python", unpack(lisp_dialects) },
-          },
-        }
-        ```
+    !!! EXAMPLE "Clojure Packages in AstroNvim user configuration"
+            ```lua title=".config/astronvim-config/init.lua"
+            -- Local variables
+            local lisp_dialects = { "clojure", "fennel" }
+                -- Lazy Package manager configuration
+            return {
+              {
+                "Olical/conjure",
+                -- load plugin on filetypes
+                ft = { "python", unpack(lisp_dialects) },
+              },
+            }
+            ```
     
-Improve syntax highlighting by installing the Clojure parser for Treesitter.
+    Improve syntax highlighting by installing the Clojure parser for Treesitter.
     
     !!! EXAMPLE "Treesitter Parser for clojure in AstroNvim user configuration"
         ```lua hl_lines="7" title=".config/astronvim-config/plugins/treesitter.lua"
@@ -116,6 +116,7 @@ Improve syntax highlighting by installing the Clojure parser for Treesitter.
     
     !!! HINT "Install Treesitter Clojure Parser manually"
         `:TSInstall clojure` in Neovim will install the parser. A parser not included in the `opts.ensure_installed` configuration must be updated manually each time treesitter plugin is updated
+
 
 ### Clojure Mappings
 
