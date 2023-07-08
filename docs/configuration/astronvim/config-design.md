@@ -10,9 +10,10 @@ Plugins and configuration is added vial AstroCommunity were possible, to minimis
 
 `core.lua` is for tuning plugins shipped with astronvim config
 
-`user.lua` for general user defined plugins
-
 `plugins/` for additional plugins organised logically. All `.lua` files are read from this directory 
+
+- `user.lua` for general user defined plugins
+- `clojure.lua` adds Conjure and parinf, ensuring Clojure treesitter parser and Clojure LSP
     
 
 ## Clojure support
