@@ -431,19 +431,19 @@ Astrocommunity configuration defines a `keys` table that is used by Lazy.
 In the user configuration, return a function that sets key bindings to overide the `keys` table provided by astrocommunity
 
 ??? EXAMPLE "Override Key bindings for vim highlighter"
-```lua title=".config/astronvim-config/plugins/community.lua"
-{
-    "vim-highlighter",
-    keys = function() 
-        return {
-            { "<leader>nn", "<cmd>Hi><CR>", desc = "Next Recently Set Highlight" },
-            { "<leader>ng", "<cmd>Hi<<CR>", desc = "Previous Recently Set Highlight" },
-            { "<leader>n[", "<cmd>Hi{<CR>", desc = "Next Nearest Highlight" },
-            { "<leader>n]", "<cmd>Hi}<CR>", desc = "Previous Nearest Highlight" },
-        }
-    end,
-}
-```
+    ```lua title=".config/astronvim-config/plugins/community.lua"
+    {
+        "vim-highlighter",
+        keys = function() 
+            return {
+                { "<leader>nn", "<cmd>Hi><CR>", desc = "Next Recently Set Highlight" },
+                { "<leader>ng", "<cmd>Hi<<CR>", desc = "Previous Recently Set Highlight" },
+                { "<leader>n[", "<cmd>Hi{<CR>", desc = "Next Nearest Highlight" },
+                { "<leader>n]", "<cmd>Hi}<CR>", desc = "Previous Nearest Highlight" },
+            }
+        end,
+    }
+    ```
 
 
 <!--
