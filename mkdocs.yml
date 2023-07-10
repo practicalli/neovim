@@ -162,6 +162,8 @@ nav:
       - Neogit: version-control/neogit.md
       - Octo: version-control/octo.md
       - Open In GitHub: version-control/open-in-github.md
+  - API tools:
+      - api-tools/index.md
   - Ultra-Mobile Neovim:
       - termux/index.md
       - F-Droid: termux/fdroid-install.md
