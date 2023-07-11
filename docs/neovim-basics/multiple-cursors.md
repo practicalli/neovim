@@ -21,6 +21,35 @@ Mulitple cursors is generally useful when editing smilarly structured lines with
     `\ \ \` toggle cursor at position
 
 
+## Search and Replace
+
+Select a text pattern to search for and use multiple cursors to add a cursor each match, then change each selected occurance concurrently.
+
+
+=== "AstroNvim"
+
+    Select the pattern with visual select 
+
+    ++spc++ ++"g"++ ++"m"++ ++"a"++ on each matching text pattern in the buffer
+
+    `c` to change the original text and type the new pattern.  All cursors will update concurrently.
+
+    ++esc++ or ++"f"++ ++"d"++ to close multiple cursors.
+
+
+=== "Practicalli Neovim Config Redux"
+    `\ \ a` creates a cursor at the start of every visual selection line
+
+    `\ \ \` toggle cursor at position
+
+    `c` to change the original text and type the new pattern.  All cursors will update concurrently.
+
+    ++esc++ or ++"f"++ ++"d"++ to close multiple cursors.
+
+     
+
+
+
 ## Command quick reference
 
 
