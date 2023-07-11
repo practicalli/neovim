@@ -10,6 +10,20 @@ There are several ways to interact with Git version control, although Practicall
 > Shell out to the command line, `:!` or use the Neovim terminal buffer to run git commands directly
 
 
+## Stage in buffer
+
+=== "AstroNvim"
+The current hunk or the whole buffer can be staged from the buffer using Git Signs, saving a trip to the Git Status buffer.
+
+++spc++ ++"g"++ ++"H"++ stages the current hunk
+
+++spc++ ++"g"++ ++"S"++ stages the current buffer
+
+=== "Practicalli Neovim Config Redux"
+
+    Not supported.  
+
+
 ## Git Status
 
 === "AstroNvim"
@@ -18,7 +32,7 @@ There are several ways to interact with Git version control, although Practicall
     ![AstroNvim Git - Lazygit status](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-git-lazygit-status-example-light.png?raw=true#only-light){loading=lazy}
     ![AstroNvim Git - Lazygit status](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-git-lazygit-status-example-dark.png?raw=true#only-dark){loading=lazy}
 
-    `SPC g n t` opens neogit in a new tab for Magit style experience
+    ++spc++ ++"g"++ ++"s"++  ++spc++ ++"g"++ ++"n"++ ++"t" opens neogit in a new tab for Magit style experience
 
 
 === "Practicalli Neovim Config Redux"
@@ -26,6 +40,8 @@ There are several ways to interact with Git version control, although Practicall
     `SPC g s` opens Git Status tab, by running `:Neogit`
 
 ![Neovim Neogit plugin - git status buffer](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-neogit-status.png)
+
+
 
 
 ## GitHub integration
