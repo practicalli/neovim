@@ -61,8 +61,8 @@ markdown_extensions:
   - md_in_html # Grids
   - footnotes # footnotes and abbreviations
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji ""
+      emoji_generator: !!python/name:materialx.emoji.to_svg ""
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -72,7 +72,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+          format: !!python/name:pymdownx.superfences.fence_code_format ""
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.keys # keyboard keys
@@ -89,14 +89,15 @@ plugins:
   - search
   - callouts
   - glightbox # Image aligning
-  - git-revision-date-localized: # Update and Creation date of each page
+  - git-revision-date-localized:
+      # Update and Creation date of each page
       # enable_creation_date: true
       fallback_to_build_date: true
 
   # Generate Social Cards via CI only
   # in assets/images/social
   - social:
-      cards: !ENV [MKDOCS_SOCIAL_CARDS_GENERATE, true]
+      cards: !ENV [ MKDOCS_SOCIAL_CARDS_GENERATE, true ]
 
 # Footer / Social Media
 extra:
@@ -146,6 +147,7 @@ nav:
       - neovim-basics/index.md
       - File Buffer Window: neovim-basics/files-buffers-windows.md
       - Multi-modal Editing: neovim-basics/multi-modal-editing.md
+      - Search Replace: neovim-basics/search-replace.md
       - Comments: neovim-basics/comments.md
       - Snippets: neovim-basics/snippets.md
       - Package Manager: neovim-basics/plugin-manager.md
