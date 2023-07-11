@@ -4,48 +4,64 @@
 
 Mulitple cursors is generally useful when editing smilarly structured lines with diffferent content.  Cursors are moved by column position or by using vim motions.
 
-`\ \ c` creates a cursor at the start of every visual selection line
 
-`\ \ \` toggle cursor at position
+=== "AstroNvim"
+    ++spc++ ++"g"++ ++"m"++ opens the visual-multi menu 
+
+    Using visual select is a simple way to edit multiple lines as the same time.
+
+    ++spc++ ++"g"++ ++"m"++ ++"c"++ on visually selected lines creates a cursor on each line.
+
+    ++esc++ or ++"f"++ ++"d"++ to close multiple cursors.
+
+
+=== "Practicalli Neovim Config Redux"
+    `\ \ c` creates a cursor at the start of every visual selection line
+
+    `\ \ \` toggle cursor at position
 
 
 ## Command quick reference
 
-`\ \` is the leader for multiple cursors and will show the visual-multi menu in which-key.
-
-These commands cover the large majority of use cases for multiple cursors.
 
 > `:help g:VM_maps` for a reference of all mappings and instructions on how to change them
 
-<!-- TODO: How to define the visuual-multi leader key in fennel
-    let g:VM_leader = '\'
--->
+=== "AstroNvim"
 
-| Action                        | Key         | Command              |
-|-------------------------------|-------------|----------------------|
-| Add Cursor at Position        | `\\\`       | `vm-add-cursor`      |
-| Alignm VM cursors with cursor | `\\a`       | `vm-align`           |
-| Select All Words              | `\\A`       | `vm-select-all`      |
-| Transposition                 | `\\t`       | `vm-transpose`       |
-| Toggle Mappings               | `\\<Space>` | `vm-mappings-toggle` |
-| Find with Regex               | `\\/`       | `vm-regex-search`    |
-| Reselect Last                 | `\\gS`      | `vm-reselect-last`   |
+=== "Practicalli Neovim Config Redux"
 
-Once visual-multi has started the vm-mappings-buffer mappings are available:
+    <!-- TODO: How to define the visuual-multi leader key in fennel
+        let g:VM_leader = '\'
+    -->
 
-| Action              | Key                     | Command            |
-|---------------------|-------------------------|--------------------|
-| Find Word           | `<C-n>`                 | vm-find-word       |
-| Next/Previous/Skip  | `n` / `N` / `q`         | vm-find-next       |
-| Remove Region       | `Q`                     | vm-remove-region   |
-| Add Cursors Down/Up | `<C-Down>` / `<C-Up>`   | vm-add-cursors     |
-| Select Right/Left   | `<S-Right>`, `<S-Left>` | vm-shift-select    |
-| Slash motion        | `g/`                    | vm-slash           |
-| Select Operator     | `s`                     | vm-select-operator |
-| Find Operator       | `m`                     | vm-find-operator   |
+    `\ \` is the leader for multiple cursors and will show the visual-multi menu in which-key.
 
+    These commands cover the large majority of use cases for multiple cursors.
 
-> NOTE: `C-n` conflicts with the Termux binding for naming a session
+    | Action                        | Key         | Command              |
+    |-------------------------------|-------------|----------------------|
+    | Add Cursor at Position        | `\\\`       | `vm-add-cursor`      |
+    | Alignm VM cursors with cursor | `\\a`       | `vm-align`           |
+    | Select All Words              | `\\A`       | `vm-select-all`      |
+    | Transposition                 | `\\t`       | `vm-transpose`       |
+    | Toggle Mappings               | `\\<Space>` | `vm-mappings-toggle` |
+    | Find with Regex               | `\\/`       | `vm-regex-search`    |
+    | Reselect Last                 | `\\gS`      | `vm-reselect-last`   |
+
+    Once visual-multi has started the vm-mappings-buffer mappings are available:
+
+    | Action              | Key                     | Command            |
+    |---------------------|-------------------------|--------------------|
+    | Find Word           | `<C-n>`                 | vm-find-word       |
+    | Next/Previous/Skip  | `n` / `N` / `q`         | vm-find-next       |
+    | Remove Region       | `Q`                     | vm-remove-region   |
+    | Add Cursors Down/Up | `<C-Down>` / `<C-Up>`   | vm-add-cursors     |
+    | Select Right/Left   | `<S-Right>`, `<S-Left>` | vm-shift-select    |
+    | Slash motion        | `g/`                    | vm-slash           |
+    | Select Operator     | `s`                     | vm-select-operator |
+    | Find Operator       | `m`                     | vm-find-operator   |
+
+    > NOTE: `C-n` conflicts with the Termux binding for naming a session
 
 
 ## Searching
