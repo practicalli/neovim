@@ -21,13 +21,20 @@
 
 ### nvim-surround
 
+[nvim-surround](https://github.com/kylechui/nvim-surround) provides enhancments over the neovim surround command.
+
 !!! INFO "nvim-surround included in Practicalli AstroNvim Config"
 
 #### Visual Mode
 
 `viw` to select the current word (visual in word)
 
-`S` on a visual selection to surround with next that character, e.g. `S)` to surround with parens.
+++"S"++  on a visual selection to surround with next that character, e.g. `S)` to surround with parens.
+
+!!! HINT "Closing paren surrounds without spaces"
+    `)`, `]`, `}` surrounds the selected text without spaces between the text and the open and closing parens.
+
+    `(`, `[`, `{` surrounds the selected text with a space between the text and the open and closing parens.
 
 #### Normal mode
 
