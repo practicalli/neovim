@@ -36,6 +36,22 @@ Install [Clojure](install/clojure.md), [Neovim](install/neovim.md) and choose a 
 [Conjure install guide](https://github.com/Olical/conjure){target=_blank .md-button}
 [Conjuring Clojure in Vim](https://blog.djy.io/conjuring-clojure-in-vim/){target=_blank .md-button}
 
+
+## Navigate the book
+
+Use the mouse or built-in key bindings to navigate the pages of the book
+
+- ++p++ , ++comma++ : go to previous page
+- ++n++ , ++period++ : go to next page
+
+Use the search box to quickly find a specific topic
+
+- ++f++ , ++s++ , ++slash++ : open search dialog
+- ++arrow-down++ , ++arrow-up++ : select next / previous result
+- ++esc++ , ++tab++ : close search dialog
+- ++enter++ : follow selected result
+
+
 ## Sponsor my work
 
 [![Sponsor practicalli-john](https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png){ align=left loading=lazy }](https://github.com/sponsors/practicalli-john/)
