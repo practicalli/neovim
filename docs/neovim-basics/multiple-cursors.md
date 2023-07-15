@@ -48,12 +48,9 @@ Select a text pattern to search for and use multiple cursors to add a cursor eac
 
      
 
-
-
 ## Command quick reference
 
-
-> `:help g:VM_maps` for a reference of all mappings and instructions on how to change them
+`:help g:VM_maps` for a reference of all mappings and instructions on how to change them
 
 === "AstroNvim"
 
