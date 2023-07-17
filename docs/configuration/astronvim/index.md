@@ -60,6 +60,14 @@ AstroNvim provides a [:fontawesome-brands-github: template repository](https://g
 
 ## Configure shell alias
 
+Create a shell alias that sets `NVIM_APPNAME` to the location of the AstroNvim community config
+
+Add alias to `.bashrc` for Bash shell or `.zshenv` for Zsh
+
+```config
+alias astro="NVIM_APPNAME=astronvim nvim"
+```
+
 [:fontawesome-solid-book-open: Configure shell alias](/neovim/configuration/){target=_blank .md-button}
 
 
