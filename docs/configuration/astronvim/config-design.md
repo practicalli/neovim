@@ -455,6 +455,16 @@ In the user configuration, return a function that sets key bindings to overide t
     }
     ```
 
+## Plugin Key binding
+
+Add key binding if a plugin is available wrapped in an if statement, when defining keys in a different place to adding the plugin, e.g whichkey mappings.lua
+
+```lua
+if is_available "plugin-name" then
+  ,,,
+else
+```
+
 
 <!--
 
