@@ -42,7 +42,7 @@ AstroNvim provides a [:fontawesome-brands-github: template repository](https://g
     Or clone to a separate directory and create a symbolic link
     !!! NOTE ""
         ```shell
-        git clone http://github.com/practicalli/astronvim-config $HOME/.config/astronvim/lua/user \
+        git clone http://github.com/practicalli/astronvim-config $HOME/.config/astronvim-config \
         ln -s $HOME/.config/astronvim-config/ $HOME/.config/astronvim/lua/user
         ```
 
