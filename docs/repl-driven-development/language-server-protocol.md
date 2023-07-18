@@ -2,6 +2,12 @@
 
 Using [clojure-lsp](https://clojure-lsp.io/) server and [Neovim Treesitter](https://tree-sitter.github.io/tree-sitter/) as an LSP client, code is statically analysed to provide auto-completion data, advanced editing actions such as refactor, live formatting, etc.
 
+!!! HINT "Function help"
+    `SPC l h` or ++"K"++ displays help for the function under the cursor
+
+    Repeat the key binding to move the cursor to the documentation popup window and use ++"j"++ ++"k"++ to scroll the documentation
+
+
 ## Key maps
 
 === "Practicalli AstroNvim Config"
