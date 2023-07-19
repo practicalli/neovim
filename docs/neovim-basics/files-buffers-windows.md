@@ -77,6 +77,18 @@ Files and directories are created in the path given, relative to the directory i
 
     `:!mkdir path/to/directory` will create a new directory
 
+     If a file is already opened, i.e. with `:edit`, there is some short-hand syntax to simplify the typing
+
+     `:!mkdir -p %:h`
+
+     `-p` option createst any parts of the path required to make the full path
+
+     `%` is the neovim name of the current file
+
+     `:h` for the current directory (the “head” of the path).
+
+     `!` is the NeoVim terminal shell command
+
 
 ## Select files and directories
 
