@@ -12,9 +12,9 @@ Visually manage files with a tree view of the current project, using [:fontaweso
 
 
 === "Astronvim"
-    `SPC e` toggles neo-tree file browser
+    ++spc++ ++"e"++ toggles neo-tree file browser
 
-    `SPC o` toggles between buffer and neo-tree
+    ++spc++ ++"o"++ toggles between buffer and neo-tree
 
     Neotree icons
 
@@ -23,10 +23,16 @@ Visually manage files with a tree view of the current project, using [:fontaweso
     - cross - git deleted changes
     - Warning triangle - lsp diagnostics issues
 
+    ++"h"++ ++"j"++ ++"k"++ ++"l"++ to navigate the file tree hierachy
+
+    `<` and `>` to navigate between File, Bufs and Git sources tabs
+
+    ++question-mark++ shows neotree help, listing key bindings
+
 
 === "Practicalli Neovim Config Redux"
 
-    `SPC f t t` to open file explorer
+    ++spc++ ++"f"++ ++"t"++ ++"t"++ to open file explorer
 
 
 ## New File
@@ -39,11 +45,22 @@ Files and directories are created in the path given, relative to the directory i
 
 
 === "Astronvim"
-    `SPC w` will write all buffer changes to the associate file.
+    ++spc++ ++"w"++ will write all buffer changes to the associate file.
 
-    `SPC n` creates a new buffer that can be written to a given file using `:write path/to/filename`
+    ++spc++ ++"n"++ creates a new buffer that can be written to a given file using `:write path/to/filename`
 
     `:write path/to/filename` will write the current buffer to a new file.
+
+    Use Neotree as a convienient way to create, rename, move and delete files and directories
+
+    ++"a"++ to add a file using the given name, or directory if the name ends in a `/`
+
+    ++"m"++ to move a file or directory
+
+    ++"r"++ to rename a file or directory
+
+    ++"d"++ to delete a file or directory, showing a confirmation prompt first
+
 
 === "Practicalli Neovim Config Redux"
 
