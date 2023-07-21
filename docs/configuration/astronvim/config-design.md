@@ -367,31 +367,18 @@ null-ls is responsible for running each tool and provides default configuration 
 ??? EXAMPLE "Override null-ls builtin configuration"
     Specify configuration files to use that override the null-ls builtin configuration
 
-    ```lua  hl_lines="16 17 18 19"
+    ```lua  hl_lines="9 10 11"
     return {
       "jose-elias-alvarez/null-ls.nvim",
       opts = function(_, config)
         -- config variable is the default configuration table for the setup function call
         local null_ls = require "null-ls"
-        -- Check supported formatters and linters
-        -- <https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting>
-        -- <https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics>
         config.sources = {
-          -- Set a formatter
-          -- null_ls.builtins.formatting.stylua,
-          -- null_ls.builtins.formatting.prettier,
           null_ls.builtins.formatting.markdownlint.with {
-            -- pass arguments to modify the null-ls builtin configuration
-            args = {
+            -- pass arguments to modify/override the null-ls builtin configuration
+            extra_args = {
               "--config ",
-              "/home/practicalli/.markdownlint.yaml",
-            },
-          },
-          null_ls.builtins.formatting.cljstyle.with {
-            -- use my own configuration rules
-            args = {
-              "--config ",
-              "/home/practicalli/.config/.cljstyle",
+              "~/.config/astro-config/tool-config/markdownlint.yaml",
             },
           },
         }
