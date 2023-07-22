@@ -364,10 +364,13 @@ null-ls is responsible for running each tool and provides default configuration 
 
 [:globe_with_meridians: null-ls built-in configuration](https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins){target=_blank .md-button}
 
+!!! WARNING "Override config file unconsistent"
+    The configuration file defined by `-config-path` does not always seem to be used when running astronvim.  Quit and start Neovim again seems to use the configuration file.
+
 ??? EXAMPLE "Override null-ls builtin configuration"
     Specify configuration files to use that override the null-ls builtin configuration
 
-    ```lua  hl_lines="9 10 11"
+    ```lua  hl_lines="9 10 11 12"
     return {
       "jose-elias-alvarez/null-ls.nvim",
       opts = function(_, config)
@@ -376,16 +379,17 @@ null-ls is responsible for running each tool and provides default configuration 
         config.sources = {
           null_ls.builtins.formatting.markdownlint.with {
             -- pass arguments to modify/override the null-ls builtin configuration
-            extra_args = {
-              "--config ",
-              "~/.config/astro-config/tool-config/markdownlint.yaml",
-            },
+            extra_args = { 
+              "--config-path", 
+              vim.fn.expand("~/.config/astro-config/tool-config/markdownlint.yaml") },
           },
         }
         return config -- return final config table
       end,
     }
     ```
+    > `vim.fn.expand()` reports luacheck error `accessing undefined variable` but seems to work regardless
+
 
 ??? EXAMPLE "General configuration for LSP Servers"
     ```lua hl_lines="14 15 16 17" title=".config/astronvim-config/init.lua"
