@@ -4,10 +4,38 @@ Run unit tests from within Neovim, showing a summary of test results or a full t
 
 <!-- TODO: investigate test runner with links in test report to jump to tests / code that is cause of error -->
 
-Or run Kaocka or Cognitech-Labs test runners in watch mode in a separate terminal session
+Or run Kaocka test runners in a terminal session, optionally in watch mode to re-run tests on every saved change.
 
-!!! HINT "Kaocha test runner default"
-    [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux) sets Kaocha as the default test runner
+??? INFO "Practicalli sets Kaocha test runner as default"
+    [:globe_with_meridians: practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux) sets Kaocha as the default test runner
+
+    Kaocha test runner set in [:globe_with_meridians: Astrocommunity Clojure language pack](https://github.com/AstroNvim/astrocommunity/tree/main/lua/astrocommunity/pack/clojure)
+
+    ```lua hl_lines="16" title="Astrocommunity Clojure language pack"
+    {
+      "Olical/conjure",
+      -- load plugin on filetypes
+      ft = { "clojure" },
+      init = function()
+        vim.g["conjure#log#hud#width"] = 1
+        vim.g["conjure#log#hud#enabled"] = false
+        vim.g["conjure#log#hud#anchor"] = "SE"
+        vim.g["conjure#log#botright"] = true
+        vim.g["conjure#extract#context_header_lines"] = 100
+        vim.g["conjure#eval#comment_prefix"] = ";; "
+        vim.g["conjure#client#clojure#nrepl#connection#auto_repl#enabled"] = false
+        vim.g["conjure#client#clojure#nrepl#connection#auto_repl#hidden"] = true
+        vim.g["conjure#client#clojure#nrepl#connection#auto_repl#cmd"] = nil
+        vim.g["conjure#client#clojure#nrepl#eval#auto_require"] = false
+        vim.g["conjure#client#clojure#nrepl#test#runner"] = "kaocha"
+
+        vim.api.nvim_create_autocmd("BufNewFile", {
+          group = vim.api.nvim_create_augroup("conjure_log_disable_lsp", { clear = true }),
+          pattern = { "conjure-log-*" },
+          callback = function() vim.diagnostic.disable(0) end,
+          desc = "Conjure Log disable LSP diagnostics",
+        })
+    ```
 
 ## Include test path
 
@@ -27,7 +55,7 @@ clojure -M:env/test:lib/reloaded:repl/rebel
 
 ## External test runner
 
-In a buffer or separate terminal session, start a test runner in watch mode.  Tests run automatically when the code changes are saved
+Open a terminal in Neovim or a separate terminal session to run start a test runner in watch mode.  Tests run automatically when the code changes are saved
 
 Include the `:env/test` alias to include additional paths and dependencies for the test environment configuration, e.g. using additional libraries to run the tests such as mocking or human readable output.
 
