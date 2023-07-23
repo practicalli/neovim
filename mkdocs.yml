@@ -153,6 +153,7 @@ nav:
       - Package Manager: neovim-basics/plugin-manager.md
       - Multiple Cursors: neovim-basics/multiple-cursors.md
       - Zen Mode: neovim-basics/zen-mode.md
+      - Terminal: neovim-basics/terminal.md
   - Clojure REPL Workflow:
       - repl-driven-development/index.md
       - Conjure: repl-driven-development/conjure.md
