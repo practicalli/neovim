@@ -161,6 +161,7 @@ nav:
       - Testing: repl-driven-development/testing.md
   - Version Control:
       - version-control/index.md
+      - version-control/diff.md
       - Lazygit: version-control/lazygit.md
       - Neogit: version-control/neogit.md
       - Octo: version-control/octo.md
