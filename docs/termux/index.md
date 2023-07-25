@@ -10,6 +10,14 @@ Termux can be [installed using the F-Droid marketplace](fdroid-install.md){targe
 ![Ultra-mobile development environment - android with Termux and NeoVim with Keyboardio Atreus keyboard](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/ultra-mobile-development--android-termux-neovim-keyboardio-atreus.jpg)
 
 
+## Keyboard
+
+[Atreus from Keyboardio](https://shop.keyboard.io/products/keyboardio-atreus) is an excellent travel keyboard and was used to write most of the Practicalli Neovim configuration and Neovim book (especially during delays at airports)
+
+
+[Model 100 from Keyboardio](https://shop.keyboard.io/products/model-100) is used by Practicalli at the office 
+
+
 ## Running Termux
 
 Run Termux from the app launcher added as an android app by the F-Droid install.
