@@ -8,7 +8,7 @@ Launch Termux via its application icon.  A black terminal screen will appear wit
 Check for new packages and update them all
 
 ```
-package upgrade -y
+pkg upgrade -y
 ```
 
 If you wish to first check the packages that will be updated, use `pkg --list-upgradable`
