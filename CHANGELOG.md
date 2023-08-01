@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- ci: spell lychee & repository trufflehog linters warn only (false positives) 
 
 ## 2023-07-11
 
