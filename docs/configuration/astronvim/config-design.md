@@ -278,8 +278,6 @@ AstroCommunity packs set up support for each language
       { import = "astrocommunity.pack.yaml" },
     ```
 
-> TODO: Submit a pull request with a Clojure pack to the AstroCommunity
-
 
 ## Themes
 
