@@ -48,6 +48,8 @@ Neovim support
 
 [See Fennel](https://fennel-lang.org/see){target=_blank} is an online antifennel tool to convert between Lua and Fennel.
 
+[Guide to plugin development with fennel](https://russtoku.github.io/posts/nfnl-experience.html){target=_blank .md-button}
+
 
 Emacs support:
 
