@@ -3,18 +3,18 @@
 Practicalli Neovim provides a feature rich configuration for Neovim and all the tools required for effective Clojure development (and other Lisp dialects too).
 
 * [Clojure tooling and a Java SDK](clojure.md) (Java Virtual Machine)
-* [Neovim 8 or nightly build](neovim.md)
+* [Neovim 0.9.x or nightly build](neovim.md)
 * [Neovim package manager and packages](packages/index.md)
 * [NerdFonts](https://www.nerdfonts.com/){target=_blank} for icon support in themes and status line
 
-!!! WARNING "Neovim 0.9.0 latest stable release"
-    Content and configuration in this book has been tested against Neovim 0.8.0 and will be tested against Neovim 0.9.0 over the summer of 2023
+!!! WARNING "Neovim 0.9.x latest stable release"
+    Content and configuration in this book has been tested against Neovim 0.9.x over the summer of 2023
 
 ## Install summary
 
 If you are familiar with most of the tools required, then the quick start list below provides an ultra-terse version on how to get started with Neovim and Clojure development.
 
-* [Install Neovim 8 or greater](https://github.com/neovim/neovim/wiki/Installing-Neovim){target=_blank} - development build recommended
+* [Install Neovim 0.9.x or greater](https://github.com/neovim/neovim/wiki/Installing-Neovim){target=_blank} - development build recommended
     * [Ubuntu daily builds PPA](https://launchpad.net/~neovim-ppa/+archive/ubuntu/unstable){target=_blank}
     * `brew install --HEAD neovim` for Homebrew install of development version
 * Install supporting tools
