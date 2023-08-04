@@ -34,7 +34,11 @@ export XDG_CACHE_HOME=$HOME/.cache
 export SPACEMACSDIR="$XDG_CONFIG_HOME/spacemacs"
 ```
 
-`source ~/.profile` to load the environment variables into the shell, or exit Termux and restart.
+Load the environment variables into the shell, or exit Termux and restart.
+
+```shell title="Load .profile into shell"
+source ~/.profile
+```
 
 !!! Hint "nano editor installed by default"
     `nano` editor is used to edit the commands as the package is installed by default in termux. `vim`, `neovim`, `emacs` or any other Linux command line editor can be used if the package is first installed.  Termux will list packages to install when trying to run a command that is from a package not yet installed.
@@ -57,9 +61,17 @@ pkg install curl wget git openssh
 
 ## [Optional] Configure Termux Settings
 
-`nano ~/.termu/termux.properties` to configure the default settings for termux.
+Edit `~/.termux/termux.properties` to configure the default settings for termux.
 
-`termux-reload-settings` if any of the values are set (restarting Termux is not enough to load setting changes)
+```shell
+nano ~/.termux/termux.properties
+```
+
+Load `termux.properties` if values are changed (restarting Termux is not enough to load setting changes)
+
+```shell
+termux-reload-settings
+```
 
 The defaults are suitable for the majority of uses, although you may wish to consider:
 
