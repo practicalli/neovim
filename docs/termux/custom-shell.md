@@ -54,57 +54,64 @@ nano ~/.zshrc
 
 Save the changes `exit` termux.
 
-<!--
-## Install Prezto community configuration
+Next time zsh is run, powerline10k setup script will run.  If Meslo is not set as the terminal font, the setup script offers to install the font.  Installing the font will restart Termux (without prompting for a restart).
 
-Clone prezto and its sub-modules into `XDG_CONFIG_HOME/zsh` which is typically `~/.config/zsh`
+The powerline10k setup script provides a wizard to configure each part of the prompt.
 
-```
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-${XDG_CONFIG_HOME:-$HOME/.config}/zsh}/.zprezto"
-```
+> `p10k configure` command will manually run the powerline10k setup script.
 
 
-Set the location of the Zsh configuration home with `$ZDOTDIR`, relative to the XDG locations
 
-```
-export ZDOTDIR="${ZDOTDIR:=$XDG_CONFIG_HOME/zsh}"
-```
+??? INFO "Prezto Zsh community configuration"
+    NOTE: previous attempts to use Prezto proved to have issues
 
+    Clone prezto and its sub-modules into `XDG_CONFIG_HOME/zsh` which is typically `~/.config/zsh`
 
-Create a new Zsh configuration by copying/linking the Zsh configuration files provided:
-
-```
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
-```
-
-!!! Hint "Practicalli Zsh configuration"
-    Clone [practicalli/dotfiles](https://github.com/practicalli/dotfiles) and replace the symbolic links in `$XDG_CONFIG_HOME/zsh` with links to the respective Zsh configuration files in the cloned repository (or copy the files if you prefer)
-
-    Copy or create a symbolic like for the `.p10k configuration or skip this to create your own configuration when next starting `zsh`.`
+    ```shell
+    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-${XDG_CONFIG_HOME:-$HOME/.config}/zsh}/.zprezto"
+    ```
 
 
-Edit `$XDG_CONFIG_HOME/.config/zsh/.zshenv` and add the following lines to enable zsh to find the prezto configuration
+    Set the location of the Zsh configuration home with `$ZDOTDIR`, relative to the XDG locations
 
-```shell
-export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:=$HOME/.config}"
-export ZDOTDIR="${ZDOTDIR:=$XDG_CONFIG_HOME/zsh}"
-```
+    ```shell
+    export ZDOTDIR="${ZDOTDIR:=$XDG_CONFIG_HOME/zsh}"
+    ```
 
-Create a symbolic link from `$HOME/.zshenv` to `$XDG_CONFIG_HOME/.config/zsh/.zshenv` (or to the .zshenv file from [practicalli/dotfiles](https://github.com/practicalli/dotfiles))
 
-```shell
-ln -s $XDG_CONFIG_HOME/.config/zsh/.zshenv $HOME/.zshenv
-```
+    Create a new Zsh configuration by copying/linking the Zsh configuration files provided:
 
-Check the configuration is working by loading the .zshenv configuration
+    ```shell
+    setopt EXTENDED_GLOB
+    for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+      ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+    done
+    ```
 
-```shell
-source "$ZDOTDIR/.zshenv"
-```
- -->
+    !!! Hint "Practicalli Zsh configuration"
+        Clone [practicalli/dotfiles](https://github.com/practicalli/dotfiles) and replace the symbolic links in `$XDG_CONFIG_HOME/zsh` with links to the respective Zsh configuration files in the cloned repository (or copy the files if you prefer)
+
+        Copy or create a symbolic like for the `.p10k configuration or skip this to create your own configuration when next starting `zsh`.`
+
+
+    Edit `$XDG_CONFIG_HOME/.config/zsh/.zshenv` and add the following lines to enable zsh to find the prezto configuration
+
+    ```shell
+    export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:=$HOME/.config}"
+    export ZDOTDIR="${ZDOTDIR:=$XDG_CONFIG_HOME/zsh}"
+    ```
+
+    Create a symbolic link from `$HOME/.zshenv` to `$XDG_CONFIG_HOME/.config/zsh/.zshenv` (or to the .zshenv file from [practicalli/dotfiles](https://github.com/practicalli/dotfiles))
+
+    ```shell
+    ln -s $XDG_CONFIG_HOME/.config/zsh/.zshenv $HOME/.zshenv
+    ```
+
+    Check the configuration is working by loading the .zshenv configuration
+
+    ```shell
+    source "$ZDOTDIR/.zshenv"
+    ```
 
 !!! INFO "Using Oh My Bash"
     If preferring Bash, then [ohmybash](https://ohmybash.nntoan.com/){target=_blank} provides a nice command line experience, showing completions clearer, nice themes that provide information.
