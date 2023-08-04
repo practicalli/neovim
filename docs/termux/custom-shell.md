@@ -46,10 +46,13 @@ Powerline10k is a visually appealing prompt with a setup script to visually choo
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-Next time zsh is run, powerline10k setup script will run.  If Meslo is not set as the terminal font, the setup script offers to install the font.  Installing the font will restart Termux.
+Edit `~/.zshrc` and set the theme to `ZSH_THEME="powerlevel10k/powerlevel10k"`
 
-`p10k configure` to manually run the powerline10k setup script.
+```shell
+nano ~/.zshrc
+```
 
+Save the changes `exit` termux.
 
 <!--
 ## Install Prezto community configuration
