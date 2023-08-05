@@ -13,7 +13,11 @@ pkg upgrade -y
 
 If you wish to first check the packages that will be updated, use `pkg --list-upgradable`
 
-`termux-change-repo` to select a specific region to minimise the number of mirrors checked during package upgrades, especially useful if on a limited data plan.
+Select a specific region to minimise the number of mirrors checked during package upgrades, especially useful if on a limited data plan.
+
+```shell
+termux-change-repo
+```
 
 ![Termux Mirrors selection - Europe](https://raw.githubusercontent.com/practicalli/graphic-design/live/termux/termux-mirrors-select-europe.png)
 
@@ -22,9 +26,14 @@ If you wish to first check the packages that will be updated, use `pkg --list-up
 
 ## Configure Freedesktop.org XDG locations
 
-`nano ~/.profile` to edit the `~/.profile` file, adding export directives to set the XDG locations:
+Edit the `~/.profile` file, adding export directives to set the XDG locations:
 
-```bash
+```shell
+nano ~/.profile
+```
+
+```shell title="XDG locations"
+# Common Free desktop.org locations
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
