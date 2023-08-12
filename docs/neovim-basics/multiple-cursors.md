@@ -6,7 +6,7 @@ Mulitple cursors is generally useful when editing smilarly structured lines with
 
 
 === "AstroNvim"
-    ++spc++ ++"g"++ ++"m"++ opens the visual-multi menu 
+    ++spc++ ++"g"++ ++"m"++ opens the visual-multi menu
 
     Using visual select is a simple way to edit multiple lines as the same time.
 
@@ -28,7 +28,7 @@ Select a text pattern to search for and use multiple cursors to add a cursor eac
 
 === "AstroNvim"
 
-    Select the pattern with visual select 
+    Select the pattern with visual select
 
     ++spc++ ++"g"++ ++"m"++ ++"a"++ on each matching text pattern in the buffer
 
@@ -46,13 +46,20 @@ Select a text pattern to search for and use multiple cursors to add a cursor eac
 
     ++esc++ or ++"f"++ ++"d"++ to close multiple cursors.
 
-     
+
 
 ## Command quick reference
 
 `:help g:VM_maps` for a reference of all mappings and instructions on how to change them
 
 === "AstroNvim"
+
+`SPC g m` opens the Visual-Multi menu in normal mode
+
+`g m` opens the Visual-Multi menu in visual mode
+
+`c` to add a cursor to every line in the visually selected region
+
 
 === "Practicalli Neovim Config Redux"
 
