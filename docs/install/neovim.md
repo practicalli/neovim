@@ -14,11 +14,12 @@ Follow the [install Neovim guide for the specific operating system](https://gith
 
     - `ripgrep` fast file contents search (used by telescope)
     - `find-fd` advanced search tool
-    - `xclip` clipboard
+    - `xclip` clipboard as a provider tools for Neovim copy/paste
+    - `luarocks` for LSP servers (AstroNvim)
 
     !!! NOTE ""
         ```shell
-        sudo apt install find-fd xclip
+        sudo apt install find-fd xclip luarocks
         ```
 
     Add `set clipboard+=unnamedplus` to the Neovim configuration to use the Linux clipboard tool
