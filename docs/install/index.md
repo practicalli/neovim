@@ -14,12 +14,13 @@ Practicalli Neovim provides a feature rich configuration for Neovim and all the 
 
 If you are familiar with most of the tools required, then the quick start list below provides an ultra-terse version on how to get started with Neovim and Clojure development.
 
-* [Install Neovim 0.9.x or greater](https://github.com/neovim/neovim/wiki/Installing-Neovim){target=_blank} - development build recommended
-    * [Ubuntu daily builds PPA](https://launchpad.net/~neovim-ppa/+archive/ubuntu/unstable){target=_blank}
+* [Install Neovim 0.9.x or greater](https://github.com/neovim/neovim/wiki/Installing-Neovim){target=_blank}
+    * [Linux AppImage](https://github.com/neovim/neovim/releases/){target=_blank}
     * `brew install --HEAD neovim` for Homebrew install of development version
 * Install supporting tools
     * `tar` & `curl` and a C compiler, e.g. `gcc` for Linux or `clang` for android/termix (required by nvim-treesitter)
-    * ripgrep to search for files (used by telescope)
+    * `ripgrep` & `fd` to search for files (used by telescope)
+    * `luarocks` for LSP support in AstroNvim
 * [Clone Neovim Config](https://github.com/practicalli/neovim-config-redux){target=_blank}
 * Run `nvim` in a terminal and ignore warnings, press `RTN`
     * `SPC P i` or `:PackerInstall` command in Neovim to install packages
