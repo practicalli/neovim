@@ -1,7 +1,8 @@
 # Changelog
 
 ## Unreleased
-- ci: spell lychee & repository trufflehog linters warn only (false positives) 
+- ci: spell lychee & repository trufflehog linters warn only (false positives)
+- intro: update fennel with nfnl project, replacing aniseed
 
 ## 2023-07-11
 
