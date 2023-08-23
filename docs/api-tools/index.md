@@ -3,7 +3,7 @@
 Astrocommunity proivdes plugins to support working with APIs and the JSON format
 
 - [:fontawesome-brands-github: nvim-jqx](https://github.com/AstroNvim/astrocommunity/tree/main/lua/astrocommunity/programming-language-support/nvim-jqx)
-- [:fontawesome-brands-github: nvim-jqx](https://github.com/AstroNvim/astrocommunity/tree/main/lua/astrocommunity/programming-language-support/rest-nvim)
+- [:fontawesome-brands-github: rest-nvim](https://github.com/AstroNvim/astrocommunity/tree/main/lua/astrocommunity/programming-language-support/rest-nvim)
 
 !!! HINT "Included in Practicalli Astronvim Config"
     [Practicalli Astronvim Config](/neovim/configuration/astronvim/) includes nvim-jqx and rest.nvim plugins
