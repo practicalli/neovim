@@ -111,6 +111,8 @@ extra:
     provider: google
     property: G-P29SSN0GV6
   social:
+    - icon: material/web
+      link: https://practical.li/
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/jr0cket/
     - icon: fontawesome/brands/slack
