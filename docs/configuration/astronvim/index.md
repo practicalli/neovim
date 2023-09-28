@@ -11,6 +11,13 @@
 - fzf fuzzy finder (ubuntu archive)
 - gtu (Ubuntu package archive)
 - btm from [GitHub repository releases](https://github.com/ClementTsang/bottom/releases/)
+- node.js (version 20) for Mason install of many LSP servers
+
+!!! INFO "AstroNvim requires node.js"
+    AstroNvim uses Mason to install LSP servers, format and lint tools.  Many LSP servers require node.js to install and function.
+
+    [Node.js install - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/programming-languages/javascript/nodejs/){target=_blank .md-button} 
+
 
 ??? INFO "Kitty Terminal with Nerd Fonts"
     [:globe_with_meridians: Kitty Terminal - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/command-line/kitty-terminal/) provides examples of using Nerd Fonts or Nerd Font symbols with the Kitty terminal.

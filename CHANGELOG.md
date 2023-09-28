@@ -3,6 +3,7 @@
 ## Unreleased
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
 - intro: update fennel with nfnl project, replacing aniseed
+- nodejs requirement for mason lsp server install
 
 ## 2023-07-11
 

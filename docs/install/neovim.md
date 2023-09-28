@@ -9,6 +9,13 @@ Follow the [install Neovim guide for the specific operating system](https://gith
 
 ## Suppoting Tools
 
+Neovim uses several external tools for searching for files, search file contents and using the operating system clipbaord.
+
+!!! INFO "AstroNvim requires node.js"
+    AstroNvim uses Mason to install LSP servers, format and lint tools.  Many LSP servers require node.js to install and function.
+
+    [Node.js install - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/programming-languages/javascript/nodejs/){target=_blank .md-button} 
+
 === "Debian / Ubuntu"
     Install the following packages to support Neovim
 
