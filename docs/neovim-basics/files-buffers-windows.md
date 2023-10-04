@@ -1,10 +1,11 @@
-# Buffers and Windows
+# Files Buffers Windows and Tabs
 
 Buffers hold the contents of files and any other information from processes, e.g. the REPL evaluation log
 
 Windows are a container for a buffer and windows can swap which buffer they show.  Multiple windows, also known as splits, can be present in a Neovim frame.  By default, neovim starts with only one window.
 
-A tab can hold one or more windows and tabs can be shown on a tab-line.
+A tab can hold one or more windows and tabs can be shown on a tab-line. ++"g"++ ++"T"++ toggles between tabs, e.g. Clojure source code and Clojure Log
+
 
 ## File explorer
 
@@ -219,3 +220,25 @@ Windows can be active (contains the cursor), hidden (open but not shown) or inac
 <!-- nmap <silent> <A-Down> :wincmd j<CR> -->
 <!-- nmap <silent> <A-Left> :wincmd h<CR> -->
 <!-- nmap <silent> <A-Right> :wincmd l<CR> -->
+
+
+## Tab pages
+
+A Tab page can hold one or more tabs and are useful for grouping different types of files and information. 
+
+A Tab page holds one or more windows, each window is a view on a buffer, a buffer holds the contents of a file or any other information in the editor memory (repl log, etc).
+
+A tab page can provide a logical grouping of windows, e.g. Clojure source code in one tab, tests in a second tab and REPL log in a third.
+
+Neovim commands may be constrained within the bounds of a tab page (without using the :tab modifier)
+
+Tab pages are often referred to as tabs.
+
+
+=== "AstroNvim"
+    
+    ++"g"++ ++tab++ jump to previously selected tab, commonly used to toggle between two tabs  (Practicalli AstroNvim mapping)
+
+    ++"g"++ ++"t"++ jump to next tab page
+
+    ++"g"++ ++"T"++ jump to previous tab page
