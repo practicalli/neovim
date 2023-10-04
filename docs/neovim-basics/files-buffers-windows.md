@@ -113,6 +113,30 @@ File lists are relative to the directory Neovim was opened from (or Path subsequ
     `SPC f b` provides a file browser to open files, navigate the file space and create new files and directories
 
 
+### Swap file
+
+Neovim creates a swap file, `.swp`, containing the changes made in a buffer to minimise loss should there be an issue with the computer or Neovim.  Changes are written to the swap file after 200 characters or after 4 seconds pause. 
+
+??? INFO "Swap file location"
+    `:swapname` shows the full path to the swap file for the current buffer, e.g. 
+    ```shell
+    /home/practicalli/.local/state/astronvim/swap//%home%practicalli%projects%practicalli%books%neovim%docs%neovim-basics%files-buffers-windows.md.swp`
+    ```
+
+`:preserve` command will write all text from current buffer to the swap file.
+
+`:recover` command overwrites the current buffer with the data from the swap file.  `:recover!` command must be use if the buffer has newer changes than the swap file.  Add a filename after the command to recover to a different file than that contained in the current buffer. 
+
+Opening a file checks if there is an associated swap file and prompts the user 
+
+- (A)bort opening the file
+- (D)elete the swap file
+- (E)dit anyway, select if the file is newer than the swap file
+- (R)ecover the data in the swap file into the file buffer
+
+> `:edit` after the file is open also prompts if there is a swap file.  Selecting (D)elete will delete the swap file without changing the current buffer
+
+
 ## Buffer management
 
 === "AstroNvim"
