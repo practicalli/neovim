@@ -188,7 +188,7 @@ The test in a buffer is not wrapped by default. Set and unset soft text wrapping
     `SPC u w` toggles wrapping of text
 
 === "Practicalli Neovim Config Redux"
-    line wrap disabled in configuration by default.
+    line wrap not enabled in configuration by default.
 
     ```fennel title="fnl/config/init.fnl"
     (nvim.ex.set :nowrap)
