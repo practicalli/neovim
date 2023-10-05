@@ -4,7 +4,7 @@ The fundamental controls of Neovim which apply across all editing tasks.
 
 ## Fundamentals
 
-[:fontawesome-solid-book-open: Files, buffers and windows](files-buffers-windows.md){.md-button}
+[:fontawesome-solid-book-open: File Buffer Window and Tab page](file-buffer-window-tab.md){.md-button}
 [:fontawesome-solid-book-open: Multi-modal Editing](multi-modal-editing.md){.md-button}
 
 ## Editing Tools

@@ -154,7 +154,7 @@ nav:
               - Treesitter: configuration/practicalli/packages/nvim-treesitter.md
   - Neovim Basics:
       - neovim-basics/index.md
-      - File Buffer Window: neovim-basics/files-buffers-windows.md
+      - File Buffer Window Tab: neovim-basics/file-buffer-window-tab.md
       - Multi-modal Editing: neovim-basics/multi-modal-editing.md
       - Search Replace: neovim-basics/search-replace.md
       - Comments: neovim-basics/comments.md

@@ -1,97 +1,57 @@
 # Files Buffers Windows and Tabs
 
-Buffers hold the contents of files and any other information from processes, e.g. the REPL evaluation log
+[Files](#files) are text written to perminant storage, e.g. disk or usb drive and are names with an extension that represents the file type, e.g. `.clj` for clojure, `.md` for markdown, etc.
 
-Windows are a container for a buffer and windows can swap which buffer they show.  Multiple windows, also known as splits, can be present in a Neovim frame.  By default, neovim starts with only one window.
+A [Buffer](#buffers) hold the contents of a file or any other information from processes, e.g. the REPL evaluation log.
 
-A tab can hold one or more windows and tabs can be shown on a tab-line. ++"g"++ ++"T"++ toggles between tabs, e.g. Clojure source code and Clojure Log
+[Windows](#windows) are a view on a buffer and windows can swap which buffer they show.  Multiple windows, also known as splits, can be present in a Neovim frame.  
+
+A [tab page](#tab-pages) (or tab) can hold one or more windows and multiple tab pages can be shown on a tab-line. 
 
 
-## File explorer
+## Files
 
-Visually manage files with a tree view of the current project, using [:fontawesome-brands-github: Neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim){target=_blank}
+Use [Neo-tree.nvim](#using-neo-tree) to visually navigate and manage files using a tree view of the current project. Files and directories can be added, renamed, moved and deleted.
 
+Use [Telescope](#telescope) to select files, typing a name narrows the file list.
+
+
+### Using Neo-tree
 
 === "Astronvim"
     ++spc++ ++"e"++ toggles neo-tree file browser
 
     ++spc++ ++"o"++ toggles between buffer and neo-tree
 
-    Neotree icons
-
-    - yellow dot - unsaved changes
-    - pencil - git added changes
-    - cross - git deleted changes
-    - Warning triangle - lsp diagnostics issues
-
-    ++"h"++ ++"j"++ ++"k"++ ++"l"++ to navigate the file tree hierachy
-
-    `<` and `>` to navigate between File, Bufs and Git sources tabs
-
-    ++question-mark++ shows neotree help, listing key bindings
-
 
 === "Practicalli Neovim Config Redux"
 
     ++spc++ ++"f"++ ++"t"++ ++"t"++ to open file explorer
 
+Within Neo-tree:
 
-## New File
+++"h"++ ++"j"++ ++"k"++ ++"l"++ to navigate the file tree hierachy
 
-Files and directories are created in the path given, relative to the directory in which Neovim was opened.
+++less-than++ and ++greater-than++ to navigate between File, Bufs and Git sources tabs
 
-> `:lcd` to set the current local directory
->  
-> `:!` for a shell command, e.g. `:!mkdir -p path/to/new/directory` create a new directory and any intermediate path
+++question-mark++ shows neotree help, listing key bindings
 
+++"a"++ adds a file, prompting for a name relative to the directory where ++"a"++ was pressed. The name can include new directories to be created. A name ending with ++forward-slash++ will create a directory rather than a file.
 
-=== "Astronvim"
-    ++spc++ ++"w"++ will write all buffer changes to the associate file.
+++"d"++ deletes the current file or directory (including sub-directories), a conformation prompt is shown
 
-    ++spc++ ++"n"++ creates a new buffer that can be written to a given file using `:write path/to/filename`
+++"r"++ to rename a file or directory (use move to change the path)
 
-    `:write path/to/filename` will write the current buffer to a new file.
+++"m"++ to move a file or directory, optionally renaming too
 
-    Use Neotree as a convienient way to create, rename, move and delete files and directories
-
-    ++"a"++ to add a file using the given name, or directory if the name ends in a `/`
-
-    ++"m"++ to move a file or directory
-
-    ++"r"++ to rename a file or directory
-
-    ++"d"++ to delete a file or directory, showing a confirmation prompt first
+!!! INFO "Neotree icons"
+    - yellow dot - unsaved changes
+    - pencil - git added changes
+    - cross - git deleted changes
+    - Warning triangle - lsp diagnostics issues
 
 
-=== "Practicalli Neovim Config Redux"
-
-    `SPC f b ESC C` to create a new file or directory. The base path is shown in the command bar.  Type the name of directories and file name as required. `RTN` to create or `ESC` to cancel.  The newly created directories or file name appears n the Telescope list and scan be selected for opening.
-
-    !!! HINT "Telescope Normal mode and help"
-        `ESC` in Telescope to switch to Normal mode and use comannds, `c` for Create, `r` to rename.
-     
-        `?` to show all the commands available in Telescope
-
-=== "Neovim"
-
-    `:write path/to/filename` will write the current buffer to a new file
-
-    `:!mkdir path/to/directory` will create a new directory
-
-     If a file is already opened, i.e. with `:edit`, there is some short-hand syntax to simplify the typing
-
-     `:!mkdir -p %:h`
-
-     `-p` option createst any parts of the path required to make the full path
-
-     `%` is the neovim name of the current file
-
-     `:h` for the current directory (the “head” of the path).
-
-     `!` is the NeoVim terminal shell command
-
-
-## Select files and directories
+### Telescope
 
 Telescope provides a selector which will narrow the list of matches as a pattern is typed, providing a fast way to find an item in a list.
 
@@ -111,6 +71,53 @@ File lists are relative to the directory Neovim was opened from (or Path subsequ
     `SPC f f` to list files within the scope of the current directory path.
 
     `SPC f b` provides a file browser to open files, navigate the file space and create new files and directories
+
+
+
+### Save File
+
+Files and directories are created in the path given, relative to the directory in which Neovim was opened.
+
+A file must exist for Neovim to write to it.  Neo-tree and Telescope can be used to create files and directories, as can a terminal and the command line integration (++exclamation++)
+
+
+=== "Astronvim"
+    ++spc++ ++"w"++ will write all buffer changes to the associate file.
+
+    ++spc++ ++"n"++ creates a new buffer that can be written to a given file using `:write path/to/filename`
+
+    `:write path/to/filename` will write the current buffer to a new file.
+
+
+=== "Practicalli Neovim Config Redux"
+
+    `SPC f b ESC C` to create a new file or directory. The base path is shown in the command bar.  Type the name of directories and file name as required. `RTN` to create or `ESC` to cancel.  The newly created directories or file name appears n the Telescope list and scan be selected for opening.
+
+    !!! HINT "Telescope Normal mode and help"
+        `ESC` in Telescope to switch to Normal mode and use comannds, `c` for Create, `r` to rename.
+     
+        `?` to show all the commands available in Telescope
+
+=== "Neovim"
+
+    `:lcd` to set the current local directory
+
+    `:write path/to/filename` will write the current buffer to a new file
+
+    `:!mkdir path/to/directory` will create a new directory
+
+     If a file is already opened, i.e. with `:edit`, there is some short-hand syntax to simplify the typing
+
+     `:!mkdir -p %:h`
+
+     `-p` option createst any parts of the path required to make the full path
+
+     `%` is the neovim name of the current file
+
+     `:h` for the current directory (the “head” of the path).
+
+     `!` is the NeoVim terminal shell command, e.g. `:!mkdir -p path/to/new/directory` creates a new directory and any intermediate path
+
 
 
 ### Swap file
@@ -137,7 +144,7 @@ Opening a file checks if there is an associated swap file and prompts the user
 > `:edit` after the file is open also prompts if there is a swap file.  Selecting (D)elete will delete the swap file without changing the current buffer
 
 
-## Buffer management
+## Buffers
 
 === "AstroNvim"
 
@@ -173,7 +180,7 @@ Opening a file checks if there is an associated swap file and prompts the user
     nvim README.md deps.edn src/practicalli/playground.clj test/practicalli/playground.clj
     ```
 
-## Buffer text wrapping
+### Buffer text wrapping
 
 The test in a buffer is not wrapped by default. Set and unset soft text wrapping in a buffer
 
@@ -193,7 +200,7 @@ The test in a buffer is not wrapped by default. Set and unset soft text wrapping
     `:set nowrap` to show lines in full (scroll sideways to see lines longer than the window)
 
 
-## Window management
+## Windows 
 
 Windows can be active (contains the cursor), hidden (open but not shown) or inactive.
 
@@ -254,7 +261,7 @@ A Tab page holds one or more windows, each window is a view on a buffer, a buffe
 
 A tab page can provide a logical grouping of windows, e.g. Clojure source code in one tab, tests in a second tab and REPL log in a third.
 
-Neovim commands may be constrained within the bounds of a tab page (without using the :tab modifier)
+Neovim window commands may be constrained within the bounds of a tab page (without using the :tab modifier)
 
 Tab pages are often referred to as tabs.
 
