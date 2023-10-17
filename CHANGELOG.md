@@ -10,6 +10,7 @@
 - intro: update fennel with nfnl project, replacing aniseed
 - repl: refactor lsp page to refactor tools page
 - repl: simplify conjure page and add more examples
+- repl: update repl and external testing
 
 ## 2023-07-11
 
