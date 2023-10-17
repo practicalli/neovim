@@ -4,6 +4,7 @@
 ### Added
 - nodejs requirement for mason lsp server install
 - repl: initial page on structured editing with parinfer
+- basic: Astronvim notification page with history navigation
  
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)

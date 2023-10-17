@@ -6,6 +6,9 @@
 
 ++enter++ to open the highlighted item in the list in its own popup
 
+![AstroNvim Notifications history](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-notifications-history-light.png?raw=true#only-light){loading=lazy}
+![AstroNvim Notifications history](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-notifications-history-dark.png?raw=true#only-dark){loading=lazy}
+
 
 Notification popups show information, warnings and errors.
 
