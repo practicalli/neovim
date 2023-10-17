@@ -1,12 +1,50 @@
 # Conjure 
 
+![Conjure logo](https://github.com/practicalli/graphic-design/blob/live/logos/conjure-logo-wizard.png?raw=true){align=right loading=lazy style="height:150px;width:150px"}
+
 Conjure is the Clojure REPL client for Neovim.  Code in source code buffers can be evaluated and show the results in-line, providing instant feedback on the behaviour of the code as it develops.
 
-Start a REPL on the command line in the root of a Clojure project, e.g. using Clojure CLI and [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn/){target=_blank}, start a Rebel rich terminal UI REPL with nREPL server support.  Conjure will detect the nREPL server when a Clojure file is opended (.clj .edn .cljs .cljc).
+Start a REPL on the command line in the root of a Clojure project.  The REPL should also start an nREPL server for Conjure to connect too.
 
-```shell
-clojure -M:repl/rebel
-```
+Conjure will detect the nREPL server when a Clojure file is opended (.clj .edn .cljs .cljc).
+
+=== "Practicalli Clojure CLI Config"
+    [:fontawesome-solid-book-open: Practicalli Clojure CLI config](https://practical.li/clojure/clojure-cli/practicalli-config/){target=_blank} contains aliases to  start a REPL process.
+
+    `:repl/rebel` alias starts Rebel rich terminal UI REPL with nREPL server support.  
+    
+    !!! NOTE ""
+        ```shell
+        clojure -M:repl/rebel
+        ```
+
+    > `clojure -M:repl/basic` starts a REPL with nREPL with a minimal REPL UI
+    > 
+    > `clojure -M:repl/headless` starts a REPL with nREPL server but without a REPL prompt (to prevent accidental interaction via the command line)
+
+=== "Manual Alias definition"
+    Add aliases to the user configuration for Clojure, e.g. `XDG_HOME_CONFIG/clojure/deps.edn` or `HOME/.clojure/deps.edn`
+    ```clojure
+      ;; Interactive client REPL with nREPL server for Clojure Editor support
+      :repl/basic
+      {:extra-deps {nrepl/nrepl       {:mvn/version "1.0.0"}
+                    cider/cider-nrepl {:mvn/version "0.37.0"}}
+       :main-opts  ["--main" "nrepl.cmdline"
+                    "--middleware" "[cider.nrepl/cider-middleware]"
+                    "--interactive"]}
+
+      ;; Headless REPL with nREPL server for Clojure Editor support
+      :repl/headless
+      {:extra-deps {nrepl/nrepl       {:mvn/version "1.0.0"}
+                    cider/cider-nrepl {:mvn/version "0.37.0"}}
+       :main-opts  ["--main" "nrepl.cmdline"
+                    "--middleware" "[cider.nrepl/cider-middleware]"]}
+    ```
+    !!! INFO "Practicalli Clojure CLI Config aliases"
+        [:fontawesome-solid-book-open: Practicalli Clojure CLI config](https://practical.li/clojure/clojure-cli/practicalli-config/){target=_blank} defines aliases for a wide range of community tools and libraries that extend the features of Clojure CLI
+
+
+## Fundamentals
 
 `,eb` to evaluate all the Clojure source code in the current buffer, or `,ef` to evaluate the current function.  The result is displayed inline until the cursor moves.  Open the REPL buffer to see larger results or a complete history.
 
