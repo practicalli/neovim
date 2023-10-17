@@ -28,7 +28,7 @@ Conjure will detect the nREPL server when a Clojure file is opended (.clj .edn .
       ;; Interactive client REPL with nREPL server for Clojure Editor support
       :repl/basic
       {:extra-deps {nrepl/nrepl       {:mvn/version "1.0.0"}
-                    cider/cider-nrepl {:mvn/version "0.37.0"}}
+                    cider/cider-nrepl {:mvn/version "0.40.0"}}
        :main-opts  ["--main" "nrepl.cmdline"
                     "--middleware" "[cider.nrepl/cider-middleware]"
                     "--interactive"]}
@@ -36,7 +36,7 @@ Conjure will detect the nREPL server when a Clojure file is opended (.clj .edn .
       ;; Headless REPL with nREPL server for Clojure Editor support
       :repl/headless
       {:extra-deps {nrepl/nrepl       {:mvn/version "1.0.0"}
-                    cider/cider-nrepl {:mvn/version "0.37.0"}}
+                    cider/cider-nrepl {:mvn/version "0.40.0"}}
        :main-opts  ["--main" "nrepl.cmdline"
                     "--middleware" "[cider.nrepl/cider-middleware]"]}
     ```
@@ -49,21 +49,21 @@ Conjure will detect the nREPL server when a Clojure file is opended (.clj .edn .
 `,eb` to evaluate all the Clojure source code in the current buffer, or `,ef` to evaluate the current function.  The result is displayed inline until the cursor moves.  Open the REPL buffer to see larger results or a complete history.
 
 !!! INFO "Conjure School interative tutorial"
-    `:ConjureSchool` runs an interactive tutorial in Neovim, walking through the essential Conjure commands and key bindings 
+    `:ConjureSchool` runs an interactive tutorial in Neovim, walking through the essential Conjure commands and key bindings. Use the commands provided to move through the guide or ++"j"++ / ++"k"++ to scroll through the guide content.
 
-!!! WARNING "Practicalli Neovim config replaces some key bindings"
+??? WARNING "Practicalli Neovim config replaces some key bindings"
     [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank} replaces several key bindings to make them consistent with other Clojure editors
 
 
 ## Evaluation
 
-Clojure REPL workflow encourages code expressions to be evaluated as it is written, providing feedback to ensure expressions are returning the expected results (or to help learn what results a function returns).
+Clojure REPL workflow encourages code expressions to be evaluated as the are written, providing instant feedback to ensure expected results are returned (or learn the kind of results a function returns).
 
-`,eb` - evaluate current buffer - used after first starting the REPL to load in a whole namespace and any required namespaces, or to ensure all changes have been evaluated in the REPL
+`,eb` - evaluate current buffer - used after first starting the REPL to load in a whole namespace and any required namespaces. Use to ensure all changes have been evaluated in the REPL (except those within a `(comment )` form or otherwise commented)
+
+`,er` - evaluate top-level expression (root), ignoring a surrounding `(comment )` form to support the rich comments approach
 
 `,ee` - evaluate expression (from start of current form) - especially useful for nested forms
-
-`,ef` - evaluates top-level expression (`,er` is conjure defualt) - most common command
 
 `,ei` - interrupt evaluation (stop long running evaluations) - stop a long running evaluation
 
@@ -76,38 +76,32 @@ Clojure REPL workflow encourages code expressions to be evaluated as it is writt
 `"cp` - paste contents of the register into buffer. The result of every evaluation is stored in a Neovim register as well as the log.
 
 
-## HUD
-
-[practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank} hides the HUD popup.  Practicalli recommends using the REPL log if the inline evaluation results are not sufficient.
-
-If a REPL is running in the current project, then the HUD shows the REPL is connected.
-
-evaluating an expression shows the result in the HUD as well as inline with the code
-
-`,lr` - clear (refresh HUD and keep it visible)
-
-
 ## REPL buffer (log)
 
-The REPL buffer shows a log of the evaluation results for this session and can use more of the available screen than the HUD.
+The Conjure REPL log shows the results of every evaluation for the current session.
 
-`,ls` - open log in horizontal tab
+`,lt` opens log in a new tab page (tab), `,ls` in horizontal split, `,ls` in vertical tab
 
-`,ls` - open log in vertical tab
+`,lq` - close log window / tab page
 
-`,lt` - open log in tab
+`,lr` - soft REPL reset, leave window open
 
-`,lq` - close log windows (and tabs ??)
+`,lR` - hard REPL reset, close window & delete buffer
 
-`,lr` - soft REPL reset - lead window open
+!!! HINT "Inline evaluation over HUD log popup"
+    [:fontawesome-solid-book-open: Practicalli Neovim configurations](https://practical.li/neovim/configuration/) hide the HUD log popup that is otherwise shown when Conjure connects to the REPL process, i.e. `vim.g["conjure#log#hud#enabled"] = false`
 
-`,lR` - hard REPL reset - close window, delete buffer
+    In-line evaluation results are the main feedback approach used by Practicalli when evaluating code.
+
+    Practicalli recommends using the REPL log when larger results are returned
+
+    Portal data inspector can be sent evaluation history and provides rich visualisation and navigation tools to explore that history in detail.
 
 
 ## Rich comments
 
-Rich comments are a useful way to contain experimental expressions, or expresisons that should only be evaluated directly by a person developing the code (e.g. starting / stoping services, testing api calls, etc.)
+Rich comments are a useful way to contain experimental expressions, or expresisons only evaluated directly by a person developing the code (e.g. starting / stoping services, testing api calls, etc.)
 
 Expressions in rich comments are not included when evaluating the buffer or when expressions are evaluated via a namespace require.
 
-`,ef` to evaluate the top level form within the rich comment, without evaluating the comment expression itself (`,ee` default in Conjure)
+`,er` to evaluate the top level form within the rich comment, without evaluating the comment expression itself.
