@@ -9,6 +9,7 @@
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
 - intro: update fennel with nfnl project, replacing aniseed
 - repl: refactor lsp page to refactor tools page
+- repl: simplify conjure page and add more examples
 
 ## 2023-07-11
 
