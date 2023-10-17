@@ -4,6 +4,8 @@
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
 - intro: update fennel with nfnl project, replacing aniseed
 - nodejs requirement for mason lsp server install
+- repl: initial page on structured editing with parinfer
+ 
 
 ## 2023-07-11
 

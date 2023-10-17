@@ -168,6 +168,7 @@ nav:
       - repl-driven-development/index.md
       - Conjure: repl-driven-development/conjure.md
       - LSP: repl-driven-development/language-server-protocol.md
+      - Structural Editing: repl-driven-development/structural-editing.md
       - Testing: repl-driven-development/testing.md
   - Version Control:
       - version-control/index.md
