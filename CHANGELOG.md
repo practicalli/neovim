@@ -12,6 +12,8 @@
 - repl: refactor lsp page to refactor tools page
 - repl: simplify conjure page and add more examples
 - repl: update repl and external testing
+- repl: update correct key bindings to open vertical and horizontal repl log split
+
 
 ## 2023-07-11
 

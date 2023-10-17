@@ -115,7 +115,7 @@ Results of evaluating an expression are shown in-line.  [Open the REPL log](#rep
 
 The Conjure REPL log shows the results of every evaluation for the current session.
 
-`,lt` opens log in a new tab page (tab), `,ls` in horizontal split, `,ls` in vertical tab
+`,lt` opens log in a new tab page (tab), `,ls` in horizontal split, `,lv` in vertical tab
 
 `,lq` - close log window / tab page
 
@@ -157,5 +157,5 @@ Expressions in rich comments are not included when evaluating the buffer or when
     > The `vim-jack-in` plugin enables Neovim to call out to Clojure tools or Leiningen to start a REPL and connect to it once its started.
 
     A full screen REPL log is displayed.  `, l q` to close the log window and return to the Clojure file.
-    `, l v` to create a vertical split between code and REPL log, `, l h` for a horizontal split.
+    `, l v` to create a vertical split between code and REPL log, `, l s` for a horizontal split.
 
