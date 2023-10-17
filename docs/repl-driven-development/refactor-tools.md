@@ -1,4 +1,10 @@
-# Language Server Protocol (LSP)
+# Refactor tools
+
+Neovim and common plugins provide many text oriented tools useful for refactoring code.
+
+Clojure LSP server and Neovim LSP client support use static analysis of the project source code to allow provide common code refactor tools.
+
+## Language Server Protocol (LSP)
 
 Using [clojure-lsp](https://clojure-lsp.io/) server and [Neovim Treesitter](https://tree-sitter.github.io/tree-sitter/) as an LSP client, code is statically analysed to provide auto-completion data, advanced editing actions such as refactor, live formatting, etc.
 
@@ -8,7 +14,7 @@ Using [clojure-lsp](https://clojure-lsp.io/) server and [Neovim Treesitter](http
     Repeat the key binding to move the cursor to the documentation popup window and use ++"j"++ ++"k"++ to scroll the documentation
 
 
-## Key maps
+### Key maps
 
 === "Practicalli AstroNvim Config"
 
@@ -47,6 +53,6 @@ Using [clojure-lsp](https://clojure-lsp.io/) server and [Neovim Treesitter](http
     - `<leader>lr` Show all implementations list for item under the cursor (Using telescope plugin interface)
 
 
-## Limitations to investigate
+### Limitations to investigate
 
 * Neovim client does not seem to support namespace rename (AstroNvim)

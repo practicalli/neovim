@@ -1,11 +1,14 @@
 # Changelog
 
 ## Unreleased
-- ci: spell lychee & repository trufflehog linters warn only (false positives)
-- intro: update fennel with nfnl project, replacing aniseed
+### Added
 - nodejs requirement for mason lsp server install
 - repl: initial page on structured editing with parinfer
  
+### Changed
+- ci: spell lychee & repository trufflehog linters warn only (false positives)
+- intro: update fennel with nfnl project, replacing aniseed
+- repl: refactor lsp page to refactor tools page
 
 ## 2023-07-11
 
