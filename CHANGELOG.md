@@ -13,7 +13,7 @@
 - repl: simplify conjure page and add more examples
 - repl: update repl and external testing
 - repl: update correct key bindings to open vertical and horizontal repl log split
-
+- mkdocs: update material emoji extension name to support Material 9.4 (latest version)
 
 ## 2023-07-11
 
