@@ -75,3 +75,29 @@ The three "core" operations of add/delete/change can be done with the keymaps ys
 
 ++"g"++ ++"x"++ on a URL to open in the default browser
 
+## Markdown
+
+`s` in visual mode substitues the selection with the next character typed
+
+
+`v` to create visual selection, `s` to substitute the current selection, `****` to create a bold style, `P` with the cursor on the second `*` pastes the text that was visually selected. 
+
+### Text style
+<!--TODO: add video of manipulating text for markdown -->
+
+`ysiw*` surrounds current word with `*` to create italic text, `.` repeats to make bold text style.
+
+`ds*` removes `*` from current word.
+
+
+### nvim-surround
+
+nvim-surround plugin assists with adding style characters around text, e.g adding links, italic or bold text, etc.
+
+`S` on a visual selection will surround the text with the next character.  `.` repeat not supported.
+
+
+**Create a link**
+
+`v` and motion keys to select text, `S [` to surround text with `[]` creating the text of a link anchor.  Use `S (` to surround the URL of the link.
+
