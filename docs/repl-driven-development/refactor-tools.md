@@ -53,6 +53,14 @@ Using [clojure-lsp](https://clojure-lsp.io/) server and [Neovim Treesitter](http
     - `<leader>lr` Show all implementations list for item under the cursor (Using telescope plugin interface)
 
 
-### Limitations to investigate
+
+## Troubleshooting
+
+++spc++ ++"l"++ ++"i"++ shows the LSP server information for the current filetype, e.g. Clojure
+
+![LSP Server information showing local clojure-lsp install](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-lsp-clojure-server-information-local-install-light.png?raw=true#only-light){loading=lazy}
+![LSP Server information showing local clojure-lsp install](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-lsp-clojure-server-information-local-install-dark.png?raw=true#only-dark){loading=lazy}
+
+## Limitations to investigate
 
 * Neovim client does not seem to support namespace rename (AstroNvim)
