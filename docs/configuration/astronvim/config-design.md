@@ -75,7 +75,7 @@ The [:fontawesome-brands-github: AstroCommunity](https://github.com/AstroNvim/as
               },
               {
                 "gpanders/nvim-parinfer",
-                ft = lisp_dialects,
+                ft = { "clojure" },
                 config = function()
                   vim.g.parinfer_force_balance = true
                   vim.g.parinfer_comment_chars = ";;"
