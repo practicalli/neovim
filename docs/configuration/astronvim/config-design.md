@@ -127,6 +127,24 @@ The [:fontawesome-brands-github: AstroCommunity](https://github.com/AstroNvim/as
         `:TSInstall clojure` in Neovim will install the parser. A parser not included in the `opts.ensure_installed` configuration must be updated manually each time treesitter plugin is updated
 
 
+??? HINT "Switch to Parinfer Parens mode for Paredit structural editing"
+    Changing the Parinfer mode to `paren` gives a structured editing experience similar to Paredit (or Smartparens).
+
+    Add the following configuration within the `return {}` table in the `plugins/community.lua` file to set the parinfef mode, i.e. `paren`, `smart` or `indent` (default
+
+    ```lua title="plugins/community.lua"
+      {
+        "gpanders/nvim-parinfer",
+        ft = { "clojure" },
+        config = function()
+          vim.g.parinfer_force_balance = true
+          vim.g.parinfer_comment_chars = ";;"
+          vim.g.parinfer_mode = "paren"
+        end,
+      },
+    ```
+
+
 ### Clojure Mappings
 
 Conjure mappings are defined respective to a `<localleader>` value. Define a local leader in the AstroNvim user configuration, e.g. `,` and all Conjure mappings become available.
