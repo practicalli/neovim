@@ -23,6 +23,30 @@ Use [Telescope](#telescope) to select files, typing a name narrows the file list
 
     ++spc++ ++"o"++ toggles between buffer and neo-tree
 
+    !!! EXAMPLE "Configure hidden files"
+        Configure Neotree to display hidden files and directories by default.  They are shown with a different visual style (subtle color) compared to the other files and directories.  
+
+        `H` with the cursor in neotree window will still toggle the display of hidden files and directories.
+
+        Optionally, specify files or directories to never show.
+        ```lua title="Practicalli Astronvim-config: plugins/core.lua"
+          {
+            "nvim-neo-tree/neo-tree.nvim",
+            opts = {
+              filesystem = {
+                filtered_items = {
+                  -- when true, they will just be displayed differently than normal items
+                  visible = true,
+                  -- remains hidden even if visible is toggled to true, this overrides always_show
+                  never_show = {
+                    ".DS_Store",
+                    "thumbs.db",
+                  },
+                },
+              },
+            },
+          },
+        ```
 
 === "Practicalli Neovim Config Redux"
 

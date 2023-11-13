@@ -5,6 +5,7 @@
 - nodejs requirement for mason lsp server install
 - repl: initial page on structured editing with parinfer
 - basic: Astronvim notification page with history navigation
+- basics: configure neotree to show hidden files and directories
  
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
