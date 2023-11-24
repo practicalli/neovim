@@ -7,6 +7,7 @@ Search and replace within the current line or buffer:
 
 Search and replace across a project:
 
+- `SPC s` AstroNvim search and replace commands
 - Clojure LSP for symbols, etc.
 
 
@@ -18,7 +19,7 @@ Search and replace across a project:
 
 `:substitute` or `:s` vim command will highlight the matches for a text pattern and substitute for a new pattern
 
-??? INFO "Built-in help for the command" 
+??? INFO "Neovim :help :substitute" 
     ```vim
     :help :substitute
     ```
@@ -26,8 +27,11 @@ Search and replace across a project:
 Subsitute the first matching patterns in the current line
 
 ```vim
-:s/current-pattern/new-pattern
+:s/current-pattern/new-pattern/
 ```
+
+> If the new-pattern text is ommitted, then substitute deletes the current-pattern occurances, e.g `:s/current-pattern//`
+
 
 Subsitute all the matching patterns in the current line,  `g` representing all occurances in a line
 
@@ -41,12 +45,79 @@ Use `%` to specify the current buffer as the scope to change all matches
 :%s/current-pattern/new-pattern/g
 ```
 
+An inclusive line range can be specified to narrow the search
+
+```vim
+:4,24s/current-pattern/new-pattern/g
+```
+
+`.` can be used to represent the current line of buffer
+
+`$` to represent the last line of the current buffer
+
+```vim
+:.,$s/current-pattern/new-pattern/g
+```
+
+Match the whole word 
+
+
+```vim
+:.,$s/\<current-pattern\>/new-pattern/g
+```
+
+### Substitute history
+
+`:s` and the ++arrow-up++ / ++arrow-down++ will navigate through the substitution history for the current session (from when Neovim was last opened if session was not restored)
+
+
 ### Confirm replacement
 
 ++"c"++ option at the end prompt for confirmation to replace each occurance
 
+```vim
+:%s/current-pattern/new-pattern/gc
+```
+
 ++"y"++ confirms the repacement 
 
+++"l"++ confirms the repacement and quits
+
+++"n"++ skips the current occurance and goes to the next one
+
+++"y"++ or ++esc++ to quit substitution
+
+
+### Regular expression
+
+regular expressions can be used as a search pattern. 
+
+To replace all lines starting with ‘foo’ with ‘NeoVim Rocks’:
+
+```vim
+:%s/^foo.*/NeoVim rocks/gc
+```
+
+Replace all instances of ‘apple’, ‘orange’, and ‘mango’ with ‘fruit’:
+
+```vim
+:%s/apple\|orange\|mango/fruit/g
+```
+
+Remove trailing blank space at the end of each line:
+
+```vim
+:%s/\s\+$//e
+```
+
+
+## Matching case
+
+`i` option disables the default case sensitive search
+
+```vim
+:%s/current-pattern/new-pattern/gi
+```
 
 ### Visual Select
 
@@ -70,12 +141,24 @@ A potentially more effecitve approach:
 
 !!! INFO "Evaluating..."
 
+=== "AstroNvim"
 
-[Vims new :cdo command](https://chrisarcand.com/vims-new-cdo-command/)
+    [Spectre](https://github.com/nvim-pack/nvim-spectre){target=_blank} is available via the AstroNvim Community project pack and included in the Practicalli astronvim-config    
+
+    ++spc++ ++"s"++ is the search and replace menu
+
+    [ripgrep](https://github.com/BurntSushi/ripgrep){target=_blank} and [sed](https://www.gnu.org/software/sed/) are required.
+
+    [Spectre](https://github.com/nvim-pack/nvim-spectre){target=_blank .md-button}    
 
 
-??? INFO ":help cdo"
-    ```help
+=== "Neovim commands"
+
+[Vims new :cdo command](https://chrisarcand.com/vims-new-cdo-command/){target=_blank .md-button}
+
+
+??? INFO "Neovim :help :cdo"
+    ```vim
     EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
     							*:cdo*
     :cdo[!] {cmd}		Execute {cmd} in each valid entry in the quickfix list.
@@ -137,3 +220,22 @@ A potentially more effecitve approach:
     				etc.
      			Otherwise it works the same as `:ldo`.
     ```
+
+<!-- TODO: review :cdo and similar commands
+
+    use ack.vim/ag.vim with the :cdo command, an intuitive and near-native project-wide find-and-replace solution is now available. 
+
+    To replace all instances of foo with bar:
+
+    ```vim
+    :Ack foo
+    :cdo s/foo/bar/g | update
+    ```
+
+    :cdo isn’t the only command that was added around this functionality:
+
+    - :cdo[!] {cmd} - Execute {cmd} in each valid entry in the quickfix list.
+    - :cfdo[!] {cmd} - Execute {cmd} in each file in the quickfix list.
+    - :ld[o][!] {cmd} - Execute {cmd} in each valid entry in the location list for the current window.
+    - :lfdo[!] {cmd} - Execute {cmd} in each file in the location list for the current window.
+-->
