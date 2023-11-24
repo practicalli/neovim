@@ -3,11 +3,11 @@
 Search and replace within the current buffer:
 
 - use [:fontawesome-solid-book-open: multiple cursors in more detail](../multiple-cursors.md) for in-place editing (visual-multi plugin) 
-- `:%substitue` [:fontawesome-solid-book-open: `:substitue` neovim command](substitue.md) for search and replace
+- `:%substitue` [:fontawesome-solid-book-open: `:substitue` neovim command](substitute.md) for search and replace
 
 Search and replace across a project:
 
-- ++spc++ ++"s"++ search and replace commands using Spectre (AstroNvim community plugin)
+- ++spc++ ++"s"++ ++"s"++ [search and replace commands using Spectre](spectre.md) (AstroNvim community plugin)
 - ++spc++ ++"l"++ ++"r"++ to rename symbols using Clojure LSP (AstroNvim) 
 
 

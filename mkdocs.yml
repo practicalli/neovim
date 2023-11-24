@@ -160,6 +160,7 @@ nav:
       - Search Replace:
           - neovim-basics/search-replace/index.md
           - Substitute: neovim-basics/search-replace/substitute.md
+          - Spectre: neovim-basics/search-replace/spectre.md
       - Comments: neovim-basics/comments.md
       - Snippets: neovim-basics/snippets.md
       - Package Manager: neovim-basics/plugin-manager.md
