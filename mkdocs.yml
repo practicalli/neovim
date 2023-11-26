@@ -209,8 +209,10 @@ nav:
       - reference/aligning-text.md
       - Neovim:
           - reference/neovim/index.md
-          - reference/neovim/standard-path.md
-          - Language Providers: reference/neovim/language-providers.md
           - Standard Path: reference/neovim/standard-path.md
+          - Quickfix: reference/neovim/quickfix.md
+          - Changelist: reference/neovim/changelist.md
+          - Jumplist: reference/neovim/jumplist.md
+          - Language Providers: reference/neovim/language-providers.md
       - Lua Language:
           - reference/lua-language/index.md
