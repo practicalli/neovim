@@ -157,6 +157,7 @@ nav:
       - File Buffer Window Tab: neovim-basics/file-buffer-window-tab.md
       - Notifications: neovim-basics/notifications.md
       - Multi-modal Editing: neovim-basics/multi-modal-editing.md
+      - Navigation: neovim-basics/navigation.md
       - Search Replace:
           - neovim-basics/search-replace/index.md
           - Substitute: neovim-basics/search-replace/substitute.md
