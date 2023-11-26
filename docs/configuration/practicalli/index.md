@@ -1,9 +1,9 @@
 # Neovim Config Redux
 
-![Practicalli Neovim - effective Clojure programming with Neovim, Clojure LSP and supporting tools](https://raw.githubusercontent.com/practicalli/graphic-design/live/book-covers/practicalli-neovim-book-banner.svg)
+![Practicalli Neovim - effective Clojure programming with Neovim, Clojure LSP and supporting tools](https://raw.githubusercontent.com/practicalli/graphic-design/live/book-covers/practicalli-neovim-book-banner-fennel.svg)
 
 
-[practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank .md-button}
+[:fontawesome-brands-github: practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank .md-button}
 
 [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank} is a Fennel based configuraion with a wide range of plugins and telescope extensions.
 
