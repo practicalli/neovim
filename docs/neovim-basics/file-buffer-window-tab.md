@@ -60,7 +60,7 @@ Within Neo-tree:
 
 ++question-mark++ shows neotree help, listing key bindings
 
-++"a"++ adds a file, prompting for a name relative to the directory where ++"a"++ was pressed. The name can include new directories to be created. A name ending with ++forward-slash++ will create a directory rather than a file.
+++"a"++ adds a file, prompting for a name relative to the directory where ++"a"++ was pressed. The name can include new directories to be created. A name ending with ++slash++ will create a directory rather than a file.
 
 ++"d"++ deletes the current file or directory (including sub-directories), a conformation prompt is shown
 
