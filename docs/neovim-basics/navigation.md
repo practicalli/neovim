@@ -86,12 +86,16 @@ Jump to a specific line using the number as a command
 :127
 ```
 
+
 ## Jumplist
 
 `:jumps` shows the Neovim jumplist containing all points from any buffer recently jumped to using neovim commands
 
 - ++ctrl++ ++"o"++ jump back 
 - ++ctrl++ ++"i"++ jump forward 
+- ++"ctrl"++ and navigation key (hjkl) to move to changelist window
+- ++"q"++ closes the jumplist buffer
+
 
 ## Changes
 
@@ -99,11 +103,13 @@ Jump to a specific line using the number as a command
 
 - ++"g"++ ++semi-colon++ jump back (previous edit)
 - ++"g"++ ++full-stop++ jump forward
+- ++"ctrl"++ and navigation key (hjkl) to move to changelist window
+- ++"q"++ closes the changelist buffer
 
 
 ## Search in buffer
 
-++forward-slash++ searches buffer for the following pattern
+++slash++ searches buffer for the following pattern
 
 - ++"n"++ jumps to next match
 - ++"N"++ jumps to previous match
