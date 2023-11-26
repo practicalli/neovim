@@ -1,10 +1,86 @@
 # Multi-modal Editing
 
-!!! TODO "TODO: Add multi-modal editing in Neovim guide"
-    [Practicalli Spacemacs](https://practical.li/spacemacs/spacemacs-basics/evil/) has useful reference content on multi-modal editing (Evil mode).
+Multi-modal editing has several states optomised for interacting with text
 
-    Most of this content is the same in Neovim with a few exceptions
+* **normal** - manipulating and navigating existing text (default state)
+* **insert** - writing new text
+* **visual** - selecting blocks of text
 
+Normal mode to insert mode:
+
+- ++"i"++ insert before the cursor
+- ++"a"++ append after the curor
+- ++"o"++ insert on new line after current line
+- ++"i"++ insert a new line previous to current line
+
+++"v"++ to enter visual select, using navigation and/or motions to select a range.
+
+++esc++ to leave insert or visual mode and return to normal mode.
+
+
+## Command language
+
+Learn to speak modal editing commands as sentences to effectively learn Multi-modal editing
+
+**Verbs** start the sentence and are the action to perform
+
+- ++"c"++ change
+- ++"d"++ delete
+- ++"f"++ find character
+- ++"g"++ go
+- ++"s"++ substitute
+- ++"v"++ visual select
+- ++"y"++ yank (copy)
+
+**Modifiers (motions)** follow verbs and define where the cursor moves to.
+
+- ++single-quote++ a mark location
+- ++brace-left++ ++brace-right++ beginning/end of paragraph
+- ++"a"++ around
+- ++"f"++ find (includes character)
+- ++"i"++ inside
+- ++"S"++ surround (nvim-surround)
+++"t"++ till (up until)
+
+**Text objects** provide scope for verbs and modifiers
+
+- ++"b"++ block/parentheses
+- ++"p"++ paragraph
+- ++"s"++ sentence  
+- ++"t"++ tag, e.g. html/xml tag
+- ++"w"++ word
+- ++"W"++ word delimited by only space
+
+
+??? EXAMPLE "Examples of speaking Evil"
+    Practice speaking evil with these examples
+
+    | Keybinding  | Description                                                           |
+    |-------------|-----------------------------------------------------------------------|
+    | `c i s`     | change inside current sentence (change the whole sentence)            |
+    | `c i "`     | change inside double quotes                                           |
+    | `c f )`     | change from cursor to next `)` character                              |
+    | `c s ' "`   | change by the surrounding single quotes with double quotes            |
+    | `c t X`     | change till the character `X` (not including `X`)                     |
+    | `c /foo`    | change until the first search result of ‘foo’                         |
+    | `d d`       | delete current line                                                   |
+    | `d i w`     | delete inside the current word (delete word)                          |
+    | `v t SPC`   | visual select till the next `Space` character                         |
+    | `v s ]`     | visually select and surround with `[]` without spaces                 |
+    | `v s [`     | as above with `[ ]` with spaces between parens and content            |
+    | `g v`       | go to last visual selection (select last visual selection)            |
+    | `v a p`     | visually select around current paragraph                              |
+    | `SPC v s "` | visually select current work and surround with `""`                   |
+    | `v i w s "` | visually select, insert around current word, and surround with quotes |
+    | `y y`       | yank (copy) current line                                              |
+    | `y w`       | yank (copy) current word                                              |
+    | `y @ a`     | yank (copy) to mark `a` (`m a` creates a mark called `a`)             |
+
+
+!!! HINT "Evil Reference and Tips"
+    [Evil quick reference guide](vim-quick-reference.md)
+    [Evil tips for developers](vim-tips-for-developers.md)
+    [Speaking Vim](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118){target=_blank}
 
 ## Selecting text 
 
@@ -101,3 +177,7 @@ nvim-surround plugin assists with adding style characters around text, e.g addin
 
 `v` and motion keys to select text, `S [` to surround text with `[]` creating the text of a link anchor.  Use `S (` to surround the URL of the link.
 
+
+
+
+[Practicalli Spacemacs - Evil reference](https://practical.li/spacemacs/spacemacs-basics/evil/){target=_blank .md-button}
