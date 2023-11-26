@@ -193,19 +193,19 @@ nav:
       - Clojure: termux/clojure-development.md
       - Neovim: termux/neovim.md
   - Reference:
-      - Vim Style Editing:
-          - reference/vim-style/index.md
-          - reference/vim-style/case.md
-          - reference/vim-style/g-menu.md
-          - reference/vim-style/key-binding-reference.md
-          - reference/vim-style/moving-around.md
-          - reference/vim-style/motions.md
-          - reference/vim-style/narrowing.md
-          - reference/vim-style/speaking-vim.md
-          - reference/vim-style/vim-quick-reference.md
-          - reference/vim-style/vim-tips-for-developers.md
-          - reference/vim-style/visual-select.md
-          - reference/vim-style/z-menu.md
+      - Modal Editing:
+          - reference/modal-editing/index.md
+          - reference/modal-editing/case.md
+          - reference/modal-editing/g-menu.md
+          - reference/modal-editing/key-binding-reference.md
+          - reference/modal-editing/moving-around.md
+          - reference/modal-editing/motions.md
+          - reference/modal-editing/narrowing.md
+          - reference/modal-editing/speaking-vim.md
+          - reference/modal-editing/vim-quick-reference.md
+          - reference/modal-editing/vim-tips-for-developers.md
+          - reference/modal-editing/visual-select.md
+          - reference/modal-editing/z-menu.md
       - reference/aligning-text.md
       - Neovim:
           - reference/neovim/index.md
