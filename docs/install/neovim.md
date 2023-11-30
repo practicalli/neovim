@@ -20,13 +20,13 @@ Neovim uses several external tools for searching for files, search file contents
     Install the following packages to support Neovim
 
     - `ripgrep` fast file contents search (used by telescope)
-    - `find-fd` advanced search tool
+    - `fd-find` advanced search tool
     - `xclip` clipboard as a provider tools for Neovim copy/paste
     - `luarocks` for LSP servers (AstroNvim)
 
     !!! NOTE ""
         ```shell
-        sudo apt install find-fd xclip luarocks
+        sudo apt install fd-find xclip luarocks
         ```
 
     Add `set clipboard+=unnamedplus` to the Neovim configuration to use the Linux clipboard tool
