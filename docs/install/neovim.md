@@ -2,7 +2,7 @@
 
 [Neovim releases](https://github.com/neovim/neovim/releases){target=_blank .md-button}
 
-Neovim 8 is the minimum version for this configuration and Neovim 0.9.0 is currently being tested.
+Neovim 0.0 is the minimum version for this configuration and Neovim 0.9.4 is currently being used by Practicalli.
 
 Follow the [install Neovim guide for the specific operating system](https://github.com/neovim/neovim/wiki/Installing-Neovim){target=_blank}.
 
