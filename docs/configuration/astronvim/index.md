@@ -69,11 +69,26 @@ AstroNvim provides a [:fontawesome-brands-github: template repository](https://g
 
 Create a shell alias that sets `NVIM_APPNAME` to the location of the AstroNvim community config
 
-Add alias to `.bashrc` for Bash shell or `.zshenv` for Zsh
+Add alias to `.bashrc` for Bash shell or `.zshrc` for Zsh
 
 ```config
 alias astro="NVIM_APPNAME=astronvim nvim"
 ```
+
+!!! HINT "dot aliases file for both bash and zsh"
+    Create a `.config/aliases` file containing all shell aliases when often switching between different shells, avoiding the need to define aliases twice
+
+    Source the `.config/aliases` file from within `.bashrc` and `.zshrc`
+    
+    ```shell title=".bashrc"
+    if [ -f ~/.config/aliases ]; then
+        . ~/.config/aliases
+    fi
+    ```
+
+    ```shell title=".zshrc"
+    source $HOME/.config/aliases
+    ```
 
 [:fontawesome-solid-book-open: Configure shell alias](/neovim/configuration/){target=_blank .md-button}
 
