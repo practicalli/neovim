@@ -101,8 +101,8 @@ Jump to a specific line using the number as a command
 
 `:changes` shows the Neovim changelist containing all points in the current buffer which have changed
 
-- ++"g"++ ++semi-colon++ jump back (previous edit)
-- ++"g"++ ++full-stop++ jump forward
+- ++"g"++ ++semicolon++ jump back (previous edit)
+- ++"g"++ ++period++ jump forward
 - ++"ctrl"++ and navigation key (hjkl) to move to changelist window
 - ++"q"++ closes the changelist buffer
 
