@@ -6,6 +6,7 @@
 - repl: initial page on structured editing with parinfer
 - basic: Astronvim notification page with history navigation
 - basics: configure neotree to show hidden files and directories
+- install: add MacOSX homebrew section
  
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
@@ -15,6 +16,7 @@
 - repl: update repl and external testing
 - repl: update correct key bindings to open vertical and horizontal repl log split
 - mkdocs: update material emoji extension name to support Material 9.4 (latest version)
+
 
 ## 2023-07-11
 

@@ -1,28 +1,32 @@
 # Install Neovim
 
-[Neovim releases](https://github.com/neovim/neovim/releases){target=_blank .md-button}
+ The [:fontawesome-brands-github: Neovim release page](https://github.com/neovim/neovim/releases){target=_blank} includes install steps for specific operating system.
 
 Neovim 0.9 is the minimum version for this configuration and Neovim 0.9.4 is currently being used by Practicalli.
 
 Follow the [install Neovim guide for the specific operating system](https://github.com/neovim/neovim/wiki/Installing-Neovim){target=_blank}.
+
+[:fontawesome-brands-github: Neovim releases](https://github.com/neovim/neovim/releases){target=_blank .md-button}
 
 
 ## Suppoting Tools
 
 Neovim uses several external tools for searching for files, search file contents and using the operating system clipbaord.
 
-??? INFO "AstroNvim requires node.js"
-    AstroNvim uses Mason to install LSP servers, format and lint tools.  Many LSP servers require node.js to install and function.
+Install the following tools to support Neovim and AstroNvim
 
-    [Node.js install - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/programming-languages/javascript/nodejs/){target=_blank .md-button} 
+- `ripgrep` fast file contents search (used by telescope)
+- `find-fd` advanced search tool
+- `xclip` x11 clipboard as a provider tools for Neovim copy/paste
+- `luarocks` for LSP servers (AstroNvim)
 
-=== "Debian / Ubuntu"
-    Install the following packages to support Neovim
+!!! INFO "AstroNvim requires node.js"
+    AstroNvim uses Mason to install LSP servers, format and lint tools. Many of the LSP servers require node.
 
-    - `ripgrep` fast file contents search (used by telescope)
-    - `fd-find` advanced search tool
-    - `xclip` clipboard as a provider tools for Neovim copy/paste
-    - `luarocks` for LSP servers (AstroNvim)
+    [Node.js install - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/programming-languages/javascript/nodejs/){target=_blank} 
+
+
+=== "Debian Packages"
 
     !!! NOTE ""
         ```shell
@@ -33,56 +37,108 @@ Neovim uses several external tools for searching for files, search file contents
 
     ??? INFO "Wayland requires wl-clipboard"
         Install the `wl-clipboard` package to use the Wayland desktop clipboard with Neovim
+        !!! NOTE ""
+            ```shell
+            sudo apt install wl-clipboard
+            ```
+
+=== "MacOSX Homebrew"
+
+    MacOSX requires the libintl and gettext tools as well as the other supporting tools.
+
+    !!! NOTE ""
         ```shell
-        sudo apt install wl-clipboard
+        brew install libintl gettext ripgrep fd luarocks
         ```
 
 ## Install Neovim
 
 === "Linux AppImage"
 
-    Download the AppImage from the Neovim Release page and place the file on the executable path, e.g. `$HOME/.local/bin`
+    Download the [Linux AppImage](https://github.com/neovim/neovim/releases/){target=_blank} from the Neovim Release page and place the file on the executable path, e.g. `$HOME/.local/bin`
 
     Make the AppImage executable
 
     ```shell
-    chmod u+x nvim.appimage
+    chmod u+x $HOME/.local/bin/nvim.appimage
     ```
 
-    Run neovim from the AppImage
-
-    ```shell
-    nvim.appimage
-    ```
-
-    Create a symbolic link called `nvim` to the nvim.appimage
+    Create a symbolic link called `nvim` to the nvim.appimage file.
 
     ```shell
     ln -s $HOME/.local/bin/nvim.appimage $HOME/.local/bin/nvim
     ```
 
-=== "Ubuntu/Debian"
-    Download the Linux AppImage from the Neovim Releases page
+    `nvim` command can now be run in a terminal from any directory.
 
-    Or build Neovim from source and generate a `.deb` file from the build.
 
-    ??? INFO "Linux version only packaged as AppImage from Neovim 0.9 onward"
+=== "MacOSX Homebrew"
+    
+    Install from Homebrew or via the Neovim Release page
+
+    **Homebrew**
+    ```shell
+    brew install neovim
+    ```
+
+    **Neovim Release**
+
+    Download `nvim-macos.tar.gz` From the [**Neovim GitHub release page**](https://github.com/neovim/neovim/releases)
+
+    Avoid "unknown developer" warning from MacOSX
+
+    ```shell
+    xattr -c ./nvim-macos.tar.gz
+    ```
+
+    Make a local apps directory for neovim (and other things like node.js, etc.)
+    
+    ```bash
+    mkdir -P ~/.local/apps
+    ```
+    
+    Extract the neovim archive
+    
+    ```bash
+    tar zvxf nvim-macos.tar.gz -C ~/.local/apps/
+    ```
+    
+    Create the `~/.local/bin/nvim` symbolic link to include Neovim on the OS execution path 
+
+    > `echo $PATH` to check `.local/bin` is included in the execution the path by the Operating System command line shell
+    
+    ```bash
+    ln -s ~/.local/apps/nvim-macos/bin/nvim ~/.local/bin/nvim
+    ```
+
+    Run `nvim`  (or setup a Neovim configuration first, e.g. AstroNvim)
+
+
+=== "Debian Package"
+ 
+    !!! INFO "Linux version only packaged as AppImage from Neovim 0.9 onward"
+
+    A `.deb` file can be created after [building Neovim from source](https://github.com/neovim/neovim/blob/master/BUILD.md).
+
 
 === "Build from Source"
 
-    [Neovim Build Prerequisites for each operating system](https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites)
+    [:fontawesome-brands-github: Neovim build guide](https://github.com/neovim/neovim/blob/master/BUILD.md){target=_blank .md-button}
+        
+    [:fontawesome-brands-github: Neovim Build Prerequisites for each operating system](https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites)
 
-    ??? INFO "Ubuntu/Debian Packages"
+    ??? INFO "Debian Packages"
         Install packages to support building Neovim
         ```shell
         sudo apt-get install ninja-build gettext cmake unzip curl
         ```
 
-    Clone the [Neovim GitHub repository](https://github.com/neovim/neovim/wiki/Building-Neovim)
+    Clone the [:fontawesome-brands-github: Neovim GitHub repository](https://github.com/neovim/neovim){target=_blank}
 
     ```shell
     git clone --origin neovim https://github.com/neovim/neovim.git
     ```
+
     Change into the cloned directory and change to the `stable` release to build version 0.9.0
 
     ```shell
@@ -92,7 +148,7 @@ Neovim uses several external tools for searching for files, search file contents
     Build a release
 
     ```shell
-    make CMAKE_BUILD_TYPE=Release                                                                                                              ─╯
+    make CMAKE_BUILD_TYPE=Release
     ```
 
     Once the nvim release has been built, create a debian package for use with Ubuntu and Debian systems
