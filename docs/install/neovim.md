@@ -20,6 +20,12 @@ Install the following tools to support Neovim and AstroNvim
 - `xclip` x11 clipboard as a provider tools for Neovim copy/paste
 - `luarocks` for LSP servers (AstroNvim)
 
+!!! INFO "Treesitter requires a C compiler"
+    nvim-treesitter requires a C compiler , e.g. `gcc` for Linux or `clang` for android/termix
+
+    The C compiler is used to compile langauge support for treesiter.
+
+
 !!! INFO "AstroNvim requires node.js"
     AstroNvim uses Mason to install LSP servers, format and lint tools. Many of the LSP servers require node.
 
