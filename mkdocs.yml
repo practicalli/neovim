@@ -139,6 +139,7 @@ nav:
       - Overview: install/index.md
       - Clojure: install/clojure.md
       - Neovim: install/neovim.md
+      - Neovide: install/neovide.md
   - Neovim configuration:
       - configuration/index.md
       - AstroNvim:

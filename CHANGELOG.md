@@ -7,6 +7,7 @@
 - basic: Astronvim notification page with history navigation
 - basics: configure neotree to show hidden files and directories
 - install: add MacOSX homebrew section
+- install: neovide install and configuration
  
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
