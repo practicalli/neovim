@@ -32,7 +32,18 @@ Neovide provides a GUI for Neovim and supports the use of AstroNvim community co
 
     Run the extracted dmg file and use the install wizard to copy Neovide to the Applications directory.
 
-    
+    Create symbolic link from Neovide install to `~/.local/bin` 
+
+    ```bash
+    ln -s /Applications/neovide.app/Contents/MacOS/neovide ~/.local/bin/neovide
+    ```
+
+    Add alias to use neovide with astronvim configuration to `.bashrc` , `.zshrc` or shared `shell-aliases` file
+
+    ```shell
+    alias neovide="NVIM_APPNAME=astronvim neovide"
+    ```
+
 
 ## Neovide with NVIM_APPNAME
 
