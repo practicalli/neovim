@@ -8,6 +8,7 @@
 - basics: configure neotree to show hidden files and directories
 - install: add MacOSX homebrew section
 - install: neovide install and configuration
+- source-control: add nvimdiff configuration and use for Git diff views
  
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
@@ -17,6 +18,7 @@
 - repl: update repl and external testing
 - repl: update correct key bindings to open vertical and horizontal repl log split
 - mkdocs: update material emoji extension name to support Material 9.4 (latest version)
+- source-control: move version-control to source-control for consistency in Practicalli books
 
 
 ## 2023-07-11

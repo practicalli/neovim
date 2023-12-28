@@ -175,13 +175,13 @@ nav:
       - Structural Editing: repl-driven-development/structural-editing.md
       - Refactor Tools: repl-driven-development/refactor-tools.md
       - Testing: repl-driven-development/testing.md
-  - Version Control:
-      - version-control/index.md
-      - version-control/diff.md
-      - Lazygit: version-control/lazygit.md
-      - Neogit: version-control/neogit.md
-      - Octo: version-control/octo.md
-      - Open In GitHub: version-control/open-in-github.md
+  - Source Control:
+      - source-control/index.md
+      - source-control/diff.md
+      - Lazygit: source-control/lazygit.md
+      - Neogit: source-control/neogit.md
+      - Octo: source-control/octo.md
+      - Open In GitHub: source-control/open-in-github.md
   - API tools:
       - api-tools/index.md
   - Ultra-Mobile Neovim:

@@ -7,7 +7,28 @@ Compare differences between different files or between a file and its versions.
 > file path completion helps select the correct file for comparison
 
 
-# Git Diff
+## nvimdiff
+
+`git difftool` can be configured to use Neovim to show Git diff views of all the files that have changes
+
+!!! EXAMPLE "Configure the Git client to use `nvimdiff` as the `difftool`"
+    ```config
+    [diff]
+      # Neovim diff tool
+      tool = nvimdiff
+    ```
+
+Run `git difftool` in the root of the project to show the diff of each changed file.
+
+!!! NOTE ""
+    ```shell
+    git difftool
+    ```
+
+++colon++ ++"q"++ ++"a"++ to close the current diff view.  The command line prompts to open the next file as a diff view (assuming there are more files to view).
+
+
+## Git Diff
 
 DiffView compares working space and staged changes side by side, or a diff for git merge conflicts.
 
