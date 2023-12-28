@@ -9,10 +9,17 @@ Compare differences between different files or between a file and its versions.
 
 ## nvimdiff
 
-`git difftool` can be configured to use Neovim to show Git diff views of all the files that have changes
+The Git `difftool` can specify Neovim as a diff viewer to show Git diff views of all the files that have changes
 
-!!! EXAMPLE "Configure the Git client to use `nvimdiff` as the `difftool`"
-    ```config
+!!! NOTE "nvimdiff as a command line option"
+    ```shell
+    git difftool --tool=nvimdiff <optional-filename>
+    ```
+
+`git difftool` can be configured to use Neovim 
+
+!!! EXAMPLE "Git client config to set `nvimdiff` as `difftool`"
+    ```config title="~/.config/git/config"
     [diff]
       # Neovim diff tool
       tool = nvimdiff
@@ -22,27 +29,27 @@ Run `git difftool` in the root of the project to show the diff of each changed f
 
 !!! NOTE ""
     ```shell
-    git difftool
+    git difftool <optional-filename>
     ```
 
 ++colon++ ++"q"++ ++"a"++ to close the current diff view.  The command line prompts to open the next file as a diff view (assuming there are more files to view).
 
 
-## Git Diff
+
+## DiffView
 
 DiffView compares working space and staged changes side by side, or a diff for git merge conflicts.
 
-++SPC++ ++"g"++ ++"d"++ or `d` in neogit status buffer (`SPC g s`) will open diffview in a new tab
-
-`q` to return to neogit status buffer
-
-![Neovim diffview plugin - side by side view of changes in git for local working directory and staging](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-neogit-diffview-side-by-side.png)
-
-* Green - added lines
-* Yellow - changed line
-* Red - deleted lines
-
 === "AstroNvim"
+
+    ++spc++ ++"g"++ ++"d"++ or `d` in neogit status buffer (`SPC g s`) will open diffview in a new tab
+
+    ++bracket-left++ ++"c"++ to move to previous hunk
+
+    ++bracket-right++ ++"c"++ to move to next hunk
+
+    ++spc++ ++"g"++ to return to neovim buffer or ++"q"++ to return to neogit status buffer
+
     ++ctrl++ ++"h"++ / ++"j"++ / ++"k"++ / ++"l"++ to navigate between open splits
 
 === "Practicalli Neovim Config"
@@ -51,3 +58,7 @@ DiffView compares working space and staged changes side by side, or a diff for g
     `SPC w l` and `SPC w h` to move cursor between diff buffer and sidebar buffer
 
 ![Neovim diffview plugin - side by side view of changes in git for local working directory and staging](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-neogit-diffview-side-by-side.png)
+
+* Green - added lines
+* Yellow - changed line
+* Red - deleted lines
