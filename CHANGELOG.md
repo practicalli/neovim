@@ -9,6 +9,7 @@
 - install: add MacOSX homebrew section
 - install: neovide install and configuration, Linux & MacOSX
 - source-control: add nvimdiff configuration and use for Git diff views
+- install: neovim release install on MacOSX
  
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
