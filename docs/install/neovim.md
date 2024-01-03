@@ -48,30 +48,6 @@ Install the following tools to support Neovim and AstroNvim
             sudo apt install wl-clipboard
             ```
 
-=== "MacOSX GitHub Release"
-
-    From the [**Neovim GitHub release page**](https://github.com/neovim/neovim/releases):
-
-    1. Install `libintl`and `gettext` (e.g. via `brew install libintl gettext`)
-    2. Download **nvim-macos.tar.gz**
-    3. Run `xattr -c ./nvim-macos.tar.gz` (to avoid "unknown developer" warning)
-    4. Make local apps directory for neovim (and other things like node.js, etc.)
-    
-    ```shell
-    mkdir -P ~/.local/apps
-    ```
-    
-    5. Extract the neovim download
-    
-    ```shell
-    tar zvxf nvim-macos.tar.gz -C ~/.local/apps/
-    ```
-    
-    6. Create nvim symbolic link in `~/.local/bin` to include Neovim on the OS execution path (check `.local/bin` is added to the execution the path by the Operating System command line shell)
-
-    ```shell
-    ln -s ~/.local/apps/nvim-macos/bin/nvim ~/.local/bin/nvim
-    ```
 
 === "MacOSX Homebrew"
 
@@ -83,6 +59,8 @@ Install the following tools to support Neovim and AstroNvim
         ```
 
 ## Install Neovim
+
+Use the [GitHub releases](https://github.com/neovim/neovim/releases/) for the latest version of Neovim, or use a Package manager for the operating system if the version of Neovim is 0.9.x
 
 === "Linux AppImage"
 
@@ -144,6 +122,31 @@ Install the following tools to support Neovim and AstroNvim
 
     Run `nvim`  (or setup a Neovim configuration first, e.g. AstroNvim)
 
+
+=== "MacOSX GitHub Release"
+
+    From the [**Neovim GitHub release page**](https://github.com/neovim/neovim/releases):
+
+    1. Install `libintl`and `gettext` (e.g. via `brew install libintl gettext`)
+    2. Download **nvim-macos.tar.gz**
+    3. Run `xattr -c ./nvim-macos.tar.gz` (to avoid "unknown developer" warning)
+    4. Make local apps directory for neovim (and other things like node.js, etc.)
+    
+    ```shell
+    mkdir -P ~/.local/apps
+    ```
+    
+    5. Extract the neovim download
+    
+    ```shell
+    tar zvxf nvim-macos.tar.gz -C ~/.local/apps/
+    ```
+    
+    6. Create nvim symbolic link in `~/.local/bin` to include Neovim on the OS execution path (check `.local/bin` is added to the execution the path by the Operating System command line shell)
+
+    ```shell
+    ln -s ~/.local/apps/nvim-macos/bin/nvim ~/.local/bin/nvim
+    ```
 
 === "Debian Package"
  
