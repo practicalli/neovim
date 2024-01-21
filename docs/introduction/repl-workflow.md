@@ -107,7 +107,7 @@ A journal should cover the following aspects
 The design journal can be used to create meaningful documentation for the project very easily and should prevent time spent on repeating the same conversations.
 
 !!! HINT "Example design journal"
-    [Design journal for TicTacToe game using Reagent, ClojureScript and Scalable Vector Graphics](https://github.com/practicalli-john/tictactoe-reagent/blob/master/src/tictactoe_reagent/core.cljs#L124){target=_blank}
+    [Design journal for TicTacToe game using Reagent, ClojureScript and Scalable Vector Graphics](https://github.com/practicalli-johnny/tictactoe-reagent/blob/master/src/tictactoe_reagent/core.cljs#L124){target=_blank}
 
 ## Viewing data structures
 
