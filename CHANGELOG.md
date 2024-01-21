@@ -20,6 +20,7 @@
 - repl: update correct key bindings to open vertical and horizontal repl log split
 - mkdocs: update material emoji extension name to support Material 9.4 (latest version)
 - source-control: move version-control to source-control for consistency in Practicalli books
+- intro: update sponsorship link and text in intro and readme
 
 
 ## 2023-07-11
