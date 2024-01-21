@@ -10,6 +10,7 @@
 - install: neovide install and configuration, Linux & MacOSX
 - source-control: add nvimdiff configuration and use for Git diff views
 - install: neovim GitHub release install on MacOSX
+- basics: neovim registers guide
  
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)

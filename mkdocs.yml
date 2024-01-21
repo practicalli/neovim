@@ -159,6 +159,7 @@ nav:
       - Notifications: neovim-basics/notifications.md
       - Multi-modal Editing: neovim-basics/multi-modal-editing.md
       - Navigation: neovim-basics/navigation.md
+      - Registers: neovim-basics/registers.md
       - Search Replace:
           - neovim-basics/search-replace/index.md
           - Substitute: neovim-basics/search-replace/substitute.md
