@@ -24,6 +24,7 @@
 - intro: update pull request description
 - basics: file marks for jumping within a file
 - dev: add checklist and description sections to pull request template
+- basics: navigate cursor location history
 
 
 ## 2023-07-11

@@ -86,6 +86,13 @@ Jump to a specific line using the number as a command
 :127
 ```
 
+## Navigate position history
+
+++ctrl+"o" jumps to a previous postion in the cursor history
+
+++ctrl+"i" jumps to a previous postion in the cursor history
+
+
 ## File marks
 
 Navigate within the current file or globally using file marks.
