@@ -88,16 +88,29 @@ Jump to a specific line using the number as a command
 
 ## File marks
 
-Navigate within the current file using file marks.
+Navigate within the current file or globally using file marks.
 
-++"m"++ followed by a character creates a mark within the current file.
+++"m"++ followed by a lower case character creates a mark within the current file.
+
+++"m"++ followed by an upper case character creates a global mark.
 
 ++grave++ (backtick) followed by a character jumps to the mark created
 
-++"m"++ ++"f"++ creates a mark lablled `f`
+++spc++ ++"f"++ ++single-quote++ displays marks in telescope popup
 
-++grave++ ++"f"++ jumps to the mark labelled `f`
+!!! EXAMPLE "File marks within file"
+    ++"m"++ ++"f"++ creates a mark lablled `f`
 
+    ++grave++ ++"f"++ jumps to the mark labelled `f`
+
+??? EXAMPLE "Global mark to jump between source and test code"
+    ++"m"++ ++"S"++ with the cursor in the source code file.
+
+    ++"m"++ ++"T"++ with the cursor in the test code file.
+
+    ++grave++ ++"S"++ to jump to the source code
+
+    ++grave++ ++"T"++ to jump to the source code
 
 ## Jumplist
 
