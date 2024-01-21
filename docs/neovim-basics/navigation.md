@@ -86,6 +86,18 @@ Jump to a specific line using the number as a command
 :127
 ```
 
+## File marks
+
+Navigate within the current file using file marks.
+
+++"m"++ followed by a character creates a mark within the current file.
+
+++grave++ (backtick) followed by a character jumps to the mark created
+
+++"m"++ ++"f"++ creates a mark lablled `f`
+
+++grave++ ++"f"++ jumps to the mark labelled `f`
+
 
 ## Jumplist
 

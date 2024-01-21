@@ -22,6 +22,7 @@
 - source-control: move version-control to source-control for consistency in Practicalli books
 - intro: update sponsorship link and text in intro and readme
 - intro: update pull request description
+- basics: file marks for jumping within a file
 
 
 ## 2023-07-11
