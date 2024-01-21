@@ -58,7 +58,7 @@ Use the search box to quickly find a specific topic
 
 All sponsorship funds are used to support the continued development of [Practicalli series of books and videos](https://practical.li/){target=_blank}, although most of the work is done at personal cost and time.
 
-Thank you to [Cognitect](https://www.cognitect.com/){target=_blank}, [Nubank](https://nubank.com.br/){target=_blank} and a wide range of other [sponsors](https://github.com/sponsors/practicalli-johnny#sponsors){target=_blank} from the Clojure community for your continued support
+Thanks to [Cognitect](https://www.cognitect.com/){target=_blank}, [Nubank](https://nubank.com.br/){target=_blank} and a wide range of other [sponsors](https://github.com/sponsors/practicalli-johnny#sponsors){target=_blank} from the Clojure community for your continued support
 
 
 ## Creative commons license
