@@ -1,5 +1,18 @@
 # Neovim features
 
+!!! INFO "Neovim News for new developments"
+    Keep up to date with new features within Neovim
+
+    ```shell
+    :help news.txt
+    ```
+    Use the version name to view specific features of a release
+    ```shell
+    :help news-0.9.5.txt
+    ```
+
+## Neovim features for development
+
 A clean UI provides for a distraction free development experience, with only the essential information presented in the Neovim statusline or inline with the code
 
 * [Conjure](#conjure) - automatic Clojure REPL connection, evaluation, test runners

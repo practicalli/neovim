@@ -12,6 +12,7 @@
 - install: neovim GitHub release install on MacOSX
 - basics: neovim registers guide
 - basics: creating a directory with telescope or commands
+- intro: add :help news to features page
  
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
