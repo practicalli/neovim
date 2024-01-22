@@ -15,7 +15,7 @@ Neovim has [:globe_with_meridians: a diverse set of plugins](https://neovimcraft
 
 Practicalli Neovim provides install & user guide focused on a simple, powerful and satisfying [REPL Driven workflow](introduction/repl-workflow.md) for Clojure.
 
-![Clojure REPL Driven Development workflow](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-driven-development-lifecycle-concept.png)
+![Clojure REPL Driven Development workflow](https://github.com/practicalli/graphic-design/raw/live/clojure/clojure-repl-workflow-concept.png?raw=true)
 
 
 ## Quick Start
