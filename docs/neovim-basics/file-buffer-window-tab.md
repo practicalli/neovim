@@ -23,7 +23,7 @@ Use [Telescope](#telescope) to select files, typing a name narrows the file list
 
     ++spc++ ++"o"++ toggles between buffer and neo-tree
 
-    !!! EXAMPLE "Configure hidden files"
+    ??? EXAMPLE "Configure hidden files"
         Configure Neotree to display hidden files and directories by default.  They are shown with a different visual style (subtle color) compared to the other files and directories.  
 
         `H` with the cursor in neotree window will still toggle the display of hidden files and directories.
@@ -110,7 +110,7 @@ A file must exist for Neovim to write to it.  Neo-tree and Telescope can be used
 
     ++spc++ ++"n"++ creates a new buffer that can be written to a given file using `:write path/to/filename`
 
-    `:write path/to/filename` will write the current buffer to a new file.
+    ++spc++ ++"W"++ was added to Practicalli Astro Config as a key binding for `:write path/to/filename` which writes the current buffer to a new file, prompting for the file name.
 
 
 === "Practicalli Neovim Config Redux"
@@ -142,6 +142,28 @@ A file must exist for Neovim to write to it.  Neo-tree and Telescope can be used
 
      `!` is the NeoVim terminal shell command, e.g. `:!mkdir -p path/to/new/directory` creates a new directory and any intermediate path
 
+
+### Directories
+
+++"a"++ in Neotree to create a file or by adding a ++forward-slash++ at the end of the name a directory is created.
+
+Use the `mkdir` shell command to create a new directory, which is created relative to the current path, which can be checked with `:lcd`
+
+`:!mkdir full/path/to/new/directory`
+
+If a file is already opened, i.e. with `:edit`, there is some short-hand syntax to simplify the typing
+
+```shell
+:!mkdir -p %:h
+```
+
+`mkdir -p` - the UNIX command to create a folder, the `-p` option creating any parts of the path required to make the full path
+
+`%` - name of the current file 
+
+`:h` - for the current directory (the “head” of the path). 
+
+`!` - the NeoVim terminal shell command
 
 
 ### Swap file

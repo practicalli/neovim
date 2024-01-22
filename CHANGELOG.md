@@ -11,6 +11,7 @@
 - source-control: add nvimdiff configuration and use for Git diff views
 - install: neovim GitHub release install on MacOSX
 - basics: neovim registers guide
+- basics: creating a directory with telescope or commands
  
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
