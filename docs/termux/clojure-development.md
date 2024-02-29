@@ -26,7 +26,7 @@ git clone git@github.com:practicalli/clojure-deps-edn.git ~/.config/clojure
 Use the Linux install with a prefix path pointing to Termux equivalent of `/usr/local`.  Find the path using `echo $PATH` and remove `bin` from the end.  Without the prefix Clojure will not install correctly
 
 ```bash
-❯ curl -L -O https://github.com/clojure/brew-install/releases/latest/download/linux-install.sh && \
+curl -L -O https://github.com/clojure/brew-install/releases/latest/download/linux-install.sh && \
 chmod +x linux-install.sh && \
 ./linux-install.sh --prefix /data/data/com.termux/files/usr/
 ```
