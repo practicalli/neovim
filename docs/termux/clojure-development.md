@@ -26,22 +26,26 @@ git clone git@github.com:practicalli/clojure-deps-edn.git ~/.config/clojure
 Use the Linux install with a prefix path pointing to Termux equivalent of `/usr/local`.  Find the path using `echo $PATH` and remove `bin` from the end.  Without the prefix Clojure will not install correctly
 
 ```bash
-curl -O https://download.clojure.org/install/linux-install-1.11.1.1149.sh
-
-chmod +x linux-install-1.11.1.1149.sh
-
-./linux-install-1.11.1.1149.sh --prefix /data/data/com.termux/files/usr/
+❯ curl -L -O https://github.com/clojure/brew-install/releases/latest/download/linux-install.sh && \
+chmod +x linux-install.sh && \
+./linux-install.sh --prefix /data/data/com.termux/files/usr/
 ```
 
 `clojure` binary is installed in the existing bin, lib and share directories in `/data/..../usr/`, placing that binary on the system execution path.
 
-Test by running a REPL session, for example with Rebel Readline
+Test by calling `clojure` with the --help option, which shows the options available to the command
 
+```shell
+clojure --help
 ```
+
+Also consider running a repl to ensure the dependency download is working correctly
+
+```shell
 clojure -M:repl/rebel
 ```
 
-> optionally install rlwrap package if using the basic repl terminal UI
+> optionally install rlwrap package if using the basic repl terminal UI with the `clj` wrapper
 
 
 ## Install Clojure LSP
