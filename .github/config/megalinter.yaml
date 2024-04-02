@@ -2,10 +2,15 @@
 # Configuration file for MegaLinter
 #
 # General configuration:
-# https://oxsecurity.github.io/megalinter/configuration/
+# https://megalinter.io/latest/configuration/
 #
 # Specific Linters:
-# https://oxsecurity.github.io/megalinter/latest/supported-linters/
+# https://megalinter.io/latest/supported-linters/
+
+# ------------------------
+# Validate all files if true
+# or new / edited files if false
+VALIDATE_ALL_CODEBASE: false
 
 # ------------------------
 # Linters
@@ -29,6 +34,7 @@ ENABLE:
 
 # CLOJURE_CLJ_KONDO_CONFIG_FILE: ".github/config/clj-kondo-ci-config.edn"
 # CLOJURE_CLJ_KONDO_ARGUMENTS: "--lint deps.edn"
+# CLOJURE_CLJ_KONDO_FILTER_REGEX_EXCLUDE: "dev|develop"
 # CLOJURE_CLJ_KONDO_FILTER_REGEX_EXCLUDE: "resources"
 
 # CREDENTIALS_SECRETLINT_DISABLE_ERRORS: true
@@ -43,11 +49,13 @@ MARKDOWN_MARKDOWN_LINK_CHECK_CONFIG_FILE: ".github/config/markdown-link-check.js
 MARKDOWN_REMARK_LINT_DISABLE_ERRORS: true
 # MARKDOWN_MARKDOWN_TABLE_FORMATTER_DISABLE_ERRORS: false
 
+REPOSITORY_GITLEAKS_CONFIG_FILE: ".github/config/gitleaks.toml"
 REPOSITORY_TRUFFLEHOG_DISABLE_ERRORS: true # Errors only as warnings
 
 # SPELL_CSPELL_DISABLE_ERRORS: true
 SPELL_MISSPELL_DISABLE_ERRORS: true
-SPELL_LYCHEE_DISABLE_ERRORS: true # Errors are only warnings
+SPELL_LYCHEE_CONFIG_FILE: ".github/config/lychee.toml"
+# SPELL_LYCHEE_DISABLE_ERRORS: true # Errors are only warnings
 
 # YAML_PRETTIER_FILTER_REGEX_EXCLUDE: (docs/)
 # YAML_YAMLLINT_FILTER_REGEX_EXCLUDE: (docs/)
