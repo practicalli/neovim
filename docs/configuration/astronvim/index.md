@@ -1,5 +1,12 @@
 # AstroNvim
 
+!!! WARNING "AstroNvim 3.x versions only - 4.x version not supported yet"
+    AstroNvim 4 has been reorganised to be a collection of packages with a user configuration.
+
+    The Practicalli AstroNvim Config will not work with AstroNvim 4.x
+
+    A new repository will be created to support AstroNvim 4
+
 [:globe_with_meridians: AstroNvim](https://astronvim.com/) is a community configuration with an engaging UI, using Lazy for plugin management (Neovim packages) and Mason for package management (LSP, DAP, format and lint tools)
 
 [:fontawesome-brands-github: Practicalli AstroNvim Config](https://github.com/practicalli/astronvim-config) is a user configuration that extends AstroNvim and imports packages from the [:fontawesome-brands-github: AstroNvim Community](https://github.com/AstroNvim/user_example).

@@ -9,6 +9,8 @@
 ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝
 ```
 
+# AstroNvim Version 3.x ONLY - v4 NOT supported
+
 
 ## Book status
 
