@@ -1,7 +1,7 @@
 # Neovim for Clojure development
 
-![Neovim with Fennel configuration for Clojure developers](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-clojure-development-example-light.png?raw=true#only-light){loading=lazy}
-![Neovim with Fennel configuration for Clojure developers](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-clojure-development-example-dark.png?raw=true#only-dark){loading=lazy}
+![Neovim with AstroNvim configuration for Clojure developers](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/neovim-astronvim-clojure-example-light.png?raw=true#only-light){loading=lazy}
+![Neovim with AstroNvim configuration for Clojure developers](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/neovim-astronvim-clojure-example-dark.png?raw=true#only-dark){loading=lazy}
 
 !!! QUOTE "coding at the speed of thought"
     Neovim is incredibly fast and efficient, so thoughts flow from brain to editor without unnecessary delay.

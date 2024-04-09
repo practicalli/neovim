@@ -1,15 +1,11 @@
 # AstroNvim
 
-!!! WARNING "AstroNvim 3.x versions only - 4.x version not supported yet"
+!!! WARNING "AstroNvim 4.x version supported"
     AstroNvim 4 has been reorganised to be a collection of packages with a user configuration.
-
-    The Practicalli AstroNvim Config will not work with AstroNvim 4.x
-
-    A new repository will be created to support AstroNvim 4
 
 [:globe_with_meridians: AstroNvim](https://astronvim.com/) is a community configuration with an engaging UI, using Lazy for plugin management (Neovim packages) and Mason for package management (LSP, DAP, format and lint tools)
 
-[:fontawesome-brands-github: Practicalli AstroNvim Config](https://github.com/practicalli/astronvim-config) is a user configuration that extends AstroNvim and imports packages from the [:fontawesome-brands-github: AstroNvim Community](https://github.com/AstroNvim/user_example).
+[:fontawesome-brands-github: Practicalli AstroNvim User Config](https://github.com/practicalli/astronvim-user-config) is a user configuration that extends AstroNvim and imports packages from the [:fontawesome-brands-github: AstroNvim Community](https://github.com/AstroNvim/user_example).
 
 
 ## Prerequisits
@@ -29,48 +25,32 @@
 ??? INFO "Kitty Terminal with Nerd Fonts"
     [:globe_with_meridians: Kitty Terminal - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/command-line/kitty-terminal/) provides examples of using Nerd Fonts or Nerd Font symbols with the Kitty terminal.
 
-## Clone AstroNvim
-
-Clone AstroNvim repository to `$HOME/.config/astronvim/`
-
-!!! NOTE ""
-    ```shell
-    git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/astronvim
-    ```
-
-> `$HOME/.config/nvim` can be used instead if only ever using one configuration for Neovim.
-
 
 ## Clone AstroNvim user config
 
-AstroNvim provides a [:fontawesome-brands-github: template repository](https://github.com/AstroNvim/user_example) to create a user configuration. The template includes [:fontawesome-brands-github: AstroNvim Community](https://github.com/AstroNvim/user_example) configuration to make it easier to extend the feature of AstroNvim.
+AstroNvim is a [:fontawesome-brands-github: template repository](https://github.com/AstroNvim/template) providing a user configuration that includes AstroNvim plugins. 
 
-[:fontawesome-brands-github: Practicalli AstroNvim Config](http://github.com/practicalli/astronvim-config) is a clone of the AstroNvim user config with additional configuration to support Clojure development.
+[:fontawesome-brands-github: AstroNvim Community](https://github.com/AstroNvim/astrocommunity/) configuration to make it easier to extend the feature of AstroNvim.
 
-=== "Practicalli AstroNvim Config"
-    Clone the [:fontawesome-brands-github: Practicalli AstroNvim config](https://github.com/practicalli/astronvim-config) which provides a user configuration with [Clojure support](clojure.md)
+[:fontawesome-brands-github: Practicalli AstroNvim User Config](http://github.com/practicalli/astronvim-user-config) is a clone of the AstroNvim user config with additional configuration to support Clojure development.
+
+=== "Practicalli AstroNvim User Config"
+    Clone the [:fontawesome-brands-github: Practicalli AstroNvim User Config](https://github.com/practicalli/astronvim-user-config) which provides [Clojure support](clojure.md) on top of AstroNvim.
     !!! NOTE ""
         ```shell
-        git clone http://github.com/practicalli/astronvim-config $HOME/.config/astronvim/lua/user
-        ```
-    Or clone to a separate directory and create a symbolic link
-    !!! NOTE ""
-        ```shell
-        git clone http://github.com/practicalli/astronvim-config $HOME/.config/astronvim-config && \
-        ln -s $HOME/.config/astronvim-config/ $HOME/.config/astronvim/lua/user
+        git clone http://github.com/practicalli/astronvim-user-config $HOME/.config/astronvim4
         ```
 
 === "AstroNvim User Config"
-    Create your own user configuration using the AstroNvim user configuration template repository.
+    Create your own user configuration using the [:fontawesome-brands-github: AstroNvim template repository](https://github.com/AstroNvim/template) to create a new GitHub repository.
 
-    Create a repository from the AstroNvim/user_example repository template
+    Clone the newly created repository
 
-    ![AstroNvim user example repository - use this template](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-user-config-template-github-repository.png?raw=true){loading=lazy}
-
-    Clone the newly created repository into the existing AstroNvim configuration, in a `user` directory
+    !!! NOTE ""
     ```shell
-    git clone git@github.com/<github-account>/<new-repository> $HOME/.config/astronvim/lua/user
+    git clone git@github.com/AstroNvim/template $HOME/.config/astronvim4
     ```
+
 
 ## Configure shell alias
 
@@ -78,9 +58,10 @@ Create a shell alias that sets `NVIM_APPNAME` to the location of the AstroNvim c
 
 Add alias to `.bashrc` for Bash shell or `.zshrc` for Zsh
 
-```config
-alias astro="NVIM_APPNAME=astronvim nvim"
-```
+!!! EXAMPLE ""
+    ```config
+    alias astro="NVIM_APPNAME=astronvim4 nvim"
+    ```
 
 !!! HINT "dot aliases file for both bash and zsh"
     Create a `.config/aliases` file containing all shell aliases when often switching between different shells, avoiding the need to define aliases twice
@@ -109,9 +90,13 @@ Open a terminal and use the `astro` alias to run Neovim.
     astro
     ```
 
+Lazy package manager will run automatically and download all plugins.  Treesitter languages are automatically installed.  
+
+++"q"++ to close the lazy package manager popup.
+
 <!-- TODO: checkhealth screenshot for astronvim -->
 
-> `NVIM_APPNAME=astronvim nvim` to run Neovim with astronvim without setting a shell alias.
+> `NVIM_APPNAME=astronvim4 nvim` to run Neovim with astronvim without setting a shell alias.
 
 Neovim will open and display the Lazy plugin manager UI, showing the progress of plugin installation.  This should only happen on the first run.
 
@@ -119,7 +104,7 @@ Neovim will open and display the Lazy plugin manager UI, showing the progress of
     Plugins can be installed without running the Neovim editor UI
     !!! NOTE ""
         ```shell
-        nvim --headless -c 'autocmd User LazyDone quitall'
+        NVIM_APPNAME=astronvim4 nvim --headless
         ```
 
 
