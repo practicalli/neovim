@@ -8,31 +8,47 @@ Clojure LSP server and Neovim LSP client support use static analysis of the proj
 
 Using [clojure-lsp](https://clojure-lsp.io/) server and [Neovim Treesitter](https://tree-sitter.github.io/tree-sitter/) as an LSP client, code is statically analysed to provide auto-completion data, advanced editing actions such as refactor, live formatting, etc.
 
-!!! HINT "Function help"
-    `SPC l h` or ++"K"++ displays help for the function under the cursor
+### Function documentation
 
-    Repeat the key binding to move the cursor to the documentation popup window and use ++"j"++ ++"k"++ to scroll the documentation
+++"K"++ or ++spc++ ++"l"++ ++"h"++ show the doc-string for function or any other var under the cursor.
+
+Repeat the key binding to move the cursor to the documentation popup window and use ++"j"++ ++"k"++ to scroll the documentation
+
+++comma++ ++"l"++ ++"l"++ code lens refresh
+
+++comma++ ++"l"++ ++"L"++ code lens run
 
 
-### Key maps
+### Navigation
 
-=== "Practicalli AstroNvim Config"
+++"g"++ ++"d"++ go to definition of current symbol, e.g. function definition
 
-    - `<leader>la` code actions (popup with available actions)
-    - `<leader>ld` hover diagnostics
-    - `<leader>lD` search diagnostics
-    - `<leader>lf` format buffer
-    - `<leader>lG` search workspace symbols
-    - `<leader>lh` function signature help
-    - `<leader>li` information about the LSP client and running LSP servers
-    - `<leader>lI` null-ls information (format & lint tools)
-    - `<leader>ll` code lens refresh
-    - `<leader>lL` code lens run
-    - `<leader>lr` rename current symbol (namespace rename not supported it seems)
-    - `<leader>lR` search references
-    - `<leader>ls` search symbols
-    - `<leader>lS` symbols outline
+++comma++ ++"l"++ ++"G"++ telescope search of all symbols in the project
 
+++comma++ ++"l"++ ++"R"++ telescope search of all references in the project
+
+++comma++ ++"l"++ ++"s"++ telescope search of symbols
+
+++comma++ ++"l"++ ++"s"++ split view of symbols
+
+
+### Diagnostics 
+
+++spc++ ++"l"++ ++"d"++ show popup for current diagnostic indicator
+
+++spc++ ++"l"++ ++"D"++ search through all diagnostics reports
+
+
+### Code Actions
+
+++spc++ ++"l"++ ++"r"++ rename current symbol (namespace rename not supported by LSP client)
+
+++spc++ ++"l"++ ++"a"++ code actions (popup with available actions)
+ 
+++spc++ ++"l"++ ++"f"++ format buffer
+
+
+<!--
 === "Practicalli Neovim Config Redux"
 
     - `gd` Go to definition
@@ -52,14 +68,17 @@ Using [clojure-lsp](https://clojure-lsp.io/) server and [Neovim Treesitter](http
     - `<leader>lr` Show all references list for item under the cursor (Using telescope plugin interface)
     - `<leader>lr` Show all implementations list for item under the cursor (Using telescope plugin interface)
 
+-->
 
-
-## Troubleshooting
+### Troubleshooting
 
 ++spc++ ++"l"++ ++"i"++ shows the LSP server information for the current filetype, e.g. Clojure
 
 ![LSP Server information showing local clojure-lsp install](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-lsp-clojure-server-information-local-install-light.png?raw=true#only-light){loading=lazy}
 ![LSP Server information showing local clojure-lsp install](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-lsp-clojure-server-information-local-install-dark.png?raw=true#only-dark){loading=lazy}
+
+++spc++ ++"l"++ ++"I"++ shows format and lint tools supported by null-ls for the current filetype, e.g. clojure
+
 
 ## Limitations to investigate
 
