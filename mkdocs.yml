@@ -173,6 +173,7 @@ nav:
   - Clojure REPL Workflow:
       - repl-driven-development/index.md
       - Conjure: repl-driven-development/conjure.md
+      - Documentation: repl-driven-development/documentation.md
       - Structural Editing: repl-driven-development/structural-editing.md
       - Refactor Tools: repl-driven-development/refactor-tools.md
       - Testing: repl-driven-development/testing.md
