@@ -29,6 +29,7 @@
 - basics: file marks for jumping within a file
 - dev: add checklist and description sections to pull request template
 - basics: navigate cursor location history
+- overrides: recommend AstroNvim v4 in announce block
 
 
 ## 2023-07-11
