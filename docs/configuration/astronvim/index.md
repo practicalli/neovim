@@ -1,84 +1,37 @@
 # AstroNvim
 
-!!! WARNING "AstroNvim 4.x version supported"
-    AstroNvim 4 has been reorganised to be a collection of packages with a user configuration.
-
 [:globe_with_meridians: AstroNvim](https://astronvim.com/) is a community configuration with an engaging UI, using Lazy for plugin management (Neovim packages) and Mason for package management (LSP, DAP, format and lint tools)
 
 [:fontawesome-brands-github: Practicalli AstroNvim User Config](https://github.com/practicalli/astronvim-user-config) is a user configuration that extends AstroNvim and imports packages from the [:fontawesome-brands-github: AstroNvim Community](https://github.com/AstroNvim/user_example).
 
 
-## Prerequisits
+## AstroNvim Install
 
-- [Nerd Fonts](https://www.nerdfonts.com/) version 3 - download a full font or only the symbols
-- fzf fuzzy finder (ubuntu archive)
-- gtu (Ubuntu package archive)
-- btm from [GitHub repository releases](https://github.com/ClementTsang/bottom/releases/)
-- node.js (version 20) for Mason install of many LSP servers
+[:fontawesome-brands-github: Practicalli AstroNvim User Config](http://github.com/practicalli/astronvim-user-config) is Clojure development focused configuration, an extension of the AstroNvim template.
 
-!!! INFO "AstroNvim requires node.js"
-    AstroNvim uses Mason to install LSP servers, format and lint tools.  Many LSP servers require node.js to install and function.
+[:fontawesome-brands-github: AstroNvim template repository](https://github.com/AstroNvim/template) provide a general configuration for Neovim. [:fontawesome-brands-github: AstroNvim Community](https://github.com/AstroNvim/astrocommunity/) provides plugin configs to make it easier to extend the general feature of AstroNvim.
 
-    [Node.js install - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/programming-languages/javascript/nodejs/){target=_blank .md-button} 
-
-
-??? INFO "Kitty Terminal with Nerd Fonts"
-    [:globe_with_meridians: Kitty Terminal - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/command-line/kitty-terminal/) provides examples of using Nerd Fonts or Nerd Font symbols with the Kitty terminal.
-
-
-## Clone AstroNvim user config
-
-AstroNvim is a [:fontawesome-brands-github: template repository](https://github.com/AstroNvim/template) providing a user configuration that includes AstroNvim plugins. 
-
-[:fontawesome-brands-github: AstroNvim Community](https://github.com/AstroNvim/astrocommunity/) configuration to make it easier to extend the feature of AstroNvim.
-
-[:fontawesome-brands-github: Practicalli AstroNvim User Config](http://github.com/practicalli/astronvim-user-config) is a clone of the AstroNvim user config with additional configuration to support Clojure development.
 
 === "Practicalli AstroNvim User Config"
     Clone the [:fontawesome-brands-github: Practicalli AstroNvim User Config](https://github.com/practicalli/astronvim-user-config) which provides [Clojure support](clojure.md) on top of AstroNvim.
     !!! NOTE ""
         ```shell
-        git clone http://github.com/practicalli/astronvim-user-config $HOME/.config/astronvim4
+        git clone http://github.com/practicalli/astronvim-user-config $HOME/.config/astronvim
         ```
 
-=== "AstroNvim User Config"
+=== "AstroNvim template"
     Create your own user configuration using the [:fontawesome-brands-github: AstroNvim template repository](https://github.com/AstroNvim/template) to create a new GitHub repository.
 
     Clone the newly created repository
 
     !!! NOTE ""
     ```shell
-    git clone git@github.com/AstroNvim/template $HOME/.config/astronvim4
+    git clone git@github.com/AstroNvim/template $HOME/.config/astronvim
     ```
 
 
-## Configure shell alias
-
-Create a shell alias that sets `NVIM_APPNAME` to the location of the AstroNvim community config
-
-Add alias to `.bashrc` for Bash shell or `.zshrc` for Zsh
-
-!!! EXAMPLE ""
-    ```config
-    alias astro="NVIM_APPNAME=astronvim4 nvim"
-    ```
-
-!!! HINT "dot aliases file for both bash and zsh"
-    Create a `.config/aliases` file containing all shell aliases when often switching between different shells, avoiding the need to define aliases twice
-
-    Source the `.config/aliases` file from within `.bashrc` and `.zshrc`
-    
-    ```shell title=".bashrc"
-    if [ -f ~/.config/aliases ]; then
-        . ~/.config/aliases
-    fi
-    ```
-
-    ```shell title=".zshrc"
-    source $HOME/.config/aliases
-    ```
-
-[:fontawesome-solid-book-open: Configure shell alias](/neovim/configuration/){target=_blank .md-button}
+!!! HINT "Use Shell Aliases if using multiple Neovim configurations"
+    [:fontawesome-solid-book-open: Configure shell alias](/neovim/configuration/#configure-shell-alias){target=_blank .md-button}
 
 
 ## Post install
