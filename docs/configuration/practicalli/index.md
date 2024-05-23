@@ -1,5 +1,8 @@
 # Neovim Config Redux
 
+!!! WARNING "Practicalli Config Redux has been archived"
+    Practicalli Neovim uses the AstroNvim config.
+
 ![Practicalli Neovim - effective Clojure programming with Neovim, Clojure LSP and supporting tools](https://raw.githubusercontent.com/practicalli/graphic-design/live/book-covers/practicalli-neovim-book-banner-fennel.svg)
 
 
