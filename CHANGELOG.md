@@ -31,6 +31,7 @@
 - basics: navigate cursor location history
 - overrides: recommend AstroNvim v4 in announce block
 - intro: simplify & reorder introduction
+- install: expand requirements to include kitty terminal
 
 
 ## 2023-07-11
