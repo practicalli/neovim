@@ -30,6 +30,7 @@
 - dev: add checklist and description sections to pull request template
 - basics: navigate cursor location history
 - overrides: recommend AstroNvim v4 in announce block
+- intro: simplify & reorder introduction
 
 
 ## 2023-07-11
