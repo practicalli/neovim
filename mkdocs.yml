@@ -144,6 +144,7 @@ nav:
       - configuration/index.md
       - AstroNvim:
           - configuration/astronvim/index.md
+          - configuration/astronvim/astrocommunity.md
           - Config Design: configuration/astronvim/config-design.md
       - Practicalli:
           - configuration/practicalli/index.md
