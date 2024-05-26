@@ -1,26 +1,62 @@
 # 📦 Practicalli AstroNvim Config Design
 
-A guide to the AstroNvim Config user configuration created by Practicalli to support Clojure development.
+A guide to the design of AstroNvim Config created by Practicalli to support a comprehensive development workflow.
 
-??? INFO "AstroCommunity used where possible"
-Plugins and configuration is added vial AstroCommunity were possible, to minimise the code size and maintenance of the configuration
+??? INFO "AstroCommunity Plugin Configurations used where available"
+    Plugin configurations from AstroCommunity are used to minimise the code size and maintenance of the Practicalli configuration
 
  
-## User Config overview
+## Files overview
 
-`core.lua` is for tuning plugins shipped with astronvim config
+The file structure as taken from the AstroNvim template and new files were created to minimise changes, making it simpler to add updates from the original template repository.
 
-`plugins/` for additional plugins organised logically. All `.lua` files are read from this directory 
+!!! INFO "Key: AstroNvim template file changes"
 
-- `user.lua` for general user defined plugins
-- `clojure.lua` adds Conjure and parinf, ensuring Clojure treesitter parser and Clojure LSP
-    
+    - :octicons-file-16: unchanged 
+    - :octicons-file-diff-16: changed 
+    - :octicons-file-added-16: added
+    - :material-close-circle-outline: config not activated (comment `if` statement to activate)
+
+:octicons-file-16: `init.lua` ensures the Lazy package manager is available when Neovim starts up. This file is unchanged from the AstroNvim template.
+
+:octicons-file-diff-16: `lua/lazy_setup.lua` configures the Lazy package manager.  `zipPlugin` enabled to support Clojure docs and source navigation inside libraries. 
+
+:octicons-file-diff-16: `lua/community.lua` imports plugin configurations from AstroCommunity, including the Clojure pack.
+
+:octicons-file-16: :material-close-circle-outline: `lua/polish.lua` general lua configuration loaded after AstroNvim configs.
+
+`lua/plugins/` for additional plugins organised logically. All `.lua` files are automatically loaded from this directory when starting Neovim.
+
+- :octicons-file-16: :material-close-circle-outline: `astrocore.lua`, `astrolsp.lua`, `astroui.lua` examples of overriding AstroNvim defaults
+- :octicons-file-added-16: `clojure.lua` alternative approach to configure clojure, extending the AstroNvim Clojure pack
+- :octicons-file-added-16: `github.lua` issue & PR management with octo.nvim (requires GitHub CLI)
+- :octicons-file-16: :material-close-circle-outline: `mason.lua` ensure tools are installed by default (LSP servers, format & lint tools, DAP debug tools)
+- :octicons-file-16: :material-close-circle-outline: `neo-tree.lua` visual file navigator - example config
+- :octicons-file-16: :material-close-circle-outline: `none-ls.lua` example config for format & lint tools
+- :octicons-file-added-16: :material-close-circle-outline: `platuml.lua` UML diagrams defined with code - requires plantuml.com install
+- :octicons-file-added-16: `practicalli.lua` theme, dashboard & key binding preferences enjoyed by Practicalli
+- :octicons-file-added-16: `snippets.lua` load JSON style snippet definitions
+- :octicons-file-added-16:`telescope.lua` ensure Treesitter languages are installed (AstroCommunity language packs also ensure parsers installed)
+- :octicons-file-16: :material-close-circle-outline: `treesittter.lua` ensure Treesitter languages are installed (AstroCommunity language packs also ensure parsers installed)
+- :octicons-file-16: :material-close-circle-outline: `user.lua` example user configuration, added via `lua/plugins/practicalli.lua`
+
 
 ## Clojure support
 
-The [:fontawesome-brands-github: AstroCommunity](https://github.com/AstroNvim/astrocommunity/) provides a Clojure language pack that adds Conjure and nvim-parinfer, along with `clojure` Treesitter parser and `clojure-lsp` support.
+The [:fontawesome-brands-github: AstroCommunity](https://github.com/AstroNvim/astrocommunity/) provides a Clojure language pack that ensures `clojure` Treesitter parser and `clojure-lsp` support and installed automatically.
 
-=== "AstroCommunity Pack"
+The pack contains 4 Neovim plugins:
+
+- conjure REPL client to evaluate code
+- nvim-parinfer code indenting structural editing
+- nvim-treesitter-sexp paredit (slurp/barf etc) structural editing 
+- ts-comment.nvim Clojure comment patterns
+
+
+!!! INFO: "Practicalli AstroNvim Config includes Clojure pack"
+
+
+=== "AstroCommunity Clojure Pack"
 
     Edit the `plugins/community.lua` file and import the Clojure pack.  The `"AstroNvim/astrocommunity",` repository is already added to to the file.
 
@@ -30,59 +66,69 @@ The [:fontawesome-brands-github: AstroCommunity](https://github.com/AstroNvim/as
     { import = "astrocommunity.pack.clojure" },
     ```
 
-    ??? HINT "Override AstroCommunity Pack"
+    ??? HINT "Exclude a plugin from the pack"
+        The Clojure pack includes parinfer and paredit tools for structural editing, which both work together without issue.  Should one or both of these plugins not be reqiured, set enabled to false
+        ```lua
+        return {
+          "AstroNvim/astrocommunity",
+          { import = "astrocommunity.pack.clojure" },
+          { "gpanders/nvim-parinfer", enabled = false },
+        ```
 
-        Create a `plugins/clojure.lua` file and add the AstroCommunity repository, Clojure pack and additional configuration to your own preferences
+    !!! EXAMPLE "Override Conjure configration"
+        Add the AstroCommunity Clojure pack and additional configuration to create a tailored experience 
 
-        !!! EXAMPLE "Clojure configuration with user configration overrides"
-            ```lua
-            return {
-              "AstroNvim/astrocommunity",
-              { import = "astrocommunity.pack.clojure" },
-              {
-                "Olical/conjure",
-                -- load plugin on filetypes
-                ft = { "clojure", "fennel" },
-                config = function()
-                  -- HUD
-                  -- Example: Set to `"SE"` and HUD width to `1.0` for full width HUD at bottom of screen
-                  vim.g["conjure#log#hud#width"] = 1 -- Width of HUD as percentage of the editor width, 0.0 and 1.0.
-                  vim.g["conjure#log#hud#enabled"] = false -- Display HUD
-                  vim.g["conjure#log#hud#anchor"] = "SE" -- Preferred corner position for the HUD
-                  vim.g["conjure#log#botright"] = true -- Open log at bottom or far right of editor
-                  -- REPL
-                  vim.g["conjure#extract#context_header_lines"] = 100 -- Number of lines to check for `ns` form
-                  vim.g["conjure#client#clojure#nrepl#connection#auto_repl#enabled"] = false -- ;; Start "auto-repl" process, eg. babashka
-                  vim.g["conjure#client#clojure#nrepl#connection#auto_repl#hidden"] = true -- ;; Hide auto-repl buffer when triggered
-                  vim.g["conjure#client#clojure#nrepl#connection#auto_repl#cmd"] = nil -- ;; Command to start the auto-repl
-                  -- ;; Automatically require namespace of new buffer or current buffer after connection
-                  vim.g["conjure#client#clojure#nrepl#eval#auto_require"] = false
-                  -- Reloading code
-                  -- Function to call on refresh (reloading) the log, namespace-qualified name of a zero-arity
-                  -- vim.g["conjure#client#clojure#nrepl#refresh#after"] = nil
-                  -- The namespace-qualified name of a zero-arity function to call before reloading.
-                  -- vim.g["conjure#client#clojure#nrepl#refresh#before"] = nil
-                  -- List of directories to scan. If no directories given, defaults to all directories on the classpath.
-                  -- vim.g["conjure#client#clojure#nrepl#refresh#dirs"] = nil
-                  -- Testing
-                  -- ;; Test runner called from the test key mappings
-                  vim.g["conjure#client#clojure#nrepl#test#runner"] = "kaocha"
-                  -- Print raw test evaluation result, suppressing prefix for stdout lines `; (out)`
-                  -- vim.g["conjure#client#clojure#nrepl#test#raw_out"] = nil
-                  -- Override string appended to the end of the test runner calls
-                  -- vim.g["conjure#client#clojure#nrepl#test#call_suffix"] = nil
-                end
+        `:help conjure` for general Conjure options.
+
+        `:help conjure-client-clojure-nrepl` for Clojure specific options.
+
+        ```lua
+        return {
+          "AstroNvim/astrocommunity",
+          { import = "astrocommunity.pack.clojure" },
+          {
+            "AstroNvim/astrocore",
+            opts = {
+              options = {
+                g = {
+                  -- show HUD REPL log at startup
+                  ["conjure#log#hud#enabled"] = false,
+
+                  -- Hightlight evaluated forms
+                  -- ["conjure#highlight#enabled"] = true,
+
+                  -- Trim log after number of lines. Default: `10000`
+                  -- ["conjure#log#trim#at"] = 200,
+                  -- Trim log to number of lines. Default: `7000`
+                  -- ["conjure#log#trim#to"] = 100,
+
+                  -- auto repl (babashka)
+                  ["conjure#client#clojure#nrepl#connection#auto_repl#enabled"] = false,
+                  ["conjure#client#clojure#nrepl#connection#auto_repl#hidden"] = true,
+                  ["conjure#client#clojure#nrepl#connection#auto_repl#cmd"] = nil,
+                  ["conjure#client#clojure#nrepl#eval#auto_require"] = false,
+
+                  -- Test runner: "clojure", "clojuresCRipt", "kaocha"
+                  ["conjure#client#clojure#nrepl#test#runner"] = "kaocha",
+                },
               },
-              {
-                "gpanders/nvim-parinfer",
-                ft = { "clojure" },
-                config = function()
-                  vim.g.parinfer_force_balance = true
-                  vim.g.parinfer_comment_chars = ";;"
-                end,
-              },
-            }
-            ```
+            },
+          },
+        }
+        ```
+
+    ??? INFO "Config comment for parinfer"
+        The parinfer comment configuration may not be required when using ts-comment.nvim to set the Clojure comment pattern.
+        ```lua
+        {
+          "gpanders/nvim-parinfer",
+          filetype = { "clojure" },
+          config = function()
+            vim.g.parinfer_force_balance = true
+            vim.g.parinfer_comment_chars = ";;"
+          end,
+        },
+        ```
 
 === "Manually add plugins"
     Add Conjure and parinfer plugin that will load when Clojure or Fennel file is opened.
@@ -94,15 +140,6 @@ The [:fontawesome-brands-github: AstroCommunity](https://github.com/AstroNvim/as
                 "Olical/conjure",
                 -- load plugin on filetypes
                 ft = { "clojure", "fennel" },
-              },
-
-              {
-                "gpanders/nvim-parinfer",
-                ft = { "clojure", "fennel" },
-                config = function()
-                  vim.g.parinfer_force_balance = true
-                  vim.g.parinfer_comment_chars = ";;"
-                end,
               },
             }
             ```
@@ -123,7 +160,7 @@ The [:fontawesome-brands-github: AstroCommunity](https://github.com/AstroNvim/as
         }
         ```
     
-    !!! HINT "Install Treesitter Clojure Parser manually"
+    !!! HINT "Manual install of Treesitter Clojure Parser"
         `:TSInstall clojure` in Neovim will install the parser. A parser not included in the `opts.ensure_installed` configuration must be updated manually each time treesitter plugin is updated
 
 
@@ -212,48 +249,21 @@ Clojure LSP support is enabled via the AstroCommunity Clojure pack.
 
 The AstroNvim user example includes a commented LuaSnip configuration
 
-```lua title=".config/astronvim-config/plugins/core.lua"
-  -- {
-  --   "L3MON4D3/LuaSnip",
-  --   config = function(plugin, opts)
-  --     require "plugins.configs.luasnip" (plugin, opts)  -- include the default astronvim config that calls the setup call
-  --     -- add more custom luasnip configuration such as filetype extend or custom snippets
-  --     local luasnip = require "luasnip"
-  --     luasnip.filetype_extend("javascript", { "javascriptreact" })
-  --   end,
-  -- },
-```
-
-AstroNvim includes a [Recipe for custom snippets](https://astronvim.com/Recipes/snippets)
-
-```lua
-return {
-  plugins = {
-    {
-      "L3MON4D3/LuaSnip",
-      config = function(plugin, opts)
-        require "plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
-        require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } } -- load snippets paths
-      end,
-    },
-  },
-}
-```
-
-Practicalli AstroNvim Config combines the two examples to get
-
-!!! EXAMPLE "AstroNvim config with custom VS Code style snippets"
+!!! EXAMPLE "LuaSnip with json format snippets in `snippets/` directory"
     ```lua title=".config/astronvim-config/plugins/core.lua"
-    {
-      "L3MON4D3/LuaSnip",
-      config = function(plugin, opts)
-        require "plugins.configs.luasnip" (plugin, opts) -- include the default astronvim config that calls the setup call
-        -- add more custom luasnip configuration such as filetype extend or custom snippets
-        require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } } -- load snippets paths
-        local luasnip = require "luasnip"
-        luasnip.filetype_extend("javascript", { "javascriptreact" })
-    end,
-    },
+    return {
+      --LuaSnip with json format snippets in `snippets/` directory
+      {
+        "L3MON4D3/LuaSnip",
+        config = function(plugin, opts)
+          require "astronvim.plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
+          -- add more custom luasnip configuration such as filetype extend or custom snippets
+          require("luasnip.loaders.from_vscode").lazy_load { paths = { "./snippets" } } -- include JSON style snippets
+          local luasnip = require "luasnip"
+          luasnip.filetype_extend("javascript", { "javascriptreact" })
+        end,
+      },
+    }
     ```
 
 ## AstroNvim Community packages
@@ -311,56 +321,19 @@ The default `astrodark` theme is set via the `colorscheme` option in `init.lua`
 
 !!! EXMAPLE "Practicalli AstroNvim Config - default theme"
     ```lua
-    colorscheme = "everforest",
+      {
+        -- AstroUI provides the basis for configuring the AstroNvim User Interface
+        -- Configuration documentation can be found with `:h astroui`
+        "AstroNvim/astroui",
+        ---@type AstroUIOpts
+        opts = {
+          colorscheme = "everforest",
+        },
+      },
     ```
 
 [:fontawesome-brands-github: AstroCommunity themes](https://github.com/AstroNvim/astrocommunity/tree/main/lua/astrocommunity/colorscheme){target=\_blank .md-button}
 
-!!! EXMAPLE "Practicalli AstroNvim Config themes"
-    ```lua
-    return {
-    {
-    "AstroNvim/astrotheme", -- default AstroNvim theme
-    lazy = false,
-    },
-      -- Add the community repository of plugin specifications
-      "AstroNvim/astrocommunity",
-      { import = "astrocommunity.colorscheme.everforest" },
-      {
-        "sainnhe/everforest",
-        lazy = false,
-      },
-      { import = "astrocommunity.colorscheme.nightfox-nvim" },
-      {
-        "EdenEast/nightfox.nvim",
-        lazy = false,
-      },
-      { import = "astrocommunity.colorscheme.kanagawa-nvim" },
-      {
-        "rebelot/kanagawa.nvim",
-        lazy = false,
-      },
-      { import = "astrocommunity.colorscheme.github-nvim-theme" }, -- no background support
-      {
-        "projekt0n/github-nvim-theme",
-        lazy = false,
-      },
-    ```
-
-<!--
-  -- Theme testing for visual appeal:
-  -- colorscheme = "astrodark",  (default theme, no background support I think)
-  -- colorscheme = "catppuccin",   -- light color to pale, lacks contrast
-  -- colorscheme = "dayfox",
-  colorscheme = "everforest",
-  -- colorscheme = "github_light",  -- no background support, otherwise quite nice
-  -- colorscheme = "gruvbox",  -- status and tablines inverted - doesnt look good, - requires highlight setting in user config
-  -- colorscheme = "gruvbox-baby", -- no background support
-  -- colorscheme = "kanagawa",  -- nice
-  -- colorscheme = "onigiri",  -- nice
-  -- colorscheme = "oxocarbon", -- written in Fennel
-  -- colorscheme = "rose-pine", -- light colour very bright
--->
 
 ### Configure Lazy plugins
 
