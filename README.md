@@ -9,9 +9,6 @@
 ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝
 ```
 
-# AstroNvim Version 3.x ONLY - v4 NOT supported
-
-
 ## Book status
 
 ![GitHub issues](https://img.shields.io/github/issues/practicalli/neovim?label=content%20ideas&logo=github)
