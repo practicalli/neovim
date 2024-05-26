@@ -14,6 +14,7 @@
 - basics: creating a directory with telescope or commands
 - intro: add :help news to features page
 - basics: add visual line and block commands
+- clojure: `"Cp` pastes result of last Conjure evaluation
  
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)

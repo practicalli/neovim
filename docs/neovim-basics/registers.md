@@ -8,7 +8,7 @@ The name of a register is a number, alphabetical or special character.
 
 `SPC f r` lists the values of registers in a telescope popup
 
-!!! EXAMPLE "Yank and paste commit message"
+??? EXAMPLE "Yank and paste commit message"
     Select the text of the commit message
 
     ++double-quote++ ++"m"++ ++"y"++ yanks the selected text into register `m`
@@ -17,6 +17,10 @@ The name of a register is a number, alphabetical or special character.
 
     ++double-quote++ ++"m"++ ++"p"++ pastes the register text into the commit message buffer
 
+??? EXAMPLE "Paste last evaluation result from Conjure"
+    When Conjure evaluates code the result is stored in the `C` register. 
+    
+    ++double-quote++ ++"C"++ ++"p"++ pastes the register text into the commit message buffer
 
 ## Registers
 

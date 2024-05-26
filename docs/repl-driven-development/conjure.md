@@ -108,7 +108,10 @@ Results of evaluating an expression are shown in-line.  [Open the REPL log](#rep
 
 `,emf` - evaluate marked form - mark forms regularly re-evaluted with `mf` (or any character with `m`) to avoid jumping to that form each time . A capital letter to mark form in a different namespace and evaluate  from the current buffer. 
 
-`"cp` - paste contents of the register into buffer. The result of every evaluation is stored in a Neovim register as well as the log.
+!!! HINT "Paste Evaluation result"
+    ++double-quote++ ++"C"++ ++"p"++  to paste the contents of the `C` register into the current buffer. 
+
+    The result of every Conjure evaluation is stored in the `C` register when using Practicalli AstroNvim Config.
 
 
 ## REPL log
