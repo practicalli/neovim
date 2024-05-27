@@ -158,3 +158,15 @@ Navigate within the current file or globally using file marks.
 > AstroNvim user config enables `incsearch` incremental search and `hlsearch` to highlight every search match
 
 
+## Projects
+
+++colon++ ++"c"++ ++"d"++ followed by a path changes the root directory for Neovim.
+
+++tab++ completion simplifies typing the new path of the root directory.
+
+![AstroNvim project root Autocompletion](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-project-change-directory-completion-light.png?raw=true#only-light){loading=lazy}
+![AstroNvim project root Autocompletion](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-project-change-directory-completion-dark.png?raw=true#only-dark){loading=lazy}
+
+!!! HINT "AstroNvim rooter"
+    AstroNvim has a built-in project root detection utility that updates the current working directory automatically. 
+

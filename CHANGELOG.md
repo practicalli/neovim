@@ -15,6 +15,7 @@
 - intro: add :help news to features page
 - basics: add visual line and block commands
 - clojure: `"Cp` pastes result of last Conjure evaluation
+- basics: change project root with autocompletion
  
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
