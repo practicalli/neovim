@@ -144,8 +144,7 @@ Navigate within the current file or globally using file marks.
 - ++bracket-left++ ++"("++ &  ++bracket-right++ ++")"++ previous & next paren
 - ++bracket-left++ ++"brace-left"++ &  ++bracket-right++ ++"brace-right"++ previous and next square brackets
 - ++bracket-left++ ++"g"++ &  ++bracket-right++ ++"g"++ previous and next Git hunks
-- ++bracket-left++ ++"s"++ &  ++bracket-right++ ++"s"++ previous and next misspelled wor
-- d
+- ++bracket-left++ ++"s"++ &  ++bracket-right++ ++"s"++ previous and next misspelled word
 
 
 ## Search in buffer

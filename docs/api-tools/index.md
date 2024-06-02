@@ -67,6 +67,6 @@ The `Content-Type` can be explicitly set, especially useful when not using JSON
     accept: application/edn
     ```
 
-[:fontawesome-brands-github: rest.nvim test examples](https://github.com/rest-nvim/rest.nvim/tree/main/tests){target=_blank .md-button}  
+[:fontawesome-brands-github: rest.nvim test examples](https://github.com/rest-nvim/rest.nvim/tree/main/tests){target=_blank .md-button}
 
 [:fontawesome-brands-github: rest.nvim](https://github.com/rest-nvim/rest.nvim){target=_blank .md-button}
