@@ -38,13 +38,14 @@ Jump the current line to the center, top or bottom of the buffer.
 
 ## Spelling
 
-`z =` with the cursor on a word shows a list of possible spelling and similar words.
+++"z"++ ++equal++ with the cursor on a word shows a list of possible spelling and similar words.
 
-Select a word using its number in tye list to repace the word under the cursor, or `q` to quit the spelling list.
+Select a word using its number in list to replace the word under the cursor, or ++esc++ to close the spelling list.
 
-| Key   | Description               |
-|-------|---------------------------|
-| `z =` | spelling suggestions      |
-| `z g` | add word to spelling list |
-| `z w` | mark word as misspelled   |
-
+| Key                        | Description               |
+|---------------------------|----------------------------|
+| ++"z"++ ++equal++          | spelling suggestions      |
+| ++bracket-left++ ++"s"++   | next incorrect word       |
+| ++bracket-right++ ++"s"++  | previous incorrect word   |
+| ++"z"++ ++"g"++            | add word to spelling list |
+| ++"z"++ ++"w"++            | mark word as misspelled   |
