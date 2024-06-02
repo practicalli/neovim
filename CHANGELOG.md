@@ -16,6 +16,7 @@
 - basics: add visual line and block commands
 - clojure: `"Cp` pastes result of last Conjure evaluation
 - basics: change project root with autocompletion
+- basics: set directory root approaches
  
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)

@@ -15,6 +15,14 @@ Use [Neo-tree.nvim](#using-neo-tree) to visually navigate and manage files using
 
 Use [Telescope](#telescope) to select files, typing a name narrows the file list.
 
+!!! HINT "Set root directory in Neovim"
+    All file commands respect the currently set directory root for Neovim.
+
+    The root is set to the current directory when opening a file.
+
+    `:cd ~/new/directory/path` will change the current root to the new path.
+
+    ++period++ in Neotree sets the root to the current directory (parent directory if on a file)
 
 ### Using Neo-tree
 
