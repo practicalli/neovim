@@ -36,6 +36,7 @@
 - intro: simplify & reorder introduction
 - install: expand requirements to include kitty terminal
 - mkdocs: dark theme scheme `teal` & accent `deep purple`  
+- basics: astronvim file, buffer, window and tap page
 
 
 ## 2023-07-11

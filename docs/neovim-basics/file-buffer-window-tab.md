@@ -11,9 +11,9 @@ A [tab page](#tab-pages) (or tab) can hold one or more windows and multiple tab 
 
 ## Files
 
-Use [Neo-tree.nvim](#using-neo-tree) to visually navigate and manage files using a tree view of the current project. Files and directories can be added, renamed, moved and deleted.
+`SPC e` opens [Neo-tree.nvim](#using-neo-tree) which shows a visual tree to navigate and manage files from the current project (root). Files and directories can be added, renamed, moved and deleted.
 
-Use [Telescope](#telescope) to select files, typing a name narrows the file list.
+++spc++ ++"f"++ ++"f"++ to find files with [Telescope](#telescope), typing a pattern narrows the selectable file list.
 
 !!! HINT "Set root directory in Neovim"
     All file commands respect the currently set directory root for Neovim.
@@ -26,41 +26,15 @@ Use [Telescope](#telescope) to select files, typing a name narrows the file list
 
 ### Using Neo-tree
 
-=== "Astronvim"
-    ++spc++ ++"e"++ toggles neo-tree file browser
+++spc++ ++"e"++ toggles neo-tree file browser
 
-    ++spc++ ++"o"++ toggles between buffer and neo-tree
+++spc++ ++"o"++ toggles between buffer and neo-tree
 
-    ??? EXAMPLE "Configure hidden files"
-        Configure Neotree to display hidden files and directories by default.  They are shown with a different visual style (subtle color) compared to the other files and directories.  
+++enter++ in Neo-tree opens the current file in a buffer
 
-        `H` with the cursor in neotree window will still toggle the display of hidden files and directories.
 
-        Optionally, specify files or directories to never show.
-        ```lua title="Practicalli Astronvim-config: plugins/core.lua"
-          {
-            "nvim-neo-tree/neo-tree.nvim",
-            opts = {
-              filesystem = {
-                filtered_items = {
-                  -- when true, they will just be displayed differently than normal items
-                  visible = true,
-                  -- remains hidden even if visible is toggled to true, this overrides always_show
-                  never_show = {
-                    ".DS_Store",
-                    "thumbs.db",
-                  },
-                },
-              },
-            },
-          },
-        ```
 
-=== "Practicalli Neovim Config Redux"
-
-    ++spc++ ++"f"++ ++"t"++ ++"t"++ to open file explorer
-
-Within Neo-tree:
+### Key bindings Within Neo-tree
 
 ++"h"++ ++"j"++ ++"k"++ ++"l"++ to navigate the file tree hierachy
 
@@ -83,6 +57,48 @@ Within Neo-tree:
     - Warning triangle - lsp diagnostics issues
 
 
+??? EXAMPLE "Configure hidden files"
+    Configure Neotree to display hidden files and directories by default.  They are shown with a different visual style (subtle color) compared to the other files and directories.  
+
+    `H` with the cursor in neotree window will still toggle the display of hidden files and directories.
+
+    Optionally, specify files or directories to never show.
+    ```lua title="lua/plugins/neo-tree.lua"
+    ---@type LazySpec
+    return {
+      "nvim-neo-tree/neo-tree.nvim",
+      config = function()
+        require("neo-tree").setup {
+          filesystem = {
+            filtered_items = {
+              visible = true, -- show hidden files in alternate style
+              hide_dotfiles = true,
+              hide_gitignored = true,
+              hide_hidden = true, -- only works on Windows for hidden files/directories
+              hide_by_name = {
+                --"node_modules"
+              },
+              hide_by_pattern = { -- uses glob style patterns
+                --"*.meta",
+                --"*/src/*/tsconfig.json",
+              },
+              always_show = { -- remains visible even if other settings would normally hide it
+                --".gitignored",
+              },
+              never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
+                --".DS_Store",
+                --"thumbs.db"
+              },
+              never_show_by_pattern = { -- uses glob style patterns
+                --".null-ls_*",
+              },
+            },
+          },
+        }
+      end,
+    }
+    ```
+
 ### Telescope
 
 Telescope provides a selector which will narrow the list of matches as a pattern is typed, providing a fast way to find an item in a list.
@@ -91,19 +107,11 @@ Telescope provides a preview of the selected file (only if there is sufficient s
 
 File lists are relative to the directory Neovim was opened from (or Path subsequently set in Neovim).
 
-=== "AstroNvim"
-
-    `SPC f f` selector for files within the scope of the current directory path. `SPC f F` to also show hidden files from the current directory path. 
+`SPC f f` selector for files within the scope of the current directory path. `SPC f F` to also show hidden files from the current directory path. 
     
-    `SPC f a` selector for AstroNvim user configuration files
+`SPC f a` selector for AstroNvim user configuration files
 
-    `SPC f p` selector for previously opened files (oldfiles)
-
-=== "Practicalli Neovim Config Redux"
-    `SPC f f` to list files within the scope of the current directory path.
-
-    `SPC f b` provides a file browser to open files, navigate the file space and create new files and directories
-
+`SPC f p` selector for previously opened files (oldfiles)
 
 
 ### Save File
@@ -112,43 +120,39 @@ Files and directories are created in the path given, relative to the directory i
 
 A file must exist for Neovim to write to it.  Neo-tree and Telescope can be used to create files and directories, as can a terminal and the command line integration (++exclamation++)
 
+++spc++ ++"w"++ will write all buffer changes to the associate file.
 
-=== "Astronvim"
-    ++spc++ ++"w"++ will write all buffer changes to the associate file.
+++spc++ ++"n"++ creates a new buffer that can be written to a given file using `:write path/to/filename`
 
-    ++spc++ ++"n"++ creates a new buffer that can be written to a given file using `:write path/to/filename`
+++spc++ ++"W"++ was added to Practicalli Astro Config as a key binding for `:write path/to/filename` which writes the current buffer to a new file, prompting for the file name.
 
-    ++spc++ ++"W"++ was added to Practicalli Astro Config as a key binding for `:write path/to/filename` which writes the current buffer to a new file, prompting for the file name.
-
-
-=== "Practicalli Neovim Config Redux"
-
-    `SPC f b ESC C` to create a new file or directory. The base path is shown in the command bar.  Type the name of directories and file name as required. `RTN` to create or `ESC` to cancel.  The newly created directories or file name appears n the Telescope list and scan be selected for opening.
-
-    !!! HINT "Telescope Normal mode and help"
-        `ESC` in Telescope to switch to Normal mode and use comannds, `c` for Create, `r` to rename.
+!!! HINT "Telescope Normal mode and help"
+    `ESC` in Telescope to switch to Normal mode and use comannds, `c` for Create, `r` to rename.
      
-        `?` to show all the commands available in Telescope
+    `?` to show all the commands available in Telescope
 
-=== "Neovim"
 
-    `:lcd` to set the current local directory
+### Path commands
 
-    `:write path/to/filename` will write the current buffer to a new file
+`:lcd` to set the current local directory
 
-    `:!mkdir path/to/directory` will create a new directory
+`:write path/to/filename` will write the current buffer to a new file
 
-     If a file is already opened, i.e. with `:edit`, there is some short-hand syntax to simplify the typing
+`:!mkdir path/to/directory` will create a new directory
 
-     `:!mkdir -p %:h`
+If a file is already opened, i.e. with `:edit`, there is some short-hand syntax to simplify the typing
 
-     `-p` option createst any parts of the path required to make the full path
+```command
+:!mkdir -p %:h
+```
 
-     `%` is the neovim name of the current file
+`-p` option creates any parts of the path required to make the full path
 
-     `:h` for the current directory (the “head” of the path).
+`%` is the neovim name of the current file
 
-     `!` is the NeoVim terminal shell command, e.g. `:!mkdir -p path/to/new/directory` creates a new directory and any intermediate path
+`:h` for the current directory (the “head” of the path).
+
+`!` is the NeoVim terminal shell command, e.g. `:!mkdir -p path/to/new/directory` creates a new directory and any intermediate path
 
 
 ### Directories
@@ -200,81 +204,42 @@ Opening a file checks if there is an associated swap file and prompts the user
 
 ## Buffers
 
-=== "AstroNvim"
+`SPC f b` selector for currently open buffers
 
-    `SPC f b` selector for currently open buffers
+`SPC b b` to select a buffer from the tab line, pressing the character that appears next to the buffer tab (case sensitive)
 
-    `SPC b b` to select a buffer from the tab line, pressing the character that appears next to the buffer tab (case sensitive)
+`SPC b D` to delete a buffer from the tab line, pressing the character that appears next to the buffer tab (case sensitive)
 
-    `SPC b D` to delete a buffer from the tab line, pressing the character that appears next to the buffer tab (case sensitive)
+Open multiple buffers when starting Neovim by specifying multiple files to open
 
+```bash
+astro README.md deps.edn src/practicalli/playground.clj test/practicalli/playground.clj
+```
+
+!!! HINT "Open multiple buffers at starup"
     Open multiple buffers when starting Neovim by specifying multiple files to open
 
-    ```bash
+    ```shell
     astro README.md deps.edn src/practicalli/playground.clj test/practicalli/playground.clj
-    ```
-
-=== "Practicalli Neovim Config Redux"
-
-    `SPC b b` switch between buffers in the current window, using a Telescope popup that lists all current buffers (includes files, Conjure REPL Log, etc.).
-
-    `SPC b n` (`:next`) and `SPC b n` (`:previous`) to cycle through buffers in the current window
-
-    `SPC TAB` (`C-^`) opens the previous buffer, useful to toggle between two buffers in the same window
-
-    Use Telescope to switch between buffers
-
-    ![Neovim - telescope - swtich between buffers](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-telescope-open-buffer.png)
-
-    <!-- TODO: close a buffer (not just its window) -->
-
-    Open multiple buffers when starting Neovim by specifying multiple files to open
-
-    ```bash
-    nvim README.md deps.edn src/practicalli/playground.clj test/practicalli/playground.clj
     ```
 
 ### Buffer text wrapping
 
 The test in a buffer is not wrapped by default. Set and unset soft text wrapping in a buffer
 
-=== "AstroNvim"
-    `SPC u w` toggles wrapping of text
-
-=== "Practicalli Neovim Config Redux"
-    line wrap not enabled in configuration by default.
-
-    ```fennel title="fnl/config/init.fnl"
-    (nvim.ex.set :nowrap)
-    ```
-
-=== "Neovim"
-    `:set wrap` to set soft wrapping on current buffer
-
-    `:set nowrap` to show lines in full (scroll sideways to see lines longer than the window)
+++spc++ ++"u"++ `SPC u w` toggles wrapping of text
 
 
 ## Windows 
 
 Windows can be active (contains the cursor), hidden (open but not shown) or inactive.
 
-=== "AstroNvim"
+`\` creates an horizontal split
 
-    `\` creates an horizontal split
-
-    `SPC q` removes the current split
+`SPC q` removes the current split
 
 
-=== "Practicalli Neovim Config Redux"
-
-    `SPC h` / `SPC l` to jump to left / right buffer,  `SPC j` / `SPC k` to jump to buffer below / above
-     
-    `SPC b b` to list current buffers and switch between them using telescope
-     
-    `C-w` and `hjkl` to navigate windows is the classic Vim approach
-
-
-=== "Neovim"
+??? INFO "Neovim commands"
     `C-w` menu to manage Windows, also known as splits.
 
     `C-w` with one of `hjkl` will move the cursor to the next window in that direction.  Also works with arrow keys.
@@ -297,16 +262,6 @@ Windows can be active (contains the cursor), hidden (open but not shown) or inac
     `C-w` `-`, `+`, `<` or `>` for vertical or horizontal size adjustment
 
 
-<!-- ## Alt - Arrow keys -->
-
-<!-- Alt+leftarrow will go one window left, etc. -->
-
-<!-- nmap <silent> <A-Up> :wincmd k<CR> -->
-<!-- nmap <silent> <A-Down> :wincmd j<CR> -->
-<!-- nmap <silent> <A-Left> :wincmd h<CR> -->
-<!-- nmap <silent> <A-Right> :wincmd l<CR> -->
-
-
 ## Tab pages
 
 A Tab page can hold one or more tabs and are useful for grouping different types of files and information. 
@@ -318,12 +273,9 @@ A tab page can provide a logical grouping of windows, e.g. Clojure source code i
 Neovim window commands may be constrained within the bounds of a tab page (without using the :tab modifier)
 
 Tab pages are often referred to as tabs.
-
-
-=== "AstroNvim"
     
-    ++"g"++ ++tab++ jump to previously selected tab, commonly used to toggle between two tabs  (Practicalli AstroNvim mapping)
+++"g"++ ++tab++ jump to previously selected tab, commonly used to toggle between two tabs  (Practicalli AstroNvim mapping)
 
-    ++"g"++ ++"t"++ jump to next tab page
+++"g"++ ++"t"++ jump to next tab page
 
-    ++"g"++ ++"T"++ jump to previous tab page
+++"g"++ ++"T"++ jump to previous tab page
