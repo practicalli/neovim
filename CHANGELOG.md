@@ -35,6 +35,7 @@
 - overrides: recommend AstroNvim v4 in announce block
 - intro: simplify & reorder introduction
 - install: expand requirements to include kitty terminal
+- mkdocs: dark theme scheme `teal` & accent `deep purple`  
 
 
 ## 2023-07-11
