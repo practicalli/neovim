@@ -1,22 +1,22 @@
 # Neovim for Clojure development
 
-Practicalli Neovim provides install & user guide focused on a simple, powerful and joyful [REPL driven workflow](introduction/repl-workflow.md) for Clojure.
+Practicalli Neovim provides install & user guide focused on a simple, powerful and joyful [:fontawesome-solid-book-open: REPL driven workflow](introduction/repl-workflow.md) for Clojure.
 
-Practicalli recommends using AstroNvim community configuration which provides Conjure REPL client and Clojure editing support (parinfer & paredit).
+[:fontawesome-solid-book-open: Practicalli Astro configuration](configuration/) for Neovim provides Conjure REPL client and Clojure editing support (parinfer & paredit).
 
 ![Clojure REPL Driven Development workflow](https://github.com/practicalli/graphic-design/raw/live/clojure/clojure-repl-workflow-concept.png?raw=true)
 
 
 ## Quick Start
 
-Install [Clojure](install/clojure.md), [Neovim 0.10.0](install/neovim.md) and [Practicalli AstroNvim user config](configuration/astronvim/)
+Install [:fontawesome-solid-book-open: Clojure](install/clojure.md), [:fontawesome-solid-book-open: Neovim 0.10.0](install/neovim.md) and [:fontawesome-solid-book-open: Practicalli Astro configuration](configuration/astronvim/)
 
 
 ## Neovim overview
 
 Neovim is a highly extensible and powerful editor, supporting multi-modal editing and Vim-style sequential key bindings. Highly responsive and low resource use makes Neovim ideal for development on any computer or [:fontawesome-solid-book-open: mobile device](termux/), e.g. tablet, smartphone.
 
-Neovim has [:globe_with_meridians: a diverse set of plugins](https://neovimcraft.com/){target=_blank} and [:fontawesome-solid-book-open: Practicalli curated configurations](/neovim/configuration/) use these plugins to provide a [:fontawesome-solid-book-open: rich set of features](introduction/features.md) for Clojure development and wider engineering tasks.
+Neovim has [:globe_with_meridians: a diverse set of plugins](https://neovimcraft.com/){target=_blank} to provide a [:fontawesome-solid-book-open: rich set of features](introduction/features.md) for Clojure development and wider engineering tasks.
 
 !!! QUOTE "coding at the speed of thought"
     Neovim is incredibly fast and efficient, so thoughts flow from brain to editor without unnecessary delay.
@@ -27,19 +27,13 @@ Neovim has [:globe_with_meridians: a diverse set of plugins](https://neovimcraft
 ![Neovim with AstroNvim configuration for Clojure developers](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/neovim-astronvim-clojure-example-dark.png?raw=true#only-dark){loading=lazy}
 
 
-
-
-
 ## External reverences
 
-[Getting started with Neovim and Conjure](https://oli.me.uk/getting-started-with-clojure-neovim-and-conjure-in-minutes/){target=_blank .md-button}
+[:globe_with_meridians: Getting started with Neovim and Conjure](https://oli.me.uk/getting-started-with-clojure-neovim-and-conjure-in-minutes/){target=_blank .md-button}
 
-[Neovim user guide](https://neovim.io/doc/user/){target=_blank .md-button}
+[:globe_with_meridians: Neovim user guide](https://neovim.io/doc/user/){target=_blank .md-button}
 
-[This Week In Neovim - community update](https://this-week-in-neovim.org/){target=_blank .md-button}
-
-[Conjure install guide](https://github.com/Olical/conjure){target=_blank .md-button}
-[Conjuring Clojure in Vim](https://blog.djy.io/conjuring-clojure-in-vim/){target=_blank .md-button}
+[:fontawesome-brands-github: Conjure install guide](https://github.com/Olical/conjure/wiki/Quick-start:-Clojure){target=_blank .md-button}
 
 
 ## Navigate the book
