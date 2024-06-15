@@ -19,7 +19,7 @@ Notification popups show information, warnings and errors.
 
 Notifications are controlled by [:globe_with_meridians: nvim-notify](https://github.com/rcarriga/nvim-notify)
 
-[:fontawesome-solid-book-open: Practicalli astronvim-config](https://practical.li/neovim/configuration/astronvim/#clone-astronvim-user-config) overrides several default values in `plugins/core.lua`
+[:fontawesome-solid-book-open: Practicalli astronvim-config](https://practical.li/neovim/configuration/astronvim/#clone-astro) overrides several default values in `plugins/core.lua`
 
 - `top_down` position of notifications, `false` shows popups from bottom of screen
 - `timeout` value controls how long a popup displays, defautl `3000`
