@@ -17,6 +17,7 @@
 - clojure: `"Cp` pastes result of last Conjure evaluation
 - basics: change project root with autocompletion
 - basics: set directory root approaches
+- basics: spell check overview
  
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
