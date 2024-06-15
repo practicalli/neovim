@@ -1,17 +1,13 @@
-# Install Neovim
+# Install Neovim and Supporting Tools
 
- The [:fontawesome-brands-github: Neovim release page](https://github.com/neovim/neovim/releases){target=_blank} includes install steps for specific operating system.
+![Neovim Logo](https://raw.githubusercontent.com/practicalli/graphic-design/be612ddb29f6b9eef1641e91de6c747b70d7fef8/logos/neovim-logos/neovim-mark.svg){align=right loading=lazy style="height:150px;width:150px"}
 
-Neovim 0.9 is the minimum version for this configuration and Neovim 0.9.4 is currently being used by Practicalli.
-
-Follow the [install Neovim guide for the specific operating system](https://github.com/neovim/neovim/wiki/Installing-Neovim){target=_blank}.
-
-[:fontawesome-brands-github: Neovim releases](https://github.com/neovim/neovim/releases){target=_blank .md-button}
+!!! INFO "Neovim 0.10.x is the latest stable version"
 
 
 ## Suppoting Tools
 
-Neovim uses several external tools for searching for files, search file contents and using the operating system clipbaord.
+Neovim uses several command line tools for searching for files and their contents, using the operating system clipbaord and compiling Treesitter language parsers.
 
 Install the following tools to support Neovim and AstroNvim
 
@@ -20,13 +16,13 @@ Install the following tools to support Neovim and AstroNvim
 - `xclip` x11 clipboard as a provider for Neovim copy/paste (Linux only)
 - `luarocks` for LSP servers (AstroNvim)
 
-!!! INFO "Treesitter requires a C compiler"
+??? INFO "Treesitter requires a C compiler"
     nvim-treesitter requires a C compiler , e.g. `gcc` for Linux or `clang` for android/termix
 
     The C compiler is used to compile langauge support for treesiter.
 
 
-!!! INFO "AstroNvim requires node.js"
+??? INFO "AstroNvim requires node.js"
     AstroNvim uses Mason to install LSP servers, format and lint tools. Many of the LSP servers require node.
 
     [Node.js install - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/programming-languages/javascript/nodejs/){target=_blank} 
@@ -39,15 +35,12 @@ Install the following tools to support Neovim and AstroNvim
         sudo apt install fd-find xclip luarocks
         ```
 
-    Add `set clipboard+=unnamedplus` to the Neovim configuration to use the Linux clipboard tool
-
     ??? INFO "Wayland requires wl-clipboard"
         Install the `wl-clipboard` package to use the Wayland desktop clipboard with Neovim
         !!! NOTE ""
             ```shell
             sudo apt install wl-clipboard
             ```
-
 
 === "MacOSX Homebrew"
 
@@ -60,7 +53,8 @@ Install the following tools to support Neovim and AstroNvim
 
 ## Install Neovim
 
-Use the [GitHub releases](https://github.com/neovim/neovim/releases/) for the latest version of Neovim, or use a Package manager for the operating system if the version of Neovim is 0.9.x
+Install from the [:fontawesome-brands-github: Neovim GitHub releases](https://github.com/neovim/neovim/releases/) for the latest version of Neovim, or use a Package manager for the operating system.
+
 
 === "Linux AppImage"
 
@@ -191,13 +185,64 @@ Use the [GitHub releases](https://github.com/neovim/neovim/releases/) for the la
     cpack -G DEB
     ```
 
+## Practicalli Astro Config
+
+[:fontawesome-brands-github: Practicalli Astro](http://github.com/practicalli/astro) is Clojure development focused configuration, an extension of the AstroNvim template.
+
+Clone the [Practicalli Astro](https://github.com/practicalli/astro) config or create your own fork and clone that repository instead.
+
+!!! NOTE ""
+    ```shell
+    git clone https://github.com/practicalli/astro.git ~/.config/nvim
+    ```
+
+??? HINT "Multiple Neovim Configurations"
+    Clone the configuration to a unique name within `~/.config` directory. 
+
+    Set the `NVIM_APPNAME` environment variable to the configuration directory name under `~/.config`
+
+    e.g. Run Neovim using the configuration in `~/.config/astro`
+    ```shell
+    export NVIM_APPNAME=astro nvim
+    ```
+
+    [:fontawesome-solid-book-open: Configure shell alias](multiple-configurations/#configure-shell-alias){target=_blank} to simplify the command to run a specific configuration.
+
+??? INFO "AstroNvim Template"
+    [:fontawesome-brands-github: AstroNvim template repository](https://github.com/AstroNvim/template) provide a general configuration for Neovim. 
+
+    [:fontawesome-brands-github: AstroNvim Community](https://github.com/AstroNvim/astrocommunity/) repository provides plugin configs to make it easier to extend the general feature of AstroNvim.
+
+
+## Neovim Plugins
+
+Enter `nvim` command in a terminal to launch Neovim and install all the plugins from the Practicalli Astro configuration.  
+
+!!! NOTE "Run Neovim"
+    ```shell
+    nvim
+    ```
+
+Lazy plugin manager runs automatically and installs all the plugins defined in the Neovim configuration.  
+
+Treesitter will prompt to compile its language parsers.
+
+++"q"++ to close the lazy package manager popup once all plugins are installed.
+
+
+??? INFO "Unattended post install"
+    Plugins can be installed without running the Neovim editor UI
+    !!! NOTE ""
+        ```shell
+        NVIM_APPNAME=astronvim4 nvim --headless
+        ```
+
+
 ## Post Install checks
 
 Ensure supporting tools and binaries are available in the operating system by running the Neovim Heath Check.
 
 `nvim` in a terminal to run NeoVim and check the installation is working without error.
-
-![NeoVim - default startup message](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-startup-default-message.png){target=_blank}
 
 `:checkhealth` to run a check supporting tools are available to NeoVim.
 
