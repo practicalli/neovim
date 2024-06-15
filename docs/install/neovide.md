@@ -1,7 +1,6 @@
 # Neovide GUI
 
 
-
 ![Neovide Gui Screenshot](https://neovide.dev/assets/neovide-128x128.png){align=right loading=lazy style="height:150px"}
 
 Neovide provides a GUI for Neovim and supports the use of AstroNvim community configuration.
@@ -69,7 +68,7 @@ The `guifont` Neovim option is used to set a font family and size specifically f
 
 
 !!! EXAMPLE "AstroNvim Neovide font family and size"
-    [:fontawesome-solid-book-open: Practicalli AstroNvim Config](/neovim/configuration/astronvim/#clone-astronvim-user-config) includes the `guifont` option in the `options.lua` file.
+    [:fontawesome-solid-book-open: Practicalli Astro config](/neovim/configuration/astro/) includes the `guifont` option in the `options.lua` file.
 
     ```lua title="options.lua"
     return {
