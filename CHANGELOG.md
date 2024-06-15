@@ -40,6 +40,7 @@
 - mkdocs: dark theme scheme `teal` & accent `deep purple`  
 - basics: astronvim file, buffer, window and tap page
 - intro: use practial.li/writing-tips link
+- install: use practial.li/clojure/install link
 
 
 ## 2023-07-11
