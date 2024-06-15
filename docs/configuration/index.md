@@ -23,6 +23,13 @@ Set `NVIM_APPNAME` to a configuration directory name (relative to $HOME/.config/
 
 The configuration directory name is used to save local `share`, `state` and `cache` files for that specific configuration.
 
+??? INFO "Community Configuration Projects"
+
+    * [Magit Kit](https://github.com/Olical/magic-kit) fennel configuration from the author of Conjure
+    * [cajus-nvim](https://github.com/rafaeldelboni/cajus-nvim) inspiration for practicalli/neovim-config-redux
+    * [LazyVim](https://www.lazyvim.org/) lazy & mason configuration
+    * [NvChad](https://github.com/NvChad/NvChad) polished UI with Lazy optomisations
+
 
 ## Configure shell alias
 

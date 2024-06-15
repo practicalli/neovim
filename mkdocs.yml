@@ -129,7 +129,6 @@ extra:
 nav:
   - Introduction:
       - Overview: index.md
-      - Community Projects: introduction/community-projects.md
       - REPL Workflow: introduction/repl-workflow.md
       - Features: introduction/features.md
       - Contributing: introduction/contributing.md

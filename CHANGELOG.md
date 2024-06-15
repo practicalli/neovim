@@ -18,6 +18,7 @@
 - basics: change project root with autocompletion
 - basics: set directory root approaches
 - basics: spell check overview
+- configuration: alternative community configurations
  
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
