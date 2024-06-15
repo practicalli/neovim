@@ -132,7 +132,7 @@ nav:
       - REPL Workflow: introduction/repl-workflow.md
       - Features: introduction/features.md
       - Contributing: introduction/contributing.md
-      - Writing Tips: introduction/writing-tips.md
+      - Writing Tips: https://practical.li/writing-tips/
   - Install:
       - Overview: install/index.md
       - Clojure: install/clojure.md
