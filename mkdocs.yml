@@ -132,7 +132,6 @@ nav:
       - Community Projects: introduction/community-projects.md
       - REPL Workflow: introduction/repl-workflow.md
       - Features: introduction/features.md
-      - Fennel: introduction/fennel.md
       - Contributing: introduction/contributing.md
       - Writing Tips: introduction/writing-tips.md
   - Install:
@@ -220,3 +219,4 @@ nav:
           - Language Providers: reference/neovim/language-providers.md
       - Lua Language:
           - reference/lua-language/index.md
+      - Fennel: reference/fennel.md
