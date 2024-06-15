@@ -137,6 +137,7 @@ nav:
       - Overview: install/index.md
       - Clojure: https://practical.li/clojure/install/
       - Neovim: install/neovim.md
+      - Multiple Configs: install/multiple-configurations.md
       - Neovide: install/neovide.md
   - Neovim configuration:
       - configuration/index.md

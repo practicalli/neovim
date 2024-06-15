@@ -1,15 +1,3 @@
-# Neovim Configuration
-
-Practicalli Neovim is based on [AstroNvim](astronvim/), a thoughtful configuration that supports the latest Neovim stable releases, provides a polished UI and many community extensions.
-
-Practicalli AstroNvim User Config provides a complete Clojure config on top of AstroNvim.
-
-[Install Practicalli AstroNvim Config](astronvim/index.md){.md-button} 
-
-
-> NOTE: [Practicalli Neovim Config Redux](practicalli/) was a learning experiment that provided mnemonic key bindings, packer, telescope selector, written in Fennel.  This project has now been archived in favour of AstroNvim
-
-
 ## Multiple Configurations
 
 Many Neovim configurations can be installed in `$HOME/.config/` using unique directory names, e.g. [AstroNvim](astronvim/), lazyvim, Nvchad, practicalli. 
