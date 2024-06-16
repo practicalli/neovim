@@ -20,13 +20,13 @@
         <meta name="author" content="Practicalli">
       
       
-        <link rel="canonical" href="https://practical.li/neovim/configuration/practicalli/packages/lualine/">
+        <link rel="canonical" href="https://practical.li/neovim/reference/configuration/practicalli/packer/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../config-design/">
       
       
-        <link rel="next" href="../nvim-treesitter/">
+        <link rel="next" href="../packages/">
       
       
       <link rel="icon" href="../../../../assets/favicon.svg">
@@ -34,7 +34,7 @@
     
     
       
-        <title>Status Line - Practicalli Neovim</title>
+        <title>Packer - Practicalli Neovim</title>
       
     
     
@@ -81,11 +81,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Status Line - Practicalli Neovim" >
+        <meta  property="og:title"  content="Packer - Practicalli Neovim" >
       
         <meta  property="og:description"  content="Practical guide to Clojure development with Neovim" >
       
-        <meta  property="og:image"  content="https://practical.li/neovim/assets/images/social/configuration/practicalli/packages/lualine.png" >
+        <meta  property="og:image"  content="https://practical.li/neovim/assets/images/social/reference/configuration/practicalli/packer.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -93,15 +93,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://practical.li/neovim/configuration/practicalli/packages/lualine/" >
+        <meta  property="og:url"  content="https://practical.li/neovim/reference/configuration/practicalli/packer/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Status Line - Practicalli Neovim" >
+        <meta  name="twitter:title"  content="Packer - Practicalli Neovim" >
       
         <meta  name="twitter:description"  content="Practical guide to Clojure development with Neovim" >
       
-        <meta  name="twitter:image"  content="https://practical.li/neovim/assets/images/social/configuration/practicalli/packages/lualine.png" >
+        <meta  name="twitter:image"  content="https://practical.li/neovim/assets/images/social/reference/configuration/practicalli/packer.png" >
       
     
     
@@ -133,7 +133,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lualine-modeline-theme" class="md-skip">
+        <a href="#package-manager" class="md-skip">
           Skip to content
         </a>
       
@@ -203,7 +203,7 @@
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
-             Status Line 
+             Packer 
           </span>
         </div>
       </div>
@@ -682,449 +682,6 @@
       
   
   
-    
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Neovim configuration
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Neovim configuration
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../index.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    None
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../astronvim/" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    AstroNvim
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
-            <span class="md-nav__icon md-icon"></span>
-            AstroNvim
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../astronvim/astrocommunity/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    AstroCommunity
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../astronvim/config-design/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Config Design
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Practicalli
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_3">
-            <span class="md-nav__icon md-icon"></span>
-            Practicalli
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../config-design/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Config Design
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../packer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Packer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" checked>
-        
-          
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
-  
-  <span class="md-ellipsis">
-    Packages
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_3_4">
-            <span class="md-nav__icon md-icon"></span>
-            Packages
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Status Line
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Status Line
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#lualine-configuration-in-fennel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lualine configuration in Fennel
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../nvim-treesitter/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Treesitter
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
   
   
     
@@ -1167,7 +724,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           
@@ -1183,14 +740,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Neovim Basics
           </label>
@@ -1327,7 +884,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
         
           
           
@@ -1343,14 +900,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
             Search Replace
           </label>
@@ -1592,7 +1149,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           
@@ -1608,14 +1165,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Clojure REPL Workflow
           </label>
@@ -1765,7 +1322,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           
@@ -1781,14 +1338,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Source Control
           </label>
@@ -1928,7 +1485,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           
@@ -1945,8 +1502,8 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             API tools
           </label>
@@ -1995,7 +1552,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
           
@@ -2011,14 +1568,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Ultra-Mobile Neovim
           </label>
@@ -2184,8 +1741,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -2199,17 +1758,21 @@
       
         
       
+        
+      
+        
+      
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2220,8 +1783,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Reference
           </label>
@@ -2242,6 +1805,88 @@
       
         
       
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Astro config Design
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Astro config Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../astrocommunity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AstroCommunity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
         
       
         
@@ -2269,12 +1914,12 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/modal-editing/" class="md-nav__link ">
+            <a href="../../../modal-editing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2285,14 +1930,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
             <span class="md-nav__icon md-icon"></span>
             Modal Editing
           </label>
@@ -2307,7 +1952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/modal-editing/case/" class="md-nav__link">
+      <a href="../../../modal-editing/case/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2328,7 +1973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/modal-editing/g-menu/" class="md-nav__link">
+      <a href="../../../modal-editing/g-menu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2349,7 +1994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/modal-editing/key-binding-reference/" class="md-nav__link">
+      <a href="../../../modal-editing/key-binding-reference/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2370,7 +2015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/modal-editing/moving-around/" class="md-nav__link">
+      <a href="../../../modal-editing/moving-around/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2391,7 +2036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/modal-editing/motions/" class="md-nav__link">
+      <a href="../../../modal-editing/motions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2412,7 +2057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/modal-editing/narrowing/" class="md-nav__link">
+      <a href="../../../modal-editing/narrowing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2433,7 +2078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/modal-editing/speaking-vim/" class="md-nav__link">
+      <a href="../../../modal-editing/speaking-vim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2454,7 +2099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/modal-editing/vim-quick-reference/" class="md-nav__link">
+      <a href="../../../modal-editing/vim-quick-reference/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2475,7 +2120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/modal-editing/vim-tips-for-developers/" class="md-nav__link">
+      <a href="../../../modal-editing/vim-tips-for-developers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2496,7 +2141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/modal-editing/visual-select/" class="md-nav__link">
+      <a href="../../../modal-editing/visual-select/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2517,7 +2162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/modal-editing/z-menu/" class="md-nav__link">
+      <a href="../../../modal-editing/z-menu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2546,7 +2191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/aligning-text.md" class="md-nav__link">
+      <a href="../../../aligning-text.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2590,12 +2235,12 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/neovim/" class="md-nav__link ">
+            <a href="../../../neovim/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2606,14 +2251,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
             <span class="md-nav__icon md-icon"></span>
             Neovim
           </label>
@@ -2628,7 +2273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/neovim/standard-path/" class="md-nav__link">
+      <a href="../../../neovim/standard-path/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2649,7 +2294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/neovim/quickfix/" class="md-nav__link">
+      <a href="../../../neovim/quickfix/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2670,7 +2315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/neovim/changelist/" class="md-nav__link">
+      <a href="../../../neovim/changelist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2691,7 +2336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/neovim/jumplist/" class="md-nav__link">
+      <a href="../../../neovim/jumplist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2712,7 +2357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/neovim/language-providers/" class="md-nav__link">
+      <a href="../../../neovim/language-providers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2754,12 +2399,12 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../reference/lua-language/" class="md-nav__link ">
+            <a href="../../../lua-language/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2771,8 +2416,8 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_5">
             <span class="md-nav__icon md-icon"></span>
             Lua Language
           </label>
@@ -2795,7 +2440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/fennel/" class="md-nav__link">
+      <a href="../../../fennel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2804,6 +2449,278 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Practicalli Config Design
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_7">
+            <span class="md-nav__icon md-icon"></span>
+            Practicalli Config Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Packer
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Packer
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Packages
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../packages/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Packages
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_7_4" id="__nav_8_7_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Packages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/lualine/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Status Line
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/nvim-treesitter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Treesitter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2843,9 +2760,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#lualine-configuration-in-fennel" class="md-nav__link">
+  <a href="#install" class="md-nav__link">
     <span class="md-ellipsis">
-      Lualine configuration in Fennel
+      Install
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Packages
     </span>
   </a>
   
@@ -2866,7 +2792,7 @@
                   
 
   
-    <a href="https://github.com/practicalli/neovim/edit/main/docs/configuration/practicalli/packages/lualine.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/neovim/edit/main/docs/reference/configuration/practicalli/packer.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2875,79 +2801,50 @@
     
       
     
-    <a href="https://github.com/practicalli/neovim/raw/main/docs/configuration/practicalli/packages/lualine.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/neovim/raw/main/docs/reference/configuration/practicalli/packer.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="lualine-modeline-theme">Lualine - modeline theme<a class="headerlink" href="#lualine-modeline-theme" title="Permanent link">λ︎</a></h1>
-<p><a href="https://github.com/nvim-lualine/lualine.nvim">nvim-lualine/lualine.nvim</a> is a fast and configurable statusline for neovim</p>
-<p>Example status line: evil_lualine</p>
-<p><a class="glightbox" href="https://user-images.githubusercontent.com/13149513/113875129-4453ba00-97d8-11eb-8f21-94a9ef565db3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="NeoVim LuaLine - evil-lualine theme" src="https://user-images.githubusercontent.com/13149513/113875129-4453ba00-97d8-11eb-8f21-94a9ef565db3.png" /></a></p>
-<!-- TODO: screenshot of lualine with clojure lsp and conjure runing -->
-
-<h2 id="lualine-configuration-in-fennel">Lualine configuration in Fennel<a class="headerlink" href="#lualine-configuration-in-fennel" title="Permanent link">λ︎</a></h2>
-<p><code>nvim/fnl/config/plugin/lualine.fnl</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">(</span><span class="nv">module</span><span class="w"> </span><span class="nv">config.plugin.lualine</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p">{</span><span class="nv">autoload</span><span class="w"> </span><span class="p">{</span><span class="nv">core</span><span class="w"> </span><span class="nv">aniseed.core</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">             </span><span class="nv">lualine</span><span class="w"> </span><span class="nv">lualine</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">             </span><span class="nv">lsp</span><span class="w"> </span><span class="nv">config.plugin.lspconfig</span><span class="p">}})</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">(</span><span class="nv">defn</span><span class="w"> </span><span class="nv">lsp_connection</span><span class="w"> </span><span class="p">[]</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nv">vim.tbl_isempty</span><span class="w"> </span><span class="p">(</span><span class="nv">vim.lsp.buf_get_clients</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">))</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">(</span><span class="nv">def</span><span class="w"> </span><span class="nv">github-lua-theme</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="p">(</span><span class="nv">core.assoc</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p">(</span><span class="nb">require </span><span class="ss">:lualine.themes.auto</span><span class="p">)</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="ss">:inactive</span><span class="w"> </span><span class="p">{</span><span class="ss">:a</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#19181e&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#a4a3a6&quot;</span><span class="p">}</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">               </span><span class="ss">:b</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#19181e&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#a4a3a6&quot;</span><span class="p">}</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">               </span><span class="ss">:c</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#19181e&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#a4a3a6&quot;</span><span class="p">}}</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="ss">:normal</span><span class="w"> </span><span class="p">{</span><span class="ss">:a</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#131217&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#24292e&quot;</span><span class="p">}</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">             </span><span class="ss">:b</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#131217&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#3b8eea&quot;</span><span class="p">}</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">             </span><span class="ss">:c</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#19181e&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#d1d5da&quot;</span><span class="p">}}</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="ss">:command</span><span class="w"> </span><span class="p">{</span><span class="ss">:a</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#131217&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#24292e&quot;</span><span class="p">}</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">              </span><span class="ss">:b</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#131217&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#ccbed8&quot;</span><span class="p">}</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">              </span><span class="ss">:c</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#19181e&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#d1d5da&quot;</span><span class="p">}}</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="ss">:visual</span><span class="w"> </span><span class="p">{</span><span class="ss">:a</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#131217&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#24292e&quot;</span><span class="p">}</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">             </span><span class="ss">:b</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#131217&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#ced4b1&quot;</span><span class="p">}</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">             </span><span class="ss">:c</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#19181e&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#d1d5da&quot;</span><span class="p">}}</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="ss">:replace</span><span class="w"> </span><span class="p">{</span><span class="ss">:a</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#131217&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#24292e&quot;</span><span class="p">}</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">              </span><span class="ss">:b</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#131217&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#d1b6bd&quot;</span><span class="p">}</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">              </span><span class="ss">:c</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#19181e&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#d1d5da&quot;</span><span class="p">}}</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="ss">:insert</span><span class="w"> </span><span class="p">{</span><span class="ss">:a</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#131217&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#24292e&quot;</span><span class="p">}</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">             </span><span class="ss">:b</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#131217&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#a8d1c9&quot;</span><span class="p">}</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">             </span><span class="ss">:c</span><span class="w"> </span><span class="p">{</span><span class="ss">:bg</span><span class="w"> </span><span class="s">&quot;#19181e&quot;</span><span class="w"> </span><span class="ss">:fg</span><span class="w"> </span><span class="s">&quot;#d1d5da&quot;</span><span class="p">}}))</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="p">(</span><span class="nv">lualine.setup</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">  </span><span class="p">{</span><span class="ss">:options</span><span class="w"> </span><span class="p">{</span><span class="ss">:theme</span><span class="w"> </span><span class="nv">github-lua-theme</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">             </span><span class="ss">:icons_enabled</span><span class="w"> </span><span class="no">true</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">             </span><span class="ss">:section_separators</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">]</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">             </span><span class="ss">:component_separators</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">]}</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">   </span><span class="ss">:sections</span><span class="w"> </span><span class="p">{</span><span class="ss">:lualine_a</span><span class="w"> </span><span class="p">[]</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">              </span><span class="ss">:lualine_b</span><span class="w"> </span><span class="p">[[</span><span class="ss">:mode</span><span class="w"> </span><span class="p">{</span><span class="ss">:upper</span><span class="w"> </span><span class="no">true</span><span class="p">}]]</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">              </span><span class="ss">:lualine_c</span><span class="w"> </span><span class="p">[[</span><span class="s">&quot;FugitiveHead&quot;</span><span class="p">]</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">                          </span><span class="p">[</span><span class="ss">:filename</span><span class="w"> </span><span class="p">{</span><span class="ss">:filestatus</span><span class="w"> </span><span class="no">true</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">                                      </span><span class="ss">:path</span><span class="w"> </span><span class="mi">1</span><span class="p">}]]</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">              </span><span class="ss">:lualine_x</span><span class="w"> </span><span class="p">[[</span><span class="ss">:diagnostics</span><span class="w"> </span><span class="p">{</span><span class="ss">:sections</span><span class="w"> </span><span class="p">[</span><span class="ss">:error</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">                                                    </span><span class="ss">:warn</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">                                                    </span><span class="ss">:info</span>
-<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">                                                    </span><span class="ss">:hint</span><span class="p">]</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">                                         </span><span class="ss">:sources</span><span class="w"> </span><span class="p">[</span><span class="ss">:nvim_lsp</span><span class="p">]}]</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">                          </span><span class="p">[</span><span class="nv">lsp_connection</span><span class="p">]</span>
-<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">                          </span><span class="ss">:location</span>
-<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">                          </span><span class="ss">:filetype</span><span class="p">]</span>
-<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">              </span><span class="ss">:lualine_y</span><span class="w"> </span><span class="p">[</span><span class="ss">:encoding</span><span class="p">]</span>
-<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">              </span><span class="ss">:lualine_z</span><span class="w"> </span><span class="p">[]}</span>
-<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">   </span><span class="ss">:inactive_sections</span><span class="w"> </span><span class="p">{</span><span class="ss">:lualine_a</span><span class="w"> </span><span class="p">[]</span>
-<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">                       </span><span class="ss">:lualine_b</span><span class="w"> </span><span class="p">[]</span>
-<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">                       </span><span class="ss">:lualine_c</span><span class="w"> </span><span class="p">[[</span><span class="ss">:filename</span><span class="w"> </span><span class="p">{</span><span class="ss">:filestatus</span><span class="w"> </span><span class="no">true</span>
-<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="w">                                               </span><span class="ss">:path</span><span class="w"> </span><span class="mi">1</span><span class="p">}]]</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="w">                       </span><span class="ss">:lualine_x</span><span class="w"> </span><span class="p">[]</span>
-<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="w">                       </span><span class="ss">:lualine_y</span><span class="w"> </span><span class="p">[]</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="w">                       </span><span class="ss">:lualine_z</span><span class="w"> </span><span class="p">[]}})</span>
+<h1 id="package-manager">Package Manager<a class="headerlink" href="#package-manager" title="Permanent link">λ︎</a></h1>
+<p><a href="https://github.com/wbthomason/packer.nvim" target="_blank">Packer</a> is a <a href="https://github.com/jwiegley/use-package" target="_blank"><code>use-package</code></a> inspired package management for Neovim.</p>
+<p>Packer is used as the package manager in this guide as it is built on native Neovim packages and supports Luarocks dependencies, use the <code>:help packages</code> command in Neovim for more details.</p>
+<p>Packer is written in Lua and is installed via the <code>init.lua</code> configuration file, although Practicalli Neovim configuration uses Fennel to configure each package added by Packer.</p>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">λ︎</a></h2>
+<p><code>init.lua</code> is the entry point to the configuration and is the only part that is written in Lua language.</p>
+<p>The configuration bootstraps the Packer package manager and installs the Aniseed compiler required to process the fennel configuration.</p>
+<p>Aniseed compiles and loads <code>fnl/config/init.fnl</code> and all the required namespaces in that file.</p>
+<p>Packer will process the <code>use</code> form in <code>fnl/config/plugin.fnl</code> and install all the packages defined in that form, along with any package specific configuration defined in that package <code>{:mod :namespace-name}</code> file.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">local</span> <span class="n">execute</span> <span class="o">=</span> <span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_command</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">local</span> <span class="n">fn</span> <span class="o">=</span> <span class="n">vim</span><span class="p">.</span><span class="n">fn</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kd">local</span> <span class="n">pack_path</span> <span class="o">=</span> <span class="n">fn</span><span class="p">.</span><span class="n">stdpath</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">)</span> <span class="o">..</span> <span class="s2">&quot;/site/pack&quot;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kd">local</span> <span class="n">fmt</span> <span class="o">=</span> <span class="nb">string.format</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kr">function</span> <span class="nf">ensure</span> <span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">repo</span><span class="p">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  <span class="c1">-- Ensures a given github.com/USER/REPO is cloned in the pack/packer/start directory.</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="kd">local</span> <span class="n">install_path</span> <span class="o">=</span> <span class="n">fmt</span><span class="p">(</span><span class="s2">&quot;%s/packer/start/%s&quot;</span><span class="p">,</span> <span class="n">pack_path</span><span class="p">,</span> <span class="n">repo</span><span class="p">,</span> <span class="n">repo</span><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  <span class="kr">if</span> <span class="n">fn</span><span class="p">.</span><span class="n">empty</span><span class="p">(</span><span class="n">fn</span><span class="p">.</span><span class="n">glob</span><span class="p">(</span><span class="n">install_path</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="kr">then</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">execute</span><span class="p">(</span><span class="n">fmt</span><span class="p">(</span><span class="s2">&quot;!git clone https://github.com/%s/%s %s&quot;</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">repo</span><span class="p">,</span> <span class="n">install_path</span><span class="p">))</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">execute</span><span class="p">(</span><span class="n">fmt</span><span class="p">(</span><span class="s2">&quot;packadd %s&quot;</span><span class="p">,</span> <span class="n">repo</span><span class="p">))</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  <span class="kr">end</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="kr">end</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1">-- Bootstrap essential plugins required for installing and loading the rest.</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">ensure</span><span class="p">(</span><span class="s2">&quot;wbthomason&quot;</span><span class="p">,</span> <span class="s2">&quot;packer.nvim&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">ensure</span><span class="p">(</span><span class="s2">&quot;Olical&quot;</span><span class="p">,</span> <span class="s2">&quot;aniseed&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1">-- Enable Aniseed&#39;s automatic compilation and loading of Fennel source code.</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">vim</span><span class="p">.</span><span class="n">g</span><span class="p">[</span><span class="s2">&quot;aniseed#env&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>  <span class="n">module</span> <span class="o">=</span> <span class="s2">&quot;config.init&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>  <span class="n">compile</span> <span class="o">=</span> <span class="kc">true</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">}</span>
 </code></pre></div>
+<h2 id="packages">Packages<a class="headerlink" href="#packages" title="Permanent link">λ︎</a></h2>
+<p>Neovim packages add extra functionality to Neovim, e.g. conjure package provides an excellent Clojure REPL experience (and supports several other languages too).</p>
+<p>See the <a href="../packages/">packages section</a> for details of the packages used and a breakdown of their configuration.</p>
 
 
 
@@ -2968,7 +2865,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 27, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 16, 2024</span>
   </span>
 
     
@@ -3008,7 +2905,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Add Neovim Packages">
+          <a href="../config-design/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Config Design">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3018,20 +2915,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Add Neovim Packages
+                Config Design
               </div>
             </div>
           </a>
         
         
           
-          <a href="../nvim-treesitter/" class="md-footer__link md-footer__link--next" aria-label="Next: Treesitter">
+          <a href="../packages/" class="md-footer__link md-footer__link--next" aria-label="Next: Add Neovim Packages">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Treesitter
+                Add Neovim Packages
               </div>
             </div>
             <div class="md-footer__button md-icon">

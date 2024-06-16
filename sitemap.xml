@@ -16,51 +16,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://practical.li/neovim/configuration/astronvim/</loc>
-         <lastmod>2024-06-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://practical.li/neovim/configuration/astronvim/astrocommunity/</loc>
-         <lastmod>2024-06-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://practical.li/neovim/configuration/astronvim/config-design/</loc>
-         <lastmod>2024-06-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://practical.li/neovim/configuration/practicalli/</loc>
-         <lastmod>2024-06-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://practical.li/neovim/configuration/practicalli/config-design/</loc>
-         <lastmod>2024-06-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://practical.li/neovim/configuration/practicalli/packer/</loc>
-         <lastmod>2024-06-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://practical.li/neovim/configuration/practicalli/packages/</loc>
-         <lastmod>2024-06-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://practical.li/neovim/configuration/practicalli/packages/lualine/</loc>
-         <lastmod>2024-06-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://practical.li/neovim/configuration/practicalli/packages/nvim-treesitter/</loc>
-         <lastmod>2024-06-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://practical.li/neovim/install/</loc>
          <lastmod>2024-06-16</lastmod>
          <changefreq>daily</changefreq>
@@ -182,6 +137,46 @@
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/fennel/</loc>
+         <lastmod>2024-06-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/neovim/reference/configuration/</loc>
+         <lastmod>2024-06-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/neovim/reference/configuration/astrocommunity/</loc>
+         <lastmod>2024-06-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/neovim/reference/configuration/practicalli/</loc>
+         <lastmod>2024-06-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/neovim/reference/configuration/practicalli/config-design/</loc>
+         <lastmod>2024-06-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/neovim/reference/configuration/practicalli/packer/</loc>
+         <lastmod>2024-06-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/neovim/reference/configuration/practicalli/packages/</loc>
+         <lastmod>2024-06-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/neovim/reference/configuration/practicalli/packages/lualine/</loc>
+         <lastmod>2024-06-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/neovim/reference/configuration/practicalli/packages/nvim-treesitter/</loc>
          <lastmod>2024-06-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
