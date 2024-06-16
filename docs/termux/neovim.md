@@ -1,6 +1,6 @@
 # Install neovim
 
-Neovim version 8 availabe as current package
+Neovim version 9.5 is currenlyt available as a Termux package
 
 ```
 pkg install neovim
@@ -11,14 +11,14 @@ pkg install neovim
 
 ## Neovim treesitter
 
-Treesitter provides excellent language syntax parsing and highlighting and is a very attractive feature of the recent neovim releases.  Treesitter is a major attraction, bringing in a new audience for Neovim.
+Treesitter provides excellent language syntax parsing and highlighting performance, allowing any Neovim package to benefit.
 
-The `nvim-treesitter` package is included in the [practicalli/neovim-config-redux](https://github.com/practicalli/neovim-config-redux){target=_blank} configuration.
+The `nvim-treesitter` package is included in the [practicalli/astro](https://github.com/practicalli/astro){target=_blank} configuration.
 
 
 ## C Compiler
 
-Install C compiler for neovim-treesitter, to compile a parser for each specific programming language.
+Install C compiler to compile the parser for each specific programming language.
 
 ```
 pkg install clang
