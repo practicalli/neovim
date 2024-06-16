@@ -60,13 +60,10 @@ alias neovide="NVIM_APPNAME=astronvim neovide"
 
 The `guifont` Neovim option is used to set a font family and size specifically for a GUI appliction, i.e. Neovide.  It is not used by Neovim itself.
 
+++ctrl+"="++ and ++ctrl+"-"++ increase & decrease the font size in Neovide (move the cursor if no immediate effect is seen)
 
-!!! EXAMPLE "Neovide font family and size"
-    ```lua
-    guifont = "Fira Code:h16"
-    ```
 
-!!! EXAMPLE "AstroNvim Neovide recipe"
+!!! EXAMPLE "Neovide recipe"
     Astro Community provides an [:fontawesome-solid-book-open: neovide recipe](https://docs.astronvim.com/recipes/neovide) with recommended options.
 
     ```lua title="lua/plugins/community.lua"
