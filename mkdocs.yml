@@ -151,7 +151,7 @@ nav:
       - Spell Check: neovim-basics/spell-check.md
       - Comments: neovim-basics/comments.md
       - Snippets: neovim-basics/snippets.md
-      - Package Manager: neovim-basics/plugin-manager.md
+      - Plugin Manager: neovim-basics/plugin-manager.md
       - Multiple Cursors: neovim-basics/multiple-cursors.md
       - Zen Mode: neovim-basics/zen-mode.md
       - Terminal: neovim-basics/terminal.md
