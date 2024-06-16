@@ -15,4 +15,4 @@ Select a word using its number in list to replace the word under the cursor, or 
 | ++bracket-right++ ++"s"++  | previous incorrect word   |
 | ++"z"++ ++"g"++            | add word to spelling list |
 | ++"z"++ ++"w"++            | mark word as misspelled   |
-
+| ++spc++ ++"u"++ ++"s"++    | toggle spellcheck         |
