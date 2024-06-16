@@ -19,6 +19,7 @@
 - basics: set directory root approaches
 - basics: spell check overview
 - configuration: alternative community configurations
+- reference: link to intro to lua from codecademy
  
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)

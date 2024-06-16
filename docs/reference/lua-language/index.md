@@ -15,3 +15,5 @@ Lua is the default language for Neovim configuration.
 ## Reference
 
 [:globe_with_meridians: Lua.org 5.4 Reference Manual](https://www.lua.org/manual/5.4/){target=_blank .md-button}
+
+[:globe_with_meridians: Introduction to Lua - Codecademy](https://www.codecademy.com/learn/learn-lua/modules/learn-lua-introduction/cheatsheet){target=_blank .md-button}
