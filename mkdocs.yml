@@ -135,7 +135,6 @@ nav:
       - Writing Tips: https://practical.li/writing-tips/
   - Install:
       - Overview: install/index.md
-      - Clojure: https://practical.li/clojure/install/
       - Neovim: install/neovim.md
       - Multiple Configs: install/multiple-configurations.md
       - Neovide: install/neovide.md
