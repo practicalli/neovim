@@ -66,25 +66,28 @@ The `guifont` Neovim option is used to set a font family and size specifically f
     guifont = "Fira Code:h16"
     ```
 
+!!! EXAMPLE "AstroNvim Neovide recipe"
+    Astro Community provides an [:fontawesome-solid-book-open: neovide recipe](https://docs.astronvim.com/recipes/neovide) with recommended options.
 
-!!! EXAMPLE "AstroNvim Neovide font family and size"
-    [:fontawesome-solid-book-open: Practicalli Astro config](/neovim/configuration/astro/) includes the `guifont` option in the `options.lua` file.
+    ```lua title="lua/plugins/community.lua"
+    { import = "astrocommunity.recipes.neovide" },
+    ```
 
-    ```lua title="options.lua"
-    return {
-      opt = {
-        -- set to true or false etc.
-        relativenumber = true, -- sets vim.opt.relativenumber
-        number = true,         -- sets vim.opt.number
-        spell = false,         -- sets vim.opt.spell
-        signcolumn = "auto",   -- sets vim.opt.signcolumn to auto
-        wrap = true,           -- sets vim.opt.wrap
-        -- showtabline = 0,    -- sets vim.opt.showtabline - zero hides tabs
-        timeoutlen = 420,
-        -- neovide font family & size
-        guifont = "Fira Code:h16",
-      },
-    }
+    This recipe is include in the `lua/community.lua` file from Practicalli Astro configuration, with a font override in `lua/plugins/user-practicalli.lua` to set the preferred font.
+
+    ```lua
+      {
+        "AstroNvim/astrocore",
+        ---@type AstroCoreOpts
+        opts = {
+          options = {
+            -- configure general options: vim.opt.<key>
+            opt = {
+              guifont = "Fira Code:h16", -- neovide font family & size (height)
+            },  
+          },
+        },
+      }  
     ```
 
 ![Neovide Gui Screenshot](https://neovide.dev/assets/BasicScreenCap.png){loading=lazy}
