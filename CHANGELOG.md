@@ -41,6 +41,7 @@
 - basics: astronvim file, buffer, window and tap page
 - intro: use practial.li/writing-tips link
 - install: use practial.li/clojure/install link
+- reference: practicalli configuration moved into reference
 
 
 ## 2023-07-11

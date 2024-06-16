@@ -145,14 +145,6 @@ nav:
           - configuration/astronvim/index.md
           - AstroCommunity: configuration/astronvim/astrocommunity.md
           - Config Design: configuration/astronvim/config-design.md
-      - Practicalli:
-          - configuration/practicalli/index.md
-          - Config Design: configuration/practicalli/config-design.md
-          - Packer: configuration/practicalli/packer.md
-          - Packages:
-              - configuration/practicalli/packages/index.md
-              - Status Line: configuration/practicalli/packages/lualine.md
-              - Treesitter: configuration/practicalli/packages/nvim-treesitter.md
   - Neovim Basics:
       - neovim-basics/index.md
       - File Buffer Window Tab: neovim-basics/file-buffer-window-tab.md
@@ -221,3 +213,11 @@ nav:
       - Lua Language:
           - reference/lua-language/index.md
       - Fennel: reference/fennel.md
+      - Practicalli:
+          - reference/configuration/practicalli/index.md
+          - Config Design: reference/configuration/practicalli/config-design.md
+          - Packer: reference/configuration/practicalli/packer.md
+          - Packages:
+              - reference/configuration/practicalli/packages/index.md
+              - Status Line: reference/configuration/practicalli/packages/lualine.md
+              - Treesitter: reference/configuration/practicalli/packages/nvim-treesitter.md
