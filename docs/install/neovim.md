@@ -187,11 +187,14 @@ Install from the [:fontawesome-brands-github: Neovim GitHub releases](https://gi
 
 ## Practicalli Astro Config
 
+![Practicalli Logo](https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo.png?raw=true#only-light){align=right loading=lazy style="height:72px"}
+![Practicalli Logo](https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo-dark.png?raw=true#only-dark){align=right loading=lazy style="height:72px"}
+
 [:fontawesome-brands-github: Practicalli Astro](http://github.com/practicalli/astro) is Clojure development focused configuration, an extension of the AstroNvim template.
 
-Clone the [Practicalli Astro](https://github.com/practicalli/astro) config or create your own fork and clone that repository instead.
+Clone the [Practicalli Astro](https://github.com/practicalli/astro) config or create your own fork and clone that repository.
 
-!!! NOTE ""
+!!! NOTE "Clone Practicalli Astro config"
     ```shell
     git clone https://github.com/practicalli/astro.git ~/.config/nvim
     ```
@@ -231,24 +234,27 @@ Treesitter will prompt to compile its language parsers.
 
 
 ??? INFO "Unattended post install"
-    Plugins can be installed without running the Neovim editor UI
-    !!! NOTE ""
-        ```shell
-        NVIM_APPNAME=astronvim4 nvim --headless
-        ```
+    Use the `--headless` Neovim flag to install plugins without running whole Neovim editor user interface.
+    
+    ```shell
+    nvim --headless
+    ```
 
 
 ## Post Install checks
 
-Ensure supporting tools and binaries are available in the operating system by running the Neovim Heath Check.
+Troubleshoot the Neovim configuration and supporting tools by running the [:globe_with_meridians: Neovim Heath Check](https://neovim.io/doc/user/health.html){target=_blank}.
 
-`nvim` in a terminal to run NeoVim and check the installation is working without error.
+Use the `:checkhealth` command in Neovim or start Neovim with the Health Check command. 
 
-`:checkhealth` to run a check supporting tools are available to NeoVim.
+!!! EXAMPLE "Run Neovim and start Health Check"
+    ```shell
+    nvim +:checkhealth
+    ```
 
-A report is generated and shown in NeoVim
+A report is generated and shown in Neovim
 
-`j` / `k` to scroll through the checkhealth report
+++"j"++ / ++"j"++ to scroll through the checkhealth report
 
 Review the warnings and install tooling that is required for languages that will be used.
 
@@ -257,4 +263,4 @@ Review the warnings and install tooling that is required for languages that will
 !!! HINT "Ignore Provider Warnings"
     It is safe to ignore language provider warnings.
 
-    [Language Providers can be disabled](/neovim/reference/neovim/language-providers/) in the Neovim configuration to remove the warnings from `:checkhealth` report.  Examples of disabling language provders are in the [practicalli/neovim-config-redux configuration](https://github.com/practicalli/neovim-config-redux){target=_blank}, covered in the [Neovim Config](configuration/) install step
+    [Language Providers can be disabled](/neovim/reference/neovim/language-providers/) in the Neovim configuration to remove the warnings from `:checkhealth` report.  
