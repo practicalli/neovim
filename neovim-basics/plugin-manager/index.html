@@ -34,7 +34,7 @@
     
     
       
-        <title>Package Manager - Practicalli Neovim</title>
+        <title>Plugin Manager - Practicalli Neovim</title>
       
     
     
@@ -81,7 +81,7 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Package Manager - Practicalli Neovim" >
+        <meta  property="og:title"  content="Plugin Manager - Practicalli Neovim" >
       
         <meta  property="og:description"  content="Practical guide to Clojure development with Neovim" >
       
@@ -97,7 +97,7 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Package Manager - Practicalli Neovim" >
+        <meta  name="twitter:title"  content="Plugin Manager - Practicalli Neovim" >
       
         <meta  name="twitter:description"  content="Practical guide to Clojure development with Neovim" >
       
@@ -133,7 +133,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#plugin-manager" class="md-skip">
+        <a href="#lazy-plugin-manager" class="md-skip">
           Skip to content
         </a>
       
@@ -203,7 +203,7 @@
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
-             Package Manager 
+             Plugin Manager 
           </span>
         </div>
       </div>
@@ -1004,7 +1004,7 @@
           
   
   <span class="md-ellipsis">
-    Package Manager
+    Plugin Manager
   </span>
   
 
@@ -1015,7 +1015,7 @@
         
   
   <span class="md-ellipsis">
-    Package Manager
+    Plugin Manager
   </span>
   
 
@@ -1037,18 +1037,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#package-list-and-documentation" class="md-nav__link">
+  <a href="#plugin-updates" class="md-nav__link">
     <span class="md-ellipsis">
-      Package List and documentation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-packages" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding packages
+      Plugin Updates
     </span>
   </a>
   
@@ -2735,18 +2726,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#package-list-and-documentation" class="md-nav__link">
+  <a href="#plugin-updates" class="md-nav__link">
     <span class="md-ellipsis">
-      Package List and documentation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-packages" class="md-nav__link">
-    <span class="md-ellipsis">
-      Adding packages
+      Plugin Updates
     </span>
   </a>
   
@@ -2783,69 +2765,19 @@
   
 
 
-<h1 id="plugin-manager">Plugin Manager<a class="headerlink" href="#plugin-manager" title="Permanent link">λ︎</a></h1>
+<h1 id="lazy-plugin-manager">Lazy Plugin Manager<a class="headerlink" href="#lazy-plugin-manager" title="Permanent link">λ︎</a></h1>
 <p>Neovim community provides a wide range of plugins to greatly extend the features of Neovim</p>
 <p>There is a wide range of plugin managers too, including a built-in plugin manager in Neovim.</p>
-<ul>
-<li>Lazy - AstroNvim Config</li>
-<li>Packer - Practicalli Neovim Config Redux</li>
-</ul>
-<div class="admonition hint">
-<p class="admonition-title">Lazy plugin manager recommeded</p>
-<p>Practicalli recommends Lazy plugin manager as it feels much easier to use and has a more engaing and understandable user interface</p>
-</div>
-<details class="warning">
-<summary>Neovim evolving</summary>
-<p>Neovim and its plugins are evolving quite rapidly, so it is recommended to update plugins if there are issue or when a newer version of Neovim has been installed</p>
-<p>Plugin issue are not that common and typically fixed quite quickly by the community</p>
+<details class="hint">
+<summary>Lazy plugin manager recommended</summary>
+<p>Practicalli uses Lazy plugin manager as it feels much easier to use and has a more engaing and understandable user interface</p>
 </details>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">AstroNvim</label><label for="__tabbed_1_2">Practicalli Neovim Config Redux</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Lazy plugin manager</p>
+<h2 id="plugin-updates">Plugin Updates<a class="headerlink" href="#plugin-updates" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>S</kbd></span> shows the install and loaded status for all plugins defined in the Neovim configuration, e.g. <code>lua/community.lua</code> and <code>lua/plugins/*.lua</code> files</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>S</kbd></span> checks for updated plugin versions and automatically installs them</p>
 <p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-lazy-installed-after-config-update.png?raw=true#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AstroNvim Lazy plugin manager status" loading="lazy" src="https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-lazy-installed-after-config-update.png?raw=true#only-light" /></a>
 <a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-lazy-installed-after-config-update.png?raw=true#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AstroNvim Lazy plugin manager status" loading="lazy" src="https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-lazy-installed-after-config-update.png?raw=true#only-dark" /></a></p>
-</div>
-<div class="tabbed-block">
-<p><code>SPC P u</code> to update packages to their latest versions (<code>:PackerUpdate</code>).  Details of updated changes will be shown at the end of the update.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-packer-sync-updated-packages.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Neovim Packer - packages updated report" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-packer-sync-updated-packages.png" /></a></p>
-<p><code>r</code> in the package update screen gives the option to revert an update if something has gone wrong (although this seem to be a rare issue).</p>
-<p>When packages are all at the latest available version, Packer update reports packages already up to date.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-packer-update-already-up-to-date.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Neovim Packer update everything up to date" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-packer-update-already-up-to-date.png" /></a></p>
-<blockquote>
-<p>Packer downloads packages and documentation from the Internet, so a connection is required</p>
-</blockquote>
-</div>
-</div>
-</div>
-<h2 id="package-list-and-documentation">Package List and documentation<a class="headerlink" href="#package-list-and-documentation" title="Permanent link">λ︎</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">AstroNvim</label><label for="__tabbed_2_2">Practicalli Neovim Config Redux</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Lazy plugin manager</p>
-</div>
-<div class="tabbed-block">
-<p><code>SPC P l</code> to list the current packages added to the configuration</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-packer-telescope-package-list.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Neovim Package list with telescope" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-packer-telescope-package-list.png" /></a></p>
-<p>Selecting a package will display the website documentation for the package (although this may be in HTML so not the cleanest way to read the docs).</p>
-</div>
-</div>
-</div>
-<h2 id="adding-packages">Adding packages<a class="headerlink" href="#adding-packages" title="Permanent link">λ︎</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">AstroNvim</label><label for="__tabbed_3_2">Practicalli Neovim Config Redux</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Lazy plugin manager</p>
-</div>
-<div class="tabbed-block">
-<p>Add package names as keywords in the <code>use</code> expression in <code>fnl/config/plugin.fnl</code> file.</p>
-<p><code>:requires</code> to add a package that is a dependency for the package being added</p>
-<p><code>:mod</code> defines the namespace that contains the package configuration, typically a <code>setup</code> function with options.  The namespace matches the file name under <code>fnl/config/plugin</code></p>
-<p><code>SPC P i</code> to install packages that have been added to <code>fnl/config/plugin.fnl</code></p>
-<p><code>q</code> to quit once all packages are up to date</p>
-</div>
-</div>
-</div>
+<p>The changelog is shown for all updated plugins, highlighting breaking changes.  Conventional commits style is used for most plugins, making it easier to follow the most important changes.</p>
 
 
 
@@ -2866,7 +2798,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 29, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 16, 2024</span>
   </span>
 
     

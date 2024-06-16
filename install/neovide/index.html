@@ -1062,7 +1062,7 @@
         
   
   <span class="md-ellipsis">
-    Package Manager
+    Plugin Manager
   </span>
   
 
@@ -2839,29 +2839,25 @@
 </code></pre></div>
 <h2 id="set-neovide-font">Set Neovide Font<a class="headerlink" href="#set-neovide-font" title="Permanent link">λ︎</a></h2>
 <p>The <code>guifont</code> Neovim option is used to set a font family and size specifically for a GUI appliction, i.e. Neovide.  It is not used by Neovim itself.</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>=</kbd></span> and <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>-</kbd></span> increase &amp; decrease the font size in Neovide (move the cursor if no immediate effect is seen)</p>
 <div class="admonition example">
-<p class="admonition-title">Neovide font family and size</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">guifont</span> <span class="o">=</span> <span class="s2">&quot;Fira Code:h16&quot;</span>
-</code></pre></div>
-</div>
-<div class="admonition example">
-<p class="admonition-title">AstroNvim Neovide recipe</p>
+<p class="admonition-title">Neovide recipe</p>
 <p>Astro Community provides an <a href="https://docs.astronvim.com/recipes/neovide"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> neovide recipe</a> with recommended options.</p>
-<div class="highlight"><span class="filename">lua/plugins/community.lua</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">{</span> <span class="n">import</span> <span class="o">=</span> <span class="s2">&quot;astrocommunity.recipes.neovide&quot;</span> <span class="p">},</span>
+<div class="highlight"><span class="filename">lua/plugins/community.lua</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span> <span class="n">import</span> <span class="o">=</span> <span class="s2">&quot;astrocommunity.recipes.neovide&quot;</span> <span class="p">},</span>
 </code></pre></div>
 <p>This recipe is include in the <code>lua/community.lua</code> file from Practicalli Astro configuration, with a font override in <code>lua/plugins/user-practicalli.lua</code> to set the preferred font.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>  <span class="p">{</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="s2">&quot;AstroNvim/astrocore&quot;</span><span class="p">,</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="c1">---@type AstroCoreOpts</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="n">opts</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>      <span class="n">options</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        <span class="c1">-- configure general options: vim.opt.&lt;key&gt;</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        <span class="n">opt</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>          <span class="n">guifont</span> <span class="o">=</span> <span class="s2">&quot;Fira Code:h16&quot;</span><span class="p">,</span> <span class="c1">-- neovide font family &amp; size (height)</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>        <span class="p">},</span>  
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>      <span class="p">},</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    <span class="p">},</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>  <span class="p">}</span>  
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>  <span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="s2">&quot;AstroNvim/astrocore&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="c1">---@type AstroCoreOpts</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">opts</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>      <span class="n">options</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        <span class="c1">-- configure general options: vim.opt.&lt;key&gt;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        <span class="n">opt</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>          <span class="n">guifont</span> <span class="o">=</span> <span class="s2">&quot;Fira Code:h16&quot;</span><span class="p">,</span> <span class="c1">-- neovide font family &amp; size (height)</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>        <span class="p">},</span>  
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>      <span class="p">},</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="p">},</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>  <span class="p">}</span>  
 </code></pre></div>
 </div>
 <p><a class="glightbox" href="https://neovide.dev/assets/BasicScreenCap.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Neovide Gui Screenshot" loading="lazy" src="https://neovide.dev/assets/BasicScreenCap.png" /></a></p>
