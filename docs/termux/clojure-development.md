@@ -13,6 +13,8 @@ Java 17 Long Term Support version is recommended as it is very stable, receives 
 pkg install openjdk-17
 ```
 
+<!-- TODO: Install openjdk-21 when it has been packaged for Termux -->
+
 
 ## Install Clojure
 
@@ -39,13 +41,13 @@ Test by calling `clojure` with the --help option, which shows the options availa
 clojure --help
 ```
 
-Also consider running a repl to ensure the dependency download is working correctly
+Run a Clojure REPL session from a Clojure project configured with a `deps.edn` file
 
 ```shell
 clojure -M:repl/rebel
 ```
 
-> optionally install rlwrap package if using the basic repl terminal UI with the `clj` wrapper
+> optionally install rlwrap package if using the basic REPL terminal UI with the `clj` wrapper script
 
 
 ## Install Clojure LSP
