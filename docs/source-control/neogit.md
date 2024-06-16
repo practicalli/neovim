@@ -1,5 +1,7 @@
 # Neogit - interactive client for Git
 
+![Neogit Logo external](https://github.com/NeogitOrg/neogit/assets/7228095/7684545f-47b5-40e2-aedd-ccf56e0553f4){align=right loading=lazy style="height:150px;width:150px"}
+
 Neogit is an interactive git client that provides the core features of version control with Git.  Neogit emulates many of the features found in magit.
 
 `SPC g s` to open `:Neogit` status buffer
