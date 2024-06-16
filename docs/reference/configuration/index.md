@@ -1,9 +1,11 @@
-# 📦 Practicalli AstroNvim Config Design
+# 📦 Practicalli Astro Config Design
 
 A guide to the design of AstroNvim Config created by Practicalli to support a comprehensive development workflow.
 
 ??? INFO "AstroCommunity Plugin Configurations used where available"
     Plugin configurations from AstroCommunity are used to minimise the code size and maintenance of the Practicalli configuration
+
+!!! WARNING "Under review after migration to AstroNvim 4"
 
  
 ## Files overview
@@ -34,11 +36,12 @@ The file structure as taken from the AstroNvim template and new files were creat
 - :octicons-file-16: :material-close-circle-outline: `neo-tree.lua` visual file navigator - example config
 - :octicons-file-16: :material-close-circle-outline: `none-ls.lua` example config for format & lint tools
 - :octicons-file-added-16: :material-close-circle-outline: `platuml.lua` UML diagrams defined with code - requires plantuml.com install
-- :octicons-file-added-16: `practicalli.lua` theme, dashboard & key binding preferences enjoyed by Practicalli
 - :octicons-file-added-16: `snippets.lua` load JSON style snippet definitions
 - :octicons-file-added-16:`telescope.lua` ensure Treesitter languages are installed (AstroCommunity language packs also ensure parsers installed)
 - :octicons-file-16: :material-close-circle-outline: `treesittter.lua` ensure Treesitter languages are installed (AstroCommunity language packs also ensure parsers installed)
-- :octicons-file-16: :material-close-circle-outline: `user.lua` example user configuration, added via `lua/plugins/practicalli.lua`
+- :octicons-file-16: :material-close-circle-outline: `user.lua` example user configuration, added via `lua/plugins/user-practicalli.lua`
+- :octicons-file-added-16: `user-practicalli.lua` theme, dashboard & key binding preferences enjoyed by Practicalli
+- :octicons-file-added-16: `user-termux.lua` mason lsp server overrides, pinned plugin versions for neovim 0.9.x 
 
 
 ## Clojure support
@@ -444,6 +447,64 @@ if is_available "plugin-name" then
   ,,,
 else
 ```
+
+
+<!--
+
+
+# Config Design - AstroNvim
+
+[:globe_with_meridians: AstroNvim](https://astronvim.com/) is a community configuration with an engaging UI, using Lazy for plugin management (Neovim packages) and Mason for package management (LSP, DAP, format and lint tools)
+
+[:fontawesome-brands-github: Practicalli AstroNvim User Config](https://github.com/practicalli/astro) is a user configuration that extends AstroNvim and imports packages from the [:fontawesome-brands-github: AstroNvim Community](https://github.com/AstroNvim/user_example).
+
+Practicalli AstroNvim User Config provides a complete Clojure config on top of AstroNvim.
+
+
+!!! WARNING "Page being rewritten"
+
+## Template desing
+
+
+## Practicalli Changes
+
+
+## Practicalli Additions
+
+
+### User file
+
+Lua files under `lua/plugins/` load in alphabetical order.  Each configuration file should be independent from each other.
+
+A `lua/plugins/user-name.lua` file is an approprate place to override plugin defaults, as it will be the last configuration file to load.
+
+
+## Adding Your own Plugins
+
+- create a `lua/plugins/plugin-name.lua` with all the configuration and key mappings
+- add to a `lua/plugins/user-name.lua` 
+
+- community.lua when using a Plugin Config from Astro Community
+
+Review the `lua/plugins/example-config.lua` file for examples of adding and configuring plugins
+
+
+### Add LSP DAP Lint and Format tools
+
+`SPC p m` to launch Mason which manages LSP servers, linters, filters ...
+
+![AstroNvim packages - mason all installed](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-packages-mason-installed-all.png?raw=true){loading=lazy}
+
+
+### Configure format rules
+
+The configuration files for each lint and format tool should be used by Neovim.
+
+> Setting a different location for these files has proved challenging.  `plugin/null-ls.lua` has a section to override its builtin configuration for each lint and format tool, however, in tests Practicalli was unable to succeffuly set a different location.
+
+
+-->
+
 
 
 <!--

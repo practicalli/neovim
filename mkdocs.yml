@@ -139,12 +139,6 @@ nav:
       - Neovim: install/neovim.md
       - Multiple Configs: install/multiple-configurations.md
       - Neovide: install/neovide.md
-  - Neovim configuration:
-      - configuration/index.md
-      - AstroNvim:
-          - configuration/astronvim/index.md
-          - AstroCommunity: configuration/astronvim/astrocommunity.md
-          - Config Design: configuration/astronvim/config-design.md
   - Neovim Basics:
       - neovim-basics/index.md
       - File Buffer Window Tab: neovim-basics/file-buffer-window-tab.md
@@ -189,6 +183,9 @@ nav:
       - Clojure: termux/clojure-development.md
       - Neovim: termux/neovim.md
   - Reference:
+      - Astro config Design:
+          - reference/configuration/index.md
+          - AstroCommunity: reference/configuration/astrocommunity.md
       - Modal Editing:
           - reference/modal-editing/index.md
           - reference/modal-editing/case.md
@@ -213,7 +210,7 @@ nav:
       - Lua Language:
           - reference/lua-language/index.md
       - Fennel: reference/fennel.md
-      - Practicalli:
+      - Practicalli Config Design:
           - reference/configuration/practicalli/index.md
           - Config Design: reference/configuration/practicalli/config-design.md
           - Packer: reference/configuration/practicalli/packer.md
