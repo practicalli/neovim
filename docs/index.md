@@ -9,7 +9,7 @@ Practicalli Neovim provides install & user guide focused on a simple, powerful a
 
 ## Quick Start
 
-Install [:fontawesome-solid-book-open: Clojure](install/clojure.md), [:fontawesome-solid-book-open: Neovim 0.10.0](install/neovim.md) and [:fontawesome-solid-book-open: Practicalli Astro configuration](configuration/astronvim/)
+Install [:fontawesome-solid-book-open: Clojure](https://practical.li/clojure/){target=_blank} (Practicalli Clojure), [:fontawesome-solid-book-open: Neovim 0.10.0](install/neovim.md) and [:fontawesome-solid-book-open: Practicalli Astro configuration](install/neovim/#practicalli-astro-config)
 
 
 ## Neovim overview
