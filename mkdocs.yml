@@ -132,7 +132,6 @@ nav:
       - REPL Workflow: introduction/repl-workflow.md
       - Features: introduction/features.md
       - Contributing: introduction/contributing.md
-      - Writing Tips: https://practical.li/writing-tips/
   - Install:
       - Overview: install/index.md
       - Neovim: install/neovim.md
@@ -217,3 +216,4 @@ nav:
               - reference/configuration/practicalli/packages/index.md
               - Status Line: reference/configuration/practicalli/packages/lualine.md
               - Treesitter: reference/configuration/practicalli/packages/nvim-treesitter.md
+      - Writing Tips: https://practical.li/writing-tips/
