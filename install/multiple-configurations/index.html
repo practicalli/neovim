@@ -667,9 +667,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#zsh-terminal-config-selector" class="md-nav__link">
+  <a href="#neovim-config-selector" class="md-nav__link">
     <span class="md-ellipsis">
-      Zsh Terminal config selector
+      Neovim config selector
     </span>
   </a>
   
@@ -2786,9 +2786,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#zsh-terminal-config-selector" class="md-nav__link">
+  <a href="#neovim-config-selector" class="md-nav__link">
     <span class="md-ellipsis">
-      Zsh Terminal config selector
+      Neovim config selector
     </span>
   </a>
   
@@ -2828,7 +2828,7 @@
   <h1>Multiple Configs</h1>
 
 <h2 id="multiple-configurations">Multiple Configurations<a class="headerlink" href="#multiple-configurations" title="Permanent link">λ︎</a></h2>
-<p>Many Neovim configurations can be installed in <code>$HOME/.config/</code> using unique directory names, e.g. <a href="astronvim/">AstroNvim</a>, lazyvim, Nvchad, practicalli. </p>
+<p>Many Neovim configurations can be installed in <code>$HOME/.config/</code> using unique directory names, e.g. <a href="astronvim/">AstroNvim</a>, cajus, lazyvim, kickstart.</p>
 <p>Set <code>NVIM_APPNAME</code> to a configuration directory name (relative to $HOME/.config/`) to run Neovim with that specific config.</p>
 <div class="admonition note">
 <p class="admonition-title">Run AstroNvim config in <code>$HOME/.config/astronvim/</code></p>
@@ -2839,10 +2839,10 @@
 <details class="info">
 <summary>Community Configuration Projects</summary>
 <ul>
+<li><a href="https://github.com/nvim-lua/kickstart.nvim">kickstart.nvim</a> a highly documented starter configuration to effectively build your own</li>
+<li><a href="https://www.lazyvim.org/">LazyVim</a> lazy &amp; mason configuration</li>
 <li><a href="https://github.com/Olical/magic-kit">Magit Kit</a> fennel configuration from the author of Conjure</li>
 <li><a href="https://github.com/rafaeldelboni/cajus-nvim">cajus-nvim</a> inspiration for practicalli/neovim-config-redux</li>
-<li><a href="https://www.lazyvim.org/">LazyVim</a> lazy &amp; mason configuration</li>
-<li><a href="https://github.com/NvChad/NvChad">NvChad</a> polished UI with Lazy optomisations</li>
 </ul>
 </details>
 <h2 id="configure-shell-alias">Configure shell alias<a class="headerlink" href="#configure-shell-alias" title="Permanent link">λ︎</a></h2>
@@ -2850,9 +2850,9 @@
 <p>Add alias to <code>.bashrc</code> for Bash shell or <code>.zshrc</code> for Zsh</p>
 <div class="admonition example">
 <p class="admonition-title">Define Shell Aliases to run each configuration</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">astro</span><span class="o">=</span><span class="s2">&quot;NVIM_APPNAME=astronvim nvim&quot;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">lazy</span><span class="o">=</span><span class="s2">&quot;NVIM_APPNAME=lazyvim nvim&quot;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">practicalli</span><span class="o">=</span><span class="s2">&quot;NVIM_APPNAME=neovim-config nvim&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">astro</span><span class="o">=</span><span class="s2">&quot;NVIM_APPNAME=nvim-astro nvim&quot;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">lazy</span><span class="o">=</span><span class="s2">&quot;NVIM_APPNAME=nvim-lazyvim nvim&quot;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">cajus</span><span class="o">=</span><span class="s2">&quot;NVIM_APPNAME=nvim-cajus nvim&quot;</span>
 </code></pre></div>
 </div>
 <h3 id="shell-aliases-for-bash-and-zsh">shell-aliases for bash and zsh<a class="headerlink" href="#shell-aliases-for-bash-and-zsh" title="Permanent link">λ︎</a></h3>
@@ -2874,23 +2874,31 @@
 </div>
 </div>
 </div>
-<h2 id="zsh-terminal-config-selector">Zsh Terminal config selector<a class="headerlink" href="#zsh-terminal-config-selector" title="Permanent link">λ︎</a></h2>
-<p>Optionalliy define a terminal UI selection to choose a configuration if using zsh.</p>
+<h2 id="neovim-config-selector">Neovim config selector<a class="headerlink" href="#neovim-config-selector" title="Permanent link">λ︎</a></h2>
+<p>Create a shell function to popup a menu with the list of available Neovim configurations, defined in <code>~/.config</code> where the configuration directories are prefixed with <code>nvim-</code>, e.g. <code>~/.config/nvim-astro/</code> </p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/neovim/screenshots/neovim-config-selector-fuzzy-find-config-list-dark.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Neovim Config Fuzy Selector" loading="lazy" src="https://github.com/practicalli/graphic-design/blob/live/editors/neovim/screenshots/neovim-config-selector-fuzzy-find-config-list-dark.png?raw=true" /></a></p>
 <div class="admonition example">
-<p class="admonition-title">Z Shell nvim-selector script</p>
-<div class="highlight"><span class="filename">.local/bin/nvim-selector</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">function</span><span class="w"> </span>nvim-selector<span class="o">()</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nv">items</span><span class="o">=(</span><span class="s2">&quot;astronvim&quot;</span><span class="w"> </span><span class="s2">&quot;practicalli&quot;</span><span class="w"> </span><span class="s2">&quot;lazyvim&quot;</span><span class="o">)</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nv">config</span><span class="o">=</span><span class="k">$(</span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;%s\n&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">items</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>fzf<span class="w"> </span>--prompt<span class="o">=</span><span class="s2">&quot; Neovim Config  &quot;</span><span class="w"> </span>--height<span class="o">=</span>~50%<span class="w"> </span>--layout<span class="o">=</span>reverse<span class="w"> </span>--border<span class="w"> </span>--exit-0<span class="k">)</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-z<span class="w"> </span><span class="nv">$config</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Nothing selected&quot;</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="m">0</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="k">elif</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$config</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;default&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="nv">config</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="k">fi</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">  </span><span class="nv">NVIM_APPNAME</span><span class="o">=</span><span class="nv">$config</span><span class="w"> </span>nvim<span class="w"> </span><span class="nv">$@</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="o">}</span>
+<p class="admonition-title">Neovim Config Fuzzy Finder</p>
+<div class="highlight"><span class="filename">.local/bin/nvim-fuzy-find</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>nvim-fuzy-find<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="c1"># All config paths are prefixed with ~/.config/nvim-</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="nv">config</span><span class="o">=</span><span class="k">$(</span>fdfind<span class="w"> </span>--max-depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>--glob<span class="w"> </span><span class="s1">&#39;nvim-*&#39;</span><span class="w"> </span>~/.config<span class="w"> </span><span class="p">|</span><span class="w"> </span>fzf<span class="w"> </span>--prompt<span class="o">=</span><span class="s2">&quot;Neovim Configs &gt; &quot;</span><span class="w"> </span>--height<span class="o">=</span><span class="m">15</span>%<span class="w"> </span>--layout<span class="o">=</span>reverse<span class="w"> </span>--border<span class="w"> </span>--exit-0<span class="k">)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="o">[[</span><span class="w"> </span>-z<span class="w"> </span><span class="nv">$config</span><span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;No config selected, Neovim not starting&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">return</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="c1"># Open Neovim with selected config</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="nv">NVIM_APPNAME</span><span class="o">=</span><span class="k">$(</span>basename<span class="w"> </span><span class="nv">$config</span><span class="k">)</span><span class="w"> </span>nvim<span class="w"> </span><span class="nv">$@</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="o">}</span>
 </code></pre></div>
 </div>
+<details class="example">
+<summary>Neovim Config simple Selector</summary>
+<p>Add the Neovim config directory names from <code>~/.config/</code>
+<div class="highlight"><span class="filename">.local/bin/nvim-selector</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w"> </span>nvim-selector<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="k">select</span><span class="w"> </span>config<span class="w"> </span><span class="k">in</span><span class="w"> </span>nvim-astro<span class="w"> </span>nvim-astronvim-template<span class="w"> </span>nvim-lazyvim<span class="w"> </span>nvim-kickstart<span class="w"> </span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="k">do</span><span class="w"> </span><span class="nv">NVIM_APPNAME</span><span class="o">=</span>nvim-<span class="nv">$config</span><span class="w"> </span>nvim<span class="w"> </span><span class="nv">$@</span><span class="p">;</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="o">}</span>
+</code></pre></div></p>
+</details>
 
 
 
@@ -2911,7 +2919,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 15, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 17, 2024</span>
   </span>
 
     
