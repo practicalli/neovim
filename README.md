@@ -15,7 +15,7 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/neovim?label=commits&logo=github)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/neovim?label=pull%20requests&logo=github)
 [![Publish Book](https://github.com/practicalli/neovim/actions/workflows/publish-book.yaml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/publish-book.yaml)
-[![MegaLinter](https://github.com/practicalli/neovim/actions/workflows/megalinter.yml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/megalinter.yml)
+[![MegaLinter](https://github.com/practicalli/neovim/actions/workflows/megalinter.yaml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/megalinter.yaml)
 
 
 ## Creative commons license
