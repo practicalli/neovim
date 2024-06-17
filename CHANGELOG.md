@@ -43,6 +43,7 @@
 - intro: use practial.li/writing-tips link
 - install: use practial.li/clojure/install link
 - reference: practicalli configuration moved into reference
+- install: multiple configs aliases and shell selector
 
 
 ## 2023-07-11

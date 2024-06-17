@@ -202,14 +202,18 @@ Clone the [Practicalli Astro](https://github.com/practicalli/astro) config or cr
 ??? HINT "Multiple Neovim Configurations"
     Clone the configuration to a unique name within `~/.config` directory. 
 
+    ```shell
+    git clone https://github.com/practicalli/astro.git ~/.config/nvim-astro
+    ```
+
     Set the `NVIM_APPNAME` environment variable to the configuration directory name under `~/.config`
 
     e.g. Run Neovim using the configuration in `~/.config/astro`
     ```shell
-    export NVIM_APPNAME=astro nvim
+    export NVIM_APPNAME=nvim-astro nvim
     ```
 
-    [:fontawesome-solid-book-open: Configure shell alias](multiple-configurations/#configure-shell-alias){target=_blank} to simplify the command to run a specific configuration.
+    [:fontawesome-solid-book-open: Configure shell alias and selectors](multiple-configurations/#configure-shell-alias){target=_blank} to simplify the command to run a specific configuration.
 
 ??? INFO "AstroNvim Template"
     [:fontawesome-brands-github: AstroNvim template repository](https://github.com/AstroNvim/template) provide a general configuration for Neovim. 
