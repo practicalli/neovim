@@ -2975,7 +2975,7 @@
 <li><span class="keys"><kbd>i</kbd></span> insert before the cursor</li>
 <li><span class="keys"><kbd>a</kbd></span> append after the curor</li>
 <li><span class="keys"><kbd>o</kbd></span> insert on new line after current line</li>
-<li><span class="keys"><kbd>i</kbd></span> insert a new line previous to current line</li>
+<li><span class="keys"><kbd>O</kbd></span> insert a new line previous to current line</li>
 </ul>
 <p><span class="keys"><kbd>v</kbd></span> to enter visual select, using navigation and/or motions to select a range.</p>
 <p><span class="keys"><kbd class="key-escape">Esc</kbd></span> to leave insert or visual mode and return to normal mode.</p>
@@ -2985,7 +2985,7 @@
 <ul>
 <li><span class="keys"><kbd>c</kbd></span> change</li>
 <li><span class="keys"><kbd>d</kbd></span> delete</li>
-<li><span class="keys"><kbd>f</kbd></span> find character</li>
+<li><span class="keys"><kbd>f</kbd></span> find character forward</li>
 <li><span class="keys"><kbd>g</kbd></span> go</li>
 <li><span class="keys"><kbd>s</kbd></span> substitute</li>
 <li><span class="keys"><kbd>v</kbd></span> visual select</li>
@@ -2996,10 +2996,10 @@
 <li><span class="keys"><kbd class="key-single-quote">'</kbd></span> a mark location</li>
 <li><span class="keys"><kbd class="key-brace-left">{</kbd></span> <span class="keys"><kbd class="key-brace-right">}</kbd></span> beginning/end of paragraph</li>
 <li><span class="keys"><kbd>a</kbd></span> around</li>
-<li><span class="keys"><kbd>f</kbd></span> find (includes character)</li>
+<li><span class="keys"><kbd>f</kbd></span> find forward (includes character)</li>
 <li><span class="keys"><kbd>i</kbd></span> inside</li>
-<li><span class="keys"><kbd>S</kbd></span> surround (nvim-surround)
-<span class="keys"><kbd>t</kbd></span> till (up until)</li>
+<li><span class="keys"><kbd>S</kbd></span> surround (nvim-surround)</li>
+<li><span class="keys"><kbd>t</kbd></span> till (up until)</li>
 </ul>
 <p><strong>Text objects</strong> provide scope for verbs and modifiers</p>
 <ul>
@@ -3075,7 +3075,7 @@
 </tr>
 <tr>
 <td><code>SPC v s "</code></td>
-<td>visually select current work and surround with <code>""</code></td>
+<td>visually select current word and surround with <code>""</code></td>
 </tr>
 <tr>
 <td><code>v i w s "</code></td>
@@ -3103,11 +3103,11 @@
 <a href="https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118" target="_blank">Speaking Vim</a></p>
 </div>
 <h2 id="selecting-text">Selecting text<a class="headerlink" href="#selecting-text" title="Permanent link">λ︎</a></h2>
-<p><code>vi)</code> selects all the text within <code>()</code>, e.g. <code>(http://oldwebsite.doh)</code></p>
+<p><code>vi)</code> selects all the text within <code>()</code>, e.g. (<code>http://oldwebsite.doh</code>)</p>
 <h2 id="surround">Surround<a class="headerlink" href="#surround" title="Permanent link">λ︎</a></h2>
 <p><code>viw</code> selects the current word, using j/k to modify the selection where required. <code>o</code> toggles which end of the selection is expanded/shrunk</p>
-<p><code>s</code> substitues the selection, type the characters to surround the selection.</p>
-<p><code>p</code> to pase the original text</p>
+<p><code>s</code> substitutes the selection, type the characters to surround the selection.</p>
+<p><code>p</code> to paste the original text</p>
 <h3 id="nvim-surround">nvim-surround<a class="headerlink" href="#nvim-surround" title="Permanent link">λ︎</a></h3>
 <p><a href="https://github.com/kylechui/nvim-surround">nvim-surround</a> provides enhancments over the neovim surround command.</p>
 <div class="admonition info">
@@ -3183,7 +3183,7 @@ delete(functi*on calls)     dsf             function calls
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 26, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 18, 2024</span>
   </span>
 
     
