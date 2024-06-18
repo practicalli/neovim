@@ -11,7 +11,7 @@ Normal mode to insert mode:
 - ++"i"++ insert before the cursor
 - ++"a"++ append after the curor
 - ++"o"++ insert on new line after current line
-- ++"i"++ insert a new line previous to current line
+- ++"O"++ insert a new line previous to current line
 
 ++"v"++ to enter visual select, using navigation and/or motions to select a range.
 
@@ -26,7 +26,7 @@ Learn to speak modal editing commands as sentences to effectively learn Multi-mo
 
 - ++"c"++ change
 - ++"d"++ delete
-- ++"f"++ find character
+- ++"f"++ find character forward
 - ++"g"++ go
 - ++"s"++ substitute
 - ++"v"++ visual select
@@ -37,10 +37,10 @@ Learn to speak modal editing commands as sentences to effectively learn Multi-mo
 - ++single-quote++ a mark location
 - ++brace-left++ ++brace-right++ beginning/end of paragraph
 - ++"a"++ around
-- ++"f"++ find (includes character)
+- ++"f"++ find forward (includes character)
 - ++"i"++ inside
 - ++"S"++ surround (nvim-surround)
-++"t"++ till (up until)
+- ++"t"++ till (up until)
 
 **Text objects** provide scope for verbs and modifiers
 
@@ -70,7 +70,7 @@ Learn to speak modal editing commands as sentences to effectively learn Multi-mo
     | `v s [`     | as above with `[ ]` with spaces between parens and content            |
     | `g v`       | go to last visual selection (select last visual selection)            |
     | `v a p`     | visually select around current paragraph                              |
-    | `SPC v s "` | visually select current work and surround with `""`                   |
+    | `SPC v s "` | visually select current word and surround with `""`                   |
     | `v i w s "` | visually select, insert around current word, and surround with quotes |
     | `y y`       | yank (copy) current line                                              |
     | `y w`       | yank (copy) current word                                              |
@@ -84,16 +84,16 @@ Learn to speak modal editing commands as sentences to effectively learn Multi-mo
 
 ## Selecting text 
 
-`vi)` selects all the text within `()`, e.g. `(http://oldwebsite.doh)`
+`vi)` selects all the text within `()`, e.g. (`http://oldwebsite.doh`)
 
 
 ## Surround
 
 `viw` selects the current word, using j/k to modify the selection where required. `o` toggles which end of the selection is expanded/shrunk
 
-`s` substitues the selection, type the characters to surround the selection.
+`s` substitutes the selection, type the characters to surround the selection.
 
-`p` to pase the original text
+`p` to paste the original text
 
 ### nvim-surround
 
