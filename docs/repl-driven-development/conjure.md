@@ -79,9 +79,9 @@ Conjure will detect an nREPL server (via `.nrepl-port` file) when a Clojure file
        :main-opts  ["--main" "nrepl.cmdline"
                     "--middleware" "[cider.nrepl/cider-middleware]"]}
     ```
-    
+
     `clojure -M:repl/basic` starts a REPL with nREPL with a minimal REPL UI
-     
+
     `clojure -M:repl/headless` starts a REPL with nREPL server but without a REPL prompt (to prevent accidental interaction via the command line)
 
     !!! INFO "Practicalli Clojure CLI Config aliases"
@@ -106,10 +106,10 @@ Results of evaluating an expression are shown in-line.  [Open the REPL log](#rep
 
 `,e!` - replace form with its result - helps understand a more complex function by replacing code with a specific value
 
-`,emf` - evaluate marked form - mark forms regularly re-evaluted with `mf` (or any character with `m`) to avoid jumping to that form each time . A capital letter to mark form in a different namespace and evaluate  from the current buffer. 
+`,emf` - evaluate marked form - mark forms regularly re-evaluted with `mf` (or any character with `m`) to avoid jumping to that form each time . A capital letter to mark form in a different namespace and evaluate  from the current buffer.
 
 !!! HINT "Paste Evaluation result"
-    ++double-quote++ ++"C"++ ++"p"++  to paste the contents of the `C` register into the current buffer. 
+    ++double-quote++ ++"C"++ ++"p"++  to paste the contents of the `C` register into the current buffer.
 
     The result of every Conjure evaluation is stored in the `C` register when using Practicalli AstroNvim Config.
 
@@ -161,4 +161,3 @@ Expressions in rich comments are not included when evaluating the buffer or when
 
     A full screen REPL log is displayed.  `, l q` to close the log window and return to the Clojure file.
     `, l v` to create a vertical split between code and REPL log, `, l s` for a horizontal split.
-

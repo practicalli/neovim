@@ -7,21 +7,21 @@ A guide to the design of AstroNvim Config created by Practicalli to support a co
 
 !!! WARNING "Under review after migration to AstroNvim 4"
 
- 
+
 ## Files overview
 
 The file structure as taken from the AstroNvim template and new files were created to minimise changes, making it simpler to add updates from the original template repository.
 
 !!! INFO "Key: AstroNvim template file changes"
 
-    - :octicons-file-16: unchanged 
-    - :octicons-file-diff-16: changed 
+    - :octicons-file-16: unchanged
+    - :octicons-file-diff-16: changed
     - :octicons-file-added-16: added
     - :material-close-circle-outline: config not activated (comment `if` statement to activate)
 
 :octicons-file-16: `init.lua` ensures the Lazy package manager is available when Neovim starts up. This file is unchanged from the AstroNvim template.
 
-:octicons-file-diff-16: `lua/lazy_setup.lua` configures the Lazy package manager.  `zipPlugin` enabled to support Clojure docs and source navigation inside libraries. 
+:octicons-file-diff-16: `lua/lazy_setup.lua` configures the Lazy package manager.  `zipPlugin` enabled to support Clojure docs and source navigation inside libraries.
 
 :octicons-file-diff-16: `lua/community.lua` imports plugin configurations from AstroCommunity, including the Clojure pack.
 
@@ -41,7 +41,7 @@ The file structure as taken from the AstroNvim template and new files were creat
 - :octicons-file-16: :material-close-circle-outline: `treesittter.lua` ensure Treesitter languages are installed (AstroCommunity language packs also ensure parsers installed)
 - :octicons-file-16: :material-close-circle-outline: `user.lua` example user configuration, added via `lua/plugins/user-practicalli.lua`
 - :octicons-file-added-16: `user-practicalli.lua` theme, dashboard & key binding preferences enjoyed by Practicalli
-- :octicons-file-added-16: `user-termux.lua` mason lsp server overrides, pinned plugin versions for neovim 0.9.x 
+- :octicons-file-added-16: `user-termux.lua` mason lsp server overrides, pinned plugin versions for neovim 0.9.x
 
 
 ## Clojure support
@@ -52,7 +52,7 @@ The pack contains 4 Neovim plugins:
 
 - conjure REPL client to evaluate code
 - nvim-parinfer code indenting structural editing
-- nvim-treesitter-sexp paredit (slurp/barf etc) structural editing 
+- nvim-treesitter-sexp paredit (slurp/barf etc) structural editing
 - ts-comment.nvim Clojure comment patterns
 
 
@@ -79,7 +79,7 @@ The pack contains 4 Neovim plugins:
         ```
 
     !!! EXAMPLE "Override Conjure configration"
-        Add the AstroCommunity Clojure pack and additional configuration to create a tailored experience 
+        Add the AstroCommunity Clojure pack and additional configuration to create a tailored experience
 
         `:help conjure` for general Conjure options.
 
@@ -146,9 +146,9 @@ The pack contains 4 Neovim plugins:
               },
             }
             ```
-    
+
     Improve syntax highlighting by installing the Clojure parser for Treesitter.
-    
+
     !!! EXAMPLE "Treesitter Parser for clojure in AstroNvim user configuration"
         ```lua hl_lines="7" title=".config/astronvim-config/plugins/treesitter.lua"
         return {
@@ -162,7 +162,7 @@ The pack contains 4 Neovim plugins:
           end,
         }
         ```
-    
+
     !!! HINT "Manual install of Treesitter Clojure Parser"
         `:TSInstall clojure` in Neovim will install the parser. A parser not included in the `opts.ensure_installed` configuration must be updated manually each time treesitter plugin is updated
 
@@ -371,8 +371,8 @@ null-ls is responsible for running each tool and provides default configuration 
         config.sources = {
           null_ls.builtins.formatting.markdownlint.with {
             -- pass arguments to modify/override the null-ls builtin configuration
-            extra_args = { 
-              "--config-path", 
+            extra_args = {
+              "--config-path",
               vim.fn.expand("~/.config/astro-config/tool-config/markdownlint.yaml") },
           },
         }
@@ -415,9 +415,9 @@ null-ls is responsible for running each tool and provides default configuration 
       },
     ```
 
-## Override Key binding 
+## Override Key binding
 
-AstroNvim uses Lazy package manager to set keys for packages.  
+AstroNvim uses Lazy package manager to set keys for packages.
 
 Astrocommunity configuration defines a `keys` table that is used by Lazy.
 
@@ -427,7 +427,7 @@ In the user configuration, return a function that sets key bindings to overide t
     ```lua title=".config/astronvim-config/plugins/community.lua"
     {
         "vim-highlighter",
-        keys = function() 
+        keys = function()
             return {
                 { "<leader>nn", "<cmd>Hi><CR>", desc = "Next Recently Set Highlight" },
                 { "<leader>ng", "<cmd>Hi<<CR>", desc = "Previous Recently Set Highlight" },
@@ -482,7 +482,7 @@ A `lua/plugins/user-name.lua` file is an approprate place to override plugin def
 ## Adding Your own Plugins
 
 - create a `lua/plugins/plugin-name.lua` with all the configuration and key mappings
-- add to a `lua/plugins/user-name.lua` 
+- add to a `lua/plugins/user-name.lua`
 
 - community.lua when using a Plugin Config from Astro Community
 
@@ -592,4 +592,3 @@ Other extensions
 
 
 -->
-

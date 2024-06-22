@@ -15,7 +15,7 @@ Termux can be [installed using the F-Droid marketplace](fdroid-install.md){targe
 [Atreus from Keyboardio](https://shop.keyboard.io/products/keyboardio-atreus) is an excellent travel keyboard and was used to write most of the Practicalli Neovim configuration and Neovim book (especially during delays at airports)
 
 
-[Model 100 from Keyboardio](https://shop.keyboard.io/products/model-100) is used by Practicalli at the office 
+[Model 100 from Keyboardio](https://shop.keyboard.io/products/model-100) is used by Practicalli at the office
 
 
 ## Running Termux

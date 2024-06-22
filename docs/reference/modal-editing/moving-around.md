@@ -30,7 +30,7 @@ Using Relative line numbers showws how far each line is from the current line.  
 
 ## Moving around the buffer
 
-`g g` to jump to the top of the current buffer 
+`g g` to jump to the top of the current buffer
 
 `G` to jump to the bottom of the buffer
 
@@ -39,6 +39,3 @@ Using Relative line numbers showws how far each line is from the current line.  
 `z t` moves the current line and cursor to the top of the window
 
 `z t` moves the current line and cursor to the bottom of the window (or as far as the buffer will move in the window)
-
-
-

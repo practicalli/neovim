@@ -19,4 +19,3 @@ There is a wide range of plugin managers too, including a built-in plugin manage
 ![AstroNvim Lazy plugin manager status](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-lazy-installed-after-config-update.png?raw=true#only-dark){loading=lazy}
 
 The changelog is shown for all updated plugins, highlighting breaking changes.  Conventional commits style is used for most plugins, making it easier to follow the most important changes.
-

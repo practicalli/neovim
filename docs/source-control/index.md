@@ -6,7 +6,7 @@ There are several ways to interact with Git version control, although Practicall
 - [Neogit](neogit.md) rich git client (similar to Emacs Magit), with Diffview integration
 - [Octo](octo.md) for GitHub Issue and Pull Requests
 - [Open in GitHub](open-in-github.md)
-- Shell out to the command line, `:!` 
+- Shell out to the command line, `:!`
 - Git commands in Neovim terminal buffer
 
 

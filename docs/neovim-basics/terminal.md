@@ -3,7 +3,7 @@
 [akinsho/toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) plugin provides a terminal session within Neovim, using a float, split or tab.
 
 
-++spc++ ++"t"++ for the Terminal sub-menu 
+++spc++ ++"t"++ for the Terminal sub-menu
 
 ++spc++  ++"t"++ ++"f"++ opens a terminal in a floating window, useful for one-off commands or short sessions
 

@@ -13,14 +13,14 @@ Neovim runs in a terminal, so using Kitty (or iTerm2 - MacOSX only) are good opt
 
 [:globe_with_meridians: Kitty Terminal - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/command-line/kitty-terminal/) provides examples of using Nerd Fonts or Nerd Font symbols with the Kitty terminal.
 
-[Nerd Fonts](https://www.nerdfonts.com/) 
+[Nerd Fonts](https://www.nerdfonts.com/)
 
 
 ## Command line tools
 
 - ripgrep text search tool
-- fzf fuzzy finder 
-- gdu 
+- fzf fuzzy finder
+- gdu
 - btm from [:fontawesome-brands-github: GitHub repository releases](https://github.com/ClementTsang/bottom/releases/)
 
 === "Debian packages"
@@ -43,6 +43,4 @@ Install btm from its [:fontawesome-brands-github: GitHub repository release page
 
 AstroNvim uses Mason to install LSP servers, format and lint tools.  Many LSP servers require node.js to install and function.
 
-[Node.js install - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/programming-languages/javascript/nodejs/){target=_blank .md-button} 
-
-
+[Node.js install - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/programming-languages/javascript/nodejs/){target=_blank .md-button}

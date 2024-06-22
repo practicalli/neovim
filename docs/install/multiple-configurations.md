@@ -38,7 +38,7 @@ Add alias to `.bashrc` for Bash shell or `.zshrc` for Zsh
 Create a `.config/shell-aliases` file containing all shell aliases when often switching between different shells, avoiding the need to define aliases twice
 
 Source the `.config/shell-aliases` file from within `.bashrc` or `.zshrc`
-    
+
 === "Zsh"
     ```shell title=".zshrc"
     # Shell Aliases
@@ -55,19 +55,19 @@ Source the `.config/shell-aliases` file from within `.bashrc` or `.zshrc`
 
 ## Neovim config selector
 
-Create a shell function to popup a menu with the list of available Neovim configurations, defined in `~/.config` where the configuration directories are prefixed with `nvim-`, e.g. `~/.config/nvim-astro/` 
+Create a shell function to popup a menu with the list of available Neovim configurations, defined in `~/.config` where the configuration directories are prefixed with `nvim-`, e.g. `~/.config/nvim-astro/`
 
 ![Neovim Config Fuzy Selector](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/screenshots/neovim-config-selector-fuzzy-find-config-list-dark.png?raw=true){loading=lazy}
 
 !!! EXAMPLE "Neovim Config Fuzzy Finder"
-    
+
     ```shell title=".local/bin/nvim-fuzy-find"
     nvim-fuzy-find() {
       # All config paths are prefixed with ~/.config/nvim-
       local config=$(fdfind --max-depth 1 --glob 'nvim-*' ~/.config | fzf --prompt="Neovim Configs > " --height=15% --layout=reverse --border --exit-0)
-     
+
       [[ -z $config ]] && echo "No config selected, Neovim not starting" && return
-     
+
       # Open Neovim with selected config
       NVIM_APPNAME=$(basename $config) nvim $@
     }
@@ -77,8 +77,7 @@ Create a shell function to popup a menu with the list of available Neovim config
     Add the Neovim config directory names from `~/.config/`
     ```shell title=".local/bin/nvim-selector"
      nvim-selector() {
-      select config in nvim-astro nvim-astronvim-template nvim-lazyvim nvim-kickstart 
+      select config in nvim-astro nvim-astronvim-template nvim-lazyvim nvim-kickstart
       do NVIM_APPNAME=nvim-$config nvim $@; break; done
     }
     ```
-

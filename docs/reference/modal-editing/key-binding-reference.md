@@ -64,4 +64,3 @@ Keybindings available in Evil normal mode and the resultant state they leave you
 | `y y`      | Yank (copy) line                                  | Normal  |
 | `Y`        | Yank (copy) line                                  | Normal  |
 | `z`        | Menu - code folding / keyboard macros             | Normal  |
-

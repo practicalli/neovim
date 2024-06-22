@@ -1,16 +1,16 @@
-# Narrowing 
+# Narrowing
 
 Narrowing to a region enables vim commands to be applied to a specific part of the current buffer, rather than the whole buffer.
 
 Common examples include
 - replacing local variables within a specific function (avoiding affecting other function definitions)
 
-## NrrwRgn plugin 
+## NrrwRgn plugin
 
-[NrrwRgn plugin] is inspired by the [Narrowing feature of Emacs](http://www.emacswiki.org/emacs/Narrowing) 
-and means to focus on a selected region while making the rest inaccessible. 
+[NrrwRgn plugin] is inspired by the [Narrowing feature of Emacs](http://www.emacswiki.org/emacs/Narrowing)
+and means to focus on a selected region while making the rest inaccessible.
 
-`SPC n r` opens a select region in a new split window.  The original buffer is protected from changes. 
+`SPC n r` opens a select region in a new split window.  The original buffer is protected from changes.
 
 `:w` to write changes in the narrowed window to the original buffer
 
@@ -28,7 +28,7 @@ and means to focus on a selected region while making the rest inaccessible.
 `:NRN` - Disable Syncing the buffer content back
 `:NRL` - Reselect the last selected region and open it again in a narrowed window
 
-Appending `!` to most commands opens the narrowed part in the current window instead of a new window. 
+Appending `!` to most commands opens the narrowed part in the current window instead of a new window.
 
 > `:WR!` closes the narrowed window in addition to writing to the original buffer.
 
@@ -41,4 +41,3 @@ Appending `!` to most commands opens the narrowed part in the current window ins
 ### Attention
 
 `:NRM` is described as experimental by the project readme.
-

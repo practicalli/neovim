@@ -97,13 +97,13 @@ Use Test selectors to run a sub-set of tests based on selector meta data added t
 ```
 
 === "Kaocha test runner"
-    
-    Kaocha test runner can focus or skip on a sub-set of unit tests using test id, metadata, namespaces or a specific deftest. 
 
-    - `:focus` or `:skip` a given namespace or specific test var, i.e. `deftest` 
+    Kaocha test runner can focus or skip on a sub-set of unit tests using test id, metadata, namespaces or a specific deftest.
+
+    - `:focus` or `:skip` a given namespace or specific test var, i.e. `deftest`
     - `:focus-meta` or `:skip-meta` test selectors (metadata) on test vars, i.e. `^:persistence`
 
-    Specifying test `:id` in the `tests.edn` configuration file allows different test suites to be run, e.g. `:unit` for unit tests, `:spec` for specification tests 
+    Specifying test `:id` in the `tests.edn` configuration file allows different test suites to be run, e.g. `:unit` for unit tests, `:spec` for specification tests
 
     Focus and skip works with a single test run or with a continuous watcher.
 
@@ -116,12 +116,12 @@ Use Test selectors to run a sub-set of tests based on selector meta data added t
         ```shell
         clojure -X:test/watch :focus '["practicalli.gameboard.api.scoreboard-test"]
         ```
-       
+
     !!! EXAMPLE "Focus on a specific unit test (deftest)"
         ```shell
         clojure -X:test/watch :focus '["practicalli.gameboard.api.scoreboard-test/total-score-test"]
         ```
-       
+
     !!! HINT "Refine the tests that are watched"
         Start the watcher with [:globe_with_meridians: focused or skiped tests by name or meta data (test selectors)](https://cljdoc.org/d/lambdaisland/kaocha/1.66.1034/doc/6-focusing-and-skipping){target=_blank}
 
@@ -131,4 +131,4 @@ Use Test selectors to run a sub-set of tests based on selector meta data added t
 
     [Cognitect Labs Test Runner]() can include or exclude a sub-set of tests, identified by metadata on the var (`deftest`)
 
-    [Cognitect Labs Test Runner - inclusions & exclusions](https://github.com/cognitect-labs/test-runner#using-inclusions-and-exclusions){target=_blank .md-button} 
+    [Cognitect Labs Test Runner - inclusions & exclusions](https://github.com/cognitect-labs/test-runner#using-inclusions-and-exclusions){target=_blank .md-button}

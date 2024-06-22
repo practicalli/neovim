@@ -2,7 +2,7 @@
 
 `:substitute` or `:s` command highlights the matches for a text pattern and substitute for a new pattern
 
-??? INFO "Neovim :help :substitute" 
+??? INFO "Neovim :help :substitute"
     ```vim
     :help :substitute
     ```
@@ -42,7 +42,7 @@ An inclusive line range can be specified to narrow the search
 :.,$s/current-pattern/new-pattern/g
 ```
 
-Match the whole word 
+Match the whole word
 
 
 ```vim
@@ -62,7 +62,7 @@ Match the whole word
 :%s/current-pattern/new-pattern/gc
 ```
 
-++"y"++ confirms the repacement 
+++"y"++ confirms the repacement
 
 ++"l"++ confirms the repacement and quits
 
@@ -73,7 +73,7 @@ Match the whole word
 
 ### Regular expression
 
-regular expressions can be used as a search pattern. 
+regular expressions can be used as a search pattern.
 
 To replace all lines starting with ‘foo’ with ‘NeoVim Rocks’:
 
@@ -106,7 +106,7 @@ Remove trailing blank space at the end of each line:
 
 Use a visual select to search and replace, with confirmation
 
-Note: `'<,'>` is automatically included when in visual mode and `:` is pressed to start a command 
+Note: `'<,'>` is automatically included when in visual mode and `:` is pressed to start a command
 
 ```vim
 :'<,'>s/search-text/replace-text/g
@@ -117,4 +117,3 @@ A potentially more effecitve approach:
 - visually select the text
 - `*` to select all matching occurances
 - `:%s//replace-text/g`
-

@@ -4,9 +4,9 @@
 
 A [Buffer](#buffers) hold the contents of a file or any other information from processes, e.g. the REPL evaluation log.
 
-[Windows](#windows) are a view on a buffer and windows can swap which buffer they show.  Multiple windows, also known as splits, can be present in a Neovim frame.  
+[Windows](#windows) are a view on a buffer and windows can swap which buffer they show.  Multiple windows, also known as splits, can be present in a Neovim frame.
 
-A [tab page](#tab-pages) (or tab) can hold one or more windows and multiple tab pages can be shown on a tab-line. 
+A [tab page](#tab-pages) (or tab) can hold one or more windows and multiple tab pages can be shown on a tab-line.
 
 
 ## Files
@@ -58,7 +58,7 @@ A [tab page](#tab-pages) (or tab) can hold one or more windows and multiple tab 
 
 
 ??? EXAMPLE "Configure hidden files"
-    Configure Neotree to display hidden files and directories by default.  They are shown with a different visual style (subtle color) compared to the other files and directories.  
+    Configure Neotree to display hidden files and directories by default.  They are shown with a different visual style (subtle color) compared to the other files and directories.
 
     `H` with the cursor in neotree window will still toggle the display of hidden files and directories.
 
@@ -107,8 +107,8 @@ Telescope provides a preview of the selected file (only if there is sufficient s
 
 File lists are relative to the directory Neovim was opened from (or Path subsequently set in Neovim).
 
-`SPC f f` selector for files within the scope of the current directory path. `SPC f F` to also show hidden files from the current directory path. 
-    
+`SPC f f` selector for files within the scope of the current directory path. `SPC f F` to also show hidden files from the current directory path.
+
 `SPC f a` selector for AstroNvim user configuration files
 
 `SPC f p` selector for previously opened files (oldfiles)
@@ -128,7 +128,7 @@ A file must exist for Neovim to write to it.  Neo-tree and Telescope can be used
 
 !!! HINT "Telescope Normal mode and help"
     `ESC` in Telescope to switch to Normal mode and use comannds, `c` for Create, `r` to rename.
-     
+
     `?` to show all the commands available in Telescope
 
 
@@ -171,28 +171,28 @@ If a file is already opened, i.e. with `:edit`, there is some short-hand syntax 
 
 `mkdir -p` - the UNIX command to create a folder, the `-p` option creating any parts of the path required to make the full path
 
-`%` - name of the current file 
+`%` - name of the current file
 
-`:h` - for the current directory (the “head” of the path). 
+`:h` - for the current directory (the “head” of the path).
 
 `!` - the NeoVim terminal shell command
 
 
 ### Swap file
 
-Neovim creates a swap file, `.swp`, containing the changes made in a buffer to minimise loss should there be an issue with the computer or Neovim.  Changes are written to the swap file after 200 characters or after 4 seconds pause. 
+Neovim creates a swap file, `.swp`, containing the changes made in a buffer to minimise loss should there be an issue with the computer or Neovim.  Changes are written to the swap file after 200 characters or after 4 seconds pause.
 
 ??? INFO "Swap file location"
-    `:swapname` shows the full path to the swap file for the current buffer, e.g. 
+    `:swapname` shows the full path to the swap file for the current buffer, e.g.
     ```shell
     /home/practicalli/.local/state/astronvim/swap//%home%practicalli%projects%practicalli%books%neovim%docs%neovim-basics%files-buffers-windows.md.swp`
     ```
 
 `:preserve` command will write all text from current buffer to the swap file.
 
-`:recover` command overwrites the current buffer with the data from the swap file.  `:recover!` command must be use if the buffer has newer changes than the swap file.  Add a filename after the command to recover to a different file than that contained in the current buffer. 
+`:recover` command overwrites the current buffer with the data from the swap file.  `:recover!` command must be use if the buffer has newer changes than the swap file.  Add a filename after the command to recover to a different file than that contained in the current buffer.
 
-Opening a file checks if there is an associated swap file and prompts the user 
+Opening a file checks if there is an associated swap file and prompts the user
 
 - (A)bort opening the file
 - (D)elete the swap file
@@ -230,7 +230,7 @@ The test in a buffer is not wrapped by default. Set and unset soft text wrapping
 ++spc++ ++"u"++ `SPC u w` toggles wrapping of text
 
 
-## Windows 
+## Windows
 
 Windows can be active (contains the cursor), hidden (open but not shown) or inactive.
 
@@ -264,7 +264,7 @@ Windows can be active (contains the cursor), hidden (open but not shown) or inac
 
 ## Tab pages
 
-A Tab page can hold one or more tabs and are useful for grouping different types of files and information. 
+A Tab page can hold one or more tabs and are useful for grouping different types of files and information.
 
 A Tab page holds one or more windows, each window is a view on a buffer, a buffer holds the contents of a file or any other information in the editor memory (repl log, etc).
 
@@ -273,7 +273,7 @@ A tab page can provide a logical grouping of windows, e.g. Clojure source code i
 Neovim window commands may be constrained within the bounds of a tab page (without using the :tab modifier)
 
 Tab pages are often referred to as tabs.
-    
+
 ++"g"++ ++tab++ jump to previously selected tab, commonly used to toggle between two tabs  (Practicalli AstroNvim mapping)
 
 ++"g"++ ++"t"++ jump to next tab page

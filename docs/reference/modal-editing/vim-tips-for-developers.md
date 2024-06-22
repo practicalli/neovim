@@ -42,7 +42,7 @@ Vim keybindings that drive Vim editing tools that are common for developers
 
 ## Selection, find and replace
 
-`viw` to visual-select in (within) the current word 
+`viw` to visual-select in (within) the current word
 
 
 ## Source code and configuration files

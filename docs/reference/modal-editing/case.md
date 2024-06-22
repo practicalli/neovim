@@ -3,20 +3,20 @@
 Convert Characters and regioins to upper or lower case text.
 
 
-## Toggle case with visual select 
+## Toggle case with visual select
 
 `v` to visually select a character or use the vim motion keys to select a region
 
-`U` to uppercase current character or selected region 
+`U` to uppercase current character or selected region
 
-`u` to lowercase current character or selected region 
+`u` to lowercase current character or selected region
 
 `~` to toggle the case of the text in the selected region
 
 > `.` will repeat the previous selection size and case toggle
 
 
-## Toggle case menu 
+## Toggle case menu
 
 Toggle the current character using vim motion keys, without needing to select a region.
 
@@ -43,4 +43,3 @@ Toggle the current character using vim motion keys, without needing to select a 
 - `gu}` Change to end of paragraph to lower case
 - `gU5j` Change 5 lines below to upper case
 - `gu3k` Change 3 lines above to lower case
-

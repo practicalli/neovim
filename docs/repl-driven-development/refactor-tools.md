@@ -32,7 +32,7 @@ Repeat the key binding to move the cursor to the documentation popup window and 
 ++comma++ ++"l"++ ++"s"++ split view of symbols
 
 
-### Diagnostics 
+### Diagnostics
 
 ++spc++ ++"l"++ ++"d"++ show popup for current diagnostic indicator
 
@@ -44,7 +44,7 @@ Repeat the key binding to move the cursor to the documentation popup window and 
 ++spc++ ++"l"++ ++"r"++ rename current symbol (namespace rename not supported by LSP client)
 
 ++spc++ ++"l"++ ++"a"++ code actions (popup with available actions)
- 
+
 ++spc++ ++"l"++ ++"f"++ format buffer
 
 

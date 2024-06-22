@@ -20,7 +20,7 @@
 - basics: spell check overview
 - configuration: alternative community configurations
 - reference: link to intro to lua from codecademy
- 
+
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
 - intro: update fennel with nfnl project, replacing aniseed
@@ -38,7 +38,7 @@
 - overrides: recommend AstroNvim v4 in announce block
 - intro: simplify & reorder introduction
 - install: expand requirements to include kitty terminal
-- mkdocs: dark theme scheme `teal` & accent `deep purple`  
+- mkdocs: dark theme scheme `teal` & accent `deep purple`
 - basics: astronvim file, buffer, window and tap page
 - intro: use practial.li/writing-tips link
 - install: use practial.li/clojure/install link

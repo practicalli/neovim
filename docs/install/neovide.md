@@ -27,11 +27,11 @@ Neovide provides a GUI for Neovim and supports the use of AstroNvim community co
 
     [Download the MacOSX dmg.zip file](https://github.com/neovide/neovide/releases/latest/download/neovide.dmg.zip)
 
-    Extract the .zip file 
+    Extract the .zip file
 
     Run the extracted dmg file and use the install wizard to copy Neovide to the Applications directory.
 
-    Create symbolic link from Neovide install to `~/.local/bin` 
+    Create symbolic link from Neovide install to `~/.local/bin`
 
     ```bash
     ln -s /Applications/neovide.app/Contents/MacOS/neovide ~/.local/bin/neovide
@@ -81,11 +81,10 @@ The `guifont` Neovim option is used to set a font family and size specifically f
             -- configure general options: vim.opt.<key>
             opt = {
               guifont = "Fira Code:h16", -- neovide font family & size (height)
-            },  
+            },
           },
         },
-      }  
+      }
     ```
 
 ![Neovide Gui Screenshot](https://neovide.dev/assets/BasicScreenCap.png){loading=lazy}
-

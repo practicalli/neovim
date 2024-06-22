@@ -18,8 +18,8 @@ The name of a register is a number, alphabetical or special character.
     ++double-quote++ ++"m"++ ++"p"++ pastes the register text into the commit message buffer
 
 ??? EXAMPLE "Paste last evaluation result from Conjure"
-    When Conjure evaluates code the result is stored in the `C` register. 
-    
+    When Conjure evaluates code the result is stored in the `C` register.
+
     ++double-quote++ ++"C"++ ++"p"++ pastes the register text into the commit message buffer
 
 ## Registers

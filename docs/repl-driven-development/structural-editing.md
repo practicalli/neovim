@@ -8,7 +8,7 @@ Structural editing seeks to ensure that parenthesis (parens) and other pairs of 
 
 ??? INFO "AstroNvim Community Clojure Pack includes parinfer"
     [nvim-parinfer](https://github.com/gpanders/nvim-parinfer) plugin is included in the [AstroNvim Community Clojure pack](https://github.com/AstroNvim/astrocommunity/tree/main/lua/astrocommunity/pack/clojure)
-    
+
     ```lua
       { import = "astrocommunity.pack.clojure" },
     ```
@@ -21,4 +21,4 @@ To include new lines of code within an expression, create a new line `o` and ind
 
 Parinfer will move the preceeding closing paren(s) to the new line, enclosing the new code in the overall expression.
 
-[Parinfer website](https://shaunlebron.github.io/parinfer/){target=_blank .md-button} 
+[Parinfer website](https://shaunlebron.github.io/parinfer/){target=_blank .md-button}

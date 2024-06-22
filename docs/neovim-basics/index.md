@@ -34,7 +34,7 @@ The fundamental controls of Neovim which apply across all editing tasks.
 
 ## Keyboard mappings
 
-`:verbose map` followed by a key binding shows the location of the configuration that was last used to set the key mapping.  Use when its not clear what command a key mapping is calling or if a plugin is over-riding an expected mapping. 
+`:verbose map` followed by a key binding shows the location of the configuration that was last used to set the key mapping.  Use when its not clear what command a key mapping is calling or if a plugin is over-riding an expected mapping.
 
 ++spc++ ++"f"++ ++"n"++ to list all notifications and ++enter++ on the relevant notification to see the details.
 
@@ -43,4 +43,3 @@ The fundamental controls of Neovim which apply across all editing tasks.
 
 [Map Listing: Neovim docs](https://neovim.io/doc/user/map.html#map-listing){target=_blank .md-button}
 [Key Notation: Neovim docs](https://neovim.io/doc/user/intro.html#key-notation){target=_blank .md-button}
-

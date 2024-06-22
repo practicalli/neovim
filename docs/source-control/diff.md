@@ -2,7 +2,7 @@
 
 Compare differences between different files or between a file and its versions.
 
-`:diffsplit filename` Neovim command opens a split containing the selected filename, showing a diff comparision to the currently opened file 
+`:diffsplit filename` Neovim command opens a split containing the selected filename, showing a diff comparision to the currently opened file
 
 > file path completion helps select the correct file for comparison
 
@@ -16,7 +16,7 @@ The Git `difftool` can specify Neovim as a diff viewer to show Git diff views of
     git difftool --tool=nvimdiff <optional-filename>
     ```
 
-`git difftool` can be configured to use Neovim 
+`git difftool` can be configured to use Neovim
 
 !!! EXAMPLE "Git client config to set `nvimdiff` as `difftool`"
     ```config title="~/.config/git/config"

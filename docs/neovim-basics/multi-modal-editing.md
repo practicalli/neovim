@@ -46,7 +46,7 @@ Learn to speak modal editing commands as sentences to effectively learn Multi-mo
 
 - ++"b"++ block/parentheses
 - ++"p"++ paragraph
-- ++"s"++ sentence  
+- ++"s"++ sentence
 - ++"t"++ tag, e.g. html/xml tag
 - ++"w"++ word
 - ++"W"++ word delimited by only space
@@ -82,7 +82,7 @@ Learn to speak modal editing commands as sentences to effectively learn Multi-mo
     [Evil tips for developers](vim-tips-for-developers.md)
     [Speaking Vim](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118){target=_blank}
 
-## Selecting text 
+## Selecting text
 
 `vi)` selects all the text within `()`, e.g. (`http://oldwebsite.doh`)
 
@@ -156,7 +156,7 @@ The three "core" operations of add/delete/change can be done with the keymaps ys
 `s` in visual mode substitues the selection with the next character typed
 
 
-`v` to create visual selection, `s` to substitute the current selection, `****` to create a bold style, `P` with the cursor on the second `*` pastes the text that was visually selected. 
+`v` to create visual selection, `s` to substitute the current selection, `****` to create a bold style, `P` with the cursor on the second `*` pastes the text that was visually selected.
 
 ### Text style
 <!--TODO: add video of manipulating text for markdown -->

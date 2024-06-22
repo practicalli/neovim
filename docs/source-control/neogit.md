@@ -81,5 +81,3 @@ A new commit or amend commit qill open a new window to write a commit message (u
 ## Modify Git commit history
 
 `r` opens the rebase menu
-
-

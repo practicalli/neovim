@@ -1,6 +1,6 @@
 # Navigation
 
-Move the cursor one space at a time 
+Move the cursor one space at a time
 
 - ++"h"++ move left
 - ++"j"++ move down
@@ -20,7 +20,7 @@ Move to specific points within a line
 - ++"^"++ jumps to first character of line
 
 !!! HINT "Uppercase w b e consider word delimited by blank characters"
-    Jump joined-word using ++"W"++ ++"B"++ ++"E"++ 
+    Jump joined-word using ++"W"++ ++"B"++ ++"E"++
 
 Use w b e movement with a number to move the cursor larger distances
 
@@ -123,8 +123,8 @@ Navigate within the current file or globally using file marks.
 
 `:jumps` shows the Neovim jumplist containing all points from any buffer recently jumped to using neovim commands
 
-- ++ctrl++ ++"o"++ jump back 
-- ++ctrl++ ++"i"++ jump forward 
+- ++ctrl++ ++"o"++ jump back
+- ++ctrl++ ++"i"++ jump forward
 - ++"ctrl"++ and navigation key (hjkl) to move to changelist window
 - ++"q"++ closes the jumplist buffer
 
@@ -167,5 +167,4 @@ Navigate within the current file or globally using file marks.
 ![AstroNvim project root Autocompletion](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-project-change-directory-completion-dark.png?raw=true#only-dark){loading=lazy}
 
 !!! HINT "AstroNvim rooter"
-    AstroNvim has a built-in project root detection utility that updates the current working directory automatically. 
-
+    AstroNvim has a built-in project root detection utility that updates the current working directory automatically.

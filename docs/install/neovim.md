@@ -25,7 +25,7 @@ Install the following tools to support Neovim and AstroNvim
 ??? INFO "AstroNvim requires node.js"
     AstroNvim uses Mason to install LSP servers, format and lint tools. Many of the LSP servers require node.
 
-    [Node.js install - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/programming-languages/javascript/nodejs/){target=_blank} 
+    [Node.js install - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/programming-languages/javascript/nodejs/){target=_blank}
 
 
 === "Debian Packages"
@@ -76,7 +76,7 @@ Install from the [:fontawesome-brands-github: Neovim GitHub releases](https://gi
 
 
 === "MacOSX Homebrew"
-    
+
     Install from Homebrew or via the Neovim Release page
 
     **Homebrew**
@@ -95,21 +95,21 @@ Install from the [:fontawesome-brands-github: Neovim GitHub releases](https://gi
     ```
 
     Make a local apps directory for neovim (and other things like node.js, etc.)
-    
+
     ```bash
     mkdir -P ~/.local/apps
     ```
-    
+
     Extract the neovim archive
-    
+
     ```bash
     tar zvxf nvim-macos.tar.gz -C ~/.local/apps/
     ```
-    
-    Create the `~/.local/bin/nvim` symbolic link to include Neovim on the OS execution path 
+
+    Create the `~/.local/bin/nvim` symbolic link to include Neovim on the OS execution path
 
     > `echo $PATH` to check `.local/bin` is included in the execution the path by the Operating System command line shell
-    
+
     ```bash
     ln -s ~/.local/apps/nvim-macos/bin/nvim ~/.local/bin/nvim
     ```
@@ -125,17 +125,17 @@ Install from the [:fontawesome-brands-github: Neovim GitHub releases](https://gi
     2. Download **nvim-macos.tar.gz**
     3. Run `xattr -c ./nvim-macos.tar.gz` (to avoid "unknown developer" warning)
     4. Make local apps directory for neovim (and other things like node.js, etc.)
-    
+
     ```shell
     mkdir -P ~/.local/apps
     ```
-    
+
     5. Extract the neovim download
-    
+
     ```shell
     tar zvxf nvim-macos.tar.gz -C ~/.local/apps/
     ```
-    
+
     6. Create nvim symbolic link in `~/.local/bin` to include Neovim on the OS execution path (check `.local/bin` is added to the execution the path by the Operating System command line shell)
 
     ```shell
@@ -143,7 +143,7 @@ Install from the [:fontawesome-brands-github: Neovim GitHub releases](https://gi
     ```
 
 === "Debian Package"
- 
+
     !!! INFO "Linux version only packaged as AppImage from Neovim 0.9 onward"
 
     A `.deb` file can be created after [building Neovim from source](https://github.com/neovim/neovim/blob/master/BUILD.md).
@@ -152,7 +152,7 @@ Install from the [:fontawesome-brands-github: Neovim GitHub releases](https://gi
 === "Build from Source"
 
     [:fontawesome-brands-github: Neovim build guide](https://github.com/neovim/neovim/blob/master/BUILD.md){target=_blank .md-button}
-        
+
     [:fontawesome-brands-github: Neovim Build Prerequisites for each operating system](https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites)
 
     ??? INFO "Debian Packages"
@@ -200,7 +200,7 @@ Clone the [Practicalli Astro](https://github.com/practicalli/astro) config or cr
     ```
 
 ??? HINT "Multiple Neovim Configurations"
-    Clone the configuration to a unique name within `~/.config` directory. 
+    Clone the configuration to a unique name within `~/.config` directory.
 
     ```shell
     git clone https://github.com/practicalli/astro.git ~/.config/nvim-astro
@@ -216,21 +216,21 @@ Clone the [Practicalli Astro](https://github.com/practicalli/astro) config or cr
     [:fontawesome-solid-book-open: Configure shell alias and selectors](multiple-configurations/#configure-shell-alias){target=_blank} to simplify the command to run a specific configuration.
 
 ??? INFO "AstroNvim Template"
-    [:fontawesome-brands-github: AstroNvim template repository](https://github.com/AstroNvim/template) provide a general configuration for Neovim. 
+    [:fontawesome-brands-github: AstroNvim template repository](https://github.com/AstroNvim/template) provide a general configuration for Neovim.
 
     [:fontawesome-brands-github: AstroNvim Community](https://github.com/AstroNvim/astrocommunity/) repository provides plugin configs to make it easier to extend the general feature of AstroNvim.
 
 
 ## Neovim Plugins
 
-Enter `nvim` command in a terminal to launch Neovim and install all the plugins from the Practicalli Astro configuration.  
+Enter `nvim` command in a terminal to launch Neovim and install all the plugins from the Practicalli Astro configuration.
 
 !!! NOTE "Run Neovim"
     ```shell
     nvim
     ```
 
-Lazy plugin manager runs automatically and installs all the plugins defined in the Neovim configuration.  
+Lazy plugin manager runs automatically and installs all the plugins defined in the Neovim configuration.
 
 Treesitter will prompt to compile its language parsers.
 
@@ -239,7 +239,7 @@ Treesitter will prompt to compile its language parsers.
 
 ??? INFO "Unattended post install"
     Use the `--headless` Neovim flag to install plugins without running whole Neovim editor user interface.
-    
+
     ```shell
     nvim --headless
     ```
@@ -249,7 +249,7 @@ Treesitter will prompt to compile its language parsers.
 
 Troubleshoot the Neovim configuration and supporting tools by running the [:globe_with_meridians: Neovim Heath Check](https://neovim.io/doc/user/health.html){target=_blank}.
 
-Use the `:checkhealth` command in Neovim or start Neovim with the Health Check command. 
+Use the `:checkhealth` command in Neovim or start Neovim with the Health Check command.
 
 !!! EXAMPLE "Run Neovim and start Health Check"
     ```shell
@@ -267,4 +267,4 @@ Review the warnings and install tooling that is required for languages that will
 !!! HINT "Ignore Provider Warnings"
     It is safe to ignore language provider warnings.
 
-    [Language Providers can be disabled](/neovim/reference/neovim/language-providers/) in the Neovim configuration to remove the warnings from `:checkhealth` report.  
+    [Language Providers can be disabled](/neovim/reference/neovim/language-providers/) in the Neovim configuration to remove the warnings from `:checkhealth` report.

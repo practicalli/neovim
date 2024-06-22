@@ -17,7 +17,7 @@ A clean UI provides for a distraction free development experience, with only the
 
 * [Conjure](#conjure) - automatic Clojure REPL connection, evaluation, test runners
 * Treesitter
-* Plug-in Manager (e.g. Lazy.nvim) 
+* Plug-in Manager (e.g. Lazy.nvim)
 * [LSP](#language-server-protocol) - auto-completion, snippets, inline linting, reference navigation, refactor and unit test coverage
 * [statusline](#status-line) - LSP status, diff changes, filetype, cursor position
 * [Selection narrowing](#selection-narrowing) completion of files, packages, colour schemes, etc
@@ -41,7 +41,7 @@ Run unit tests with Kaocha test runner (Cognitect Labs and ClojureScript runners
 
 ## Lazy Plugin manager
 
-Lazy.nvim manages neovim plugins with a rich UI that provides an enjoyable user experience.  Plugins are automatically installed during startup and lists the status of each plugins. 
+Lazy.nvim manages neovim plugins with a rich UI that provides an enjoyable user experience.  Plugins are automatically installed during startup and lists the status of each plugins.
 
 Plugins are automatic cached & bytecode compiled and can be lazy loaded to streamline startup time and resource usage based on events, commands, filetypes, and key mappings.  Efficient plugin downlaods using partial blobless clones of plugin repositories, i.e. `--filter=blob:none`
 
@@ -53,12 +53,12 @@ Plugins are automatic cached & bytecode compiled and can be lazy loaded to strea
 
 Neovim provides highly effective syntax highlighting of source code due to Treesitter.
 
-Tree-sitter parses files opened in Neovim and builds a concrete syntax tree that any Neovim plugin can use to efficiently provide feedback. Treesitter uses incremental parsing to efficiently update the syntax tree as a file is edited. 
+Tree-sitter parses files opened in Neovim and builds a concrete syntax tree that any Neovim plugin can use to efficiently provide feedback. Treesitter uses incremental parsing to efficiently update the syntax tree as a file is edited.
 
 - parse on every keystroke in a text editor
 - provide useful results even in the presence of syntax errors
 
-[:globe_with_meridians: Treesitter](https://tree-sitter.github.io/tree-sitter/){target=_blank .md-button} 
+[:globe_with_meridians: Treesitter](https://tree-sitter.github.io/tree-sitter/){target=_blank .md-button}
 
 
 ## Language Server Protocol
@@ -102,7 +102,7 @@ null-ls provides extensive builtin configuration for programming languages and c
 
 [:fontawesome-brands-github: telescope.nvim](https://github.com/nvim-telescope/telescope.nvim){target=_blank} is a highly extendable fuzzy finder over lists with community driven pickers, sorters and previewers.
 
-Navigate and narrow lists of files, packages, environment variables, ports, colour schemes (themes) and any other list of items effectively. 
+Navigate and narrow lists of files, packages, environment variables, ports, colour schemes (themes) and any other list of items effectively.
 
 Telescope File browser popup also explores the file system and in Normal mode can be used to create files and directories
 

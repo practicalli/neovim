@@ -31,11 +31,11 @@ Quickfix is a mode to show results of another command
 - the results of a search
 - lsp analysis errors
 
-Quickfix buffer can be used to jump through the errors one by one.  Each error can be viewe and fix it in turn. 
+Quickfix buffer can be used to jump through the errors one by one.  Each error can be viewe and fix it in turn.
 
-quickfix is used to find a list of positions in files.  
+quickfix is used to find a list of positions in files.
 
-- :vimgrep| finds pattern matches.  
+- :vimgrep| finds pattern matches.
 
 The 'errorformat' option should be set to match the error messages from your
 compiler (see |errorformat| below).
@@ -327,10 +327,10 @@ processing a quickfix or location list command, it will be aborted.
 			is processed and added to the quickfix list.  Non
 			String items in the List are ignored.
 			See |:cc| for [!].
-			Examples:  
+			Examples:
 				:cexpr system('grep -n xyz *')
 				:cexpr getline(1, '$')
- 
+
 							*:lex* *:lexpr*
 :lex[pr][!] {expr}	Same as |:cexpr|, except the location list for the
 			current window is used instead of the quickfix list.
@@ -349,9 +349,9 @@ processing a quickfix or location list command, it will be aborted.
 			present, then a new list is created. The current
 			cursor position will not be changed. See |:cexpr| for
 			more information.
-			Example:  
+			Example:
     :g/mypattern/caddexpr expand("%") .. ":" .. line(".") ..  ":" .. getline(".")
- 
+
 						*:lad* *:addd* *:laddexpr*
 :lad[dexpr] {expr}	Same as ":caddexpr", except the location list for the
 			current window is used instead of the quickfix list.
@@ -377,12 +377,12 @@ processing a quickfix or location list command, it will be aborted.
 :cl[ist]! +{count}	List the current and next {count} error lines.  This
 			is useful to see unrecognized lines after the current
 			one.  For example, if ":clist" shows:
-        8384 testje.java:252: error: cannot find symbol  
+        8384 testje.java:252: error: cannot find symbol
 			Then using ":cl! +3" shows the reason:
-        8384 testje.java:252: error: cannot find symbol  
-        8385:   ZexitCode = Fmainx();  
-        8386:               ^  
-        8387:   symbol:   method Fmainx()  
+        8384 testje.java:252: error: cannot find symbol
+        8385:   ZexitCode = Fmainx();
+        8386:               ^
+        8387:   symbol:   method Fmainx()
 
 :lli[st] [from] [, [to]]				*:lli* *:llist*
 			Same as ":clist", except the location list for the
@@ -405,7 +405,7 @@ quickfix command (':make', ':grep' and so on) is executed. See
 						*QuickFixCmdPost-example*
 When 'encoding' differs from the locale, the error messages may have a
 different encoding from what Vim is using.  To convert the messages you can
-use this code:  
+use this code:
 	function QfMakeConv()
 	   let qflist = getqflist()
 	   for i in qflist
@@ -422,35 +422,35 @@ Every quickfix and location list has a title. By default the title is set to
 the command that created the list. The |getqflist()| and |getloclist()|
 functions can be used to get the title of a quickfix and a location list
 respectively. The |setqflist()| and |setloclist()| functions can be used to
-modify the title of a quickfix and location list respectively. Examples:  
+modify the title of a quickfix and location list respectively. Examples:
 	call setqflist([], 'a', {'title' : 'Cmd output'})
 	echo getqflist({'title' : 1})
 	call setloclist(3, [], 'a', {'title' : 'Cmd output'})
 	echo getloclist(3, {'title' : 1})
- 
+
 							*quickfix-index*
 When you jump to a quickfix/location list entry using any of the quickfix
 commands (e.g. |:cc|, |:cnext|, |:cprev|, etc.), that entry becomes the
 currently selected entry. The index of the currently selected entry in a
 quickfix/location list can be obtained using the getqflist()/getloclist()
-functions. Examples:  
+functions. Examples:
 	echo getqflist({'idx' : 0}).idx
 	echo getqflist({'id' : qfid, 'idx' : 0}).idx
 	echo getloclist(2, {'idx' : 0}).idx
- 
+
 For a new quickfix list, the first entry is selected and the index is 1.  Any
 entry in any quickfix/location list can be set as the currently selected entry
-using the setqflist() function. Examples:  
+using the setqflist() function. Examples:
 	call setqflist([], 'a', {'idx' : 12})
 	call setqflist([], 'a', {'id' : qfid, 'idx' : 7})
 	call setloclist(1, [], 'a', {'idx' : 7})
- 
+
 							*quickfix-size*
 You can get the number of entries (size) in a quickfix and a location list
-using the |getqflist()| and |getloclist()| functions respectively. Examples:  
+using the |getqflist()| and |getloclist()| functions respectively. Examples:
 	echo getqflist({'size' : 1})
 	echo getloclist(5, {'size' : 1})
- 
+
 							*quickfix-context*
 Any Vim type can be associated as a context with a quickfix or location list.
 The |setqflist()| and the |setloclist()| functions can be used to associate a
@@ -458,7 +458,7 @@ context with a quickfix and a location list respectively. The |getqflist()|
 and the |getloclist()| functions can be used to retrieve the context of a
 quickfix and a location list respectively. This is useful for a Vim plugin
 dealing with multiple quickfix/location lists.
-Examples:  
+Examples:
 
 	let somectx = {'name' : 'Vim', 'type' : 'Editor'}
 	call setqflist([], 'a', {'context' : somectx})
@@ -467,22 +467,22 @@ Examples:
 	let newctx = ['red', 'green', 'blue']
 	call setloclist(2, [], 'a', {'id' : qfid, 'context' : newctx})
 	echo getloclist(2, {'id' : qfid, 'context' : 1})
- 
+
 							*quickfix-parse*
 You can parse a list of lines using 'errorformat' without creating or
-modifying a quickfix list using the |getqflist()| function. Examples:  
+modifying a quickfix list using the |getqflist()| function. Examples:
 	echo getqflist({'lines' : ["F1:10:Line10", "F2:20:Line20"]})
 	echo getqflist({'lines' : systemlist('grep -Hn quickfix *')})
 This returns a dictionary where the "items" key contains the list of quickfix
 entries parsed from lines. The following shows how to use a custom
-'errorformat' to parse the lines without modifying the 'errorformat' option:  
+'errorformat' to parse the lines without modifying the 'errorformat' option:
 	echo getqflist({'efm' : '%f#%l#%m', 'lines' : ['F1#10#Line']})
- 
+
 
 EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
 							*:cdo*
 :cdo[!] {cmd}		Execute {cmd} in each valid entry in the quickfix list.
-			It works like doing this:  
+			It works like doing this:
 				:cfirst
 				:{cmd}
 				:cnext
@@ -496,7 +496,7 @@ EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
 			{cmd} can contain '|' to concatenate several commands.
 
 			Only valid entries in the quickfix list are used.
-			A range can be used to select entries, e.g.:  
+			A range can be used to select entries, e.g.:
 				:10,$cdo cmd
  			To skip entries 1 to 9.
 
@@ -509,7 +509,7 @@ EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
 
 							*:cfdo*
 :cfdo[!] {cmd}		Execute {cmd} in each file in the quickfix list.
-			It works like doing this:  
+			It works like doing this:
 				:cfirst
 				:{cmd}
 				:cnfile
@@ -520,7 +520,7 @@ EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
 							*:ldo*
 :ld[o][!] {cmd}		Execute {cmd} in each valid entry in the location list
 			for the current window.
-			It works like doing this:  
+			It works like doing this:
 				:lfirst
 				:{cmd}
 				:lnext
@@ -532,7 +532,7 @@ EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
 							*:lfdo*
 :lfdo[!] {cmd}		Execute {cmd} in each file in the location list for
 			the current window.
-			It works like doing this:  
+			It works like doing this:
 				:lfirst
 				:{cmd}
 				:lnfile
@@ -543,11 +543,11 @@ EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
 FILTERING A QUICKFIX OR LOCATION LIST:
 				    *cfilter-plugin* *:Cfilter* *:Lfilter*
 If you have too many entries in a quickfix list, you can use the cfilter
-plugin to reduce the number of entries.  Load the plugin with:  
+plugin to reduce the number of entries.  Load the plugin with:
 
     packadd cfilter
 
-Then you can use the following commands to filter a quickfix/location list:  
+Then you can use the following commands to filter a quickfix/location list:
 
     :Cfilter[!] /{pat}/
     :Lfilter[!] /{pat}/
@@ -632,7 +632,7 @@ can go back to the unfiltered list using the |:colder|/|:lolder| command.
 
 Normally the quickfix window is at the bottom of the screen.  If there are
 vertical splits, it's at the bottom of the rightmost column of windows.  To
-make it always occupy the full width:  
+make it always occupy the full width:
 	:botright cwindow
 You can move the window around with |window-moving| commands.
 For example, to move it to the top: CTRL-W K
@@ -642,7 +642,7 @@ height manually (e.g., by dragging the status line above it with the mouse).
 
 In the quickfix window, each line is one error.  The line number is equal to
 the error number.  The current entry is highlighted with the QuickFixLine
-highlighting.  You can change it to your liking, e.g.:  
+highlighting.  You can change it to your liking, e.g.:
 	:hi QuickFixLine ctermbg=Yellow guibg=Yellow
 
 You can use ":.cc" to jump to the error under the cursor.
@@ -680,7 +680,7 @@ When the quickfix window has been filled, two autocommand events are
 triggered.  First the 'filetype' option is set to "qf", which triggers the
 FileType event (also see |qf.vim|).  Then the BufReadPost event is triggered,
 using "quickfix" for the buffer name.  This can be used to perform some action
-on the listed errors.  Example:  
+on the listed errors.  Example:
 	au BufReadPost quickfix  setlocal modifiable
 		\ | silent exe 'g/^/s//\=line(".") .. " "/'
 		\ | setlocal nomodifiable
@@ -728,15 +728,15 @@ window.
 							*quickfix-window-ID*
 You can use the |getqflist()| and |getloclist()| functions to obtain the
 window ID of the quickfix window and location list window respectively (if
-present).  Examples:  
+present).  Examples:
 	echo getqflist({'winid' : 1}).winid
 	echo getloclist(2, {'winid' : 1}).winid
- 
+
 							*getqflist-examples*
 The |getqflist()| and |getloclist()| functions can be used to get the various
 attributes of a quickfix and location list respectively. Some examples for
 using these functions are below:
- 
+
     " get the title of the current quickfix list
     :echo getqflist({'title' : 0}).title
 
@@ -797,12 +797,12 @@ using these functions are below:
 
     " get the file window id of a location list window (winnr: 4)
     :echo getloclist(4, {'filewinid' : 0}).filewinid
- 
+
 							*setqflist-examples*
 The |setqflist()| and |setloclist()| functions can be used to set the various
 attributes of a quickfix and location list respectively. Some examples for
 using these functions are below:
- 
+
     " create an empty quickfix list with a title and a context
     :let t = 'Search results'
     :let c = {'cmd' : 'grep'}
@@ -847,7 +847,7 @@ using these functions are below:
 
     " replace the location list entries for the third window
     :call setloclist(3, [], 'r', {'items' : newItems})
- 
+
 =============================================================================
 3. Using more than one list of errors			*quickfix-error-lists*
 
@@ -877,15 +877,15 @@ lists.  They set one of the existing error lists as the current one.
 						*:chistory* *:chi*
 :[count]chi[story]	Show the list of error lists.  The current list is
 			marked with ">".  The output looks like:
-			  error list 1 of 3; 43 errors   :make   
-			> error list 2 of 3; 0 errors    :helpgrep tag   
-			  error list 3 of 3; 15 errors   :grep ex_help *.c  
+			  error list 1 of 3; 43 errors   :make
+			> error list 2 of 3; 0 errors    :helpgrep tag
+			  error list 3 of 3; 15 errors   :grep ex_help *.c
 
 			When [count] is given, then the count'th quickfix
-			list is made the current list. Example:  
+			list is made the current list. Example:
 				" Make the 4th quickfix list current
 				:4chistory
- 
+
 						*:lhistory* *:lhi*
 :[count]lhi[story]	Show the list of location lists, otherwise like
 			`:chistory`.
@@ -899,12 +899,12 @@ lists, use ":cnewer 99" first.
 
 To get the number of lists in the quickfix and location list stack, you can
 use the |getqflist()| and |getloclist()| functions respectively with the list
-number set to the special value '$'. Examples:  
+number set to the special value '$'. Examples:
 	echo getqflist({'nr' : '$'}).nr
 	echo getloclist(3, {'nr' : '$'}).nr
-To get the number of the current list in the stack:  
+To get the number of the current list in the stack:
 	echo getqflist({'nr' : 0}).nr
- 
+
 =============================================================================
 4. Using :make						*:make_makeprg*
 
@@ -949,7 +949,7 @@ option.  This works almost like typing
 used, not just "make".  Characters '%' and '#' are expanded as usual on a
 command-line.  You can use "%<" to insert the current file name without
 extension, or "#<" to insert the alternate file name without extension, for
-example:  
+example:
    :set makeprg=make\ #<.o
 
 [arguments] is anything that is typed after ":make".
@@ -958,11 +958,11 @@ example:
 
 The placeholder "$*" can be used for the argument list in {makeprg} if the
 command needs some additional characters after its arguments.  The $* is
-replaced then by all arguments.  Example:  
+replaced then by all arguments.  Example:
    :set makeprg=latex\ \\\\nonstopmode\ \\\\input\\{$*}
-or simpler  
+or simpler
    :let &mp = 'latex \\nonstopmode \\input\{$*}'
-"$*" can be given multiple times, for example:  
+"$*" can be given multiple times, for example:
    :set makeprg=gcc\ -o\ $*\ $*
 
 The 'shellpipe' option defaults to "2>&1| tee" for Win32.
@@ -975,11 +975,11 @@ If 'shellpipe' is empty, the {errorfile} part will be omitted.  This is useful
 for compilers that write to an errorfile themselves.
 
 
-Using QuickFixCmdPost to fix the encoding  
+Using QuickFixCmdPost to fix the encoding
 
 It may be that 'encoding' is set to an encoding that differs from the messages
 your build program produces.  This example shows how to fix this after Vim has
-read the error messages:  
+read the error messages:
 
 	function QfMakeConv()
 	   let qflist = getqflist()
@@ -993,4 +993,3 @@ read the error messages:
 
 (Example by Faque Cheng)
 Another option is using 'makeencoding'.
-

@@ -17,7 +17,7 @@ Select characters, words, lines and regions with visual select.  The background 
 ++ctrl+"v"++ enters visual region select mode
 
 !!! HINT "Switch between visual modes"
-    Once in visual mode: 
+    Once in visual mode:
 
     ++"V"++ switches to visual line mode
     ++ctrl+"v"++ switches to visual line mode

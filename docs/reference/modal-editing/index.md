@@ -2,7 +2,7 @@
 
 Learning vim-style multi-modal editing takes time and practice.  Most importantly this approach can be learned in stages, as insert mode is the same editing experience as using most other editors.
 
-Start with the multi-modal concept and the basics of navigation.  Then adopt more normal and visual mode actions, including motions 
+Start with the multi-modal concept and the basics of navigation.  Then adopt more normal and visual mode actions, including motions
 
 
 ## Getting started
@@ -16,8 +16,8 @@ Start with the multi-modal concept and the basics of navigation.  Then adopt mor
 ## Navigation and searching
 
 * moving the cursor
-* Motions 
-* line numbers 
+* Motions
+* line numbers
 * jumping around a buffer
 * search and replace
 
@@ -32,6 +32,5 @@ Start with the multi-modal concept and the basics of navigation.  Then adopt mor
 
 ## Clojure Editing
 
-traversing expressions 
-structural editing 
-
+traversing expressions
+structural editing

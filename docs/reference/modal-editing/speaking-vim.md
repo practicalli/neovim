@@ -1,18 +1,18 @@
-# Learning to speak Vim 
+# Learning to speak Vim
 
 Neovim is easier to learn and gain much more benefit from if you learn to speak commands as sentences.
 
 First learn some verbs:
 
-- `c` change 
+- `c` change
 - `d` delete
-- `g` go, 
-- `v` visual select 
+- `g` go,
+- `v` visual select
 - `y` yank (copy)
 
 Then use those verbs with some modifiers
 
-- `'` mark 
+- `'` mark
 - `{ }` beginning/end of paragraph
 - `0` start of line
 - `^` first non white-space character of line
@@ -20,15 +20,15 @@ Then use those verbs with some modifiers
 - `a` around
 - `f` find (includes character)
 - `i` inside a range (e.g. word, paren,)
-- `s` surround 
+- `s` surround
 - `t` till (move just before specified character)
 
 Then learn the text objects you can apply verbs and modifiers too
 
 - `b` block/parentheses
-- `p` paragraph, 
-- `s` sentence  
-- `t` tag e.g. html/xml 
+- `p` paragraph,
+- `s` sentence
+- `t` tag e.g. html/xml
 - `w` word
 
 
@@ -56,4 +56,3 @@ Practice speaking evil with these examples
 | `y y`       | yank (copy) current line                                              |
 | `y w`       | yank (copy) current word                                              |
 | `y @ a`     | yank (copy) to mark `a` (`m a` creates a mark called `a`)             |
-
