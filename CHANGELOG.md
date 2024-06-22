@@ -44,6 +44,7 @@
 - install: use practial.li/clojure/install link
 - reference: practicalli configuration moved into reference
 - install: multiple configs aliases and shell selector
+- basics: rewrite search & replace page
 
 
 ## 2023-07-11
