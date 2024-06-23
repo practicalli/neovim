@@ -150,7 +150,7 @@
             
             
 
-<a href="https://practical.li/neovim">Practicalli Neovim</a> recommends AstroNvim V4 
+<a href="https://practical.li/neovim">Practicalli Neovim</a> recommends AstroNvim V4
 
 
           </div>
@@ -271,8 +271,7 @@
       </label>
     
   
-</form>
-  
+</form>  
 
     <!-- Site language selector -->
     
@@ -2990,8 +2989,8 @@
 <h1 id="files-buffers-windows-and-tabs">Files Buffers Windows and Tabs<a class="headerlink" href="#files-buffers-windows-and-tabs" title="Permanent link">λ︎</a></h1>
 <p><a href="#files">Files</a> are text written to perminant storage, e.g. disk or usb drive and are names with an extension that represents the file type, e.g. <code>.clj</code> for clojure, <code>.md</code> for markdown, etc.</p>
 <p>A <a href="#buffers">Buffer</a> hold the contents of a file or any other information from processes, e.g. the REPL evaluation log.</p>
-<p><a href="#windows">Windows</a> are a view on a buffer and windows can swap which buffer they show.  Multiple windows, also known as splits, can be present in a Neovim frame.  </p>
-<p>A <a href="#tab-pages">tab page</a> (or tab) can hold one or more windows and multiple tab pages can be shown on a tab-line. </p>
+<p><a href="#windows">Windows</a> are a view on a buffer and windows can swap which buffer they show.  Multiple windows, also known as splits, can be present in a Neovim frame.</p>
+<p>A <a href="#tab-pages">tab page</a> (or tab) can hold one or more windows and multiple tab pages can be shown on a tab-line.</p>
 <h2 id="files">Files<a class="headerlink" href="#files" title="Permanent link">λ︎</a></h2>
 <p><code>SPC e</code> opens <a href="#using-neo-tree">Neo-tree.nvim</a> which shows a visual tree to navigate and manage files from the current project (root). Files and directories can be added, renamed, moved and deleted.</p>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>f</kbd></span> to find files with <a href="#telescope">Telescope</a>, typing a pattern narrows the selectable file list.</p>
@@ -3025,7 +3024,7 @@
 </div>
 <details class="example">
 <summary>Configure hidden files</summary>
-<p>Configure Neotree to display hidden files and directories by default.  They are shown with a different visual style (subtle color) compared to the other files and directories.  </p>
+<p>Configure Neotree to display hidden files and directories by default.  They are shown with a different visual style (subtle color) compared to the other files and directories.</p>
 <p><code>H</code> with the cursor in neotree window will still toggle the display of hidden files and directories.</p>
 <p>Optionally, specify files or directories to never show.
 <div class="highlight"><span class="filename">lua/plugins/neo-tree.lua</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">---@type LazySpec</span>
@@ -3067,7 +3066,7 @@
 <p>Telescope provides a selector which will narrow the list of matches as a pattern is typed, providing a fast way to find an item in a list.</p>
 <p>Telescope provides a preview of the selected file (only if there is sufficient space in the Neovim frame)</p>
 <p>File lists are relative to the directory Neovim was opened from (or Path subsequently set in Neovim).</p>
-<p><code>SPC f f</code> selector for files within the scope of the current directory path. <code>SPC f F</code> to also show hidden files from the current directory path. </p>
+<p><code>SPC f f</code> selector for files within the scope of the current directory path. <code>SPC f F</code> to also show hidden files from the current directory path.</p>
 <p><code>SPC f a</code> selector for AstroNvim user configuration files</p>
 <p><code>SPC f p</code> selector for previously opened files (oldfiles)</p>
 <h3 id="save-file">Save File<a class="headerlink" href="#save-file" title="Permanent link">λ︎</a></h3>
@@ -3100,20 +3099,20 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>:!mkdir<span class="w"> </span>-p<span class="w"> </span>%:h
 </code></pre></div>
 <p><code>mkdir -p</code> - the UNIX command to create a folder, the <code>-p</code> option creating any parts of the path required to make the full path</p>
-<p><code>%</code> - name of the current file </p>
-<p><code>:h</code> - for the current directory (the “head” of the path). </p>
+<p><code>%</code> - name of the current file</p>
+<p><code>:h</code> - for the current directory (the “head” of the path).</p>
 <p><code>!</code> - the NeoVim terminal shell command</p>
 <h3 id="swap-file">Swap file<a class="headerlink" href="#swap-file" title="Permanent link">λ︎</a></h3>
-<p>Neovim creates a swap file, <code>.swp</code>, containing the changes made in a buffer to minimise loss should there be an issue with the computer or Neovim.  Changes are written to the swap file after 200 characters or after 4 seconds pause. </p>
+<p>Neovim creates a swap file, <code>.swp</code>, containing the changes made in a buffer to minimise loss should there be an issue with the computer or Neovim.  Changes are written to the swap file after 200 characters or after 4 seconds pause.</p>
 <details class="info">
 <summary>Swap file location</summary>
-<p><code>:swapname</code> shows the full path to the swap file for the current buffer, e.g. 
+<p><code>:swapname</code> shows the full path to the swap file for the current buffer, e.g.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/home/practicalli/.local/state/astronvim/swap//%home%practicalli%projects%practicalli%books%neovim%docs%neovim-basics%files-buffers-windows.md.swp<span class="sb">`</span>
 </code></pre></div></p>
 </details>
 <p><code>:preserve</code> command will write all text from current buffer to the swap file.</p>
-<p><code>:recover</code> command overwrites the current buffer with the data from the swap file.  <code>:recover!</code> command must be use if the buffer has newer changes than the swap file.  Add a filename after the command to recover to a different file than that contained in the current buffer. </p>
-<p>Opening a file checks if there is an associated swap file and prompts the user </p>
+<p><code>:recover</code> command overwrites the current buffer with the data from the swap file.  <code>:recover!</code> command must be use if the buffer has newer changes than the swap file.  Add a filename after the command to recover to a different file than that contained in the current buffer.</p>
+<p>Opening a file checks if there is an associated swap file and prompts the user</p>
 <ul>
 <li>(A)bort opening the file</li>
 <li>(D)elete the swap file</li>
@@ -3159,7 +3158,7 @@
 <p><code>C-w</code> <code>-</code>, <code>+</code>, <code>&lt;</code> or <code>&gt;</code> for vertical or horizontal size adjustment</p>
 </details>
 <h2 id="tab-pages">Tab pages<a class="headerlink" href="#tab-pages" title="Permanent link">λ︎</a></h2>
-<p>A Tab page can hold one or more tabs and are useful for grouping different types of files and information. </p>
+<p>A Tab page can hold one or more tabs and are useful for grouping different types of files and information.</p>
 <p>A Tab page holds one or more windows, each window is a view on a buffer, a buffer holds the contents of a file or any other information in the editor memory (repl log, etc).</p>
 <p>A tab page can provide a logical grouping of windows, e.g. Clojure source code in one tab, tests in a second tab and REPL log in a third.</p>
 <p>Neovim window commands may be constrained within the bounds of a tab page (without using the :tab modifier)</p>
@@ -3187,7 +3186,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 2, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 22, 2024</span>
   </span>
 
     

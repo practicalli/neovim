@@ -150,7 +150,7 @@
             
             
 
-<a href="https://practical.li/neovim">Practicalli Neovim</a> recommends AstroNvim V4 
+<a href="https://practical.li/neovim">Practicalli Neovim</a> recommends AstroNvim V4
 
 
           </div>
@@ -271,8 +271,7 @@
       </label>
     
   
-</form>
-  
+</form>  
 
     <!-- Site language selector -->
     
@@ -2679,20 +2678,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#buffer-wide" class="md-nav__link">
+  <a href="#buffer-search" class="md-nav__link">
     <span class="md-ellipsis">
-      Buffer wide
+      Buffer search
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Buffer search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#substitute-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Substitute command
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#project-wide" class="md-nav__link">
+  <a href="#project-search-and-replace" class="md-nav__link">
     <span class="md-ellipsis">
-      Project wide
+      Project search and replace
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Project search and replace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spectre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spectre
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2728,135 +2757,65 @@
 
 
 <h1 id="search-and-replace">Search and Replace<a class="headerlink" href="#search-and-replace" title="Permanent link">λ︎</a></h1>
-<p>Search and replace within the current buffer:</p>
+<p>Neovim has several built-in commands to search for patterns in the current buffer and quickfix list can be used to run commands across all the files in a project.</p>
+<p>Additional tools that work across all the files in a project:</p>
 <ul>
-<li>use <a href="../multiple-cursors/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> multiple cursors in more detail</a> for in-place editing (visual-multi plugin) </li>
-<li><code>:%substitue</code> <a href="substitute/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> <code>:substitue</code> neovim command</a> for search and replace</li>
+<li><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>s</kbd></span> <span class="keys"><kbd>s</kbd></span> <a href="#spectre">search and replace commands using Spectre</a></li>
+<li><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>r</kbd></span> to rename symbols using <a href="/neovim/repl-driven-development/refactor-tools/">Clojure LSP</a></li>
 </ul>
-<p>Search and replace across a project:</p>
-<ul>
-<li><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>s</kbd></span> <span class="keys"><kbd>s</kbd></span> <a href="spectre/">search and replace commands using Spectre</a> (AstroNvim community plugin)</li>
-<li><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>r</kbd></span> to rename symbols using Clojure LSP (AstroNvim) </li>
-</ul>
-<h2 id="buffer-wide">Buffer wide<a class="headerlink" href="#buffer-wide" title="Permanent link">λ︎</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">AstroNvim</label><label for="__tabbed_1_2">Neovim commands</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>m</kbd></span> <span class="keys"><kbd>A</kbd></span> uses visual-multi multiple curses to match all instances of the selected text and in-place editing</p>
-<p><a href="../multi-modal-editing/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Normal mode editing tools</a> can be used to replace the text at all cursors simultaneously.</p>
 <blockquote>
-<p><a href="../multiple-cursors/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> multiple cursors in more detail</a> </p>
+<p><a href="../multiple-cursors/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> multiple cursors</a> for in-place editing within a buffer</p>
 </blockquote>
+<h2 id="buffer-search">Buffer search<a class="headerlink" href="#buffer-search" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd class="key-slash">/</kbd></span> searches through the current buffer, prompting for a pattern to search.</p>
+<div class="admonition example">
+<p class="admonition-title">Symbol highlight and dot repeat</p>
+<p><span class="keys"><kbd>#</kbd></span> on a word highlights each occurrence in the buffer, <span class="keys"><kbd>n</kbd></span> and <span class="keys"><kbd>N</kbd></span> to jump backward and forward for each instance.</p>
+<p>Change the current occurrence (e.g. cw followed by new word)</p>
+<p>Use <span class="keys"><kbd class="key-period">.</kbd></span> to repeat the change after jumping to the next instance.</p>
 </div>
-<div class="tabbed-block">
-<p>Replace all occurances of the current-pattern with the new pattern within the buffer.</p>
+<h3 id="substitute-command">Substitute command<a class="headerlink" href="#substitute-command" title="Permanent link">λ︎</a></h3>
+<p>Use the <code>:substitute</code> (<code>:s</code>) to replace all occurrences of the current-pattern with the new pattern within the buffer.</p>
+<div class="admonition example">
+<p class="admonition-title">Replace using substitute command</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">:</span>%s<span class="sr">/current-pattern/</span><span class="k">new</span><span class="p">-</span>pattern/<span class="k">g</span>
 </code></pre></div>
 <p>Add the <code>c</code> option to confirm each replacement</p>
-<blockquote>
-<p>Further examples of <a href="substitue.md"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> <code>:substitue</code> neovim command</a></p>
-</blockquote>
 </div>
-</div>
-</div>
-<h2 id="project-wide">Project wide<a class="headerlink" href="#project-wide" title="Permanent link">λ︎</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">AstroNvim</label><label for="__tabbed_2_2">Neovim commands</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><strong>Telescope and :cdo</strong></p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>w</kbd></span> to search for a word</p>
-<p><span class="keys"><kbd class="key-control">Ctrl</kbd></span> <span class="keys"><kbd>q</kbd></span> opens the quickfix list</p>
+<p><a class="md-button" href="substitue.md"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> <code>:substitue</code> neovim command examples</a></p>
+<h2 id="project-search-and-replace">Project search and replace<a class="headerlink" href="#project-search-and-replace" title="Permanent link">λ︎</a></h2>
+<p>Use search to populate the Neovim quickfix list and change occurrences across all the files in the current project, e.g.:</p>
+<div class="admonition example">
+<p class="admonition-title">Search word and replace across project using quickfix list</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>w</kbd></span> to search for the supplied word or pattern</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd></span> <span class="keys"><kbd>q</kbd></span> opens the search results in quickfix list</p>
 <p>Use <code>:cdo</code> command to search and replace in the quickfix list</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">:</span>cdo %s<span class="sr">/current-pattern/</span><span class="k">new</span><span class="p">-</span>pattern/<span class="k">g</span>
 </code></pre></div>
-<p>Including the <code>c</code> option to confirm each replacement (using a noice popup when using Practicalli AstroNvim-config)</p>
-<p><strong>Spectre</strong></p>
-<p><a href="https://github.com/nvim-pack/nvim-spectre" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Spectre</a> is available via the AstroNvim Community project pack and included in the Practicalli astronvim-config    </p>
+<p>Including the <code>c</code> option to confirm each replacement</p>
+</div>
+<h3 id="spectre">Spectre<a class="headerlink" href="#spectre" title="Permanent link">λ︎</a></h3>
+<p><a href="spectre/" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Spectre</a> shows occurrences of a pattern throughout all project files, replace individual or all occurrences.</p>
+<div class="admonition example">
+<p class="admonition-title">Search and replace with Spectre</p>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>s</kbd></span> is the search and replace menu</p>
+<p>Enter a Search pattern and all occurrences across the project are shown</p>
+<p>Enter a Replace pattern to see occurrences with their replacement</p>
+<p><span class="keys"><kbd>R</kbd></span> to replace all occurrences with the replace pattern</p>
+<p><span class="keys"><kbd>C</kbd></span> to replace current occurrence</p>
+</div>
+<p><span class="keys"><kbd>q</kbd></span> adds the Spectre search results to quickfix list to edit occurrences with other Neovim tools</p>
 <p><a class="glightbox" href="https://github.com/windwp/nvim-spectre/wiki/assets/demospectre.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="nvim-spectr" src="https://github.com/windwp/nvim-spectre/wiki/assets/demospectre.gif" /></a></p>
 <p><a href="https://github.com/BurntSushi/ripgrep" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> ripgrep</a> and <a href="https://www.gnu.org/software/sed/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> sed</a> are required.</p>
-<p><a class="md-button" href="https://github.com/nvim-pack/nvim-spectre" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Spectre</a>    </p>
-</div>
-<div class="tabbed-block">
-<div class="admonition warning">
-<p class="admonition-title">Evaluating :cdo command as a project wide search replace</p>
-<p><a href="https://chrisarcand.com/vims-new-cdo-command/" target="_blank">:cdo command</a> could be used to search and replace within the results of a tool that finds matching patterns across a project</p>
-</div>
-<details class="info">
-<summary>Neovim :help :cdo</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>                            *:cdo*
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">:</span>cdo[<span class="p">!</span>] {cmd}       Execute {cmd} <span class="k">in</span> each valid entry <span class="k">in</span> the quickfix <span class="nb">list</span>.
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>            It works like doing this:  
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>                :<span class="k">cfirst</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>                :{cmd}
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>                :cnext
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>                :{cmd}
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>                etc.
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>            When the current <span class="k">file</span> can&#39;<span class="k">t</span> be <span class="p">|</span>abandon<span class="p">|</span><span class="nb">ed</span> and the [<span class="p">!</span>]
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>            <span class="k">is</span> not present<span class="p">,</span> the command fails.
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>            When going <span class="k">to</span> the next entry fails execution stops.
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>            The last buffer <span class="p">(</span>or where an error occurred<span class="p">)</span> becomes
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>            the current buffer.
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>            {cmd} can contain <span class="s1">&#39;|&#39;</span> <span class="k">to</span> concatenate several commands.
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>            Only valid entries <span class="k">in</span> the quickfix <span class="nb">list</span> are used.
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>            A range can be used <span class="k">to</span> select entries<span class="p">,</span> <span class="k">e</span>.<span class="k">g</span>.:  
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>                :<span class="m">10</span><span class="p">,</span>$cdo cmd
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>            To skip entries <span class="m">1</span> <span class="k">to</span> <span class="m">9</span>.
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>            Note: While this command <span class="k">is</span> executing<span class="p">,</span> the <span class="nb">Syntax</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>            autocommand <span class="nb">event</span> <span class="k">is</span> disabled by adding it <span class="k">to</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>            <span class="s1">&#39;eventignore&#39;</span>.  This considerably speeds <span class="k">up</span> editing
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>            each buffer.
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>            Also see <span class="p">|</span>:<span class="k">bufdo</span><span class="p">|,</span> <span class="p">|</span>:<span class="k">tabdo</span><span class="p">|,</span> <span class="p">|</span>:<span class="k">argdo</span><span class="p">|,</span> <span class="p">|</span>:<span class="k">windo</span><span class="p">|,</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>            <span class="p">|</span>:ldo<span class="p">|,</span> <span class="p">|</span>:cfdo<span class="p">|</span> and <span class="p">|</span>:lfdo<span class="p">|</span>.
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>                            *:cfdo*
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="p">:</span>cfdo[<span class="p">!</span>] {cmd}      Execute {cmd} <span class="k">in</span> each <span class="k">file</span> <span class="k">in</span> the quickfix <span class="nb">list</span>.
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>            It works like doing this:  
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>                :<span class="k">cfirst</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>                :{cmd}
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>                :<span class="k">cnfile</span>
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>                :{cmd}
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>                etc.
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>            Otherwise it works the same <span class="k">as</span> `:cdo`.
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>
-<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>                            *:ldo*
-<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="p">:</span>ld[<span class="k">o</span>][<span class="p">!</span>] {cmd}     Execute {cmd} <span class="k">in</span> each valid entry <span class="k">in</span> the location <span class="nb">list</span>
-<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>            <span class="k">for</span> the current <span class="nb">window</span>.
-<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>            It works like doing this:  
-<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>                :<span class="k">lfirst</span>
-<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>                :{cmd}
-<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>                :lnext
-<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>                :{cmd}
-<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>                etc.
-<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>            Only valid entries <span class="k">in</span> the location <span class="nb">list</span> are used.
-<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>            Otherwise it works the same <span class="k">as</span> `:cdo`.
-<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>
-<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>                            *:lfdo*
-<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a><span class="p">:</span>lfdo[<span class="p">!</span>] {cmd}      Execute {cmd} <span class="k">in</span> each <span class="k">file</span> <span class="k">in</span> the location <span class="nb">list</span> <span class="k">for</span>
-<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>            the current <span class="nb">window</span>.
-<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>            It works like doing this:  
-<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a>                :<span class="k">lfirst</span>
-<a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a>                :{cmd}
-<a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a>                :<span class="k">lnfile</span>
-<a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a>                :{cmd}
-<a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>                etc.
-<a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>            Otherwise it works the same <span class="k">as</span> `:ldo`.
-</code></pre></div>
-</details>
-</div>
-</div>
-</div>
+<p><a class="md-button" href="https://github.com/nvim-pack/nvim-spectre" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Spectre</a></p>
 <!-- TODO: review :cdo and similar commands
 
-    use ack.vim/ag.vim with the :cdo command, an intuitive and near-native project-wide find-and-replace solution is now available. 
+    use ack.vim/ag.vim with the :cdo command, an intuitive and near-native project-wide find-and-replace solution is now available.
 
     To replace all instances of foo with bar:
 
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">:</span>Ack foo
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">:</span>cdo s<span class="sr">/foo/</span>bar/<span class="k">g</span> <span class="p">|</span> <span class="k">update</span>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">:</span>Ack foo
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">:</span>cdo s<span class="sr">/foo/</span>bar/<span class="k">g</span> <span class="p">|</span> <span class="k">update</span>
 </code></pre></div>
 
     :cdo isn’t the only command that was added around this functionality:
@@ -2865,6 +2824,12 @@
     - :cfdo[!] {cmd} - Execute {cmd} in each file in the quickfix list.
     - :ld[o][!] {cmd} - Execute {cmd} in each valid entry in the location list for the current window.
     - :lfdo[!] {cmd} - Execute {cmd} in each file in the location list for the current window.
+
+TODO:
+- quickfix list
+- `:bufdo`
+- `:windo`
+
 -->
 
 
@@ -2886,7 +2851,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 24, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 22, 2024</span>
   </span>
 
     
