@@ -32,14 +32,14 @@ Install the following tools to support Neovim and AstroNvim
 
     !!! NOTE ""
         ```shell
-        sudo apt install fd-find xclip luarocks
+        apt install fd-find xclip luarocks nodejs
         ```
 
     ??? INFO "Wayland requires wl-clipboard"
         Install the `wl-clipboard` package to use the Wayland desktop clipboard with Neovim
         !!! NOTE ""
             ```shell
-            sudo apt install wl-clipboard
+            apt install wl-clipboard
             ```
 
 === "MacOSX Homebrew"
@@ -190,9 +190,9 @@ Install from the [:fontawesome-brands-github: Neovim GitHub releases](https://gi
 ![Practicalli Logo](https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo.png?raw=true#only-light){align=right loading=lazy style="height:72px"}
 ![Practicalli Logo](https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo-dark.png?raw=true#only-dark){align=right loading=lazy style="height:72px"}
 
-[:fontawesome-brands-github: Practicalli Astro](http://github.com/practicalli/astro) is Clojure development focused configuration, an extension of the AstroNvim template.
+[:fontawesome-brands-github: Practicalli Astro](http://github.com/practicalli/astro) is Clojure development focused configuration, an extension of the [:fontawesome-brands-github: AstroNvim template repository](https://github.com/AstroNvim/template).
 
-Clone the [Practicalli Astro](https://github.com/practicalli/astro) config or create your own fork and clone that repository.
+Clone the [:fontawesome-brands-github: Practicalli Astro](https://github.com/practicalli/astro) config or create your own fork and clone that repository.
 
 !!! NOTE "Clone Practicalli Astro config"
     ```shell
@@ -215,13 +215,10 @@ Clone the [Practicalli Astro](https://github.com/practicalli/astro) config or cr
 
     [:fontawesome-solid-book-open: Configure shell alias and selectors](multiple-configurations/#configure-shell-alias){target=_blank} to simplify the command to run a specific configuration.
 
-??? INFO "AstroNvim Template"
-    [:fontawesome-brands-github: AstroNvim template repository](https://github.com/AstroNvim/template) provide a general configuration for Neovim.
-
-    [:fontawesome-brands-github: AstroNvim Community](https://github.com/AstroNvim/astrocommunity/) repository provides plugin configs to make it easier to extend the general feature of AstroNvim.
+[Practicalli Astro design & override guide](/neovim/reference/configuration/){target=_blank .md-button} 
 
 
-## Neovim Plugins
+## Install Neovim Plugins
 
 Enter `nvim` command in a terminal to launch Neovim and install all the plugins from the Practicalli Astro configuration.
 
@@ -234,10 +231,10 @@ Lazy plugin manager runs automatically and installs all the plugins defined in t
 
 Treesitter will prompt to compile its language parsers.
 
-++"q"++ to close the lazy package manager popup once all plugins are installed.
+++"q"++ to close the lazy package manager pop-up once all plugins are installed.
 
 
-??? INFO "Unattended post install"
+??? INFO "Plugin install without UI display"
     Use the `--headless` Neovim flag to install plugins without running whole Neovim editor user interface.
 
     ```shell
