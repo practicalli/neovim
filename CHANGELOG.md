@@ -20,6 +20,7 @@
 - basics: spell check overview
 - configuration: alternative community configurations
 - reference: link to intro to lua from codecademy
+- reference: example disable plugin config
 
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)

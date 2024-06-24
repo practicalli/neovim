@@ -44,6 +44,19 @@ The file structure as taken from the AstroNvim template and new files were creat
 - :octicons-file-added-16: `user-termux.lua` mason lsp server overrides, pinned plugin versions for neovim 0.9.x
 
 
+## Disable Plugins
+
+Practicalli Astro provides a rich set of Neovim plugins.  Any plugin can be configured as disabled, usually in a user configuration, e.g. `lua/plugins/user-practicalli.lua`
+
+!!! EXAMPLE "Disable parinfer and sexp plugins"
+    ```lua title="lua/plugins/user-practicalli.lua"
+      -- ----------------------------------------------
+      { "nvim-parinfer", enabled = false },
+      { "nvim-treesitter-sexp", enabled = false },
+      -- ----------------------------------------------
+    ```
+
+
 ## Clojure support
 
 The [:fontawesome-brands-github: AstroCommunity](https://github.com/AstroNvim/astrocommunity/) provides a Clojure language pack that ensures `clojure` Treesitter parser and `clojure-lsp` support and installed automatically.
