@@ -12,12 +12,14 @@ A guide to the design of AstroNvim Config created by Practicalli to support a co
 
 The file structure as taken from the AstroNvim template and new files were created to minimise changes, making it simpler to add updates from the original template repository.
 
-!!! INFO "Key: AstroNvim template file changes"
+!!! INFO "Key - AstroNvim template file changes"
+    Icons describing if a file was added, changed or unchanged from the [AstroNvim template](https://github.com/AstroNvim/template)
 
     - :octicons-file-16: unchanged
     - :octicons-file-diff-16: changed
     - :octicons-file-added-16: added
     - :material-close-circle-outline: config not activated (comment `if` statement to activate)
+
 
 :octicons-file-16: `init.lua` ensures the Lazy package manager is available when Neovim starts up. This file is unchanged from the AstroNvim template.
 
