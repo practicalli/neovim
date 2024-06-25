@@ -259,7 +259,8 @@ A report is generated and shown in Neovim
 
 Review the warnings and install tooling that is required for languages that will be used.
 
-![NeoVim checkhealth report](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-checkhealth-report.png)
+![NeoVim checkhealth report](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/screenshots/neovim-checkhealth-report-light.png?raw=true#only-light)
+![NeoVim checkhealth report](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/screenshots/neovim-checkhealth-report-dark.png?raw=true#only-dark)
 
 !!! HINT "Ignore Provider Warnings"
     It is safe to ignore language provider warnings.
