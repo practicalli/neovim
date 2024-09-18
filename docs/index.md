@@ -1,6 +1,6 @@
 # Neovim for Clojure development
 
-Practicalli Neovim provides install & user guide focused on a simple, powerful and joyful [:fontawesome-solid-book-open: REPL driven workflow](introduction/repl-workflow.md) for Clojure.
+Practicalli Neovim provides an install & user guide for a simple and powerful [:fontawesome-solid-book-open: REPL driven workflow](introduction/repl-workflow.md) for Clojure.
 
 [:fontawesome-solid-book-open: Practicalli Astro configuration](install/neovim/#practicalli-astro-config) for Neovim provides Conjure REPL client and Clojure editing support (parinfer & paredit).
 
@@ -9,7 +9,7 @@ Practicalli Neovim provides install & user guide focused on a simple, powerful a
 
 ## Quick Start
 
-Install [:fontawesome-solid-book-open: Clojure](https://practical.li/clojure/){target=_blank} (Practicalli Clojure), [:fontawesome-solid-book-open: Neovim 0.10.0](install/neovim.md) and [:fontawesome-solid-book-open: Practicalli Astro configuration](install/neovim/#practicalli-astro-config)
+Install [:fontawesome-solid-book-open: Clojure](https://practical.li/clojure/){target=_blank} (Practicalli Clojure), [:fontawesome-solid-book-open: Neovim 0.10](install/neovim.md) and [:fontawesome-solid-book-open: Practicalli Astro configuration](install/neovim/#practicalli-astro-config)
 
 
 ## Neovim overview
@@ -21,7 +21,6 @@ Neovim has [:globe_with_meridians: a diverse set of plugins](https://neovimcraft
 !!! QUOTE "coding at the speed of thought"
     Neovim is incredibly fast and efficient, so thoughts flow from brain to editor without unnecessary delay.
 
-    Touch typing is fast, Neovim and multi-modal editing makes it even faster.
 
 ![Neovim with AstroNvim configuration for Clojure developers](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/neovim-astronvim-clojure-example-light.png?raw=true#only-light){loading=lazy}
 ![Neovim with AstroNvim configuration for Clojure developers](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/neovim-astronvim-clojure-example-dark.png?raw=true#only-dark){loading=lazy}
