@@ -1,4 +1,4 @@
-# Recommended Tools and Fonts
+# Terminal Tools and Fonts
 
 Neovim is a terminal based application so use of a quality terminal is recommended, e.g. Kitty Terminal (or iTerm2 if only on MacOSX)
 
@@ -7,9 +7,9 @@ External Command line tools support search and other system information based fe
 Nodejs supports Language Server protocol servers, format and lint tools installed by Mason.
 
 
-## "Kitty Terminal with Nerd Fonts"
+## Kitty Terminal with Nerd Fonts
 
-Neovim runs in a terminal, so using Kitty (or iTerm2 - MacOSX only) are good options.  Nerd fonts provides additional symbols on top of the terminal font, providing a richer experience.
+Neovim runs in a terminal, so using Kitty (or iTerm2 - MacOSX only) are recommended.  Kitty provides Nerd fonts for additional symbols on top of the terminal font, providing a richer experience.
 
 [:globe_with_meridians: Kitty Terminal - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/command-line/kitty-terminal/) provides examples of using Nerd Fonts or Nerd Font symbols with the Kitty terminal.
 

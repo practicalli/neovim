@@ -8,6 +8,7 @@
 - basics: configure neotree to show hidden files and directories
 - install: add MacOSX homebrew section
 - install: neovide install and configuration, Linux & MacOSX
+- install: terminal tools and fonts page
 - source-control: add nvimdiff configuration and use for Git diff views
 - install: neovim GitHub release install on MacOSX
 - basics: neovim registers guide
