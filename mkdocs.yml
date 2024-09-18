@@ -131,7 +131,7 @@ nav:
       - Overview: index.md
       - REPL Workflow: introduction/repl-workflow.md
       - Features: introduction/features.md
-      - Contributing: introduction/contributing.md
+      - Contributing: https://practical.li/contributing
   - Install:
       - Overview: install/index.md
       - Terminal: install/terminal-tools.md
