@@ -134,7 +134,7 @@ nav:
       - Contributing: introduction/contributing.md
   - Install:
       - Overview: install/index.md
-      - Terminal: install/terminal.md
+      - Terminal: install/terminal-tools.md
       - Neovim: install/neovim.md
       - Multiple Configs: install/multiple-configurations.md
       - Neovide: install/neovide.md
