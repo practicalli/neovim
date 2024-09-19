@@ -26,13 +26,13 @@ Neovim runs in a terminal, so using Kitty (or iTerm2 - MacOSX only) are recommen
 === "Debian packages"
     Install fzf, gdu and node.js via debian package manager
     ```shell
-    apt install fzf gdu
+    apt install ripgrep fzf gdu
     ```
 
 === "Homebrew"
-    Install fzf, gdu and node.js via Homebrew package manager
+    Install ripgrep, fzf, gdu and node.js via Homebrew package manager
     ```shell
-    brew install fzf gdu
+    brew install ripgrep fzf gdu nodejs
     ```
 
 Install btm from its [:fontawesome-brands-github: GitHub repository release page](https://github.com/ClementTsang/bottom/releases/)
