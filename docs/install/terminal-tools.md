@@ -44,3 +44,5 @@ Install btm from its [:fontawesome-brands-github: GitHub repository release page
 AstroNvim uses Mason to install LSP servers, format and lint tools.  Many LSP servers require node.js to install and function.
 
 [Node.js install - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/programming-languages/javascript/nodejs/){target=_blank .md-button}
+
+> Node.js Debian packages pull in a large amount of packages and Practicalli recommends installing from the GitHub Release instead
