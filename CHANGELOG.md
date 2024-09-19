@@ -22,6 +22,7 @@
 - configuration: alternative community configurations
 - reference: link to intro to lua from codecademy
 - reference: example disable plugin config
+- mkdocs: error page add link to Practicalli Contributing page
 
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
