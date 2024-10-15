@@ -23,6 +23,7 @@
 - reference: link to intro to lua from codecademy
 - reference: example disable plugin config
 - mkdocs: error page add link to Practicalli Contributing page
+- source-control: new magit screenshots & gitlinker plugin use
 
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)

@@ -169,7 +169,6 @@ nav:
       - Lazygit: source-control/lazygit.md
       - Neogit: source-control/neogit.md
       - Octo: source-control/octo.md
-      - Open In GitHub: source-control/open-in-github.md
   - API tools:
       - api-tools/index.md
   - Ultra-Mobile Neovim:

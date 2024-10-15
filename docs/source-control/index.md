@@ -5,9 +5,10 @@ There are several ways to interact with Git version control, although Practicall
 - [lazygit](lazygit.md) terminal UI (requires lazygit cli tool)
 - [Neogit](neogit.md) rich git client (similar to Emacs Magit), with Diffview integration
 - [Octo](octo.md) for GitHub Issue and Pull Requests
-- [Open in GitHub](open-in-github.md)
+- [Open files & lines in Git website](#open-in-git-website)
 - Shell out to the command line, `:!`
 - Git commands in Neovim terminal buffer
+
 
 
 ## Common Git actions
@@ -31,15 +32,25 @@ The current hunk or the whole buffer can be staged from the buffer using Git Sig
 
 ### Git Status
 
-`SPC g g` opens lazygit status, for minimal UI
+++spc++ ++"g"++ ++"g"++ opens lazygit terminal UI client
 
 ![AstroNvim Git - Lazygit status](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-git-lazygit-status-example-light.png?raw=true#only-light){loading=lazy}
 ![AstroNvim Git - Lazygit status](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/astronvim-git-lazygit-status-example-dark.png?raw=true#only-dark){loading=lazy}
 
-++spc++ ++"g"++ ++"s"++  ++spc++ ++"g"++ ++"n"++ ++"t" opens neogit in a new tab for Magit style experience
+
+++spc++ ++"g"++ ++"n"++ ++"t" opens neogit in a new tab for Magit style experience
+
+![Neovim Neogit plugin - git status buffer](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/screenshots/neovim-neogit-status-light.png?raw=true#only-light)
+![Neovim Neogit plugin - git status buffer](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/screenshots/neovim-neogit-status-dark.png?raw=true#only-dark)
 
 
-![Neovim Neogit plugin - git status buffer](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/screenshots/neovim-neogit-status.png)
+## Open in Git website
+
+++spc++ ++"g"++ ++"z"++ to open a git controlled file or visually selected lines in the Git sharing website (e.g. GitHub, GitLab)
+
+++spc++ ++"g"++ ++"y"++ to yank the URL for the current file or visually selected lines.
+
+> [gitlinker.nvim](https://github.com/AstroNvim/astrocommunity/tree/main/lua/astrocommunity/git/gitlinker-nvim) plugin provides via Astrocommunity
 
 
 ## GitHub Issues & Pull Requests
