@@ -49,6 +49,7 @@
 - reference: practicalli configuration moved into reference
 - install: multiple configs aliases and shell selector
 - basics: rewrite search & replace page
+- dev: add common practicalli tasks in Makefile
 
 
 ## 2023-07-11
