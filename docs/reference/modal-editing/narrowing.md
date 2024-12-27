@@ -7,9 +7,13 @@ Common examples include
 
 ## NrrwRgn plugin
 
-[NrrwRgn plugin] is inspired by the [Narrowing feature of Emacs](http://www.emacswiki.org/emacs/Narrowing)
+[:fontawesome-brands-github: NrrwRgn plugin](https://github.com/chrisbra/NrrwRgn) is inspired by the [:globe_with_meridians: Narrowing feature of Emacs](http://www.emacswiki.org/emacs/Narrowing)
 and means to focus on a selected region while making the rest inaccessible.
 
+
+![NrrwRgn plugin](https://github.com/chrisbra/NrrwRgn/raw/master/screencast.gif){loading=lazy}
+
+<!--
 `SPC n r` opens a select region in a new split window.  The original buffer is protected from changes.
 
 `:w` to write changes in the narrowed window to the original buffer
@@ -41,3 +45,5 @@ Appending `!` to most commands opens the narrowed part in the current window ins
 ### Attention
 
 `:NRM` is described as experimental by the project readme.
+
+-->
