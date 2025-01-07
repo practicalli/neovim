@@ -24,6 +24,7 @@
 - reference: example disable plugin config
 - mkdocs: error page add link to Practicalli Contributing page
 - source-control: new magit screenshots & gitlinker plugin use
+- reference: started folding page
 
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)

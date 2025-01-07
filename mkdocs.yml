@@ -191,6 +191,7 @@ nav:
           - reference/modal-editing/key-binding-reference.md
           - reference/modal-editing/moving-around.md
           - reference/modal-editing/motions.md
+          - reference/modal-editing/folding.md
           - reference/modal-editing/narrowing.md
           - reference/modal-editing/speaking-vim.md
           - reference/modal-editing/vim-quick-reference.md
