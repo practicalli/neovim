@@ -2884,6 +2884,7 @@
 <p><span class="keys"><kbd>g</kbd></span> go</p>
 <p><span class="keys"><kbd>v</kbd></span> visual select</p>
 <p><span class="keys"><kbd>y</kbd></span> yank (copy)</p>
+<p><span class="keys"><kbd>p</kbd></span> paste (yanks selected text after pasting), <span class="keys"><kbd>P</kbd></span> pastes without yanking</p>
 <div class="admonition tip">
 <p class="admonition-title">Double tap to act on current line</p>
 <p><span class="keys"><kbd>d</kbd></span> <span class="keys"><kbd>d</kbd></span> deletes the current line</p>
@@ -2931,85 +2932,83 @@
 </thead>
 <tbody>
 <tr>
-<td><code>c i s</code></td>
+<td><span class="keys"><kbd>c</kbd></span> <span class="keys"><kbd>i</kbd></span> <span class="keys"><kbd>s</kbd></span></td>
 <td>change inside current sentence (change the whole sentence)</td>
 </tr>
 <tr>
-<td><code>c i "</code></td>
+<td><span class="keys"><kbd>c</kbd></span> <span class="keys"><kbd>i</kbd></span> <span class="keys"><kbd class="key-double-quote">"</kbd></span></td>
 <td>change inside double quotes</td>
 </tr>
 <tr>
-<td><code>c f )</code></td>
+<td><span class="keys"><kbd>c</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>)</kbd></span></td>
 <td>change from cursor to next <code>)</code> character</td>
 </tr>
 <tr>
-<td><code>c s ' "</code></td>
+<td><span class="keys"><kbd>c</kbd></span> <span class="keys"><kbd>s</kbd></span> <span class="keys"><kbd class="key-single-quote">'</kbd></span> <span class="keys"><kbd class="key-double-quote">"</kbd></span></td>
 <td>change by the surrounding single quotes with double quotes</td>
 </tr>
 <tr>
-<td><code>c t X</code></td>
+<td><span class="keys"><kbd>c</kbd></span> <span class="keys"><kbd>t</kbd></span> <span class="keys"><kbd>X</kbd></span></td>
 <td>change till the character <code>X</code> (not including <code>X</code>)</td>
 </tr>
 <tr>
-<td><code>c /foo</code></td>
+<td><span class="keys"><kbd>d</kbd></span> <code>/foo</code></td>
 <td>change until the first search result of ‘foo’</td>
 </tr>
 <tr>
-<td><code>d d</code></td>
+<td><span class="keys"><kbd>d</kbd></span> <span class="keys"><kbd>d</kbd></span></td>
 <td>delete current line</td>
 </tr>
 <tr>
-<td><code>D</code></td>
+<td><span class="keys"><kbd>D</kbd></span></td>
 <td>delete current line from cursor onward</td>
 </tr>
 <tr>
-<td><code>d i w</code></td>
-<td>delete inside the current word (delete word)</td>
+<td><span class="keys"><kbd>d</kbd></span> <span class="keys"><kbd>w</kbd></span> <span class="keys"><kbd>w</kbd></span></td>
+<td>delete arround current word (includes trailing space)</td>
 </tr>
 <tr>
-<td><code>v t SPC</code></td>
+<td><span class="keys"><kbd>d</kbd></span> <span class="keys"><kbd>i</kbd></span> <span class="keys"><kbd>w</kbd></span></td>
+<td>delete inside current word (delete word regardless of cusor position)</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd>v</kbd></span> <span class="keys"><kbd>t</kbd></span> <span class="keys"><kbd class="key-space">Space</kbd></span></td>
 <td>visual select till the next <code>Space</code> character</td>
 </tr>
 <tr>
-<td><code>v s ]</code></td>
+<td><span class="keys"><kbd>v</kbd></span> <span class="keys"><kbd>s</kbd></span> <span class="keys"><kbd class="key-bracket-right">]</kbd></span></td>
 <td>visually select and surround with <code>[]</code> without spaces</td>
 </tr>
 <tr>
-<td><code>v s [</code></td>
+<td><span class="keys"><kbd>v</kbd></span> <span class="keys"><kbd>s</kbd></span> <span class="keys"><kbd class="key-bracket-left">[</kbd></span></td>
 <td>as above with <code>[ ]</code> with spaces between parens and content</td>
 </tr>
 <tr>
-<td><code>g v</code></td>
+<td><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>v</kbd></span></td>
 <td>go to last visual selection (select last visual selection)</td>
 </tr>
 <tr>
-<td><code>v a p</code></td>
+<td><span class="keys"><kbd>v</kbd></span> <span class="keys"><kbd>a</kbd></span> <span class="keys"><kbd>p</kbd></span></td>
 <td>visually select around current paragraph</td>
 </tr>
 <tr>
-<td><code>v i w S "</code></td>
+<td><span class="keys"><kbd>v</kbd></span> <span class="keys"><kbd>i</kbd></span> <span class="keys"><kbd>w</kbd></span> <span class="keys"><kbd>S</kbd></span> <span class="keys"><kbd class="key-double-quote">"</kbd></span></td>
 <td>visually select, insert around current word, and surround with quotes</td>
 </tr>
 <tr>
-<td><code>y y</code></td>
+<td><span class="keys"><kbd>y</kbd></span> <span class="keys"><kbd>y</kbd></span></td>
 <td>yank (copy) current line</td>
 </tr>
 <tr>
-<td><code>y w</code></td>
+<td><span class="keys"><kbd>y</kbd></span> <span class="keys"><kbd>w</kbd></span></td>
 <td>yank (copy) current word</td>
 </tr>
 <tr>
-<td><code>y @ a</code></td>
+<td><span class="keys"><kbd>y</kbd></span> <span class="keys"><kbd class="key-grave">`</kbd></span> <span class="keys"><kbd>y</kbd></span></td>
 <td>yank (copy) to mark <code>a</code> (<code>m a</code> creates a mark called <code>a</code>)</td>
 </tr>
 </tbody>
 </table>
-<!--
-- actions motion
-- actions number motion
-- actions text object
-- actions number text object
--->
 
 
 
