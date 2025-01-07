@@ -9,7 +9,7 @@ Start with the multi-modal concept and the basics of navigation.  Then adopt mor
     `:Tutor` runs the intteractive tutorial built into neovim `(:help tutor` also runs the tutor)
 
 !!! INFO Online learning resources
-    [vim adventures](https://vim-adventures.com/) is a simple online game to teach the fundamentals of vim-style editing.
+    [:globe_with_meridians: vim adventures](https://vim-adventures.com/) is a simple online game to teach the fundamentals of vim-style editing.
 
 
 ## Essential commands
@@ -26,17 +26,20 @@ Before starting Neovim for the first time, you should know these commands:
 
 ++"q"++ ++"!"++ to quit without saving
 
+[:fontawesome-solid-book-open: Learn to speak Vim-style editing](speaking-vim.md){.md-button}
+[:fontawesome-solid-book-open: Quick Reference](neovim-quick-reference.md){.md-button}
+[:fontawesome-solid-book-open: Editing tips for Clojure](tips-for-clojure.md){.md-button}
+
 
 ## Navigation and searching
 
-* moving the cursor
-* Motions
-* line numbers
-* jumping around a buffer
-* search and replace
+- [moving around](moving-arround.md)
+- [Motions](speaking-vim/#motions)
+- [G menu: common shortcuts](g-menu.md)
+- [Z menu: folds and scrolling](z-menu.md)
+- search and replace
 
 
-## Clojure Editing
+## Text format
 
-traversing expressions
-structural editing
+- [modify text case](case.md)
