@@ -194,8 +194,8 @@ nav:
           - reference/modal-editing/folding.md
           - reference/modal-editing/narrowing.md
           - reference/modal-editing/speaking-vim.md
-          - reference/modal-editing/vim-quick-reference.md
-          - reference/modal-editing/vim-tips-for-developers.md
+          - reference/modal-editing/neovim-quick-reference.md
+          - reference/modal-editing/tips-for-clojure.md
           - reference/modal-editing/visual-select.md
           - reference/modal-editing/z-menu.md
       - reference/aligning-text.md

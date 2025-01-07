@@ -1,4 +1,4 @@
-# Vim editing for Clojure developers
+# Editing tips for Clojure
 
 <!-- TODO: covert from Spacemacs to neovim -->
 

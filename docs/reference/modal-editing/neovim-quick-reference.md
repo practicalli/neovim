@@ -1,6 +1,6 @@
 # Neovim Quick Reference
 
-A reference of the most common keybindings available in Vim Normal mode. [Spacemacs DOCUMENTATION key bindings section](https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#key-bindings) contains full details
+A reference of the most common keybindings available in Vim Normal mode.
 
 `.` repeats the last keybinding sequence used in Vim Normal mode or a change made within a complete Vim Insert session.
 
@@ -172,7 +172,7 @@ Type a number before a command and that command will run that number of times.
 
 
 
-## Comments - works for all major modes
+## Comments
 
 `g c c` to comment out the current line
 
@@ -204,7 +204,7 @@ Telescope file browser opens in **Insert** mode to allow typing filenames, to na
 
 `SPC f b` opens telescope browser which allows commands to be run over the current file or directory.
 
-`Esc` swiches the Telescope popup to normal mode, allowing commands to be used
+`Esc` switches the Telescope pop-up to normal mode, allowing commands to be used
 
 - `c` create file / directory  (any missing parts of a path are created)
 - `r` rename a file / directory
@@ -224,7 +224,7 @@ Buffers are displayed in a window and you can change the window to show any of t
 | Key       | Command            | Description               |
 |-----------|--------------------|---------------------------|
 | `SPC b b` | :Telescope buffers | List current buffers      |
-| `SPC b d` | :bdelete           | Kill current buffer       |
+| `SPC b d` | :bdelete           | Delete buffer from tab line |
 | `SPC b n` | :bnext             | Switch to next buffer     |
 | `SPC b p` | :bprevious         | Switch to previous buffer |
 | `SPC b a` | :ball              | Switch to previous buffer |
