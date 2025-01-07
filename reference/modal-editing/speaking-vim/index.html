@@ -2122,6 +2122,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#multipliers" class="md-nav__link">
+    <span class="md-ellipsis">
+      multipliers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#text-objects" class="md-nav__link">
     <span class="md-ellipsis">
       Text Objects
@@ -2795,6 +2804,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#multipliers" class="md-nav__link">
+    <span class="md-ellipsis">
+      multipliers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#text-objects" class="md-nav__link">
     <span class="md-ellipsis">
       Text Objects
@@ -2845,7 +2863,14 @@
 
 <h1 id="learning-to-speak-vim">Learning to speak Vim<a class="headerlink" href="#learning-to-speak-vim" title="Permanent link">λ︎</a></h1>
 <p>Learning to speak the language of vim-style editing significantly accelerates the performance of communicating with the computer.</p>
-<p>The structure of the language takes one of the forms:</p>
+<p>The language is constructed from</p>
+<ul>
+<li><a href="#actions">actions</a> to navigate or manipulate text</li>
+<li><a href="#motions">motions</a> defining the scope of a cursor movement</li>
+<li><a href="#multipliers">multipliers</a> defining the number of times an action or motion takes place</li>
+<li><a href="#text-objects">text objects</a> are common scopes within a text document</li>
+</ul>
+<p>Actions are coupled with motions or text objects</p>
 <div class="admonition tip">
 <p class="admonition-title">keys are mnemonic or regex and have capitalised variants</p>
 <p>Keys were designed to be mnemonic where possible, e.g. <span class="keys"><kbd>d</kbd></span> for delete and  <span class="keys"><kbd>c</kbd></span> for change</p>
@@ -2866,6 +2891,7 @@
 </div>
 <h2 id="motions">Motions<a class="headerlink" href="#motions" title="Permanent link">λ︎</a></h2>
 <p>Then use those verbs with some motions</p>
+<p><span class="keys"><kbd>j</kbd></span> <span class="keys"><kbd>k</kbd></span> <span class="keys"><kbd>h</kbd></span> <span class="keys"><kbd>l</kbd></span> move one character down, up, left or right</p>
 <p><span class="keys"><kbd>%</kbd></span> matching paren <code>() [] {}</code> (toggle between open and closed paren)</p>
 <p><span class="keys"><kbd class="key-grave">`</kbd></span> mark character (specify existing mark character)</p>
 <p><span class="keys"><kbd class="key-brace-left">{</kbd></span> <span class="keys"><kbd class="key-brace-right">}</kbd></span> beginning/end of paragraph</p>
@@ -2877,6 +2903,16 @@
 <p><span class="keys"><kbd>i</kbd></span> inside a range (e.g. a text object like word, or parens)</p>
 <p><span class="keys"><kbd>s</kbd></span> surround</p>
 <p><span class="keys"><kbd>t</kbd></span> till (move just before specified character)</p>
+<h2 id="multipliers">multipliers<a class="headerlink" href="#multipliers" title="Permanent link">λ︎</a></h2>
+<p>An action or motion can be repeated by a given number</p>
+<p><span class="keys"><kbd class="key-3">3</kbd></span> <span class="keys"><kbd>d</kbd></span> <span class="keys"><kbd>w</kbd></span> deletes the next three words by repeating the action</p>
+<p><span class="keys"><kbd>d</kbd></span> <span class="keys"><kbd class="key-3">3</kbd></span> <span class="keys"><kbd>w</kbd></span> deletes three words by repeating the motion (follows how this would be said in English)</p>
+<div class="admonition tip">
+<p class="admonition-title">Relative line numbers</p>
+<p>Using relative line numbers an effective way to jump around the visible text of a buffer.</p>
+<p>Each line shows how many lines away it is from the current line.</p>
+<p><span class="keys"><kbd>j</kbd></span> <span class="keys"><kbd>k</kbd></span> navigation motions will move down or up the number of lines, e.g. <span class="keys"><kbd class="key-1">1</kbd></span> <span class="keys"><kbd class="key-0">0</kbd></span> <span class="keys"><kbd>j</kbd></span> will jump down 10 lines.</p>
+</div>
 <h2 id="text-objects">Text Objects<a class="headerlink" href="#text-objects" title="Permanent link">λ︎</a></h2>
 <p>Then learn the text objects you can apply verbs and modifiers too</p>
 <p><span class="keys"><kbd>b</kbd></span> <strong>block/parentheses</strong> a text block or text between parens</p>
