@@ -2844,22 +2844,21 @@
 
 
 <h1 id="learning-to-speak-vim">Learning to speak Vim<a class="headerlink" href="#learning-to-speak-vim" title="Permanent link">λ︎</a></h1>
-<p>Neovim is easier to learn and gain much more benefit from if you learn to speak commands as sentences.</p>
+<p>Learning to speak the language of vim-style editing significantly accelerates the performance of communicating with the computer.</p>
 <p>The structure of the language takes one of the forms:</p>
 <div class="admonition tip">
-<p class="admonition-title">keys are mnemonic or regex</p>
-<p>keys were designed to be mnemonic where possible, e.g. <span class="keys"><kbd>d</kbd></span> for delete and  <span class="keys"><kbd>c</kbd></span> for change</p>
-<p>Common regular expression scopes are used, e.g. <span class="keys"><kbd class="key-0">0</kbd></span> first character, ++dollar++ last character</p>
+<p class="admonition-title">keys are mnemonic or regex and have capitalised variants</p>
+<p>Keys were designed to be mnemonic where possible, e.g. <span class="keys"><kbd>d</kbd></span> for delete and  <span class="keys"><kbd>c</kbd></span> for change</p>
+<p>Common regular expression scopes are used, e.g. <span class="keys"><kbd class="key-0">0</kbd></span> first character, <span class="keys"><kbd>$</kbd></span> last character</p>
+<p>Keys often have a variant of the action in the capitalised key, e.g. <span class="keys"><kbd class="key-shift">Shift</kbd></span> <span class="keys"><kbd>c</kbd></span> changes to end of line</p>
 </div>
 <h2 id="actions">Actions<a class="headerlink" href="#actions" title="Permanent link">λ︎</a></h2>
 <p>First learn some verbs, these are your actions:</p>
-<ul>
-<li><code>c</code> change</li>
-<li><span class="keys"><kbd>d</kbd></span>  delete</li>
-<li><code>g</code> go</li>
-<li><code>v</code> visual select</li>
-<li><code>y</code> yank (copy)</li>
-</ul>
+<p><span class="keys"><kbd>c</kbd></span> change</p>
+<p><span class="keys"><kbd>d</kbd></span> delete</p>
+<p><span class="keys"><kbd>g</kbd></span> go</p>
+<p><span class="keys"><kbd>v</kbd></span> visual select</p>
+<p><span class="keys"><kbd>y</kbd></span> yank (copy)</p>
 <div class="admonition tip">
 <p class="admonition-title">Double tap to act on current line</p>
 <p><span class="keys"><kbd>d</kbd></span> <span class="keys"><kbd>d</kbd></span> deletes the current line</p>
@@ -2867,27 +2866,24 @@
 </div>
 <h2 id="motions">Motions<a class="headerlink" href="#motions" title="Permanent link">λ︎</a></h2>
 <p>Then use those verbs with some motions</p>
-<ul>
-<li><code>'</code> mark</li>
-<li><code>{ }</code> beginning/end of paragraph</li>
-<li><code>0</code> start of line</li>
-<li><code>^</code> first non white-space character of line</li>
-<li><code>$</code> end of line</li>
-<li><code>a</code> around</li>
-<li><code>f</code> find (includes character)</li>
-<li><code>i</code> inside a range (e.g. word, paren,)</li>
-<li><code>s</code> surround</li>
-<li><code>t</code> till (move just before specified character)</li>
-</ul>
+<p><span class="keys"><kbd>%</kbd></span> matching paren '() [] {}' (toggle between open and closed paren)</p>
+<p><span class="keys"><kbd class="key-grave">`</kbd></span> mark character (specify existing mark character)</p>
+<p><span class="keys"><kbd class="key-brace-left">{</kbd></span> <span class="keys"><kbd class="key-brace-right">}</kbd></span> beginning/end of paragraph</p>
+<p><span class="keys"><kbd class="key-0">0</kbd></span> start of line</p>
+<p><span class="keys"><kbd>^</kbd></span> first non white-space character of line</p>
+<p><span class="keys"><kbd>$</kbd></span> end of line</p>
+<p><span class="keys"><kbd>a</kbd></span> around</p>
+<p><span class="keys"><kbd>f</kbd></span> find specified character forward, <span class="keys"><kbd>F</kbd></span> find backward</p>
+<p><span class="keys"><kbd>i</kbd></span> inside a range (e.g. a text object like word, or parens)</p>
+<p><span class="keys"><kbd>s</kbd></span> surround</p>
+<p><span class="keys"><kbd>t</kbd></span> till (move just before specified character)</p>
 <h2 id="text-objects">Text Objects<a class="headerlink" href="#text-objects" title="Permanent link">λ︎</a></h2>
 <p>Then learn the text objects you can apply verbs and modifiers too</p>
-<ul>
-<li><code>b</code> <strong>block/parentheses</strong> a text block or text between parens</li>
-<li><code>p</code> <strong>paragraph</strong> - text to the next blank line</li>
-<li><code>s</code> <strong>sentence</strong> - text to a full stop character</li>
-<li><code>t</code> <strong>tag</strong> e.g. html/xml</li>
-<li><code>w</code> <strong>word</strong> - blank space separated text</li>
-</ul>
+<p><span class="keys"><kbd>b</kbd></span> <strong>block/parentheses</strong> a text block or text between parens</p>
+<p><span class="keys"><kbd>p</kbd></span> <strong>paragraph</strong> text to the next blank line</p>
+<p><span class="keys"><kbd>s</kbd></span> <strong>sentence</strong> text to a full stop character</p>
+<p><span class="keys"><kbd>t</kbd></span> <strong>tag</strong> e.g. html/xml tag and its contents</p>
+<p><span class="keys"><kbd>w</kbd></span> <strong>word</strong> - start of next word, <span class="keys"><kbd>W</kbd></span> ignores punctuation</p>
 <h2 id="examples-of-speaking-vim">Examples of speaking Vim<a class="headerlink" href="#examples-of-speaking-vim" title="Permanent link">λ︎</a></h2>
 <p>Practice speaking evil with these examples</p>
 <table>
