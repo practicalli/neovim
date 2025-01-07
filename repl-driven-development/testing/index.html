@@ -1938,6 +1938,8 @@
       
         
       
+        
+      
     
     
     
@@ -2072,6 +2074,27 @@
   
   <span class="md-ellipsis">
     Motions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/modal-editing/folding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Folding
   </span>
   
 
@@ -2828,28 +2851,28 @@
 <p><a href="https://github.com/practicalli/neovim-config-redux"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> practicalli/neovim-config-redux</a> sets Kaocha as the default test runner</p>
 <p>Kaocha test runner set in <a href="https://github.com/AstroNvim/astrocommunity/tree/main/lua/astrocommunity/pack/clojure"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Astrocommunity Clojure language pack</a></p>
 <div class="highlight"><span class="filename">Astrocommunity Clojure language pack</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="s2">&quot;Olical/conjure&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="c1">-- load plugin on filetypes</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="n">ft</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;clojure&quot;</span> <span class="p">},</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  <span class="n">init</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">vim</span><span class="p">.</span><span class="n">g</span><span class="p">[</span><span class="s2">&quot;conjure#log#hud#width&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">vim</span><span class="p">.</span><span class="n">g</span><span class="p">[</span><span class="s2">&quot;conjure#log#hud#enabled&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">vim</span><span class="p">.</span><span class="n">g</span><span class="p">[</span><span class="s2">&quot;conjure#log#hud#anchor&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;SE&quot;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">vim</span><span class="p">.</span><span class="n">g</span><span class="p">[</span><span class="s2">&quot;conjure#log#botright&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">vim</span><span class="p">.</span><span class="n">g</span><span class="p">[</span><span class="s2">&quot;conjure#extract#context_header_lines&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">vim</span><span class="p">.</span><span class="n">g</span><span class="p">[</span><span class="s2">&quot;conjure#eval#comment_prefix&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;;; &quot;</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">vim</span><span class="p">.</span><span class="n">g</span><span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#connection#auto_repl#enabled&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">vim</span><span class="p">.</span><span class="n">g</span><span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#connection#auto_repl#hidden&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">vim</span><span class="p">.</span><span class="n">g</span><span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#connection#auto_repl#cmd&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">nil</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">vim</span><span class="p">.</span><span class="n">g</span><span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#eval#auto_require&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="hll">    <span class="n">vim</span><span class="p">.</span><span class="n">g</span><span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#test#runner&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;kaocha&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="s2">&quot;Olical/conjure&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="c1">-- load plugin on filetypes</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nv">ft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;clojure&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nv">init</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">()</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nv">vim</span><span class="p">.</span><span class="py">g</span><span class="p">[</span><span class="s2">&quot;conjure#log#hud#width&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nv">vim</span><span class="p">.</span><span class="py">g</span><span class="p">[</span><span class="s2">&quot;conjure#log#hud#enabled&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nv">vim</span><span class="p">.</span><span class="py">g</span><span class="p">[</span><span class="s2">&quot;conjure#log#hud#anchor&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;SE&quot;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nv">vim</span><span class="p">.</span><span class="py">g</span><span class="p">[</span><span class="s2">&quot;conjure#log#botright&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nv">vim</span><span class="p">.</span><span class="py">g</span><span class="p">[</span><span class="s2">&quot;conjure#extract#context_header_lines&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nv">vim</span><span class="p">.</span><span class="py">g</span><span class="p">[</span><span class="s2">&quot;conjure#eval#comment_prefix&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;;; &quot;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nv">vim</span><span class="p">.</span><span class="py">g</span><span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#connection#auto_repl#enabled&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nv">vim</span><span class="p">.</span><span class="py">g</span><span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#connection#auto_repl#hidden&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="nv">vim</span><span class="p">.</span><span class="py">g</span><span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#connection#auto_repl#cmd&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">nil</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="nv">vim</span><span class="p">.</span><span class="py">g</span><span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#eval#auto_require&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="hll"><span class="w">    </span><span class="nv">vim</span><span class="p">.</span><span class="py">g</span><span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#test#runner&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;kaocha&quot;</span>
 </span><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_create_autocmd</span><span class="p">(</span><span class="s2">&quot;BufNewFile&quot;</span><span class="p">,</span> <span class="p">{</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>      <span class="n">group</span> <span class="o">=</span> <span class="n">vim</span><span class="p">.</span><span class="n">api</span><span class="p">.</span><span class="n">nvim_create_augroup</span><span class="p">(</span><span class="s2">&quot;conjure_log_disable_lsp&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="n">clear</span> <span class="o">=</span> <span class="kc">true</span> <span class="p">}),</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>      <span class="n">pattern</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;conjure-log-*&quot;</span> <span class="p">},</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>      <span class="n">callback</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span> <span class="n">vim</span><span class="p">.</span><span class="n">diagnostic</span><span class="p">.</span><span class="n">disable</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="kr">end</span><span class="p">,</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>      <span class="n">desc</span> <span class="o">=</span> <span class="s2">&quot;Conjure Log disable LSP diagnostics&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="p">})</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="nv">vim</span><span class="p">.</span><span class="py">api</span><span class="p">.</span><span class="nf">nvim_create_autocmd</span><span class="p">(</span><span class="s2">&quot;BufNewFile&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">      </span><span class="nv">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">vim</span><span class="p">.</span><span class="py">api</span><span class="p">.</span><span class="nf">nvim_create_augroup</span><span class="p">(</span><span class="s2">&quot;conjure_log_disable_lsp&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">clear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}),</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">      </span><span class="nv">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;conjure-log-*&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">      </span><span class="nv">callback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">()</span><span class="w"> </span><span class="nv">vim</span><span class="p">.</span><span class="py">diagnostic</span><span class="p">.</span><span class="nf">disable</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="kr">end</span><span class="p">,</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">      </span><span class="nv">desc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Conjure Log disable LSP diagnostics&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="p">})</span>
 </code></pre></div>
 </details>
 <h2 id="include-test-path">Include test path<a class="headerlink" href="#include-test-path" title="Permanent link">λ︎</a></h2>

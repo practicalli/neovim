@@ -1864,6 +1864,8 @@
       
         
       
+        
+      
     
     
     
@@ -2014,6 +2016,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../folding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Folding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../narrowing/" class="md-nav__link">
         
   
@@ -2079,6 +2102,33 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Objects
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#examples-of-speaking-vim" class="md-nav__link">
@@ -2727,6 +2777,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Objects
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#examples-of-speaking-vim" class="md-nav__link">
     <span class="md-ellipsis">
       Examples of speaking Vim
@@ -2768,15 +2845,28 @@
 
 <h1 id="learning-to-speak-vim">Learning to speak Vim<a class="headerlink" href="#learning-to-speak-vim" title="Permanent link">λ︎</a></h1>
 <p>Neovim is easier to learn and gain much more benefit from if you learn to speak commands as sentences.</p>
-<p>First learn some verbs:</p>
+<p>The structure of the language takes one of the forms:</p>
+<div class="admonition tip">
+<p class="admonition-title">keys are mnemonic or regex</p>
+<p>keys were designed to be mnemonic where possible, e.g. <span class="keys"><kbd>d</kbd></span> for delete and  <span class="keys"><kbd>c</kbd></span> for change</p>
+<p>Common regular expression scopes are used, e.g. <span class="keys"><kbd class="key-0">0</kbd></span> first character, ++dollar++ last character</p>
+</div>
+<h2 id="actions">Actions<a class="headerlink" href="#actions" title="Permanent link">λ︎</a></h2>
+<p>First learn some verbs, these are your actions:</p>
 <ul>
 <li><code>c</code> change</li>
-<li><code>d</code> delete</li>
-<li><code>g</code> go,</li>
+<li><span class="keys"><kbd>d</kbd></span>  delete</li>
+<li><code>g</code> go</li>
 <li><code>v</code> visual select</li>
 <li><code>y</code> yank (copy)</li>
 </ul>
-<p>Then use those verbs with some modifiers</p>
+<div class="admonition tip">
+<p class="admonition-title">Double tap to act on current line</p>
+<p><span class="keys"><kbd>d</kbd></span> <span class="keys"><kbd>d</kbd></span> deletes the current line</p>
+<p><span class="keys"><kbd>y</kbd></span> <span class="keys"><kbd>y</kbd></span> yanks (copies) the current line</p>
+</div>
+<h2 id="motions">Motions<a class="headerlink" href="#motions" title="Permanent link">λ︎</a></h2>
+<p>Then use those verbs with some motions</p>
 <ul>
 <li><code>'</code> mark</li>
 <li><code>{ }</code> beginning/end of paragraph</li>
@@ -2789,13 +2879,14 @@
 <li><code>s</code> surround</li>
 <li><code>t</code> till (move just before specified character)</li>
 </ul>
+<h2 id="text-objects">Text Objects<a class="headerlink" href="#text-objects" title="Permanent link">λ︎</a></h2>
 <p>Then learn the text objects you can apply verbs and modifiers too</p>
 <ul>
-<li><code>b</code> block/parentheses</li>
-<li><code>p</code> paragraph,</li>
-<li><code>s</code> sentence</li>
-<li><code>t</code> tag e.g. html/xml</li>
-<li><code>w</code> word</li>
+<li><code>b</code> <strong>block/parentheses</strong> a text block or text between parens</li>
+<li><code>p</code> <strong>paragraph</strong> - text to the next blank line</li>
+<li><code>s</code> <strong>sentence</strong> - text to a full stop character</li>
+<li><code>t</code> <strong>tag</strong> e.g. html/xml</li>
+<li><code>w</code> <strong>word</strong> - blank space separated text</li>
 </ul>
 <h2 id="examples-of-speaking-vim">Examples of speaking Vim<a class="headerlink" href="#examples-of-speaking-vim" title="Permanent link">λ︎</a></h2>
 <p>Practice speaking evil with these examples</p>
@@ -2881,6 +2972,12 @@
 </tr>
 </tbody>
 </table>
+<!--
+- actions motion
+- actions number motion
+- actions text object
+- actions number text object
+-->
 
 
 
@@ -2901,7 +2998,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 22, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 7, 2025</span>
   </span>
 
     

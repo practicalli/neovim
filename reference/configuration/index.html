@@ -1864,6 +1864,8 @@
       
         
       
+        
+      
     
     
     
@@ -1998,6 +2000,27 @@
   
   <span class="md-ellipsis">
     Motions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modal-editing/folding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Folding
   </span>
   
 
@@ -2873,10 +2896,10 @@
 <p>Practicalli Astro provides a rich set of Neovim plugins.  Any plugin can be configured as disabled, usually in a user configuration, e.g. <code>lua/plugins/user-practicalli.lua</code></p>
 <div class="admonition example">
 <p class="admonition-title">Disable parinfer and sexp plugins</p>
-<div class="highlight"><span class="filename">lua/plugins/user-practicalli.lua</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  <span class="c1">-- ----------------------------------------------</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">{</span> <span class="s2">&quot;nvim-parinfer&quot;</span><span class="p">,</span> <span class="n">enabled</span> <span class="o">=</span> <span class="kc">false</span> <span class="p">},</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="p">{</span> <span class="s2">&quot;nvim-treesitter-sexp&quot;</span><span class="p">,</span> <span class="n">enabled</span> <span class="o">=</span> <span class="kc">false</span> <span class="p">},</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="c1">-- ----------------------------------------------</span>
+<div class="highlight"><span class="filename">lua/plugins/user-practicalli.lua</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="c1">-- ----------------------------------------------</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;nvim-parinfer&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;nvim-treesitter-sexp&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="c1">-- ----------------------------------------------</span>
 </code></pre></div>
 </div>
 <h2 id="clojure-support">Clojure support<a class="headerlink" href="#clojure-support" title="Permanent link">λ︎</a></h2>
@@ -2895,15 +2918,15 @@
 <p>Edit the <code>plugins/community.lua</code> file and import the Clojure pack.  The <code>"AstroNvim/astrocommunity",</code> repository is already added to to the file.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- Packs</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">-- Treesitter: clojure , Lsp: clojure-lsp, Lint/format:</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">{</span> <span class="n">import</span> <span class="o">=</span> <span class="s2">&quot;astrocommunity.pack.clojure&quot;</span> <span class="p">},</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">{</span><span class="w"> </span><span class="nv">import</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;astrocommunity.pack.clojure&quot;</span><span class="w"> </span><span class="p">},</span>
 </code></pre></div>
 <details class="hint">
 <summary>Exclude a plugin from the pack</summary>
 <p>The Clojure pack includes parinfer and paredit tools for structural editing, which both work together without issue.  Should one or both of these plugins not be reqiured, set enabled to false
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kr">return</span> <span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="s2">&quot;AstroNvim/astrocommunity&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  <span class="p">{</span> <span class="n">import</span> <span class="o">=</span> <span class="s2">&quot;astrocommunity.pack.clojure&quot;</span> <span class="p">},</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  <span class="p">{</span> <span class="s2">&quot;gpanders/nvim-parinfer&quot;</span><span class="p">,</span> <span class="n">enabled</span> <span class="o">=</span> <span class="kc">false</span> <span class="p">},</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kr">return</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="s2">&quot;AstroNvim/astrocommunity&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nv">import</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;astrocommunity.pack.clojure&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;gpanders/nvim-parinfer&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span>
 </code></pre></div></p>
 </details>
 <div class="admonition example">
@@ -2911,37 +2934,37 @@
 <p>Add the AstroCommunity Clojure pack and additional configuration to create a tailored experience</p>
 <p><code>:help conjure</code> for general Conjure options.</p>
 <p><code>:help conjure-client-clojure-nrepl</code> for Clojure specific options.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kr">return</span> <span class="p">{</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  <span class="s2">&quot;AstroNvim/astrocommunity&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  <span class="p">{</span> <span class="n">import</span> <span class="o">=</span> <span class="s2">&quot;astrocommunity.pack.clojure&quot;</span> <span class="p">},</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  <span class="p">{</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="s2">&quot;AstroNvim/astrocore&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">opts</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>      <span class="n">options</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        <span class="n">g</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>          <span class="c1">-- show HUD REPL log at startup</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>          <span class="p">[</span><span class="s2">&quot;conjure#log#hud#enabled&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kr">return</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="s2">&quot;AstroNvim/astrocommunity&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nv">import</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;astrocommunity.pack.clojure&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="s2">&quot;AstroNvim/astrocore&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nv">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">      </span><span class="nv">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="nv">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">          </span><span class="c1">-- show HUD REPL log at startup</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">          </span><span class="p">[</span><span class="s2">&quot;conjure#log#hud#enabled&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>          <span class="c1">-- Hightlight evaluated forms</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>          <span class="c1">-- [&quot;conjure#highlight#enabled&quot;] = true,</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">          </span><span class="c1">-- Hightlight evaluated forms</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">          </span><span class="c1">-- [&quot;conjure#highlight#enabled&quot;] = true,</span>
 <a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>          <span class="c1">-- Trim log after number of lines. Default: `10000`</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>          <span class="c1">-- [&quot;conjure#log#trim#at&quot;] = 200,</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>          <span class="c1">-- Trim log to number of lines. Default: `7000`</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>          <span class="c1">-- [&quot;conjure#log#trim#to&quot;] = 100,</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">          </span><span class="c1">-- Trim log after number of lines. Default: `10000`</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">          </span><span class="c1">-- [&quot;conjure#log#trim#at&quot;] = 200,</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">          </span><span class="c1">-- Trim log to number of lines. Default: `7000`</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">          </span><span class="c1">-- [&quot;conjure#log#trim#to&quot;] = 100,</span>
 <a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>          <span class="c1">-- auto repl (babashka)</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>          <span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#connection#auto_repl#enabled&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>          <span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#connection#auto_repl#hidden&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>          <span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#connection#auto_repl#cmd&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>          <span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#eval#auto_require&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">          </span><span class="c1">-- auto repl (babashka)</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">          </span><span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#connection#auto_repl#enabled&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">          </span><span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#connection#auto_repl#hidden&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">          </span><span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#connection#auto_repl#cmd&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">nil</span><span class="p">,</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">          </span><span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#eval#auto_require&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>
-<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>          <span class="c1">-- Test runner: &quot;clojure&quot;, &quot;clojuresCRipt&quot;, &quot;kaocha&quot;</span>
-<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>          <span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#test#runner&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;kaocha&quot;</span><span class="p">,</span>
-<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>        <span class="p">},</span>
-<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>      <span class="p">},</span>
-<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>    <span class="p">},</span>
-<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>  <span class="p">},</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">          </span><span class="c1">-- Test runner: &quot;clojure&quot;, &quot;clojuresCRipt&quot;, &quot;kaocha&quot;</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">          </span><span class="p">[</span><span class="s2">&quot;conjure#client#clojure#nrepl#test#runner&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;kaocha&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">  </span><span class="p">},</span>
 <a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="p">}</span>
 </code></pre></div>
 </div>
@@ -2949,12 +2972,12 @@
 <summary>Config comment for parinfer</summary>
 <p>The parinfer comment configuration may not be required when using ts-comment.nvim to set the Clojure comment pattern.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  <span class="s2">&quot;gpanders/nvim-parinfer&quot;</span><span class="p">,</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  <span class="n">filetype</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;clojure&quot;</span> <span class="p">},</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  <span class="n">config</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">vim</span><span class="p">.</span><span class="n">g</span><span class="p">.</span><span class="n">parinfer_force_balance</span> <span class="o">=</span> <span class="kc">true</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="n">vim</span><span class="p">.</span><span class="n">g</span><span class="p">.</span><span class="n">parinfer_comment_chars</span> <span class="o">=</span> <span class="s2">&quot;;;&quot;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  <span class="kr">end</span><span class="p">,</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="s2">&quot;gpanders/nvim-parinfer&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nv">filetype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;clojure&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nv">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">()</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nv">vim</span><span class="p">.</span><span class="py">g</span><span class="p">.</span><span class="py">parinfer_force_balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nv">vim</span><span class="p">.</span><span class="py">g</span><span class="p">.</span><span class="py">parinfer_comment_chars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;;;&quot;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="kr">end</span><span class="p">,</span>
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">},</span>
 </code></pre></div></p>
 </details>
@@ -2978,15 +3001,15 @@ return {
 <p>Improve syntax highlighting by installing the Clojure parser for Treesitter.</p>
 <div class="admonition example">
 <p class="admonition-title">Treesitter Parser for clojure in AstroNvim user configuration</p>
-<div class="highlight"><span class="filename">.config/astronvim-config/plugins/treesitter.lua</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kr">return</span> <span class="p">{</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  <span class="s2">&quot;nvim-treesitter/nvim-treesitter&quot;</span><span class="p">,</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>  <span class="n">opts</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">opts</span><span class="p">)</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="c1">-- add more things to the ensure_installed table protecting against community packs modifying it</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="n">opts</span><span class="p">.</span><span class="n">ensure_installed</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;astronvim.utils&quot;</span><span class="p">).</span><span class="n">list_insert_unique</span><span class="p">(</span><span class="n">opts</span><span class="p">.</span><span class="n">ensure_installed</span><span class="p">,</span> <span class="p">{</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>      <span class="c1">-- &quot;lua&quot;</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="hll">    <span class="s2">&quot;clojure&quot;</span>
-</span><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="p">})</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>  <span class="kr">end</span><span class="p">,</span>
+<div class="highlight"><span class="filename">.config/astronvim-config/plugins/treesitter.lua</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kr">return</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="s2">&quot;nvim-treesitter/nvim-treesitter&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nv">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="nv">_</span><span class="p">,</span><span class="w"> </span><span class="nv">opts</span><span class="p">)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="c1">-- add more things to the ensure_installed table protecting against community packs modifying it</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="nv">opts</span><span class="p">.</span><span class="py">ensure_installed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;astronvim.utils&quot;</span><span class="p">).</span><span class="nf">list_insert_unique</span><span class="p">(</span><span class="nv">opts</span><span class="p">.</span><span class="py">ensure_installed</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">      </span><span class="c1">-- &quot;lua&quot;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="hll"><span class="w">    </span><span class="s2">&quot;clojure&quot;</span>
+</span><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="p">})</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">  </span><span class="kr">end</span><span class="p">,</span>
 <a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="p">}</span>
 </code></pre></div>
 </div>
@@ -3001,15 +3024,15 @@ return {
 <summary>Switch to Parinfer Parens mode for Paredit structural editing</summary>
 <p>Changing the Parinfer mode to <code>paren</code> gives a structured editing experience similar to Paredit (or Smartparens).</p>
 <p>Add the following configuration within the <code>return {}</code> table in the <code>plugins/community.lua</code> file to set the parinfef mode, i.e. <code>paren</code>, <code>smart</code> or <code>indent</code> (default</p>
-<div class="highlight"><span class="filename">plugins/community.lua</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>  <span class="p">{</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="s2">&quot;gpanders/nvim-parinfer&quot;</span><span class="p">,</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="n">ft</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;clojure&quot;</span> <span class="p">},</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="n">config</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>      <span class="n">vim</span><span class="p">.</span><span class="n">g</span><span class="p">.</span><span class="n">parinfer_force_balance</span> <span class="o">=</span> <span class="kc">true</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>      <span class="n">vim</span><span class="p">.</span><span class="n">g</span><span class="p">.</span><span class="n">parinfer_comment_chars</span> <span class="o">=</span> <span class="s2">&quot;;;&quot;</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>      <span class="n">vim</span><span class="p">.</span><span class="n">g</span><span class="p">.</span><span class="n">parinfer_mode</span> <span class="o">=</span> <span class="s2">&quot;paren&quot;</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="kr">end</span><span class="p">,</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>  <span class="p">},</span>
+<div class="highlight"><span class="filename">plugins/community.lua</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="s2">&quot;gpanders/nvim-parinfer&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nv">ft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;clojure&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nv">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">()</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">      </span><span class="nv">vim</span><span class="p">.</span><span class="py">g</span><span class="p">.</span><span class="py">parinfer_force_balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">      </span><span class="nv">vim</span><span class="p">.</span><span class="py">g</span><span class="p">.</span><span class="py">parinfer_comment_chars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;;;&quot;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">      </span><span class="nv">vim</span><span class="p">.</span><span class="py">g</span><span class="p">.</span><span class="py">parinfer_mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;paren&quot;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="kr">end</span><span class="p">,</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">  </span><span class="p">},</span>
 </code></pre></div>
 </details>
 <h3 id="clojure-mappings">Clojure Mappings<a class="headerlink" href="#clojure-mappings" title="Permanent link">λ︎</a></h3>
@@ -3022,26 +3045,26 @@ return {
 <summary>Set localleader in user config</summary>
 <p><code>options.lua</code> in the user configuration provides a consistent way to set Neovim options.</p>
 <div class="highlight"><span class="filename">.config/astronvim-config/options.lua</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">-- set vim options here (vim.&lt;first_key&gt;.&lt;second_key&gt; = value)</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kr">return</span> <span class="p">{</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  <span class="n">opt</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="c1">-- set to true or false etc.</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="n">relativenumber</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">-- sets vim.opt.relativenumber</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="n">number</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>         <span class="c1">-- sets vim.opt.number</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="n">spell</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>         <span class="c1">-- sets vim.opt.spell</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    <span class="n">signcolumn</span> <span class="o">=</span> <span class="s2">&quot;auto&quot;</span><span class="p">,</span>   <span class="c1">-- sets vim.opt.signcolumn to auto</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    <span class="n">wrap</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>          <span class="c1">-- sets vim.opt.wrap</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>  <span class="p">},</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>  <span class="n">g</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>    <span class="n">mapleader</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">,</span>                 <span class="c1">-- sets vim.g.mapleader</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="hll">    <span class="n">maplocalleader</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span>            <span class="c1">-- Set local leader key binding (supports Conjure key bindings)</span>
-</span><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    <span class="n">autoformat_enabled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>       <span class="c1">-- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>    <span class="n">cmp_enabled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>              <span class="c1">-- enable completion at start</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>    <span class="n">autopairs_enabled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>        <span class="c1">-- enable autopairs at start</span>
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>    <span class="n">diagnostics_mode</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>            <span class="c1">-- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)</span>
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>    <span class="n">icons_enabled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>            <span class="c1">-- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)</span>
-<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>    <span class="n">ui_notifications_enabled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">-- disable notifications when toggling UI elements</span>
-<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>    <span class="n">VM_leader</span> <span class="o">=</span> <span class="s2">&quot;gm&quot;</span>                 <span class="c1">-- Visual Multi Leader (multiple cursors)</span>
-<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>  <span class="p">},</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kr">return</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="nv">opt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="c1">-- set to true or false etc.</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="nv">relativenumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">-- sets vim.opt.relativenumber</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="nv">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">         </span><span class="c1">-- sets vim.opt.number</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="nv">spell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">         </span><span class="c1">-- sets vim.opt.spell</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="nv">signcolumn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;auto&quot;</span><span class="p">,</span><span class="w">   </span><span class="c1">-- sets vim.opt.signcolumn to auto</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="nv">wrap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">          </span><span class="c1">-- sets vim.opt.wrap</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">  </span><span class="nv">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">    </span><span class="nv">mapleader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="w">                 </span><span class="c1">-- sets vim.g.mapleader</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="hll"><span class="w">    </span><span class="nv">maplocalleader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;,&quot;</span><span class="p">,</span><span class="w">            </span><span class="c1">-- Set local leader key binding (supports Conjure key bindings)</span>
+</span><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="nv">autoformat_enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">       </span><span class="c1">-- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="nv">cmp_enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">              </span><span class="c1">-- enable completion at start</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span><span class="nv">autopairs_enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">        </span><span class="c1">-- enable autopairs at start</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">    </span><span class="nv">diagnostics_mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">            </span><span class="c1">-- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">    </span><span class="nv">icons_enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">            </span><span class="c1">-- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">    </span><span class="nv">ui_notifications_enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="c1">-- disable notifications when toggling UI elements</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">    </span><span class="nv">VM_leader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;gm&quot;</span><span class="w">                 </span><span class="c1">-- Visual Multi Leader (multiple cursors)</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">  </span><span class="p">},</span>
 <a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="p">}</span>
 </code></pre></div>
 </details>
@@ -3051,20 +3074,20 @@ return {
 <details class="example">
 <summary>Manual user config of clojure lsp server</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">-- customize mason plugins</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kr">return</span> <span class="p">{</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  <span class="c1">-- use mason-lspconfig to configure LSP installations</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  <span class="p">{</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="s2">&quot;williamboman/mason-lspconfig.nvim&quot;</span><span class="p">,</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="c1">-- overrides `require(&quot;mason-lspconfig&quot;).setup(...)`</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="n">opts</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">opts</span><span class="p">)</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>      <span class="c1">-- add more things to the ensure_installed table protecting against community packs modifying it</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>      <span class="n">opts</span><span class="p">.</span><span class="n">ensure_installed</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;astronvim.utils&quot;</span><span class="p">).</span><span class="n">list_insert_unique</span><span class="p">(</span><span class="n">opts</span><span class="p">.</span><span class="n">ensure_installed</span><span class="p">,</span> <span class="p">{</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>        <span class="c1">-- &quot;clojure_lsp&quot;,  -- provide by Clojure pack</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>        <span class="s2">&quot;marksman&quot;</span><span class="p">,</span> <span class="c1">-- Markdown structure (also in markdown pack)</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>        <span class="s2">&quot;yamlls&quot;</span><span class="p">,</span>
-<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>      <span class="p">})</span>
-<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    <span class="kr">end</span><span class="p">,</span>
-<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>  <span class="p">},</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kr">return</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="c1">-- use mason-lspconfig to configure LSP installations</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="s2">&quot;williamboman/mason-lspconfig.nvim&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="c1">-- overrides `require(&quot;mason-lspconfig&quot;).setup(...)`</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="nv">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="nv">_</span><span class="p">,</span><span class="w"> </span><span class="nv">opts</span><span class="p">)</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">      </span><span class="c1">-- add more things to the ensure_installed table protecting against community packs modifying it</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">      </span><span class="nv">opts</span><span class="p">.</span><span class="py">ensure_installed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;astronvim.utils&quot;</span><span class="p">).</span><span class="nf">list_insert_unique</span><span class="p">(</span><span class="nv">opts</span><span class="p">.</span><span class="py">ensure_installed</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">        </span><span class="c1">-- &quot;clojure_lsp&quot;,  -- provide by Clojure pack</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">        </span><span class="s2">&quot;marksman&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">-- Markdown structure (also in markdown pack)</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">        </span><span class="s2">&quot;yamlls&quot;</span><span class="p">,</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">      </span><span class="p">})</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">    </span><span class="kr">end</span><span class="p">,</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">  </span><span class="p">},</span>
 <a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="p">}</span>
 </code></pre></div>
 </details>
@@ -3072,18 +3095,18 @@ return {
 <p>The AstroNvim user example includes a commented LuaSnip configuration</p>
 <div class="admonition example">
 <p class="admonition-title">LuaSnip with json format snippets in <code>snippets/</code> directory</p>
-<div class="highlight"><span class="filename">.config/astronvim-config/plugins/core.lua</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kr">return</span> <span class="p">{</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  <span class="c1">--LuaSnip with json format snippets in `snippets/` directory</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>  <span class="p">{</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="s2">&quot;L3MON4D3/LuaSnip&quot;</span><span class="p">,</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="n">config</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">plugin</span><span class="p">,</span> <span class="n">opts</span><span class="p">)</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>      <span class="nb">require</span> <span class="s2">&quot;astronvim.plugins.configs.luasnip&quot;</span><span class="p">(</span><span class="n">plugin</span><span class="p">,</span> <span class="n">opts</span><span class="p">)</span> <span class="c1">-- include the default astronvim config that calls the setup call</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>      <span class="c1">-- add more custom luasnip configuration such as filetype extend or custom snippets</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>      <span class="nb">require</span><span class="p">(</span><span class="s2">&quot;luasnip.loaders.from_vscode&quot;</span><span class="p">).</span><span class="n">lazy_load</span> <span class="p">{</span> <span class="n">paths</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;./snippets&quot;</span> <span class="p">}</span> <span class="p">}</span> <span class="c1">-- include JSON style snippets</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>      <span class="kd">local</span> <span class="n">luasnip</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;luasnip&quot;</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>      <span class="n">luasnip</span><span class="p">.</span><span class="n">filetype_extend</span><span class="p">(</span><span class="s2">&quot;javascript&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="s2">&quot;javascriptreact&quot;</span> <span class="p">})</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    <span class="kr">end</span><span class="p">,</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>  <span class="p">},</span>
+<div class="highlight"><span class="filename">.config/astronvim-config/plugins/core.lua</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kr">return</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="c1">--LuaSnip with json format snippets in `snippets/` directory</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="s2">&quot;L3MON4D3/LuaSnip&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="nv">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="nv">plugin</span><span class="p">,</span><span class="w"> </span><span class="nv">opts</span><span class="p">)</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">      </span><span class="nb">require</span><span class="w"> </span><span class="s2">&quot;astronvim.plugins.configs.luasnip&quot;</span><span class="p">(</span><span class="nv">plugin</span><span class="p">,</span><span class="w"> </span><span class="nv">opts</span><span class="p">)</span><span class="w"> </span><span class="c1">-- include the default astronvim config that calls the setup call</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">      </span><span class="c1">-- add more custom luasnip configuration such as filetype extend or custom snippets</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">      </span><span class="nb">require</span><span class="p">(</span><span class="s2">&quot;luasnip.loaders.from_vscode&quot;</span><span class="p">).</span><span class="nv">lazy_load</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">paths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;./snippets&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">-- include JSON style snippets</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">      </span><span class="kd">local</span><span class="w"> </span><span class="nv">luasnip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="w"> </span><span class="s2">&quot;luasnip&quot;</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">      </span><span class="nv">luasnip</span><span class="p">.</span><span class="nf">filetype_extend</span><span class="p">(</span><span class="s2">&quot;javascript&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;javascriptreact&quot;</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="kr">end</span><span class="p">,</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">  </span><span class="p">},</span>
 <a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="p">}</span>
 </code></pre></div>
 </div>
@@ -3093,32 +3116,32 @@ return {
 <p><code>import</code> each package of interest to the <code>plugins/community.lua</code> file in the AstroNvim user configuration.</p>
 <div class="admonition example">
 <p class="admonition-title">AstroNvim Community Packages in AstroNvim user configuration</p>
-<div class="highlight"><span class="filename">.config/astronvim-config/plugins/community.lua</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kr">return</span> <span class="p">{</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  <span class="c1">-- Add the community repository of plugin specifications</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>  <span class="s2">&quot;AstroNvim/astrocommunity&quot;</span><span class="p">,</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>  <span class="c1">-- Import each plugin from the Astro Community as required</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>  <span class="p">{</span> <span class="n">import</span> <span class="o">=</span> <span class="s2">&quot;astrocommunity.editing-support.todo-comments&quot;</span> <span class="p">},</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>  <span class="p">{</span> <span class="n">import</span> <span class="o">=</span> <span class="s2">&quot;astrocommunity.git.neogit&quot;</span> <span class="p">},</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>  <span class="p">{</span> <span class="n">import</span> <span class="o">=</span> <span class="s2">&quot;astrocommunity.git.octo&quot;</span> <span class="p">},</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>  <span class="p">{</span> <span class="n">import</span> <span class="o">=</span> <span class="s2">&quot;astrocommunity.git.openingh&quot;</span> <span class="p">},</span>
+<div class="highlight"><span class="filename">.config/astronvim-config/plugins/community.lua</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kr">return</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="c1">-- Add the community repository of plugin specifications</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="s2">&quot;AstroNvim/astrocommunity&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">  </span><span class="c1">-- Import each plugin from the Astro Community as required</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nv">import</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;astrocommunity.editing-support.todo-comments&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nv">import</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;astrocommunity.git.neogit&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nv">import</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;astrocommunity.git.octo&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nv">import</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;astrocommunity.git.openingh&quot;</span><span class="w"> </span><span class="p">},</span>
 <a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="p">}</span>
 </code></pre></div>
 </div>
 <p>AstroCommunity packs set up support for each language</p>
 <div class="admonition example">
 <p class="admonition-title">Language packs enabled in Practicalli AstroNvim Config</p>
-<div class="highlight"><span class="filename">.config/astronvim-config/plugin/community.lua</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>  <span class="c1">-- Packs</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>  <span class="c1">-- Treesitter: dockerfile , Lsp: dockerls &amp; docker_compose_language_service, Lint/format: hadolint</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>  <span class="p">{</span> <span class="n">import</span> <span class="o">=</span> <span class="s2">&quot;astrocommunity.pack.docker&quot;</span> <span class="p">},</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>  <span class="c1">-- Treesitter: json &amp; jsonc, Lsp: jsonls, Lint/format: stylua</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>  <span class="p">{</span> <span class="n">import</span> <span class="o">=</span> <span class="s2">&quot;astrocommunity.pack.json&quot;</span> <span class="p">},</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>  <span class="c1">-- Treesitter: lua, Lsp: lua_ls, Lint/format: stylua</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>  <span class="p">{</span> <span class="n">import</span> <span class="o">=</span> <span class="s2">&quot;astrocommunity.pack.lua&quot;</span> <span class="p">},</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>  <span class="c1">-- Treesitter: markdown &amp; markdown_inline, Lsp: marksman, Lint/format: prettierd</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>  <span class="c1">-- Pack disabled as prettierd too agressive with format</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>  <span class="c1">-- { import = &quot;astrocommunity.pack.markdown&quot; },</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>  <span class="c1">-- Treesitter: markdown &amp; markdown_inline, Lsp: marksman, Lint/format: prettierd</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>  <span class="p">{</span> <span class="n">import</span> <span class="o">=</span> <span class="s2">&quot;astrocommunity.pack.yaml&quot;</span> <span class="p">},</span>
+<div class="highlight"><span class="filename">.config/astronvim-config/plugin/community.lua</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w">  </span><span class="c1">-- Packs</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="c1">-- Treesitter: dockerfile , Lsp: dockerls &amp; docker_compose_language_service, Lint/format: hadolint</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nv">import</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;astrocommunity.pack.docker&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="c1">-- Treesitter: json &amp; jsonc, Lsp: jsonls, Lint/format: stylua</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nv">import</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;astrocommunity.pack.json&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">  </span><span class="c1">-- Treesitter: lua, Lsp: lua_ls, Lint/format: stylua</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nv">import</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;astrocommunity.pack.lua&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">  </span><span class="c1">-- Treesitter: markdown &amp; markdown_inline, Lsp: marksman, Lint/format: prettierd</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">  </span><span class="c1">-- Pack disabled as prettierd too agressive with format</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">  </span><span class="c1">-- { import = &quot;astrocommunity.pack.markdown&quot; },</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">  </span><span class="c1">-- Treesitter: markdown &amp; markdown_inline, Lsp: marksman, Lint/format: prettierd</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nv">import</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;astrocommunity.pack.yaml&quot;</span><span class="w"> </span><span class="p">},</span>
 </code></pre></div>
 </div>
 <h2 id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">λ︎</a></h2>
@@ -3129,15 +3152,15 @@ return {
 <p><a href="https://github.com/sainnhe/everforest">Everforest</a> provides a good dark and light theme and supports the background option to toggle between each colorscheme.</p>
 <div class="admonition exmaple">
 <p class="admonition-title">Practicalli AstroNvim Config - default theme</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>  <span class="p">{</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="c1">-- AstroUI provides the basis for configuring the AstroNvim User Interface</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="c1">-- Configuration documentation can be found with `:h astroui`</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    <span class="s2">&quot;AstroNvim/astroui&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    <span class="c1">---@type AstroUIOpts</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>    <span class="n">opts</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>      <span class="n">colorscheme</span> <span class="o">=</span> <span class="s2">&quot;everforest&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>    <span class="p">},</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>  <span class="p">},</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">    </span><span class="c1">-- AstroUI provides the basis for configuring the AstroNvim User Interface</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="c1">-- Configuration documentation can be found with `:h astroui`</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="s2">&quot;AstroNvim/astroui&quot;</span><span class="p">,</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="c1">---@type AstroUIOpts</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="nv">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">      </span><span class="nv">colorscheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;everforest&quot;</span><span class="p">,</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">  </span><span class="p">},</span>
 </code></pre></div>
 </div>
 <p><a class="md-button" href="https://github.com/AstroNvim/astrocommunity/tree/main/lua/astrocommunity/colorscheme" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg></span> AstroCommunity themes</a></p>
@@ -3159,21 +3182,21 @@ return {
 <details class="example">
 <summary>Override null-ls builtin configuration</summary>
 <p>Specify configuration files to use that override the null-ls builtin configuration</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kr">return</span> <span class="p">{</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  <span class="s2">&quot;jose-elias-alvarez/null-ls.nvim&quot;</span><span class="p">,</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>  <span class="n">opts</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="c1">-- config variable is the default configuration table for the setup function call</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    <span class="kd">local</span> <span class="n">null_ls</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">&quot;null-ls&quot;</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>    <span class="n">config</span><span class="p">.</span><span class="n">sources</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>      <span class="n">null_ls</span><span class="p">.</span><span class="n">builtins</span><span class="p">.</span><span class="n">formatting</span><span class="p">.</span><span class="n">markdownlint</span><span class="p">.</span><span class="n">with</span> <span class="p">{</span>
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>        <span class="c1">-- pass arguments to modify/override the null-ls builtin configuration</span>
-<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="hll">        <span class="n">extra_args</span> <span class="o">=</span> <span class="p">{</span>
-</span><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="hll">          <span class="s2">&quot;--config-path&quot;</span><span class="p">,</span>
-</span><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="hll">          <span class="n">vim</span><span class="p">.</span><span class="n">fn</span><span class="p">.</span><span class="n">expand</span><span class="p">(</span><span class="s2">&quot;~/.config/astro-config/tool-config/markdownlint.yaml&quot;</span><span class="p">)</span> <span class="p">},</span>
-</span><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="hll">      <span class="p">},</span>
-</span><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>    <span class="p">}</span>
-<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>    <span class="kr">return</span> <span class="n">config</span> <span class="c1">-- return final config table</span>
-<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>  <span class="kr">end</span><span class="p">,</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kr">return</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="s2">&quot;jose-elias-alvarez/null-ls.nvim&quot;</span><span class="p">,</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span><span class="nv">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="nv">_</span><span class="p">,</span><span class="w"> </span><span class="nv">config</span><span class="p">)</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="c1">-- config variable is the default configuration table for the setup function call</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">null_ls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">require</span><span class="w"> </span><span class="s2">&quot;null-ls&quot;</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="nv">config</span><span class="p">.</span><span class="py">sources</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">      </span><span class="nv">null_ls</span><span class="p">.</span><span class="py">builtins</span><span class="p">.</span><span class="py">formatting</span><span class="p">.</span><span class="py">markdownlint</span><span class="p">.</span><span class="py">with</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">        </span><span class="c1">-- pass arguments to modify/override the null-ls builtin configuration</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="hll"><span class="w">        </span><span class="nv">extra_args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="hll"><span class="w">          </span><span class="s2">&quot;--config-path&quot;</span><span class="p">,</span>
+</span><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="hll"><span class="w">          </span><span class="nv">vim</span><span class="p">.</span><span class="py">fn</span><span class="p">.</span><span class="nf">expand</span><span class="p">(</span><span class="s2">&quot;~/.config/astro-config/tool-config/markdownlint.yaml&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">},</span>
+</span><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="hll"><span class="w">      </span><span class="p">},</span>
+</span><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="nv">config</span><span class="w"> </span><span class="c1">-- return final config table</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="w">  </span><span class="kr">end</span><span class="p">,</span>
 <a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="p">}</span>
 </code></pre></div>
 <blockquote>
@@ -3182,34 +3205,34 @@ return {
 </details>
 <details class="example">
 <summary>General configuration for LSP Servers</summary>
-<div class="highlight"><span class="filename">.config/astronvim-config/init.lua</span><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>  <span class="n">lsp</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    <span class="c1">-- customize lsp formatting options</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    <span class="n">formatting</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>      <span class="c1">-- control auto formatting on save</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>      <span class="n">format_on_save</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>        <span class="n">enabled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>     <span class="c1">-- format on save globally</span>
-<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>        <span class="n">allow_filetypes</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">-- format on save for specified filetypes only</span>
-<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>          <span class="c1">-- &quot;go&quot;,</span>
-<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>        <span class="p">},</span>
-<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>        <span class="n">ignore_filetypes</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">-- turn off format on save for specified filetypes</span>
-<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>          <span class="c1">-- &quot;python&quot;,</span>
-<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>        <span class="p">},</span>
-<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>      <span class="p">},</span>
-<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="hll">      <span class="n">disabled</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">-- switch off formatting capabilities for the listed language servers</span>
-</span><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="hll">        <span class="c1">-- turn off lua_ls formatting capability if you want to use StyLua to format your lua code</span>
-</span><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="hll">        <span class="c1">-- &quot;lua_ls&quot;,</span>
-</span><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="hll">        <span class="s2">&quot;markdownlint&quot;</span><span class="p">,</span>
-</span><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>      <span class="p">},</span>
-<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>      <span class="n">timeout_ms</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span> <span class="c1">-- default format timeout</span>
-<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>      <span class="c1">-- filter = function(client) -- fully override the default formatting function</span>
-<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>      <span class="c1">--   return true</span>
-<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>      <span class="c1">-- end</span>
-<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>    <span class="p">},</span>
-<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>    <span class="c1">-- enable servers that you already have installed without mason</span>
-<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a>    <span class="n">servers</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a>      <span class="c1">-- &quot;pyright&quot;</span>
-<a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a>    <span class="p">},</span>
-<a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a>  <span class="p">},</span>
+<div class="highlight"><span class="filename">.config/astronvim-config/init.lua</span><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w">  </span><span class="nv">lsp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="c1">-- customize lsp formatting options</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">    </span><span class="nv">formatting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">      </span><span class="c1">-- control auto formatting on save</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">      </span><span class="nv">format_on_save</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">        </span><span class="nv">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">     </span><span class="c1">-- format on save globally</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">        </span><span class="nv">allow_filetypes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">-- format on save for specified filetypes only</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">          </span><span class="c1">-- &quot;go&quot;,</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">        </span><span class="nv">ignore_filetypes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">-- turn off format on save for specified filetypes</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">          </span><span class="c1">-- &quot;python&quot;,</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="hll"><span class="w">      </span><span class="nv">disabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">-- switch off formatting capabilities for the listed language servers</span>
+</span><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="hll"><span class="w">        </span><span class="c1">-- turn off lua_ls formatting capability if you want to use StyLua to format your lua code</span>
+</span><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="hll"><span class="w">        </span><span class="c1">-- &quot;lua_ls&quot;,</span>
+</span><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a><span class="hll"><span class="w">        </span><span class="s2">&quot;markdownlint&quot;</span><span class="p">,</span>
+</span><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="w">      </span><span class="nv">timeout_ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="c1">-- default format timeout</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a><span class="w">      </span><span class="c1">-- filter = function(client) -- fully override the default formatting function</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="w">      </span><span class="c1">--   return true</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="w">      </span><span class="c1">-- end</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a><span class="w">    </span><span class="c1">-- enable servers that you already have installed without mason</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a><span class="w">    </span><span class="nv">servers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a><span class="w">      </span><span class="c1">-- &quot;pyright&quot;</span>
+<a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a><span class="w">  </span><span class="p">},</span>
 </code></pre></div>
 </details>
 <h2 id="override-key-binding">Override Key binding<a class="headerlink" href="#override-key-binding" title="Permanent link">λ︎</a></h2>
@@ -3219,22 +3242,22 @@ return {
 <details class="example">
 <summary>Override Key bindings for vim highlighter</summary>
 <div class="highlight"><span class="filename">.config/astronvim-config/plugins/community.lua</span><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">{</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    <span class="s2">&quot;vim-highlighter&quot;</span><span class="p">,</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    <span class="n">keys</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>        <span class="kr">return</span> <span class="p">{</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>            <span class="p">{</span> <span class="s2">&quot;&lt;leader&gt;nn&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;cmd&gt;Hi&gt;&lt;CR&gt;&quot;</span><span class="p">,</span> <span class="n">desc</span> <span class="o">=</span> <span class="s2">&quot;Next Recently Set Highlight&quot;</span> <span class="p">},</span>
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>            <span class="p">{</span> <span class="s2">&quot;&lt;leader&gt;ng&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;cmd&gt;Hi&lt;&lt;CR&gt;&quot;</span><span class="p">,</span> <span class="n">desc</span> <span class="o">=</span> <span class="s2">&quot;Previous Recently Set Highlight&quot;</span> <span class="p">},</span>
-<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>            <span class="p">{</span> <span class="s2">&quot;&lt;leader&gt;n[&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;cmd&gt;Hi{&lt;CR&gt;&quot;</span><span class="p">,</span> <span class="n">desc</span> <span class="o">=</span> <span class="s2">&quot;Next Nearest Highlight&quot;</span> <span class="p">},</span>
-<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>            <span class="p">{</span> <span class="s2">&quot;&lt;leader&gt;n]&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;cmd&gt;Hi}&lt;CR&gt;&quot;</span><span class="p">,</span> <span class="n">desc</span> <span class="o">=</span> <span class="s2">&quot;Previous Nearest Highlight&quot;</span> <span class="p">},</span>
-<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>        <span class="p">}</span>
-<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>    <span class="kr">end</span><span class="p">,</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span><span class="s2">&quot;vim-highlighter&quot;</span><span class="p">,</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="nv">keys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">()</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">        </span><span class="kr">return</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">            </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;&lt;leader&gt;nn&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;&lt;cmd&gt;Hi&gt;&lt;CR&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">desc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Next Recently Set Highlight&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">            </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;&lt;leader&gt;ng&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;&lt;cmd&gt;Hi&lt;&lt;CR&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">desc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Previous Recently Set Highlight&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">            </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;&lt;leader&gt;n[&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;&lt;cmd&gt;Hi{&lt;CR&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">desc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Next Nearest Highlight&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">            </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;&lt;leader&gt;n]&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;&lt;cmd&gt;Hi}&lt;CR&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">desc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Previous Nearest Highlight&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">    </span><span class="kr">end</span><span class="p">,</span>
 <a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="p">}</span>
 </code></pre></div>
 </details>
 <h2 id="plugin-key-binding">Plugin Key binding<a class="headerlink" href="#plugin-key-binding" title="Permanent link">λ︎</a></h2>
 <p>Add key binding if a plugin is available wrapped in an if statement, when defining keys in a different place to adding the plugin, e.g whichkey mappings.lua</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kr">if</span> <span class="n">is_available</span> <span class="s2">&quot;plugin-name&quot;</span> <span class="kr">then</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>  <span class="p">,,,</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kr">if</span><span class="w"> </span><span class="nv">is_available</span><span class="w"> </span><span class="s2">&quot;plugin-name&quot;</span><span class="w"> </span><span class="kr">then</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">  </span><span class="p">,,,</span>
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="kr">else</span>
 </code></pre></div>
 <!--
