@@ -41,11 +41,27 @@ Repeat the key binding to move the cursor to the documentation popup window and 
 
 ### Code Actions
 
-++spc++ ++"l"++ ++"r"++ rename current symbol (namespace rename not supported by LSP client)
+++spc++ ++"l"++ ++"r"++ rename current symbol (namespace rename not supported by Neovim LSP client)
 
 ++spc++ ++"l"++ ++"a"++ code actions (popup with available actions)
 
 ++spc++ ++"l"++ ++"f"++ format buffer
+
+
+### Rename namespace
+
+Clojure LSP can rename namespaces and update the corresponding file name.
+
+The Neovim LSP client does not seem to support file renaming so the ++spc++ ++"l"++ ++"r"++ command fails.
+
+Clojure LSP can be called via the command line to rename the namespace and its corresponding file name.
+
+!!! NOTE "Rename namespace via Clojure LSP on Command Line"
+    ```shell
+    clojure-lsp rename --from gameboard.gameboard.api.scoreboard --to practicalli.gameboard.api.scores
+    ```
+
+> [nvim-lsp-file-operations](https://github.com/antosha417/nvim-lsp-file-operations) was tried but without success so far.
 
 
 <!--
