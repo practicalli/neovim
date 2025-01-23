@@ -157,6 +157,20 @@ Navigate within the current file or globally using file marks.
 > AstroNvim user config enables `incsearch` incremental search and `hlsearch` to highlight every search match
 
 
+## Git
+
+AstroNvim includes [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) which highlights changes to the working directory in the buffer margin.
+
+Git hunks can be navigated
+
+- ++bracket-left++ ++"g"++ jumps to previous hunk
+- ++bracket-right++ ++"g"++ jumps to next hunk
+- ++bracket-left++ ++"G"++ jumps to first hunk
+- ++bracket-right++ ++"G"++ jumps to last hunk
+
+> [Source Control](/neovim/source-control/index.md) section describes additional features of Gitsigns and other Git tools.
+
+
 ## Projects
 
 ++colon++ ++"c"++ ++"d"++ followed by a path changes the root directory for Neovim.

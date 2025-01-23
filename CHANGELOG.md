@@ -26,6 +26,7 @@
 - source-control: new magit screenshots & gitlinker plugin use
 - reference: started folding page
 - clojure: refactor namespace with Clojure LSp via command line
+- basics: navigate git hunks with gitsigns key mappings
 
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
