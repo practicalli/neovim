@@ -8,7 +8,7 @@ Neogit is an interactive git client that provides the core features of version c
 
 `TAB` toggles expansion of sections, files and hunks
 
-`d` provide [a side-by-side view of changes](diffview.md)
+`d` provide [a side-by-side view of changes](diff.md#diffview)
 
 `q` to quit Neogit and return to the previous tab
 
