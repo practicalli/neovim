@@ -28,6 +28,7 @@
 - clojure: refactor namespace with Clojure LSp via command line
 - basics: navigate git hunks with gitsigns key mappings
 - clojure: add parinfer paragraph to structural editing page
+- basics: refactor tools page
 
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
