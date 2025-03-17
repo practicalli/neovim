@@ -4,7 +4,7 @@
 
 Neogit is an interactive git client that provides the core features of version control with Git.  Neogit emulates many of the features found in magit.
 
-`SPC g s` to open `:Neogit` status buffer
+`SPC g n t` to open `:Neogit` status buffer in a new tab page (vertical & horizontal split options available)
 
 `TAB` toggles expansion of sections, files and hunks
 

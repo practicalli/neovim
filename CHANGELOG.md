@@ -55,6 +55,7 @@
 - install: multiple configs aliases and shell selector
 - basics: rewrite search & replace page
 - dev: add common practicalli tasks in Makefile
+- source-control: update neogit key mapping to spc g n t
 
 
 ## 2023-07-11
