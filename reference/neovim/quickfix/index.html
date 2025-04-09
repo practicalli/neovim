@@ -1,0 +1,4024 @@
+<!--
+  Practicalli Custom blocks
+
+  Overrides
+     - announce
+-->
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Practical guide to Clojure development with Neovim">
+      
+      
+        <meta name="author" content="Practicalli">
+      
+      
+        <link rel="canonical" href="https://practical.li/neovim-staging/reference/neovim/quickfix/">
+      
+      
+        <link rel="prev" href="../standard-path/">
+      
+      
+        <link rel="next" href="../changelist/">
+      
+      
+      <link rel="icon" href="../../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.6">
+    
+    
+      
+        <title>Quickfix - Practicalli Neovim</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-P29SSN0GV6"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-P29SSN0GV6",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-P29SSN0GV6",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Quickfix - Practicalli Neovim" >
+      
+        <meta  property="og:description"  content="Practical guide to Clojure development with Neovim" >
+      
+        <meta  property="og:image"  content="https://practical.li/neovim-staging/assets/images/social/reference/neovim/quickfix.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://practical.li/neovim-staging/reference/neovim/quickfix/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Quickfix - Practicalli Neovim" >
+      
+        <meta  name="twitter:description"  content="Practical guide to Clojure development with Neovim" >
+      
+        <meta  name="twitter:image"  content="https://practical.li/neovim-staging/assets/images/social/reference/neovim/quickfix.png" >
+      
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quickfix" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+
+<a href="https://practical.li/neovim">Practicalli Neovim</a> recommends AstroNvim V4
+
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
+    </div>
+    
+    
+      <!-- Determine classes -->
+   
+
+<!-- Header -->
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <!-- Link to home -->
+
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+
+    <!-- Custom: Link to Practical.li -->
+    <a
+      href="https://practical.li/"
+      title="https://practical.li/"
+      class="md-header__button md-logo"
+      aria-label="https://practical.li/"
+      data-md-component="logo"
+      target="_blank"
+    >
+      
+  <img src="../../../assets/images/practicalli-logo.png" alt="logo">
+
+    </a>
+
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <a
+            href="https://practical.li/neovim-staging/"
+            title="Practicalli Neovim"
+            aria-label="Practicalli Neovim"
+          >
+            <span class="md-ellipsis"> Practicalli Neovim </span>
+          </a>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+             Quickfix 
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color palette toggle -->
+     
+    <!-- Added to support header.html partial -->
+<!-- - no changes applied -->
+
+<!-- Color palette toggle -->
+<form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input
+      class="md-option"
+      data-md-color-media="(prefers-color-scheme: light)"
+      data-md-color-scheme="default"
+      data-md-color-primary="teal"
+      data-md-color-accent="blue"
+      
+        aria-label="Switch to dark mode"
+      
+      type="radio"
+      name="__palette"
+      id="__palette_1"
+    />
+    
+      <label
+        class="md-header__button md-icon"
+        title="Switch to dark mode"
+        for="__palette_2"
+        hidden
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input
+      class="md-option"
+      data-md-color-media="(prefers-color-scheme: dark)"
+      data-md-color-scheme="slate"
+      data-md-color-primary="teal"
+      data-md-color-accent="deep-purple"
+      
+        aria-label="Switch to light mode"
+      
+      type="radio"
+      name="__palette"
+      id="__palette_2"
+    />
+    
+      <label
+        class="md-header__button md-icon"
+        title="Switch to light mode"
+        for="__palette_1"
+        hidden
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>  
+
+    <!-- Site language selector -->
+    
+
+    <!-- Button to open search modal -->
+    
+    <label class="md-header__button md-icon" for="__search">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+    </label>
+
+    <!-- Search interface -->
+    <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+    <!-- Repository information -->
+    
+    <div class="md-header__source"><a href="https://github.com/practicalli/neovim-staging/" title="Go to repository" class="md-source" data-md-component="source" target="_blank">
+    <div class="md-source__icon md-icon">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    </div>
+    <div class="md-source__repository">
+        GitHub
+    </div>
+</a></div>
+    
+  </nav>
+
+  <!-- Navigation tabs (sticky) -->
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Practicalli Neovim" class="md-nav__button md-logo" aria-label="Practicalli Neovim" data-md-component="logo">
+      
+  <img src="../../../assets/images/practicalli-logo.png" alt="logo">
+
+    </a>
+    Practicalli Neovim
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/practicalli/neovim-staging/" title="Go to repository" class="md-source" data-md-component="source" target="_blank">
+    <div class="md-source__icon md-icon">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    </div>
+    <div class="md-source__repository">
+        GitHub
+    </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/repl-workflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    REPL Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/features/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Features
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://practical.li/contributing" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../install/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Install
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../install/terminal-tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../install/neovim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neovim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../install/multiple-configurations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiple Configs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../install/neovide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neovide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../neovim-basics/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Neovim Basics
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Neovim Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../neovim-basics/file-buffer-window-tab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Buffer Window Tab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../neovim-basics/notifications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notifications
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../neovim-basics/multi-modal-editing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi-modal Editing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../neovim-basics/navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Navigation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../neovim-basics/registers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Registers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../neovim-basics/search-replace/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Search Replace
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Search Replace
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../neovim-basics/search-replace/substitute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Substitute
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../neovim-basics/search-replace/spectre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spectre
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../neovim-basics/spell-check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spell Check
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../neovim-basics/comments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../neovim-basics/snippets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Snippets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../neovim-basics/plugin-manager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plugin Manager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../neovim-basics/multiple-cursors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiple Cursors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../neovim-basics/zen-mode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zen Mode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../neovim-basics/terminal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terminal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../repl-driven-development/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Clojure REPL Workflow
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Clojure REPL Workflow
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../repl-driven-development/conjure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conjure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../repl-driven-development/documentation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../repl-driven-development/structural-editing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Structural Editing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../repl-driven-development/refactor-tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Refactor Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../repl-driven-development/testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../source-control/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Source Control
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Source Control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../source-control/diff/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diff
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../source-control/lazygit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lazygit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../source-control/neogit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neogit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../source-control/octo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Octo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../api-tools/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    API tools
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            API tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../termux/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Ultra-Mobile Neovim
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Ultra-Mobile Neovim
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../termux/fdroid-install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    F-Droid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../termux/setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Termux Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../termux/using-termux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Termux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../termux/git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../termux/custom-shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zsh
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../termux/clojure-development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clojure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../termux/neovim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neovim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../configuration/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Astro config Design
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Astro config Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/astrocommunity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AstroCommunity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../modal-editing/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Modal Editing
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Modal Editing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modal-editing/case/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modifying text case
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modal-editing/g-menu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evil G menu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modal-editing/key-binding-reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evil Keybinding Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modal-editing/moving-around/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Moving around the cursor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modal-editing/motions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Motions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modal-editing/folding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Folding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modal-editing/narrowing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Narrowing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modal-editing/speaking-vim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learning to speak Vim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modal-editing/neovim-quick-reference/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neovim Quick Reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modal-editing/tips-for-clojure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Editing tips for Clojure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modal-editing/visual-select/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visual Select
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modal-editing/z-menu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evil Z menu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aligning-text.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Neovim
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            Neovim
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../standard-path/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standard Path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quickfix
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Quickfix
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quickfix-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      quickfix mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelist
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jumplist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jumplist
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../language-providers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Language Providers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../lua-language/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Lua Language
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            Lua Language
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fennel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fennel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../configuration/practicalli/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Practicalli Config Design
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_7">
+            <span class="md-nav__icon md-icon"></span>
+            Practicalli Config Design
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/practicalli/config-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config Design
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/practicalli/packer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Packer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../configuration/practicalli/packages/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Packages
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8_7_4" id="__nav_8_7_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Packages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/practicalli/packages/lualine/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Status Line
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/practicalli/packages/nvim-treesitter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Treesitter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://practical.li/writing-tips/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Writing Tips
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quickfix-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      quickfix mode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/practicalli/neovim-staging/edit/main/docs/reference/neovim/quickfix.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/practicalli/neovim-staging/raw/main/docs/reference/neovim/quickfix.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="quickfix">Quickfix<a class="headerlink" href="#quickfix" title="Permanent link">λ︎</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Initial draft - feedback welcome</p>
+</div>
+<h2 id="quickfix-mode">quickfix mode<a class="headerlink" href="#quickfix-mode" title="Permanent link">λ︎</a></h2>
+<div class="highlight"><span class="filename">Open quickfix in window</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">:</span>ccopen
+</code></pre></div>
+<p>Use <span class="keys"><kbd>j</kbd></span> <span class="keys"><kbd>k</kbd></span> to navigate the list or <code>:cc</code> and a number to jump to a result</p>
+<div class="highlight"><span class="filename">jump to the 7th result</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">:</span><span class="k">cc</span> <span class="m">7</span>
+</code></pre></div>
+<ul>
+<li><span class="keys"><kbd>ctrl</kbd></span> and navigation key (hjkl) to move to quickfix window</li>
+<li><span class="keys"><kbd>q</kbd></span> closes the quickfix buffer</li>
+</ul>
+<h2 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">λ︎</a></h2>
+<ul>
+<li><a href="https://github.com/ten3roberts/qf.nvim">qf.nvim</a> - Quickfix and location list management for Neovim</li>
+<li><a href="https://github.com/kevinhwang91/nvim-bqf">nvim-bqf</a> enhanced quickfix window</li>
+</ul>
+<p>Quickfix is a mode to show results of another command</p>
+<ul>
+<li>a make compile task</li>
+<li>the results of a search</li>
+<li>lsp analysis errors</li>
+</ul>
+<p>Quickfix buffer can be used to jump through the errors one by one.  Each error can be viewe and fix it in turn.</p>
+<p>quickfix is used to find a list of positions in files.</p>
+<ul>
+<li>:vimgrep| finds pattern matches.</li>
+</ul>
+<p>The 'errorformat' option should be set to match the error messages from your
+compiler (see |errorformat| below).</p>
+<div class="highlight"><pre><span></span><code>                        *quickfix-ID*
+</code></pre></div>
+<p>Each quickfix list has a unique identifier called the quickfix ID and this
+number will not change within a Vim session. The |getqflist()| function can be
+used to get the identifier assigned to a list. There is also a quickfix list
+number which may change whenever more than ten lists are added to a quickfix
+stack.</p>
+<div class="highlight"><pre><span></span><code>                    *location-list* *E776*
+</code></pre></div>
+<p>A location list is a window-local quickfix list. You get one after commands
+like <code>:lvimgrep</code>, <code>:lgrep</code>, <code>:lhelpgrep</code>, <code>:lmake</code>, etc., which create a
+location list instead of a quickfix list as the corresponding <code>:vimgrep</code>,
+<code>:grep</code>, <code>:helpgrep</code>, <code>:make</code> do.
+                        <em>location-list-file-window</em>
+A location list is associated with a window and each window can have a
+separate location list.  A location list can be associated with only one
+window.  The location list is independent of the quickfix list.</p>
+<p>When a window with a location list is split, the new window gets a copy of the
+location list.  When there are no longer any references to a location list,
+the location list is destroyed.</p>
+<div class="highlight"><pre><span></span><code>                    *quickfix-changedtick*
+</code></pre></div>
+<p>Every quickfix and location list has a read-only changedtick variable that
+tracks the total number of changes made to the list.  Every time the quickfix
+list is modified, this count is incremented. This can be used to perform an
+action only when the list has changed.  The |getqflist()| and |getloclist()|
+functions can be used to query the current value of changedtick.  You cannot
+change the changedtick variable.</p>
+<p>The following quickfix commands can be used.  The location list commands are
+similar to the quickfix commands, replacing the 'c' prefix in the quickfix
+command with 'l'.</p>
+<div class="highlight"><pre><span></span><code>                        *E924*
+</code></pre></div>
+<p>If the current window was closed by an |autocommand| while processing a
+location list command, it will be aborted.</p>
+<div class="highlight"><pre><span></span><code>                        *E925* *E926*
+</code></pre></div>
+<p>If the current quickfix or location list was changed by an |autocommand| while
+processing a quickfix or location list command, it will be aborted.</p>
+<div class="highlight"><pre><span></span><code>                        *:cc*
+</code></pre></div>
+<p>:cc[!] [nr]     Display error [nr].  If [nr] is omitted, the same
+:[nr]cc[!]      error is displayed again.  Without [!] this doesn't
+            work when jumping to another buffer, the current buffer
+            has been changed, there is the only window for the
+            buffer and both 'hidden' and 'autowrite' are off.
+            When jumping to another buffer with [!] any changes to
+            the current buffer are lost, unless 'hidden' is set or
+            there is another window for this buffer.
+            The 'switchbuf' settings are respected when jumping
+            to a buffer.
+            When used in the quickfix window the line number can
+            be used, including "." for the current line and "$"
+            for the last line.</p>
+<div class="highlight"><pre><span></span><code>                        *:ll*
+</code></pre></div>
+<p>:ll[!] [nr]     Same as ":cc", except the location list for the
+:[nr]ll[!]      current window is used instead of the quickfix list.</p>
+<div class="highlight"><pre><span></span><code>                    *:cn* *:cne* *:cnext* *E553*
+</code></pre></div>
+<p>:[count]cn[ext][!]  Display the [count] next error in the list that
+            includes a file name.  If there are no file names at
+            all, go to the [count] next error.  See |:cc| for
+            [!] and 'switchbuf'.</p>
+<div class="highlight"><pre><span></span><code>                        *:lne* *:lnext*
+</code></pre></div>
+<p>:[count]lne[xt][!]  Same as ":cnext", except the location list for the
+            current window is used instead of the quickfix list.</p>
+<p>:[count]cN[ext][!]      <em>:cp</em> <em>:cprevious</em>  <em>:cprev</em> <em>:cN</em> <em>:cNext</em>
+:[count]cp[revious][!]  Display the [count] previous error in the list that
+            includes a file name.  If there are no file names at
+            all, go to the [count] previous error.  See |:cc| for
+            [!] and 'switchbuf'.</p>
+<p>:[count]lN[ext][!]      <em>:lp</em> <em>:lprevious</em> <em>:lprev</em> <em>:lN</em> <em>:lNext</em>
+:[count]lp[revious][!]  Same as ":cNext" and ":cprevious", except the location
+            list for the current window is used instead of the
+            quickfix list.</p>
+<div class="highlight"><pre><span></span><code>                        *:cabo* *:cabove*
+</code></pre></div>
+<p>:[count]cabo[ve]    Go to the [count] error above the current line in the
+            current buffer.  If [count] is omitted, then 1 is
+            used.  If there are no errors, then an error message
+            is displayed.  Assumes that the entries in a quickfix
+            list are sorted by their buffer number and line
+            number. If there are multiple errors on the same line,
+            then only the first entry is used.  If [count] exceeds
+            the number of entries above the current line, then the
+            first error in the file is selected.</p>
+<div class="highlight"><pre><span></span><code>                        *:lab* *:labove*
+</code></pre></div>
+<p>:[count]lab[ove]    Same as ":cabove", except the location list for the
+            current window is used instead of the quickfix list.</p>
+<div class="highlight"><pre><span></span><code>                        *:cbel* *:cbelow*
+</code></pre></div>
+<p>:[count]cbel[ow]    Go to the [count] error below the current line in the
+            current buffer.  If [count] is omitted, then 1 is
+            used.  If there are no errors, then an error message
+            is displayed.  Assumes that the entries in a quickfix
+            list are sorted by their buffer number and line
+            number.  If there are multiple errors on the same
+            line, then only the first entry is used.  If [count]
+            exceeds the number of entries below the current line,
+            then the last error in the file is selected.</p>
+<div class="highlight"><pre><span></span><code>                        *:lbel* *:lbelow*
+</code></pre></div>
+<p>:[count]lbel[ow]    Same as ":cbelow", except the location list for the
+            current window is used instead of the quickfix list.</p>
+<div class="highlight"><pre><span></span><code>                        *:cbe* *:cbefore*
+</code></pre></div>
+<p>:[count]cbe[fore]   Go to the [count] error before the current cursor
+            position in the current buffer.  If [count] is
+            omitted, then 1 is used.  If there are no errors, then
+            an error message is displayed.  Assumes that the
+            entries in a quickfix list are sorted by their buffer,
+            line and column numbers.  If [count] exceeds the
+            number of entries before the current position, then
+            the first error in the file is selected.</p>
+<div class="highlight"><pre><span></span><code>                        *:lbe* *:lbefore*
+</code></pre></div>
+<p>:[count]lbe[fore]   Same as ":cbefore", except the location list for the
+            current window is used instead of the quickfix list.</p>
+<div class="highlight"><pre><span></span><code>                        *:caf* *:cafter*
+</code></pre></div>
+<p>:[count]caf[ter]    Go to the [count] error after the current cursor
+            position in the current buffer.  If [count] is
+            omitted, then 1 is used.  If there are no errors, then
+            an error message is displayed.  Assumes that the
+            entries in a quickfix list are sorted by their buffer,
+            line and column numbers.  If [count] exceeds the
+            number of entries after the current position, then
+            the last error in the file is selected.</p>
+<div class="highlight"><pre><span></span><code>                        *:laf* *:lafter*
+</code></pre></div>
+<p>:[count]laf[ter]    Same as ":cafter", except the location list for the
+            current window is used instead of the quickfix list.</p>
+<div class="highlight"><pre><span></span><code>                        *:cnf* *:cnfile*
+</code></pre></div>
+<p>:[count]cnf[ile][!] Display the first error in the [count] next file in
+            the list that includes a file name.  If there are no
+            file names at all or if there is no next file, go to
+            the [count] next error.  See |:cc| for [!] and
+            'switchbuf'.</p>
+<div class="highlight"><pre><span></span><code>                        *:lnf* *:lnfile*
+</code></pre></div>
+<p>:[count]lnf[ile][!] Same as ":cnfile", except the location list for the
+            current window is used instead of the quickfix list.</p>
+<p>:[count]cNf[ile][!]         <em>:cpf</em> <em>:cpfile</em> <em>:cNf</em> <em>:cNfile</em>
+:[count]cpf[ile][!] Display the last error in the [count] previous file in
+            the list that includes a file name.  If there are no
+            file names at all or if there is no next file, go to
+            the [count] previous error.  See |:cc| for [!] and
+            'switchbuf'.</p>
+<p>:[count]lNf[ile][!]         <em>:lpf</em> <em>:lpfile</em> <em>:lNf</em> <em>:lNfile</em>
+:[count]lpf[ile][!] Same as ":cNfile" and ":cpfile", except the location
+            list for the current window is used instead of the
+            quickfix list.</p>
+<div class="highlight"><pre><span></span><code>                        *:crewind* *:cr*
+</code></pre></div>
+<p>:cr[ewind][!] [nr]  Display error [nr].  If [nr] is omitted, the FIRST
+            error is displayed.  See |:cc|.</p>
+<div class="highlight"><pre><span></span><code>                        *:lrewind* *:lr*
+</code></pre></div>
+<p>:lr[ewind][!] [nr]  Same as ":crewind", except the location list for the
+            current window is used instead of the quickfix list.</p>
+<div class="highlight"><pre><span></span><code>                        *:cfirst* *:cfir*
+</code></pre></div>
+<p>:cfir[st][!] [nr]   Same as ":crewind".</p>
+<div class="highlight"><pre><span></span><code>                        *:lfirst* *:lfir*
+</code></pre></div>
+<p>:lfir[st][!] [nr]   Same as ":lrewind".</p>
+<div class="highlight"><pre><span></span><code>                        *:clast* *:cla*
+</code></pre></div>
+<p>:cla[st][!] [nr]    Display error [nr].  If [nr] is omitted, the LAST
+            error is displayed.  See |:cc|.</p>
+<div class="highlight"><pre><span></span><code>                        *:llast* *:lla*
+</code></pre></div>
+<p>:lla[st][!] [nr]    Same as ":clast", except the location list for the
+            current window is used instead of the quickfix list.</p>
+<div class="highlight"><pre><span></span><code>                        *:cq* *:cquit*
+</code></pre></div>
+<p>:cq[uit][!]
+:{N}cq[uit][!]
+:cq[uit][!] {N}     Quit Vim with error code {N}.  {N} defaults to one.
+            Useful when Vim is called from another program:
+            e.g., a compiler will not compile the same file again,
+            <code>git commit</code> will abort the committing process, <code>fc</code>
+            (built-in for shells like bash and zsh) will not
+            execute the command, etc.
+            {N} can also be zero, in which case Vim exits
+            normally.
+            WARNING: All changes in files are lost.  It works like
+            ":qall!" |:qall|, except that Nvim exits non-zero or
+            [count].</p>
+<div class="highlight"><pre><span></span><code>                        *:cf* *:cfi* *:cfile*
+</code></pre></div>
+<p>:cf[ile][!] [errorfile] Read the error file and jump to the first error.
+            This is done automatically when Vim is started with
+            the -q option.  You can use this command when you
+            keep Vim running while compiling.  If you give the
+            name of the errorfile, the 'errorfile' option will
+            be set to [errorfile].  See |:cc| for [!].
+            If the encoding of the error file differs from the
+            'encoding' option, you can use the 'makeencoding'
+            option to specify the encoding.</p>
+<div class="highlight"><pre><span></span><code>                        *:lf* *:lfi* *:lfile*
+</code></pre></div>
+<p>:lf[ile][!] [errorfile] Same as ":cfile", except the location list for the
+            current window is used instead of the quickfix list.
+            You can not use the -q command-line option to set
+            the location list.</p>
+<p>:cg[etfile] [errorfile]                 <em>:cg</em> <em>:cgetfile</em>
+            Read the error file.  Just like ":cfile" but don't
+            jump to the first error.
+            If the encoding of the error file differs from the
+            'encoding' option, you can use the 'makeencoding'
+            option to specify the encoding.</p>
+<p>:lg[etfile] [errorfile]                 <em>:lg</em> <em>:lge</em> <em>:lgetfile</em>
+            Same as ":cgetfile", except the location list for the
+            current window is used instead of the quickfix list.</p>
+<div class="highlight"><pre><span></span><code>                        *:caddf* *:caddfile*
+</code></pre></div>
+<p>:caddf[ile] [errorfile] Read the error file and add the errors from the
+            errorfile to the current quickfix list. If a quickfix
+            list is not present, then a new list is created.
+            If the encoding of the error file differs from the
+            'encoding' option, you can use the 'makeencoding'
+            option to specify the encoding.</p>
+<div class="highlight"><pre><span></span><code>                        *:laddf* *:laddfile*
+</code></pre></div>
+<p>:laddf[ile] [errorfile] Same as ":caddfile", except the location list for the
+            current window is used instead of the quickfix list.</p>
+<div class="highlight"><pre><span></span><code>                    *:cb* *:cbuffer* *E681*
+</code></pre></div>
+<p>:cb[uffer][!] [bufnr]   Read the error list from the current buffer.
+            When [bufnr] is given it must be the number of a
+            loaded buffer.  That buffer will then be used instead
+            of the current buffer.
+            A range can be specified for the lines to be used.
+            Otherwise all lines in the buffer are used.
+            See |:cc| for [!].</p>
+<div class="highlight"><pre><span></span><code>                    *:lb* *:lbuffer*
+</code></pre></div>
+<p>:lb[uffer][!] [bufnr]   Same as ":cbuffer", except the location list for the
+            current window is used instead of the quickfix list.</p>
+<div class="highlight"><pre><span></span><code>                    *:cgetb* *:cgetbuffer*
+</code></pre></div>
+<p>:cgetb[uffer] [bufnr]   Read the error list from the current buffer.  Just
+            like ":cbuffer" but don't jump to the first error.</p>
+<div class="highlight"><pre><span></span><code>                    *:lgetb* *:lgetbuffer*
+</code></pre></div>
+<p>:lgetb[uffer] [bufnr]   Same as ":cgetbuffer", except the location list for
+            the current window is used instead of the quickfix
+            list.</p>
+<div class="highlight"><pre><span></span><code>                    *:cad* *:cadd* *:caddbuffer*
+</code></pre></div>
+<p>:cad[dbuffer] [bufnr]   Read the error list from the current buffer and add
+            the errors to the current quickfix list.  If a
+            quickfix list is not present, then a new list is
+            created. Otherwise, same as ":cbuffer".</p>
+<div class="highlight"><pre><span></span><code>                        *:laddb* *:laddbuffer*
+</code></pre></div>
+<p>:laddb[uffer] [bufnr]   Same as ":caddbuffer", except the location list for
+            the current window is used instead of the quickfix
+            list.</p>
+<div class="highlight"><pre><span></span><code>                        *:cex* *:cexpr* *E777*
+</code></pre></div>
+<p>:cex[pr][!] {expr}  Create a quickfix list using the result of {expr} and
+            jump to the first error.
+            If {expr} is a String, then each newline terminated
+            line in the String is processed using the global value
+            of 'errorformat' and the result is added to the
+            quickfix list.
+            If {expr} is a List, then each String item in the list
+            is processed and added to the quickfix list.  Non
+            String items in the List are ignored.
+            See |:cc| for [!].
+            Examples:
+                :cexpr system('grep -n xyz *')
+                :cexpr getline(1, '$')</p>
+<div class="highlight"><pre><span></span><code>                        *:lex* *:lexpr*
+</code></pre></div>
+<p>:lex[pr][!] {expr}  Same as |:cexpr|, except the location list for the
+            current window is used instead of the quickfix list.</p>
+<div class="highlight"><pre><span></span><code>                        *:cgete* *:cgetexpr*
+</code></pre></div>
+<p>:cgete[xpr] {expr}  Create a quickfix list using the result of {expr}.
+            Just like |:cexpr|, but don't jump to the first error.</p>
+<div class="highlight"><pre><span></span><code>                        *:lgete* *:lgetexpr*
+</code></pre></div>
+<p>:lgete[xpr] {expr}  Same as |:cgetexpr|, except the location list for the
+            current window is used instead of the quickfix list.</p>
+<div class="highlight"><pre><span></span><code>                        *:cadde* *:caddexpr*
+</code></pre></div>
+<p>:cadde[xpr] {expr}  Evaluate {expr} and add the resulting lines to the
+            current quickfix list. If a quickfix list is not
+            present, then a new list is created. The current
+            cursor position will not be changed. See |:cexpr| for
+            more information.
+            Example:
+    :g/mypattern/caddexpr expand("%") .. ":" .. line(".") ..  ":" .. getline(".")</p>
+<div class="highlight"><pre><span></span><code>                    *:lad* *:addd* *:laddexpr*
+</code></pre></div>
+<p>:lad[dexpr] {expr}  Same as ":caddexpr", except the location list for the
+            current window is used instead of the quickfix list.</p>
+<div class="highlight"><pre><span></span><code>                        *:cl* *:clist*
+</code></pre></div>
+<p>:cl[ist] [from] [, [to]]
+            List all errors that are valid |quickfix-valid|.
+            If numbers [from] and/or [to] are given, the respective
+            range of errors is listed.  A negative number counts
+            from the last error backwards, -1 being the last error.
+            The |:filter| command can be used to display only the
+            quickfix entries matching a supplied pattern. The
+            pattern is matched against the filename, module name,
+            pattern and text of the entry.</p>
+<p>:cl[ist] +{count}   List the current and next {count} valid errors.  This
+            is similar to ":clist from from+count", where "from"
+            is the current error position.</p>
+<p>:cl[ist]! [from] [, [to]]
+            List all errors.</p>
+<p>:cl[ist]! +{count}  List the current and next {count} error lines.  This
+            is useful to see unrecognized lines after the current
+            one.  For example, if ":clist" shows:
+        8384 testje.java:252: error: cannot find symbol
+            Then using ":cl! +3" shows the reason:
+        8384 testje.java:252: error: cannot find symbol
+        8385:   ZexitCode = Fmainx();
+        8386:               ^
+        8387:   symbol:   method Fmainx()</p>
+<p>:lli[st] [from] [, [to]]                <em>:lli</em> <em>:llist</em>
+            Same as ":clist", except the location list for the
+            current window is used instead of the quickfix list.</p>
+<p>:lli[st]! [from] [, [to]]
+            List all the entries in the location list for the
+            current window.</p>
+<p>If you insert or delete lines, mostly the correct error location is still
+found because hidden marks are used.  Sometimes, when the mark has been
+deleted for some reason, the message "line changed" is shown to warn you that
+the error location may not be correct.  If you quit Vim and start again the
+marks are lost and the error locations may not be correct anymore.</p>
+<p>Two autocommands are available for running commands before and after a
+quickfix command (':make', ':grep' and so on) is executed. See
+|QuickFixCmdPre| and |QuickFixCmdPost| for details.</p>
+<div class="highlight"><pre><span></span><code>                    *QuickFixCmdPost-example*
+</code></pre></div>
+<p>When 'encoding' differs from the locale, the error messages may have a
+different encoding from what Vim is using.  To convert the messages you can
+use this code:
+    function QfMakeConv()
+       let qflist = getqflist()
+       for i in qflist
+          let i.text = iconv(i.text, "cp936", "utf-8")
+       endfor
+       call setqflist(qflist)
+    endfunction</p>
+<div class="highlight"><pre><span></span><code>au QuickfixCmdPost make call QfMakeConv()
+</code></pre></div>
+<p>Another option is using 'makeencoding'.</p>
+<div class="highlight"><pre><span></span><code>                        *quickfix-title*
+</code></pre></div>
+<p>Every quickfix and location list has a title. By default the title is set to
+the command that created the list. The |getqflist()| and |getloclist()|
+functions can be used to get the title of a quickfix and a location list
+respectively. The |setqflist()| and |setloclist()| functions can be used to
+modify the title of a quickfix and location list respectively. Examples:
+    call setqflist([], 'a', {'title' : 'Cmd output'})
+    echo getqflist({'title' : 1})
+    call setloclist(3, [], 'a', {'title' : 'Cmd output'})
+    echo getloclist(3, {'title' : 1})</p>
+<div class="highlight"><pre><span></span><code>                        *quickfix-index*
+</code></pre></div>
+<p>When you jump to a quickfix/location list entry using any of the quickfix
+commands (e.g. |:cc|, |:cnext|, |:cprev|, etc.), that entry becomes the
+currently selected entry. The index of the currently selected entry in a
+quickfix/location list can be obtained using the getqflist()/getloclist()
+functions. Examples:
+    echo getqflist({'idx' : 0}).idx
+    echo getqflist({'id' : qfid, 'idx' : 0}).idx
+    echo getloclist(2, {'idx' : 0}).idx</p>
+<p>For a new quickfix list, the first entry is selected and the index is 1.  Any
+entry in any quickfix/location list can be set as the currently selected entry
+using the setqflist() function. Examples:
+    call setqflist([], 'a', {'idx' : 12})
+    call setqflist([], 'a', {'id' : qfid, 'idx' : 7})
+    call setloclist(1, [], 'a', {'idx' : 7})</p>
+<div class="highlight"><pre><span></span><code>                        *quickfix-size*
+</code></pre></div>
+<p>You can get the number of entries (size) in a quickfix and a location list
+using the |getqflist()| and |getloclist()| functions respectively. Examples:
+    echo getqflist({'size' : 1})
+    echo getloclist(5, {'size' : 1})</p>
+<div class="highlight"><pre><span></span><code>                        *quickfix-context*
+</code></pre></div>
+<p>Any Vim type can be associated as a context with a quickfix or location list.
+The |setqflist()| and the |setloclist()| functions can be used to associate a
+context with a quickfix and a location list respectively. The |getqflist()|
+and the |getloclist()| functions can be used to retrieve the context of a
+quickfix and a location list respectively. This is useful for a Vim plugin
+dealing with multiple quickfix/location lists.
+Examples:</p>
+<div class="highlight"><pre><span></span><code>let somectx = {&#39;name&#39; : &#39;Vim&#39;, &#39;type&#39; : &#39;Editor&#39;}
+call setqflist([], &#39;a&#39;, {&#39;context&#39; : somectx})
+echo getqflist({&#39;context&#39; : 1})
+
+let newctx = [&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;]
+call setloclist(2, [], &#39;a&#39;, {&#39;id&#39; : qfid, &#39;context&#39; : newctx})
+echo getloclist(2, {&#39;id&#39; : qfid, &#39;context&#39; : 1})
+
+                        *quickfix-parse*
+</code></pre></div>
+<p>You can parse a list of lines using 'errorformat' without creating or
+modifying a quickfix list using the |getqflist()| function. Examples:
+    echo getqflist({'lines' : ["F1:10:Line10", "F2:20:Line20"]})
+    echo getqflist({'lines' : systemlist('grep -Hn quickfix *')})
+This returns a dictionary where the "items" key contains the list of quickfix
+entries parsed from lines. The following shows how to use a custom
+'errorformat' to parse the lines without modifying the 'errorformat' option:
+    echo getqflist({'efm' : '%f#%l#%m', 'lines' : ['F1#10#Line']})</p>
+<p>EXECUTE A COMMAND IN ALL THE BUFFERS IN QUICKFIX OR LOCATION LIST:
+                            <em>:cdo</em>
+:cdo[!] {cmd}       Execute {cmd} in each valid entry in the quickfix list.
+            It works like doing this:
+                :cfirst
+                :{cmd}
+                :cnext
+                :{cmd}
+                etc.
+            When the current file can't be |abandon|ed and the [!]
+            is not present, the command fails.
+            When going to the next entry fails execution stops.
+            The last buffer (or where an error occurred) becomes
+            the current buffer.
+            {cmd} can contain '|' to concatenate several commands.</p>
+<div class="highlight"><pre><span></span><code>        Only valid entries in the quickfix list are used.
+        A range can be used to select entries, e.g.:
+            :10,$cdo cmd
+        To skip entries 1 to 9.
+
+        Note: While this command is executing, the Syntax
+        autocommand event is disabled by adding it to
+        &#39;eventignore&#39;.  This considerably speeds up editing
+        each buffer.
+        Also see |:bufdo|, |:tabdo|, |:argdo|, |:windo|,
+        |:ldo|, |:cfdo| and |:lfdo|.
+
+                        *:cfdo*
+</code></pre></div>
+<p>:cfdo[!] {cmd}      Execute {cmd} in each file in the quickfix list.
+            It works like doing this:
+                :cfirst
+                :{cmd}
+                :cnfile
+                :{cmd}
+                etc.
+            Otherwise it works the same as <code>:cdo</code>.</p>
+<div class="highlight"><pre><span></span><code>                        *:ldo*
+</code></pre></div>
+<p>:ld[o][!] {cmd}     Execute {cmd} in each valid entry in the location list
+            for the current window.
+            It works like doing this:
+                :lfirst
+                :{cmd}
+                :lnext
+                :{cmd}
+                etc.
+            Only valid entries in the location list are used.
+            Otherwise it works the same as <code>:cdo</code>.</p>
+<div class="highlight"><pre><span></span><code>                        *:lfdo*
+</code></pre></div>
+<p>:lfdo[!] {cmd}      Execute {cmd} in each file in the location list for
+            the current window.
+            It works like doing this:
+                :lfirst
+                :{cmd}
+                :lnfile
+                :{cmd}
+                etc.
+            Otherwise it works the same as <code>:ldo</code>.</p>
+<p>FILTERING A QUICKFIX OR LOCATION LIST:
+                    <em>cfilter-plugin</em> <em>:Cfilter</em> <em>:Lfilter</em>
+If you have too many entries in a quickfix list, you can use the cfilter
+plugin to reduce the number of entries.  Load the plugin with:</p>
+<div class="highlight"><pre><span></span><code>packadd cfilter
+</code></pre></div>
+<p>Then you can use the following commands to filter a quickfix/location list:</p>
+<div class="highlight"><pre><span></span><code>:Cfilter[!] /{pat}/
+:Lfilter[!] /{pat}/
+</code></pre></div>
+<p>The |:Cfilter| command creates a new quickfix list from the entries matching
+{pat} in the current quickfix list. {pat} is a Vim |regular-expression|
+pattern. Both the file name and the text of the entries are matched against
+{pat}. If the optional ! is supplied, then the entries not matching {pat} are
+used. The pattern can be optionally enclosed using one of the following
+characters: ', ", /. If the pattern is empty, then the last used search
+pattern is used.</p>
+<p>The |:Lfilter| command does the same as |:Cfilter| but operates on the current
+location list.</p>
+<p>The current quickfix/location list is not modified by these commands, so you
+can go back to the unfiltered list using the |:colder|/|:lolder| command.</p>
+<p>=============================================================================
+2. The error window                 <em>quickfix-window</em></p>
+<div class="highlight"><pre><span></span><code>                    *:cope* *:copen* *w:quickfix_title*
+</code></pre></div>
+<p>:cope[n] [height]   Open a window to show the current list of errors.</p>
+<div class="highlight"><pre><span></span><code>        When [height] is given, the window becomes that high
+        (if there is room).  When [height] is omitted the
+        window is made ten lines high.
+
+        If there already is a quickfix window, it will be made
+        the current window.  It is not possible to open a
+        second quickfix window.  If [height] is given the
+        existing window will be resized to it.
+
+                        *quickfix-buffer*
+        The window will contain a special buffer, with
+        &#39;buftype&#39; equal to &quot;quickfix&quot;.  Don&#39;t change this!
+        The window will have the w:quickfix_title variable set
+        which will indicate the command that produced the
+        quickfix list. This can be used to compose a custom
+        status line if the value of &#39;statusline&#39; is adjusted
+        properly. Whenever this buffer is modified by a
+        quickfix command or function, the |b:changedtick|
+        variable is incremented.  You can get the number of
+        this buffer using the getqflist() and getloclist()
+        functions by passing the &quot;qfbufnr&quot; item. For a
+        location list, this buffer is wiped out when the
+        location list is removed.
+
+                        *:lop* *:lopen*
+</code></pre></div>
+<p>:lop[en] [height]   Open a window to show the location list for the
+            current window. Works only when the location list for
+            the current window is present.  You can have more than
+            one location window opened at a time.  Otherwise, it
+            acts the same as ":copen".</p>
+<div class="highlight"><pre><span></span><code>                        *:ccl* *:cclose*
+</code></pre></div>
+<p>:ccl[ose]       Close the quickfix window.</p>
+<div class="highlight"><pre><span></span><code>                        *:lcl* *:lclose*
+</code></pre></div>
+<p>:lcl[ose]       Close the window showing the location list for the
+            current window.</p>
+<div class="highlight"><pre><span></span><code>                        *:cw* *:cwindow*
+</code></pre></div>
+<p>:cw[indow] [height] Open the quickfix window when there are recognized
+            errors.  If the window is already open and there are
+            no recognized errors, close the window.</p>
+<div class="highlight"><pre><span></span><code>                        *:lw* *:lwindow*
+</code></pre></div>
+<p>:lw[indow] [height] Same as ":cwindow", except use the window showing the
+            location list for the current window.</p>
+<div class="highlight"><pre><span></span><code>                        *:cbo* *:cbottom*
+</code></pre></div>
+<p>:cbo[ttom]      Put the cursor in the last line of the quickfix window
+            and scroll to make it visible.  This is useful for
+            when errors are added by an asynchronous callback.
+            Only call it once in a while if there are many
+            updates to avoid a lot of redrawing.</p>
+<div class="highlight"><pre><span></span><code>                        *:lbo* *:lbottom*
+</code></pre></div>
+<p>:lbo[ttom]      Same as ":cbottom", except use the window showing the
+            location list for the current window.</p>
+<p>Normally the quickfix window is at the bottom of the screen.  If there are
+vertical splits, it's at the bottom of the rightmost column of windows.  To
+make it always occupy the full width:
+    :botright cwindow
+You can move the window around with |window-moving| commands.
+For example, to move it to the top: CTRL-W K
+The 'winfixheight' option will be set, which means that the window will mostly
+keep its height, ignoring 'winheight' and 'equalalways'.  You can change the
+height manually (e.g., by dragging the status line above it with the mouse).</p>
+<p>In the quickfix window, each line is one error.  The line number is equal to
+the error number.  The current entry is highlighted with the QuickFixLine
+highlighting.  You can change it to your liking, e.g.:
+    :hi QuickFixLine ctermbg=Yellow guibg=Yellow</p>
+<p>You can use ":.cc" to jump to the error under the cursor.
+Hitting the <Enter> key or double-clicking the mouse on a line has the same
+effect.  The file containing the error is opened in the window above the
+quickfix window.  If there already is a window for that file, it is used
+instead.  If the buffer in the used window has changed, and the error is in
+another file, jumping to the error will fail.  You will first have to make
+sure the window contains a buffer which can be abandoned.</p>
+<p>When you select a file from the quickfix window, the following steps are used
+to find a window to edit the file:</p>
+<ol>
+<li>If a window displaying the selected file is present in the current tabpage
+   (starting with the window before the quickfix window), then that window is
+   used.</li>
+<li>If the above step fails and if 'switchbuf' contains "usetab" and a window
+   displaying the selected file is present in any one of the tabpages
+   (starting with the first tabpage) then that window is used.</li>
+<li>If the above step fails then a window in the current tabpage displaying a
+   buffer with 'buftype' not set (starting with the window before the quickfix
+   window) is used.</li>
+<li>If the above step fails and if 'switchbuf' contains "uselast", then the
+   previously accessed window is used.</li>
+<li>If the above step fails then the window before the quickfix window is used.
+   If there is no previous window, then the window after the quickfix window
+   is used.</li>
+<li>If the above step fails, then a new horizontally split window above the
+   quickfix window is used.<div class="highlight"><pre><span></span><code>            *CTRL-W_&lt;Enter&gt;* *CTRL-W_&lt;CR&gt;*
+</code></pre></div>
+<p>You can use CTRL-W <Enter> to open a new window and jump to the error there.</p>
+</li>
+</ol>
+<p>When the quickfix window has been filled, two autocommand events are
+triggered.  First the 'filetype' option is set to "qf", which triggers the
+FileType event (also see |qf.vim|).  Then the BufReadPost event is triggered,
+using "quickfix" for the buffer name.  This can be used to perform some action
+on the listed errors.  Example:
+    au BufReadPost quickfix  setlocal modifiable
+        \ | silent exe 'g/^/s//\=line(".") .. " "/'
+        \ | setlocal nomodifiable
+This prepends the line number to each line.  Note the use of "\=" in the
+substitute string of the ":s" command, which is used to evaluate an
+expression.
+The BufWinEnter event is also triggered, again using "quickfix" for the buffer
+name.</p>
+<p>Note: When adding to an existing quickfix list the autocommand are not
+triggered.</p>
+<p>Note: Making changes in the quickfix window has no effect on the list of
+errors.  'modifiable' is off to avoid making changes.  If you delete or insert
+lines anyway, the relation between the text and the error number is messed up.
+If you really want to do this, you could write the contents of the quickfix
+window to a file and use ":cfile" to have it parsed and used as the new error
+list.</p>
+<div class="highlight"><pre><span></span><code>                    *location-list-window*
+</code></pre></div>
+<p>The location list window displays the entries in a location list.  When you
+open a location list window, it is created below the current window and
+displays the location list for the current window.  The location list window
+is similar to the quickfix window, except that you can have more than one
+location list window open at a time. When you use a location list command in
+this window, the displayed location list is used.</p>
+<p>When you select a file from the location list window, the following steps are
+used to find a window to edit the file:</p>
+<ol>
+<li>If a non-quickfix window associated with the location list is present in
+   the current tabpage, then that window is used.</li>
+<li>If the above step fails and if the file is already opened in another window
+   in the current tabpage, then that window is used.</li>
+<li>If the above step fails and 'switchbuf' contains "usetab" and if the file
+   is opened in a window in any one of the tabpages, then that window is used.</li>
+<li>If the above step fails then a window in the current tabpage showing a
+   buffer with 'buftype' not set is used.</li>
+<li>If the above step fails, then the file is edited in a new window.</li>
+</ol>
+<p>In all of the above cases, if the location list for the selected window is not
+yet set, then it is set to the location list displayed in the location list
+window.</p>
+<div class="highlight"><pre><span></span><code>                        *quickfix-window-ID*
+</code></pre></div>
+<p>You can use the |getqflist()| and |getloclist()| functions to obtain the
+window ID of the quickfix window and location list window respectively (if
+present).  Examples:
+    echo getqflist({'winid' : 1}).winid
+    echo getloclist(2, {'winid' : 1}).winid</p>
+<div class="highlight"><pre><span></span><code>                        *getqflist-examples*
+</code></pre></div>
+<p>The |getqflist()| and |getloclist()| functions can be used to get the various
+attributes of a quickfix and location list respectively. Some examples for
+using these functions are below:</p>
+<div class="highlight"><pre><span></span><code>&quot; get the title of the current quickfix list
+:echo getqflist({&#39;title&#39; : 0}).title
+
+&quot; get the identifier of the current quickfix list
+:let qfid = getqflist({&#39;id&#39; : 0}).id
+
+&quot; get the identifier of the fourth quickfix list in the stack
+:let qfid = getqflist({&#39;nr&#39; : 4, &#39;id&#39; : 0}).id
+
+&quot; check whether a quickfix list with a specific identifier exists
+:if getqflist({&#39;id&#39; : qfid}).id == qfid
+
+&quot; get the index of the current quickfix list in the stack
+:let qfnum = getqflist({&#39;nr&#39; : 0}).nr
+
+&quot; get the items of a quickfix list specified by an identifier
+:echo getqflist({&#39;id&#39; : qfid, &#39;items&#39; : 0}).items
+
+&quot; get the number of entries in a quickfix list specified by an id
+:echo getqflist({&#39;id&#39; : qfid, &#39;size&#39; : 0}).size
+
+&quot; get the context of the third quickfix list in the stack
+:echo getqflist({&#39;nr&#39; : 3, &#39;context&#39; : 0}).context
+
+&quot; get the number of quickfix lists in the stack
+:echo getqflist({&#39;nr&#39; : &#39;$&#39;}).nr
+
+&quot; get the number of times the current quickfix list is changed
+:echo getqflist({&#39;changedtick&#39; : 0}).changedtick
+
+&quot; get the current entry in a quickfix list specified by an identifier
+:echo getqflist({&#39;id&#39; : qfid, &#39;idx&#39; : 0}).idx
+
+&quot; get all the quickfix list attributes using an identifier
+:echo getqflist({&#39;id&#39; : qfid, &#39;all&#39; : 0})
+
+&quot; parse text from a List of lines and return a quickfix list
+:let myList = [&quot;a.java:10:L10&quot;, &quot;b.java:20:L20&quot;]
+:echo getqflist({&#39;lines&#39; : myList}).items
+
+&quot; parse text using a custom &#39;efm&#39; and return a quickfix list
+:echo getqflist({&#39;lines&#39; : [&#39;a.c#10#Line 10&#39;], &#39;efm&#39;:&#39;%f#%l#%m&#39;}).items
+
+&quot; get the quickfix list window id
+:echo getqflist({&#39;winid&#39; : 0}).winid
+
+&quot; get the quickfix list window buffer number
+:echo getqflist({&#39;qfbufnr&#39; : 0}).qfbufnr
+
+&quot; get the context of the current location list
+:echo getloclist(0, {&#39;context&#39; : 0}).context
+
+&quot; get the location list window id of the third window
+:echo getloclist(3, {&#39;winid&#39; : 0}).winid
+
+&quot; get the location list window buffer number of the third window
+:echo getloclist(3, {&#39;qfbufnr&#39; : 0}).qfbufnr
+
+&quot; get the file window id of a location list window (winnr: 4)
+:echo getloclist(4, {&#39;filewinid&#39; : 0}).filewinid
+
+                        *setqflist-examples*
+</code></pre></div>
+<p>The |setqflist()| and |setloclist()| functions can be used to set the various
+attributes of a quickfix and location list respectively. Some examples for
+using these functions are below:</p>
+<div class="highlight"><pre><span></span><code>&quot; create an empty quickfix list with a title and a context
+:let t = &#39;Search results&#39;
+:let c = {&#39;cmd&#39; : &#39;grep&#39;}
+:call setqflist([], &#39; &#39;, {&#39;title&#39; : t, &#39;context&#39; : c})
+
+&quot; set the title of the current quickfix list
+:call setqflist([], &#39;a&#39;, {&#39;title&#39; : &#39;Mytitle&#39;})
+
+&quot; change the current entry in the list specified by an identifier
+:call setqflist([], &#39;a&#39;, {&#39;id&#39; : qfid, &#39;idx&#39; : 10})
+
+&quot; set the context of a quickfix list specified by an identifier
+:call setqflist([], &#39;a&#39;, {&#39;id&#39; : qfid, &#39;context&#39; : {&#39;val&#39; : 100}})
+
+&quot; create a new quickfix list from a command output
+:call setqflist([], &#39; &#39;, {&#39;lines&#39; : systemlist(&#39;grep -Hn main *.c&#39;)})
+
+&quot; parse text using a custom efm and add to a particular quickfix list
+:call setqflist([], &#39;a&#39;, {&#39;id&#39; : qfid,
+    \ &#39;lines&#39; : [&quot;a.c#10#L10&quot;, &quot;b.c#20#L20&quot;], &#39;efm&#39;:&#39;%f#%l#%m&#39;})
+
+&quot; add items to the quickfix list specified by an identifier
+:let newItems = [{&#39;filename&#39; : &#39;a.txt&#39;, &#39;lnum&#39; : 10, &#39;text&#39; : &quot;Apple&quot;},
+        \ {&#39;filename&#39; : &#39;b.txt&#39;, &#39;lnum&#39; : 20, &#39;text&#39; : &quot;Orange&quot;}]
+:call setqflist([], &#39;a&#39;, {&#39;id&#39; : qfid, &#39;items&#39; : newItems})
+
+&quot; empty a quickfix list specified by an identifier
+:call setqflist([], &#39;r&#39;, {&#39;id&#39; : qfid, &#39;items&#39; : []})
+
+&quot; free all the quickfix lists in the stack
+:call setqflist([], &#39;f&#39;)
+
+&quot; set the title of the fourth quickfix list
+:call setqflist([], &#39;a&#39;, {&#39;nr&#39; : 4, &#39;title&#39; : &#39;SomeTitle&#39;})
+
+&quot; create a new quickfix list at the end of the stack
+:call setqflist([], &#39; &#39;, {&#39;nr&#39; : &#39;$&#39;,
+        \ &#39;lines&#39; : systemlist(&#39;grep -Hn class *.java&#39;)})
+
+&quot; create a new location list from a command output
+:call setloclist(0, [], &#39; &#39;, {&#39;lines&#39; : systemlist(&#39;grep -Hn main *.c&#39;)})
+
+&quot; replace the location list entries for the third window
+:call setloclist(3, [], &#39;r&#39;, {&#39;items&#39; : newItems})
+</code></pre></div>
+<p>=============================================================================
+3. Using more than one list of errors           <em>quickfix-error-lists</em></p>
+<p>So far has been assumed that there is only one list of errors.  Actually the
+ten last used lists are remembered.  When starting a new list, the previous
+ones are automatically kept.  Two commands can be used to access older error
+lists.  They set one of the existing error lists as the current one.</p>
+<div class="highlight"><pre><span></span><code>                    *:colder* *:col* *E380*
+</code></pre></div>
+<p>:col[der] [count]   Go to older error list.  When [count] is given, do
+            this [count] times.  When already at the oldest error
+            list, an error message is given.</p>
+<div class="highlight"><pre><span></span><code>                    *:lolder* *:lol*
+</code></pre></div>
+<p>:lol[der] [count]   Same as <code>:colder</code>, except use the location list for
+            the current window instead of the quickfix list.</p>
+<div class="highlight"><pre><span></span><code>                    *:cnewer* *:cnew* *E381*
+</code></pre></div>
+<p>:cnew[er] [count]   Go to newer error list.  When [count] is given, do
+            this [count] times.  When already at the newest error
+            list, an error message is given.</p>
+<div class="highlight"><pre><span></span><code>                    *:lnewer* *:lnew*
+</code></pre></div>
+<p>:lnew[er] [count]   Same as <code>:cnewer</code>, except use the location list for
+            the current window instead of the quickfix list.</p>
+<div class="highlight"><pre><span></span><code>                    *:chistory* *:chi*
+</code></pre></div>
+<p>:[count]chi[story]  Show the list of error lists.  The current list is
+            marked with "&gt;".  The output looks like:
+              error list 1 of 3; 43 errors   :make
+            &gt; error list 2 of 3; 0 errors    :helpgrep tag
+              error list 3 of 3; 15 errors   :grep ex_help *.c</p>
+<div class="highlight"><pre><span></span><code>        When [count] is given, then the count&#39;th quickfix
+        list is made the current list. Example:
+            &quot; Make the 4th quickfix list current
+            :4chistory
+
+                    *:lhistory* *:lhi*
+</code></pre></div>
+<p>:[count]lhi[story]  Show the list of location lists, otherwise like
+            <code>:chistory</code>.</p>
+<p>When adding a new error list, it becomes the current list.</p>
+<p>When ":colder" has been used and ":make" or ":grep" is used to add a new error
+list, one newer list is overwritten.  This is especially useful if you are
+browsing with ":grep" |grep|.  If you want to keep the more recent error
+lists, use ":cnewer 99" first.</p>
+<p>To get the number of lists in the quickfix and location list stack, you can
+use the |getqflist()| and |getloclist()| functions respectively with the list
+number set to the special value '$'. Examples:
+    echo getqflist({'nr' : '$'}).nr
+    echo getloclist(3, {'nr' : '$'}).nr
+To get the number of the current list in the stack:
+    echo getqflist({'nr' : 0}).nr</p>
+<p>=============================================================================
+4. Using :make                      <em>:make_makeprg</em></p>
+<div class="highlight"><pre><span></span><code>                        *:mak* *:make*
+</code></pre></div>
+<p>:mak[e][!] [arguments]  1. All relevant |QuickFixCmdPre| autocommands are
+               executed.
+            2. If the 'autowrite' option is on, write any changed
+               buffers
+            3. An errorfile name is made from 'makeef'.  If
+               'makeef' doesn't contain "##", and a file with this
+               name already exists, it is deleted.
+            4. The program given with the 'makeprg' option is
+               started (default "make") with the optional
+               [arguments] and the output is saved in the
+               errorfile (for Unix it is also echoed on the
+               screen).
+            5. The errorfile is read using 'errorformat'.
+            6. All relevant |QuickFixCmdPost| autocommands are
+               executed.  See example below.
+            7. If [!] is not given the first error is jumped to.
+            8. The errorfile is deleted.
+            9. You can now move through the errors with commands
+               like |:cnext| and |:cprevious|, see above.
+            This command does not accept a comment, any "
+            characters are considered part of the arguments.
+            If the encoding of the program output differs from the
+            'encoding' option, you can use the 'makeencoding'
+            option to specify the encoding.</p>
+<div class="highlight"><pre><span></span><code>                        *:lmak* *:lmake*
+</code></pre></div>
+<p>:lmak[e][!] [arguments]
+            Same as ":make", except the location list for the
+            current window is used instead of the quickfix list.</p>
+<p>The ":make" command executes the command given with the 'makeprg' option.
+This is done by passing the command to the shell given with the 'shell'
+option.  This works almost like typing</p>
+<div class="highlight"><pre><span></span><code>&quot;:!{makeprg} [arguments] {shellpipe} {errorfile}&quot;.
+</code></pre></div>
+<p>{makeprg} is the string given with the 'makeprg' option.  Any command can be
+used, not just "make".  Characters '%' and '#' are expanded as usual on a
+command-line.  You can use "%&lt;" to insert the current file name without
+extension, or "#&lt;" to insert the alternate file name without extension, for
+example:
+   :set makeprg=make\ #&lt;.o</p>
+<p>[arguments] is anything that is typed after ":make".
+{shellpipe} is the 'shellpipe' option.
+{errorfile} is the 'makeef' option, with ## replaced to make it unique.</p>
+<p>The placeholder "$<em>" can be used for the argument list in {makeprg} if the
+command needs some additional characters after its arguments.  The $</em> is
+replaced then by all arguments.  Example:
+   :set makeprg=latex\ \\nonstopmode\ \\input\{$<em>}
+or simpler
+   :let &amp;mp = 'latex \nonstopmode \input{$</em>}'
+"$<em>" can be given multiple times, for example:
+   :set makeprg=gcc\ -o\ $</em>\ $*</p>
+<p>The 'shellpipe' option defaults to "2&gt;&amp;1| tee" for Win32.
+This means that the output of the compiler is saved in a file and not shown on
+the screen directly.  For Unix "| tee" is used.  The compiler output is shown
+on the screen and saved in a file the same time.  Depending on the shell used
+"|&amp; tee" or "2&gt;&amp;1| tee" is the default, so stderr output will be included.</p>
+<p>If 'shellpipe' is empty, the {errorfile} part will be omitted.  This is useful
+for compilers that write to an errorfile themselves.</p>
+<p>Using QuickFixCmdPost to fix the encoding</p>
+<p>It may be that 'encoding' is set to an encoding that differs from the messages
+your build program produces.  This example shows how to fix this after Vim has
+read the error messages:</p>
+<div class="highlight"><pre><span></span><code>function QfMakeConv()
+   let qflist = getqflist()
+   for i in qflist
+      let i.text = iconv(i.text, &quot;cp936&quot;, &quot;utf-8&quot;)
+   endfor
+   call setqflist(qflist)
+endfunction
+
+au QuickfixCmdPost make call QfMakeConv()
+</code></pre></div>
+<p>(Example by Faque Cheng)
+Another option is using 'makeencoding'.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 9, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../standard-path/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Standard Path">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Standard Path
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../changelist/" class="md-footer__link md-footer__link--next" aria-label="Next: Changelist">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Changelist
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy 2023 Practicali <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://practical.li/" target="_blank" rel="noopener" title="practical.li" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/jr0cket/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://clojurians.slack.com/messages/practicalli" target="_blank" rel="noopener" title="clojurians.slack.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1s21.16-47.06 47.06-47.06h47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06S448 171 448 196.9s-21.16 47.06-47.06 47.06h-47.06zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06S309 480 283.1 480s-47.06-21.16-47.06-47.06v-47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06s21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/practical_li" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/practicalli" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://hub.docker.com/u/practicalli" target="_blank" rel="noopener" title="hub.docker.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1zm0-204.3h-66.1v60.7h66.1zm78.2 144.8H362v59.4h66.1zm-156.3-72.1h-66.1v60.1h66.1zm78.1 0h-66.1v60.1h66.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1zm78.1 0h-66.1v59.4h66.1zm-78.1-72.1h-66.1v60.1h66.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
