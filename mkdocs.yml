@@ -11,7 +11,7 @@ edit_uri: https://github.com/practicalli/neovim/edit/main/docs/
 
 # Deployment
 # remote_name: practicalli
-remote_name: git@github.com:practicalli/neovim.git
+# remote_name: git@github.com:practicalli/neovim.git
 remote_branch: gh-pages
 
 # Theme and styling
