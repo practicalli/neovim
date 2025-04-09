@@ -1,0 +1,221 @@
+---
+# Practicalli Neovim - Staging environment
+site_name: Practicalli Neovim (Staging)
+site_url: https://practical.li/neovim-staging
+site_description: Practical guide to Clojure development with Neovim
+site_author: Practicalli
+site_org: https://practical.li/
+copyright: Copyright &copy 2025 Practicali <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+repo_url: https://github.com/practicalli/neovim-staging/
+edit_uri: https://github.com/practicalli/neovim-staging/edit/main/docs/
+
+# Deployment
+# remote_name: staging
+remote_name: git@github.com:practicalli/neovim-staging.git
+remote_branch: gh-pages
+
+# Theme and styling
+theme:
+  name: material
+  logo: assets/images/practicalli-logo.png
+  favicon: assets/favicon.svg
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - navigation.footer
+    - navigation.indexes # Nav sections can have files
+    - navigation.instant # Avoid page reloading for internal links
+    - navigation.top
+    - navigation.tracking # Update URL with sub-heading anchor names
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  # Override theme
+  custom_dir: overrides
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+## Additional styling
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html # Grids
+  - footnotes # footnotes and abbreviations
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      url_download: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format ""
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.keys # keyboard keys
+  - pymdownx.magiclink
+  - def_list # lists
+  - pymdownx.tasklist:
+      custom_checkbox: true # checkboxes
+  - toc:
+      permalink: λ︎
+
+## Plugins
+plugins:
+  # Explicitly add search plugin when defining plugins in this configuration file
+  - search
+  - callouts
+  - glightbox # Image aligning
+  - git-revision-date-localized:
+      # Update and Creation date of each page
+      # enable_creation_date: true
+      fallback_to_build_date: true
+
+  # Generate Social Cards via CI only
+  # in assets/images/social
+  - social:
+      cards: !ENV [ MKDOCS_SOCIAL_CARDS_GENERATE, true ]
+
+  # Redirect pages when moved or changed
+  # - redirects:
+  #     redirect_maps:
+  #       changelog/insiders.md: insiders/changelog.md
+  #       reference/meta-tags.md: reference/index.md
+
+# Footer / Social Media
+extra:
+  analytics:
+    provider: google
+    property: G-P29SSN0GV6
+  social:
+    - icon: material/web
+      link: https://practical.li/
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/jr0cket/
+    - icon: fontawesome/brands/slack
+      link: https://clojurians.slack.com/messages/practicalli
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/practical_li
+    - icon: fontawesome/brands/github
+      link: https://github.com/practicalli
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/practicalli
+
+# Navigation
+nav:
+  - Introduction:
+      - Overview: index.md
+      - REPL Workflow: introduction/repl-workflow.md
+      - Features: introduction/features.md
+      - Contributing: https://practical.li/contributing
+  - Install:
+      - Overview: install/index.md
+      - Terminal: install/terminal-tools.md
+      - Neovim: install/neovim.md
+      - Multiple Configs: install/multiple-configurations.md
+      - Neovide: install/neovide.md
+  - Neovim Basics:
+      - neovim-basics/index.md
+      - File Buffer Window Tab: neovim-basics/file-buffer-window-tab.md
+      - Notifications: neovim-basics/notifications.md
+      - Multi-modal Editing: neovim-basics/multi-modal-editing.md
+      - Navigation: neovim-basics/navigation.md
+      - Registers: neovim-basics/registers.md
+      - Search Replace:
+          - neovim-basics/search-replace/index.md
+          - Substitute: neovim-basics/search-replace/substitute.md
+          - Spectre: neovim-basics/search-replace/spectre.md
+      - Spell Check: neovim-basics/spell-check.md
+      - Comments: neovim-basics/comments.md
+      - Snippets: neovim-basics/snippets.md
+      - Plugin Manager: neovim-basics/plugin-manager.md
+      - Multiple Cursors: neovim-basics/multiple-cursors.md
+      - Zen Mode: neovim-basics/zen-mode.md
+      - Terminal: neovim-basics/terminal.md
+  - Clojure REPL Workflow:
+      - repl-driven-development/index.md
+      - Conjure: repl-driven-development/conjure.md
+      - Documentation: repl-driven-development/documentation.md
+      - Structural Editing: repl-driven-development/structural-editing.md
+      - Refactor Tools: repl-driven-development/refactor-tools.md
+      - Testing: repl-driven-development/testing.md
+  - Source Control:
+      - source-control/index.md
+      - source-control/diff.md
+      - Lazygit: source-control/lazygit.md
+      - Neogit: source-control/neogit.md
+      - Octo: source-control/octo.md
+  - API tools:
+      - api-tools/index.md
+  - Ultra-Mobile Neovim:
+      - termux/index.md
+      - F-Droid: termux/fdroid-install.md
+      - Termux Setup: termux/setup.md
+      - Using Termux: termux/using-termux.md
+      - Git: termux/git.md
+      - Zsh: termux/custom-shell.md
+      - Clojure: termux/clojure-development.md
+      - Neovim: termux/neovim.md
+  - Reference:
+      - Astro config Design:
+          - reference/configuration/index.md
+          - AstroCommunity: reference/configuration/astrocommunity.md
+      - Modal Editing:
+          - reference/modal-editing/index.md
+          - reference/modal-editing/case.md
+          - reference/modal-editing/g-menu.md
+          - reference/modal-editing/key-binding-reference.md
+          - reference/modal-editing/moving-around.md
+          - reference/modal-editing/motions.md
+          - reference/modal-editing/folding.md
+          - reference/modal-editing/narrowing.md
+          - reference/modal-editing/speaking-vim.md
+          - reference/modal-editing/neovim-quick-reference.md
+          - reference/modal-editing/tips-for-clojure.md
+          - reference/modal-editing/visual-select.md
+          - reference/modal-editing/z-menu.md
+      - reference/aligning-text.md
+      - Neovim:
+          - reference/neovim/index.md
+          - Standard Path: reference/neovim/standard-path.md
+          - Quickfix: reference/neovim/quickfix.md
+          - Changelist: reference/neovim/changelist.md
+          - Jumplist: reference/neovim/jumplist.md
+          - Language Providers: reference/neovim/language-providers.md
+      - Lua Language:
+          - reference/lua-language/index.md
+      - Fennel: reference/fennel.md
+      - Practicalli Config Design:
+          - reference/configuration/practicalli/index.md
+          - Config Design: reference/configuration/practicalli/config-design.md
+          - Packer: reference/configuration/practicalli/packer.md
+          - Packages:
+              - reference/configuration/practicalli/packages/index.md
+              - Status Line: reference/configuration/practicalli/packages/lualine.md
+              - Treesitter: reference/configuration/practicalli/packages/nvim-treesitter.md
+      - Writing Tips: https://practical.li/writing-tips/

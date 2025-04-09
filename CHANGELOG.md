@@ -29,6 +29,7 @@
 - basics: navigate git hunks with gitsigns key mappings
 - clojure: add parinfer paragraph to structural editing page
 - basics: refactor tools page
+- dev: book configuration & make task for deploying to staging
 
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)

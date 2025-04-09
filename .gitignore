@@ -13,6 +13,7 @@
 !includes/
 !overrides/
 !mkdocs.yml
+!mkdocs-staging.yml
 
 # ------------------------
 # Project automation
@@ -22,4 +23,3 @@
 # Version Control
 !.gitignore
 !.github/
-
