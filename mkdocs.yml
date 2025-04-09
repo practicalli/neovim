@@ -5,12 +5,13 @@ site_url: https://practical.li/neovim
 site_description: Practical guide to Clojure development with Neovim
 site_author: Practicalli
 site_org: https://practical.li/
-copyright: Copyright &copy 2023 Practicali <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+copyright: Copyright &copy 2025 Practicali <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 repo_url: https://github.com/practicalli/neovim/
 edit_uri: https://github.com/practicalli/neovim/edit/main/docs/
 
 # Deployment
-# remote_name: practicalli/neovim
+# remote_name: practicalli
+remote_name: git@github.com:practicalli/neovim.git
 remote_branch: gh-pages
 
 # Theme and styling
