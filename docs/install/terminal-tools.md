@@ -1,27 +1,26 @@
 # Terminal Tools and Fonts
 
-Neovim is a terminal based application so use of a quality terminal is recommended, e.g. Kitty Terminal (or iTerm2 if only on MacOSX)
+Neovim is a terminal based application and [Kitty Terminal](#kitty-terminal) is highly recommended.
 
-External Command line tools support search and other system information based features presented in AstroNvim.
+File system search and other system information based features presented in AstroNvim relies on [external command line tools](#command-line-tools).
 
-Nodejs supports Language Server protocol servers, format and lint tools installed by Mason.
+Language Server Protocol servers, format and lint tools managed by Mason often require [Nodejs](#nodejs) to install & run.
 
 
-## Kitty Terminal with Nerd Fonts
+## Kitty Terminal
 
-Neovim runs in a terminal, so using Kitty (or iTerm2 - MacOSX only) are recommended.  Kitty provides Nerd fonts for additional symbols on top of the terminal font, providing a richer experience.
+Kitty Terminal provides multiple shell tabs, Nerd fonts, web icons and graphics support too, so is an excellent choice for running Neovim.  Kitty is available on all good operating systems.
 
-[:globe_with_meridians: Kitty Terminal - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/command-line/kitty-terminal/) provides examples of using Nerd Fonts or Nerd Font symbols with the Kitty terminal.
-
-[Nerd Fonts](https://www.nerdfonts.com/)
+[:fontawesome-solid-book-open: Kitty Terminal - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/command-line/kitty-terminal/){target=_blank .md-button}
 
 
 ## Command line tools
 
-- ripgrep text search tool
-- fzf fuzzy finder
-- gdu
-- btm from [:fontawesome-brands-github: GitHub repository releases](https://github.com/ClementTsang/bottom/releases/)
+- [:fontawesome-brands-github: ripgrep](https://github.com/BurntSushi/ripgrep) fast text search tool
+- [:fontawesome-brands-github: fzf](https://github.com/junegunn/fzf) fuzzy finder
+- [:fontawesome-brands-github: gdu](https://github.com/dundee/gdu) disk usage analyzer
+- [:fontawesome-brands-github: bottom (btm)](https://github.com/ClementTsang/bottom) graphical process/system monitor for the terminal
+
 
 === "Debian packages"
     Install fzf, gdu and node.js via debian package manager
@@ -35,14 +34,11 @@ Neovim runs in a terminal, so using Kitty (or iTerm2 - MacOSX only) are recommen
     brew install ripgrep fzf gdu nodejs
     ```
 
-Install btm from its [:fontawesome-brands-github: GitHub repository release page](https://github.com/ClementTsang/bottom/releases/)
+Install btm from its [:fontawesome-brands-github: GitHub repository release page](https://github.com/ClementTsang/bottom/releases/){target=_blank}
 
 
-
-## nodejs for LSP, format & lint tools
+## Nodejs
 
 AstroNvim uses Mason to install LSP servers, format and lint tools.  Many LSP servers require node.js to install and function.
 
 [Node.js install - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/programming-languages/javascript/nodejs/){target=_blank .md-button}
-
-> Node.js Debian packages pull in a large amount of packages and Practicalli recommends installing from the GitHub Release instead
