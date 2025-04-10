@@ -30,6 +30,7 @@
 - clojure: add parinfer paragraph to structural editing page
 - basics: refactor tools page
 - dev: book configuration & make task for deploying to staging
+- dev: add scheduled stale issue & pull request check
 
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
