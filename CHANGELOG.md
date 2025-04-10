@@ -59,6 +59,7 @@
 - dev: add common practicalli tasks in Makefile
 - source-control: update neogit key mapping to spc g n t
 - mkdocs: rounded corners on buttons custom styles
+- dev: update cache config for publish site workflow
 
 
 ## 2023-07-11

@@ -45,11 +45,13 @@ jobs:
         with:
           python-version: 3.x
 
-      - name: Cache
-        uses: actions/cache@v4
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+      - uses: actions/cache@v4
         with:
-          key: ${{ github.ref }}
+          key: mkdocs-material-${{ env.cache_id }}
           path: .cache
+          restore-keys: |
+            mkdocs-material-
 
       - run: pip install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects pillow cairosvg
       - run: mkdocs gh-deploy --force
