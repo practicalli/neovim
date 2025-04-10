@@ -58,6 +58,7 @@
 - basics: rewrite search & replace page
 - dev: add common practicalli tasks in Makefile
 - source-control: update neogit key mapping to spc g n t
+- mkdocs: rounded corners on buttons custom styles
 
 
 ## 2023-07-11
