@@ -13,6 +13,7 @@ The fundamental controls of Neovim which apply across all editing tasks.
 ## Editing Tools
 
 [:fontawesome-solid-book-open: Multiple Cursors](multiple-cursors.md){.md-button}
+[:fontawesome-solid-book-open: Search & Replace](search-replace.md){.md-button}
 
 
 ## Writing Tools

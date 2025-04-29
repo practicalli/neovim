@@ -102,9 +102,9 @@ plugins:
       cards: !ENV [ MKDOCS_SOCIAL_CARDS_GENERATE, true ]
 
   # Redirect pages when moved or changed
-  # - redirects:
-  #     redirect_maps:
-  #       changelog/insiders.md: insiders/changelog.md
+  - redirects:
+      redirect_maps:
+        neovim-basics/index.md: using-neovim/index.md
   #       reference/meta-tags.md: reference/index.md
 
 # Footer / Social Media
@@ -139,24 +139,24 @@ nav:
       - Neovim: install/neovim.md
       - Multiple Configs: install/multiple-configurations.md
       - Neovide: install/neovide.md
-  - Neovim Basics:
-      - neovim-basics/index.md
-      - File Buffer Window Tab: neovim-basics/file-buffer-window-tab.md
-      - Notifications: neovim-basics/notifications.md
-      - Multi-modal Editing: neovim-basics/multi-modal-editing.md
-      - Navigation: neovim-basics/navigation.md
-      - Registers: neovim-basics/registers.md
+  - Using Neovim:
+      - using-neovim/index.md
+      - File Buffer Window Tab: using-neovim/file-buffer-window-tab.md
+      - Notifications: using-neovim/notifications.md
+      - Multi-modal Editing: using-neovim/multi-modal-editing.md
+      - Navigation: using-neovim/navigation.md
+      - Registers: using-neovim/registers.md
       - Search Replace:
-          - neovim-basics/search-replace/index.md
-          - Substitute: neovim-basics/search-replace/substitute.md
-          - Spectre: neovim-basics/search-replace/spectre.md
+          - using-neovim/search-replace/index.md
+          - Substitute: using-neovim/search-replace/substitute.md
+          - Spectre: using-neovim/search-replace/spectre.md
       - Spell Check: neovim-basics/spell-check.md
-      - Comments: neovim-basics/comments.md
-      - Snippets: neovim-basics/snippets.md
-      - Plugin Manager: neovim-basics/plugin-manager.md
-      - Multiple Cursors: neovim-basics/multiple-cursors.md
-      - Zen Mode: neovim-basics/zen-mode.md
-      - Terminal: neovim-basics/terminal.md
+      - Comments: using-neovim/comments.md
+      - Snippets: using-neovim/snippets.md
+      - Plugin Manager: using-neovim/plugin-manager.md
+      - Multiple Cursors: using-neovim/multiple-cursors.md
+      - Zen Mode: using-neovim/zen-mode.md
+      - Terminal: using-neovim/terminal.md
   - Clojure REPL Workflow:
       - repl-driven-development/index.md
       - Conjure: repl-driven-development/conjure.md
