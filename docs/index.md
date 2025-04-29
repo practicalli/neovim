@@ -2,14 +2,16 @@
 
 Practicalli Neovim provides an install & user guide for a simple and powerful [:fontawesome-solid-book-open: REPL driven workflow](introduction/repl-workflow.md) for Clojure.
 
-[:fontawesome-solid-book-open: Practicalli Astro configuration](install/neovim/#practicalli-astro-config) for Neovim provides Conjure REPL client and Clojure editing support (parinfer & paredit).
+[:fontawesome-solid-book-open: Practicalli Astro5 configuration](install/neovim/#practicalli-nvim-astro) for Neovim provides Conjure REPL client and structural editing support (parinfer & paredit).
 
 ![Clojure REPL Driven Development workflow](https://github.com/practicalli/graphic-design/raw/live/clojure/clojure-repl-workflow-concept.png?raw=true)
 
 
 ## Quick Start
 
-Install [terminal & tools](install/terminal-tools.md), [:fontawesome-solid-book-open: Clojure](https://practical.li/clojure/){target=_blank} (Practicalli Clojure), [:fontawesome-solid-book-open: Neovim 0.10](install/neovim.md) and [:fontawesome-solid-book-open: Practicalli Astro configuration](install/neovim/#practicalli-astro-config)
+[:fontawesome-solid-book-open: Install](install/index.md){.md-button}
+[:fontawesome-solid-book-open: Using Neovim](using-neovim/index.md){.md-button}
+[:fontawesome-solid-book-open: Clojure REPL workflow](clojure-repl-workflow/index.md){.md-button}
 
 
 ## Neovim overview
@@ -24,15 +26,6 @@ Neovim has [:globe_with_meridians: a diverse set of plugins](https://neovimcraft
 
 ![Neovim with AstroNvim configuration for Clojure developers](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/neovim-astronvim-clojure-example-light.png?raw=true#only-light){loading=lazy}
 ![Neovim with AstroNvim configuration for Clojure developers](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim/neovim-astronvim-clojure-example-dark.png?raw=true#only-dark){loading=lazy}
-
-
-## External reverences
-
-[:globe_with_meridians: Getting started with Neovim and Conjure](https://oli.me.uk/getting-started-with-clojure-neovim-and-conjure-in-minutes/){target=_blank .md-button}
-
-[:globe_with_meridians: Neovim user guide](https://neovim.io/doc/user/){target=_blank .md-button}
-
-[:fontawesome-brands-github: Conjure install guide](https://github.com/Olical/conjure/wiki/Quick-start:-Clojure){target=_blank .md-button}
 
 
 ## Navigate the book
