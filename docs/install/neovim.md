@@ -2,7 +2,7 @@
 
 ![Neovim Logo](https://raw.githubusercontent.com/practicalli/graphic-design/be612ddb29f6b9eef1641e91de6c747b70d7fef8/logos/neovim-logos/neovim-mark.svg){align=right loading=lazy style="height:150px;width:150px"}
 
-!!! INFO "Neovim 0.10.x is the latest stable version"
+!!! INFO "Neovim 0.11.x is the latest stable version"
 
 
 ## Suppoting Tools
@@ -22,7 +22,7 @@ Install the following tools to support Neovim and AstroNvim
     The C compiler is used to compile langauge support for treesiter.
 
 
-??? INFO "AstroNvim requires node.js"
+??? INFO "Practicalli Astro 5 requires node.js"
     AstroNvim uses Mason to install LSP servers, format and lint tools. Many of the LSP servers require node.
 
     [Node.js install - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/programming-languages/javascript/nodejs/){target=_blank}
@@ -37,10 +37,9 @@ Install the following tools to support Neovim and AstroNvim
 
     ??? INFO "Wayland requires wl-clipboard"
         Install the `wl-clipboard` package to use the Wayland desktop clipboard with Neovim
-        !!! NOTE ""
-            ```shell
-            apt install wl-clipboard
-            ```
+        ```shell
+        apt install wl-clipboard
+        ```
 
 === "MacOSX Homebrew"
 
@@ -185,42 +184,47 @@ Install from the [:fontawesome-brands-github: Neovim GitHub releases](https://gi
     cpack -G DEB
     ```
 
-## Practicalli Astro Config
+## Practicalli Astro 5 Config
 
 ![Practicalli Logo](https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo.png?raw=true#only-light){align=right loading=lazy style="height:72px"}
 ![Practicalli Logo](https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo-dark.png?raw=true#only-dark){align=right loading=lazy style="height:72px"}
 
-[:fontawesome-brands-github: Practicalli Astro](http://github.com/practicalli/astro) is Clojure development focused configuration, an extension of the [:fontawesome-brands-github: AstroNvim template repository](https://github.com/AstroNvim/template).
+[:fontawesome-brands-github: Practicalli Astro 5](http://github.com/practicalli/nvim-astro5) is Clojure development focused configuration, an extension of the [:fontawesome-brands-github: AstroNvim v5 template repository](https://github.com/AstroNvim/template).
 
-Clone the [:fontawesome-brands-github: Practicalli Astro](https://github.com/practicalli/astro) config or create your own fork and clone that repository.
+=== "Only One Neovim Config"
 
-!!! NOTE "Clone Practicalli Astro config"
+    Clone the [:fontawesome-brands-github: Practicalli Astro](https://github.com/practicalli/nvim-astro5) configuration or create your own fork and clone that repository.
+
+
+    !!! NOTE "Clone Practicalli Astro config"
+        ```shell
+        git clone https://github.com/practicalli/nvim-astro5.git ~/.config/nvim
+        ```
+
+=== "Multiple Neovim Configurations"
+    Clone the [:fontawesome-brands-github: Practicalli Astro](https://github.com/practicalli/nvim-astro5) configuration to a unique name within `~/.config` directory.
+
     ```shell
-    git clone https://github.com/practicalli/astro.git ~/.config/nvim
-    ```
-
-??? HINT "Multiple Neovim Configurations"
-    Clone the configuration to a unique name within `~/.config` directory.
-
-    ```shell
-    git clone https://github.com/practicalli/astro.git ~/.config/nvim-astro
+    git clone https://github.com/practicalli/astro5.git ~/.config/nvim-astro5
     ```
 
     Set the `NVIM_APPNAME` environment variable to the configuration directory name under `~/.config`
 
-    e.g. Run Neovim using the configuration in `~/.config/astro`
+    e.g. Run Neovim using the configuration in `~/.config/astro5`
     ```shell
-    export NVIM_APPNAME=nvim-astro nvim
+    export NVIM_APPNAME=nvim-astro5 nvim
     ```
 
     [:fontawesome-solid-book-open: Configure shell alias and selectors](multiple-configurations/#configure-shell-alias){target=_blank} to simplify the command to run a specific configuration.
 
-[Practicalli Astro design & override guide](/neovim/reference/configuration/){target=_blank .md-button} 
+
+??? INFO "Practicalli Astro 5 Design guide"
+    [Practicalli Astro 5 design & override guide](/neovim/reference/configuration/){target=_blank .md-button}
 
 
 ## Install Neovim Plugins
 
-Enter `nvim` command in a terminal to launch Neovim and install all the plugins from the Practicalli Astro configuration.
+Enter `nvim` command in a terminal to launch Neovim and install all the plugins from the Practicalli Astro 5 configuration.
 
 !!! NOTE "Run Neovim"
     ```shell
