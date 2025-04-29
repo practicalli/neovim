@@ -11,7 +11,7 @@ Language Server Protocol servers, format and lint tools managed by Mason often r
 
 Kitty Terminal provides multiple shell tabs, Nerd fonts, web icons and graphics support too, so is an excellent choice for running Neovim.  Kitty is available on all good operating systems.
 
-[:fontawesome-solid-book-open: Kitty Terminal - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/command-line/kitty-terminal/){target=_blank .md-button}
+[:fontawesome-solid-book-open: Kitty Terminal - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/os/command-line/kitty-terminal/){target=_blank .md-button}
 
 
 ## Command line tools
