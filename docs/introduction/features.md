@@ -4,27 +4,27 @@
     Keep up to date with new features within Neovim
 
     ```shell
-    :help news.txt
+    :help news
     ```
-    Use the version name to view specific features of a release
+    View the news from a previous verion of Neovim
     ```shell
-    :help news-0.9.5.txt
+    :help news-0.10
     ```
 
 ## Neovim features for development
 
 A clean UI provides for a distraction free development experience, with only the essential information presented in the Neovim statusline or inline with the code
 
-* [Conjure](#conjure) - automatic Clojure REPL connection, evaluation, test runners
-* Treesitter
-* Plug-in Manager (e.g. Lazy.nvim)
-* [LSP](#language-server-protocol) - auto-completion, snippets, inline linting, reference navigation, refactor and unit test coverage
-* [statusline](#status-line) - LSP status, diff changes, filetype, cursor position
-* [Selection narrowing](#selection-narrowing) completion of files, packages, colour schemes, etc
-* [File browser](#file-browser) - telescope selection narrowing and visual file system navigation
-* [Version Control](#version-control) gutter indicators for changed lines
-* [todo comments](#todo-comments) todo, fix, notes, indicators with gutter icons
-* relative line numbers for vim-style navigation
+- [Conjure REPL client](#conjure) - automatic Clojure REPL connection, evaluation, test runners
+- Treesitter - incremental parsing of code for efficient manipulation and decoration
+- Lazy.nvim - lazy loading plug-in manager to run only the relevant plugins (minimal resource footprint)
+- [LSP](#language-server-protocol) - auto-completion, snippets, inline linting, reference navigation, refactor and unit test coverage
+- [statusline](#status-line) - LSP status, diff changes, filetype, cursor position
+- [Selection narrowing (picker)](#selection-narrowing) completion of files, packages, colour schemes, etc
+- [File browser](#file-browser) - telescope selection narrowing and visual file system navigation
+- [Version Control](#version-control) gutter indicators for changed lines
+- [todo comments](#todo-comments) todo, fix, notes, indicators with gutter icons
+- relative line numbers for vim-style navigation
 
 
 
