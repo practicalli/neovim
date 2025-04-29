@@ -105,6 +105,7 @@ plugins:
   - redirects:
       redirect_maps:
         neovim-basics/index.md: using-neovim/index.md
+        repl-driven-development/: clojure-repl-workflow/
   #       reference/meta-tags.md: reference/index.md
 
 # Footer / Social Media
@@ -158,12 +159,12 @@ nav:
       - Zen Mode: using-neovim/zen-mode.md
       - Terminal: using-neovim/terminal.md
   - Clojure REPL Workflow:
-      - repl-driven-development/index.md
-      - Conjure: repl-driven-development/conjure.md
-      - Documentation: repl-driven-development/documentation.md
-      - Structural Editing: repl-driven-development/structural-editing.md
-      - Refactor Tools: repl-driven-development/refactor-tools.md
-      - Testing: repl-driven-development/testing.md
+      - clojure-repl-workflow/index.md
+      - Conjure: clojure-repl-workflow/conjure.md
+      - Documentation: clojure-repl-workflow/documentation.md
+      - Structural Editing: clojure-repl-workflow/structural-editing.md
+      - Refactor Tools: clojure-repl-workflow/refactor-tools.md
+      - Testing: clojure-repl-workflow/testing.md
   - Source Control:
       - source-control/index.md
       - source-control/diff.md
