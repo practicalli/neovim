@@ -41,6 +41,14 @@
          <lastmod>2025-04-30</lastmod>
     </url>
     <url>
+         <loc>https://practical.li/neovim/install/configuration/</loc>
+         <lastmod>2025-04-30</lastmod>
+    </url>
+    <url>
+         <loc>https://practical.li/neovim/install/customise-configuration/</loc>
+         <lastmod>2025-04-30</lastmod>
+    </url>
+    <url>
          <loc>https://practical.li/neovim/install/multiple-configurations/</loc>
          <lastmod>2025-04-30</lastmod>
     </url>
@@ -54,6 +62,10 @@
     </url>
     <url>
          <loc>https://practical.li/neovim/install/terminal-tools/</loc>
+         <lastmod>2025-04-30</lastmod>
+    </url>
+    <url>
+         <loc>https://practical.li/neovim/install/troubleshoot/</loc>
          <lastmod>2025-04-30</lastmod>
     </url>
     <url>

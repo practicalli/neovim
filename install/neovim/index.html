@@ -26,7 +26,7 @@
         <link rel="prev" href="../terminal-tools/">
       
       
-        <link rel="next" href="../multiple-configurations/">
+        <link rel="next" href="../configuration/">
       
       
       <link rel="icon" href="../../assets/favicon.svg">
@@ -535,6 +535,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -672,37 +678,33 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#practicalli-astro-5-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      Practicalli Astro 5 Config
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-neovim-plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install Neovim Plugins
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-install-checks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Post Install checks
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Neovim Configuration
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -738,12 +740,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../customise-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Customise Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../neovide/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Neovide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshoot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshoot
     
   </span>
   
@@ -2958,33 +3006,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#practicalli-astro-5-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      Practicalli Astro 5 Config
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-neovim-plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install Neovim Plugins
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#post-install-checks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Post Install checks
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -3020,24 +3041,19 @@
 <h1 id="install-neovim-and-supporting-tools">Install Neovim and Supporting Tools<a class="headerlink" href="#install-neovim-and-supporting-tools" title="Permanent link">λ︎</a></h1>
 <p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/be612ddb29f6b9eef1641e91de6c747b70d7fef8/logos/neovim-logos/neovim-mark.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="Neovim Logo" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/be612ddb29f6b9eef1641e91de6c747b70d7fef8/logos/neovim-logos/neovim-mark.svg" style="height:150px;width:150px" /></a></p>
 <div class="admonition info">
-<p class="admonition-title">Neovim 0.11.x is the latest stable version</p>
+<p class="admonition-title">Neovim 0.11.x required</p>
 </div>
 <h2 id="suppoting-tools">Suppoting Tools<a class="headerlink" href="#suppoting-tools" title="Permanent link">λ︎</a></h2>
 <p>Neovim uses several command line tools for searching for files and their contents, using the operating system clipbaord and compiling Treesitter language parsers.</p>
-<p>Install the following tools to support Neovim and AstroNvim</p>
 <ul>
 <li><code>ripgrep</code> fast file contents search (used by telescope)</li>
 <li><code>find-fd</code> advanced search tool</li>
-<li><code>xclip</code> x11 clipboard as a provider for Neovim copy/paste (Linux only)</li>
-<li><code>luarocks</code> for LSP servers (AstroNvim)</li>
+<li><code>xclip</code> for X11 clipboard integration or <code>wl-clipboard</code> for Wayland</li>
+<li><code>node.js</code> and luarocks` for LSP servers</li>
+<li>a C compiler for treesitter language parsers, e.g. <code>gcc</code> or <code>clang</code></li>
 </ul>
 <details class="info">
-<summary>Treesitter requires a C compiler</summary>
-<p>nvim-treesitter requires a C compiler , e.g. <code>gcc</code> for Linux or <code>clang</code> for android/termix</p>
-<p>The C compiler is used to compile langauge support for treesiter.</p>
-</details>
-<details class="info">
-<summary>Practicalli Astro 5 requires node.js</summary>
+<summary>node.js install guide</summary>
 <p>AstroNvim uses Mason to install LSP servers, format and lint tools. Many of the LSP servers require node.</p>
 <p><a href="https://practical.li/engineering-playbook/programming-languages/javascript/nodejs/" target="_blank">Node.js install - Practicalli Engineering Playbook</a></p>
 </details>
@@ -3045,15 +3061,15 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="admonition note">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>apt<span class="w"> </span>install<span class="w"> </span>fd-find<span class="w"> </span>xclip<span class="w"> </span>luarocks<span class="w"> </span>nodejs
+<p class="admonition-title">Install for X11 based desktop</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>apt<span class="w"> </span>install<span class="w"> </span>fd-find<span class="w"> </span>luarocks<span class="w"> </span>nodejs<span class="w"> </span>xclip
 </code></pre></div>
 </div>
-<details class="info">
-<summary>Wayland requires wl-clipboard</summary>
-<p>Install the <code>wl-clipboard</code> package to use the Wayland desktop clipboard with Neovim
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>apt<span class="w"> </span>install<span class="w"> </span>wl-clipboard
-</code></pre></div></p>
-</details>
+<div class="admonition note">
+<p class="admonition-title">Install for Wayland based desktop</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>apt<span class="w"> </span>install<span class="w"> </span>fd-find<span class="w"> </span>luarocks<span class="w"> </span>nodejs<span class="w"> </span>wl-clipboard
+</code></pre></div>
+</div>
 </div>
 <div class="tabbed-block">
 <p>MacOSX requires the libintl and gettext tools as well as the other supporting tools.</p>
@@ -3065,11 +3081,11 @@
 </div>
 </div>
 <h2 id="install-neovim">Install Neovim<a class="headerlink" href="#install-neovim" title="Permanent link">λ︎</a></h2>
-<p>Install from the <a href="https://github.com/neovim/neovim/releases/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg></span> Neovim GitHub releases</a> for the latest version of Neovim, or use a Package manager for the operating system.</p>
+<p>Install from <a href="https://github.com/neovim/neovim/releases/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg></span> Neovim GitHub releases</a> for the latest version, use a Package manager if version 0.11 is available, or build from source.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Linux AppImage</label><label for="__tabbed_2_2">MacOSX Homebrew</label><label for="__tabbed_2_3">MacOSX GitHub Release</label><label for="__tabbed_2_4">Debian Package</label><label for="__tabbed_2_5">Build from Source</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Download the <a href="https://github.com/neovim/neovim/releases/" target="_blank">Linux AppImage</a> from the Neovim Release page and place the file on the executable path, e.g. <code>$HOME/.local/bin</code></p>
+<p>Download the <a href="https://github.com/neovim/neovim/releases/" target="_blank">Linux AppImage</a> from the Neovim Release page and place the file on the executable path, e.g. <code>$HOME/.local/bin</code> or <code>/usr/local/bin/</code> for system wide use (e.g. root account).</p>
 <p>Make the AppImage executable</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>chmod<span class="w"> </span>u+x<span class="w"> </span><span class="nv">$HOME</span>/.local/bin/nvim.appimage
 </code></pre></div>
@@ -3153,70 +3169,6 @@
 </div>
 </div>
 </div>
-<h2 id="practicalli-astro-5-config">Practicalli Astro 5 Config<a class="headerlink" href="#practicalli-astro-5-config" title="Permanent link">λ︎</a></h2>
-<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo.png?raw=true#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="Practicalli Logo" loading="lazy" src="https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo.png?raw=true#only-light" style="height:72px" /></a>
-<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo-dark.png?raw=true#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="Practicalli Logo" loading="lazy" src="https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo-dark.png?raw=true#only-dark" style="height:72px" /></a></p>
-<p><a href="http://github.com/practicalli/nvim-astro5"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg></span> Practicalli Astro 5</a> is Clojure development focused configuration, an extension of the <a href="https://github.com/AstroNvim/template"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg></span> AstroNvim v5 template repository</a>.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Only One Neovim Config</label><label for="__tabbed_3_2">Multiple Neovim Configurations</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Clone the <a href="https://github.com/practicalli/nvim-astro5"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg></span> Practicalli Astro</a> configuration or create your own fork and clone that repository.</p>
-<div class="admonition note">
-<p class="admonition-title">Clone Practicalli Astro config</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/nvim-astro5.git<span class="w"> </span>~/.config/nvim
-</code></pre></div>
-</div>
-</div>
-<div class="tabbed-block">
-<p>Clone the <a href="https://github.com/practicalli/nvim-astro5"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg></span> Practicalli Astro</a> configuration to a unique name within <code>~/.config</code> directory.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/astro5.git<span class="w"> </span>~/.config/nvim-astro5
-</code></pre></div>
-<p>Set the <code>NVIM_APPNAME</code> environment variable to the configuration directory name under <code>~/.config</code></p>
-<p>e.g. Run Neovim using the configuration in <code>~/.config/astro5</code>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">NVIM_APPNAME</span><span class="o">=</span>nvim-astro5<span class="w"> </span>nvim
-</code></pre></div></p>
-<p><a href="multiple-configurations/#configure-shell-alias" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5m76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5"/></svg></span> Configure shell alias and selectors</a> to simplify the command to run a specific configuration.</p>
-</div>
-</div>
-</div>
-<details class="info">
-<summary>Practicalli Astro 5 Design guide</summary>
-<p><a class="md-button" href="/neovim/reference/configuration/" target="_blank">Practicalli Astro 5 design &amp; override guide</a></p>
-</details>
-<h2 id="install-neovim-plugins">Install Neovim Plugins<a class="headerlink" href="#install-neovim-plugins" title="Permanent link">λ︎</a></h2>
-<p>Enter <code>nvim</code> command in a terminal to launch Neovim and install all the plugins from the Practicalli Astro 5 configuration.</p>
-<div class="admonition note">
-<p class="admonition-title">Run Neovim</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>nvim
-</code></pre></div>
-</div>
-<p>Lazy plugin manager runs automatically and installs all the plugins defined in the Neovim configuration.</p>
-<p>Treesitter will prompt to compile its language parsers.</p>
-<p><span class="keys"><kbd>q</kbd></span> to close the lazy package manager pop-up once all plugins are installed.</p>
-<details class="info">
-<summary>Plugin install without UI display</summary>
-<p>Use the <code>--headless</code> Neovim flag to install plugins without running whole Neovim editor user interface.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>nvim<span class="w"> </span>--headless
-</code></pre></div>
-</details>
-<h2 id="post-install-checks">Post Install checks<a class="headerlink" href="#post-install-checks" title="Permanent link">λ︎</a></h2>
-<p>Troubleshoot the Neovim configuration and supporting tools by running the <a href="https://neovim.io/doc/user/health.html" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Neovim Heath Check</a>.</p>
-<p>Use the <code>:checkhealth</code> command in Neovim or start Neovim with the Health Check command.</p>
-<div class="admonition example">
-<p class="admonition-title">Run Neovim and start Health Check</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>nvim<span class="w"> </span>+:checkhealth
-</code></pre></div>
-</div>
-<p>A report is generated and shown in Neovim</p>
-<p><span class="keys"><kbd>j</kbd></span> / <span class="keys"><kbd>j</kbd></span> to scroll through the checkhealth report</p>
-<p>Review the warnings and install tooling that is required for languages that will be used.</p>
-<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/neovim/screenshots/neovim-checkhealth-report-light.png?raw=true#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="NeoVim checkhealth report" src="https://github.com/practicalli/graphic-design/blob/live/editors/neovim/screenshots/neovim-checkhealth-report-light.png?raw=true#only-light" /></a>
-<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/neovim/screenshots/neovim-checkhealth-report-dark.png?raw=true#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="NeoVim checkhealth report" src="https://github.com/practicalli/graphic-design/blob/live/editors/neovim/screenshots/neovim-checkhealth-report-dark.png?raw=true#only-dark" /></a></p>
-<div class="admonition hint">
-<p class="admonition-title">Ignore Provider Warnings</p>
-<p>It is safe to ignore language provider warnings.</p>
-<p><a href="/neovim/reference/neovim/language-providers/">Language Providers can be disabled</a> in the Neovim configuration to remove the warnings from <code>:checkhealth</code> report.</p>
-</div>
 
 
 
@@ -3237,7 +3189,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 29, 2025 23:11:35">April 29, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2025 11:04:18">April 30, 2025</span>
   </span>
 
     
@@ -3294,13 +3246,13 @@
         
         
           
-          <a href="../multiple-configurations/" class="md-footer__link md-footer__link--next" aria-label="Next: Multiple Configs">
+          <a href="../configuration/" class="md-footer__link md-footer__link--next" aria-label="Next: Neovim Configuration">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Multiple Configs
+                Neovim Configuration
               </div>
             </div>
             <div class="md-footer__button md-icon">
