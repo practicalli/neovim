@@ -1,6 +1,12 @@
-## Multiple Configurations
+# Multiple Configurations
 
-Many Neovim configurations can be installed in `$HOME/.config/` using unique directory names, e.g. [AstroNvim](astronvim/), cajus, lazyvim, kickstart.
+Many different Neovim configurations can be installed in `$HOME/.config/` using unique directory names, e.g. [AstroNvim](astronvim/), [cajus-nvim](https://github.com/rafaeldelboni/cajus-nfnl), [lazyvim](https://www.lazyvim.org/configuration), [kickstart](https://github.com/nvim-lua/kickstart.nvim).
+
+??? TIP "Always have a working config"
+    Create a separate configuration when making major changes to your configuration or starting a new configuration from scratch.
+
+
+## NVIM_APPNAME environment variable
 
 Set `NVIM_APPNAME` to a configuration directory name (relative to $HOME/.config/`) to run Neovim with that specific config.
 

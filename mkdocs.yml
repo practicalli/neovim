@@ -138,8 +138,11 @@ nav:
       - Overview: install/index.md
       - Terminal: install/terminal-tools.md
       - Neovim: install/neovim.md
+      - Neovim Configuration: install/configuration.md
       - Multiple Configs: install/multiple-configurations.md
+      - Customise Configuration: install/customise-configuration.md
       - Neovide: install/neovide.md
+      - Troubleshoot: install/troubleshoot.md
   - Using Neovim:
       - using-neovim/index.md
       - File Buffer Window Tab: using-neovim/file-buffer-window-tab.md
