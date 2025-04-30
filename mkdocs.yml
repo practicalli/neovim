@@ -138,7 +138,7 @@ nav:
       - Overview: install/index.md
       - Terminal: install/terminal-tools.md
       - Neovim: install/neovim.md
-      - Neovim Configuration: install/astro-configurtion.md
+      - Astro5 Configuration: install/astro5-configuration.md
       - Multiple Configs: install/multiple-configurations.md
       - Customise Configuration: install/customise-configuration.md
       - Neovide: install/neovide.md

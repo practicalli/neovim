@@ -2,7 +2,7 @@
 
 Neovim is a terminal based application and [Kitty Terminal](#kitty-terminal) is highly recommended.
 
-File system search and other system information based features presented in AstroNvim relies on [external command line tools](#command-line-tools).
+File system search and other system information based features relie on [external command line tools](#command-line-tools).
 
 Language Server Protocol servers, format and lint tools managed by Mason often require [Nodejs](#nodejs) to install & run.
 
@@ -39,6 +39,6 @@ Install btm from its [:fontawesome-brands-github: GitHub repository release page
 
 ## Nodejs
 
-AstroNvim uses Mason to install LSP servers, format and lint tools.  Many LSP servers require node.js to install and function.
+Mason installs LSP servers, format and lint tools.  Many LSP servers require node.js to install and function.
 
 [Node.js install - Practicalli Engineering Playbook](https://practical.li/engineering-playbook/programming-languages/javascript/nodejs/){target=_blank .md-button}

@@ -58,7 +58,7 @@ Install from [:fontawesome-brands-github: Neovim GitHub releases](https://github
     chmod u+x $HOME/.local/bin/nvim.appimage
     ```
 
-    Create a symbolic link called `nvim` to the nvim.appimage file.
+    Create a symbolic link called `nvim` to the nvim.appimage file (or rename the file to `nvim`)
 
     ```shell
     ln -s $HOME/.local/bin/nvim.appimage $HOME/.local/bin/nvim
@@ -176,3 +176,10 @@ Install from [:fontawesome-brands-github: Neovim GitHub releases](https://github
     ```shell
     cpack -G DEB
     ```
+
+
+## Add a configuration
+
+Neovim is a powerful editor although a configuration adds valuable features for software engineering tasks.
+
+[Practicalli Astro 5 configuration](astro5-configuration.md){.md-button}
