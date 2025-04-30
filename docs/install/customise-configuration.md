@@ -52,9 +52,34 @@ Set the `PRACTICALLI_ASTRO` environment variable to `false` to prevent that spec
 
 Create your own version of `lua/plugins/practicalli.lua` to override a few configurations or as a complete replacement.
 
+!!! INFO "Practicalli will never add a user.lua file to the config"
+    Updates to Practicalli Astro5 will not cause Git merge conflicts for a personal user.lua file.
+
+Use the `lua/plugins/practicalli.lua` file as an example.
+
+Ensure the file returns a table (map of key value pairs).
+
+!!! EXAMPLE "Return a table in each lua file"
+    ```lua
+    return {
+      -- configuration within tables
+    }
+    ```
+
+Local variables can be defined before the return statement and those variables used throughout the config in the current file.
+
+!!! EXAMPLE "Return a table in each lua file"
+    ```lua
+    local user_practicalli = vim.env.PRACTICALLI_ASTRO
+
+    return {
+      -- configuration within tables
+    }
+    ```
+
 ### Snacks configuration
 
-[folke/snacks]() plugins are included in Practicalli Astro 5 and provide an excellent user experience.
+[folke/snacks](https://github.com/folke/snacks.nvim) plugins are included in Practicalli Astro 5 and provide an excellent user experience.
 
 Add the Snack plugin to configuration one or more of the plugins it contains.
 
