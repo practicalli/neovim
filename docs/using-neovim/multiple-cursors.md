@@ -5,97 +5,36 @@
 Mulitple cursors is generally useful when editing smilarly structured lines with diffferent content.  Cursors are moved by column position or by using vim motions.
 
 
-=== "AstroNvim"
-    ++spc++ ++"g"++ ++"m"++ opens the visual-multi menu
+## Changing continuous lines
 
-    Using visual select is a simple way to edit multiple lines as the same time.
+Use visual select over multiple lines to edit them at the same time.
 
-    ++spc++ ++"g"++ ++"m"++ ++"c"++ on visually selected lines creates a cursor on each line.
+++"g"++ ++"m"++ ++"c"++ creates a cursor on each line.
 
-    ++esc++ or ++"f"++ ++"d"++ to close multiple cursors.
+Make edits as required.
 
-
-=== "Practicalli Neovim Config Redux"
-    `\ \ c` creates a cursor at the start of every visual selection line
-
-    `\ \ \` toggle cursor at position
+++esc++ or ++"f"++ ++"d"++ to close multiple cursors.
 
 
 ## Search and Replace
 
 Select a text pattern to search for and use multiple cursors to add a cursor each match, then change each selected occurance concurrently.
 
+Select the pattern with visual select
 
-=== "AstroNvim"
+++"g"++ ++"m"++ ++"a"++ on each matching text pattern in the buffer
 
-    Select the pattern with visual select
+`c` to change the original text and type the new pattern.  All cursors will update concurrently.
 
-    ++spc++ ++"g"++ ++"m"++ ++"a"++ on each matching text pattern in the buffer
-
-    `c` to change the original text and type the new pattern.  All cursors will update concurrently.
-
-    ++esc++ or ++"f"++ ++"d"++ to close multiple cursors.
+++esc++ or ++"f"++ ++"d"++ to close multiple cursors.
 
 
-=== "Practicalli Neovim Config Redux"
-    `\ \ a` creates a cursor at the start of every visual selection line
-
-    `\ \ \` toggle cursor at position
-
-    `c` to change the original text and type the new pattern.  All cursors will update concurrently.
-
-    ++esc++ or ++"f"++ ++"d"++ to close multiple cursors.
-
-
-
-## Command quick reference
+## Reference
 
 `:help g:VM_maps` for a reference of all mappings and instructions on how to change them
 
-=== "AstroNvim"
 
-`SPC g m` opens the Visual-Multi menu in normal mode
-
-`g m` opens the Visual-Multi menu in visual mode
-
-`c` to add a cursor to every line in the visually selected region
-
-
-=== "Practicalli Neovim Config Redux"
-
-    <!-- TODO: How to define the visuual-multi leader key in fennel
-        let g:VM_leader = '\'
-    -->
-
-    `\ \` is the leader for multiple cursors and will show the visual-multi menu in which-key.
-
-    These commands cover the large majority of use cases for multiple cursors.
-
-    | Action                        | Key         | Command              |
-    |-------------------------------|-------------|----------------------|
-    | Add Cursor at Position        | `\\\`       | `vm-add-cursor`      |
-    | Alignm VM cursors with cursor | `\\a`       | `vm-align`           |
-    | Select All Words              | `\\A`       | `vm-select-all`      |
-    | Transposition                 | `\\t`       | `vm-transpose`       |
-    | Toggle Mappings               | `\\<Space>` | `vm-mappings-toggle` |
-    | Find with Regex               | `\\/`       | `vm-regex-search`    |
-    | Reselect Last                 | `\\gS`      | `vm-reselect-last`   |
-
-    Once visual-multi has started the vm-mappings-buffer mappings are available:
-
-    | Action              | Key                     | Command            |
-    |---------------------|-------------------------|--------------------|
-    | Find Word           | `<C-n>`                 | vm-find-word       |
-    | Next/Previous/Skip  | `n` / `N` / `q`         | vm-find-next       |
-    | Remove Region       | `Q`                     | vm-remove-region   |
-    | Add Cursors Down/Up | `<C-Down>` / `<C-Up>`   | vm-add-cursors     |
-    | Select Right/Left   | `<S-Right>`, `<S-Left>` | vm-shift-select    |
-    | Slash motion        | `g/`                    | vm-slash           |
-    | Select Operator     | `s`                     | vm-select-operator |
-    | Find Operator       | `m`                     | vm-find-operator   |
-
-    > NOTE: `C-n` conflicts with the Termux binding for naming a session
-
+<!-- To review: is this still relevant?
 
 ## Searching
 
@@ -310,3 +249,5 @@ Others can use a different mapping:
 
 - `gu/gU` change case (instead of vim `u` / `U`)
 - `o` and `O` mappings are used to invert the facing of the selected regions and not to start insert mode.
+
+-->
