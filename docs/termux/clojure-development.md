@@ -10,7 +10,7 @@ Install OpenJDK to host the Clojure REPL process and run packaged Clojure applic
 Java 17 Long Term Support version is recommended as it is very stable, receives security updates and has the latest highly tested performance improvements.
 
 ```
-pkg install openjdk-17
+pkg install openjdk-21
 ```
 
 <!-- TODO: Install openjdk-21 when it has been packaged for Termux -->
