@@ -1,6 +1,14 @@
 # Multiple Configurations
 
-Many different Neovim configurations can be installed in `$HOME/.config/` using unique directory names, e.g. [AstroNvim](astronvim/), [cajus-nvim](https://github.com/rafaeldelboni/cajus-nfnl), [lazyvim](https://www.lazyvim.org/configuration), [kickstart](https://github.com/nvim-lua/kickstart.nvim).
+Many different Neovim configurations can be used at the same time, by instaling each config in `$HOME/.config/` using unique directory names
+
+??? INFO "Community Configuration Projects"
+    - [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) a highly documented starter to effectively build your own configuration
+    - [LazyVim](https://www.lazyvim.org/) lazy & mason configuration
+    - [Magit Kit](https://github.com/Olical/magic-kit) fennel configuration from the author of Conjure
+    - [cajus-nfnl](https://github.com/rafaeldelboni/cajus-nfnl) fennel-based config
+    - [AstroNvim](https://astronvim.com/) rich Neovim experience
+
 
 ??? TIP "Always have a working config"
     Create a separate configuration when making major changes to your configuration or starting a new configuration from scratch.
@@ -8,7 +16,7 @@ Many different Neovim configurations can be installed in `$HOME/.config/` using 
 
 ## NVIM_APPNAME environment variable
 
-Set `NVIM_APPNAME` to a configuration directory name (relative to $HOME/.config/`) to run Neovim with that specific config.
+Set `NVIM_APPNAME` to a configuration directory name (relative to `$HOME/.config/`) to run Neovim with that specific config.
 
 !!! NOTE "Run AstroNvim config in `$HOME/.config/astronvim/`"
     ```shell
@@ -17,56 +25,57 @@ Set `NVIM_APPNAME` to a configuration directory name (relative to $HOME/.config/
 
 The configuration directory name is used to save local `share`, `state` and `cache` files for that specific configuration.
 
-??? INFO "Community Configuration Projects"
-
-    * [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) a highly documented starter configuration to effectively build your own
-    * [LazyVim](https://www.lazyvim.org/) lazy & mason configuration
-    * [Magit Kit](https://github.com/Olical/magic-kit) fennel configuration from the author of Conjure
-    * [cajus-nvim](https://github.com/rafaeldelboni/cajus-nvim) inspiration for practicalli/neovim-config-redux
-
 
 ## Configure shell alias
 
 Create a Shell alias for each configuration that will be used, to avoid setting the `NVIM_APPNAME` variable each time.
 
-Add alias to `.bashrc` for Bash shell or `.zshrc` for Zsh
+Add alias to `.bashrc` for Bash shell, `.zshrc` for Zsh or use a common [shell-aliases]() file.
 
 !!! EXAMPLE "Define Shell Aliases to run each configuration"
     ```shell
-    alias astro="NVIM_APPNAME=nvim-astro nvim"
-    alias lazy="NVIM_APPNAME=nvim-lazyvim nvim"
+    alias astro="NVIM_APPNAME=nvim-astro5 nvim"
+    alias lazyvim="NVIM_APPNAME=nvim-lazyvim nvim"
     alias cajus="NVIM_APPNAME=nvim-cajus nvim"
     ```
 
 
-### shell-aliases for bash and zsh
+### shell-aliases
 
-Create a `.config/shell-aliases` file containing all shell aliases when often switching between different shells, avoiding the need to define aliases twice
+Create a `.config/shell-aliases` file containing all shell aliases which can be used with any shell.
+
+A common shell-aliases file is very useful when switching between different shells, avoiding the need to define aliases twice.
 
 Source the `.config/shell-aliases` file from within `.bashrc` or `.zshrc`
 
 === "Zsh"
-    ```shell title=".zshrc"
-    # Shell Aliases
-    [[ ! -f ~/.config/shell-aliases ]] || source ~/.config/shell-aliases
-    ```
+
+    !!! NOTE ""
+        Load (source) aliases
+        ```shell title=".zshrc"
+        # Shell Aliases
+        [[ ! -f ~/.config/shell-aliases ]] || source ~/.config/shell-aliases
+        ```
 
 === "Bash"
-    ```shell title=".bashrc"
-    # Shell Aliases
-    if [ -f ~/.config/shell-aliases ]; then
-        . ~/.config/shell-aliases
-    fi
-    ```
+
+    !!! NOTE ""
+        Load (source) aliases
+        ```shell title=".bashrc"
+        # Shell Aliases
+        if [ -f ~/.config/shell-aliases ]; then
+            . ~/.config/shell-aliases
+        fi
+        ```
 
 ## Neovim config selector
 
-Create a shell function to popup a menu with the list of available Neovim configurations, defined in `~/.config` where the configuration directories are prefixed with `nvim-`, e.g. `~/.config/nvim-astro/`
+Create a shell function to popup a menu with the list of available Neovim configurations, defined in `~/.config` where the configuration directories are prefixed with `nvim-`, e.g. `~/.config/nvim-astro5/`
 
 ![Neovim Config Fuzy Selector](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/screenshots/neovim-config-selector-fuzzy-find-config-list-dark.png?raw=true){loading=lazy}
 
 !!! EXAMPLE "Neovim Config Fuzzy Finder"
-
+    List every neovim configuration in `$HOME/.config`, any directory starting with `nvim-` name.
     ```shell title=".local/bin/nvim-fuzy-find"
     nvim-fuzy-find() {
       # All config paths are prefixed with ~/.config/nvim-
@@ -80,10 +89,10 @@ Create a shell function to popup a menu with the list of available Neovim config
     ```
 
 ??? EXAMPLE "Neovim Config simple Selector"
-    Add the Neovim config directory names from `~/.config/`
+    Add specific Neovim config directory names from `~/.config/`
     ```shell title=".local/bin/nvim-selector"
      nvim-selector() {
-      select config in nvim-astro nvim-astronvim-template nvim-lazyvim nvim-kickstart
+      select config in nvim-astro5 nvim-astronvim5-template nvim-lazyvim nvim-kickstart
       do NVIM_APPNAME=nvim-$config nvim $@; break; done
     }
     ```
