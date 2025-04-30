@@ -2,7 +2,7 @@
 
 Practicalli Neovim provides an install & user guide for a simple and powerful [:fontawesome-solid-book-open: REPL driven workflow](introduction/repl-workflow.md) for Clojure.
 
-[:fontawesome-solid-book-open: Practicalli Astro5 configuration](install/neovim/#practicalli-nvim-astro) for Neovim provides Conjure REPL client and structural editing support (parinfer & paredit).
+[:fontawesome-solid-book-open: Practicalli Astro5 configuration](install/astro-configurtion.md) for Neovim provides Conjure REPL client and structural editing support (parinfer & paredit).
 
 ![Clojure REPL Driven Development workflow](https://github.com/practicalli/graphic-design/raw/live/clojure/clojure-repl-workflow-concept.png?raw=true)
 

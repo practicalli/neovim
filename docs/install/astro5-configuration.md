@@ -10,7 +10,7 @@
     Clone the [:fontawesome-brands-github: Practicalli Astro](https://github.com/practicalli/nvim-astro5) configuration or create your own fork and clone that repository.
 
 
-    !!! NOTE "Clone Practicalli Astro config"
+    !!! NOTE "Clone Practicalli Astro 5 config"
         ```shell
         git clone https://github.com/practicalli/nvim-astro5.git ~/.config/nvim
         ```
@@ -18,22 +18,22 @@
 === "Multiple Neovim Configurations"
     Clone the [:fontawesome-brands-github: Practicalli Astro](https://github.com/practicalli/nvim-astro5) configuration to a unique name within `~/.config` directory.
 
-    ```shell
-    git clone https://github.com/practicalli/astro5.git ~/.config/nvim-astro5
-    ```
+    !!! NOTE "Clone Practicalli Astro 5 config"
+        ```shell
+        git clone https://github.com/practicalli/astro5.git ~/.config/nvim-astro5
+        ```
 
-    Set the `NVIM_APPNAME` environment variable to the configuration directory name under `~/.config`
+    Set the `NVIM_APPNAME` environment variable to the configuration directory name under `~/.config`, e.g. Run Neovim using the configuration in `~/.config/nvim-astro5`
 
-    e.g. Run Neovim using the configuration in `~/.config/astro5`
-    ```shell
-    export NVIM_APPNAME=nvim-astro5 nvim
-    ```
+    !!! NOTE "Use Astro 5 config with Neovim"
+        ```shell
+        export NVIM_APPNAME=nvim-astro5 nvim
+        ```
 
     [:fontawesome-solid-book-open: Configure shell alias and selectors](multiple-configurations.md){target=_blank} to simplify the command to run a specific configuration.
 
 
-??? INFO "Practicalli Astro 5 Design guide"
-    [Practicalli Astro 5 design & override guide](/neovim/reference/configuration/){target=_blank .md-button}
+[Customise Practicalli Astro 5](/neovim/install/customise-configuration/){target=_blank .md-button}
 
 
 ## Install Neovim Plugins
@@ -60,7 +60,7 @@ Treesitter will prompt to compile its language parsers.
     ```
 
 ??? TIP "Identical install with lazy-lock.json"
-    `lazy-lock.json` contains the versions of all plugins currently installed. Use this file if you need exact plugin versions as part of other installs.  Otherwise ignore it.
+    When plugins are installed, a `lazy-lock.json` contains the versions of all plugins. Include this file when exact plugin versions are required for other system installs.  Otherwise this file can be safely ignored.
 
 ## Post Install checks
 
@@ -86,3 +86,5 @@ Review the warnings and install tooling that is required for languages that will
     It is safe to ignore language provider warnings.
 
     [Language Providers can be disabled](/neovim/reference/neovim/language-providers/) in the Neovim configuration to remove the warnings from `:checkhealth` report.
+
+[Troubleshoot Neovim Configuration](troubleshoot.md){target=_blank .md-button}
