@@ -34,6 +34,8 @@ Source code is automatically evaluated in its respective namespace, removing the
 !!! HINT "Evaluate Clojure in Neovim with Conjure"
     `, e b` evaluates the code in the current buffer
 
+    `, e r` evaluates the current top level expression
+
 <p style="text-align:center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rQ802kSaip4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
