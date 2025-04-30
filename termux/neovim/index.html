@@ -1884,25 +1884,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#neovim-treesitter" class="md-nav__link">
+  <a href="#neovim-config" class="md-nav__link">
     <span class="md-ellipsis">
-      Neovim treesitter
+      Neovim config
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#c-compiler" class="md-nav__link">
+  <a href="#treesitter-language-support" class="md-nav__link">
     <span class="md-ellipsis">
-      C Compiler
+      Treesitter language support
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="C Compiler">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#searching-files" class="md-nav__link">
     <span class="md-ellipsis">
       Searching files
@@ -1910,16 +1909,11 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#optional-nodejs" class="md-nav__link">
+  <a href="#lsp-language-servers" class="md-nav__link">
     <span class="md-ellipsis">
-      [optional] nodejs
+      LSP language servers
     </span>
   </a>
   
@@ -3013,25 +3007,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#neovim-treesitter" class="md-nav__link">
+  <a href="#neovim-config" class="md-nav__link">
     <span class="md-ellipsis">
-      Neovim treesitter
+      Neovim config
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#c-compiler" class="md-nav__link">
+  <a href="#treesitter-language-support" class="md-nav__link">
     <span class="md-ellipsis">
-      C Compiler
+      Treesitter language support
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="C Compiler">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#searching-files" class="md-nav__link">
     <span class="md-ellipsis">
       Searching files
@@ -3039,16 +3032,11 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#optional-nodejs" class="md-nav__link">
+  <a href="#lsp-language-servers" class="md-nav__link">
     <span class="md-ellipsis">
-      [optional] nodejs
+      LSP language servers
     </span>
   </a>
   
@@ -3087,28 +3075,26 @@
 
 
 <h1 id="install-neovim">Install neovim<a class="headerlink" href="#install-neovim" title="Permanent link">λ︎</a></h1>
-<p>Neovim version 9.5 is currenlyt available as a Termux package</p>
+<p>Neovim version 0.11 is currently available as a Termux package</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pkg install neovim
 </code></pre></div>
-<!-- TODO: Is there a PPA for development version of Neovim? -->
-
-<h2 id="neovim-treesitter">Neovim treesitter<a class="headerlink" href="#neovim-treesitter" title="Permanent link">λ︎</a></h2>
+<h2 id="neovim-config">Neovim config<a class="headerlink" href="#neovim-config" title="Permanent link">λ︎</a></h2>
+<p><a href="/neovim/install/astro5-configuration/">Practicalli Astro 5 config</a> provides tools for an effective Clojure workflow and software engineering tasks.</p>
+<h2 id="treesitter-language-support">Treesitter language support<a class="headerlink" href="#treesitter-language-support" title="Permanent link">λ︎</a></h2>
 <p>Treesitter provides excellent language syntax parsing and highlighting performance, allowing any Neovim package to benefit.</p>
-<p>The <code>nvim-treesitter</code> package is included in the <a href="https://github.com/practicalli/astro" target="_blank">practicalli/astro</a> configuration.</p>
-<h2 id="c-compiler">C Compiler<a class="headerlink" href="#c-compiler" title="Permanent link">λ︎</a></h2>
 <p>Install C compiler to compile the parser for each specific programming language.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pkg install clang
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pkg<span class="w"> </span>install<span class="w"> </span>clang
 </code></pre></div>
 <blockquote>
-<p><code>gcc</code> is not packaged for Termux, although there are guides to install gcc if preferred. clang has proved to be capable of creating the parsers used in the Practicalli configuration.</p>
+<p>NOTE: <code>gcc</code> is not packaged for Termux, although there are guides to install gcc if preferred. clang has proved to be capable of creating the parsers used in the Practicalli configuration.</p>
 </blockquote>
-<h3 id="searching-files">Searching files<a class="headerlink" href="#searching-files" title="Permanent link">λ︎</a></h3>
-<p>Telescope and other packages that involve searching for files recommend using ripgrep, a highly optomised tool for finding files on the operating system.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pkg install ripgrep
+<h2 id="searching-files">Searching files<a class="headerlink" href="#searching-files" title="Permanent link">λ︎</a></h2>
+<p>ripgrep is a highly optomised tool to search through files on the operating system, used by system pickers to optomise search results.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pkg<span class="w"> </span>install<span class="w"> </span>ripgrep
 </code></pre></div>
-<h2 id="optional-nodejs">[optional] nodejs<a class="headerlink" href="#optional-nodejs" title="Permanent link">λ︎</a></h2>
-<p>Optional.  Only if node.js is required as a Neovim provider and JavaScript or ClojureScript development is to be done.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pkg install nodejs
+<h2 id="lsp-language-servers">LSP language servers<a class="headerlink" href="#lsp-language-servers" title="Permanent link">λ︎</a></h2>
+<p>Some LSP servers require node.js to install and run.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pkg<span class="w"> </span>install<span class="w"> </span>nodejs
 </code></pre></div>
 
 
@@ -3130,7 +3116,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 16, 2024 22:40:30">June 16, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2025 19:47:33">April 30, 2025</span>
   </span>
 
     
