@@ -2,306 +2,306 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://practical.li/neovim/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/api-tools/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/assets/images/social/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/clojure-repl-workflow/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/clojure-repl-workflow/conjure/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/clojure-repl-workflow/documentation/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/clojure-repl-workflow/refactor-tools/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/clojure-repl-workflow/structural-editing/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/clojure-repl-workflow/testing/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/install/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/install/multiple-configurations/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/install/neovide/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/install/neovim/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/install/terminal-tools/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/introduction/features/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/introduction/repl-workflow/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/aligning-text/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/fennel/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/configuration/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/configuration/astrocommunity/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/configuration/practicalli/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/configuration/practicalli/config-design/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/configuration/practicalli/packer/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/configuration/practicalli/packages/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/configuration/practicalli/packages/lualine/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/configuration/practicalli/packages/nvim-treesitter/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/lua-language/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/modal-editing/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/modal-editing/case/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/modal-editing/folding/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/modal-editing/g-menu/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/modal-editing/key-binding-reference/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/modal-editing/motions/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/modal-editing/moving-around/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/modal-editing/narrowing/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/modal-editing/neovim-quick-reference/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/modal-editing/speaking-vim/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/modal-editing/tips-for-clojure/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/modal-editing/visual-select/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/modal-editing/z-menu/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/neovim/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/neovim/changelist/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/neovim/jumplist/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/neovim/language-providers/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/neovim/quickfix/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/reference/neovim/standard-path/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/source-control/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/source-control/diff/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/source-control/lazygit/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/source-control/neogit/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/source-control/octo/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/termux/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/termux/clojure-development/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/termux/custom-shell/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/termux/fdroid-install/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/termux/git/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/termux/neovim/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/termux/setup/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/termux/using-termux/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/comments/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/file-buffer-window-tab/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/multi-modal-editing/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/multiple-cursors/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/navigation/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/notifications/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/plugin-manager/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/refactor/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/registers/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/snippets/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/spell-check/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/terminal/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/zen-mode/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/search-replace/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/search-replace/spectre/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/search-replace/substitute/</loc>
-         <lastmod>2025-04-29</lastmod>
+         <lastmod>2025-04-30</lastmod>
     </url>
 </urlset>
