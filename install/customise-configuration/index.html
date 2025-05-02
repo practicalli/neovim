@@ -3128,33 +3128,27 @@
 <summary>Practicalli Astro 5 file structure</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>├──<span class="w"> </span>after
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│<span class="w">   </span>└──<span class="w"> </span>ftplugin
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│<span class="w">       </span>└──<span class="w"> </span>clojure.lua
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│<span class="w">       </span>└──<span class="w"> </span>clojure.lua<span class="w">       </span><span class="c1"># Config loaded after clojure filetype buffer opened</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├──<span class="w"> </span>CHANGELOG.md
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├──<span class="w"> </span>ftdetect
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│<span class="w">   </span>└──<span class="w"> </span>bb.vim
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│<span class="w">   </span>└──<span class="w"> </span>bb.vim<span class="w">                </span><span class="c1"># Set Babashka *.bb files to Clojure filetype</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├──<span class="w"> </span>init.lua
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├──<span class="w"> </span>lazy-lock.json
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├──<span class="w"> </span>lazy-lock.json<span class="w">            </span><span class="c1"># Optional: when identical plugin version install required</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├──<span class="w"> </span>lua
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│<span class="w">   </span>├──<span class="w"> </span>community.lua
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│<span class="w">   </span>├──<span class="w"> </span>lazy_setup.lua
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│<span class="w">   </span>├──<span class="w"> </span>community.lua<span class="w">         </span><span class="c1"># Astrocommunity plugin specs</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│<span class="w">   </span>├──<span class="w"> </span>lazy_setup.lua<span class="w">        </span><span class="c1"># Setup Lazy plugin manager, default plugins</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│<span class="w">   </span>└──<span class="w"> </span>plugins
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│<span class="w">       </span>├──<span class="w"> </span>plantuml.lua
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│<span class="w">       </span>├──<span class="w"> </span>practicalli.lua
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│<span class="w">       </span>├──<span class="w"> </span>termux.lua
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>│<span class="w">       </span>└──<span class="w"> </span>user.lua
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>├──<span class="w"> </span>neovim.yml
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>├──<span class="w"> </span>os-name.lua
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>├──<span class="w"> </span>README.md
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>├──<span class="w"> </span>repro.lua
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>├──<span class="w"> </span>repro.md
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>├──<span class="w"> </span>selene.toml
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>├──<span class="w"> </span>snippets
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>│<span class="w">   </span>├──<span class="w"> </span>clojure.json
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>│<span class="w">   </span>├──<span class="w"> </span>global.json
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>│<span class="w">   </span>├──<span class="w"> </span>lua.json
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>│<span class="w">   </span>├──<span class="w"> </span>markdown.json
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>│<span class="w">   </span>└──<span class="w"> </span>package.json
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>└──<span class="w"> </span>testing-snippets.md
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│<span class="w">       </span>├──<span class="w"> </span>practicalli.lua<span class="w">   </span><span class="c1"># Preferences of the Practicalli team</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│<span class="w">       </span>├──<span class="w"> </span>termux.lua<span class="w">        </span><span class="c1"># Use local LSP servers for Neovim on Termux (Android)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>├──<span class="w"> </span>neovim.yml
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>├──<span class="w"> </span>README.md
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>├──<span class="w"> </span>selene.toml
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>├──<span class="w"> </span>snippets<span class="w">                  </span><span class="c1"># Snippets (show in completion)</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span>├──<span class="w"> </span>clojure.json
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span>├──<span class="w"> </span>global.json
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span>├──<span class="w"> </span>lua.json
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span>├──<span class="w"> </span>markdown.json
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span>└──<span class="w"> </span>package.json
 </code></pre></div>
 </details>
 <h2 id="disable-practicalli-preferences">Disable Practicalli preferences<a class="headerlink" href="#disable-practicalli-preferences" title="Permanent link">λ︎</a></h2>
@@ -3422,7 +3416,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2025 21:50:23">April 30, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 2, 2025 13:19:08">May 2, 2025</span>
   </span>
 
     
