@@ -31,6 +31,7 @@
 - basics: refactor tools page
 - dev: book configuration & make task for deploying to staging
 - dev: add scheduled stale issue & pull request check
+- intro: troubleshoot guide with examples
 
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
