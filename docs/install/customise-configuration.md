@@ -6,33 +6,27 @@ Customise the Practicalli Astro5 configuration without needing to break from fut
     ```shell
     ├── after
     │   └── ftplugin
-    │       └── clojure.lua
+    │       └── clojure.lua       # Config loaded after clojure filetype buffer opened
     ├── CHANGELOG.md
     ├── ftdetect
-    │   └── bb.vim
+    │   └── bb.vim                # Set Babashka *.bb files to Clojure filetype
     ├── init.lua
-    ├── lazy-lock.json
+    ├── lazy-lock.json            # Optional: when identical plugin version install required
     ├── lua
-    │   ├── community.lua
-    │   ├── lazy_setup.lua
+    │   ├── community.lua         # Astrocommunity plugin specs
+    │   ├── lazy_setup.lua        # Setup Lazy plugin manager, default plugins
     │   └── plugins
-    │       ├── plantuml.lua
-    │       ├── practicalli.lua
-    │       ├── termux.lua
-    │       └── user.lua
-    ├── neovim.yml
-    ├── os-name.lua
+    │       ├── practicalli.lua   # Preferences of the Practicalli team
+    │       ├── termux.lua        # Use local LSP servers for Neovim on Termux (Android)
+    ├── neovim.yml                # Linter config
     ├── README.md
-    ├── repro.lua
-    ├── repro.md
-    ├── selene.toml
-    ├── snippets
-    │   ├── clojure.json
-    │   ├── global.json
-    │   ├── lua.json
-    │   ├── markdown.json
-    │   └── package.json
-    └── testing-snippets.md
+    ├── selene.toml               # Selene idiomatic lua code config
+    ├── snippets                  # Snippets (show in completion)
+        ├── clojure.json
+        ├── global.json
+        ├── lua.json
+        ├── markdown.json
+        └── package.json
     ```
 
 
