@@ -15,6 +15,8 @@
 ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
 ```
 
+> NOTE: Ascii Art Generator: https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=Astro%205
+
 ## Overview
 
 Software development with Neovim with a focus on Clojure programming language.  Includes comprehensive install and usage guides for both experienced and neovim curious.
