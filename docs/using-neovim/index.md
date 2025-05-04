@@ -8,12 +8,16 @@ The fundamental controls of Neovim which apply across all editing tasks.
 [:fontawesome-solid-book-open: File Buffer Window and Tab page](file-buffer-window-tab.md){.md-button}
 
 
+## Plugins & Tools Managers
+
+[:fontawesome-solid-book-open: Plugin Management](plugin-manager.md){.md-button}
+[:fontawesome-solid-book-open: LSP Server, Format & Lint tools](mason.md){.md-button}
 
 
 ## Editing Tools
 
 [:fontawesome-solid-book-open: Multiple Cursors](multiple-cursors.md){.md-button}
-[:fontawesome-solid-book-open: Search & Replace](search-replace.md){.md-button}
+[:fontawesome-solid-book-open: Search & Replace](search-replace/index.md){.md-button}
 
 
 ## Writing Tools
