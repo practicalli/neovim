@@ -71,12 +71,11 @@ Install from [:fontawesome-brands-github: Neovim GitHub releases](https://github
 
     Install from Homebrew or via the Neovim Release page
 
-    **Homebrew**
     ```shell
     brew install neovim
     ```
 
-    **Neovim Release**
+=== "MacOS Neovim Release"
 
     Download `nvim-macos.tar.gz` From the [**Neovim GitHub release page**](https://github.com/neovim/neovim/releases)
 
