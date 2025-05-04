@@ -89,31 +89,27 @@
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
+         <loc>https://practical.li/neovim/reference/configuration/astro4/</loc>
+         <lastmod>2025-05-04</lastmod>
+    </url>
+    <url>
          <loc>https://practical.li/neovim/reference/configuration/astrocommunity/</loc>
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
-         <loc>https://practical.li/neovim/reference/configuration/practicalli/</loc>
+         <loc>https://practical.li/neovim/reference/configuration/fenel-config/</loc>
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
-         <loc>https://practical.li/neovim/reference/configuration/practicalli/config-design/</loc>
+         <loc>https://practical.li/neovim/reference/configuration/fenel-config/packages/</loc>
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
-         <loc>https://practical.li/neovim/reference/configuration/practicalli/packer/</loc>
+         <loc>https://practical.li/neovim/reference/configuration/fenel-config/packages/lualine/</loc>
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
-         <loc>https://practical.li/neovim/reference/configuration/practicalli/packages/</loc>
-         <lastmod>2025-05-04</lastmod>
-    </url>
-    <url>
-         <loc>https://practical.li/neovim/reference/configuration/practicalli/packages/lualine/</loc>
-         <lastmod>2025-05-04</lastmod>
-    </url>
-    <url>
-         <loc>https://practical.li/neovim/reference/configuration/practicalli/packages/nvim-treesitter/</loc>
+         <loc>https://practical.li/neovim/reference/configuration/fenel-config/packages/nvim-treesitter/</loc>
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
@@ -258,6 +254,10 @@
     </url>
     <url>
          <loc>https://practical.li/neovim/using-neovim/file-buffer-window-tab/</loc>
+         <lastmod>2025-05-04</lastmod>
+    </url>
+    <url>
+         <loc>https://practical.li/neovim/using-neovim/mason/</loc>
          <lastmod>2025-05-04</lastmod>
     </url>
     <url>
