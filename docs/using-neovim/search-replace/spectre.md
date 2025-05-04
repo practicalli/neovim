@@ -1,5 +1,7 @@
 # Spectre
 
+!!! WARNING "Not included in Astro 5 - see Grug-Far"
+
 ++spc++ ++"s"++ ++"s"++ to toggle Spectre (open/close) to search and replace tool.
 
 `?` for the Spectre key mappings
@@ -19,7 +21,7 @@
 ![Neovim Spectre search replace](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/screenshots/neovim-search-replace-spectre-search-dark.png?raw=true#only-light){loading=lazy}
 
 
-++"d"++ ++"d"++ to toggle an occurance 
+++"d"++ ++"d"++ to toggle an occurance
 
  ++"R"++ replaces all occurances (after selecting the occurances to change)
 
@@ -35,9 +37,8 @@ A DONE checkbox is show at then end of each selection which has been reaplaced
     Use Git or Neovim undo to rollback changes made by Spectre.
 
 
-[:globe_with_meridians: Spectre](https://github.com/nvim-pack/nvim-spectre){target=_blank} is available via the AstroNvim Community project pack and included in the Practicalli astronvim-config    
+[:globe_with_meridians: Spectre](https://github.com/nvim-pack/nvim-spectre){target=_blank} is available via the AstroNvim Community project pack and included in the Practicalli astronvim-config
 
 [:globe_with_meridians: ripgrep](https://github.com/BurntSushi/ripgrep){target=_blank} and [:globe_with_meridians: sed](https://www.gnu.org/software/sed/) are required.
 
-[:fontawesome-brands-github: Spectre project](https://github.com/nvim-pack/nvim-spectre){target=_blank .md-button}    
-
+[:fontawesome-brands-github: Spectre project](https://github.com/nvim-pack/nvim-spectre){target=_blank .md-button}

@@ -4,8 +4,8 @@ Neovim has several built-in commands to search for patterns in the current buffe
 
 Additional tools that work across all the files in a project:
 
-- ++spc++ ++"s"++ ++"s"++ [search and replace commands using Spectre](#spectre)
-- ++spc++ ++"l"++ ++"r"++ to rename symbols using [Clojure LSP](/neovim/repl-driven-development/refactor-tools/)
+- ++spc++ ++"s"++ ++"s"++ search and replace using [Grug-far](grug-far.md)
+- ++spc++ ++"l"++ ++"r"++ to rename symbols using [Clojure LSP](/neovim/clojure-repl-workflow/refactor-tools/)
 
 > [:fontawesome-solid-book-open: multiple cursors](../multiple-cursors.md) for in-place editing within a buffer
 
@@ -52,34 +52,6 @@ Use search to populate the Neovim quickfix list and change occurrences across al
     ```
 
     Including the `c` option to confirm each replacement
-
-
-
-### Spectre
-
-[:fontawesome-solid-book-open: Spectre](spectre.md){target=_blank} shows occurrences of a pattern throughout all project files, replace individual or all occurrences.
-
-!!! EXAMPLE "Search and replace with Spectre"
-
-    ++spc++ ++"s"++ is the search and replace menu
-
-    Enter a Search pattern and all occurrences across the project are shown
-
-    Enter a Replace pattern to see occurrences with their replacement
-
-    ++"R"++ to replace all occurrences with the replace pattern
-
-    ++"C"++ to replace current occurrence
-
-
-++"q"++ adds the Spectre search results to quickfix list to edit occurrences with other Neovim tools
-
-
-![nvim-spectr](https://github.com/windwp/nvim-spectre/wiki/assets/demospectre.gif)
-
-[:globe_with_meridians: ripgrep](https://github.com/BurntSushi/ripgrep){target=_blank} and [:globe_with_meridians: sed](https://www.gnu.org/software/sed/) are required.
-
-[:globe_with_meridians: Spectre](https://github.com/nvim-pack/nvim-spectre){target=_blank .md-button}
 
 
 <!-- TODO: review :cdo and similar commands

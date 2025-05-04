@@ -152,6 +152,7 @@ nav:
       - Registers: using-neovim/registers.md
       - Search Replace:
           - using-neovim/search-replace/index.md
+          - Grug-Far: using-neovim/search-replace/grug-far.md
           - Substitute: using-neovim/search-replace/substitute.md
           - Spectre: using-neovim/search-replace/spectre.md
       - Spell Check: neovim-basics/spell-check.md
