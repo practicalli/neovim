@@ -215,12 +215,12 @@ nav:
       - Lua Language:
           - reference/lua-language/index.md
       - Fennel: reference/fennel.md
-      - Practicalli Config Design:
-          - reference/configuration/practicalli/index.md
-          - Config Design: reference/configuration/practicalli/config-design.md
-          - Packer: reference/configuration/practicalli/packer.md
-          - Packages:
-              - reference/configuration/practicalli/packages/index.md
-              - Status Line: reference/configuration/practicalli/packages/lualine.md
-              - Treesitter: reference/configuration/practicalli/packages/nvim-treesitter.md
-      - Writing Tips: https://practical.li/writing-tips/
+      # - Practicalli Config Design:
+      #     - reference/configuration/practicalli/index.md
+      #     - Config Design: reference/configuration/practicalli/config-design.md
+      #     - Packer: reference/configuration/practicalli/packer.md
+      #     - Packages:
+      #         - reference/configuration/practicalli/packages/index.md
+      #         - Status Line: reference/configuration/practicalli/packages/lualine.md
+      #         - Treesitter: reference/configuration/practicalli/packages/nvim-treesitter.md
+      - MkDocs Writing Tips: https://practical.li/writing-tips/

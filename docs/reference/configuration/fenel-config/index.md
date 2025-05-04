@@ -1,4 +1,4 @@
-# Config Design
+# Fenel Config Design
 
 The overall design of the Practicalli Neovim Config Redux
 
