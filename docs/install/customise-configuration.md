@@ -2,6 +2,8 @@
 
 Customise the Practicalli Astro5 configuration without needing to break from future pull requests (or manage merging)
 
+[:globe_with_meridians: AstroNvim - Customizing Plugins](https://docs.astronvim.com/configuration/customizing_plugins/) page describes how to customize plugins in detail.  AstroNvim recipies include specific customisation examples.
+
 ??? INFO "Practicalli Astro 5 file structure"
     ```shell
     ├── after
@@ -30,6 +32,19 @@ Customise the Practicalli Astro5 configuration without needing to break from fut
     ```
 
 
+## Disable a plugin
+
+Add any plugin name with the `enabled` key set to `false` and the plugin will be disabled.
+
+!!! EXAMPLE "Plugin spec with enabled false"
+    ```lua title="lua/plugins/user.lua"
+    return {
+      { "gpanders/nvim-parinfer", enabled = false },
+      { "julienvincent/nvim-paredit", enabled = false },
+    }
+    ```
+
+
 ## Disable Practicalli preferences
 
 `lua/plugins/practicalli.lua` contains neovim options, plugins and mappings that the Practicalli team prefer, but may not be suitable to everyones workflow.
@@ -54,7 +69,7 @@ Use the `lua/plugins/practicalli.lua` file as an example.
 Ensure the file returns a table (map of key value pairs).
 
 !!! EXAMPLE "Return a table in each lua file"
-    ```lua
+    ```lua title="lua/plugins/user.lua"
     return {
       -- configuration within tables
     }
@@ -62,8 +77,8 @@ Ensure the file returns a table (map of key value pairs).
 
 Local variables can be defined before the return statement and those variables used throughout the config in the current file.
 
-!!! EXAMPLE "Return a table in each lua file"
-    ```lua
+!!! EXAMPLE "Define local variable"
+    ```lua title="lua/plugins/user.lua"
     local user_practicalli = vim.env.PRACTICALLI_ASTRO
 
     return {
@@ -80,7 +95,7 @@ Add the Snack plugin to configuration one or more of the plugins it contains.
 Each plugin is defined within its own key, e.g. `dashboard` for the startup dashbord screen, `indent` for indentation guide lines, etc.
 
 !!! EXAMPLE "Folke Snacks overrides"
-    ```lua
+    ```lua title="lua/plugins/user.lua"
     ---@type LazySpec
     return {
       -- Snacks Customisation
@@ -120,7 +135,7 @@ Each plugin is defined within its own key, e.g. `dashboard` for the startup dash
 Key maps are defined within the `mappings` key and the specific mode they are enabled (i.e. normal, terminal, visual)
 
 !!! EXAMPLE "Neovim options and key mappings"
-    ```lua
+    ```lua title="lua/plugins/user.lua"
     -- ---------------------------------------------------------
     -- Example user configuration
     --
@@ -174,7 +189,7 @@ Add a plugin spec and configuration to include a new plugin.
 Plugin configuration in a user config will override plugins included via Astrocommunity, `lua/plugins/community.lua` file.
 
 !!! EXAMPLE "Plugins and Plugin options"
-    ```lua
+    ```lua title="lua/plugins/user.lua"
     ---@type LazySpec
     return {
       {
@@ -250,7 +265,7 @@ Plugin configuration in a user config will override plugins included via Astroco
 Key maps are defined within the `mappings` key and the specific mode they are enabled (i.e. normal, terminal, visual)
 
 !!! EXAMPLE "Neovim options and key mappings"
-    ```lua
+    ```lua title="lua/plugins/user.lua"
     -- ---------------------------------------------------------
     -- Example user configuration
     --
