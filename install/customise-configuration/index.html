@@ -2966,7 +2966,7 @@
 
 <h1 id="customise-configuration">Customise Configuration<a class="headerlink" href="#customise-configuration" title="Permanent link">λ︎</a></h1>
 <p>Customise the Practicalli Astro5 configuration without needing to break from future pull requests (or manage merging)</p>
-<p><a href="https://docs.astronvim.com/configuration/customizing_plugins/">AstroNvim - Customizing Plugins</a> page describes how to customize plugins in detail.  AstroNvim recipies include specific customisation examples.</p>
+<p><a href="https://docs.astronvim.com/configuration/customizing_plugins/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> AstroNvim - Customizing Plugins</a> page describes how to customize plugins in detail.  AstroNvim recipies include specific customisation examples.</p>
 <details class="info">
 <summary>Practicalli Astro 5 file structure</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>├──<span class="w"> </span>after
@@ -3021,7 +3021,7 @@
 <p>Ensure the file returns a table (map of key value pairs).</p>
 <div class="admonition example">
 <p class="admonition-title">Return a table in each lua file</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kr">return</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><span class="filename">lua/plugins/user.lua</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kr">return</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="c1">-- configuration within tables</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
 </code></pre></div>
@@ -3029,7 +3029,7 @@
 <p>Local variables can be defined before the return statement and those variables used throughout the config in the current file.</p>
 <div class="admonition example">
 <p class="admonition-title">Define local variable</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">user_practicalli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">vim</span><span class="p">.</span><span class="py">env</span><span class="p">.</span><span class="py">PRACTICALLI_ASTRO</span>
+<div class="highlight"><span class="filename">lua/plugins/user.lua</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">local</span><span class="w"> </span><span class="nv">user_practicalli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">vim</span><span class="p">.</span><span class="py">env</span><span class="p">.</span><span class="py">PRACTICALLI_ASTRO</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kr">return</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="c1">-- configuration within tables</span>
@@ -3042,7 +3042,7 @@
 <p>Each plugin is defined within its own key, e.g. <code>dashboard</code> for the startup dashbord screen, <code>indent</code> for indentation guide lines, etc.</p>
 <div class="admonition example">
 <p class="admonition-title">Folke Snacks overrides</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">---@type LazySpec</span>
+<div class="highlight"><span class="filename">lua/plugins/user.lua</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">---@type LazySpec</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kr">return</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="c1">-- Snacks Customisation</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="p">{</span>
@@ -3080,7 +3080,7 @@
 <p>Key maps are defined within the <code>mappings</code> key and the specific mode they are enabled (i.e. normal, terminal, visual)</p>
 <div class="admonition example">
 <p class="admonition-title">Neovim options and key mappings</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">-- ---------------------------------------------------------</span>
+<div class="highlight"><span class="filename">lua/plugins/user.lua</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">-- ---------------------------------------------------------</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1">-- Example user configuration</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1">--</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1">-- Add over-ride Nvim options, plugins and key mappings</span>
@@ -3130,7 +3130,7 @@
 <p>Plugin configuration in a user config will override plugins included via Astrocommunity, <code>lua/plugins/community.lua</code> file.</p>
 <div class="admonition example">
 <p class="admonition-title">Plugins and Plugin options</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">---@type LazySpec</span>
+<div class="highlight"><span class="filename">lua/plugins/user.lua</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">---@type LazySpec</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kr">return</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="p">{</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="s2">&quot;folke/which-key.nvim&quot;</span><span class="p">,</span>
@@ -3204,7 +3204,7 @@
 <p>Key maps are defined within the <code>mappings</code> key and the specific mode they are enabled (i.e. normal, terminal, visual)</p>
 <div class="admonition example">
 <p class="admonition-title">Neovim options and key mappings</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">-- ---------------------------------------------------------</span>
+<div class="highlight"><span class="filename">lua/plugins/user.lua</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">-- ---------------------------------------------------------</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1">-- Example user configuration</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1">--</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1">-- Add over-ride Nvim options, plugins and key mappings</span>
