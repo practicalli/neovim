@@ -163,6 +163,8 @@ nav:
       - Multiple Cursors: using-neovim/multiple-cursors.md
       - Zen Mode: using-neovim/zen-mode.md
       - Terminal: using-neovim/terminal.md
+  - Writing Documentation:
+      - writing-documentation/index.md
   - Clojure REPL Workflow:
       - clojure-repl-workflow/index.md
       - Conjure: clojure-repl-workflow/conjure.md

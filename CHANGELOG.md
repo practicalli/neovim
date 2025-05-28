@@ -33,6 +33,7 @@
 - dev: add scheduled stale issue & pull request check
 - intro: troubleshoot guide with examples
 - using-neovim: search-replace with grug-far
+- writing-docs: markdown, tools and syntax
 
 ### Changed
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
