@@ -20,7 +20,6 @@ A very efficient search and replace tool using the external [ripgrep command](ht
     ++comma++ ++"j"++ / ++"k"++ replace at current line & move to next / previous change
 
 
-
 ??? TIP "Search results in Quicklist"
     ++comma++ ++"q"++ adds search results to quickfix list to edit occurrences with other Neovim tools
 
@@ -33,7 +32,7 @@ Enter patterns in the **Search** and **Replace** and the results are show in a d
 
 ![Grug-Far Search buffer](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/astronvim-5/neovim-search-grug-far-search-dark.png?raw=true){loading=lazy}
 
-??? EXAMPLE "Usefull Ripgrep options for Grug-Far"
+??? EXAMPLE "Ripgrep options for Grug-Far"
     - `-i/--ignore-case`: ignore case differences, e.g. `rg -i fast` matches `fast`, `fASt`, `FAST`, etc.
     - `-F/--fixed-strings`: Disable regular expression matching and treat the pattern as a literal string.
     - `-w/--word-regexp`: pattern matches are surrounded by word boundaries, e.g. `pattern` is `\b(?:pattern)\b`.
