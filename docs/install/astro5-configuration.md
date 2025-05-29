@@ -52,12 +52,9 @@ Treesitter will prompt to compile its language parsers.
 ++"q"++ to close the lazy package manager pop-up once all plugins are installed.
 
 
-??? INFO "Plugin install without UI display"
-    Use the `--headless` Neovim flag to install plugins without running whole Neovim editor user interface.
+??? WARNING "Avoid running Astro5 package update headless"
+    Do not use the `--headless` Neovim flag to install plugins or pass the `+:Lazy update` arguments.  The Lazy.nvim package manager requires neovim UI to run correctly.
 
-    ```shell
-    nvim --headless
-    ```
 
 ??? TIP "Identical install with lazy-lock.json"
     When plugins are installed, a `lazy-lock.json` contains the versions of all plugins. Include this file when exact plugin versions are required for other system installs.  Otherwise this file can be safely ignored.
