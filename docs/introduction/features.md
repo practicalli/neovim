@@ -1,34 +1,33 @@
 # Neovim features
 
+A clean UI provides for a distraction free development experience, with only the essential information presented in the Neovim statusline or inline with the code
+
 !!! INFO "Neovim News for new developments"
     Keep up to date with new features within Neovim
 
     ```shell
     :help news
     ```
+
     View the news from a previous verion of Neovim
     ```shell
     :help news-0.10
     ```
 
-## Neovim features for development
 
-A clean UI provides for a distraction free development experience, with only the essential information presented in the Neovim statusline or inline with the code
+## Clojure development
+
+Support for the Clojure programming language, providing tools for REPL driven development.
 
 - [Conjure REPL client](#conjure) - automatic Clojure REPL connection, evaluation, test runners
-- Treesitter - incremental parsing of code for efficient manipulation and decoration
-- Lazy.nvim - lazy loading plug-in manager to run only the relevant plugins (minimal resource footprint)
-- [LSP](#language-server-protocol) - auto-completion, snippets, inline linting, reference navigation, refactor and unit test coverage
-- [statusline](#status-line) - LSP status, diff changes, filetype, cursor position
-- [Selection narrowing (picker)](#selection-narrowing) completion of files, packages, colour schemes, etc
-- [File browser](#file-browser) - telescope selection narrowing and visual file system navigation
-- [Version Control](#version-control) gutter indicators for changed lines
-- [todo comments](#todo-comments) todo, fix, notes, indicators with gutter icons
-- relative line numbers for vim-style navigation
+- [Clojure LSP](#language-server-protocol) - auto-completion, snippets, inline linting, reference navigation, refactor and unit test coverage
+- Structural editing with paredit and parinfer
+- Clojure snippets for common code and config
+- Babashka files set to Clojure filetype (feedback welcome on Babashka support)
+- JSON support
 
 
-
-## Conjure
+### Conjure
 
 [:fontawesome-solid-book-open: Conjure](/neovim/repl-driven-development/conjure/) An interactive environment for evaluating code, e.g. a Clojure REPL.  Conjure automatically connects to an nREPL process running in the current project.
 
@@ -36,22 +35,23 @@ Evaluate Clojure code as its developed for an instant feedback workflow.
 
 Run unit tests with Kaocha test runner (Cognitect Labs and ClojureScript runners also available)
 
-> Fireplace has been a long-standing plugin for Vim to support Clojure REPL connection.
 
-
-## Lazy Plugin manager
+## Plugin manager & Tools Manager
 
 Lazy.nvim manages neovim plugins with a rich UI that provides an enjoyable user experience.  Plugins are automatically installed during startup and lists the status of each plugins.
 
-Plugins are automatic cached & bytecode compiled and can be lazy loaded to streamline startup time and resource usage based on events, commands, filetypes, and key mappings.  Efficient plugin downlaods using partial blobless clones of plugin repositories, i.e. `--filter=blob:none`
+Plugins are automatic cached & bytecode compiled and can be lazy loaded to streamline startup time and resource usage based on events, commands, filetypes, and key mappings.  Efficient plugin downloads using partial blob-less clones of plugin repositories, i.e. `--filter=blob:none`
 
 ![Lazy package manager UI](https://user-images.githubusercontent.com/292349/208301737-68fb279c-ba70-43ef-a369-8c3e8367d6b1.png){loading=lazy}
 
 [:fontawesome-brands-github: Lazy.nvim](https://github.com/folke/lazy.nvim){target=_blank .md-button}
 
+Mason installs and updates LSP servers, format and lint tools.
+
+
 ## Treesitter
 
-Neovim provides highly effective syntax highlighting of source code due to Treesitter.
+Incremental parsing of code for efficient manipulation and decoration (syntax highlighting, errors, warnings, etc.)
 
 Tree-sitter parses files opened in Neovim and builds a concrete syntax tree that any Neovim plugin can use to efficiently provide feedback. Treesitter uses incremental parsing to efficiently update the syntax tree as a file is edited.
 
@@ -113,20 +113,22 @@ The telescope list narrows matches as characters are typed
 
 ## Version Control
 
-[Gitsigns](https://github.com/lewis6991/gitsigns.nvim) hightlights buffer changes in the gutter
+- [Source code management](#version-control) gutter indicators for changed lines and staging changes from buffer
 
-Lualine shows number of Git changes in status line
-<!-- TODO: screenshot of buffer with added, changed and deleted changes, with indicators in status line -->
+[Gitsigns](https://github.com/lewis6991/gitsigns.nvim) hightlights buffer changes in the gutter
 
 [Diffview](https://github.com/sindrets/diffview.nvim) to review all changes for any git revision
 
-[Neogit](https://github.com/TimUntersberger/neogit) provides a rich git client to add, stash, commit, push & pull changes.
+[Neogit](https://github.com/TimUntersberger/neogit) provides a rich git client to add, stash, commit, push & pull changes (like Emacs Magit & VSCode Edamagit).
+
+LazyGit integration (requires local lazygit install)
 
 [Octo](https://github.com/pwntester/octo.nvim) provides a GitHub specific client to manage issues and pull requests, using GitHub CLI authentication.
 
 <!-- TODO: screenshot of octo with staged and unstaged changes -->
 
 LazyGit UI
+
 
 
 ## File Browser
@@ -152,3 +154,34 @@ LSP feedback
 
 * LSP server
 * Marksman: select anchors and pages for links
+
+
+## General Editing tools
+
+- [todo comments](#todo-comments) todo, fix, notes, indicators with gutter icons
+- relative line numbers for vim-style navigation
+- Clojure LSP server install & integration (install via mason or local install)
+- Switch between associate src and test files (speeds up writing/fixing tests) :gratitude: to @dominicm
+- Treesitter highlighting & rainbow delimiters
+- Search & Replace (grug-far)
+- Multiple Cursors
+
+## UI
+
+- [Selection narrowing (Snacks picker)](#selection-narrowing) completion of files, packages, colour schemes, etc
+- Folke Snacks picker & Notifications
+- Noice fancy command line UI
+- [File browser](#file-browser) - selection narrowing and visual file system navigation
+- [statusline](#status-line) - LSP status, diff changes, filetype, cursor position
+
+
+## Colorschemes & Themes
+
+Catppuccin is a very clean theme with Treesitter integration and support from a wide range of Neovim plugins.
+
+Astro5 also includes a color selector and color code highlighting.
+
+Emoji completions are shown when typing `:`
+
+Neovide (GUI) integration (scaling fonts, etc)
+Show key presses in when Neovim normal mode (demos, screen-casts)
