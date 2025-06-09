@@ -518,15 +518,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#neovim-features-for-development" class="md-nav__link">
+  <a href="#clojure-development" class="md-nav__link">
     <span class="md-ellipsis">
-      Neovim features for development
+      Clojure development
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Clojure development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#conjure" class="md-nav__link">
     <span class="md-ellipsis">
       Conjure
@@ -534,11 +535,16 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#lazy-plugin-manager" class="md-nav__link">
+  <a href="#plugin-manager-tools-manager" class="md-nav__link">
     <span class="md-ellipsis">
-      Lazy Plugin manager
+      Plugin manager &amp; Tools Manager
     </span>
   </a>
   
@@ -620,6 +626,33 @@
   <a href="#markdown" class="md-nav__link">
     <span class="md-ellipsis">
       Markdown
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-editing-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Editing tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colorschemes-themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Colorschemes &amp; Themes
     </span>
   </a>
   
@@ -2958,15 +2991,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#neovim-features-for-development" class="md-nav__link">
+  <a href="#clojure-development" class="md-nav__link">
     <span class="md-ellipsis">
-      Neovim features for development
+      Clojure development
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Clojure development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#conjure" class="md-nav__link">
     <span class="md-ellipsis">
       Conjure
@@ -2974,11 +3008,16 @@
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#lazy-plugin-manager" class="md-nav__link">
+  <a href="#plugin-manager-tools-manager" class="md-nav__link">
     <span class="md-ellipsis">
-      Lazy Plugin manager
+      Plugin manager &amp; Tools Manager
     </span>
   </a>
   
@@ -3065,6 +3104,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#general-editing-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Editing tools
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colorschemes-themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Colorschemes &amp; Themes
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3098,43 +3164,38 @@
 
 
 <h1 id="neovim-features">Neovim features<a class="headerlink" href="#neovim-features" title="Permanent link">λ︎</a></h1>
+<p>A clean UI provides for a distraction free development experience, with only the essential information presented in the Neovim statusline or inline with the code</p>
 <div class="admonition info">
 <p class="admonition-title">Neovim News for new developments</p>
 <p>Keep up to date with new features within Neovim</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>:help<span class="w"> </span>news
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>:help<span class="w"> </span>news
 </code></pre></div>
-View the news from a previous verion of Neovim
+<p>View the news from a previous verion of Neovim
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>:help<span class="w"> </span>news-0.10
 </code></pre></div></p>
 </div>
-<h2 id="neovim-features-for-development">Neovim features for development<a class="headerlink" href="#neovim-features-for-development" title="Permanent link">λ︎</a></h2>
-<p>A clean UI provides for a distraction free development experience, with only the essential information presented in the Neovim statusline or inline with the code</p>
+<h2 id="clojure-development">Clojure development<a class="headerlink" href="#clojure-development" title="Permanent link">λ︎</a></h2>
+<p>Support for the Clojure programming language, providing tools for REPL driven development.</p>
 <ul>
 <li><a href="#conjure">Conjure REPL client</a> - automatic Clojure REPL connection, evaluation, test runners</li>
-<li>Treesitter - incremental parsing of code for efficient manipulation and decoration</li>
-<li>Lazy.nvim - lazy loading plug-in manager to run only the relevant plugins (minimal resource footprint)</li>
-<li><a href="#language-server-protocol">LSP</a> - auto-completion, snippets, inline linting, reference navigation, refactor and unit test coverage</li>
-<li><a href="#status-line">statusline</a> - LSP status, diff changes, filetype, cursor position</li>
-<li><a href="#selection-narrowing">Selection narrowing (picker)</a> completion of files, packages, colour schemes, etc</li>
-<li><a href="#file-browser">File browser</a> - telescope selection narrowing and visual file system navigation</li>
-<li><a href="#version-control">Version Control</a> gutter indicators for changed lines</li>
-<li><a href="#todo-comments">todo comments</a> todo, fix, notes, indicators with gutter icons</li>
-<li>relative line numbers for vim-style navigation</li>
+<li><a href="#language-server-protocol">Clojure LSP</a> - auto-completion, snippets, inline linting, reference navigation, refactor and unit test coverage</li>
+<li>Structural editing with paredit and parinfer</li>
+<li>Clojure snippets for common code and config</li>
+<li>Babashka files set to Clojure filetype (feedback welcome on Babashka support)</li>
+<li>JSON support</li>
 </ul>
-<h2 id="conjure">Conjure<a class="headerlink" href="#conjure" title="Permanent link">λ︎</a></h2>
+<h3 id="conjure">Conjure<a class="headerlink" href="#conjure" title="Permanent link">λ︎</a></h3>
 <p><a href="/neovim/repl-driven-development/conjure/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5m76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5"/></svg></span> Conjure</a> An interactive environment for evaluating code, e.g. a Clojure REPL.  Conjure automatically connects to an nREPL process running in the current project.</p>
 <p>Evaluate Clojure code as its developed for an instant feedback workflow.</p>
 <p>Run unit tests with Kaocha test runner (Cognitect Labs and ClojureScript runners also available)</p>
-<blockquote>
-<p>Fireplace has been a long-standing plugin for Vim to support Clojure REPL connection.</p>
-</blockquote>
-<h2 id="lazy-plugin-manager">Lazy Plugin manager<a class="headerlink" href="#lazy-plugin-manager" title="Permanent link">λ︎</a></h2>
+<h2 id="plugin-manager-tools-manager">Plugin manager &amp; Tools Manager<a class="headerlink" href="#plugin-manager-tools-manager" title="Permanent link">λ︎</a></h2>
 <p>Lazy.nvim manages neovim plugins with a rich UI that provides an enjoyable user experience.  Plugins are automatically installed during startup and lists the status of each plugins.</p>
-<p>Plugins are automatic cached &amp; bytecode compiled and can be lazy loaded to streamline startup time and resource usage based on events, commands, filetypes, and key mappings.  Efficient plugin downlaods using partial blobless clones of plugin repositories, i.e. <code>--filter=blob:none</code></p>
+<p>Plugins are automatic cached &amp; bytecode compiled and can be lazy loaded to streamline startup time and resource usage based on events, commands, filetypes, and key mappings.  Efficient plugin downloads using partial blob-less clones of plugin repositories, i.e. <code>--filter=blob:none</code></p>
 <p><a class="glightbox" href="https://user-images.githubusercontent.com/292349/208301737-68fb279c-ba70-43ef-a369-8c3e8367d6b1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Lazy package manager UI" loading="lazy" src="https://user-images.githubusercontent.com/292349/208301737-68fb279c-ba70-43ef-a369-8c3e8367d6b1.png" /></a></p>
 <p><a class="md-button" href="https://github.com/folke/lazy.nvim" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg></span> Lazy.nvim</a></p>
+<p>Mason installs and updates LSP servers, format and lint tools.</p>
 <h2 id="treesitter">Treesitter<a class="headerlink" href="#treesitter" title="Permanent link">λ︎</a></h2>
-<p>Neovim provides highly effective syntax highlighting of source code due to Treesitter.</p>
+<p>Incremental parsing of code for efficient manipulation and decoration (syntax highlighting, errors, warnings, etc.)</p>
 <p>Tree-sitter parses files opened in Neovim and builds a concrete syntax tree that any Neovim plugin can use to efficiently provide feedback. Treesitter uses incremental parsing to efficiently update the syntax tree as a file is edited.</p>
 <ul>
 <li>parse on every keystroke in a text editor</li>
@@ -3181,12 +3242,13 @@ View the news from a previous verion of Neovim
 <!-- TODO: screeshot of telescope file browser, project files and package list -->
 
 <h2 id="version-control">Version Control<a class="headerlink" href="#version-control" title="Permanent link">λ︎</a></h2>
+<ul>
+<li><a href="#version-control">Source code management</a> gutter indicators for changed lines and staging changes from buffer</li>
+</ul>
 <p><a href="https://github.com/lewis6991/gitsigns.nvim">Gitsigns</a> hightlights buffer changes in the gutter</p>
-<p>Lualine shows number of Git changes in status line</p>
-<!-- TODO: screenshot of buffer with added, changed and deleted changes, with indicators in status line -->
-
 <p><a href="https://github.com/sindrets/diffview.nvim">Diffview</a> to review all changes for any git revision</p>
-<p><a href="https://github.com/TimUntersberger/neogit">Neogit</a> provides a rich git client to add, stash, commit, push &amp; pull changes.</p>
+<p><a href="https://github.com/TimUntersberger/neogit">Neogit</a> provides a rich git client to add, stash, commit, push &amp; pull changes (like Emacs Magit &amp; VSCode Edamagit).</p>
+<p>LazyGit integration (requires local lazygit install)</p>
 <p><a href="https://github.com/pwntester/octo.nvim">Octo</a> provides a GitHub specific client to manage issues and pull requests, using GitHub CLI authentication.</p>
 <!-- TODO: screenshot of octo with staged and unstaged changes -->
 
@@ -3206,6 +3268,30 @@ View the news from a previous verion of Neovim
 <li>LSP server</li>
 <li>Marksman: select anchors and pages for links</li>
 </ul>
+<h2 id="general-editing-tools">General Editing tools<a class="headerlink" href="#general-editing-tools" title="Permanent link">λ︎</a></h2>
+<ul>
+<li><a href="#todo-comments">todo comments</a> todo, fix, notes, indicators with gutter icons</li>
+<li>relative line numbers for vim-style navigation</li>
+<li>Clojure LSP server install &amp; integration (install via mason or local install)</li>
+<li>Switch between associate src and test files (speeds up writing/fixing tests) :gratitude: to @dominicm</li>
+<li>Treesitter highlighting &amp; rainbow delimiters</li>
+<li>Search &amp; Replace (grug-far)</li>
+<li>Multiple Cursors</li>
+</ul>
+<h2 id="ui">UI<a class="headerlink" href="#ui" title="Permanent link">λ︎</a></h2>
+<ul>
+<li><a href="#selection-narrowing">Selection narrowing (Snacks picker)</a> completion of files, packages, colour schemes, etc</li>
+<li>Folke Snacks picker &amp; Notifications</li>
+<li>Noice fancy command line UI</li>
+<li><a href="#file-browser">File browser</a> - selection narrowing and visual file system navigation</li>
+<li><a href="#status-line">statusline</a> - LSP status, diff changes, filetype, cursor position</li>
+</ul>
+<h2 id="colorschemes-themes">Colorschemes &amp; Themes<a class="headerlink" href="#colorschemes-themes" title="Permanent link">λ︎</a></h2>
+<p>Catppuccin is a very clean theme with Treesitter integration and support from a wide range of Neovim plugins.</p>
+<p>Astro5 also includes a color selector and color code highlighting.</p>
+<p>Emoji completions are shown when typing <code>:</code></p>
+<p>Neovide (GUI) integration (scaling fonts, etc)
+Show key presses in when Neovim normal mode (demos, screen-casts)</p>
 
 
 
@@ -3226,7 +3312,7 @@ View the news from a previous verion of Neovim
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 29, 2025 22:49:06 UTC">April 29, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 9, 2025 21:52:49 UTC">June 9, 2025</span>
   </span>
 
     
