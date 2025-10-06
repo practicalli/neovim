@@ -1,6 +1,6 @@
 ---
 # MegaLinter GitHub Action configuration file
-# More info at https://megalinter.github.io
+# More info at https://megalinter.io
 # All variables described in https://megalinter.io/latest/configuration/
 
 name: MegaLinter
