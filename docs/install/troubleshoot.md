@@ -165,567 +165,567 @@ Plugin maintainers will also find deprecation notices for future planned release
       - ADVICE:
         - use client:request instead.
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/aerial.nvim/lua/aerial/backends/lsp/init.lua:39
-            /home/practicalli/.local/share/nvim-astro5/lazy/aerial.nvim/lua/aerial/backends/init.lua:129
-            /home/practicalli/.local/share/nvim-astro5/lazy/aerial.nvim/lua/aerial/backends/init.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/aerial.nvim/lua/aerial/backends/init.lua:251
-            /home/practicalli/.local/share/nvim-astro5/lazy/aerial.nvim/lua/aerial/autocommands.lua:88
+            /home/practicalli/.local/share/nvim-astro/lazy/aerial.nvim/lua/aerial/backends/lsp/init.lua:39
+            /home/practicalli/.local/share/nvim-astro/lazy/aerial.nvim/lua/aerial/backends/init.lua:129
+            /home/practicalli/.local/share/nvim-astro/lazy/aerial.nvim/lua/aerial/backends/init.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/aerial.nvim/lua/aerial/backends/init.lua:251
+            /home/practicalli/.local/share/nvim-astro/lazy/aerial.nvim/lua/aerial/autocommands.lua:88
             vim/_editor.lua:0
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/aerial.nvim/lua/aerial/backends/lsp/init.lua:39
-            /home/practicalli/.local/share/nvim-astro5/lazy/aerial.nvim/lua/aerial/backends/util.lua:10
+            /home/practicalli/.local/share/nvim-astro/lazy/aerial.nvim/lua/aerial/backends/lsp/init.lua:39
+            /home/practicalli/.local/share/nvim-astro/lazy/aerial.nvim/lua/aerial/backends/util.lua:10
             vim/_editor.lua:0
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/aerial.nvim/lua/aerial/backends/lsp/init.lua:39
-            /home/practicalli/.local/share/nvim-astro5/lazy/aerial.nvim/lua/aerial/backends/util.lua:10
+            /home/practicalli/.local/share/nvim-astro/lazy/aerial.nvim/lua/aerial/backends/lsp/init.lua:39
+            /home/practicalli/.local/share/nvim-astro/lazy/aerial.nvim/lua/aerial/backends/util.lua:10
             vim/_editor.lua:0
             [C]:-1
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/which-key.nvim/lua/which-key/state.lua:262
-            /home/practicalli/.local/share/nvim-astro5/lazy/which-key.nvim/lua/which-key/state.lua:346
-            /home/practicalli/.local/share/nvim-astro5/lazy/which-key.nvim/lua/which-key/triggers.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/which-key.nvim/lua/which-key/state.lua:262
+            /home/practicalli/.local/share/nvim-astro/lazy/which-key.nvim/lua/which-key/state.lua:346
+            /home/practicalli/.local/share/nvim-astro/lazy/which-key.nvim/lua/which-key/triggers.lua:44
 
      ~
     - WARNING client.supports_method is deprecated. Feature will be removed in Nvim 0.13
       - ADVICE:
         - use client:supports_method instead.
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:3
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:132
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/client.lua:210
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/client.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:132
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/client.lua:210
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/client.lua:135
             vim/_editor.lua:0
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:3
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:146
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/client.lua:210
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/client.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:146
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/client.lua:210
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/client.lua:135
             vim/_editor.lua:0
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_mappings.lua:45
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:177
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/client.lua:210
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/client.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_mappings.lua:45
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:177
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/client.lua:210
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/client.lua:135
             vim/_editor.lua:0
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_mappings.lua:111
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:177
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/client.lua:210
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/client.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_mappings.lua:111
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:177
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/client.lua:210
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/client.lua:135
             vim/_editor.lua:0
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:3
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:132
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:244
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:255
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:216
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:132
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:244
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:255
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:216
             [C]:-1
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/picker/core/picker.lua:688
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/picker/actions.lua:44
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/picker/actions.lua:36
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/picker/core/picker.lua:688
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/picker/actions.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/picker/actions.lua:36
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_mappings.lua:45
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:177
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:244
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:255
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:216
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_mappings.lua:45
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:177
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:244
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:255
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:216
             [C]:-1
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/picker/core/picker.lua:688
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/picker/actions.lua:44
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/picker/actions.lua:36
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/picker/core/picker.lua:688
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/picker/actions.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/picker/actions.lua:36
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_mappings.lua:111
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:177
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:244
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:255
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:216
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_mappings.lua:111
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:177
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:244
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:255
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:216
             [C]:-1
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/picker/core/picker.lua:688
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/picker/actions.lua:44
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/picker/actions.lua:36
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/picker/core/picker.lua:688
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/picker/actions.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/picker/actions.lua:36
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:3
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:132
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:244
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:255
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:211
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:132
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:244
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:255
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:211
             [C]:-1
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp/client.lua:491
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp/client.lua:1023
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp.lua:936
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp.lua:624
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:130
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:161
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:220
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:130
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:161
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:220
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/async.lua:5
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/async.lua:5
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:3
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:146
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:244
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:255
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:211
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:146
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:244
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:255
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:211
             [C]:-1
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp/client.lua:491
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp/client.lua:1023
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp.lua:936
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp.lua:624
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:130
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:161
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:220
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:130
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:161
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:220
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/async.lua:5
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/async.lua:5
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_mappings.lua:45
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:177
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:244
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:255
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:211
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_mappings.lua:45
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:177
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:244
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:255
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:211
             [C]:-1
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp/client.lua:491
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp/client.lua:1023
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp.lua:936
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp.lua:624
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:130
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:161
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:220
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:130
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:161
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:220
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/async.lua:5
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/async.lua:5
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_mappings.lua:111
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:177
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:244
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:255
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:211
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_mappings.lua:111
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:177
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:244
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:255
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/configs.lua:211
             [C]:-1
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp/client.lua:491
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp/client.lua:1023
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp.lua:936
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp.lua:624
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:130
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:161
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:220
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:130
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:161
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/manager.lua:220
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/nvim-lspconfig/lua/lspconfig/async.lua:5
+            /home/practicalli/.local/share/nvim-astro/lazy/nvim-lspconfig/lua/lspconfig/async.lua:5
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:3
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:156
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:156
 
      ~
     - WARNING vim.region is deprecated. Feature will be removed in Nvim 0.13
       - ADVICE:
         - use vim.fn.getregionpos() instead.
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/vim-illuminate/lua/illuminate/highlight.lua:53
-            /home/practicalli/.local/share/nvim-astro5/lazy/vim-illuminate/lua/illuminate/highlight.lua:24
-            /home/practicalli/.local/share/nvim-astro5/lazy/vim-illuminate/lua/illuminate/engine.lua:190
+            /home/practicalli/.local/share/nvim-astro/lazy/vim-illuminate/lua/illuminate/highlight.lua:53
+            /home/practicalli/.local/share/nvim-astro/lazy/vim-illuminate/lua/illuminate/highlight.lua:24
+            /home/practicalli/.local/share/nvim-astro/lazy/vim-illuminate/lua/illuminate/engine.lua:190
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/vim-illuminate/lua/illuminate/engine.lua:158
+            /home/practicalli/.local/share/nvim-astro/lazy/vim-illuminate/lua/illuminate/engine.lua:158
             vim/_editor.lua:0
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/vim-illuminate/lua/illuminate/highlight.lua:53
-            /home/practicalli/.local/share/nvim-astro5/lazy/vim-illuminate/lua/illuminate/highlight.lua:24
-            /home/practicalli/.local/share/nvim-astro5/lazy/vim-illuminate/lua/illuminate/engine.lua:190
+            /home/practicalli/.local/share/nvim-astro/lazy/vim-illuminate/lua/illuminate/highlight.lua:53
+            /home/practicalli/.local/share/nvim-astro/lazy/vim-illuminate/lua/illuminate/highlight.lua:24
+            /home/practicalli/.local/share/nvim-astro/lazy/vim-illuminate/lua/illuminate/engine.lua:190
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/vim-illuminate/lua/illuminate/engine.lua:158
+            /home/practicalli/.local/share/nvim-astro/lazy/vim-illuminate/lua/illuminate/engine.lua:158
             vim/_editor.lua:0
             [C]:-1
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/which-key.nvim/lua/which-key/state.lua:262
-            /home/practicalli/.local/share/nvim-astro5/lazy/which-key.nvim/lua/which-key/state.lua:346
-            /home/practicalli/.local/share/nvim-astro5/lazy/which-key.nvim/lua/which-key/state.lua:115
+            /home/practicalli/.local/share/nvim-astro/lazy/which-key.nvim/lua/which-key/state.lua:262
+            /home/practicalli/.local/share/nvim-astro/lazy/which-key.nvim/lua/which-key/state.lua:346
+            /home/practicalli/.local/share/nvim-astro/lazy/which-key.nvim/lua/which-key/state.lua:115
 
      ~
     - WARNING vim.str_utfindex is deprecated. Feature will be removed in Nvim 1.0
       - ADVICE:
         - use vim.str_utfindex(s, encoding, index, strict_indexing) instead.
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/diff.lua:158
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/formatting.lua:85
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/diff.lua:158
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/formatting.lua:85
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/formatting.lua:84
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/generators.lua:45
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/generators.lua:192
-            /home/practicalli/.local/share/nvim-astro5/lazy/plenary.nvim/lua/plenary/async/async.lua:25
-            /home/practicalli/.local/share/nvim-astro5/lazy/plenary.nvim/lua/plenary/async/async.lua:45
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/formatting.lua:84
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/generators.lua:45
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/generators.lua:192
+            /home/practicalli/.local/share/nvim-astro/lazy/plenary.nvim/lua/plenary/async/async.lua:25
+            /home/practicalli/.local/share/nvim-astro/lazy/plenary.nvim/lua/plenary/async/async.lua:45
             [C]:-1
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp/client.lua:742
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp/buf.lua:598
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:72
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:161
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:72
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:161
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/diff.lua:159
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/formatting.lua:85
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/diff.lua:159
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/formatting.lua:85
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/formatting.lua:84
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/generators.lua:45
-            /home/practicalli/.local/share/nvim-astro5/lazy/none-ls.nvim/lua/null-ls/generators.lua:192
-            /home/practicalli/.local/share/nvim-astro5/lazy/plenary.nvim/lua/plenary/async/async.lua:25
-            /home/practicalli/.local/share/nvim-astro5/lazy/plenary.nvim/lua/plenary/async/async.lua:45
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/formatting.lua:84
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/generators.lua:45
+            /home/practicalli/.local/share/nvim-astro/lazy/none-ls.nvim/lua/null-ls/generators.lua:192
+            /home/practicalli/.local/share/nvim-astro/lazy/plenary.nvim/lua/plenary/async/async.lua:25
+            /home/practicalli/.local/share/nvim-astro/lazy/plenary.nvim/lua/plenary/async/async.lua:45
             [C]:-1
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp/client.lua:742
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp/buf.lua:598
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:72
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:161
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:72
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:161
 
      ~
     - WARNING vim.validate is deprecated. Feature will be removed in Nvim 1.0
       - ADVICE:
         - use vim.validate(name, value, validator, optional_or_msg) instead.
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/mini.icons/lua/mini/icons.lua:1962
-            /home/practicalli/.local/share/nvim-astro5/lazy/mini.icons/lua/mini/icons.lua:192
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:387
+            /home/practicalli/.local/share/nvim-astro/lazy/mini.icons/lua/mini/icons.lua:1962
+            /home/practicalli/.local/share/nvim-astro/lazy/mini.icons/lua/mini/icons.lua:192
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:387
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
             [C]:-1
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/astroui/lua/astroui/status/utils.lua:155
-            /home/practicalli/.local/share/nvim-astro5/lazy/astroui/lua/astroui/status/hl.lua:41
-            /home/practicalli/.local/share/nvim-astro5/lazy/heirline.nvim/lua/heirline/statusline.lua:355
-            /home/practicalli/.local/share/nvim-astro5/lazy/heirline.nvim/lua/heirline/statusline.lua:398
-            /home/practicalli/.local/share/nvim-astro5/lazy/heirline.nvim/lua/heirline/statusline.lua:398
-            /home/practicalli/.local/share/nvim-astro5/lazy/heirline.nvim/lua/heirline/statusline.lua:398
-            /home/practicalli/.local/share/nvim-astro5/lazy/heirline.nvim/lua/heirline/statusline.lua:398
-            /home/practicalli/.local/share/nvim-astro5/lazy/heirline.nvim/lua/heirline/statusline.lua:398
-            /home/practicalli/.local/share/nvim-astro5/lazy/heirline.nvim/lua/heirline/statusline.lua:473
-            /home/practicalli/.local/share/nvim-astro5/lazy/heirline.nvim/lua/heirline/init.lua:114
+            /home/practicalli/.local/share/nvim-astro/lazy/astroui/lua/astroui/status/utils.lua:155
+            /home/practicalli/.local/share/nvim-astro/lazy/astroui/lua/astroui/status/hl.lua:41
+            /home/practicalli/.local/share/nvim-astro/lazy/heirline.nvim/lua/heirline/statusline.lua:355
+            /home/practicalli/.local/share/nvim-astro/lazy/heirline.nvim/lua/heirline/statusline.lua:398
+            /home/practicalli/.local/share/nvim-astro/lazy/heirline.nvim/lua/heirline/statusline.lua:398
+            /home/practicalli/.local/share/nvim-astro/lazy/heirline.nvim/lua/heirline/statusline.lua:398
+            /home/practicalli/.local/share/nvim-astro/lazy/heirline.nvim/lua/heirline/statusline.lua:398
+            /home/practicalli/.local/share/nvim-astro/lazy/heirline.nvim/lua/heirline/statusline.lua:398
+            /home/practicalli/.local/share/nvim-astro/lazy/heirline.nvim/lua/heirline/statusline.lua:473
+            /home/practicalli/.local/share/nvim-astro/lazy/heirline.nvim/lua/heirline/init.lua:114
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/mini.icons/lua/mini/icons.lua:1965
-            /home/practicalli/.local/share/nvim-astro5/lazy/mini.icons/lua/mini/icons.lua:192
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:387
+            /home/practicalli/.local/share/nvim-astro/lazy/mini.icons/lua/mini/icons.lua:1965
+            /home/practicalli/.local/share/nvim-astro/lazy/mini.icons/lua/mini/icons.lua:192
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:387
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
             [C]:-1
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/astroui/lua/astroui/status/utils.lua:155
-            /home/practicalli/.local/share/nvim-astro5/lazy/astroui/lua/astroui/status/hl.lua:41
-            /home/practicalli/.local/share/nvim-astro5/lazy/heirline.nvim/lua/heirline/statusline.lua:355
-            /home/practicalli/.local/share/nvim-astro5/lazy/heirline.nvim/lua/heirline/statusline.lua:398
-            /home/practicalli/.local/share/nvim-astro5/lazy/heirline.nvim/lua/heirline/statusline.lua:398
-            /home/practicalli/.local/share/nvim-astro5/lazy/heirline.nvim/lua/heirline/statusline.lua:398
-            /home/practicalli/.local/share/nvim-astro5/lazy/heirline.nvim/lua/heirline/statusline.lua:398
-            /home/practicalli/.local/share/nvim-astro5/lazy/heirline.nvim/lua/heirline/statusline.lua:398
-            /home/practicalli/.local/share/nvim-astro5/lazy/heirline.nvim/lua/heirline/statusline.lua:473
-            /home/practicalli/.local/share/nvim-astro5/lazy/heirline.nvim/lua/heirline/init.lua:114
+            /home/practicalli/.local/share/nvim-astro/lazy/astroui/lua/astroui/status/utils.lua:155
+            /home/practicalli/.local/share/nvim-astro/lazy/astroui/lua/astroui/status/hl.lua:41
+            /home/practicalli/.local/share/nvim-astro/lazy/heirline.nvim/lua/heirline/statusline.lua:355
+            /home/practicalli/.local/share/nvim-astro/lazy/heirline.nvim/lua/heirline/statusline.lua:398
+            /home/practicalli/.local/share/nvim-astro/lazy/heirline.nvim/lua/heirline/statusline.lua:398
+            /home/practicalli/.local/share/nvim-astro/lazy/heirline.nvim/lua/heirline/statusline.lua:398
+            /home/practicalli/.local/share/nvim-astro/lazy/heirline.nvim/lua/heirline/statusline.lua:398
+            /home/practicalli/.local/share/nvim-astro/lazy/heirline.nvim/lua/heirline/statusline.lua:398
+            /home/practicalli/.local/share/nvim-astro/lazy/heirline.nvim/lua/heirline/statusline.lua:473
+            /home/practicalli/.local/share/nvim-astro/lazy/heirline.nvim/lua/heirline/init.lua:114
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/mason-null-ls.nvim/lua/mason-null-ls/settings.lua:46
-            /home/practicalli/.local/share/nvim-astro5/lazy/mason-null-ls.nvim/lua/mason-null-ls/init.lua:82
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/mason-null-ls.lua:3
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/none-ls.lua:25
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
+            /home/practicalli/.local/share/nvim-astro/lazy/mason-null-ls.nvim/lua/mason-null-ls/settings.lua:46
+            /home/practicalli/.local/share/nvim-astro/lazy/mason-null-ls.nvim/lua/mason-null-ls/init.lua:82
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/mason-null-ls.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/none-ls.lua:25
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:354
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:354
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:353
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/handler/event.lua:85
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:353
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/handler/event.lua:85
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrocore/lua/astrocore/init.lua:105
+            /home/practicalli/.local/share/nvim-astro/lazy/astrocore/lua/astrocore/init.lua:105
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/util.lua:8
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/util.lua:67
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:293
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/util.lua:8
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/util.lua:67
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:293
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:533
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:571
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:533
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:571
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
             vim/shared.lua:0
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
-            /home/practicalli/.config/nvim-astro5/lua/plugins/practicalli.lua:119
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.config/nvim-astro/lua/plugins/practicalli.lua:119
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/util.lua:8
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/util.lua:68
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:293
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/util.lua:8
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/util.lua:68
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:293
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:533
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:571
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:533
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:571
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
             vim/shared.lua:0
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
-            /home/practicalli/.config/nvim-astro5/lua/plugins/practicalli.lua:119
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.config/nvim-astro/lua/plugins/practicalli.lua:119
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:575
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:575
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
             vim/shared.lua:0
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
-            /home/practicalli/.config/nvim-astro5/lua/plugins/practicalli.lua:119
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.config/nvim-astro/lua/plugins/practicalli.lua:119
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/util.lua:53
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:427
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:494
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/util.lua:53
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:427
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:494
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
             vim/shared.lua:0
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
-            /home/practicalli/.config/nvim-astro5/lua/plugins/practicalli.lua:119
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.config/nvim-astro/lua/plugins/practicalli.lua:119
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/util.lua:61
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:428
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:494
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/util.lua:61
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:428
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:494
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
             vim/shared.lua:0
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
-            /home/practicalli/.config/nvim-astro5/lua/plugins/practicalli.lua:119
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.config/nvim-astro/lua/plugins/practicalli.lua:119
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/util.lua:8
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/util.lua:67
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:155
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/util.lua:8
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/util.lua:67
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:155
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:461
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:494
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:461
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:494
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
             vim/shared.lua:0
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
-            /home/practicalli/.config/nvim-astro5/lua/plugins/practicalli.lua:119
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.config/nvim-astro/lua/plugins/practicalli.lua:119
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/util.lua:8
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/util.lua:68
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:155
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/util.lua:8
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/util.lua:68
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:155
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:461
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:494
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:461
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:494
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
             vim/shared.lua:0
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
-            /home/practicalli/.config/nvim-astro5/lua/plugins/practicalli.lua:119
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.config/nvim-astro/lua/plugins/practicalli.lua:119
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:497
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_snipmate.lua:497
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
             vim/shared.lua:0
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
-            /home/practicalli/.config/nvim-astro5/lua/plugins/practicalli.lua:119
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.config/nvim-astro/lua/plugins/practicalli.lua:119
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/util.lua:53
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_lua.lua:379
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_lua.lua:446
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/util.lua:53
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_lua.lua:379
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_lua.lua:446
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
             vim/shared.lua:0
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
-            /home/practicalli/.config/nvim-astro5/lua/plugins/practicalli.lua:119
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.config/nvim-astro/lua/plugins/practicalli.lua:119
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/util.lua:61
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_lua.lua:380
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_lua.lua:446
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/util.lua:61
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_lua.lua:380
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_lua.lua:446
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
             vim/shared.lua:0
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
-            /home/practicalli/.config/nvim-astro5/lua/plugins/practicalli.lua:119
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.config/nvim-astro/lua/plugins/practicalli.lua:119
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_lua.lua:450
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_lua.lua:450
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
             vim/shared.lua:0
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
-            /home/practicalli/.config/nvim-astro5/lua/plugins/practicalli.lua:119
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/configs/luasnip.lua:3
+            /home/practicalli/.config/nvim-astro/lua/plugins/practicalli.lua:119
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/util.lua:8
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/util.lua:67
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:293
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/util.lua:8
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/util.lua:67
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:293
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:533
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:571
-            /home/practicalli/.config/nvim-astro5/lua/plugins/practicalli.lua:121
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:533
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:571
+            /home/practicalli/.config/nvim-astro/lua/plugins/practicalli.lua:121
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/util.lua:8
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/util.lua:68
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:293
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/util.lua:8
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/util.lua:68
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:293
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:533
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:571
-            /home/practicalli/.config/nvim-astro5/lua/plugins/practicalli.lua:121
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:533
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:571
+            /home/practicalli/.config/nvim-astro/lua/plugins/practicalli.lua:121
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:575
-            /home/practicalli/.config/nvim-astro5/lua/plugins/practicalli.lua:121
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/from_vscode.lua:575
+            /home/practicalli/.config/nvim-astro/lua/plugins/practicalli.lua:121
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:380
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/util.lua:135
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
-            /home/practicalli/.local/share/nvim-astro5/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/util.lua:135
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:395
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:362
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:197
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:543
+            /home/practicalli/.local/share/nvim-astro/lazy/lazy.nvim/lua/lazy/core/loader.lua:564
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:44
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/init.lua:37
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/init.lua:182
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:20
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:45
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/init.lua:37
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/init.lua:182
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:20
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:45
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:104
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/filetype.lua:36
             [C]:-1
@@ -734,364 +734,364 @@ Plugin maintainers will also find deprecation notices for future planned release
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/filetype.lua:35
             [C]:-1
             vim/_editor.lua:0
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/picker/actions.lua:115
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/picker/actions.lua:36
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/picker/actions.lua:115
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/picker/actions.lua:36
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
             vim/_editor.lua:0
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/picker/actions.lua:115
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/picker/actions.lua:36
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/picker/actions.lua:115
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/picker/actions.lua:36
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/snippets/luasnip.lua:70
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/lib/provider/list.lua:47
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/lib/provider/init.lua:88
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/snippets/luasnip.lua:70
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/lib/provider/list.lua:47
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/lib/provider/init.lua:88
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/async.lua:65
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/async.lua:65
             vim/shared.lua:0
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/lib/tree.lua:89
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/lib/queue.lua:48
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/lib/init.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:20
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/event_emitter.lua:28
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/trigger/init.lua:270
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/trigger/init.lua:122
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:81
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/lib/tree.lua:89
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/lib/queue.lua:48
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/lib/init.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:20
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/event_emitter.lua:28
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/trigger/init.lua:270
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/trigger/init.lua:122
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:81
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/init.lua:37
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/init.lua:182
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:20
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:45
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:45
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/init.lua:37
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/init.lua:182
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:20
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/config/snippets.lua:45
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:45
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/utils/init.lua:154
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/utils/init.lua:170
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/popup/init.lua:249
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:107
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:94
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:280
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:163
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/utils/init.lua:154
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/utils/init.lua:170
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/popup/init.lua:249
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:107
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:94
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:280
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:163
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:170
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/backend/mini.lua:100
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/backend/mini.lua:76
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:163
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:170
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/backend/mini.lua:100
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/backend/mini.lua:76
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:163
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:170
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/message/router.lua:214
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:170
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/message/router.lua:214
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/init.lua:146
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/init.lua:146
             vim/_editor.lua:0
             vim/_editor.lua:0
             [C]:-1
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp/client.lua:742
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp/buf.lua:598
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:72
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:161
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:72
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:161
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/utils/autocmd.lua:376
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/popup/init.lua:172
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/utils/autocmd.lua:376
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/popup/init.lua:172
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/popup/init.lua:171
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/popup/init.lua:251
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:107
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:94
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:280
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:163
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/popup/init.lua:171
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/popup/init.lua:251
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:107
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:94
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:280
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:163
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:170
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/backend/mini.lua:100
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/backend/mini.lua:76
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:163
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:170
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/backend/mini.lua:100
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/backend/mini.lua:76
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:163
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:170
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/message/router.lua:214
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:170
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/message/router.lua:214
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/init.lua:146
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/init.lua:146
             vim/_editor.lua:0
             vim/_editor.lua:0
             [C]:-1
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp/client.lua:742
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/lsp/buf.lua:598
-            /home/practicalli/.local/share/nvim-astro5/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:72
-            /home/practicalli/.local/share/nvim-astro5/lazy/astrolsp/lua/astrolsp/init.lua:161
+            /home/practicalli/.local/share/nvim-astro/lazy/AstroNvim/lua/astronvim/plugins/_astrolsp_autocmds.lua:72
+            /home/practicalli/.local/share/nvim-astro/lazy/astrolsp/lua/astrolsp/init.lua:161
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/mason.nvim/lua/mason-core/ui/display.lua:383
-            /home/practicalli/.local/share/nvim-astro5/lazy/mason.nvim/lua/mason-core/ui/display.lua:555
+            /home/practicalli/.local/share/nvim-astro/lazy/mason.nvim/lua/mason-core/ui/display.lua:383
+            /home/practicalli/.local/share/nvim-astro/lazy/mason.nvim/lua/mason-core/ui/display.lua:555
             vim/_editor.lua:0
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/mason.nvim/lua/mason-core/ui/display.lua:390
-            /home/practicalli/.local/share/nvim-astro5/lazy/mason.nvim/lua/mason-core/ui/display.lua:555
+            /home/practicalli/.local/share/nvim-astro/lazy/mason.nvim/lua/mason-core/ui/display.lua:390
+            /home/practicalli/.local/share/nvim-astro/lazy/mason.nvim/lua/mason-core/ui/display.lua:555
             vim/_editor.lua:0
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/mason.nvim/lua/mason-core/ui/display.lua:396
-            /home/practicalli/.local/share/nvim-astro5/lazy/mason.nvim/lua/mason-core/ui/display.lua:555
+            /home/practicalli/.local/share/nvim-astro/lazy/mason.nvim/lua/mason-core/ui/display.lua:396
+            /home/practicalli/.local/share/nvim-astro/lazy/mason.nvim/lua/mason-core/ui/display.lua:555
             vim/_editor.lua:0
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/mason.nvim/lua/mason-core/ui/display.lua:455
-            /home/practicalli/.local/share/nvim-astro5/lazy/mason.nvim/lua/mason-core/ui/display.lua:555
+            /home/practicalli/.local/share/nvim-astro/lazy/mason.nvim/lua/mason-core/ui/display.lua:455
+            /home/practicalli/.local/share/nvim-astro/lazy/mason.nvim/lua/mason-core/ui/display.lua:555
             vim/_editor.lua:0
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/util/init.lua:93
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/win.lua:798
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/notifier.lua:706
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/notifier.lua:352
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/notifier.lua:332
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/util/init.lua:93
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/win.lua:798
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/notifier.lua:706
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/notifier.lua:352
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/notifier.lua:332
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/snacks.nvim/lua/snacks/notifier.lua:331
+            /home/practicalli/.local/share/nvim-astro/lazy/snacks.nvim/lua/snacks/notifier.lua:331
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/utils/init.lua:154
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/utils/init.lua:170
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/popup/init.lua:249
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:107
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:284
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:163
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/utils/init.lua:154
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/utils/init.lua:170
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/popup/init.lua:249
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:107
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:284
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:163
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:170
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/backend/mini.lua:100
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/backend/mini.lua:76
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:163
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:170
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/backend/mini.lua:100
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/backend/mini.lua:76
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:163
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:170
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/message/router.lua:214
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/lsp/progress.lua:57
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/lsp/progress.lua:46
-            vim/_editor.lua:0
-            vim/_editor.lua:0
-        - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
-            [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/utils/autocmd.lua:376
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/popup/init.lua:172
-            [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/popup/init.lua:171
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/popup/init.lua:251
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:107
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:284
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:163
-            [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:170
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/backend/mini.lua:100
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/backend/mini.lua:76
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:163
-            [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:170
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/message/router.lua:214
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/lsp/progress.lua:57
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/lsp/progress.lua:46
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:170
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/message/router.lua:214
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/lsp/progress.lua:57
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/lsp/progress.lua:46
             vim/_editor.lua:0
             vim/_editor.lua:0
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/utils/init.lua:154
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/utils/init.lua:170
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/popup/init.lua:249
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:107
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:94
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:280
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:163
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/utils/autocmd.lua:376
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/popup/init.lua:172
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:170
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/message/router.lua:214
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/popup/init.lua:171
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/popup/init.lua:251
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:107
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:284
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:163
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/ui/init.lua:88
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/ui/init.lua:27
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/ui/init.lua:138
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:170
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/backend/mini.lua:100
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/backend/mini.lua:76
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:163
+            [C]:-1
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:170
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/message/router.lua:214
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/lsp/progress.lua:57
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/lsp/progress.lua:46
+            vim/_editor.lua:0
+            vim/_editor.lua:0
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/utils/autocmd.lua:376
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/popup/init.lua:172
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/utils/init.lua:154
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/utils/init.lua:170
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/popup/init.lua:249
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:107
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:94
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:280
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:163
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/popup/init.lua:171
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/popup/init.lua:251
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:107
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:94
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:280
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:163
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:170
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/message/router.lua:214
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:170
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/message/router.lua:214
-            [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/ui/init.lua:88
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/ui/init.lua:27
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/ui/init.lua:138
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/ui/init.lua:88
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/ui/init.lua:27
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/ui/init.lua:138
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/window/init.lua:113
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/windows/menu.lua:95
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/windows/menu.lua:61
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:70
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/event_emitter.lua:28
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/list.lua:96
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:53
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/utils/autocmd.lua:376
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/popup/init.lua:172
+            [C]:-1
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/popup/init.lua:171
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/popup/init.lua:251
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:107
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:94
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:280
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:163
+            [C]:-1
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:170
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/message/router.lua:214
+            [C]:-1
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/ui/init.lua:88
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/ui/init.lua:27
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/ui/init.lua:138
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/window/init.lua:132
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/windows/menu.lua:95
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/windows/menu.lua:61
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:70
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/event_emitter.lua:28
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/list.lua:96
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:53
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/window/init.lua:113
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/windows/menu.lua:95
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/windows/menu.lua:61
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:70
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/event_emitter.lua:28
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/list.lua:96
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:53
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/utils/init.lua:154
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/utils/init.lua:170
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/popup/init.lua:249
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:107
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:284
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:163
-            [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:170
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/message/router.lua:214
-            [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/ui/init.lua:88
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/ui/init.lua:27
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/ui/init.lua:138
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/window/init.lua:132
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/windows/menu.lua:95
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/windows/menu.lua:61
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:70
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/event_emitter.lua:28
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/list.lua:96
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:53
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/utils/autocmd.lua:376
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/popup/init.lua:172
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/utils/init.lua:154
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/utils/init.lua:170
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/popup/init.lua:249
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:107
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:284
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:163
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/popup/init.lua:171
-            /home/practicalli/.local/share/nvim-astro5/lazy/nui.nvim/lua/nui/popup/init.lua:251
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:107
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/nui.lua:284
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:163
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:170
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/message/router.lua:214
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/view/init.lua:170
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/message/router.lua:214
-            [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/util/call.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/ui/init.lua:88
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/ui/init.lua:27
-            /home/practicalli/.local/share/nvim-astro5/lazy/noice.nvim/lua/noice/ui/init.lua:138
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/ui/init.lua:88
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/ui/init.lua:27
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/ui/init.lua:138
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
+            [C]:-1
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/utils/autocmd.lua:376
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/popup/init.lua:172
+            [C]:-1
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/popup/init.lua:171
+            /home/practicalli/.local/share/nvim-astro/lazy/nui.nvim/lua/nui/popup/init.lua:251
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:107
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/nui.lua:284
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:163
+            [C]:-1
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/view/init.lua:170
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/message/router.lua:214
+            [C]:-1
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/util/call.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/ui/init.lua:88
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/ui/init.lua:27
+            /home/practicalli/.local/share/nvim-astro/lazy/noice.nvim/lua/noice/ui/init.lua:138
+        - stack traceback:
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
             vim/_editor.lua:0
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/health.lua:379
             nvim>:1
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
             [C]:-1
             /tmp/.mount_nvimEOCGje/usr/share/nvim/runtime/lua/vim/health.lua:386
             nvim>:1
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/plugin/luasnip.lua:87
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/loaders/init.lua:136
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/plugin/luasnip.lua:87
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/snippets/luasnip.lua:70
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/lib/provider/list.lua:47
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/lib/provider/init.lua:88
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/snippets/luasnip.lua:70
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/lib/provider/list.lua:47
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/lib/provider/init.lua:88
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/async.lua:65
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/async.lua:65
             vim/shared.lua:0
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/lib/tree.lua:89
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/lib/queue.lua:48
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/lib/init.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:20
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/event_emitter.lua:28
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/trigger/init.lua:270
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/trigger/init.lua:63
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:53
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/lib/tree.lua:89
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/lib/queue.lua:48
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/lib/init.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:20
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/event_emitter.lua:28
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/trigger/init.lua:270
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/trigger/init.lua:63
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:53
         - stack traceback:
-            /home/practicalli/.local/share/nvim-astro5/lazy/LuaSnip/lua/luasnip/util/util.lua:350
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/snippets/luasnip.lua:70
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/lib/provider/list.lua:47
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/lib/provider/init.lua:88
+            /home/practicalli/.local/share/nvim-astro/lazy/LuaSnip/lua/luasnip/util/util.lua:350
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/snippets/luasnip.lua:70
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/lib/provider/list.lua:47
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/lib/provider/init.lua:88
             [C]:-1
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/async.lua:65
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/async.lua:65
             vim/shared.lua:0
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/lib/tree.lua:89
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/lib/queue.lua:48
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/sources/lib/init.lua:149
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:20
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/event_emitter.lua:28
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/trigger/init.lua:270
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/completion/trigger/init.lua:56
-            /home/practicalli/.local/share/nvim-astro5/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:53
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/lib/tree.lua:89
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/lib/queue.lua:48
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/sources/lib/init.lua:149
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/init.lua:20
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/event_emitter.lua:28
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/trigger/init.lua:270
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/completion/trigger/init.lua:56
+            /home/practicalli/.local/share/nvim-astro/lazy/blink.cmp/lua/blink/cmp/lib/buffer_events.lua:53
 
     ```
 
@@ -1112,28 +1112,28 @@ Plugin maintainers will also find deprecation notices for future planned release
     - WASM parser support: false
 
     Treesitter parsers ~
-    - OK Parser: bash                 ABI: 14, path: /home/practicalli/.local/share/nvim-astro5/lazy/nvim-treesitter/parser/bash.so
-    - OK Parser: c                    ABI: 14, path: /home/practicalli/.local/share/nvim-astro5/lazy/nvim-treesitter/parser/c.so
+    - OK Parser: bash                 ABI: 14, path: /home/practicalli/.local/share/nvim-astro/lazy/nvim-treesitter/parser/bash.so
+    - OK Parser: c                    ABI: 14, path: /home/practicalli/.local/share/nvim-astro/lazy/nvim-treesitter/parser/c.so
     - OK Parser: c                    ABI: 14, path: /tmp/.mount_nvimEOCGje/usr/lib/nvim/parser/c.so
-    - OK Parser: clojure              ABI: 14, path: /home/practicalli/.local/share/nvim-astro5/lazy/nvim-treesitter/parser/clojure.so
-    - OK Parser: html                 ABI: 14, path: /home/practicalli/.local/share/nvim-astro5/lazy/nvim-treesitter/parser/html.so
-    - OK Parser: http                 ABI: 14, path: /home/practicalli/.local/share/nvim-astro5/lazy/nvim-treesitter/parser/http.so
-    - OK Parser: json                 ABI: 14, path: /home/practicalli/.local/share/nvim-astro5/lazy/nvim-treesitter/parser/json.so
-    - OK Parser: jsonc                ABI: 13, path: /home/practicalli/.local/share/nvim-astro5/lazy/nvim-treesitter/parser/jsonc.so
-    - OK Parser: lua                  ABI: 14, path: /home/practicalli/.local/share/nvim-astro5/lazy/nvim-treesitter/parser/lua.so
+    - OK Parser: clojure              ABI: 14, path: /home/practicalli/.local/share/nvim-astro/lazy/nvim-treesitter/parser/clojure.so
+    - OK Parser: html                 ABI: 14, path: /home/practicalli/.local/share/nvim-astro/lazy/nvim-treesitter/parser/html.so
+    - OK Parser: http                 ABI: 14, path: /home/practicalli/.local/share/nvim-astro/lazy/nvim-treesitter/parser/http.so
+    - OK Parser: json                 ABI: 14, path: /home/practicalli/.local/share/nvim-astro/lazy/nvim-treesitter/parser/json.so
+    - OK Parser: jsonc                ABI: 13, path: /home/practicalli/.local/share/nvim-astro/lazy/nvim-treesitter/parser/jsonc.so
+    - OK Parser: lua                  ABI: 14, path: /home/practicalli/.local/share/nvim-astro/lazy/nvim-treesitter/parser/lua.so
     - OK Parser: lua                  ABI: 14, path: /tmp/.mount_nvimEOCGje/usr/lib/nvim/parser/lua.so
-    - OK Parser: luap                 ABI: 14, path: /home/practicalli/.local/share/nvim-astro5/lazy/nvim-treesitter/parser/luap.so
-    - OK Parser: markdown             ABI: 14, path: /home/practicalli/.local/share/nvim-astro5/lazy/nvim-treesitter/parser/markdown.so
+    - OK Parser: luap                 ABI: 14, path: /home/practicalli/.local/share/nvim-astro/lazy/nvim-treesitter/parser/luap.so
+    - OK Parser: markdown             ABI: 14, path: /home/practicalli/.local/share/nvim-astro/lazy/nvim-treesitter/parser/markdown.so
     - OK Parser: markdown             ABI: 14, path: /tmp/.mount_nvimEOCGje/usr/lib/nvim/parser/markdown.so
-    - OK Parser: markdown_inline      ABI: 14, path: /home/practicalli/.local/share/nvim-astro5/lazy/nvim-treesitter/parser/markdown_inline.so
+    - OK Parser: markdown_inline      ABI: 14, path: /home/practicalli/.local/share/nvim-astro/lazy/nvim-treesitter/parser/markdown_inline.so
     - OK Parser: markdown_inline      ABI: 14, path: /tmp/.mount_nvimEOCGje/usr/lib/nvim/parser/markdown_inline.so
-    - OK Parser: python               ABI: 14, path: /home/practicalli/.local/share/nvim-astro5/lazy/nvim-treesitter/parser/python.so
-    - OK Parser: query                ABI: 14, path: /home/practicalli/.local/share/nvim-astro5/lazy/nvim-treesitter/parser/query.so
+    - OK Parser: python               ABI: 14, path: /home/practicalli/.local/share/nvim-astro/lazy/nvim-treesitter/parser/python.so
+    - OK Parser: query                ABI: 14, path: /home/practicalli/.local/share/nvim-astro/lazy/nvim-treesitter/parser/query.so
     - OK Parser: query                ABI: 14, path: /tmp/.mount_nvimEOCGje/usr/lib/nvim/parser/query.so
-    - OK Parser: regex                ABI: 14, path: /home/practicalli/.local/share/nvim-astro5/lazy/nvim-treesitter/parser/regex.so
-    - OK Parser: vim                  ABI: 14, path: /home/practicalli/.local/share/nvim-astro5/lazy/nvim-treesitter/parser/vim.so
+    - OK Parser: regex                ABI: 14, path: /home/practicalli/.local/share/nvim-astro/lazy/nvim-treesitter/parser/regex.so
+    - OK Parser: vim                  ABI: 14, path: /home/practicalli/.local/share/nvim-astro/lazy/nvim-treesitter/parser/vim.so
     - OK Parser: vim                  ABI: 14, path: /tmp/.mount_nvimEOCGje/usr/lib/nvim/parser/vim.so
-    - OK Parser: vimdoc               ABI: 14, path: /home/practicalli/.local/share/nvim-astro5/lazy/nvim-treesitter/parser/vimdoc.so
+    - OK Parser: vimdoc               ABI: 14, path: /home/practicalli/.local/share/nvim-astro/lazy/nvim-treesitter/parser/vimdoc.so
     - OK Parser: vimdoc               ABI: 14, path: /tmp/.mount_nvimEOCGje/usr/lib/nvim/parser/vimdoc.so
     ```
 

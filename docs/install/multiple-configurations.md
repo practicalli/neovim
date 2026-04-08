@@ -34,7 +34,7 @@ Add alias to `.bashrc` for Bash shell, `.zshrc` for Zsh or use a common [shell-a
 
 !!! EXAMPLE "Define Shell Aliases to run each configuration"
     ```shell
-    alias astro="NVIM_APPNAME=nvim-astro5 nvim"
+    alias astro="NVIM_APPNAME=nvim-astro nvim"
     alias lazyvim="NVIM_APPNAME=nvim-lazyvim nvim"
     alias cajus="NVIM_APPNAME=nvim-cajus nvim"
     ```
@@ -70,7 +70,7 @@ Source the `.config/shell-aliases` file from within `.bashrc` or `.zshrc`
 
 ## Neovim config selector
 
-Create a shell function to popup a menu with the list of available Neovim configurations, defined in `~/.config` where the configuration directories are prefixed with `nvim-`, e.g. `~/.config/nvim-astro5/`
+Create a shell function to popup a menu with the list of available Neovim configurations, defined in `~/.config` where the configuration directories are prefixed with `nvim-`, e.g. `~/.config/nvim-astro/`
 
 ![Neovim Config Fuzy Selector](https://github.com/practicalli/graphic-design/blob/live/editors/neovim/screenshots/neovim-config-selector-fuzzy-find-config-list-dark.png?raw=true){loading=lazy}
 
@@ -92,7 +92,7 @@ Create a shell function to popup a menu with the list of available Neovim config
     Add specific Neovim config directory names from `~/.config/`
     ```shell title=".local/bin/nvim-selector"
      nvim-selector() {
-      select config in nvim-astro5 nvim-astronvim5-template nvim-lazyvim nvim-kickstart
+      select config in nvim-astro nvim-astronvim5-template nvim-lazyvim nvim-kickstart
       do NVIM_APPNAME=nvim-$config nvim $@; break; done
     }
     ```

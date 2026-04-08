@@ -181,4 +181,4 @@ Install from [:fontawesome-brands-github: Neovim GitHub releases](https://github
 
 Neovim is a powerful editor although a configuration adds valuable features for software engineering tasks.
 
-[Practicalli Astro 5 configuration](astro5-configuration.md){.md-button}
+[Practicalli Astro 5 configuration](astro-configuration.md){.md-button}

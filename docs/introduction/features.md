@@ -133,10 +133,10 @@ LazyGit UI
 
 ## File Browser
 
-neo-tree provides a visual file system explorer that can also create and delete files and directories
+++spc+"e"++ to open the Snacks Explorer to provide a visual file system explorer. Files and directories can be created, renamed, moved or deleted.
 
 
-<!-- TODO: screenshot of telescope file browser -->
+<!-- TODO: screenshot of snacks explorer -->
 
 
 ## TODO Comments
@@ -179,9 +179,10 @@ LSP feedback
 
 Catppuccin is a very clean theme with Treesitter integration and support from a wide range of Neovim plugins.
 
-Astro5 also includes a color selector and color code highlighting.
+Nvim-Astro also includes a color selector and color code highlighting.
 
 Emoji completions are shown when typing `:`
 
 Neovide (GUI) integration (scaling fonts, etc)
+
 Show key presses in when Neovim normal mode (demos, screen-casts)

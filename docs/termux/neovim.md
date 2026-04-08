@@ -8,7 +8,7 @@ pkg install neovim
 
 ## Neovim config
 
-[Practicalli Astro 5 config](/neovim/install/astro5-configuration/) provides tools for an effective Clojure workflow and software engineering tasks.
+[Practicalli Astro 5 config](/neovim/install/astro-configuration/) provides tools for an effective Clojure workflow and software engineering tasks.
 
 
 ## Treesitter language support

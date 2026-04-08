@@ -1,10 +1,10 @@
 # Customise Configuration
 
-Customise the Practicalli Astro5 configuration without needing to break from future pull requests (or manage merging)
+Customise the [Practicalli Nvim-Astro](https://github.com/practicalli/nvim-astro) configuration without needing to break from future pull requests (or manage merging)
 
-[:globe_with_meridians: AstroNvim - Customizing Plugins](https://docs.astronvim.com/configuration/customizing_plugins/) page describes how to customize plugins in detail.  AstroNvim recipies include specific customisation examples.
+[:globe_with_meridians: AstroNvim - Customizing Plugins](https://docs.astronvim.com/configuration/customizing_plugins/) page describes how to customize plugins in detail.  AstroNvim recipes include specific customisation examples.
 
-??? INFO "Practicalli Astro 5 file structure"
+??? INFO "Practicalli Nvim-Astro file structure"
     ```shell
     ├── after
     │   └── ftplugin

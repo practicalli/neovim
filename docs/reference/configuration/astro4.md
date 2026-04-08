@@ -3,7 +3,7 @@
 A guide to the design of AstroNvim Config created by Practicalli to support a comprehensive development workflow.
 
 ??? WARNING "Astro5 has replaced Astro as Practicalli Config for Neovim "
-    [Practicalli Astro5 Configuration](/neovim/install/astro5-configuration.md)
+    [Practicalli Astro5 Configuration](/neovim/install/astro-configuration.md)
 
 
 
