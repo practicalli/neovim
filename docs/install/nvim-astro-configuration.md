@@ -1,33 +1,33 @@
-# Practicalli Astro 5 Config
+# Practicalli Nvim-Astro Config
 
 ![Practicalli Logo](https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo.png?raw=true#only-light){align=right loading=lazy style="height:72px"}
 ![Practicalli Logo](https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo-dark.png?raw=true#only-dark){align=right loading=lazy style="height:72px"}
 
-[:fontawesome-brands-github: Practicalli Astro 5](http://github.com/practicalli/nvim-astro5) is Clojure development focused configuration, an extension of the [:fontawesome-brands-github: AstroNvim v5 template repository](https://github.com/AstroNvim/template).
+[:fontawesome-brands-github: Practicalli Astro 5](http://github.com/practicalli/nvim-astro) is Clojure development focused configuration, an extension of the [:fontawesome-brands-github: AstroNvim v5 template repository](https://github.com/AstroNvim/template).
 
 === "Only One Neovim Config"
 
-    Clone the [:fontawesome-brands-github: Practicalli Astro](https://github.com/practicalli/nvim-astro5) configuration or create your own fork and clone that repository.
+    Clone the [:fontawesome-brands-github: Practicalli Astro](https://github.com/practicalli/nvim-astro) configuration or create your own fork and clone that repository.
 
 
     !!! NOTE "Clone Practicalli Astro 5 config"
         ```shell
-        git clone https://github.com/practicalli/nvim-astro5.git ~/.config/nvim
+        git clone https://github.com/practicalli/nvim-astro.git ~/.config/nvim
         ```
 
 === "Multiple Neovim Configurations"
-    Clone the [:fontawesome-brands-github: Practicalli Astro](https://github.com/practicalli/nvim-astro5) configuration to a unique name within `~/.config` directory.
+    Clone the [:fontawesome-brands-github: Practicalli Astro](https://github.com/practicalli/nvim-astro) configuration to a unique name within `~/.config` directory.
 
     !!! NOTE "Clone Practicalli Astro 5 config"
         ```shell
-        git clone https://github.com/practicalli/astro5.git ~/.config/nvim-astro5
+        git clone https://github.com/practicalli/astro.git ~/.config/nvim-astro
         ```
 
-    Set the `NVIM_APPNAME` environment variable to the configuration directory name under `~/.config`, e.g. Run Neovim using the configuration in `~/.config/nvim-astro5`
+    Set the `NVIM_APPNAME` environment variable to the configuration directory name under `~/.config`, e.g. Run Neovim using the configuration in `~/.config/nvim-astro`
 
-    !!! NOTE "Use Astro 5 config with Neovim"
+    !!! NOTE "Use Nvim-Astro config with Neovim"
         ```shell
-        export NVIM_APPNAME=nvim-astro5 nvim
+        export NVIM_APPNAME=nvim-astro nvim
         ```
 
     [:fontawesome-solid-book-open: Configure shell alias and selectors](multiple-configurations.md){target=_blank} to simplify the command to run a specific configuration.
@@ -38,26 +38,38 @@
 
 ## Install Neovim Plugins
 
-Enter `nvim` command in a terminal to launch Neovim and install all the plugins from the Practicalli Astro 5 configuration.
+Run Neovim in a terminal and all the plugins and supporting Mason tools from the Practicalli Nvim-Astro configuration will be installed. Treesitter parsers for all supported languages are installed too.
 
 !!! NOTE "Run Neovim"
+    With a single Neovim Config, use the `nvim` command in a terminal
+    ```shell
+    nvim
+    ```
+
+    With multiple configurations, use a shell alias or set the `NVIM_APPNAME` to set the preferred configuration.  For example, with Nvim-Astro, use the `astro` alias.
     ```shell
     nvim
     ```
 
 Lazy plugin manager runs automatically and installs all the plugins defined in the Neovim configuration.
 
-Treesitter will prompt to compile its language parsers.
+Mason runs and installs tools that are defined in the configuration.
+
+Treesitter will compile all the language parsers.
 
 ++"q"++ to close the lazy package manager pop-up once all plugins are installed.
 
+!!! TIP "Breaking Changes - update packages again"
+    If a "Breaking Changes" section is shown when adding or updating plugins in the Lazy popup, press ++"U"++ key to update again until no more breaking changes show.
 
-??? WARNING "Avoid running Astro5 package update headless"
+
+??? WARNING "Avoid running Nvim-Astro package update headless"
     Do not use the `--headless` Neovim flag to install plugins or pass the `+:Lazy update` arguments.  The Lazy.nvim package manager requires neovim UI to run correctly.
 
 
 ??? TIP "Identical install with lazy-lock.json"
     When plugins are installed, a `lazy-lock.json` contains the versions of all plugins. Include this file when exact plugin versions are required for other system installs.  Otherwise this file can be safely ignored.
+
 
 ## Post Install checks
 
