@@ -1,6 +1,9 @@
 # Changelog
 
 ## Unreleased
+
+# 2026-04-12
+
 ### Added
 - nodejs requirement for mason lsp server install
 - repl: initial page on structured editing with parinfer
