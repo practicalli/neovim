@@ -4,6 +4,7 @@
 
 ### Changed
 
+- dev: update Makefile with zensical commands
 - dev: update GitHub actions using `make dependencies-updated`
 
 | :file                                          | :name                   | :current | :latest |
