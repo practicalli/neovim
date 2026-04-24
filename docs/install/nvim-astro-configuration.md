@@ -3,29 +3,30 @@
 ![Practicalli Logo](https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo.png?raw=true#only-light){align=right loading=lazy style="height:72px"}
 ![Practicalli Logo](https://github.com/practicalli/graphic-design/blob/live/logos/practicalli-logo-dark.png?raw=true#only-dark){align=right loading=lazy style="height:72px"}
 
-[:fontawesome-brands-github: Practicalli Astro 5](http://github.com/practicalli/nvim-astro) is Clojure development focused configuration, an extension of the [:fontawesome-brands-github: AstroNvim v5 template repository](https://github.com/AstroNvim/template).
+[:fontawesome-brands-github: Practicalli Nvim-Astro](http://github.com/practicalli/nvim-astro) is Clojure development focused configuration, an extension of the [:fontawesome-brands-github: AstroNvim v6 template repository](https://github.com/AstroNvim/template).
 
 === "Only One Neovim Config"
 
     Clone the [:fontawesome-brands-github: Practicalli Astro](https://github.com/practicalli/nvim-astro) configuration or create your own fork and clone that repository.
 
 
-    !!! NOTE "Clone Practicalli Astro 5 config"
+    !!! NOTE "Clone Practicalli Nvim-Astro config"
         ```shell
         git clone https://github.com/practicalli/nvim-astro.git ~/.config/nvim
         ```
 
 === "Multiple Neovim Configurations"
-    Clone the [:fontawesome-brands-github: Practicalli Astro](https://github.com/practicalli/nvim-astro) configuration to a unique name within `~/.config` directory.
 
-    !!! NOTE "Clone Practicalli Astro 5 config"
+    Clone the [:fontawesome-brands-github: Practicalli Nvim-Astro](https://github.com/practicalli/nvim-astro) configuration to a unique name within `~/.config` directory.
+
+    !!! NOTE "Clone Practicalli Nvim-Astro config to unique config name"
         ```shell
         git clone https://github.com/practicalli/astro.git ~/.config/nvim-astro
         ```
 
     Set the `NVIM_APPNAME` environment variable to the configuration directory name under `~/.config`, e.g. Run Neovim using the configuration in `~/.config/nvim-astro`
 
-    !!! NOTE "Use Nvim-Astro config with Neovim"
+    !!! NOTE "Create Shell Alias to use Nvim-Astro config with Neovim"
         ```shell
         export NVIM_APPNAME=nvim-astro nvim
         ```
@@ -33,7 +34,7 @@
     [:fontawesome-solid-book-open: Configure shell alias and selectors](multiple-configurations.md){target=_blank} to simplify the command to run a specific configuration.
 
 
-[Customise Practicalli Astro 5](/neovim/install/customise-configuration/){target=_blank .md-button}
+[Customise Practicalli Nvim-Astro](customise-configuration.md){target=_blank .md-button}
 
 
 ## Install Neovim Plugins
@@ -42,13 +43,15 @@ Run Neovim in a terminal and all the plugins and supporting Mason tools from the
 
 !!! NOTE "Run Neovim"
     With a single Neovim Config, use the `nvim` command in a terminal
+
     ```shell
     nvim
     ```
 
     With multiple configurations, use a shell alias or set the `NVIM_APPNAME` to set the preferred configuration.  For example, with Nvim-Astro, use the `astro` alias.
+
     ```shell
-    nvim
+    astro
     ```
 
 Lazy plugin manager runs automatically and installs all the plugins defined in the Neovim configuration.
