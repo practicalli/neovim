@@ -45,7 +45,37 @@ Neovim uses several command line tools for searching for files and their content
 
 ## Install Neovim
 
-Install from [:fontawesome-brands-github: Neovim GitHub releases](https://github.com/neovim/neovim/releases/) for the latest version, use a Package manager if version 0.11 is available, or build from source.
+Practicalli recommends the FNM tool to manage the installation of specific versions of Node.js.
+
+An install script is included in [:fontawesome-brands-github: Practicalli Dotfiles](https://github.com/practicalli/dotfiles){target=_blank} for Debian Linux and any Operating System that can run a Bash script.
+
+=== "Practicalli Script"
+
+    Clone [:fontawesome-brands-github: Practicalli Dotfiles](https://github.com/practicalli/dotfiles){target=_blank} repository.
+
+    Run the `debian-linux/tui/dra.sh` script to install the DRA tool (or `debian-linux/dev-tools-install.sh` script).
+
+    Run the `debian-linux/tui/nodejs-fnm-install.sh` script to install the latest Neovim release system wide.
+
+    ??? EXAMPLE "Install latest stable release of Neovim on Linux"
+        ```shell
+        #!/usr/bin/env bash
+
+        # Install the current release version of Neovim from GitHub for all users
+
+        echo
+        echo "# ---------------------------------------"
+        echo "Neovim hyper-configurable editor - installed for all users"
+
+        # install the nvim.appimage (automatic only installs nvim and not runtime)
+        # rename file to `nvim` the standard executable name
+        sudo dra download --select nvim-linux-x86_64.appimage --install --output /usr/local/bin/nvim neovim/neovim
+
+        echo
+        echo "Neovim version: $(nvim --version)"
+        echo "# ---------------------------------------"
+        echo ""
+        ```
 
 
 === "Linux AppImage"

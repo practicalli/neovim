@@ -5,6 +5,7 @@
 ### Changed
 
 - dev: update Makefile with zensical commands
+- install: add practicalli install script for neovim
 - dev: update GitHub actions using `make dependencies-updated`
 
 | :file                                          | :name                   | :current | :latest |
