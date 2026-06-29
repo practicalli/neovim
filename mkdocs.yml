@@ -158,6 +158,7 @@ nav:
       - Spell Check: using-neovim/spell-check.md
       - Comments: using-neovim/comments.md
       - Snippets: using-neovim/snippets.md
+      - Sort: using-neovim/sort.md
       - Mason: using-neovim/mason.md
       - Plugin Manager: using-neovim/plugin-manager.md
       - Multiple Cursors: using-neovim/multiple-cursors.md
