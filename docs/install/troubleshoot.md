@@ -7,6 +7,161 @@ Use a [minimal configuration](#minimal-config) to help reproduce issues for a sp
 The [:checkhealth](#check-health) command provides diagnostics about Neovim, its  APIs, external requirements (command line tools) and plugin documentation.
 
 
+## Start up time
+
+If neovim is not starting instantly, profile the Lazy package manager.
+
+!!! NOTE "Run profiler for Lazy Package Manager"
+    ```shell
+    :Lazy profile
+    ```
+
+??? EXAMPLE "Output of :Lazy profile using Practicalli nvim-astro config"
+```shell
+  Startuptime: 116.64ms
+
+  Based on the actual CPU time of the Neovim process till UIEnter.
+  This is more accurate than `nvim --startuptime`.
+    LazyStart 12.57ms
+    LazyDone  106.15ms (+93.57ms)
+    UIEnter   116.64ms (+10.5ms)
+
+  Profile
+
+  You can press <C-s> to change sorting between chronological order & time taken.
+  Press <C-f> to filter profiling entries that took more time than a given threshold
+
+    ●  lazy.nvim 50.01ms
+      ➜  module 3.06ms
+      ➜  config 0.52ms
+      ➜  spec 42.63ms
+        ★  pkg 0.14ms
+        ★  astronvim.plugins._astrocore 1.66ms
+          ‒  astronvim.lazy_snapshot 0.62ms
+        ★  astronvim.plugins._astrocore_autocmds 0.37ms
+        ★  astronvim.plugins._astrocore_mappings 0.33ms
+        ★  astronvim.plugins._astrocore_options 0.09ms
+        ★  astronvim.plugins._astrolsp 11.22ms
+        ★  astronvim.plugins._astrolsp_autocmds 0.66ms
+        ★  astronvim.plugins._astrolsp_mappings 0.16ms
+        ★  astronvim.plugins._astrotheme 0.16ms
+        ★  astronvim.plugins._astroui 0.27ms
+        ★  astronvim.plugins._astroui_status 0.21ms
+        ★  astronvim.plugins.aerial 0.27ms
+        ★  astronvim.plugins.autopairs 0.19ms
+        ★  astronvim.plugins.better-escape 0.12ms
+        ★  astronvim.plugins.blink 0.19ms
+        ★  astronvim.plugins.dap 1.93ms
+        ★  astronvim.plugins.gitsigns 0.25ms
+        ★  astronvim.plugins.guess-indent 0.19ms
+        ★  astronvim.plugins.heirline 0.29ms
+        ★  astronvim.plugins.highlight-colors 0.18ms
+        ★  astronvim.plugins.lazydev 0.3ms
+        ★  astronvim.plugins.lspconfig 0.12ms
+        ★  astronvim.plugins.luasnip 0.54ms
+        ★  astronvim.plugins.mason 0.19ms
+        ★  astronvim.plugins.mason-lspconfig 0.47ms
+        ★  astronvim.plugins.mason-tool-installer 0.31ms
+        ★  astronvim.plugins.mini-icons 0.13ms
+        ★  astronvim.plugins.neo-tree 0.38ms
+        ★  astronvim.plugins.none-ls 0.16ms
+        ★  astronvim.plugins.resession 0.15ms
+        ★  astronvim.plugins.smart-splits 0.22ms
+        ★  astronvim.plugins.snacks 0.53ms
+        ★  astronvim.plugins.todo-comments 0.48ms
+        ★  astronvim.plugins.toggleterm 0.26ms
+        ★  astronvim.plugins.treesitter 0.23ms
+        ★  astronvim.plugins.treesitter-textobjects 0.1ms
+        ★  astronvim.plugins.ts-autotag 0.11ms
+        ★  astronvim.plugins.which-key 0.19ms
+        ★  astronvim.plugins.window-picker 0.13ms
+        ★  community 9.8ms
+          ‒  astrocommunity.colorscheme.catppuccin 0.2ms
+          ‒  astrocommunity.color.ccc-nvim 0.2ms
+          ‒  astrocommunity.completion.blink-cmp-emoji 0.29ms
+          ‒  astrocommunity.editing-support.rainbow-delimiters-nvim 0.68ms
+          ‒  astrocommunity.editing-support.vim-visual-multi 0.25ms
+          ‒  astrocommunity.motion.nvim-surround 0.19ms
+          ‒  astrocommunity.pack.bash 0.38ms
+          ‒  astrocommunity.pack.clojure 1.61ms
+            ●  astrocommunity.code-runner.conjure 0.14ms
+            ●  astrocommunity.editing-support.parpar-nvim 0.67ms
+              ➜  astrocommunity.editing-support.nvim-parinfer 0.12ms
+              ➜  astrocommunity.editing-support.nvim-paredit 0.11ms
+            ●  astrocommunity.comment.ts-comments-nvim 0.13ms
+          ‒  astrocommunity.pack.markdown 0.1ms
+          ‒  astrocommunity.pack.json 0.34ms
+          ‒  astrocommunity.pack.lua 0.13ms
+          ‒  astrocommunity.search.grug-far-nvim 0.26ms
+          ‒  astrocommunity.recipes.neovide 0.08ms
+          ‒  astrocommunity.recipes.picker-lsp-mappings 0.1ms
+          ‒  astrocommunity.git.diffview-nvim 0.08ms
+          ‒  astrocommunity.git.gist-nvim 0.07ms
+          ‒  astrocommunity.git.neogit 0.11ms
+          ‒  astrocommunity.git.octo-nvim 0.69ms
+          ‒  astrocommunity.utility.noice-nvim 0.79ms
+        ★  plugins.mason 0.08ms
+        ★  plugins.practicalli 0.31ms
+        ★  plugins.termux 0.06ms
+        ★  plugins.treesitter 0.04ms
+        ★  resolve plugins 1.4ms
+      ➜  state 0.7ms
+      ➜  install 0.08ms
+      ➜  handlers 2.46ms
+    ●  startup 53.58ms
+      ➜  runtime/filetype.lua 0.85ms
+      ➜  init 40.37ms
+        ★  init  mason-tool-installer.nvim 40.27ms
+          ‒  astrocore 39.75ms
+            ●  astroui 2.65ms
+            ●  mason.nvim 5.95ms
+            ●  catppuccin 5.04ms
+        ★  init  mini.icons 0ms
+      ➜  start 5.9ms
+        ★  start  AstroNvim 0.2ms
+        ★  start  snacks.nvim 1.95ms
+          ‒  snacks.nvim/plugin/snacks.lua 1.2ms
+        ★  start  astrocommunity 0.13ms
+        ★  start  nvim-treesitter 3.5ms
+          ‒  nvim-treesitter/plugin/filetypes.lua 1.82ms
+          ‒  nvim-treesitter/plugin/nvim-treesitter.lua 0.18ms
+          ‒  nvim-treesitter/plugin/query_predicates.lua 0.12ms
+      ➜  rtp plugins 6.35ms
+        ★  runtime/plugin/editorconfig.lua 0.24ms
+        ★  runtime/plugin/man.lua 0.2ms
+        ★  runtime/plugin/matchit.vim 3.43ms
+        ★  runtime/plugin/matchparen.vim 0.38ms
+        ★  runtime/plugin/net.lua 0.26ms
+        ★  runtime/plugin/osc52.lua 0.19ms
+        ★  runtime/plugin/rplugin.vim 0.35ms
+        ★  runtime/plugin/shada.lua 0.25ms
+        ★  runtime/plugin/spellfile.lua 0.21ms
+        ★  runtime/plugin/tutor.vim 0.17ms
+        ★  runtime/plugin/zipPlugin.vim 0.28ms
+      ➜  after 0.06ms
+    ●  BufEnter 5.29ms
+      ➜  heirline.nvim 5.22ms
+    ●  startuptime 116.64ms
+    ●  mini.icons 4.68ms
+    ●  mason-tool-installer.nvim 1.79ms
+      ➜  mason-tool-installer.nvim/plugin/mason-tool-installer.lua 0.28ms
+    ●  VeryLazy 17.95ms
+      ➜  ts-comments.nvim 1.3ms
+      ➜  smart-splits.nvim 3.62ms
+        ★  smart-splits.nvim/plugin/init.lua 0.13ms
+        ★  smart-splits.nvim/plugin/smart-splits.lua 3.01ms
+      ➜  nvim-surround 2.42ms
+        ★  nvim-surround/plugin/nvim-surround.lua 1.94ms
+      ➜  noice.nvim 2.49ms
+        ★  nui.nvim 0.68ms
+      ➜  better-escape.nvim 3.58ms
+      ➜  which-key.nvim 2.21ms
+        ★  which-key.nvim/plugin/which-key.lua 0.18ms
+    ●  CmdlineEnter 17.35ms
+      ➜  blink.cmp 17.3ms
+        ★  blink.cmp/plugin/blink-cmp.lua 5.75ms
+```
+
 ## Minimal config
 
 A `repro.lua` file can be used to test a specific plugin or configuration with only a known minimal set of plugins.
