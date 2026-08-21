@@ -77,14 +77,14 @@ Learn to speak modal editing commands as sentences to effectively learn Multi-mo
     | `y @ a`     | yank (copy) to mark `a` (`m a` creates a mark called `a`)             |
 
 
-!!! HINT "Evil Reference and Tips"
-    [Evil quick reference guide](vim-quick-reference.md)
-    [Evil tips for developers](vim-tips-for-developers.md)
+!!! HINT "Reference and Tips"
+    [Key mapping reference guide](../reference/modal-editing/key-binding-reference.md)
+    [Tips for Clojure developers](../reference/modal-editing/tips-for-clojure.md)
     [Speaking Vim](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118){target=_blank}
 
 ## Selecting text
 
-`vi)` selects all the text within `()`, e.g. (`http://oldwebsite.doh`)
+`vi)` selects all the text within `()`, e.g. (`http://fix-me.com`)
 
 
 ## Surround

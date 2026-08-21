@@ -2,8 +2,8 @@
 
 A guide to the design of AstroNvim Config created by Practicalli to support a comprehensive development workflow.
 
-??? WARNING "Astro5 has replaced Astro as Practicalli Config for Neovim "
-    [Practicalli Astro5 Configuration](/neovim/install/astro-configuration.md)
+??? WARNING "Nvim-Astro replaces all previous configurations"
+    [Practicalli Astro5 Configuration](../../install/nvim-astro-configuration.md)
 
 
 
@@ -47,7 +47,7 @@ The file structure as taken from the AstroNvim template and new files were creat
 
 ## Disable Plugins
 
-Practicalli Astro provides a rich set of Neovim plugins.  Any plugin can be configured as disabled, usually in a user configuration, e.g. `lua/plugins/user-practicalli.lua`
+Practicalli Astro provides a rich set of Neovim plugins. Any plugin can be configured as disabled, usually in a user configuration, e.g. `lua/plugins/user-practicalli.lua`
 
 !!! EXAMPLE "Disable parinfer and sexp plugins"
     ```lua title="lua/plugins/user-practicalli.lua"
@@ -84,7 +84,7 @@ The pack contains 4 Neovim plugins:
     ```
 
     ??? HINT "Exclude a plugin from the pack"
-        The Clojure pack includes parinfer and paredit tools for structural editing, which both work together without issue.  Should one or both of these plugins not be reqiured, set enabled to false
+        The Clojure pack includes parinfer and paredit tools for structural editing, which both work together without issue. Should one or both of these plugins not be reqiured, set enabled to false
         ```lua
         return {
           "AstroNvim/astrocommunity",
@@ -237,7 +237,7 @@ Conjure mappings are defined respective to a `<localleader>` value. Define a loc
 
 ## Clojure LSP
 
-Clojure LSP support is enabled via the AstroCommunity Clojure pack.
+Support is enabled via the AstroCommunity Clojure pack.
 
 `clojure_lsp` can be added using Mason UI, `SPC p m` or in the `plugins/mason.lua` file
 
@@ -326,9 +326,9 @@ AstroCommunity packs set up support for each language
 
 ## Themes
 
-Themes are a collection of one or more colorschemes to affect the apperance of text, icons, highlights, etc.
+A collection of one or more 'colorschemes' to affect the appearance of text, icons, highlights, etc.
 
-Themes supporting `vim.opt.background` can change between dark and light colorscheme (`SPC u b` UI > background in AstroNvim)
+Themes supporting `vim.opt.background` can change between a dark or light colorscheme (`SPC u b` UI > background in AstroNvim)
 
 `SPC f t` selector shows themes colorschemes, as long as the themes are configured to disable lazy loading
 
@@ -568,7 +568,7 @@ AstroNvim Extensions
 - notify browse notification messages
 - oldfiles
 - pickers
-- planets selector for pictures of planets (very pixelated pictures)
+- planets selector for pictures of planets (pixelated pictures)
 - quickfix
 - reloader
 - registers `SPC f r` selector for neovim registers (paste value from register to current cursor location)

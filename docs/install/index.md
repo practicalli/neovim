@@ -12,8 +12,8 @@ Practicalli Neovim provides a feature rich configuration for Neovim and all the 
 - Optional: [:fontawesome-solid-book-open: Neovide](neovide.md) GUI for Neovim
 - [:fontawesome-solid-book-open: Troubleshoot](troubleshoot.md) if strange things occur
 
-!!! INFO "Neovim 0.11 latest stable release"
-    Content and configuration in this book has been tested against Neovim 0.11, but not against Neovim nightly builds.
+!!! INFO "Neovim 0.12 latest stable release"
+    Content and configuration in this book has been tested against Neovim 0.12, but not against Neovim nightly builds.
 
-!!! HINT "Already have Neovim & Practicalli Astro 5 installed?"
+!!! HINT "Already have Neovim & Practicalli Nvim-Astro installed?"
     [Learn how to use Neovim](../using-neovim/index.md) and how to [use Conjure for REPL driven development](../clojure-repl-workflow/index.md)

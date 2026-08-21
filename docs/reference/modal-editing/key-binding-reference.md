@@ -1,11 +1,11 @@
-# Evil Keybinding Reference
+# Modal Editing Key Mapping Reference
 
-An alphabetically ordered reference of Vim-style key bindings.
+An alphabetically ordered reference of key mappings.
 
 
-## Normal mode keybindings
+## Normal mode
 
-Keybindings available in Evil normal mode and the resultant state they leave you in.
+Keybindings available in normal mode and the resultant state they leave you in.
 
 | Keybinding | Description                                       | State   |
 |------------|---------------------------------------------------|---------|
@@ -25,7 +25,7 @@ Keybindings available in Evil normal mode and the resultant state they leave you
 | `f`        | find character forward (type character)           | Normal  |
 | `F`        | find character backward (type character)          | Normal  |
 | `fd`       | Escape (press almost together)                    | Normal  |
-| `g`        | [go menu](/editing/evil-tools/g-menu.md)          | Normal  |
+| `g`        | [go menu](g-menu.md)                              | Normal  |
 | `G`        | Jump to end of buffer                             | Normal  |
 | `h`        | move cursor left                                  | Normal  |
 | `H`        | move cursor to top of buffer                      | Normal  |
@@ -43,12 +43,12 @@ Keybindings available in Evil normal mode and the resultant state they leave you
 | `N`        | Previous search occurrence                        | Normal  |
 | `o`        | New line below                                    | Insert  |
 | `O`        | New line above                                    | Insert  |
-| `p`        | Paste (after / below cursor)                      | Insert  |
-| `P`        | Paste (before / above cursor)                     | Insert  |
+| `p`        | Paste (after / below cursor)                      | Normal  |
+| `P`        | Paste (before / above cursor)                     | Normal  |
 | `q`        | Record keyboard macro attached to given character | Normal  |
 | `Q`        | undefined                                         | Normal  |
 | `r`        | Replace character under cursor                    | Normal  |
-| `R`        | Replace character state                           | Replace |
+| `R`        | Replace character state                           | Normal  |
 | `s`        | Substitute character                              | Insert  |
 | `S`        | Substitute current line                           | Insert  |
 | `t`        | Find character forward - cursor before character  | Normal  |

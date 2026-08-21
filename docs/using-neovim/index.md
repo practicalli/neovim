@@ -28,8 +28,8 @@ The fundamental controls of Neovim which apply across all editing tasks.
 ## Development Tools
 
 [:fontawesome-solid-book-open: Comments](comments.md){.md-button}
-[:fontawesome-solid-book-open: Clojure Development](../repl-driven-development/index.md){.md-button}
-[:fontawesome-solid-book-open: Version Control](../version-control/index.md){.md-button}
+[:fontawesome-solid-book-open: Clojure Development](../clojure-repl-workflow/index.md){.md-button}
+[:fontawesome-solid-book-open: Version Control](../source-control/index.md){.md-button}
 
 > Format and Lint tools are installed via Mason
 

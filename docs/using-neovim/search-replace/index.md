@@ -33,7 +33,7 @@ Use the `:substitute` (`:s`) to replace all occurrences of the current-pattern w
 
     Add the `c` option to confirm each replacement
 
- [:fontawesome-solid-book-open: `:substitue` neovim command examples](substitue.md){.md-button}
+ [:fontawesome-solid-book-open: `:substitue` neovim command examples](substitute.md){.md-button}
 
 
 ## Project search and replace

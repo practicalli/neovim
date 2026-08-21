@@ -168,7 +168,7 @@ Git hunks can be navigated
 - ++bracket-left++ ++"G"++ jumps to first hunk
 - ++bracket-right++ ++"G"++ jumps to last hunk
 
-> [Source Control](/neovim/source-control/index.md) section describes additional features of Gitsigns and other Git tools.
+> [Source Control](../source-control/index.md) section describes additional features of Gitsigns and other Git tools.
 
 
 ## Projects

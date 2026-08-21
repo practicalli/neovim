@@ -2,7 +2,7 @@
 
 Scrolling is quite inefficient in most editors and moving (jumping) the curor around is far more effective.
 
-Using the `h` `j` `k` `l` as a common part of navigation provides consistency and keeps fingers on the most convienient part of the keyboard.
+Using the `h` `j` `k` `l` as a common part of navigation provides consistency and keeps fingers on the most convenient part of the keyboard.
 
 
 ## Moving by charater
@@ -21,7 +21,7 @@ Using the `h` `j` `k` `l` as a common part of navigation provides consistency an
 
 `3j` will move 3 lines down the buffer (or to the end of the fuffer if there are fewer lines remaining)
 
-Using Relative line numbers showws how far each line is from the current line.  The practicalli/neovim-config sets `:relativenames true` in `fnl/config/init.fnl`.
+Using Relative line numbers showws how far each line is from the current line. The practicalli/neovim-config sets `:relativenames true` in `fnl/config/init.fnl`.
 
 `42l` moves 42 charaters to the right
 

@@ -1,8 +1,10 @@
 # Neovim for Clojure development
 
-Practicalli Neovim provides an install & user guide for a simple and powerful [:fontawesome-solid-book-open: REPL driven workflow](introduction/repl-workflow.md) for Clojure.
+Practicalli Neovim provides an install & user guide to provide a complete software development with Neovim as the central tool.
 
-[:fontawesome-solid-book-open: Practicalli Astro5 configuration](install/astro-configurtion.md) for Neovim provides Conjure REPL client and structural editing support (parinfer & paredit).
+The guide also demonstrates a simple and powerful [:fontawesome-solid-book-open: Clojure REPL driven workflow](introduction/repl-workflow.md) using [Conjure](https://github.com/Olical/conjure), [Clojure LSP](https://clojure-lsp.io/) and supporting plugins.
+
+[:fontawesome-solid-book-open: Practicalli Astro5 configuration](install/nvim-astro-configuration.md) for Neovim provides Conjure REPL client and structural editing support (parinfer & paredit).
 
 ![Clojure REPL Driven Development workflow](https://github.com/practicalli/graphic-design/raw/live/clojure/clojure-repl-workflow-concept.png?raw=true)
 
@@ -16,7 +18,9 @@ Practicalli Neovim provides an install & user guide for a simple and powerful [:
 
 ## Neovim overview
 
-Neovim is a highly extensible and powerful editor, supporting multi-modal editing and Vim-style sequential key bindings. Highly responsive and low resource use makes Neovim ideal for development on any computer or [:fontawesome-solid-book-open: mobile device](termux/), e.g. tablet, smartphone.
+Neovim is a powerful editing tool, supporting multi-modal editing and Vim-style sequential key bindings.
+
+Highly responsive and low resource use makes Neovim ideal for development on any computer or [:fontawesome-solid-book-open: mobile device](termux/), e.g. tablet, smartphone.
 
 Neovim has [:globe_with_meridians: a diverse set of plugins](https://neovimcraft.com/){target=_blank} to provide a [:fontawesome-solid-book-open: rich set of features](introduction/features.md) for Clojure development and wider engineering tasks.
 

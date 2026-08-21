@@ -33,7 +33,7 @@ Before starting Neovim for the first time, you should know these commands:
 
 ## Navigation and searching
 
-- [moving around](moving-arround.md)
+- [moving around](moving-around.md)
 - [Motions](speaking-vim/#motions)
 - [G menu: common shortcuts](g-menu.md)
 - [Z menu: folds and scrolling](z-menu.md)
