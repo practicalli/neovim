@@ -19,17 +19,17 @@
 
 ## Overview
 
-Software development with Neovim with a focus on Clojure programming language.  Includes comprehensive install and usage guides for both experienced and neovim curious.
+Software development with Neovim, with a focus on the Clojure programming language.  Includes comprehensive install and usage guides for both experienced and neovim curious.
 
 
 ## Book status
 
-![GitHub issues](https://img.shields.io/github/issues/practicalli/neovim?label=content%20ideas&logo=github)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/neovim?label=commits&logo=github)
-![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/neovim?label=pull%20requests&logo=github)
-[![Publish Book](https://github.com/practicalli/neovim/actions/workflows/publish-book.yaml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/publish-book.yaml)
-[![MegaLinter](https://github.com/practicalli/neovim/actions/workflows/megalinter.yaml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/megalinter.yaml)
+[![MegaLinter](https://github.com/practicalli/neovim/actions/workflows/mega-linter.yaml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/megalinter.yaml)
+[![Publish Book](https://github.com/practicalli/neovim/actions/workflows/docs.yaml/badge.svg)](https://github.com/practicalli/neovim/actions/workflows/publish-book.yaml)
 
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/neovim?label=commits&logo=github)
+![GitHub issues](https://img.shields.io/github/issues/practicalli/neovim?label=content%20ideas&logo=github)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/neovim?label=pull%20requests&logo=github)
 
 ## Creative commons license
 
@@ -38,10 +38,18 @@ Software development with Neovim with a focus on Clojure programming language.  
   This work is licensed under a Creative Commons Attribution 4.0 ShareAlike License (including images & stylesheets).
 </div>
 
-Please [read the contributing section of the book](https://practical.li/neovim/introduction/contributing/) before raising an issue or pull request
+## Contributing
 
-By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/neovim/graphs/contributors).
+Issues and pull requests are most welcome although it is the maintainers discression as to if they are applicable.  Please detail issues as much as you can.  Pull requests are simpler to work with when they are specific to a page or at most a section.  The smaller the change the quicker it is to review and merge.
 
+Please read the [detailed Practicalli contributing page](https://practical.li/contributing/) before raising an issue or pull request to avoid disappointment.
+
+* [Current Issues](https://github.com/practicalli/neovim/issues)
+* [Current pull requests](https://github.com/practicalli/neovim/pulls)
+
+[Practicalli Clojure CLI Config](clojure/clojure-cli/practicalli-config.md) provides a user level configuration providing aliases for community tools used throughout this guide.  Issues and pull requests can also be made via its GitHub repository.
+
+By submitting content ideas and corrections you are agreeing they can be used in any work by Practicalli under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/clojure/graphs/contributors).
 
 ## Sponsor Practicalli
 
@@ -65,36 +73,49 @@ Publish book workflow installs Material for MkDocs version 9
 
 ## Local development
 
-Install mkdocs version 9 using the Python pip package manager
+Zensical can be installed locally via vu or pip.  Practicalli uses uv and installs Zensical as a tool for simplicity.
 
-```bash
-pip3 install mkdocs-material=="9.4"
+CLI Commands are wrapped in tasks defined within the `Makefile`, providing a simpler and consistent user experience.
+
+[Zensical - Practcialli Engineering Playbook](https://practical.li/engineering-playbook/technical-writing/static-site/zensical/)
+
+Clone the repository and change into the root of the project.
+
+```shell
+git clone https://github.com/practicalli/clojure
 ```
 
-Install the plugins used by the Practicalli site using Pip (these are also installed in the GitHub Action workflow)
+Install Zensical as a tool using `uv` (updating if there is a new version).
 
-```bash
-pip3 install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects pillow cairosvg
+```shell
+make docs-install
 ```
 
-> pillow and cairosvg python packages are required for [Social Cards](https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/)
+Or use the uv command:
 
-Fork the GitHub repository and clone that fork to your computer,
-
-```bash
-git clone https://github.com/<your-github-account>/<repository>.git
+```shell
+uv tool install zensical --with catppuccin-zensical --upgrade
 ```
 
-Run a local server from the root of the cloned project
 
-```bash
+Build the website and serve locally at [http://localhost:8000](http://localhost:8000)
+
+```shell
 make docs
 ```
 
-The website will open at <http://localhost:8000>
+Or use the zensical command:
 
-If making smaller changes, then only rebuild the content that changes, speeding up the local development process
+```shell
+zensical serve --dev-addr localhost:7777
+```
 
-```bash
-make docs-changed
+---
+
+Specific command if now using make:
+
+Create a virtual python in the root of the project.
+
+```shell
+uv tool install zensical --upgrade
 ```

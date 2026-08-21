@@ -6,6 +6,7 @@
 
 - ci(github): 🔧 practicalli workflows for zensical static site generator
 - build(make): 🔧 practicalli tasks for zensical
+- docs(readme): 📝 local zensical workflow and updated ci badges
 - dev: update Makefile with zensical commands
 - install: add practicalli install script for neovim
 - dev: update GitHub actions using `make dependencies-updated`
