@@ -8,12 +8,12 @@
 !LICENSE
 
 # ------------------------
-# Include MkDocs files
+# Include Zensical files
 !docs/
 !includes/
 !overrides/
 !mkdocs.yml
-!mkdocs-staging.yml
+!zensical.toml
 
 # ------------------------
 # Project automation
@@ -22,4 +22,5 @@
 # ------------------------
 # Version Control
 !.gitignore
+!.gitattributes
 !.github/
