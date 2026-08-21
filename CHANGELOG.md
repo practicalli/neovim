@@ -8,6 +8,7 @@
 - build(make): 🔧 practicalli tasks for zensical
 - docs(readme): 📝 local zensical workflow and updated ci badges
 - build(overrides): 💄 update page not found and announcement for zensical
+- style(format): 🎨 inline comments and remove blank lines
 - dev: update Makefile with zensical commands
 - install: add practicalli install script for neovim
 - dev: update GitHub actions using `make dependencies-updated`

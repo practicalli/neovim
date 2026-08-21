@@ -32,6 +32,11 @@ theme:
     - navigation.top
     - navigation.tracking # Update URL with sub-heading anchor names
   palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -74,7 +79,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format ""
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.keys # keyboard keys
@@ -91,15 +96,14 @@ plugins:
   - search
   - callouts
   - glightbox # Image aligning
-  - git-revision-date-localized:
-      # Update and Creation date of each page
+  - git-revision-date-localized: # Update and Creation date of each page
       # enable_creation_date: true
       fallback_to_build_date: true
 
   # Generate Social Cards via CI only
   # in assets/images/social
   - social:
-      cards: !ENV [ MKDOCS_SOCIAL_CARDS_GENERATE, true ]
+      cards: !ENV [MKDOCS_SOCIAL_CARDS_GENERATE, true]
 
   # Redirect pages when moved or changed
   - redirects:
