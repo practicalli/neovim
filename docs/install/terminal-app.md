@@ -1,4 +1,4 @@
-# Terminal Tools and Fonts
+# Terminal App and Fonts
 
 Neovim is a terminal based application and [Kitty Terminal](#kitty-terminal) is highly recommended.
 
