@@ -5,6 +5,7 @@
 ### Added
 
 - build(zensical): 🔧 add TOML configuration file with explicit navigation
+- build(make): add git-rebase and git-sr command for mgitstatus
 
 
 ## 2026-08-21
