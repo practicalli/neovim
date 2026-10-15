@@ -1,0 +1,377 @@
+# ----------------------------------------------------------------------------
+# Practicalli Configuration for Zensical Static Site Generator
+# ----------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------
+[project]
+
+# The site_name is shown in the page header and the browser window title
+site_name = "Practicalli Neovim"
+
+# The site_description is included in the HTML head and should contain a
+# meaningful description of the site content for use by search engines.
+site_description = "Practical guides to install, configure and use Neovim for software development, with support for the Clojure programming language"
+
+# The site_author attribute is used in the HTML head element.
+site_author = "Practicalli Johnny"
+
+# The site_url is the canonical URL for your site
+site_url = "https://practical.li/neovim"
+
+# The copyright notice appears in the page footer and can contain an HTML fragment.
+copyright = """
+Copyright &copy; 2026 Practicalli
+"""
+
+# Explicitly defined navigation (comment for Implicit navigation)
+nav = [
+  { "Intro" = [
+    { "REPL Workflow" = "introduction/repl-workflow.md" },
+    { "Features" = "introduction/features.md" },
+    "index.md",
+    { "Install" = [
+      { "Overview" = "install/index.md" },
+      { "Terminal" = "install/terminal-tools.md" },
+      { "Neovim" = "install/neovim.md" },
+      { "Nvim-Astro Configuration" = "install/nvim-astro-configuration.md" },
+      { "Multiple Configs" = "install/multiple-configurations.md" },
+      { "Customise Configuration" = "install/customise-configuration.md" },
+      { "Neovide" = "install/neovide.md" },
+      { "Troubleshoot" = "install/troubleshoot.md" },
+    ] },
+  ] },
+  { "Using Neovim" = [
+    "using-neovim/index.md",
+    { "File Buffer Window Tab" = "using-neovim/file-buffer-window-tab.md" },
+    { "Notifications" = "using-neovim/notifications.md" },
+    { "Multi-modal Editing" = "using-neovim/multi-modal-editing.md" },
+    { "Navigation" = "using-neovim/navigation.md" },
+    { "Registers" = "using-neovim/registers.md" },
+    { "Search Replace" = [
+      "using-neovim/search-replace/index.md",
+      { "Grug-Far" = "using-neovim/search-replace/grug-far.md" },
+      { "Substitute" = "using-neovim/search-replace/substitute.md" },
+      { "Spectre" = "using-neovim/search-replace/spectre.md" },
+    ] },
+    { "Spell Check" = "using-neovim/spell-check.md" },
+    { "Comments" = "using-neovim/comments.md" },
+    { "Snippets" = "using-neovim/snippets.md" },
+    { "Sort" = "using-neovim/sort.md" },
+    { "Mason" = "using-neovim/mason.md" },
+    { "Plugin Manager" = "using-neovim/plugin-manager.md" },
+    { "Multiple Cursors" = "using-neovim/multiple-cursors.md" },
+    { "Zen Mode" = "using-neovim/zen-mode.md" },
+    { "Terminal" = "using-neovim/terminal.md" },
+  ] },
+  { "Writing Documentation" = [
+    "writing-documentation/index.md",
+  ] },
+  { "Clojure REPL Workflow" = [
+    "clojure-repl-workflow/index.md",
+    { "Conjure" = "clojure-repl-workflow/conjure.md" },
+    { "Documentation" = "clojure-repl-workflow/documentation.md" },
+    { "Structural Editing" = "clojure-repl-workflow/structural-editing.md" },
+    { "Refactor Tools" = "clojure-repl-workflow/refactor-tools.md" },
+    { "Testing" = "clojure-repl-workflow/testing.md" },
+  ] },
+  { "Source Control" = [
+    "source-control/index.md",
+    "source-control/diff.md",
+    { "Lazygit" = "source-control/lazygit.md" },
+    { "Neogit" = "source-control/neogit.md" },
+    { "Octo" = "source-control/octo.md" },
+  ] },
+  { "API tools" = [
+    "api-tools/index.md",
+  ] },
+  { "Ultra-Mobile Neovim" = [
+    "termux/index.md",
+    { "F-Droid" = "termux/fdroid-install.md" },
+    { "Termux Setup" = "termux/setup.md" },
+    { "Using Termux" = "termux/using-termux.md" },
+    { "Git" = "termux/git.md" },
+    { "Zsh" = "termux/custom-shell.md" },
+    { "Clojure" = "termux/clojure-development.md" },
+    { "Neovim" = "termux/neovim.md" },
+  ] },
+  { "Reference" = [
+    { "Astro config Design" = [
+      "reference/configuration/index.md",
+      { "AstroCommunity" = "reference/configuration/astrocommunity.md" },
+    ] },
+    { "Modal Editing" = [
+      "reference/modal-editing/index.md",
+      "reference/modal-editing/case.md",
+      "reference/modal-editing/g-menu.md",
+      "reference/modal-editing/key-binding-reference.md",
+      "reference/modal-editing/moving-around.md",
+      "reference/modal-editing/motions.md",
+      "reference/modal-editing/folding.md",
+      "reference/modal-editing/narrowing.md",
+      "reference/modal-editing/speaking-vim.md",
+      "reference/modal-editing/neovim-quick-reference.md",
+      "reference/modal-editing/tips-for-clojure.md",
+      "reference/modal-editing/visual-select.md",
+      "reference/modal-editing/z-menu.md",
+    ] },
+    "reference/aligning-text.md",
+    { "Neovim" = [
+      "reference/neovim/index.md",
+      { "Standard Path" = "reference/neovim/standard-path.md" },
+      { "Quickfix" = "reference/neovim/quickfix.md" },
+      { "Changelist" = "reference/neovim/changelist.md" },
+      { "Jumplist" = "reference/neovim/jumplist.md" },
+      { "Language Providers" = "reference/neovim/language-providers.md" },
+    ] },
+    { "Lua Language" = [
+      "reference/lua-language/index.md",
+    ] },
+    { "Fennel" = "reference/fennel.md" },
+  ] },
+]
+
+
+# Add custom CSS styling to customize the Zensical theme
+# The path is relative to the "docs_dir".
+#extra_css = ["assets/stylesheets/extra.css"]
+
+# Add custom JavaScript to customize site behavior
+# The path is relative to the "docs_dir".
+#extra_javascript = ["assets/javascript/extra.js"]
+
+# ----------------------------------------------------------------------------
+# Theme options
+# ----------------------------------------------------------------------------
+[project.theme]
+# https://jonathan343.github.io/catppuccin-zensical/
+name = "catppuccin"
+
+# Use the traditional Material for MkDocs look.
+# variant = "classic"
+
+# Override specific blocks, partials, or whole templates.
+# - https://zensical.org/docs/customization/#extending-the-theme
+#custom_dir = "overrides"
+
+# Set image to use as the icon browsers use in their title bar or tab bar.
+# The path is relative to the "docs_dir".
+# - https://zensical.org/docs/setup/logo-and-icons/#favicon
+# - https://developer.mozilla.org/en-US/docs/Glossary/Favicon
+favicon = "assets/images/practicalli-logo.png"
+
+# The default language is "en" (English). It is possible to create
+# sites with multiple languages and configure a language selector. See
+# the documentation for details.
+# - https://zensical.org/docs/setup/language/
+language = "en"
+
+# Zensical feature toggles to change the behavior of the documentation site.
+features = [
+    # Allow user to dismiss the Zensical announcement bar.
+    "announce.dismiss",
+
+    # If you have a repository configured and turn on this feature, Zensical
+    # will generate an edit button for the page. This works for common
+    # repository hosting services.
+    # https://zensical.org/docs/setup/repository/#content-actions
+    #"content.action.edit",
+
+    # If you have a repository configured and turn on this feature, Zensical
+    # will generate a button that allows the user to view the Markdown
+    # code for the current page.
+    # https://zensical.org/docs/setup/repository/#content-actions
+    #"content.action.view",
+
+    # Code annotations adds an icon with a tooltip to your
+    # code blocks to provide explanations at crucial points.
+    # https://zensical.org/docs/authoring/code-blocks/#code-annotations
+    "content.code.annotate",
+
+    # Add a button in code blocks that allow users to copy the content
+    # to their clipboard without first selecting it.
+    # https://zensical.org/docs/authoring/code-blocks/#code-copy-button
+    "content.code.copy",
+
+    # Code blocks can include a button to allow for the selection of line
+    # ranges by the user.
+    # https://zensical.org/docs/authoring/code-blocks/#code-selection-button
+    "content.code.select",
+
+    # Zensical can render footnotes as inline tooltips, so the user can read
+    # the footnote without leaving the context of the document.
+    # https://zensical.org/docs/authoring/footnotes/#footnote-tooltips
+    "content.footnote.tooltips",
+
+    # If you have many content tabs that have the same titles (e.g., "Python",
+    # "JavaScript", "Cobol"), this feature causes all of them to switch to
+    # at the same time when the user chooses their language in one.
+    # https://zensical.org/docs/authoring/content-tabs/#linked-content-tabs
+    "content.tabs.link",
+
+    # With this feature enabled users can add tooltips to links that will be
+    # displayed when the mouse pointer hovers the link.
+    # https://zensical.org/docs/authoring/tooltips/#improved-tooltips
+    "content.tooltips",
+
+    # With this feature enabled, Zensical will automatically hide parts
+    # of the header when the user scrolls past a certain point.
+    # https://zensical.org/docs/setup/header/#automatic-hiding
+    # "header.autohide",
+
+    # Turn on this feature to expand all collapsible sections in the
+    # navigation sidebar by default.
+    # https://zensical.org/docs/setup/navigation/#navigation-expansion
+    # "navigation.expand",
+
+    # This feature turns on navigation elements in the footer that allow the
+    # user to navigate to a next or previous page.
+    # https://zensical.org/docs/setup/footer/#navigation
+    "navigation.footer",
+
+    # When section index pages are enabled, documents can be directly attached
+    # to sections, which is particularly useful for providing overview pages.
+    # https://zensical.org/docs/setup/navigation/#section-index-pages
+    "navigation.indexes",
+
+    # When instant navigation is enabled, clicks on all internal links will be
+    # intercepted and dispatched via XHR without fully reloading the page.
+    # https://zensical.org/docs/setup/navigation/#instant-navigation
+    "navigation.instant",
+
+    # With instant prefetching, your site will start to fetch a page once the
+    # user hovers over a link. This will reduce the perceived loading time
+    # for the user.
+    # https://zensical.org/docs/setup/navigation/#instant-prefetching
+    "navigation.instant.prefetch",
+
+    # In order to provide a better user experience on slow connections when
+    # using instant navigation, a progress indicator can be enabled.
+    # https://zensical.org/docs/setup/navigation/#progress-indicator
+    #"navigation.instant.progress",
+
+    # When navigation paths are activated, a breadcrumb navigation is rendered
+    # above the title of each page
+    # https://zensical.org/docs/setup/navigation/#navigation-path
+    "navigation.path",
+
+    # When pruning is enabled, only the visible navigation items are included
+    # in the rendered HTML, reducing the size of the built site by 33% or more.
+    # https://zensical.org/docs/setup/navigation/#navigation-pruning
+    #"navigation.prune",
+
+    # When sections are enabled, top-level sections are rendered as groups in
+    # the sidebar for viewports above 1220px, but remain as-is on mobile.
+    # https://zensical.org/docs/setup/navigation/#navigation-sections
+    "navigation.sections",
+
+    # When tabs are enabled, top-level sections are rendered in a menu layer
+    # below the header for viewports above 1220px, but remain as-is on mobile.
+    # https://zensical.org/docs/setup/navigation/#navigation-tabs
+    "navigation.tabs",
+
+    # When sticky tabs are enabled, navigation tabs will lock below the header
+    # and always remain visible when scrolling down.
+    # https://zensical.org/docs/setup/navigation/#sticky-navigation-tabs
+    "navigation.tabs.sticky",
+
+    # A back-to-top button can be shown when the user, after scrolling down,
+    # starts to scroll up again.
+    # https://zensical.org/docs/setup/navigation/#back-to-top-button
+    "navigation.top",
+
+    # When anchor tracking is enabled, the URL in the address bar is
+    # automatically updated with the active anchor as highlighted in the table
+    # of contents.
+    # https://zensical.org/docs/setup/navigation/#anchor-tracking
+    "navigation.tracking",
+
+    # When search highlighting is enabled and a user clicks on a search result,
+    # Zensical will highlight all occurrences after following the link.
+    # https://zensical.org/docs/setup/search/#search-highlighting
+    "search.highlight",
+
+    # When anchor following for the table of contents is enabled, the sidebar
+    # is automatically scrolled so that the active anchor is always visible.
+    # https://zensical.org/docs/setup/navigation/#anchor-following
+    # "toc.follow",
+
+    # When navigation integration for the table of contents is enabled, it is
+    # always rendered as part of the navigation sidebar on the left.
+    # https://zensical.org/docs/setup/navigation/#navigation-integration
+    #"toc.integrate",
+]
+
+# ----------------------------------------------------------------------------
+# Light and dark palette from the Catppuccin theme
+[[project.theme.palette]]
+scheme = "catppuccin-mocha"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to Latte"
+
+[[project.theme.palette]]
+scheme = "catppuccin-latte"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to Mocha"
+
+[project.theme.icon]
+logo = "lucide/book-open-text"
+repo = "lucide/book-open-text"
+
+# ----------------------------------------------------------------------------
+# Font Family to use when generating the website
+# Fonts are loaded from Google Fonts by default
+[project.theme.font]
+text = "Ubuntu"
+code = "Ubuntu Mono"
+
+# Custom Admonition icons
+[project.theme.icon.admonition]
+note = "fontawesome/solid/pencil"
+abstract = "fontawesome/solid/book"
+info = "fontawesome/solid/circle-info"
+tip = "fontawesome/solid/bullhorn"
+success = "fontawesome/solid/check"
+question = "fontawesome/solid/circle-question"
+warning = "fontawesome/solid/triangle-exclamation"
+failure = "fontawesome/solid/bomb"
+danger = "fontawesome/solid/skull"
+bug = "fontawesome/solid/robot"
+example = "fontawesome/solid/flask"
+quote = "fontawesome/solid/quote-left"
+# exercise = "fontawesome/solid/pencil"
+
+# ----------------------------------------------------------------------------
+# Social Icons and links in footer of website
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/practicalli/neovim"
+[[project.extra.social]]
+icon = "material/web"
+link = "https://practical.li/"
+[[project.extra.social]]
+icon = "fontawesome/brands/linkedin"
+link = "https://www.linkedin.com/in/jr0cket/"
+[[project.extra.social]]
+icon = "fontawesome/brands/slack"
+link = "https://clojurians.slack.com/messages/practicalli"
+[[project.extra.social]]
+icon = "fontawesome/brands/mastodon"
+link = "https://mastodon.social/@practicalli_johnny"
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/practicalli"
+[[project.extra.social]]
+icon = "fontawesome/brands/docker"
+link = "https://hub.docker.com/u/practicalli"
+# ----------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------
+# Website Analytics Tracking
+[project.extra.analytics]
+provider = "google"
+property = "G-P29SSN0GV6"
+# ----------------------------------------------------------------------------

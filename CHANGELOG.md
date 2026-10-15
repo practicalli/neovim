@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- build(zensical): 🔧 add TOML configuration file with explicit navigation
+
+
 ## 2026-08-21
 
 ### Changed
