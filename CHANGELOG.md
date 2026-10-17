@@ -12,6 +12,7 @@
 - docs(using): ✏️ add link to spectre page for grug-far
 - build(zensical): 🔧 display sidebar sub-menus as collapsible
 - build(zensical): 🔧 enable social cards plugin for more engaging links
+- doc(using): ✏️ add operator pending mode and ts-comment patterns section
 
 
 ## 2026-08-21
