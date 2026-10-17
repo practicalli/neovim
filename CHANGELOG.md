@@ -6,6 +6,7 @@
 
 - build(zensical): 🔧 add TOML configuration file with explicit navigation
 - build(make): add git-rebase and git-sr command for mgitstatus
+- ci(zensical): update publish workflow to use setup-uv action
 
 
 ## 2026-08-21
