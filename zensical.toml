@@ -31,7 +31,7 @@ nav = [
     "index.md",
     { "Install" = [
       { "Overview" = "install/index.md" },
-      { "Terminal" = "install/terminal-tools.md" },
+      { "Terminal" = "install/terminal-app.md" },
       { "Neovim" = "install/neovim.md" },
       { "Nvim-Astro Configuration" = "install/nvim-astro-configuration.md" },
       { "Multiple Configs" = "install/multiple-configurations.md" },

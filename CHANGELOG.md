@@ -8,6 +8,7 @@
 - build(make): add git-rebase and git-sr command for mgitstatus
 - ci(zensical): update publish workflow to use setup-uv action
 - build(zensical): set primary and accent palette colors
+- build(zensical): 🔧 update terminal page file name in nav
 
 
 ## 2026-08-21
