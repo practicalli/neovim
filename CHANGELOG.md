@@ -10,6 +10,7 @@
 - build(zensical): set primary and accent palette colors
 - build(zensical): 🔧 update terminal page file name in nav
 - docs(using): ✏️ add link to spectre page for grug-far
+- build(zensical): 🔧 display sidebar sub-menus as collapsible
 
 
 ## 2026-08-21
