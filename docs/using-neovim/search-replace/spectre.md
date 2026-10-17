@@ -1,6 +1,7 @@
 # Spectre
 
-!!! WARNING "Not included in Astro 5 - see Grug-Far"
+!!! INFO "[Grug-Far](./grug-far.md) has replaced Spectre in Practicalli Nvim-Astro Config"
+
 
 ++spc++ ++"s"++ ++"s"++ to toggle Spectre (open/close) to search and replace tool.
 
