@@ -305,15 +305,15 @@ features = [
 # Light and dark palette from the Catppuccin theme
 [[project.theme.palette]]
 scheme = "catppuccin-mocha"
-primary = "custom"
-accent = "custom"
+primary = "slate"
+accent = "teal"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to Latte"
 
 [[project.theme.palette]]
 scheme = "catppuccin-latte"
-primary = "custom"
-accent = "custom"
+primary = "indigo"
+accent = "teal"
 toggle.icon = "lucide/sun"
 toggle.name = "Switch to Mocha"
 
