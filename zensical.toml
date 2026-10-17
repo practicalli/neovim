@@ -36,7 +36,7 @@ nav = [
       { "Nvim-Astro Configuration" = "install/nvim-astro-configuration.md" },
       { "Multiple Configs" = "install/multiple-configurations.md" },
       { "Customise Configuration" = "install/customise-configuration.md" },
-      { "Neovide" = "install/neovide.md" },
+      { "Neovide GUI" = "install/neovide.md" },
       { "Troubleshoot" = "install/troubleshoot.md" },
     ] },
   ] },
