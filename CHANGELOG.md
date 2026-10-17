@@ -13,6 +13,7 @@
 - build(zensical): 🔧 display sidebar sub-menus as collapsible
 - build(zensical): 🔧 enable social cards plugin for more engaging links
 - doc(using): ✏️ add operator pending mode and ts-comment patterns section
+- docs(using): ✏️ update neovim registers
 
 
 ## 2026-08-21
