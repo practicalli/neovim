@@ -14,6 +14,7 @@
 - build(zensical): 🔧 enable social cards plugin for more engaging links
 - doc(using): ✏️ add operator pending mode and ts-comment patterns section
 - docs(using): ✏️ update neovim registers
+- docs(intro): ✏️ update navigation keys information
 
 
 ## 2026-08-21
