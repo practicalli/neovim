@@ -30,7 +30,7 @@ HELP-DESCRIPTION-SPACING := 24
 # Tool variables
 MEGALINTER_RUNNER := npx mega-linter-runner --flavor documentation --env "'MEGALINTER_CONFIG=.github/config/megalinter.yaml'" --env "'VALIDATE_ALL_CODEBASE=true'" --remove-container
 DOCS_SERVER := zensical serve --dev-addr localhost:7777
-OUTDATED_FILE := outdated-$(shell date +%y-%m-%d-%T).md
+DEPS_UPDATE_REPORT := deps-update-report-$(shell date +%y-%m-%d-%T).md
 # ------------------------------------------------ #
 
 # -- Code Quality -------------------------------- #
@@ -52,16 +52,16 @@ megalinter-upgrade:  ## Upgrade MegaLinter config to latest version
 	$(info -- MegaLinter Upgrade Config -------------)
 	npx mega-linter-runner@latest --upgrade
 
-dependencies-outdated: ## Report new versions of library dependencies and GitHub action
+deps-update: ## Report new versions of library dependencies and GitHub action
 	$(info -- Search for outdated libraries ---------)
-	- clojure -T:search/outdated > $(OUTDATED_FILE)
+	- clojure -T:search/outdated > $(DEPS_UPDATE_REPORT)
 
-dependencies-update: ## Update all library dependencies and GitHub action
+deps-upgrade: ## Update all library dependencies and GitHub action
 	$(info -- Search for outdated libraries ---------)
-	- clojure -T:update/dependency-versions > $(OUTDATED_FILE)
+	- clojure -T:update/dependency-versions > $(DEPS_UPDATE_REPORT)
 # ------------------------------------------------ #
 
-# -- Documentation Generation -------------------- #
+# -- Documentation Generation  ------------------- #
 docs-install:  ## Install or upgrade Zensical with Catppuccin theme plugin
 	uv tool install zensical --with catppuccin-zensical --upgrade
 
@@ -86,7 +86,7 @@ dist: docs-build ## Build Zensical website
 
 # -- Version Control ----------------------------- #
 git-rebase:  ## pull main branch and rebase local commits where relevant
-	$(info -- Multiple Git Repo Status --------------)
+	$(info -- Pull main branch and rebase -----------)
 	git pull --rebase origin main
 
 git-sr:  ## status of git repos with changes under current directory

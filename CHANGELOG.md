@@ -16,6 +16,7 @@
 - docs(using): ✏️ update neovim registers
 - docs(intro): ✏️ update navigation keys information
 - ci(zensical): ⬆️ update uv to 10.2.0
+- build(make): 🔧 `deps-update` & `deps-upgrade` tasks
 
 
 ## 2026-08-21
