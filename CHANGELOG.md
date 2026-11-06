@@ -18,6 +18,10 @@
 - ci(zensical): ⬆️ update uv to 10.2.0
 - build(make): 🔧 `deps-update` & `deps-upgrade` tasks
 
+### Changed
+
+- ci(docs): ⬆️ update uv to 10.3.3 release
+
 
 ## 2026-08-21
 
